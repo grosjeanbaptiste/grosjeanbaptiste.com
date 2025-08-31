@@ -12,7 +12,7 @@
     "email": "grosjeanbaptisteit@outlook.com",
     "phone": "+32 496 28 97 05",
     "url": "https://my-way-bg.vercel.app/about/way",
-    "summary": "Computer Scientist | Student @UMons by night & AI Software Crafter by day",
+    "summary": "Computer science student @UMons by night looking for a new opportunity by day while launching Acteble. \n\nAll the projects I have been involved in have been developed with a strong focus on Software Craftmanship principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality, maintainability and scalability.",
     "location": {
       "address": "Avenue Baron Albert D'Huart",
       "postalCode": "1950",
@@ -40,14 +40,34 @@
   },
   "work": [
     {
-      "company": "EMVI",
-      "location": "Brugge, Flanders, Belgium",
-      "position": "IT",
+      "company": "Acteble",
+      "location": "Brussels, Belgium",
+      "position": "Founder",
+      "url": "https://www.acteble.com",
+      "startDate": "2025-07-01",
+      "endDate": "Present",
+      "summary": "Developing a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.",
+      "highlights": []
+    },
+    {
+      "company": "Emvi.ai",
+      "location": "Brugge, Belgium",
+      "position": "AI Software Crafter Lead",
+      "url": "https://www.emvi.ai",
+      "startDate": "2024-12-01",
+      "endDate": "2025-06-30",
+      "summary": "Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QRCodes & Barre Codes) and adapted Valhalla routing system for the visually impaired.",
+      "highlights": ["Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla"]
+    },
+    {
+      "company": "Emvi.ai",
+      "location": "Brugge, Belgium",
+      "position": "AI Software Crafter",
       "url": "https://www.emvi.ai",
       "startDate": "2024-10-01",
       "endDate": "2025-06-30",
-      "summary": "",
-      "highlights": []
+      "summary": "Remi: Reminescence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM generated descriptions.",
+      "highlights": ["Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil"]
     },
     {
       "company": "Xtrada",
@@ -199,21 +219,51 @@
   ],
   "projects": [
     {
+      "name": "Acteble",
+      "description": "Mobile application connecting travelers during their journeys.",
+      "keywords": ["Flutter", "Rust", "Mobile", "Travel"],
+      "startDate": "2025-07-01",
+      "summary": "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.",
+      "type": "Mobile Application",
+      "roles": ["Founder"]
+    },
+    {
+      "name": "Emvi App",
+      "description": "AI powered visual assistant for visually impaired people.",
+      "keywords": ["Flutter", "Firebase", "OpenAI", "Valhalla", "AI"],
+      "startDate": "2024-12-01",
+      "endDate": "2025-06-30",
+      "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QRCodes & Barre Codes) and adapted Valhalla routing system for the visually impaired.",
+      "type": "Mobile Application"
+    },
+    {
+      "name": "Remi",
+      "description": "Reminescence application for people with cognitive issues.",
+      "keywords": ["Python", "FastAPI", "OpenAI", "Whisper", "DeepFace"],
+      "startDate": "2024-10-01",
+      "endDate": "2025-06-30",
+      "summary": "Reminescence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline.",
+      "type": "AI Application"
+    },
+    {
       "name": "EduCraft",
+      "description": "Platform allowing users to get more skills.",
+      "keywords": ["PHP", "API", "UI/UX"],
       "startDate": "2024-03-29",
       "endDate": "2024-03-31",
-      "summary": "Education Manager"
+      "summary": ""
     },
     {
       "name": "MyWay",
-      "description": "Education manager for students.",
+      "description": "Education manager for students. \n\nNot maintained anymore: database and auth functionalities not available anymore.",
       "highlights": [
         "UI/UX.",
         "APIs integration."
       ],
-      "keywords": ["JavaScript", "API", "UI/UX"],
-      "startDate": "2023-02-01",
-      "summary": "Education manager for students.",
+      "keywords": ["Angular.ts", "JavaScript", "TypeScript", "Express.js", "API", "UI/UX"],
+      "startDate": "2023-01-01",
+      "endDate": "2023-06-30",
+      "summary": "",
       "url": "https://my-way-bg.vercel.app",
       "roles": ["Founder"],
       "entity": "Freelance",
@@ -247,10 +297,11 @@
   "education": [
     {
       "institution": "UMons",
-      "area": "Computer Science",
+      "area": "Computer Science (work-study program) (120 ECTS)",
       "studyType": "Master of Science - MS",
       "startDate": "2022-10-15",
-      "gpa": "",
+      "gpa": "In progress (MA2)",
+      "summary": "Student representative & buddy TandeMons",
       "courses": []
     },
     {
@@ -259,8 +310,8 @@
       "studyType": "Professional Bachelor's degree",
       "startDate": "2018-09-30",
       "endDate": "2022-10-15",
-      "gpa": "Satisfaction ",
-      "summary": "WebMenu",
+      "gpa": "62.8%, Satis Bene",
+      "summary": "Student representative and tutor. \n\nTFE: WebMenu 2.0",
       "courses": []
     },
     {
@@ -352,6 +403,7 @@
         "CSS",
         "Zsh",
         "Dart",
+        "Rust",
         "LaTeX",
         "SQL Server",
         "EF",
@@ -366,6 +418,9 @@
         "Angular.js",
         "React.js",
         "Flutter",
+        "Tokio",
+        "Axum",
+        "Tower",
         "Gradle",
         "NPM",
         "JWT",

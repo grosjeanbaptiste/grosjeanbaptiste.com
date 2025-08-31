@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl"?>
+<resume xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <meta>
+    <schema>https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json</schema>
+    <version>v1.0.0</version>
+    <canonical>https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json</canonical>
+    <theme>grosjeanbaptiste</theme>
+  </meta>
+  
+  <basics>
+    <name>Baptiste Grosjean</name>
+    <label>Computer Scientist | Student @UMons by night &amp; AI Software Crafter by day</label>
+    <image>assets/images/profil.jpeg</image>
+    <email>grosjeanbaptisteit@outlook.com</email>
+    <phone>+32 496 28 97 05</phone>
+    <url>https://my-way-bg.vercel.app/about/way</url>
+    <summary>Computer science student @UMons by night looking for a new opportunity by day while launching Acteble. 
+
+All the projects I have been involved in have been developed with a strong focus on Software Craftmanship principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality, maintainability and scalability.</summary>
+    <location>
+      <address>Avenue Baron Albert D'Huart</address>
+      <postalCode>1950</postalCode>
+      <city>Kraainem</city>
+      <countryCode>BE</countryCode>
+      <region>Belgium</region>
+    </location>
+    <profiles>
+      <profile>
+        <network>LinkedIn</network>
+        <username>grosjeanbaptiste</username>
+        <url>https://www.linkedin.com/in/grosjeanbaptiste</url>
+      </profile>
+      <profile>
+        <network>GitHub</network>
+        <username>grosjeanbaptiste</username>
+        <url>https://github.com/grosjeanbaptiste</url>
+      </profile>
+      <profile>
+        <network>Npm</network>
+        <username>grosjeanbaptiste</username>
+        <url>https://npm.com/grosjeanbaptiste</url>
+      </profile>
+    </profiles>
+  </basics>
+  
+  <work>
+    <position>
+      <company>Acteble</company>
+      <location>Brussels, Belgium</location>
+      <position>Founder</position>
+      <url>https://www.acteble.com</url>
+      <startDate>2025-07-01</startDate>
+      <endDate>Present</endDate>
+      <summary>Developing a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.</summary>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>Emvi.ai</company>
+      <location>Brugge, Belgium</location>
+      <position>AI Software Crafter Lead</position>
+      <url>https://www.emvi.ai</url>
+      <startDate>2024-12-01</startDate>
+      <endDate>2025-06-30</endDate>
+      <summary>Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QRCodes &amp; Barre Codes) and adapted Valhalla routing system for the visually impaired.</summary>
+      <highlights>
+        <highlight>Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla</highlight>
+      </highlights>
+    </position>
+    <position>
+      <company>Emvi.ai</company>
+      <location>Brugge, Belgium</location>
+      <position>AI Software Crafter</position>
+      <url>https://www.emvi.ai</url>
+      <startDate>2024-10-01</startDate>
+      <endDate>2025-06-30</endDate>
+      <summary>Remi: Reminescence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM generated descriptions.</summary>
+      <highlights>
+        <highlight>Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil</highlight>
+      </highlights>
+    </position>
+    <position>
+      <company>Xtrada</company>
+      <location>Antwerp, Flanders, Belgium</location>
+      <position>Data Scientist</position>
+      <url>https://www.xtrada.be</url>
+      <startDate>2024-03-01</startDate>
+      <endDate>2024-09-22</endDate>
+      <summary>Use of python libraries (Spacy,...) to extract named entities from text via NER model training and implementation in .Net
+
+Model rate 87%</summary>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>Xtrada</company>
+      <location>Antwerp, Flanders, Belgium</location>
+      <position>Software Crafter</position>
+      <url>https://www.xtrada.be</url>
+      <startDate>2023-08-21</startDate>
+      <endDate>2024-09-22</endDate>
+      <summary>Software modernization within the .Net stack following domain driven design and clean code principles. 
+
+Implementation of Azure ai services in .net solution.</summary>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>VhAuctions</company>
+      <location>Anvers, Région flamande, Belgique</location>
+      <position>.Net/React Software Crafter</position>
+      <url>https://www.vhauctions.be</url>
+      <startDate>2024-01-01</startDate>
+      <endDate>2024-08-07</endDate>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>Hackathon Citizens of Wallonia</company>
+      <location>Charleroi et périphérie</location>
+      <position>Software Crafter</position>
+      <url>https://www.cow.be</url>
+      <startDate>2024-03-15</startDate>
+      <endDate>2024-03-17</endDate>
+      <summary>EduCraft: solution allowing anyone to craft his own personnalized path to get new skills</summary>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>aXinco</company>
+      <location>Anvers, Région flamande, Belgique</location>
+      <position>.Net/Blazor Software Crafter</position>
+      <url>https://www.axinco.be</url>
+      <startDate>2023-09-01</startDate>
+      <endDate>2023-12-31</endDate>
+      <summary>Crafting Axinco Kwalitijd webapp in .Net / Blazor folowing DDD and clean code principles.</summary>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>Technofutur TIC</company>
+      <location>Charleroi, Wallonia, Belgique</location>
+      <position>Full Stack Developer Web Intern</position>
+      <url>https://www.technofutur-tic.be</url>
+      <startDate>2022-12-01</startDate>
+      <endDate>2023-06-30</endDate>
+      <summary>This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC. 
+In addition, during the extension, we received an introduction to BUSINESS Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...). 
+This comprehensive training covered various areas including SQL Server, Node.js, Express.js, React.js, and Angular.js, encompassing everything from database development to user interface and backend.</summary>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>Hackathon Citizens of Wallonia</company>
+      <location>Charleroi, Région wallonne, Belgique</location>
+      <position>Full Stack Developer Web Intern</position>
+      <url>https://www.cow.be</url>
+      <startDate>2023-03-29</startDate>
+      <endDate>2023-03-31</endDate>
+      <summary>OnlyTogether: solution allowing the vulnerable users always being accompagned</summary>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>EDITx: IT Challenges, IT Jobs, Education in IT for X</company>
+      <location>Région de Bruxelles-Capitale, Belgique</location>
+      <position>Full Stack Developer Web Intern</position>
+      <url>https://www.linkedin.com/company/editx/</url>
+      <startDate>2022-04-01</startDate>
+      <endDate>2022-04-30</endDate>
+      <summary></summary>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</company>
+      <location>Région de Bruxelles-Capitale, Belgique</location>
+      <position>Student Job</position>
+      <url>https://www.laj.be</url>
+      <startDate>2022-03-30</startDate>
+      <endDate>2022-03-31</endDate>
+      <summary></summary>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>RESTOMAX</company>
+      <location>Région de Bruxelles-Capitale, Belgique</location>
+      <position>Full Stack Developer Web Intern</position>
+      <url>https://www.restomax.be</url>
+      <startDate>2021-11-01</startDate>
+      <endDate>2022-03-31</endDate>
+      <summary></summary>
+      <highlights></highlights>
+    </position>
+    <position>
+      <company>Quick Restaurant</company>
+      <location>Kraainem, Flemish Region, Belgium</location>
+      <position>Student Job</position>
+      <url>https://www.quick.be</url>
+      <startDate>2017-09-01</startDate>
+      <endDate>2017-09-30</endDate>
+      <summary></summary>
+      <highlights></highlights>
+    </position>
+  </work>
+  
+  <volunteer>
+    <activity>
+      <organization>UMons</organization>
+      <position>Student Representative</position>
+      <url>https://www.umons.be</url>
+      <startDate>2023-11-30</startDate>
+      <endDate></endDate>
+      <summary></summary>
+      <highlights></highlights>
+    </activity>
+    <activity>
+      <organization>UMons</organization>
+      <position>Buddy Tandemons</position>
+      <url>https://www.umons.be</url>
+      <startDate>2023-11-30</startDate>
+      <endDate></endDate>
+      <summary></summary>
+      <highlights></highlights>
+    </activity>
+    <activity>
+      <organization>EPHEC École Supérieure de Promotion Sociale</organization>
+      <position>Student Representative</position>
+      <url>https://www.ephec.be</url>
+      <startDate>2019-09-30</startDate>
+      <endDate>2022-10-15</endDate>
+      <summary></summary>
+      <highlights></highlights>
+    </activity>
+    <activity>
+      <organization>EPHEC École Supérieure de Promotion Sociale</organization>
+      <position>Tutor</position>
+      <url>https://www.ephec.be</url>
+      <startDate>2019-09-30</startDate>
+      <endDate>2022-10-15</endDate>
+      <summary></summary>
+      <highlights></highlights>
+    </activity>
+  </volunteer>
+  
+  <projects>
+    <project>
+      <name>Acteble</name>
+      <description>Mobile application connecting travelers during their journeys.</description>
+      <keywords>
+        <keyword>Flutter</keyword>
+        <keyword>Rust</keyword>
+        <keyword>Mobile</keyword>
+        <keyword>Travel</keyword>
+      </keywords>
+      <startDate>2025-07-01</startDate>
+      <summary>Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.</summary>
+      <type>Mobile Application</type>
+      <roles>
+        <role>Founder</role>
+      </roles>
+    </project>
+    <project>
+      <name>Emvi App</name>
+      <description>AI powered visual assistant for visually impaired people.</description>
+      <keywords>
+        <keyword>Flutter</keyword>
+        <keyword>Firebase</keyword>
+        <keyword>OpenAI</keyword>
+        <keyword>Valhalla</keyword>
+        <keyword>AI</keyword>
+      </keywords>
+      <startDate>2024-12-01</startDate>
+      <endDate>2025-06-30</endDate>
+      <summary>AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QRCodes &amp; Barre Codes) and adapted Valhalla routing system for the visually impaired.</summary>
+      <type>Mobile Application</type>
+    </project>
+    <project>
+      <name>Remi</name>
+      <description>Reminescence application for people with cognitive issues.</description>
+      <keywords>
+        <keyword>Python</keyword>
+        <keyword>FastAPI</keyword>
+        <keyword>OpenAI</keyword>
+        <keyword>Whisper</keyword>
+        <keyword>DeepFace</keyword>
+      </keywords>
+      <startDate>2024-10-01</startDate>
+      <endDate>2025-06-30</endDate>
+      <summary>Reminescence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline.</summary>
+      <type>AI Application</type>
+    </project>
+    <project>
+      <name>EduCraft</name>
+      <description>Platform allowing users to get more skills.</description>
+      <keywords>
+        <keyword>PHP</keyword>
+        <keyword>API</keyword>
+        <keyword>UI/UX</keyword>
+      </keywords>
+      <startDate>2024-03-29</startDate>
+      <endDate>2024-03-31</endDate>
+      <summary></summary>
+    </project>
+    <project>
+      <name>MyWay</name>
+      <description>Education manager for students. 
+
+Not maintained anymore: database and auth functionalities not available anymore.</description>
+      <highlights>
+        <highlight>UI/UX.</highlight>
+        <highlight>APIs integration.</highlight>
+      </highlights>
+      <keywords>
+        <keyword>Angular.ts</keyword>
+        <keyword>JavaScript</keyword>
+        <keyword>TypeScript</keyword>
+        <keyword>Express.js</keyword>
+        <keyword>API</keyword>
+        <keyword>UI/UX</keyword>
+      </keywords>
+      <startDate>2023-01-01</startDate>
+      <endDate>2023-06-30</endDate>
+      <summary></summary>
+      <url>https://my-way-bg.vercel.app</url>
+      <roles>
+        <role>Founder</role>
+      </roles>
+      <entity>Freelance</entity>
+      <type>Web Application</type>
+    </project>
+    <project>
+      <name>VhAuctions NER Inventory Model</name>
+      <startDate>2024-03-01</startDate>
+      <endDate>2024-08-07</endDate>
+      <summary>Named Entity Recognition Machine Learning Model to extract Inventory Items from and audio transcription.</summary>
+    </project>
+    <project>
+      <name>VhAuctions</name>
+      <startDate>2024-01-01</startDate>
+      <endDate>2024-02-28</endDate>
+      <summary>Fleet manager for auctions.</summary>
+    </project>
+    <project>
+      <name>Kwalitijd</name>
+      <startDate>2023-09-01</startDate>
+      <endDate>2023-12-31</endDate>
+      <summary>Survey manager for sports clubs and federations.</summary>
+    </project>
+    <project>
+      <name>WebMenu</name>
+      <startDate>2021-11-01</startDate>
+      <endDate>2022-03-31</endDate>
+      <summary>QRCode based cash register for HoReCa establishments.</summary>
+    </project>
+  </projects>
+  
+  <education>
+    <degree>
+      <institution>UMons</institution>
+      <area>Computer Science (work-study program) (120 ECTS)</area>
+      <studyType>Master of Science - MS</studyType>
+      <startDate>2022-10-15</startDate>
+      <gpa>In progress (MA2)</gpa>
+      <summary>Student representative &amp; buddy TandeMons</summary>
+      <courses></courses>
+    </degree>
+    <degree>
+      <institution>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</institution>
+      <area>Information Systems Management</area>
+      <studyType>Professional Bachelor's degree</studyType>
+      <startDate>2018-09-30</startDate>
+      <endDate>2022-10-15</endDate>
+      <gpa>62.8%, Satis Bene</gpa>
+      <summary>Student representative and tutor. 
+
+TFE: WebMenu 2.0</summary>
+      <courses></courses>
+    </degree>
+    <degree>
+      <institution>Institut Saint-Louis Bruxelles</institution>
+      <area>7e Spéciale Mathématiques</area>
+      <studyType>Attestation</studyType>
+      <startDate>2019-09-30</startDate>
+      <endDate>2020-06-30</endDate>
+      <gpa>Attestation</gpa>
+      <courses></courses>
+    </degree>
+    <degree>
+      <institution>Université Saint-Louis - Bruxelles</institution>
+      <area>Political sciences</area>
+      <studyType>Bachelor of Arts - BA</studyType>
+      <startDate>2016-09-30</startDate>
+      <endDate>2019-06-30</endDate>
+      <gpa>29 credits earned in 2016-2017, contact me for more informations.</gpa>
+      <courses></courses>
+    </degree>
+    <degree>
+      <institution>Solvay Brussels School of Economics and Management</institution>
+      <area>Business Engineering</area>
+      <studyType>Bachelor of Science - BSc</studyType>
+      <startDate>2015-09-30</startDate>
+      <endDate>2016-06-30</endDate>
+      <gpa>Contact me for more informations.</gpa>
+      <courses></courses>
+    </degree>
+    <degree>
+      <institution>Université libre de Bruxelles</institution>
+      <area>Business Engineering</area>
+      <studyType>Bachelor of Science - BSc</studyType>
+      <startDate>2015-09-30</startDate>
+      <endDate>2016-06-30</endDate>
+      <gpa>Contact me for more informations.</gpa>
+      <courses></courses>
+    </degree>
+    <degree>
+      <institution>UCLouvain - Université catholique de Louvain</institution>
+      <area>Médecine et dentisterie</area>
+      <studyType>Cours préparatoires</studyType>
+      <startDate>2014-09-30</startDate>
+      <endDate>2015-06-30</endDate>
+      <gpa>Attestation </gpa>
+      <courses></courses>
+    </degree>
+    <degree>
+      <institution>Centre Scolaire Saint-Adrien - Val Duchesse</institution>
+      <area>General Studies Maths &amp; Modern languages</area>
+      <studyType>C.E.S.S.</studyType>
+      <startDate>2012-09-30</startDate>
+      <endDate>2015-06-30</endDate>
+      <gpa>Satis bene</gpa>
+      <courses></courses>
+    </degree>
+    <degree>
+      <institution>Lycée Mater Dei</institution>
+      <area>General studies Latin &amp; Greec</area>
+      <studyType></studyType>
+      <startDate>2009-09-30</startDate>
+      <endDate>2012-06-30</endDate>
+      <gpa></gpa>
+      <courses></courses>
+    </degree>
+  </education>
+  
+  <awards>
+    <award>
+      <title>TOEIC</title>
+      <date>2023-06-06</date>
+      <awarder>ETS</awarder>
+      <summary>730</summary>
+    </award>
+  </awards>
+  
+  <skills>
+    <skillSet>
+      <name>HardSkills</name>
+      <level>Intermediate</level>
+      <keywords>
+        <keyword>SQL</keyword>
+        <keyword>C#</keyword>
+        <keyword>Java</keyword>
+        <keyword>Python</keyword>
+        <keyword>JS</keyword>
+        <keyword>TS</keyword>
+        <keyword>XML</keyword>
+        <keyword>JSON</keyword>
+        <keyword>HTML</keyword>
+        <keyword>CSS</keyword>
+        <keyword>Zsh</keyword>
+        <keyword>Dart</keyword>
+        <keyword>Rust</keyword>
+        <keyword>LaTeX</keyword>
+        <keyword>SQL Server</keyword>
+        <keyword>EF</keyword>
+        <keyword>.NET</keyword>
+        <keyword>Pandas</keyword>
+        <keyword>NumPy</keyword>
+        <keyword>Whisper</keyword>
+        <keyword>Spacy</keyword>
+        <keyword>Node.js</keyword>
+        <keyword>Express.js</keyword>
+        <keyword>Blazor</keyword>
+        <keyword>Angular.js</keyword>
+        <keyword>React.js</keyword>
+        <keyword>Flutter</keyword>
+        <keyword>Tokio</keyword>
+        <keyword>Axum</keyword>
+        <keyword>Tower</keyword>
+        <keyword>Gradle</keyword>
+        <keyword>NPM</keyword>
+        <keyword>JWT</keyword>
+        <keyword>Auth0</keyword>
+        <keyword>SSH</keyword>
+        <keyword>Venv</keyword>
+        <keyword>Conda</keyword>
+        <keyword>Docker</keyword>
+        <keyword>UML</keyword>
+        <keyword>Merise</keyword>
+        <keyword>VisualParadigm</keyword>
+        <keyword>CleanCode</keyword>
+        <keyword>CleanArchitecture</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CQRS</keyword>
+      </keywords>
+    </skillSet>
+    <skillSet>
+      <name>Learning</name>
+      <keywords>
+        <keyword>TDD</keyword>
+        <keyword>TensorFlow</keyword>
+        <keyword>Scikit-Learn</keyword>
+        <keyword>C</keyword>
+        <keyword>XQuery</keyword>
+        <keyword>Blockchain</keyword>
+      </keywords>
+    </skillSet>
+    <skillSet>
+      <name>SoftSkills</name>
+      <keywords>
+        <keyword>Adaptability</keyword>
+        <keyword>Resilience</keyword>
+        <keyword>Leadership</keyword>
+        <keyword>Creativity</keyword>
+        <keyword>Initiative</keyword>
+        <keyword>Analysis</keyword>
+        <keyword>Flexibility</keyword>
+        <keyword>Teamwork</keyword>
+        <keyword>Organization</keyword>
+        <keyword>Pragmatism</keyword>
+        <keyword>Resourcefulness</keyword>
+        <keyword>Thoroughness</keyword>
+      </keywords>
+    </skillSet>
+  </skills>
+  
+  <languages>
+    <language>
+      <language>French</language>
+      <fluency>Native Speaker</fluency>
+    </language>
+    <language>
+      <language>English</language>
+      <fluency>B1+/B2 (TOEIC 730/ ELAO)</fluency>
+    </language>
+    <language>
+      <language>Dutch</language>
+      <fluency>B1</fluency>
+    </language>
+  </languages>
+  
+  <interests>
+    <interest>
+      <name>Research and Development</name>
+      <keywords>
+        <keyword>Innovations</keyword>
+        <keyword>Experimentation</keyword>
+        <keyword>POCs</keyword>
+      </keywords>
+    </interest>
+  </interests>
+  
+  <references>
+    <reference>
+      <name>Waseem Virk, Flutter Dev Emvi.ai</name>
+      <reference>Working alongside Baptiste Grosjean on the EMVI project has been an incredibly rewarding experience—both professionally and personally. Not only is Baptiste a highly skilled developer with a sharp eye for design and functionality, but he's also been a mentor and an inspiration throughout our collaboration.
+
+I've learned so much from him—from best practices in Flutter development to the importance of thoughtful UI/UX and clean architecture. He's always willing to share his knowledge, explain complex ideas with clarity, and support the team in any way he can.
+
+What stands out the most is Baptiste's ability to turn challenges into opportunities. His calm, focused approach and problem-solving mindset helped us overcome technical hurdles and build features that truly improve user experience. On top of that, his collaborative nature made working as a team feel seamless and motivating.
+
+If you're looking for someone who not only delivers exceptional results but also uplifts everyone around him, I can't recommend Baptiste enough. He's a fantastic developer, a great teammate, and someone I've been lucky to learn from.</reference>
+    </reference>
+    <reference>
+      <name>Tino Schuerewegen, Software developer at Xtrada</name>
+      <reference>I had the pleasure of working with Baptiste for a year, with the added joy of mentoring him on a project for three months. If there's one thing that stands out about Baptiste, it's his boundless energy. Whether it's 9 AM or 9 PM, he's always the most enthusiastic person in the room—sometimes even more enthusiastic than the coffee machine.
+
+Baptiste brings a contagious energy to any project he's part of. He's outgoing, smart, and has an eagerness to learn that is truly admirable. Whether he's diving into a complex task or asking insightful questions, he's always in search of knowledge. His enthusiasm for learning, especially when it comes to leveraging tools like ChatGPT, is both impressive and a little intimidating. Seriously, if ChatGPT had a best friend, it would be Baptiste!
+
+He's also incredibly hands-on, never shying away from rolling up his sleeves and getting deep into the work. His approach isn't just theoretical; he's all about practical, tangible results.
+
+In summary, if you're looking for someone who brings enthusiasm, intelligence, and a touch of humor to every task, Baptiste is your person. Working with him was not just productive, but genuinely enjoyable.</reference>
+    </reference>
+    <reference>
+      <name>Emiel Van Gysegem, Marketing and operations at Xtra Groep</name>
+      <reference>Hoewel we niet direct samenwerkten, had ik altijd een heel fijne connectie met Baptiste. In een mengelmoes van Engels, Nederlands en Frans deelden we vaak leuke gesprekken. Zijn enthousiasme en energie zijn echt aanstekelijk, en hij weet een prettige, informele sfeer te creëren in elke interactie. Baptiste is iemand die een positieve dynamiek met zich meebrengt.</reference>
+    </reference>
+    <reference>
+      <name>Steven Claus, CFO at Xtra Groep</name>
+      <reference>Baptiste is a full-stack software developer and is driven by an unwavering determination. This mindset permeates every aspect of his career. He has worked in various fields, allowing him to quickly adapt to any situation. These roles have honed both his technical and interpersonal skills, making him a versatile collaborator who significantly impacts every project he joins. Fueled by a constant desire to learn, he continually updates his knowledge through a master's degree in computer science. This ongoing learning journey makes him a well-rounded IT professional in the field of computer science.</reference>
+    </reference>
+    <reference>
+      <name>Tjörven Janssens, software developer at Xtrada</name>
+      <reference>Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een expert in het gebruik van chat-gtp. Hij leert graag nieuwe dingen en doet dit ook snel. Hij is erg enthousiast in omgang en staat steeds klaar voor een vriendelijk woord of wat advies.</reference>
+    </reference>
+    <reference>
+      <name>Michael Culot, Sales manager at Xtrada</name>
+      <reference>Baptiste is a great and devoted developer who's eager to keep learning new technologies and elevate his skill set. You would be amazed about not only his knowledge but also his warm open enthusiasm. Baptiste, you're going to be doing great things in your life, just keep your vibrate spirit ✊</reference>
+    </reference>
+  </references>
+</resume>
