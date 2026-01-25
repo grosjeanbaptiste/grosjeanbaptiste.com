@@ -40,16 +40,6 @@
   },
   "work": [
     {
-      "company": "Belgian Senate",
-      "location": "Brussels, Belgium",
-      "position": "AI Research Scientist",
-      "url": "",
-      "startDate": "2025-11-03",
-      "endDate": "2026-06-30",
-      "summary": "",
-      "highlights": []
-    },
-    {
       "company": "Acteble",
       "location": "Brussels, Belgium",
       "position": "Founder",
@@ -57,6 +47,16 @@
       "startDate": "2025-07-01",
       "endDate": "Present",
       "summary": "Developing a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.",
+      "highlights": []
+    },
+    {
+      "company": "Belgian Senate",
+      "location": "Brussels, Belgium",
+      "position": "AI Research Scientist",
+      "url": "",
+      "startDate": "2025-11-03",
+      "endDate": "2026-06-30",
+      "summary": "",
       "highlights": []
     },
     {
