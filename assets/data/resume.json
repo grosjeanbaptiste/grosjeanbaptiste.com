@@ -12,7 +12,7 @@
     "email": "grosjeanbaptisteit@outlook.com",
     "phone": "+32 496 28 97 05",
     "url": "https://my-way-bg.vercel.app/about/way",
-    "summary": "Computer science student @UMons by night looking for a new opportunity by day while launching Acteble. \n\nAll the projects I have been involved in have been developed with a strong focus on Software Craftmanship principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality, maintainability and scalability.",
+    "summary": "Computer science student @UMons by night looking for a new opportunity by day while launching Acteble. \n\nAll the projects I have been involved in have been developed with a strong focus on Software Craftsmanship principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality, maintainability and scalability.",
     "location": {
       "address": "Avenue Baron Albert D'Huart",
       "postalCode": "1950",
@@ -66,7 +66,7 @@
       "url": "https://www.emvi.ai",
       "startDate": "2024-12-01",
       "endDate": "2025-06-30",
-      "summary": "Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QRCodes & Barre Codes) and adapted Valhalla routing system for the visually impaired.",
+      "summary": "Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QR codes & Barcodes) and adapted Valhalla routing system for the visually impaired.",
       "highlights": ["Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla"]
     },
     {
@@ -76,7 +76,7 @@
       "url": "https://www.emvi.ai",
       "startDate": "2024-10-01",
       "endDate": "2025-06-30",
-      "summary": "Remi: Reminescence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM generated descriptions.",
+      "summary": "Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM generated descriptions.",
       "highlights": ["Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil"]
     },
     {
@@ -115,7 +115,7 @@
       "url": "https://www.cow.be",
       "startDate": "2024-03-15",
       "endDate": "2024-03-17",
-      "summary": "EduCraft: solution allowing anyone to craft his own personnalized path to get new skills",
+      "summary": "EduCraft: solution allowing anyone to craft his own personalized path to get new skills",
       "highlights": []
     },
     {
@@ -145,7 +145,7 @@
       "url": "https://www.cow.be",
       "startDate": "2023-03-29",
       "endDate": "2023-03-31",
-      "summary": "OnlyTogether: solution allowing the vulnerable users always being accompagned",
+      "summary": "OnlyTogether: solution allowing the vulnerable users always being accompanied",
       "highlights": []
     },
     {
@@ -243,16 +243,16 @@
       "keywords": ["Flutter", "Firebase", "OpenAI", "Valhalla", "AI"],
       "startDate": "2024-12-01",
       "endDate": "2025-06-30",
-      "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QRCodes & Barre Codes) and adapted Valhalla routing system for the visually impaired.",
+      "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QR codes & Barcodes) and adapted Valhalla routing system for the visually impaired.",
       "type": "Mobile Application"
     },
     {
       "name": "Remi",
-      "description": "Reminescence application for people with cognitive issues.",
+      "description": "Reminiscence application for people with cognitive issues.",
       "keywords": ["Python", "FastAPI", "OpenAI", "Whisper", "DeepFace"],
       "startDate": "2024-10-01",
       "endDate": "2025-06-30",
-      "summary": "Reminescence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline.",
+      "summary": "Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline.",
       "type": "AI Application"
     },
     {
@@ -339,7 +339,7 @@
       "studyType": "Bachelor of Arts - BA",
       "startDate": "2016-09-30",
       "endDate": "2019-06-30",
-      "gpa": "29 credits earned in 2016-2017, contact me for more informations.",
+      "gpa": "29 credits earned in 2016-2017, contact me for more information.",
       "courses": []
     },
     {
@@ -348,7 +348,7 @@
       "studyType": "Bachelor of Science - BSc",
       "startDate": "2015-09-30",
       "endDate": "2016-06-30",
-      "gpa": "Contact me for more informations.",
+      "gpa": "Contact me for more information.",
       "courses": []
     },
     {
@@ -357,7 +357,7 @@
       "studyType": "Bachelor of Science - BSc",
       "startDate": "2015-09-30",
       "endDate": "2016-06-30",
-      "gpa": "Contact me for more informations.",
+      "gpa": "Contact me for more information.",
       "courses": []
     },
     {
@@ -380,7 +380,7 @@
     },
     {
       "institution": "Lycée Mater Dei",
-      "area": "General studies Latin & Greec",
+      "area": "General studies Latin & Greek",
       "studyType": "",
       "startDate": "2009-09-30",
       "endDate": "2012-06-30",
@@ -520,11 +520,11 @@
     },
     {
       "name": "Tjörven Janssens, software developer at Xtrada",
-      "reference": "Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een expert in het gebruik van chat-gtp. Hij leert graag nieuwe dingen en doet dit ook snel. Hij is erg enthousiast in omgang en staat steeds klaar voor een vriendelijk woord of wat advies."
+      "reference": "Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een expert in het gebruik van ChatGPT. Hij leert graag nieuwe dingen en doet dit ook snel. Hij is erg enthousiast in omgang en staat steeds klaar voor een vriendelijk woord of wat advies."
     },
     {
       "name": "Michael Culot, Sales manager at Xtrada",
-      "reference": "Baptiste is a great and devoted developer who’s eager to keep learning new technologies and elevate his skill set. You would be amazed about not only his knowledge but also his warm open enthusiasm. Baptiste, you’re going to be doing great things in your life, just keep your vibrate spirit ✊"
+      "reference": "Baptiste is a great and devoted developer who’s eager to keep learning new technologies and elevate his skill set. You would be amazed about not only his knowledge but also his warm open enthusiasm. Baptiste, you’re going to be doing great things in your life, just keep your vibrant spirit ✊"
     }
   ]
 }

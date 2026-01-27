@@ -17,7 +17,7 @@
     <url>https://my-way-bg.vercel.app/about/way</url>
     <summary>Computer science student @UMons by night looking for a new opportunity by day while launching Acteble. 
 
-All the projects I have been involved in have been developed with a strong focus on Software Craftmanship principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality, maintainability and scalability.</summary>
+All the projects I have been involved in have been developed with a strong focus on Software Craftsmanship principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality, maintainability and scalability.</summary>
     <location>
       <address>Avenue Baron Albert D'Huart</address>
       <postalCode>1950</postalCode>
@@ -72,7 +72,7 @@ All the projects I have been involved in have been developed with a strong focus
       <url>https://www.emvi.ai</url>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QRCodes &amp; Barre Codes) and adapted Valhalla routing system for the visually impaired.</summary>
+      <summary>Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QR codes &amp; Barcodes) and adapted Valhalla routing system for the visually impaired.</summary>
       <highlights>
         <highlight>Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla</highlight>
       </highlights>
@@ -84,7 +84,7 @@ All the projects I have been involved in have been developed with a strong focus
       <url>https://www.emvi.ai</url>
       <startDate>2024-10-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Remi: Reminescence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM generated descriptions.</summary>
+      <summary>Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM generated descriptions.</summary>
       <highlights>
         <highlight>Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil</highlight>
       </highlights>
@@ -129,7 +129,7 @@ Implementation of Azure ai services in .net solution.</summary>
       <url>https://www.cow.be</url>
       <startDate>2024-03-15</startDate>
       <endDate>2024-03-17</endDate>
-      <summary>EduCraft: solution allowing anyone to craft his own personnalized path to get new skills</summary>
+      <summary>EduCraft: solution allowing anyone to craft his own personalized path to get new skills</summary>
       <highlights></highlights>
     </position>
     <position>
@@ -161,7 +161,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <url>https://www.cow.be</url>
       <startDate>2023-03-29</startDate>
       <endDate>2023-03-31</endDate>
-      <summary>OnlyTogether: solution allowing the vulnerable users always being accompagned</summary>
+      <summary>OnlyTogether: solution allowing the vulnerable users always being accompanied</summary>
       <highlights></highlights>
     </position>
     <position>
@@ -274,12 +274,12 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       </keywords>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QRCodes &amp; Barre Codes) and adapted Valhalla routing system for the visually impaired.</summary>
+      <summary>AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QR codes &amp; Barcodes) and adapted Valhalla routing system for the visually impaired.</summary>
       <type>Mobile Application</type>
     </project>
     <project>
       <name>Remi</name>
-      <description>Reminescence application for people with cognitive issues.</description>
+      <description>Reminiscence application for people with cognitive issues.</description>
       <keywords>
         <keyword>Python</keyword>
         <keyword>FastAPI</keyword>
@@ -289,7 +289,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       </keywords>
       <startDate>2024-10-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Reminescence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline.</summary>
+      <summary>Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline.</summary>
       <type>AI Application</type>
     </project>
     <project>
@@ -394,7 +394,7 @@ TFE: WebMenu 2.0</summary>
       <studyType>Bachelor of Arts - BA</studyType>
       <startDate>2016-09-30</startDate>
       <endDate>2019-06-30</endDate>
-      <gpa>29 credits earned in 2016-2017, contact me for more informations.</gpa>
+      <gpa>29 credits earned in 2016-2017, contact me for more information.</gpa>
       <courses></courses>
     </degree>
     <degree>
@@ -403,7 +403,7 @@ TFE: WebMenu 2.0</summary>
       <studyType>Bachelor of Science - BSc</studyType>
       <startDate>2015-09-30</startDate>
       <endDate>2016-06-30</endDate>
-      <gpa>Contact me for more informations.</gpa>
+      <gpa>Contact me for more information.</gpa>
       <courses></courses>
     </degree>
     <degree>
@@ -412,7 +412,7 @@ TFE: WebMenu 2.0</summary>
       <studyType>Bachelor of Science - BSc</studyType>
       <startDate>2015-09-30</startDate>
       <endDate>2016-06-30</endDate>
-      <gpa>Contact me for more informations.</gpa>
+      <gpa>Contact me for more information.</gpa>
       <courses></courses>
     </degree>
     <degree>
@@ -435,7 +435,7 @@ TFE: WebMenu 2.0</summary>
     </degree>
     <degree>
       <institution>Lycée Mater Dei</institution>
-      <area>General studies Latin &amp; Greec</area>
+      <area>General studies Latin &amp; Greek</area>
       <studyType></studyType>
       <startDate>2009-09-30</startDate>
       <endDate>2012-06-30</endDate>
@@ -592,11 +592,11 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
     </reference>
     <reference>
       <name>Tjörven Janssens, software developer at Xtrada</name>
-      <reference>Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een expert in het gebruik van chat-gtp. Hij leert graag nieuwe dingen en doet dit ook snel. Hij is erg enthousiast in omgang en staat steeds klaar voor een vriendelijk woord of wat advies.</reference>
+      <reference>Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een expert in het gebruik van ChatGPT. Hij leert graag nieuwe dingen en doet dit ook snel. Hij is erg enthousiast in omgang en staat steeds klaar voor een vriendelijk woord of wat advies.</reference>
     </reference>
     <reference>
       <name>Michael Culot, Sales manager at Xtrada</name>
-      <reference>Baptiste is a great and devoted developer who's eager to keep learning new technologies and elevate his skill set. You would be amazed about not only his knowledge but also his warm open enthusiasm. Baptiste, you're going to be doing great things in your life, just keep your vibrate spirit ✊</reference>
+      <reference>Baptiste is a great and devoted developer who's eager to keep learning new technologies and elevate his skill set. You would be amazed about not only his knowledge but also his warm open enthusiasm. Baptiste, you're going to be doing great things in your life, just keep your vibrant spirit ✊</reference>
     </reference>
   </references>
 </resume>
