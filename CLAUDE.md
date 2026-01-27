@@ -19,15 +19,16 @@ This is a static personal portfolio/resume website for Baptiste Grosjean, hosted
   - `nav.js` - Navigation functionality including mobile menu and smooth scrolling
 - `assets/` - Static assets
   - `data/resume.json` - Structured resume data following JSON Resume schema
-  - `data/registry.json` - Additional registry data
+  - `data/resume.xml` - XML mirror of resume data
   - `images/` - Profile pictures and other images
   - `cv/` - PDF version of CV
+  - `xslt/resume-transform.xsl` - Optional XML transform stylesheet
 - `CNAME` - GitHub Pages custom domain configuration
 
 ### Data Architecture
-The website uses two JSON files for data:
+The website uses JSON and XML files for data:
 - `assets/data/resume.json` - Primary resume data following the JSON Resume schema v1.0.0
-- `assets/data/registry.json` - Secondary registry data with similar structure but different theme
+- `assets/data/resume.xml` - XML mirror of the resume data
 
 The HTML content is currently hardcoded in `index.html` rather than dynamically generated from the JSON data.
 

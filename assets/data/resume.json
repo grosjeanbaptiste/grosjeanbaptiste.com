@@ -66,8 +66,10 @@
       "url": "https://www.emvi.ai",
       "startDate": "2024-12-01",
       "endDate": "2025-06-30",
-      "summary": "Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QR codes & Barcodes) and adapted Valhalla routing system for the visually impaired.",
-      "highlights": ["Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla"]
+      "summary": "Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired.",
+      "highlights": [
+        "Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla"
+      ]
     },
     {
       "company": "Emvi.ai",
@@ -76,8 +78,10 @@
       "url": "https://www.emvi.ai",
       "startDate": "2024-10-01",
       "endDate": "2025-06-30",
-      "summary": "Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM generated descriptions.",
-      "highlights": ["Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil"]
+      "summary": "Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM-generated descriptions.",
+      "highlights": [
+        "Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil"
+      ]
     },
     {
       "company": "Xtrada",
@@ -86,7 +90,7 @@
       "url": "https://www.xtrada.be",
       "startDate": "2024-03-01",
       "endDate": "2024-09-22",
-      "summary": "Use of python libraries (Spacy,...) to extract named entities from text via NER model training and implementation in .Net\n\nModel rate 87%",
+      "summary": "Used Python libraries (SpaCy, ...) to extract named entities from text via NER model training and implementation in .NET. Model recall score: 87%.",
       "highlights": []
     },
     {
@@ -96,13 +100,13 @@
       "url": "https://www.xtrada.be",
       "startDate": "2023-08-21",
       "endDate": "2024-09-22",
-      "summary": "Software modernization within the .Net stack following domain driven design and clean code principles. \n\nImplementation of Azure ai services in .net solution.",
+      "summary": "Software modernization within the .NET stack following domain-driven design and clean code principles. Implementation of Azure AI services in a .NET solution.",
       "highlights": []
     },
     {
       "company": "VhAuctions",
       "location": "Anvers, Région flamande, Belgique",
-      "position": ".Net/React Software Crafter",
+      "position": ".NET/React Software Crafter",
       "url": "https://www.vhauctions.be",
       "startDate": "2024-01-01",
       "endDate": "2024-08-07",
@@ -115,17 +119,17 @@
       "url": "https://www.cow.be",
       "startDate": "2024-03-15",
       "endDate": "2024-03-17",
-      "summary": "EduCraft: solution allowing anyone to craft his own personalized path to get new skills",
+      "summary": "EduCraft: solution allowing anyone to craft a personalized path to gain new skills.",
       "highlights": []
     },
     {
       "company": "aXinco",
       "location": "Anvers, Région flamande, Belgique",
-      "position": ".Net/Blazor Software Crafter",
+      "position": ".NET/Blazor Software Crafter",
       "url": "https://www.axinco.be",
       "startDate": "2023-09-01",
       "endDate": "2023-12-31",
-      "summary": "Crafting Axinco Kwalitijd webapp in .Net / Blazor folowing DDD and clean code principles.",
+      "summary": "Crafting Axinco Kwalitijd webapp in .NET / Blazor following DDD and clean code principles.",
       "highlights": []
     },
     {
@@ -135,7 +139,7 @@
       "url": "https://www.technofutur-tic.be",
       "startDate": "2022-12-01",
       "endDate": "2023-06-30",
-      "summary": "This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC. \nIn addition, during the extension, we received an introduction to BUSINESS Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...). \nThis comprehensive training covered various areas including SQL Server, Node.js, Express.js, React.js, and Angular.js, encompassing everything from database development to user interface and backend.",
+      "summary": "This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC.\nIn addition, during the extension, we received an introduction to Business Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...).\nThis comprehensive training covered various areas including SQL Server, Node.js, Express.js, React, and Angular, encompassing everything from database development to user interface and backend.",
       "highlights": []
     },
     {
@@ -145,7 +149,7 @@
       "url": "https://www.cow.be",
       "startDate": "2023-03-29",
       "endDate": "2023-03-31",
-      "summary": "OnlyTogether: solution allowing the vulnerable users always being accompanied",
+      "summary": "OnlyTogether: solution ensuring vulnerable users are always accompanied.",
       "highlights": []
     },
     {
@@ -231,51 +235,88 @@
     {
       "name": "Acteble",
       "description": "Mobile application connecting travelers during their journeys.",
-      "keywords": ["Flutter", "Rust", "Mobile", "Travel"],
+      "keywords": [
+        "Flutter",
+        "Rust",
+        "Mobile",
+        "Travel",
+        "Tokio",
+        "PostgreSQL",
+        "Docker",
+        "Dart"
+      ],
       "startDate": "2025-07-01",
       "summary": "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.",
       "type": "Mobile Application",
-      "roles": ["Founder"]
+      "roles": [
+        "Founder"
+      ]
     },
     {
       "name": "Emvi App",
       "description": "AI powered visual assistant for visually impaired people.",
-      "keywords": ["Flutter", "Firebase", "OpenAI", "Valhalla", "AI"],
+      "keywords": [
+        "Flutter",
+        "Firebase",
+        "OpenAI",
+        "Valhalla",
+        "AI"
+      ],
       "startDate": "2024-12-01",
       "endDate": "2025-06-30",
-      "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QR codes & Barcodes) and adapted Valhalla routing system for the visually impaired.",
+      "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired.",
       "type": "Mobile Application"
     },
     {
       "name": "Remi",
       "description": "Reminiscence application for people with cognitive issues.",
-      "keywords": ["Python", "FastAPI", "OpenAI", "Whisper", "DeepFace"],
+      "keywords": [
+        "Python",
+        "FastAPI",
+        "OpenAI",
+        "Whisper",
+        "DeepFace"
+      ],
       "startDate": "2024-10-01",
       "endDate": "2025-06-30",
-      "summary": "Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline.",
+      "summary": "Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline.",
       "type": "AI Application"
     },
     {
       "name": "EduCraft",
       "description": "Platform allowing users to get more skills.",
-      "keywords": ["PHP", "API", "UI/UX"],
+      "keywords": [
+        "PHP",
+        "API",
+        "UI/UX"
+      ],
       "startDate": "2024-03-29",
       "endDate": "2024-03-31",
       "summary": ""
     },
     {
       "name": "MyWay",
-      "description": "Education manager for students. \n\nNot maintained anymore: database and auth functionalities not available anymore.",
+      "description": "Education manager for students. No longer maintained; database and auth are unavailable.",
       "highlights": [
         "UI/UX.",
         "APIs integration."
       ],
-      "keywords": ["Angular.ts", "JavaScript", "TypeScript", "Express.js", "API", "UI/UX"],
+      "keywords": [
+        "Angular",
+        "JavaScript",
+        "TypeScript",
+        "Express.js",
+        "API",
+        "UI/UX",
+        "MSSQL Server"
+      ],
       "startDate": "2023-01-01",
       "endDate": "2023-06-30",
       "summary": "",
       "url": "https://my-way-bg.vercel.app",
-      "roles": ["Founder"],
+      "roles": [
+        "Founder"
+      ],
       "entity": "Freelance",
       "type": "Web Application"
     },
@@ -283,7 +324,7 @@
       "name": "VhAuctions NER Inventory Model",
       "startDate": "2024-03-01",
       "endDate": "2024-08-07",
-      "summary": "Named Entity Recognition Machine Learning Model to extract Inventory Items from and audio transcription."
+      "summary": "Named Entity Recognition machine learning model to extract inventory items from an audio transcription."
     },
     {
       "name": "VhAuctions",
@@ -301,7 +342,7 @@
       "name": "WebMenu",
       "startDate": "2021-11-01",
       "endDate": "2022-03-31",
-      "summary": "QRCode based cash register for HoReCa establishments."
+      "summary": "QR code based cash register for HoReCa establishments."
     }
   ],
   "education": [
@@ -421,12 +462,12 @@
         "Pandas",
         "NumPy",
         "Whisper",
-        "Spacy",
+        "SpaCy",
         "Node.js",
         "Express.js",
         "Blazor",
-        "Angular.js",
-        "React.js",
+        "Angular",
+        "React",
         "Flutter",
         "Tokio",
         "Axum",

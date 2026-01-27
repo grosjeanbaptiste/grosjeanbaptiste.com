@@ -7,7 +7,7 @@
     <canonical>https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json</canonical>
     <theme>grosjeanbaptiste</theme>
   </meta>
-  
+
   <basics>
     <name>Baptiste Grosjean</name>
     <label>Computer Scientist | Student @UMons by night &amp; AI Software Crafter by day</label>
@@ -15,9 +15,12 @@
     <email>grosjeanbaptisteit@outlook.com</email>
     <phone>+32 496 28 97 05</phone>
     <url>https://my-way-bg.vercel.app/about/way</url>
-    <summary>Computer science student @UMons by night looking for a new opportunity by day while launching Acteble. 
+    <summary>Computer science student @UMons by night looking for a new opportunity by day while
+      launching Acteble.
 
-All the projects I have been involved in have been developed with a strong focus on Software Craftsmanship principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality, maintainability and scalability.</summary>
+      All the projects I have been involved in have been developed with a strong focus on Software
+      Craftsmanship principles (clean code, clean architecture, and DDD) as best practices to ensure
+      highest standards of quality, maintainability and scalability.</summary>
     <location>
       <address>Avenue Baron Albert D'Huart</address>
       <postalCode>1950</postalCode>
@@ -43,7 +46,7 @@ All the projects I have been involved in have been developed with a strong focus
       </profile>
     </profiles>
   </basics>
-  
+
   <work>
     <position>
       <company>Acteble</company>
@@ -52,7 +55,8 @@ All the projects I have been involved in have been developed with a strong focus
       <url>https://www.acteble.com</url>
       <startDate>2025-07-01</startDate>
       <endDate>Present</endDate>
-      <summary>Developing a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.</summary>
+      <summary>Developing a mobile application that connects travelers during their journeys.
+        Working with Flutter for the mobile app and Rust for the backend.</summary>
       <highlights></highlights>
     </position>
     <position>
@@ -72,7 +76,9 @@ All the projects I have been involved in have been developed with a strong focus
       <url>https://www.emvi.ai</url>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QR codes &amp; Barcodes) and adapted Valhalla routing system for the visually impaired.</summary>
+      <summary>Emvi App: AI powered visual assistant for visually impaired people providing them
+        with a description of their environment, OCR, code scans (QR codes &amp; barcodes), and an
+        adapted Valhalla routing system for the visually impaired.</summary>
       <highlights>
         <highlight>Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla</highlight>
       </highlights>
@@ -84,7 +90,10 @@ All the projects I have been involved in have been developed with a strong focus
       <url>https://www.emvi.ai</url>
       <startDate>2024-10-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM generated descriptions.</summary>
+      <summary>Remi: Reminiscence application allowing people with cognitive issues to recover their
+        memories through descriptions of their photos powered by facial recognition and LLMs.
+        DeepFace by Serengil was used for the facial recognition pipeline (detection and
+        recognition) and sentiment analysis for the LLM-generated descriptions.</summary>
       <highlights>
         <highlight>Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil</highlight>
       </highlights>
@@ -96,9 +105,8 @@ All the projects I have been involved in have been developed with a strong focus
       <url>https://www.xtrada.be</url>
       <startDate>2024-03-01</startDate>
       <endDate>2024-09-22</endDate>
-      <summary>Use of python libraries (Spacy,...) to extract named entities from text via NER model training and implementation in .Net
-
-Model rate 87%</summary>
+      <summary>Used Python libraries (SpaCy, ...) to extract named entities from text via NER model
+        training and implementation in .NET. Model recall score: 87%.</summary>
       <highlights></highlights>
     </position>
     <position>
@@ -108,15 +116,14 @@ Model rate 87%</summary>
       <url>https://www.xtrada.be</url>
       <startDate>2023-08-21</startDate>
       <endDate>2024-09-22</endDate>
-      <summary>Software modernization within the .Net stack following domain driven design and clean code principles. 
-
-Implementation of Azure ai services in .net solution.</summary>
+      <summary>Software modernization within the .NET stack following domain-driven design and clean
+        code principles. Implementation of Azure AI services in a .NET solution.</summary>
       <highlights></highlights>
     </position>
     <position>
       <company>VhAuctions</company>
       <location>Anvers, Région flamande, Belgique</location>
-      <position>.Net/React Software Crafter</position>
+      <position>.NET/React Software Crafter</position>
       <url>https://www.vhauctions.be</url>
       <startDate>2024-01-01</startDate>
       <endDate>2024-08-07</endDate>
@@ -129,17 +136,19 @@ Implementation of Azure ai services in .net solution.</summary>
       <url>https://www.cow.be</url>
       <startDate>2024-03-15</startDate>
       <endDate>2024-03-17</endDate>
-      <summary>EduCraft: solution allowing anyone to craft his own personalized path to get new skills</summary>
+      <summary>EduCraft: solution allowing anyone to craft his own personalized path to get new
+        skills</summary>
       <highlights></highlights>
     </position>
     <position>
       <company>aXinco</company>
       <location>Anvers, Région flamande, Belgique</location>
-      <position>.Net/Blazor Software Crafter</position>
+      <position>.NET/Blazor Software Crafter</position>
       <url>https://www.axinco.be</url>
       <startDate>2023-09-01</startDate>
       <endDate>2023-12-31</endDate>
-      <summary>Crafting Axinco Kwalitijd webapp in .Net / Blazor folowing DDD and clean code principles.</summary>
+      <summary>Crafting Axinco Kwalitijd webapp in .NET / Blazor following DDD and clean code
+        principles.</summary>
       <highlights></highlights>
     </position>
     <position>
@@ -149,9 +158,13 @@ Implementation of Azure ai services in .net solution.</summary>
       <url>https://www.technofutur-tic.be</url>
       <startDate>2022-12-01</startDate>
       <endDate>2023-06-30</endDate>
-      <summary>This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC. 
-In addition, during the extension, we received an introduction to BUSINESS Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...). 
-This comprehensive training covered various areas including SQL Server, Node.js, Express.js, React.js, and Angular.js, encompassing everything from database development to user interface and backend.</summary>
+      <summary>This qualifying training aimed to strengthen the technical skills acquired during my
+        bachelor's degree program at EPHEC.
+        In addition, during the extension, we received an introduction to Business Intelligence and
+        ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...).
+        This comprehensive training covered various areas including SQL Server, Node.js, Express.js,
+        React, and Angular, encompassing everything from database development to user interface and
+        backend.</summary>
       <highlights></highlights>
     </position>
     <position>
@@ -161,7 +174,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <url>https://www.cow.be</url>
       <startDate>2023-03-29</startDate>
       <endDate>2023-03-31</endDate>
-      <summary>OnlyTogether: solution allowing the vulnerable users always being accompanied</summary>
+      <summary>OnlyTogether: solution ensuring vulnerable users are always accompanied.</summary>
       <highlights></highlights>
     </position>
     <position>
@@ -205,7 +218,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <highlights></highlights>
     </position>
   </work>
-  
+
   <volunteer>
     <activity>
       <organization>UMons</organization>
@@ -244,7 +257,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <highlights></highlights>
     </activity>
   </volunteer>
-  
+
   <projects>
     <project>
       <name>Acteble</name>
@@ -254,9 +267,14 @@ This comprehensive training covered various areas including SQL Server, Node.js,
         <keyword>Rust</keyword>
         <keyword>Mobile</keyword>
         <keyword>Travel</keyword>
+        <keyword>Tokio</keyword>
+        <keyword>PostgreSQL</keyword>
+        <keyword>Docker</keyword>
+        <keyword>Dart</keyword>
       </keywords>
       <startDate>2025-07-01</startDate>
-      <summary>Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.</summary>
+      <summary>Development of a mobile application that connects travelers during their journeys.
+        Working with Flutter for the mobile app and Rust for the backend.</summary>
       <type>Mobile Application</type>
       <roles>
         <role>Founder</role>
@@ -274,7 +292,9 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       </keywords>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, codes scan (QR codes &amp; Barcodes) and adapted Valhalla routing system for the visually impaired.</summary>
+      <summary>AI powered visual assistant for visually impaired people providing them with a
+        description of their environment, OCR, code scans (QR codes &amp; barcodes), and an adapted
+        Valhalla routing system for the visually impaired.</summary>
       <type>Mobile Application</type>
     </project>
     <project>
@@ -289,12 +309,14 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       </keywords>
       <startDate>2024-10-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by Facial Recognition and LLMs. DeepFace library by Serengil was used for the facial recognition pipeline.</summary>
+      <summary>Reminiscence application allowing people with cognitive issues to recover their
+        memories through descriptions of their photos powered by facial recognition and LLMs.
+        DeepFace by Serengil was used for the facial recognition pipeline.</summary>
       <type>AI Application</type>
     </project>
     <project>
       <name>EduCraft</name>
-      <description>Platform allowing users to get more skills.</description>
+      <description>Education manager.</description>
       <keywords>
         <keyword>PHP</keyword>
         <keyword>API</keyword>
@@ -302,24 +324,24 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       </keywords>
       <startDate>2024-03-29</startDate>
       <endDate>2024-03-31</endDate>
-      <summary></summary>
+      <summary>Education manager.</summary>
     </project>
     <project>
       <name>MyWay</name>
-      <description>Education manager for students. 
-
-Not maintained anymore: database and auth functionalities not available anymore.</description>
+      <description>Education manager for students. No longer maintained; database and auth are
+        unavailable.</description>
       <highlights>
         <highlight>UI/UX.</highlight>
         <highlight>APIs integration.</highlight>
       </highlights>
       <keywords>
-        <keyword>Angular.ts</keyword>
+        <keyword>Angular</keyword>
         <keyword>JavaScript</keyword>
         <keyword>TypeScript</keyword>
         <keyword>Express.js</keyword>
         <keyword>API</keyword>
         <keyword>UI/UX</keyword>
+        <keyword>MSSQL Server</keyword>
       </keywords>
       <startDate>2023-01-01</startDate>
       <endDate>2023-06-30</endDate>
@@ -335,7 +357,8 @@ Not maintained anymore: database and auth functionalities not available anymore.
       <name>VhAuctions NER Inventory Model</name>
       <startDate>2024-03-01</startDate>
       <endDate>2024-08-07</endDate>
-      <summary>Named Entity Recognition Machine Learning Model to extract Inventory Items from and audio transcription.</summary>
+      <summary>Named Entity Recognition machine learning model to extract inventory items from an
+        audio transcription.</summary>
     </project>
     <project>
       <name>VhAuctions</name>
@@ -353,10 +376,10 @@ Not maintained anymore: database and auth functionalities not available anymore.
       <name>WebMenu</name>
       <startDate>2021-11-01</startDate>
       <endDate>2022-03-31</endDate>
-      <summary>QRCode based cash register for HoReCa establishments.</summary>
+      <summary>QR code based cash register for HoReCa establishments.</summary>
     </project>
   </projects>
-  
+
   <education>
     <degree>
       <institution>UMons</institution>
@@ -374,9 +397,9 @@ Not maintained anymore: database and auth functionalities not available anymore.
       <startDate>2018-09-30</startDate>
       <endDate>2022-10-15</endDate>
       <gpa>62.8%, Satis Bene</gpa>
-      <summary>Student representative and tutor. 
+      <summary>Student representative and tutor.
 
-TFE: WebMenu 2.0</summary>
+        TFE: WebMenu 2.0</summary>
       <courses></courses>
     </degree>
     <degree>
@@ -443,7 +466,7 @@ TFE: WebMenu 2.0</summary>
       <courses></courses>
     </degree>
   </education>
-  
+
   <awards>
     <award>
       <title>TOEIC</title>
@@ -452,7 +475,7 @@ TFE: WebMenu 2.0</summary>
       <summary>730</summary>
     </award>
   </awards>
-  
+
   <skills>
     <skillSet>
       <name>HardSkills</name>
@@ -478,12 +501,12 @@ TFE: WebMenu 2.0</summary>
         <keyword>Pandas</keyword>
         <keyword>NumPy</keyword>
         <keyword>Whisper</keyword>
-        <keyword>Spacy</keyword>
+        <keyword>SpaCy</keyword>
         <keyword>Node.js</keyword>
         <keyword>Express.js</keyword>
         <keyword>Blazor</keyword>
-        <keyword>Angular.js</keyword>
-        <keyword>React.js</keyword>
+        <keyword>Angular</keyword>
+        <keyword>React</keyword>
         <keyword>Flutter</keyword>
         <keyword>Tokio</keyword>
         <keyword>Axum</keyword>
@@ -534,7 +557,7 @@ TFE: WebMenu 2.0</summary>
       </keywords>
     </skillSet>
   </skills>
-  
+
   <languages>
     <language>
       <language>French</language>
@@ -549,7 +572,7 @@ TFE: WebMenu 2.0</summary>
       <fluency>B1</fluency>
     </language>
   </languages>
-  
+
   <interests>
     <interest>
       <name>Research and Development</name>
@@ -560,43 +583,78 @@ TFE: WebMenu 2.0</summary>
       </keywords>
     </interest>
   </interests>
-  
+
   <references>
     <reference>
       <name>Waseem Virk, Flutter Dev Emvi.ai</name>
-      <reference>Working alongside Baptiste Grosjean on the EMVI project has been an incredibly rewarding experience—both professionally and personally. Not only is Baptiste a highly skilled developer with a sharp eye for design and functionality, but he's also been a mentor and an inspiration throughout our collaboration.
+      <reference>Working alongside Baptiste Grosjean on the EMVI project has been an incredibly
+        rewarding experience—both professionally and personally. Not only is Baptiste a highly
+        skilled developer with a sharp eye for design and functionality, but he's also been a mentor
+        and an inspiration throughout our collaboration.
 
-I've learned so much from him—from best practices in Flutter development to the importance of thoughtful UI/UX and clean architecture. He's always willing to share his knowledge, explain complex ideas with clarity, and support the team in any way he can.
+        I've learned so much from him—from best practices in Flutter development to the importance
+        of thoughtful UI/UX and clean architecture. He's always willing to share his knowledge,
+        explain complex ideas with clarity, and support the team in any way he can.
 
-What stands out the most is Baptiste's ability to turn challenges into opportunities. His calm, focused approach and problem-solving mindset helped us overcome technical hurdles and build features that truly improve user experience. On top of that, his collaborative nature made working as a team feel seamless and motivating.
+        What stands out the most is Baptiste's ability to turn challenges into opportunities. His
+        calm, focused approach and problem-solving mindset helped us overcome technical hurdles and
+        build features that truly improve user experience. On top of that, his collaborative nature
+        made working as a team feel seamless and motivating.
 
-If you're looking for someone who not only delivers exceptional results but also uplifts everyone around him, I can't recommend Baptiste enough. He's a fantastic developer, a great teammate, and someone I've been lucky to learn from.</reference>
+        If you're looking for someone who not only delivers exceptional results but also uplifts
+        everyone around him, I can't recommend Baptiste enough. He's a fantastic developer, a great
+        teammate, and someone I've been lucky to learn from.</reference>
     </reference>
     <reference>
       <name>Tino Schuerewegen, Software developer at Xtrada</name>
-      <reference>I had the pleasure of working with Baptiste for a year, with the added joy of mentoring him on a project for three months. If there's one thing that stands out about Baptiste, it's his boundless energy. Whether it's 9 AM or 9 PM, he's always the most enthusiastic person in the room—sometimes even more enthusiastic than the coffee machine.
+      <reference>I had the pleasure of working with Baptiste for a year, with the added joy of
+        mentoring him on a project for three months. If there's one thing that stands out about
+        Baptiste, it's his boundless energy. Whether it's 9 AM or 9 PM, he's always the most
+        enthusiastic person in the room—sometimes even more enthusiastic than the coffee machine.
+        Baptiste brings a contagious energy to any project he's part of. He's outgoing, smart, and
+        has an eagerness to learn that is truly admirable. Whether he's diving into a complex task
+        or asking insightful questions, he's always in search of knowledge. His enthusiasm for
+        learning, especially when it comes to leveraging tools like ChatGPT, is both impressive and
+        a little intimidating. Seriously, if ChatGPT had a best friend, it would be Baptiste!
 
-Baptiste brings a contagious energy to any project he's part of. He's outgoing, smart, and has an eagerness to learn that is truly admirable. Whether he's diving into a complex task or asking insightful questions, he's always in search of knowledge. His enthusiasm for learning, especially when it comes to leveraging tools like ChatGPT, is both impressive and a little intimidating. Seriously, if ChatGPT had a best friend, it would be Baptiste!
+        He's also incredibly hands-on, never shying away from rolling up his sleeves and getting
+        deep into the work. His approach isn't just theoretical; he's all about practical, tangible
+        results.
 
-He's also incredibly hands-on, never shying away from rolling up his sleeves and getting deep into the work. His approach isn't just theoretical; he's all about practical, tangible results.
-
-In summary, if you're looking for someone who brings enthusiasm, intelligence, and a touch of humor to every task, Baptiste is your person. Working with him was not just productive, but genuinely enjoyable.</reference>
+        In summary, if you're looking for someone who brings enthusiasm, intelligence, and a touch
+        of humor to every task, Baptiste is your person. Working with him was not just productive,
+        but genuinely enjoyable.</reference>
     </reference>
     <reference>
       <name>Emiel Van Gysegem, Marketing and operations at Xtra Groep</name>
-      <reference>Hoewel we niet direct samenwerkten, had ik altijd een heel fijne connectie met Baptiste. In een mengelmoes van Engels, Nederlands en Frans deelden we vaak leuke gesprekken. Zijn enthousiasme en energie zijn echt aanstekelijk, en hij weet een prettige, informele sfeer te creëren in elke interactie. Baptiste is iemand die een positieve dynamiek met zich meebrengt.</reference>
+      <reference>Hoewel we niet direct samenwerkten, had ik altijd een heel fijne connectie met
+        Baptiste. In een mengelmoes van Engels, Nederlands en Frans deelden we vaak leuke
+        gesprekken. Zijn enthousiasme en energie zijn echt aanstekelijk, en hij weet een prettige,
+        informele sfeer te creëren in elke interactie. Baptiste is iemand die een positieve dynamiek
+        met zich meebrengt.</reference>
     </reference>
     <reference>
       <name>Steven Claus, CFO at Xtra Groep</name>
-      <reference>Baptiste is a full-stack software developer and is driven by an unwavering determination. This mindset permeates every aspect of his career. He has worked in various fields, allowing him to quickly adapt to any situation. These roles have honed both his technical and interpersonal skills, making him a versatile collaborator who significantly impacts every project he joins. Fueled by a constant desire to learn, he continually updates his knowledge through a master's degree in computer science. This ongoing learning journey makes him a well-rounded IT professional in the field of computer science.</reference>
+      <reference>Baptiste is a full-stack software developer and is driven by an unwavering
+        determination. This mindset permeates every aspect of his career. He has worked in various
+        fields, allowing him to quickly adapt to any situation. These roles have honed both his
+        technical and interpersonal skills, making him a versatile collaborator who significantly
+        impacts every project he joins. Fueled by a constant desire to learn, he continually updates
+        his knowledge through a master's degree in computer science. This ongoing learning journey
+        makes him a well-rounded IT professional in the field of computer science.</reference>
     </reference>
     <reference>
       <name>Tjörven Janssens, software developer at Xtrada</name>
-      <reference>Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een expert in het gebruik van ChatGPT. Hij leert graag nieuwe dingen en doet dit ook snel. Hij is erg enthousiast in omgang en staat steeds klaar voor een vriendelijk woord of wat advies.</reference>
+      <reference>Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een
+        expert in het gebruik van ChatGPT. Hij leert graag nieuwe dingen en doet dit ook snel. Hij
+        is erg enthousiast in omgang en staat steeds klaar voor een vriendelijk woord of wat advies.</reference>
     </reference>
     <reference>
       <name>Michael Culot, Sales manager at Xtrada</name>
-      <reference>Baptiste is a great and devoted developer who's eager to keep learning new technologies and elevate his skill set. You would be amazed about not only his knowledge but also his warm open enthusiasm. Baptiste, you're going to be doing great things in your life, just keep your vibrant spirit ✊</reference>
+      <reference>Baptiste is a great and devoted developer who's eager to keep learning new
+        technologies and elevate his skill set. You would be amazed about not only his knowledge but
+        also his warm open enthusiasm. Baptiste, you're going to be doing great things in your life,
+        just keep your vibrant spirit ✊</reference>
     </reference>
   </references>
 </resume>

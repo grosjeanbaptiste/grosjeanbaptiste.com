@@ -10,6 +10,8 @@
   --card-background: #FFFFFF;    /* White for cards */
   --text-color: #2E2E2E;        /* Dark text */
   --border-color: #DDDDDD;      /* Light border */
+  --primary-color-rgb: 128, 0, 32; /* RGB for primary color in light mode */
+  --card-background-rgb: 255, 255, 255; /* RGB for card background in light mode */
 }
 
 /* Dark theme */

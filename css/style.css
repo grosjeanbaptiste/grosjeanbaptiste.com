@@ -190,56 +190,6 @@ h3 {
   font-style: italic;
 }
 
-nav {
-  background-color: var(--card-background);
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-nav ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  flex: 1;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-nav ul li {
-  list-style: none;
-  flex: 1;
-  text-align: center;
-}
-
-nav ul li a {
-  display: block;
-  padding: 10px;
-  color: var(--emphasis-color);
-  text-decoration: none;
-}
-
 /* Navigation */
 nav {
   background-color: rgba(var(--card-background-rgb), 0.9);

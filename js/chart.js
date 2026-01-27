@@ -1,5 +1,5 @@
 // Initialize daily life chart
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var ctx = document.getElementById('dailyLifeChart').getContext('2d');
     var dailyLifeChart = new Chart(ctx, {
         type: 'doughnut',
@@ -19,8 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         options: {
             responsive: false,
-            legend: {
-                position: 'bottom',
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
             }
         }
     });
