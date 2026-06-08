@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baptiste Grosjean - CV</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/theme.js" defer></script>
+  <script src="js/chart.js" defer></script>
+  <script src="js/nav.js" defer></script>
+</head>
+
+<body>
+
+  <nav>
+    <button class="menu-toggle" aria-label="Menu" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul id="nav-menu">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#references" class="nav-link">References</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+      <span>Dark Mode</span>
+    </button>
+  </nav>
+
+  <div class="container">
+    <aside class="sidebar">
+      <img src="assets/images/profil.jpeg" alt="Baptiste Grosjean" id="profile-picture">
+
+      <div class="contact-info">
+        <h1>Baptiste Grosjean</h1>
+        <h2>Computer Scientist | Student @UMons by night &amp; AI Software Crafter by day</h2>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:grosjeanbaptisteit@outlook.com">grosjeanbaptisteit@outlook.com</a>
+        </p>
+        <p>
+          <i class="fas fa-phone"></i> +32 496 28 97 05
+        </p>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Kraainem, BE
+        </p>
+        <p>
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/grosjeanbaptiste">LinkedIn</a>
+        </p>
+        <p>
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/grosjeanbaptiste">GitHub</a>
+        </p>
+        <p>
+          <i class="fas fa-car"></i> Permis B
+        </p>
+      </div>
+
+      <div class="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill-category">
+          <div class="skill-tags">
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JS</span>
+            <span class="skill-tag">TS</span>
+            <span class="skill-tag">XML</span>
+            <span class="skill-tag">JSON</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">Zsh</span>
+            <span class="skill-tag">Dart</span>
+            <span class="skill-tag">Rust</span>
+            <span class="skill-tag">LaTeX</span>
+            <span class="skill-tag">SQL Server</span>
+            <span class="skill-tag">EF</span>
+            <span class="skill-tag">.NET</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Whisper</span>
+            <span class="skill-tag">SpaCy</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">Blazor</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Tokio</span>
+            <span class="skill-tag">Axum</span>
+            <span class="skill-tag">Tower</span>
+            <span class="skill-tag">Gradle</span>
+            <span class="skill-tag">NPM</span>
+            <span class="skill-tag">JWT</span>
+            <span class="skill-tag">Auth0</span>
+            <span class="skill-tag">SSH</span>
+            <span class="skill-tag">Venv</span>
+            <span class="skill-tag">Conda</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">UML</span>
+            <span class="skill-tag">Merise</span>
+            <span class="skill-tag">VisualParadigm</span>
+            <span class="skill-tag">CleanCode</span>
+            <span class="skill-tag">CleanArchitecture</span>
+            <span class="skill-tag">DDD</span>
+            <span class="skill-tag">TDD</span>
+            <span class="skill-tag">CQRS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="skills">
+        <h2>Currently Learning</h2>
+        <div class="skill-category">
+          <div class="skill-tags">
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">XQuery</span>
+            <span class="skill-tag">Blockchain</span>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="skills">
+        <h2>Soft Skills</h2>
+        <div class="skill-category">
+          <div class="skill-tags">
+            <span class="skill-tag">Adaptability</span>
+            <span class="skill-tag">Resilience</span>
+            <span class="skill-tag">Leadership</span>
+            <span class="skill-tag">Creativity</span>
+            <span class="skill-tag">Initiative</span>
+            <span class="skill-tag">Analysis</span>
+            <span class="skill-tag">Flexibility</span>
+            <span class="skill-tag">Teamwork</span>
+            <span class="skill-tag">Organization</span>
+            <span class="skill-tag">Pragmatism</span>
+            <span class="skill-tag">Resourcefulness</span>
+            <span class="skill-tag">Thoroughness</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="languages">
+        <h2>Languages</h2>
+        <p>French: Native</p>
+        <p>English: B1+/B2 (TOEIC 730/ ELAO)</p>
+        <p>Dutch: B1</p>
+      </div>
+
+      <div class="daily-life">
+        <h2>Typical Day</h2>
+        <canvas id="dailyLifeChart" width="200" height="200"></canvas>
+      </div>
+    </aside>
+    <main class="main-content" id="cvContent">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Computer science student @UMons by night looking for a new opportunity by day.</p>
+        <p>All the projects I have been involved in have been developed with a strong focus on Software Craftsmanship
+          principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality,
+          maintainability and scalability.</p>
+      </section>
+      <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="experience-item">
+          <h3>Founder | Acteble</h3>
+          <p class="date">Jul 1, 2025 – Present</p>
+          <p>Developing a mobile application that connects travelers during their journeys. Working with Flutter for the
+            mobile app and Rust for the backend.</p>
+        </div>
+        <div class="experience-item">
+          <h3>AI Research Scientist | Belgian Senate</h3>
+          <p class="date">Nov 3, 2025 – Jun 30, 2026</p>
+          <p class="location">Brussels, Belgium</p>
+        </div>
+        <div class="experience-item">
+          <h3>AI Software Crafter Lead | Emvi.ai</h3>
+          <p class="date">Dec 1, 2024 – Jun 30, 2025</p>
+          <p class="location">Brugge, Belgium</p>
+          <p>Emvi App: AI powered visual assistant for visually impaired people providing them with a description of
+            their environment, OCR, code scans (QR codes &amp; barcodes), and an adapted Valhalla routing system for the
+            visually impaired.</p>
+          <p>• Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla</p>
+        </div>
+        <div class="experience-item">
+          <h3>AI Software Crafter | Emvi.ai</h3>
+          <p class="date">Oct 1, 2024 – Jun 30, 2025</p>
+          <p class="location">Brugge, Belgium</p>
+          <p>Remi: Reminiscence application allowing people with cognitive issues to recover their memories through
+            descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the
+            facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM-generated
+            descriptions.</p>
+          <p>• Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil</p>
+        </div>
+        <div class="experience-item">
+          <h3>Data Scientist at Xtrada</h3>
+          <p class="date">Mar 1, 2024 – Sep 22, 2024</p>
+          <p class="location">Antwerp, Flanders, Belgium</p>
+          <p>Used Python libraries (SpaCy, ...) to extract named entities from text via NER model training and
+            implementation in .NET. Model score: 87%.</p>
+        </div>
+        <div class="experience-item">
+          <h3>Software Crafter at Xtrada</h3>
+          <p class="date">Aug 21, 2023 – Sep 22, 2024</p>
+          <p class="location">Antwerp, Flanders, Belgium</p>
+          <p>Software modernization within the .NET stack following domain-driven design and clean code principles.
+            Implementation of Azure AI services in a .NET solution.</p>
+        </div>
+        <div class="experience-item">
+          <h3>.NET/React Software Crafter chez VhAuctions</h3>
+          <p class="date">Jan 1, 2024 – Aug 7, 2024</p>
+          <p class="location">Anvers, Région flamande, Belgique</p>
+        </div>
+        <div class="experience-item">
+          <h3>Software Crafter chez Hackathon Citizens of Wallonia</h3>
+          <p class="date">Mar 15, 2024 – Mar 17, 2024</p>
+          <p class="location">Charleroi et périphérie</p>
+          <p>EduCraft: solution allowing anyone to craft a personalized path to gain new skills.</p>
+        </div>
+        <div class="experience-item">
+          <h3>.NET/Blazor Software Crafter chez aXinco</h3>
+          <p class="date">Sep 1, 2023 – Dec 31, 2023</p>
+          <p class="location">Anvers, Région flamande, Belgique</p>
+          <p>Crafting Axinco Kwalitijd webapp in .NET / Blazor following DDD and clean code principles.</p>
+        </div>
+        <div class="experience-item">
+          <h3>Full Stack Developer Web Intern chez Technofutur TIC</h3>
+          <p class="date">Dec 1, 2022 – Jun 30, 2023</p>
+          <p class="location">Charleroi, Wallonia, Belgique</p>
+          <p>This qualifying training aimed to strengthen the technical skills acquired during my
+            bachelor&#x27;s degree program at EPHEC.
+            In addition, during the extension, we received an introduction to Business Intelligence and ETL
+            processes (Data Warehousing) using Microsoft tools (SSIS, ...).
+            This comprehensive training covered various areas including SQL Server, Node.js, Express.js,
+            React and Angular, encompassing everything from database development to user interface
+            and backend.</p>
+        </div>
+        <div class="experience-item">
+          <h3>Full Stack Developer Web Intern chez Hackathon Citizens of Wallonia</h3>
+          <p class="date">Mar 29, 2023 – Mar 31, 2023</p>
+          <p class="location">Charleroi, Région wallonne, Belgique</p>
+          <p>OnlyTogether: solution ensuring vulnerable users are always accompanied.</p>
+        </div>
+        <div class="experience-item">
+          <h3>Full Stack Developer Web Intern chez EDITx: IT Challenges, IT Jobs, Education in IT for X
+          </h3>
+          <p class="date">Apr 1, 2022 – Apr 30, 2022</p>
+          <p class="location">Région de Bruxelles-Capitale, Belgique</p>
+        </div>
+        <div class="experience-item">
+          <h3>Student Job chez Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</h3>
+          <p class="date">Mar 30, 2022 – Mar 31, 2022</p>
+          <p class="location">Région de Bruxelles-Capitale, Belgique</p>
+        </div>
+        <div class="experience-item">
+          <h3>Full Stack Developer Web Intern chez RESTOMAX</h3>
+          <p class="date">Nov 1, 2021 – Mar 31, 2022</p>
+          <p class="location">Région de Bruxelles-Capitale, Belgique</p>
+        </div>
+        <div class="experience-item">
+          <h3>Student Job chez Quick Restaurant</h3>
+          <p class="date">Sep 1, 2017 – Sep 30, 2017</p>
+          <p class="location">Kraainem, Flemish Region, Belgium</p>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+          <h3>Master of Science in Computer Science (work-study program) (120 ECTS)</h3>
+          <p class="institution">UMons</p>
+          <p class="date">Oct 15, 2022 – Present</p>
+          <p class="location">Charleroi, Belgium</p>
+          <p>• GPA: In progress (MA2).</p>
+          <p>• Activities: Student representative &amp; buddy TandemMons</p>
+        </div>
+        <div class="education-item">
+          <h3>Professional Bachelor&#x27;s degree in Information Systems Management</h3>
+          <p class="institution">EPHEC</p>
+          <p class="date">Sep 30, 2018 – Oct 15, 2022</p>
+          <p class="location">Brussels, Belgium</p>
+          <p>• GPA: 62.8%, Satis Bene.</p>
+          <p>• Activities: Student representative and tutor.</p>
+        </div>
+        <div class="education-item">
+          <h3>Attestation en 7e Spéciale Mathématiques</h3>
+          <p class="institution">Institut Saint-Louis Bruxelles</p>
+          <p class="date">Sep 30, 2019 – Jun 30, 2020</p>
+          <p>Attestation</p>
+        </div>
+        <div class="education-item">
+          <h3>Bachelor of Arts - BA in Political sciences</h3>
+          <p class="institution">Université Saint-Louis - Bruxelles</p>
+          <p class="date">Sep 30, 2016 – Jun 30, 2019</p>
+          <p>29 credits earned in 2016-2017, contact me for more information.</p>
+        </div>
+        <div class="education-item">
+          <h3>Bachelor of Science - BSc in Business Engineering</h3>
+          <p class="institution">Solvay Brussels School of Economics and Management</p>
+          <p class="date">Sep 30, 2015 – Jun 30, 2016</p>
+          <p>Contact me for more information.</p>
+        </div>
+        <div class="education-item">
+          <h3>Bachelor of Science - BSc in Business Engineering</h3>
+          <p class="institution">Université libre de Bruxelles</p>
+          <p class="date">Sep 30, 2015 – Jun 30, 2016</p>
+          <p>Contact me for more information.</p>
+        </div>
+        <div class="education-item">
+          <h3>Preparatory courses in Medicine and dentistry</h3>
+          <p class="institution">UCLouvain - Université catholique de Louvain</p>
+          <p class="date">Sep 30, 2014 – Jun 30, 2015</p>
+          <p>Attestation </p>
+        </div>
+        <div class="education-item">
+          <h3>C.E.S.S. in General Studies Maths &amp; Modern languages</h3>
+          <p class="institution">Centre Scolaire Saint-Adrien - Val Duchesse</p>
+          <p class="date">Sep 30, 2012 – Jun 30, 2015</p>
+          <p>Satis bene</p>
+        </div>
+        <div class="education-item">
+          <h3>General studies Latin &amp; Greek</h3>
+          <p class="institution">Lycée Mater Dei</p>
+          <p class="date">Sep 30, 2009 – Jun 30, 2012</p>
+        </div>
+      </section>
+
+      <section id="volunteer">
+        <h2>Volunteer</h2>
+        <div class="experience-item">
+          <h3>Student Representative | UMons</h3>
+          <p class="date">Nov 30, 2023 – Present</p>
+        </div>
+        <div class="experience-item">
+          <h3>Buddy TandemMons | UMons</h3>
+          <p class="date">Nov 30, 2023 – Present</p>
+        </div>
+        <div class="experience-item">
+          <h3>Student Representative | EPHEC École Supérieure de Promotion Sociale</h3>
+          <p class="date">Sep 30, 2019 – Oct 15, 2022</p>
+        </div>
+        <div class="experience-item">
+          <h3>Tutor | EPHEC École Supérieure de Promotion Sociale</h3>
+          <p class="date">Sep 30, 2019 – Oct 15, 2022</p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+          <h3>Acteble</h3>
+          <p class="date">Jul 1, 2025 – Present</p>
+          <p>Travelers meeting app.</p>
+          <p>Type: Mobile application and backend</p>
+          <p>Role: Founder</p>
+          <p>Keywords: Flutter, Rust, Mobile, Travel, Tokio, PostgreSQL, Docker, Dart</p>
+          <a href="https://www.acteble.com">View project</a>
+        </div>
+        <div class="project-item">
+          <h3>Emvi App</h3>
+          <p class="date">Dec 1, 2024 – Jun 30, 2025</p>
+          <p>AI powered visual assistant for visually impaired people providing them with a description of their
+            environment, OCR, code scans (QR codes &amp; barcodes), and an adapted Valhalla routing system for the
+            visually impaired.</p>
+          <p>Type: Mobile Application</p>
+          <p>Keywords: Flutter, Firebase, OpenAI, Valhalla, AI</p>
+        </div>
+        <div class="project-item">
+          <h3>Remi</h3>
+          <p class="date">Oct 1, 2024 – Jun 30, 2025</p>
+          <p>Reminiscence application allowing people with cognitive issues to recover their memories through
+            descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the
+            facial recognition pipeline.</p>
+          <p>Type: AI Application</p>
+          <p>Keywords: Python, FastAPI, OpenAI, Whisper, DeepFace</p>
+        </div>
+        <div class="project-item">
+          <h3>EduCraft</h3>
+          <p class="date">Mar 29, 2024 – Mar 31, 2024</p>
+          <p>Education manager.</p>
+          <p>Type: Web Application</p>
+          <p>Role: Backend Dev</p>
+          <p>Keywords: PHP, API, UI/UX</p>
+        </div>
+        <div class="project-item">
+          <h3>MyWay</h3>
+          <p class="date">Jan 1, 2023 – Jun 30, 2023</p>
+          <p>Education manager for students. No longer maintained; database and auth are unavailable.</p>
+          <p>Type: Web Application</p>
+          <p>Role: Founder</p>
+          <p>Keywords: Angular, JavaScript, TypeScript, Express.js, API, UI/UX, MSSQL Server</p>
+          <a href="https://my-way-bg.vercel.app">View project</a>
+        </div>
+        <div class="project-item">
+          <h3>VhAuctions NER Inventory Model</h3>
+          <p class="date">Mar 1, 2024 – Aug 7, 2024</p>
+          <p>Named Entity Recognition machine learning model to extract inventory items from an audio transcription.</p>
+          <p>Role: Data Scientist</p>
+          <p>Keywords: Python, SpaCy</p>
+        </div>
+        <div class="project-item">
+          <h3>VhAuctions</h3>
+          <p class="date">Jan 1, 2024 – Feb 28, 2024</p>
+          <p>Fleet manager for auctions.</p>
+          <p>Role: Software Crafter</p>
+          <p>Keywords: .NET, React, MSSQL Server</p>
+        </div>
+        <div class="project-item">
+          <h3>Kwalitijd</h3>
+          <p class="date">Sep 1, 2023 – Dec 31, 2023</p>
+          <p>Survey manager for sports clubs and federations.</p>
+          <p>Role: Software Crafter</p>
+          <p>Keywords: .NET, Blazor, MSSQL Server</p>
+        </div>
+        <div class="project-item">
+          <h3>WebMenu</h3>
+          <p class="date">Nov 1, 2021 – Mar 31, 2022</p>
+          <p>QR code based cash register for HoReCa (Hotel/Restaurant/Café) establishments.</p>
+          <p>Role: Full-stack Dev</p>
+          <p>Keywords: .NET, Flutter, Dart, MSSQL Server</p>
+        </div>
+      </section>
+
+      <section id="awards">
+        <h2>Awards</h2>
+        <div class="education-item">
+          <h3>TOEIC</h3>
+          <p class="date">Jun 6, 2023</p>
+          <p>ETS — Score: 730</p>
+        </div>
+      </section>
+
+      <section id="interests">
+        <h2>Interests</h2>
+        <div class="education-item">
+          <h3>Research and Development</h3>
+          <p>Innovations, experimentation, POCs.</p>
+        </div>
+      </section>
+
+      <section id="references">
+        <h2>References</h2>
+        <div class="reference-item">
+          <p>
+            <strong>Waseem Virk, Flutter Dev Emvi.ai</strong>
+          </p>
+          <blockquote>Working alongside Baptiste Grosjean on the EMVI project has been an incredibly rewarding
+            experience—both professionally and personally. Not only is Baptiste a highly skilled developer with a sharp
+            eye for design and functionality, but he’s also been a mentor and an inspiration throughout our
+            collaboration.<br><br>I’ve learned so much from him—from best practices in Flutter development to the
+            importance of thoughtful UI/UX and clean architecture. He’s always willing to share his knowledge, explain
+            complex ideas with clarity, and support the team in any way he can.<br><br>What stands out the most is
+            Baptiste’s ability to turn challenges into opportunities. His calm, focused approach and problem-solving
+            mindset helped us overcome technical hurdles and build features that truly improve user experience. On top
+            of that, his collaborative nature made working as a team feel seamless and motivating.<br><br>If you're
+            looking for someone who not only delivers exceptional results but also uplifts everyone around him, I can't
+            recommend Baptiste enough. He’s a fantastic developer, a great teammate, and someone I’ve been lucky to
+            learn from.</blockquote>
+        </div>
+        <div class="reference-item">
+          <p>
+            <strong>Tino Schuerewegen, Software developer at Xtrada</strong>
+          </p>
+          <blockquote>I had the pleasure of working with Baptiste for a year, with the added joy of mentoring him on a
+            project for three months. If there&#x27;s one thing that stands out about Baptiste, it&#x27;s his boundless
+            energy. Whether it&#x27;s 9 AM or 9 PM, he&#x27;s always the most enthusiastic person in the room—sometimes
+            even more enthusiastic than the coffee machine.
+
+            Baptiste brings a contagious energy to any project he&#x27;s part of. He’s outgoing, smart, and has an
+            eagerness to learn that is truly admirable. Whether he&#x27;s diving into a complex task or asking
+            insightful questions, he&#x27;s always in search of knowledge. His enthusiasm for learning, especially when
+            it comes to leveraging tools like ChatGPT, is both impressive and a little intimidating. Seriously, if
+            ChatGPT had a best friend, it would be Baptiste!
+
+            He’s also incredibly hands-on, never shying away from rolling up his sleeves and getting deep into the work.
+            His approach isn&#x27;t just theoretical; he&#x27;s all about practical, tangible results.
+
+            In summary, if you&#x27;re looking for someone who brings enthusiasm, intelligence, and a touch of humor to
+            every task, Baptiste is your person. Working with him was not just productive, but genuinely enjoyable.
+          </blockquote>
+        </div>
+        <div class="reference-item">
+          <p>
+            <strong>Emiel Van Gysegem, Marketing and operations at Xtra Groep</strong>
+          </p>
+          <blockquote>Hoewel we niet direct samenwerkten, had ik altijd een heel fijne connectie met Baptiste. In een
+            mengelmoes van Engels, Nederlands en Frans deelden we vaak leuke gesprekken. Zijn enthousiasme en energie
+            zijn echt aanstekelijk, en hij weet een prettige, informele sfeer te creëren in elke interactie. Baptiste is
+            iemand die een positieve dynamiek met zich meebrengt.</blockquote>
+        </div>
+        <div class="reference-item">
+          <p>
+            <strong>Steven Claus, CFO at Xtra Groep</strong>
+          </p>
+          <blockquote>Baptiste is a full-stack software developer and is driven by an unwavering determination. This
+            mindset permeates every aspect of his career. He has worked in various fields, allowing him to quickly adapt
+            to any situation. These roles have honed both his technical and interpersonal skills, making him a versatile
+            collaborator who significantly impacts every project he joins. Fueled by a constant desire to learn, he
+            continually updates his knowledge through a master’s degree in computer science. This ongoing learning
+            journey makes him a well-rounded IT professional in the field of computer science.</blockquote>
+        </div>
+        <div class="reference-item">
+          <p>
+            <strong>Tjörven Janssens, software developer at Xtrada</strong>
+          </p>
+          <blockquote>Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een expert in het
+            gebruik van ChatGPT. Hij leert graag nieuwe dingen en doet dit ook snel. Hij is erg enthousiast in omgang
+            en staat steeds klaar voor een vriendelijk woord of wat advies.</blockquote>
+        </div>
+        <div class="reference-item">
+          <p>
+            <strong>Michael Culot, Sales manager at Xtrada</strong>
+          </p>
+          <blockquote>Baptiste is a great and devoted developer who’s eager to keep learning new technologies and
+            elevate his skill set. You would be amazed about not only his knowledge but also his warm open enthusiasm.
+            Baptiste, you’re going to be doing great things in your life, just keep your vibrant spirit ✊</blockquote>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out!</p>
+      </section>
+    </main>
+  </div>
+
+  <a href="assets/cv/cv_grosjean_baptiste_en.pdf" class="cv-download-button" download>
+    <i class="fas fa-download"></i>Download CV
+  </a>
+
+  <!-- JavaScript files are loaded at the end of the body for better performance -->
+</body>
+
+</html>
