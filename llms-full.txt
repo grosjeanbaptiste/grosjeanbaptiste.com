@@ -1,0 +1,257 @@
+# Baptiste Grosjean — CV
+
+> AI Software Crafter Lead and Computer Science MSc student at UMons (Belgium). Founder of Acteble. Strong focus on software craftsmanship (clean code, clean architecture, DDD).
+
+Canonical machine-readable source: https://www.grosjeanbaptiste.com/assets/data/resume.json (JSON Resume v1.0.0). This file is a flat Markdown digest of the same data.
+
+## Identity
+
+- **Name**: Baptiste Grosjean
+- **Title**: Computer Scientist | Student @UMons by night & AI Software Crafter by day
+- **Location**: Kraainem, Belgium (BE, region Brussels)
+- **Email**: grosjeanbaptisteit@outlook.com
+- **Phone**: +32 496 28 97 05
+- **Website**: https://www.grosjeanbaptiste.com
+- **LinkedIn**: https://www.linkedin.com/in/grosjeanbaptiste
+- **GitHub**: https://github.com/grosjeanbaptiste
+- **NPM**: https://www.npmjs.com/~grosjeanbaptiste
+- **JSON Resume**: https://registry.jsonresume.org/grosjeanbaptiste
+
+## Summary
+
+Computer science student @UMons by night, looking for a new opportunity by day while launching Acteble. All projects developed with a strong focus on Software Craftsmanship principles (clean code, clean architecture, DDD) as best practices for quality, maintainability and scalability.
+
+## Skills
+
+### Technical (Hard skills)
+
+SQL, C#, Java, Python, JavaScript, TypeScript, XML, JSON, HTML, CSS, Zsh, Dart, Rust, LaTeX, SQL Server, Entity Framework, .NET, Pandas, NumPy, Whisper, SpaCy, Node.js, Express.js, Blazor, Angular, React, Flutter, Tokio, Axum, Tower, Gradle, NPM, JWT, Auth0, SSH, Venv, Conda, Docker, UML, Merise, Visual Paradigm, Clean Code, Clean Architecture, DDD, CQRS.
+
+### Currently learning
+
+TDD, TensorFlow, Scikit-Learn, C, XQuery, Blockchain.
+
+### Soft skills
+
+Adaptability, Resilience, Leadership, Creativity, Initiative, Analysis, Flexibility, Teamwork, Organization, Pragmatism, Resourcefulness, Thoroughness.
+
+## Languages
+
+- **French**: Native speaker
+- **English**: B1+/B2 (TOEIC 730 / ELAO)
+- **Dutch**: B1
+
+## Work Experience (most recent first)
+
+### Founder — Acteble
+- **Period**: 2025-07-01 — Present
+- **Location**: Brussels, Belgium
+- **URL**: https://www.acteble.com
+- Developing a mobile application that connects travelers during their journeys. Flutter for the mobile app, Rust for the backend.
+
+### AI Research Scientist — Belgian Senate
+- **Period**: 2025-11-03 — 2026-06-30
+- **Location**: Brussels, Belgium
+
+### AI Software Crafter Lead — Emvi.ai
+- **Period**: 2024-12-01 — 2025-06-30
+- **Location**: Brugge, Belgium
+- **URL**: https://www.emvi.ai
+- Emvi App: AI-powered visual assistant for visually impaired people, providing environment descriptions, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired.
+- **Stack**: Dart, Flutter, Firebase, Firestore, OpenAI, Valhalla.
+
+### AI Software Crafter — Emvi.ai
+- **Period**: 2024-10-01 — 2025-06-30
+- **Location**: Brugge, Belgium
+- Remi: Reminiscence application allowing people with cognitive issues to recover memories through descriptions of photos powered by facial recognition and LLMs. DeepFace (Serengil) for the facial recognition pipeline and sentiment analysis for LLM-generated descriptions.
+- **Stack**: Python, FastAPI, OpenAI, Whisper, DeepFace.
+
+### Data Scientist — Xtrada
+- **Period**: 2024-03-01 — 2024-09-22
+- **Location**: Antwerp, Flanders, Belgium
+- **URL**: https://www.xtrada.be
+- Used Python libraries (SpaCy, ...) to extract named entities from text via NER model training and implementation in .NET. Model recall score: 87%.
+
+### Software Crafter — Xtrada
+- **Period**: 2023-08-21 — 2024-09-22
+- **Location**: Antwerp, Flanders, Belgium
+- Software modernization within the .NET stack following DDD and clean code principles. Implementation of Azure AI services in a .NET solution.
+
+### .NET/React Software Crafter — VhAuctions
+- **Period**: 2024-01-01 — 2024-08-07
+- **Location**: Anvers, Belgique
+- **URL**: https://www.vhauctions.be
+
+### Software Crafter — Hackathon Citizens of Wallonia
+- **Period**: 2024-03-15 — 2024-03-17
+- **Location**: Charleroi area
+- EduCraft: solution allowing anyone to craft a personalized path to gain new skills.
+
+### .NET/Blazor Software Crafter — aXinco
+- **Period**: 2023-09-01 — 2023-12-31
+- **Location**: Anvers, Belgique
+- **URL**: https://www.axinco.be
+- Crafting Axinco Kwalitijd webapp in .NET / Blazor following DDD and clean code.
+
+### Full Stack Developer Web Intern — Technofutur TIC
+- **Period**: 2022-12-01 — 2023-06-30
+- **Location**: Charleroi, Wallonia, Belgique
+- Qualifying training strengthening technical skills from EPHEC bachelor program. Covered SQL Server, Node.js, Express.js, React, Angular. Included introduction to Business Intelligence and ETL (SSIS) in the extension.
+
+### Full Stack Developer Web Intern — Hackathon Citizens of Wallonia
+- **Period**: 2023-03-29 — 2023-03-31
+- **Location**: Charleroi, Belgique
+- OnlyTogether: solution ensuring vulnerable users are always accompanied.
+
+### Full Stack Developer Web Intern — EDITx
+- **Period**: 2022-04-01 — 2022-04-30
+- **Location**: Brussels Region, Belgique
+
+### Student Job — Les Auberges de Jeunesse (Wallonie & Bruxelles)
+- **Period**: 2022-03-30 — 2022-03-31
+- **Location**: Brussels Region, Belgique
+
+### Full Stack Developer Web Intern — RESTOMAX
+- **Period**: 2021-11-01 — 2022-03-31
+- **Location**: Brussels Region, Belgique
+
+### Student Job — Quick Restaurant
+- **Period**: 2017-09-01 — 2017-09-30
+- **Location**: Kraainem, Flemish Region, Belgium
+
+## Education
+
+### Master of Science — Computer Science (work-study program, 120 ECTS)
+- **Institution**: UMons
+- **Period**: 2022-10-15 — Present
+- **Location**: Charleroi, Belgium
+- **GPA**: In progress (MA2)
+- Student representative & buddy TandeMons.
+
+### Professional Bachelor's degree — Information Systems Management
+- **Institution**: EPHEC (Ecole Pratique Hautes Etudes Commerciales)
+- **Period**: 2018-09-30 — 2022-10-15
+- **Location**: Brussels, Belgium
+- **GPA**: 62.8%, Satis Bene
+- Student representative and tutor. TFE: WebMenu 2.0.
+
+### Attestation — 7e Spéciale Mathématiques
+- **Institution**: Institut Saint-Louis Bruxelles
+- **Period**: 2019-09-30 — 2020-06-30
+
+### Bachelor of Arts — Political Sciences
+- **Institution**: Université Saint-Louis Bruxelles
+- **Period**: 2016-09-30 — 2019-06-30
+- 29 credits earned in 2016-2017.
+
+### Bachelor of Science — Business Engineering
+- **Institution**: Solvay Brussels School of Economics and Management
+- **Period**: 2015-09-30 — 2016-06-30
+
+### Bachelor of Science — Business Engineering
+- **Institution**: Université libre de Bruxelles
+- **Period**: 2015-09-30 — 2016-06-30
+
+### Preparatory courses — Medicine and dentistry
+- **Institution**: UCLouvain (Université catholique de Louvain)
+- **Period**: 2014-09-30 — 2015-06-30
+
+### C.E.S.S. — Maths & Modern languages
+- **Institution**: Centre Scolaire Saint-Adrien - Val Duchesse
+- **Period**: 2012-09-30 — 2015-06-30
+- **Result**: Satis bene
+
+### General studies — Latin & Greek
+- **Institution**: Lycée Mater Dei
+- **Period**: 2009-09-30 — 2012-06-30
+
+## Projects
+
+### Acteble
+- **Period**: 2025-07-01 — Present
+- **Role**: Founder
+- **Type**: Mobile application & backend
+- **URL**: https://www.acteble.com
+- Mobile application connecting travelers during their journeys.
+- **Keywords**: Flutter, Rust, Mobile, Travel, Tokio, PostgreSQL, Docker, Dart.
+
+### Emvi App
+- **Period**: 2024-12-01 — 2025-06-30
+- **Type**: Mobile Application
+- AI-powered visual assistant for visually impaired people: environment description, OCR, QR/barcode scans, adapted Valhalla routing.
+- **Keywords**: Flutter, Firebase, OpenAI, Valhalla, AI.
+
+### Remi
+- **Period**: 2024-10-01 — 2025-06-30
+- **Type**: AI Application
+- Reminiscence application allowing people with cognitive issues to recover memories from photos via facial recognition and LLMs. DeepFace pipeline.
+- **Keywords**: Python, FastAPI, OpenAI, Whisper, DeepFace.
+
+### EduCraft
+- **Period**: 2024-03-29 — 2024-03-31
+- **Type**: Web Application
+- **Role**: Backend Dev
+- Education manager. Hackathon Citizens of Wallonia.
+- **Keywords**: PHP, API, UI/UX.
+
+### MyWay
+- **Period**: 2023-01-01 — 2023-06-30
+- **Type**: Web Application
+- **Role**: Founder
+- **URL**: https://my-way-bg.vercel.app
+- Education manager for students. No longer maintained; database and auth unavailable.
+- **Keywords**: Angular, JavaScript, TypeScript, Express.js, API, UI/UX, MSSQL Server.
+
+### VhAuctions NER Inventory Model
+- **Period**: 2024-03-01 — 2024-08-07
+- **Role**: Data Scientist
+- Named Entity Recognition ML model extracting inventory items from audio transcription.
+- **Keywords**: Python, SpaCy.
+
+### VhAuctions
+- **Period**: 2024-01-01 — 2024-02-28
+- **Role**: Software Crafter
+- Fleet manager for auctions.
+- **Keywords**: .NET, React, MSSQL Server.
+
+### Kwalitijd
+- **Period**: 2023-09-01 — 2023-12-31
+- **Role**: Software Crafter
+- Survey manager for sports clubs and federations.
+- **Keywords**: .NET, Blazor, MSSQL Server.
+
+### WebMenu
+- **Period**: 2021-11-01 — 2022-03-31
+- **Role**: Full-stack Dev
+- QR-code-based cash register for HoReCa (Hotel/Restaurant/Café) establishments.
+- **Keywords**: .NET, Flutter, Dart, MSSQL Server.
+
+## Volunteer
+
+- **Student Representative** — UMons (2023-11-30 — Present)
+- **Buddy TandemMons** — UMons (2023-11-30 — Present)
+- **Student Representative** — EPHEC École Supérieure de Promotion Sociale (2019-09-30 — 2022-10-15)
+- **Tutor** — EPHEC École Supérieure de Promotion Sociale (2019-09-30 — 2022-10-15)
+
+## Awards
+
+- **TOEIC** — 2023-06-06, ETS, score 730.
+
+## Interests
+
+Research and Development: innovations, experimentation, proofs of concept.
+
+## References (excerpts)
+
+Selected snippets — see the live page for full quotes.
+
+- **Waseem Virk (Flutter Dev @ Emvi.ai)**: "highly skilled developer with a sharp eye for design and functionality … mentor and an inspiration throughout our collaboration."
+- **Tino Schuerewegen (Software Developer @ Xtrada)**: "boundless energy … contagious … hands-on … about practical, tangible results."
+- **Steven Claus (CFO @ Xtra Groep)**: "driven by an unwavering determination … versatile collaborator who significantly impacts every project he joins."
+- **Michael Culot (Sales Manager @ Xtrada)**: "great and devoted developer who's eager to keep learning new technologies."
+- **Tjörven Janssens (Software Developer @ Xtrada)** (NL): praises his data-analysis interests and enthusiasm.
+- **Emiel Van Gysegem (Marketing & Ops @ Xtra Groep)** (NL): positive dynamic, multilingual interactions in EN/NL/FR.
+
+---
+
+_This digest is a snapshot generated from the canonical JSON Resume file. For the most current version of any field, fetch https://www.grosjeanbaptiste.com/assets/data/resume.json._

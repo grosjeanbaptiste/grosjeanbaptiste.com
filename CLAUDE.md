@@ -40,8 +40,21 @@ The HTML content is currently hardcoded in `index.html` rather than dynamically 
 
 ## Development Workflow
 
-### No Build Process
-This is a static website with no build tools, package managers, or transpilation. All files are served directly.
+### Build Process
+
+The site is mostly static, but the `<head>` of `index.html` is partially generated from `assets/data/resume.json` (single source of truth):
+
+- `scripts/generate-llm-head.js` reads `resume.json` and replaces the content between `<!-- LLM-HEAD:START -->` and `<!-- LLM-HEAD:END -->` markers in `index.html` with derived `<title>`, meta tags (description, author, keywords, OG, Twitter, robots), canonical link, machine-readable alternates, and JSON-LD `schema.org/Person` structured data.
+- `.github/workflows/regenerate-llm-head.yml` runs the script on every push that touches `resume.json` or the script itself, then commits the regenerated `index.html`. Manual trigger via `workflow_dispatch` is also enabled.
+- Running locally: `node scripts/generate-llm-head.js` (Node 20+). Idempotent.
+
+Do not hand-edit anything between the `LLM-HEAD` markers — it will be overwritten.
+
+LLM/agent-discovery files alongside the site:
+- `llms.txt` — index per the [llmstxt.org](https://llmstxt.org) spec
+- `llms-full.txt` — flat Markdown digest of the CV
+- `robots.txt` — explicit allow for major LLM crawlers + sitemap reference
+- `sitemap.xml` — XML sitemap including the JSON/XML/PDF data files
 
 ### Local Development
 Simply open `index.html` in a web browser or serve the directory with any static web server:

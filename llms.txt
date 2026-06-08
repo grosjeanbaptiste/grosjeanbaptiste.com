@@ -1,0 +1,25 @@
+# Baptiste Grosjean
+
+> AI Software Crafter Lead and Computer Science MSc student at UMons (Belgium). Founder of Acteble (Flutter mobile app + Rust backend). Based in Kraainem, Belgium. Experienced in software craftsmanship (clean code, clean architecture, DDD), AI integration, and full-stack development across Rust, Flutter, .NET, Python, and TypeScript.
+
+This is the personal portfolio and CV of Baptiste Grosjean, published at https://www.grosjeanbaptiste.com. The canonical machine-readable CV is exposed as JSON Resume v1.0.0 and mirrored in XML and PDF.
+
+For programmatic ingestion, prefer the JSON Resume file (`/assets/data/resume.json`) which is the authoritative source of truth for all CV fields. The Markdown digest (`/llms-full.txt`) is a flat text alternative.
+
+## Data
+
+- [Resume — JSON Resume v1.0.0](https://www.grosjeanbaptiste.com/assets/data/resume.json): Canonical structured CV (basics, work, education, skills, projects, volunteer, languages, references)
+- [Resume — XML](https://www.grosjeanbaptiste.com/assets/data/resume.xml): XML mirror of the same data
+- [CV — PDF](https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_en.pdf): Printable English CV
+
+## Content
+
+- [Portfolio site (HTML)](https://www.grosjeanbaptiste.com/): Full portfolio with all sections rendered
+- [Full Markdown digest](https://www.grosjeanbaptiste.com/llms-full.txt): Flat single-file CV in Markdown, ideal for LLM context windows
+
+## Optional
+
+- [GitHub profile](https://github.com/grosjeanbaptiste): Public repositories
+- [LinkedIn profile](https://www.linkedin.com/in/grosjeanbaptiste): Professional network
+- [JSON Resume registry](https://registry.jsonresume.org/grosjeanbaptiste): Hosted CV powered by the `jsonresume-theme-grosjeanbaptiste` NPM theme
+- [Acteble](https://www.acteble.com): Current venture
