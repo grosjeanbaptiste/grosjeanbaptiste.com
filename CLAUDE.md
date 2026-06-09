@@ -42,13 +42,33 @@ The HTML content is currently hardcoded in `index.html` rather than dynamically 
 
 ### Build Process
 
-The site is mostly static, but the `<head>` of `index.html` is partially generated from `assets/data/resume.json` (single source of truth):
+`assets/data/resume.json` is the canonical single source of truth (English). Three i18n overlays live at `assets/data/i18n/{fr,nl,es}.json` and contain only translated text fields — the generator deep-merges canonical + overlay per language.
 
-- `scripts/generate-llm-head.js` reads `resume.json` and replaces the content between `<!-- LLM-HEAD:START -->` and `<!-- LLM-HEAD:END -->` markers in `index.html` with derived `<title>`, meta tags (description, author, keywords, OG, Twitter, robots), canonical link, machine-readable alternates, and JSON-LD `schema.org/Person` structured data.
-- `.github/workflows/regenerate-llm-head.yml` runs the script on every push that touches `resume.json` or the script itself, then commits the regenerated `index.html`. Manual trigger via `workflow_dispatch` is also enabled.
-- Running locally: `node scripts/generate-llm-head.js` (Node 20+). Idempotent.
+`scripts/generate-from-resume.js` produces four language variants:
 
-Do not hand-edit anything between the `LLM-HEAD` markers — it will be overwritten.
+- `/index.html` (English, canonical at root)
+- `/fr/index.html`, `/nl/index.html`, `/es/index.html`
+
+Each variant has four marker blocks replaced from data:
+
+- `LLM-HEAD` (in `<head>`) — localized `<title>`, meta tags (description, author, keywords, OG, Twitter, robots), canonical, **hreflang** alternates for all four languages + `x-default`, machine-readable alternates (JSON/XML/PDF), JSON-LD `schema.org/Person` with `inLanguage`.
+- `NAV` (in `<body>`) — localized nav links, language switcher with active state, theme toggle.
+- `BODY-SIDEBAR` (in `<aside class="sidebar">`) — contact info, skills categories, languages.
+- `BODY-MAIN` (in `<main class="main-content">`) — about, experience, education, volunteer, projects, awards, interests, references, contact. Each item uses semantic `<article>` and `<time datetime>`.
+
+`<html lang="…">` is patched per language.
+
+`.github/workflows/regenerate-from-resume.yml` runs the script on every push that touches `resume.json`, any overlay under `assets/data/i18n/`, or the script itself, then commits the regenerated files. Manual trigger via `workflow_dispatch` is also enabled.
+
+Running locally: `node scripts/generate-from-resume.js` (Node 20+). Idempotent.
+
+Do not hand-edit anything between markers — overwritten on next run. Edit `resume.json` (canonical) or `assets/data/i18n/<lang>.json` (translations).
+
+Static (hand-maintained) parts of `index.html` outside markers: profile picture `<img>`, daily-life chart `<canvas>`, CV download button, CDN scripts (pinned + SRI). All static paths are **absolute** (`/css/…`, `/js/…`, `/assets/…`) so they resolve from any language subdir.
+
+### i18n overlay format
+
+The overlay mirrors `resume.json` shape but contains only translated fields. Arrays are matched by index — keep the same order as `resume.json`. Untranslated fields are omitted. UI strings (section titles like "Work Experience" / "Expérience professionnelle") are kept centralized in the generator's `I18N` constant, not in the overlay files.
 
 LLM/agent-discovery files alongside the site:
 - `llms.txt` — index per the [llmstxt.org](https://llmstxt.org) spec

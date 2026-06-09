@@ -687,3 +687,53 @@ ul {
   color: #888;
   margin-top: 20px;
 }
+
+/* ---- Language switcher ---- */
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+  margin: 0 12px;
+  align-items: center;
+}
+.lang-switcher a {
+  color: var(--emphasis-color);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color 0.15s, color 0.15s;
+}
+.lang-switcher a:hover {
+  background-color: var(--third-color);
+  color: #fff;
+  text-decoration: none;
+}
+.lang-switcher a.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .lang-switcher { margin: 6px 0; }
+}
+
+/* ---- Highest-obtained degree under the label ---- */
+.contact-info .degree {
+  font-size: 0.9em;
+  color: var(--emphasis-color);
+  font-style: italic;
+  margin-top: -4px;
+  margin-bottom: 12px;
+}
+.contact-info .degree i {
+  color: var(--third-color);
+}
+
+.degree-status {
+  font-style: normal;
+  opacity: 0.7;
+  font-size: 0.85em;
+}
+.degree-in-progress { margin-bottom: 2px; }
+.degree-obtained    { margin-top: 2px; }

@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "language": "es",
+    "description": "Overlay ES. Mirror resume.json shape with translated text fields only. Arrays are matched by index — keep the same order as resume.json."
+  },
+  "basics": {
+    "label": "Informático",
+    "summary": "Estudiante de informática en UMons por la noche, en busca de una nueva oportunidad de día mientras lanzo Acteble.\n\nTodos los proyectos en los que he participado se han desarrollado con un fuerte enfoque en los principios de Software Craftsmanship (clean code, clean architecture, DDD) como mejores prácticas para garantizar los más altos estándares de calidad, mantenibilidad y escalabilidad."
+  },
+  "work": [
+    { "position": "Fundador", "summary": "Desarrollo de una aplicación móvil que conecta a los viajeros durante sus trayectos. Flutter para la app móvil y Rust para el backend." },
+    { "position": "Investigador en IA" },
+    { "position": "AI Software Crafter Lead", "summary": "Emvi App: asistente visual con IA para personas con discapacidad visual, ofrece descripción del entorno, OCR, escaneo de códigos (QR y de barras) y sistema de rutas Valhalla adaptado." },
+    { "position": "AI Software Crafter", "summary": "Remi: aplicación de reminiscencia que permite a personas con problemas cognitivos recuperar sus recuerdos mediante descripciones de fotos generadas por reconocimiento facial y LLMs. Pipeline DeepFace (Serengil) y análisis de sentimiento para las descripciones generadas por LLM." },
+    { "position": "Data Scientist", "summary": "Uso de librerías Python (SpaCy…) para extraer entidades nombradas mediante entrenamiento de un modelo NER e implementación en .NET. Recall del modelo: 87%." },
+    { "position": "Software Crafter", "summary": "Modernización de software en el stack .NET siguiendo DDD y clean code. Implementación de servicios Azure AI en una solución .NET." },
+    { "position": "Software Crafter .NET / React" },
+    { "position": "Software Crafter", "summary": "EduCraft: solución que permite a cualquiera diseñar su propio itinerario personalizado para adquirir nuevas competencias." },
+    { "position": "Software Crafter .NET / Blazor", "summary": "Desarrollo de la webapp Axinco Kwalitijd en .NET / Blazor siguiendo DDD y clean code." },
+    { "position": "Desarrollador Web Full Stack en prácticas", "summary": "Formación cualificante destinada a reforzar las competencias técnicas adquiridas en mi bachelor en EPHEC.\nLa extensión incluyó una introducción al Business Intelligence y a los procesos ETL (Data Warehousing) con herramientas Microsoft (SSIS, …).\nFormación que abarcó SQL Server, Node.js, Express.js, React y Angular, desde el desarrollo de bases de datos hasta la interfaz de usuario y el backend." },
+    { "position": "Desarrollador Web Full Stack en prácticas", "summary": "OnlyTogether: solución que garantiza que los usuarios vulnerables estén siempre acompañados." },
+    { "position": "Desarrollador Web Full Stack en prácticas" },
+    { "position": "Trabajo de estudiante" },
+    { "position": "Desarrollador Web Full Stack en prácticas" },
+    { "position": "Trabajo de estudiante" }
+  ],
+  "volunteer": [
+    { "position": "Delegado de estudiantes" },
+    { "position": "Buddy TandeMons" },
+    { "position": "Delegado de estudiantes" },
+    { "position": "Tutor" }
+  ],
+  "education": [
+    { "studyType": "Máster en Ciencias", "area": "Informática (alternancia) (120 ECTS)", "gpa": "En curso (MA2)", "summary": "Delegado de estudiantes y buddy TandeMons" },
+    { "studyType": "Bachelor profesional", "area": "Gestión de Sistemas Informáticos", "gpa": "62.8%, Satis Bene", "summary": "Delegado de estudiantes y tutor.\n\nTFE: WebMenu 2.0" },
+    { "studyType": "Acreditación", "area": "7e Spéciale Mathématiques", "gpa": "Acreditación" },
+    { "studyType": "Bachelor de Artes (BA)", "area": "Ciencias políticas", "gpa": "29 créditos obtenidos en 2016-2017, contáctame para más información." },
+    { "studyType": "Bachelor de Ciencias (BSc)", "area": "Ingeniero comercial", "gpa": "Contáctame para más información." },
+    { "studyType": "Bachelor de Ciencias (BSc)", "area": "Ingeniero comercial", "gpa": "Contáctame para más información." },
+    { "studyType": "Cursos preparatorios", "area": "Medicina y odontología", "gpa": "Acreditación" },
+    { "studyType": "C.E.S.S.", "area": "Estudios generales — Matemáticas y lenguas modernas", "gpa": "Satis bene" },
+    { "studyType": "", "area": "Estudios generales — Latín y griego" }
+  ],
+  "awards": [
+    { "title": "TOEIC", "awarder": "ETS", "summary": "730" }
+  ],
+  "languages": [
+    { "language": "Francés", "fluency": "Lengua materna" },
+    { "language": "Inglés", "fluency": "B1+/B2 (TOEIC 730 / ELAO)" },
+    { "language": "Neerlandés", "fluency": "B1" }
+  ],
+  "interests": [
+    { "name": "Investigación y desarrollo", "keywords": ["Innovaciones", "Experimentación", "POCs"] }
+  ],
+  "projects": [
+    { "description": "Aplicación móvil que conecta a los viajeros durante sus trayectos.", "summary": "Desarrollo de una aplicación móvil que conecta a los viajeros durante sus trayectos. Flutter para la app móvil y Rust para el backend.", "type": "Aplicación móvil", "roles": ["Fundador"] },
+    { "description": "Asistente visual con IA para personas con discapacidad visual.", "summary": "Asistente visual con IA para personas con discapacidad visual, ofrece descripción del entorno, OCR, escaneo de códigos (QR y de barras) y sistema de rutas Valhalla adaptado.", "type": "Aplicación móvil" },
+    { "description": "Aplicación de reminiscencia para personas con problemas cognitivos.", "summary": "Aplicación de reminiscencia que permite a personas con problemas cognitivos recuperar sus recuerdos mediante descripciones de fotos generadas por reconocimiento facial y LLMs. Pipeline DeepFace (Serengil).", "type": "Aplicación de IA" },
+    { "description": "Plataforma que permite a cualquiera adquirir nuevas competencias." },
+    { "description": "Gestor educativo para estudiantes. Sin mantenimiento; la base de datos y la autenticación no están disponibles.", "highlights": ["UI/UX.", "Integración de APIs."], "type": "Aplicación web", "roles": ["Fundador"] },
+    { "summary": "Modelo de Named Entity Recognition para extraer artículos de inventario de una transcripción de audio." },
+    { "summary": "Gestor de flota para subastas." },
+    { "summary": "Gestor de encuestas para clubes deportivos y federaciones." },
+    { "summary": "Caja registradora basada en QR para establecimientos HoReCa (Hotel/Restaurante/Café)." }
+  ]
+}

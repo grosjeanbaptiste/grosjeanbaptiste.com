@@ -14,8 +14,13 @@ For programmatic ingestion, prefer the JSON Resume file (`/assets/data/resume.js
 
 ## Content
 
-- [Portfolio site (HTML)](https://www.grosjeanbaptiste.com/): Full portfolio with all sections rendered
-- [Full Markdown digest](https://www.grosjeanbaptiste.com/llms-full.txt): Flat single-file CV in Markdown, ideal for LLM context windows
+- [Portfolio site — English](https://www.grosjeanbaptiste.com/): Full portfolio with all sections rendered (canonical)
+- [Portfolio site — Français](https://www.grosjeanbaptiste.com/fr/): French version
+- [Portfolio site — Nederlands](https://www.grosjeanbaptiste.com/nl/): Dutch version
+- [Portfolio site — Español](https://www.grosjeanbaptiste.com/es/): Spanish version
+- [Full Markdown digest](https://www.grosjeanbaptiste.com/llms-full.txt): Flat single-file CV in Markdown (English), ideal for LLM context windows
+
+The site is published in four languages (en, fr, nl, es). All variants are derived from the same canonical `resume.json` by overlaying language-specific text in `assets/data/i18n/<lang>.json`. JSON-LD `inLanguage` and `hreflang` are emitted on every page.
 
 ## Optional
 
