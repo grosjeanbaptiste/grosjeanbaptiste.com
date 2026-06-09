@@ -573,9 +573,14 @@ function generateMain(resume, lang) {
   // Experience
   if (resume.work?.length) {
     const items = resume.work.map((w) => {
+      const companyHtml = w.company
+        ? (w.url
+            ? `<a href="${escape(w.url)}" target="_blank" rel="noopener">${escape(w.company)}</a>`
+            : escape(w.company))
+        : '';
       const parts = [
         '<article class="experience-item">',
-        `  <h3>${escape(w.position)}${w.company ? ' | ' + escape(w.company) : ''}</h3>`,
+        `  <h3>${escape(w.position)}${w.company ? ' | ' + companyHtml : ''}</h3>`,
         `  <p class="date">${dateRangeHtml(w.startDate, w.endDate, lang)}</p>`,
       ];
       if (w.location) parts.push(`  <p class="location">${escape(w.location)}</p>`);
@@ -617,9 +622,14 @@ function generateMain(resume, lang) {
   // Volunteer
   if (resume.volunteer?.length) {
     const items = resume.volunteer.map((v) => {
+      const orgHtml = v.organization
+        ? (v.url
+            ? `<a href="${escape(v.url)}" target="_blank" rel="noopener">${escape(v.organization)}</a>`
+            : escape(v.organization))
+        : '';
       const parts = [
         '<article class="experience-item">',
-        `  <h3>${escape(v.position)} | ${escape(v.organization)}</h3>`,
+        `  <h3>${escape(v.position)}${v.organization ? ' | ' + orgHtml : ''}</h3>`,
         `  <p class="date">${dateRangeHtml(v.startDate, v.endDate, lang)}</p>`,
       ];
       if (v.summary) parts.push(`  <p>${escape(v.summary)}</p>`);
