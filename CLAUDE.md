@@ -60,6 +60,8 @@ Each variant has four marker blocks replaced from data:
 
 `.github/workflows/regenerate-from-resume.yml` runs the script on every push that touches `resume.json`, any overlay under `assets/data/i18n/`, or the script itself, then commits the regenerated files. Manual trigger via `workflow_dispatch` is also enabled.
 
+The generator also rewrites `assets/data/resume.xml` from the canonical JSON. The XML carries an `<?xml-stylesheet?>` processing instruction pointing to `assets/xslt/resume-transform.xsl`, which renders the full CV when the XML is opened in an XSLT-capable browser (Firefox) or processed via `xsltproc` / Saxon. Chrome/Safari no longer apply client-side XSLT; the HTML site is the primary view for those.
+
 Running locally: `node scripts/generate-from-resume.js` (Node 20+). Idempotent.
 
 Do not hand-edit anything between markers — overwritten on next run. Edit `resume.json` (canonical) or `assets/data/i18n/<lang>.json` (translations).

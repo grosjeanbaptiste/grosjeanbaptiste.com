@@ -8,8 +8,8 @@
     "summary": "Estudiante de informática en UMons por la noche, en busca de una nueva oportunidad de día mientras lanzo Acteble.\n\nTodos los proyectos en los que he participado se han desarrollado con un fuerte enfoque en los principios de Software Craftsmanship (clean code, clean architecture, DDD) como mejores prácticas para garantizar los más altos estándares de calidad, mantenibilidad y escalabilidad."
   },
   "work": [
-    { "position": "Fundador", "summary": "Desarrollo de una aplicación móvil que conecta a los viajeros durante sus trayectos. Flutter para la app móvil y Rust para el backend." },
-    { "position": "Investigador en IA" },
+    { "position": "Fundador", "summary": "Construcción de Acteble, plataforma social geolocalizada que conecta viajeros en torno a actividades compartidas bajo restricciones espacio-temporales y multicriterio. Fundador, arquitecto y desarrollador único. La capa de I+D sirve como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons." },
+    { "position": "Investigador en IA", "summary": "Investigación e ingeniería de IA para el Parlamento federal belga. Diseño de una plataforma interna que permite al personal buscar, explorar y conversar con los archivos parlamentarios. Autor de un protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado, con énfasis en la robustez bilingüe FR/NL." },
     { "position": "AI Software Crafter Lead", "summary": "Emvi App: asistente visual con IA para personas con discapacidad visual, ofrece descripción del entorno, OCR, escaneo de códigos (QR y de barras) y sistema de rutas Valhalla adaptado." },
     { "position": "AI Software Crafter", "summary": "Remi: aplicación de reminiscencia que permite a personas con problemas cognitivos recuperar sus recuerdos mediante descripciones de fotos generadas por reconocimiento facial y LLMs. Pipeline DeepFace (Serengil) y análisis de sentimiento para las descripciones generadas por LLM." },
     { "position": "Data Scientist", "summary": "Uso de librerías Python (SpaCy…) para extraer entidades nombradas mediante entrenamiento de un modelo NER e implementación en .NET. Recall del modelo: 87%." },
@@ -31,7 +31,7 @@
     { "position": "Tutor" }
   ],
   "education": [
-    { "studyType": "Máster en Ciencias", "area": "Informática (alternancia) (120 ECTS)", "gpa": "En curso (MA2)", "summary": "Delegado de estudiantes y buddy TandeMons" },
+    { "studyType": "Máster en Ciencias", "area": "Informática (alternancia) (120 ECTS)", "gpa": "En curso (MA2)", "summary": "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — supervisada por Gauvain Devillez y Hadrien Mélot en el Service d'Algorithmique de UMONS. Implementación Python de referencia (50+ módulos, 214 tests unitarios con 86 % de cobertura de ramas, mypy --strict, tipado PEP 561) con reproducibilidad bit-idéntica (datasets hash SHA-256, tests de paridad CLI/notebook). Informe LaTeX de 110 páginas. Delegado de estudiantes y buddy TandeMons." },
     { "studyType": "Bachelor profesional", "area": "Gestión de Sistemas Informáticos", "gpa": "62.8%, Satis Bene", "summary": "Delegado de estudiantes y tutor.\n\nTFE: WebMenu 2.0" },
     { "studyType": "Acreditación", "area": "7e Spéciale Mathématiques", "gpa": "Acreditación" },
     { "studyType": "Bachelor de Artes (BA)", "area": "Ciencias políticas", "gpa": "29 créditos obtenidos en 2016-2017, contáctame para más información." },

@@ -46,17 +46,17 @@
       "url": "https://www.acteble.com",
       "startDate": "2025-07-01",
       "endDate": "Present",
-      "summary": "Developing a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.",
+      "summary": "Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. Sole founder, architect, and developer. The R&D layer doubles as the dissertation for my MSc in Computer Science at UMons.",
       "highlights": []
     },
     {
       "company": "Belgian Senate",
       "location": "Brussels, Belgium",
       "position": "AI Research Scientist",
-      "url": "",
+      "url": "https://www.senate.be",
       "startDate": "2025-11-03",
       "endDate": "2026-06-30",
-      "summary": "",
+      "summary": "AI research and engineering for the Belgian Federal Parliament. Designed an internal platform that lets staff search, explore and converse with the parliamentary archives. Authored an open evaluation protocol that compares retrieval strategies on the Senate corpus, with a focus on bilingual FR/NL robustness.",
       "highlights": []
     },
     {
@@ -352,7 +352,7 @@
       "studyType": "Master of Science - MS",
       "startDate": "2022-10-15",
       "gpa": "In progress (MA2)",
-      "summary": "Student representative & buddy TandeMons",
+      "summary": "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique. Reference Python implementation (50+ modules, 214 unit tests at 86 % branch coverage, mypy --strict, PEP 561 typed) with bit-identical reproducibility (SHA-256 hashed datasets, CLI/notebook parity tests). 110-page LaTeX report. Student representative & buddy TandeMons.",
       "courses": []
     },
     {

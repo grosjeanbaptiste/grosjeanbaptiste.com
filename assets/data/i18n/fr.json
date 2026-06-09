@@ -8,8 +8,8 @@
     "summary": "Étudiant en informatique à l'UMons le soir, à la recherche d'une nouvelle opportunité de jour tout en lançant Acteble.\n\nTous les projets auxquels j'ai participé ont été développés avec une forte orientation Software Craftsmanship (clean code, clean architecture, DDD) afin de garantir les plus hauts standards de qualité, maintenabilité et évolutivité."
   },
   "work": [
-    { "position": "Fondateur", "summary": "Développement d'une application mobile qui connecte les voyageurs pendant leurs trajets. Flutter pour l'app mobile, Rust pour le backend." },
-    { "position": "Chercheur en IA" },
+    { "position": "Fondateur", "summary": "Construction d'Acteble, plateforme sociale géo-localisée qui met en relation les voyageurs autour d'activités partagées sous contraintes spatio-temporelles et multicritères. Fondateur, architecte et développeur unique. La couche R&D tient lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons." },
+    { "position": "Chercheur en IA", "summary": "Recherche et ingénierie IA pour le Parlement fédéral belge. Conception d'une plateforme interne permettant au personnel de chercher, explorer et converser avec les archives parlementaires. Auteur d'un protocole d'évaluation ouvert qui compare les stratégies de retrieval sur le corpus du Sénat, avec un focus sur la robustesse bilingue FR/NL." },
     { "position": "AI Software Crafter Lead", "summary": "Emvi App : assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR & barres) et système de routage Valhalla adapté." },
     { "position": "AI Software Crafter", "summary": "Remi : application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil) pour la reconnaissance et analyse de sentiment pour les descriptions LLM." },
     { "position": "Data Scientist", "summary": "Bibliothèques Python (SpaCy…) pour extraire des entités nommées via entraînement d'un modèle NER et implémentation en .NET. Score de rappel du modèle : 87%." },
@@ -31,7 +31,7 @@
     { "position": "Tuteur" }
   ],
   "education": [
-    { "studyType": "Master en Sciences", "area": "Informatique (en alternance) (120 ECTS)", "gpa": "En cours (MA2)", "summary": "Délégué étudiant & buddy TandeMons" },
+    { "studyType": "Master en Sciences", "area": "Informatique (en alternance) (120 ECTS)", "gpa": "En cours (MA2)", "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS. Implémentation Python de référence (50+ modules, 214 tests unitaires à 86 % de couverture branches, mypy --strict, typé PEP 561) avec reproductibilité bit-identique (datasets hashés SHA-256, tests de parité CLI/notebook). Rapport LaTeX de 110 pages. Délégué étudiant & buddy TandeMons." },
     { "studyType": "Bachelier professionnalisant", "area": "Gestion des Systèmes Informatiques", "gpa": "62.8%, Satis Bene", "summary": "Délégué étudiant et tuteur.\n\nTFE : WebMenu 2.0" },
     { "studyType": "Attestation", "area": "7e Spéciale Mathématiques", "gpa": "Attestation" },
     { "studyType": "Bachelier en Arts (BA)", "area": "Sciences politiques", "gpa": "29 crédits obtenus en 2016-2017, me contacter pour plus d'informations." },
