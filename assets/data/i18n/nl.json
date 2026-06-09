@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "language": "nl",
+    "description": "Overlay NL. Mirror resume.json shape with translated text fields only. Arrays are matched by index — keep the same order as resume.json."
+  },
+  "basics": {
+    "label": "Informaticus",
+    "summary": "Computerwetenschappen-student aan UMons 's nachts, op zoek naar een nieuwe kans overdag terwijl ik Acteble lanceer.\n\nAlle projecten waaraan ik heb deelgenomen werden ontwikkeld met een sterke focus op Software Craftsmanship (clean code, clean architecture, DDD) als best practices om de hoogste normen van kwaliteit, onderhoudbaarheid en schaalbaarheid te garanderen."
+  },
+  "work": [
+    { "position": "Oprichter", "summary": "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend." },
+    { "position": "AI-onderzoeker" },
+    { "position": "AI Software Crafter Lead", "summary": "Emvi App: AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem." },
+    { "position": "AI Software Crafter", "summary": "Remi: reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) voor de gezichtsherkenningspipeline en sentimentanalyse voor de door LLM gegenereerde beschrijvingen." },
+    { "position": "Data Scientist", "summary": "Python-bibliotheken (SpaCy…) om benoemde entiteiten uit tekst te extraheren via NER-modeltraining en implementatie in .NET. Recall-score van het model: 87%." },
+    { "position": "Software Crafter", "summary": "Softwaremodernisering binnen de .NET-stack volgens DDD en clean code principes. Implementatie van Azure AI-services in een .NET-oplossing." },
+    { "position": ".NET / React Software Crafter" },
+    { "position": "Software Crafter", "summary": "EduCraft: oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven." },
+    { "position": ".NET / Blazor Software Crafter", "summary": "Ontwikkeling van de Axinco Kwalitijd webapp in .NET / Blazor volgens DDD en clean code principes." },
+    { "position": "Full Stack Webontwikkelaar Stagiair", "summary": "Kwalificerende opleiding om de technische vaardigheden te versterken die ik tijdens mijn bachelor aan EPHEC heb verworven.\nDe verlenging omvatte een introductie tot Business Intelligence en ETL-processen (Data Warehousing) met Microsoft-tools (SSIS, …).\nDe opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van databaseontwikkeling tot gebruikersinterface en backend." },
+    { "position": "Full Stack Webontwikkelaar Stagiair", "summary": "OnlyTogether: oplossing die ervoor zorgt dat kwetsbare gebruikers altijd begeleid worden." },
+    { "position": "Full Stack Webontwikkelaar Stagiair" },
+    { "position": "Studentenjob" },
+    { "position": "Full Stack Webontwikkelaar Stagiair" },
+    { "position": "Studentenjob" }
+  ],
+  "volunteer": [
+    { "position": "Studentenvertegenwoordiger" },
+    { "position": "Buddy TandeMons" },
+    { "position": "Studentenvertegenwoordiger" },
+    { "position": "Tutor" }
+  ],
+  "education": [
+    { "studyType": "Master of Science", "area": "Computerwetenschappen (duaal leren) (120 ECTS)", "gpa": "In uitvoering (MA2)", "summary": "Studentenvertegenwoordiger & buddy TandeMons" },
+    { "studyType": "Professionele bachelor", "area": "Beheer van informatiesystemen", "gpa": "62.8%, Satis Bene", "summary": "Studentenvertegenwoordiger en tutor.\n\nTFE: WebMenu 2.0" },
+    { "studyType": "Attestation", "area": "7e Spéciale Mathématiques", "gpa": "Attestation" },
+    { "studyType": "Bachelor of Arts (BA)", "area": "Politieke wetenschappen", "gpa": "29 credits behaald in 2016-2017, contacteer mij voor meer info." },
+    { "studyType": "Bachelor of Science (BSc)", "area": "Handelsingenieur", "gpa": "Contacteer mij voor meer info." },
+    { "studyType": "Bachelor of Science (BSc)", "area": "Handelsingenieur", "gpa": "Contacteer mij voor meer info." },
+    { "studyType": "Voorbereidende cursussen", "area": "Geneeskunde en tandheelkunde", "gpa": "Attestation" },
+    { "studyType": "C.E.S.S.", "area": "Algemene studies — Wiskunde en moderne talen", "gpa": "Satis bene" },
+    { "studyType": "", "area": "Algemene studies — Latijn en Grieks" }
+  ],
+  "awards": [
+    { "title": "TOEIC", "awarder": "ETS", "summary": "730" }
+  ],
+  "languages": [
+    { "language": "Frans", "fluency": "Moedertaal" },
+    { "language": "Engels", "fluency": "B1+/B2 (TOEIC 730 / ELAO)" },
+    { "language": "Nederlands", "fluency": "B1" }
+  ],
+  "interests": [
+    { "name": "Onderzoek en ontwikkeling", "keywords": ["Innovatie", "Experimenten", "POCs"] }
+  ],
+  "projects": [
+    { "description": "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.", "summary": "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend.", "type": "Mobiele applicatie", "roles": ["Oprichter"] },
+    { "description": "AI-aangedreven visuele assistent voor slechtzienden.", "summary": "AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem.", "type": "Mobiele applicatie" },
+    { "description": "Reminiscentie-applicatie voor mensen met cognitieve problemen.", "summary": "Reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) pipeline.", "type": "AI-applicatie" },
+    { "description": "Platform waarmee iedereen nieuwe vaardigheden kan verwerven." },
+    { "description": "Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar.", "highlights": ["UI/UX.", "API-integraties."], "type": "Webapplicatie", "roles": ["Oprichter"] },
+    { "summary": "Named Entity Recognition-model dat inventarisitems extraheert uit een audiotranscriptie." },
+    { "summary": "Wagenparkbeheerder voor veilingen." },
+    { "summary": "Enquêtebeheerder voor sportclubs en federaties." },
+    { "summary": "QR-code-gebaseerde kassa voor HoReCa-etablissementen (Hotel/Restaurant/Café)." }
+  ]
+}

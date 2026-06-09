@@ -1,12 +1,13 @@
-name: Regenerate LLM head
+name: Regenerate index.html from resume.json
 
 on:
   push:
     branches: [master]
     paths:
       - 'assets/data/resume.json'
-      - 'scripts/generate-llm-head.js'
-      - '.github/workflows/regenerate-llm-head.yml'
+      - 'assets/data/i18n/**'
+      - 'scripts/generate-from-resume.js'
+      - '.github/workflows/regenerate-from-resume.yml'
   workflow_dispatch:
 
 jobs:
@@ -22,16 +23,16 @@ jobs:
           node-version: '20'
 
       - name: Regenerate
-        run: node scripts/generate-llm-head.js
+        run: node scripts/generate-from-resume.js
 
       - name: Commit changes if any
         run: |
-          if [[ -z "$(git status --porcelain index.html)" ]]; then
+          if [[ -z "$(git status --porcelain index.html fr/ nl/ es/)" ]]; then
             echo "No changes to commit."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git commit -m "chore: regenerate LLM head from resume.json"
+          git add index.html fr/ nl/ es/
+          git commit -m "chore: regenerate localized index.html from resume.json"
           git push
