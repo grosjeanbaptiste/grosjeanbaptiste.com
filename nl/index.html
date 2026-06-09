@@ -322,12 +322,20 @@
           <h3>Oprichter | Acteble</h3>
           <p class="date"><time datetime="2025-07-01">jul 2025</time> – <time>Heden</time></p>
           <p class="location">Brussels, Belgium</p>
-          <p>Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend.</p>
+          <p>Bouwen van Acteble, een geolokaal sociaal platform dat reizigers koppelt rond gedeelde activiteiten onder ruimtelijk-temporele en multicriteria-beperkingen. De R&amp;D-laag van het platform dient tegelijk als mijn masterthesis voor de master in de computerwetenschappen aan UMons. Enige architect en ontwikkelaar over de Rust API-gateway, het Flutter mobiele monorepo en de marketingsite.</p>
+          <p>• Rust gateway (acteble_api): Axum HTTP + tonic gRPC streaming voor notificaties/berichten/aanwezigheid, gelaagde DDD-architectuur met event-sourced domeinevents, PostgreSQL via SQLx + migraties, Redis distributed cache, multi-tenant opslag (Local / MinIO / AWS S3), JWT + refresh-token authenticatie, Docker Compose + LocalStack dev-omgeving</p>
+          <p>• Flutter monorepo (melos_apps): Melos workspace, slang i18n met compile-time type safety, Riverpod state management, cross-platform commerciële mobiele app onder proprietary EULA</p>
+          <p>• Cross-repo developer experience: orkestratiescripts (bootstrap, snapshot, status, pull-all), doc-drift detectie (gepland/committed/WIP/wees), AI-subagents pipeline voor docsynchronisatie (Claude Code, Windsurf, Cursor, Codex)</p>
+          <p>• R&amp;D als masterthesis aan UMONS (Service d'Algorithmique, begeleiders Gauvain Devillez &amp; Hadrien Mélot): LaTeX-rapport van 110 pagina's over een multicriteria-framework voor ruimtelijk-temporele projecties in complexe sociale systemen; Python referentie-implementatie (50+ modules, 214 unit tests met 86 % branch coverage, mypy --strict, PEP 561 getypeerd); vier formele garanties van de iteratieve Pareto-solver (terminatie, convergentie naar lokale Pareto-optima, conditionele volledigheid, convergentiesnelheid); bit-identieke reproduceerbaarheid via SHA-256 gehashte datasets en CLI/notebook pariteitstests</p>
         </article>
         <article class="experience-item">
           <h3>AI-onderzoeker | Belgian Senate</h3>
           <p class="date"><time datetime="2025-11-03">nov 2025</time> – <time datetime="2026-06-30">jun 2026</time></p>
           <p class="location">Brussels, Belgium</p>
+          <p>AI-onderzoek en engineering voor het Belgisch federaal Parlement. Ontwerp van Synergy, een intern platform voor hybride zoeken en conversationele assistenten over de parlementaire archieven — gecombineerd met BM25/dense retrieval, een Neo4j kennisgraaf, een streaming RAG-assistent met citaties en reranking, en een Model Context Protocol-gateway voor agent-clients. Auteur van FedRAG-BE, een open RAG-benchmarkprotocol op het Senaat-corpus dat meer dan 10 embedding-modellen en retrieval-strategieën vergelijkt met een tweetalige FR/NL-robuustheidsscore.</p>
+          <p>• Synergy: Spring Boot 3 monorepo (search-api, assistant-api, graph-rag voor NL→Cypher, document-indexer, mcp-server, security-common met OAuth2 + Bucket4j) + Next.js 16 / React 18 frontend, OpenSearch + Neo4j + MinIO + LangChain4j, Kubernetes/Kustomize infrastructuur</p>
+          <p>• FedRAG-BE: retrieval-benchmark geïnspireerd op BEIR op het Senaat-corpus, samengestelde score (0,6·MRR + 0,4·Recall − 0,3·FR/NL-kloof), reproduceerbare Jupyter-pipeline, FAISS + OpenSearch backends, multi-provider LLM (OpenAI, Anthropic, Ollama, Gemini, Groq)</p>
+          <p>• Stack: Java 21, Spring Boot 3, LangChain4j, Spring AI MCP, Neo4j, OpenSearch, Spring Batch · Python (LangChain, RAGAS, sentence-transformers, Hugging Face) · Next.js 16, TailwindCSS 4, D3.js, ECharts</p>
         </article>
         <article class="experience-item">
           <h3>AI Software Crafter Lead | Emvi.ai</h3>
@@ -413,7 +421,7 @@
           <p class="institution">UMons</p>
           <p class="date"><time datetime="2022-10-15">okt 2022</time> – <time>Heden</time></p>
           <p>In uitvoering (MA2)</p>
-          <p>Studentenvertegenwoordiger &amp; buddy TandeMons</p>
+          <p>Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Python referentie-implementatie (50+ modules, 214 unit tests met 86 % branch coverage, mypy --strict, PEP 561 getypeerd) met bit-identieke reproduceerbaarheid (SHA-256 gehashte datasets, CLI/notebook pariteitstests). LaTeX-rapport van 110 pagina's, empirisch gevalideerd op het Acteble-platform. Studentenvertegenwoordiger &amp; buddy TandeMons.</p>
         </article>
         <article class="education-item">
           <h3>Professionele bachelor — Beheer van informatiesystemen</h3>
