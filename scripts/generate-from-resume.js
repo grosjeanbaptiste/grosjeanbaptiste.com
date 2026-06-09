@@ -79,6 +79,8 @@ const I18N = {
     langMenuLabel: 'Language',
     pageTitleSuffix: 'CV',
     inProgress: 'in progress',
+    xmlResume: 'CV (XML + XSLT)',
+    firefoxNote: 'best viewed in Firefox',
     nav: { about: 'About', experience: 'Experience', education: 'Education', projects: 'Projects', references: 'References', contact: 'Contact' },
   },
   fr: {
@@ -109,6 +111,8 @@ const I18N = {
     langMenuLabel: 'Langue',
     pageTitleSuffix: 'CV',
     inProgress: 'en cours',
+    xmlResume: 'CV (XML + XSLT)',
+    firefoxNote: 'à ouvrir avec Firefox',
     nav: { about: 'À propos', experience: 'Expérience', education: 'Éducation', projects: 'Projets', references: 'Références', contact: 'Contact' },
   },
   nl: {
@@ -139,6 +143,8 @@ const I18N = {
     langMenuLabel: 'Taal',
     pageTitleSuffix: 'CV',
     inProgress: 'in uitvoering',
+    xmlResume: 'CV (XML + XSLT)',
+    firefoxNote: 'best te bekijken in Firefox',
     nav: { about: 'Over', experience: 'Ervaring', education: 'Opleiding', projects: 'Projecten', references: 'Referenties', contact: 'Contact' },
   },
   es: {
@@ -169,6 +175,8 @@ const I18N = {
     langMenuLabel: 'Idioma',
     pageTitleSuffix: 'CV',
     inProgress: 'en curso',
+    xmlResume: 'CV (XML + XSLT)',
+    firefoxNote: 'mejor visto en Firefox',
     nav: { about: 'Sobre', experience: 'Experiencia', education: 'Educación', projects: 'Proyectos', references: 'Referencias', contact: 'Contacto' },
   },
 };
@@ -724,6 +732,9 @@ function generateMain(resume, lang) {
       `  <p><i class="${profileIcon(p.network)}"></i> <a href="${escape(p.url)}" rel="me">${escape(p.network)}</a></p>`,
     );
   });
+  contactLines.push(
+    `  <p><i class="fas fa-code"></i> <a href="/assets/data/resume.xml">${escape(t.xmlResume)}</a> <span class="muted-inline">(${escape(t.firefoxNote)})</span></p>`,
+  );
   sections.push([
     '<section id="contact">',
     `  <h2>${escape(t.contact)}</h2>`,

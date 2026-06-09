@@ -737,3 +737,9 @@ ul {
 }
 .degree-in-progress { margin-bottom: 2px; }
 .degree-obtained    { margin-top: 2px; }
+
+.muted-inline {
+  font-size: 0.85em;
+  color: var(--body-color);
+  opacity: 0.6;
+}
