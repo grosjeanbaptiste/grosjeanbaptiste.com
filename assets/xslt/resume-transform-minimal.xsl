@@ -272,9 +272,10 @@
         </xsl:if>
 
         <div class="stylesheet-note">
-          XML rendered via XSLT 1.0. For the primary HTML site, see
-          <a href="https://www.grosjeanbaptiste.com/">grosjeanbaptiste.com</a>.
-          Canonical data: <a href="../data/resume.json">resume.json</a> (JSON Resume v1.0.0).
+          Minimal XSLT 1.0 theme. Switch to the
+          <a href="/assets/data/resume.xml">rich theme</a> ·
+          primary HTML site: <a href="https://www.grosjeanbaptiste.com/">grosjeanbaptiste.com</a> ·
+          canonical data: <a href="/assets/data/resume.json">resume.json</a> (JSON Resume v1.0.0).
         </div>
 
       </body>

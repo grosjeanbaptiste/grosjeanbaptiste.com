@@ -840,10 +840,10 @@ function emitXml(name, value, depth) {
   return `${pad}<${name}>${xmlEsc(value)}</${name}>`;
 }
 
-function generateXml(resume) {
+function generateXml(resume, themePath = '../xslt/resume-transform.xsl') {
   const body = emitXml('resume', resume, 0);
   return `<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl"?>
+<?xml-stylesheet type="text/xsl" href="${themePath}"?>
 ${body}
 `;
 }
@@ -899,15 +899,21 @@ for (const lang of LANGS) {
   console.log(`${lang}: ${path.relative(ROOT, outPath)}`);
 }
 
-// Regenerate XML mirror from canonical EN
+// Regenerate XML mirrors from canonical EN (one PI per theme).
 const canonical = loadResume('en');
-const xmlPath = path.join(ROOT, 'assets/data/resume.xml');
-const newXml = generateXml(canonical);
-const previousXml = fs.existsSync(xmlPath) ? fs.readFileSync(xmlPath, 'utf8') : '';
-if (previousXml !== newXml) {
-  fs.writeFileSync(xmlPath, newXml);
-  wrote += 1;
+const xmlVariants = [
+  { file: 'resume.xml', theme: '../xslt/resume-transform.xsl' },
+  { file: 'resume-minimal.xml', theme: '../xslt/resume-transform-minimal.xsl' },
+];
+for (const v of xmlVariants) {
+  const xmlPath = path.join(ROOT, 'assets/data', v.file);
+  const newXml = generateXml(canonical, v.theme);
+  const previousXml = fs.existsSync(xmlPath) ? fs.readFileSync(xmlPath, 'utf8') : '';
+  if (previousXml !== newXml) {
+    fs.writeFileSync(xmlPath, newXml);
+    wrote += 1;
+  }
+  console.log(`xml: assets/data/${v.file}`);
 }
-console.log(`xml: assets/data/resume.xml`);
 
 console.log(`generate-from-resume: ${wrote} file(s) updated`);
