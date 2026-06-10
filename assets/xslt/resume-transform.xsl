@@ -177,7 +177,7 @@
         <div class="nav">
           XML resume rendered via XSLT. Primary HTML site:
           <a href="https://www.grosjeanbaptiste.com/">grosjeanbaptiste.com</a> ·
-          alternative <a href="resume-transform-minimal.xsl">minimal theme</a> ·
+          alternative <a href="../xslt/resume-transform-minimal.xsl">minimal theme</a> ·
           canonical <a href="resume.json">JSON Resume</a>
         </div>
 
@@ -404,7 +404,7 @@
             <div class="footer-note">
               Rendered from <a href="resume.json">resume.json</a> via XSLT 1.0
               (canonical JSON Resume v1.0.0). Switch to the
-              <a href="resume-transform-minimal.xsl">minimal theme</a> by editing
+              <a href="../xslt/resume-transform-minimal.xsl">minimal theme</a> by editing
               the <code>&lt;?xml-stylesheet?&gt;</code> instruction in
               <a href="resume.xml">resume.xml</a>.
             </div>
