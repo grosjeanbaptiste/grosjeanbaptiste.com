@@ -62,6 +62,12 @@ Each variant has four marker blocks replaced from data:
 
 The generator also rewrites `assets/data/resume.xml` from the canonical JSON. The XML carries an `<?xml-stylesheet?>` processing instruction pointing to `assets/xslt/resume-transform.xsl`, which renders the full CV when the XML is opened in an XSLT-capable browser (Firefox) or processed via `xsltproc` / Saxon. Chrome/Safari no longer apply client-side XSLT; the HTML site is the primary view for those.
 
+### Printable PDFs
+
+`scripts/generate-pdf.js` produces four printable CVs in `assets/cv/cv_grosjean_baptiste_{en,fr,nl,es}.pdf` from the same canonical JSON + i18n overlays. It builds a LaTeX document inline (using the `altacv` class shipped in `latex/altacv.cls`) and compiles it via `pdflatex` (two passes per language). The download button in `index.html` is wrapped in `<!-- CV-DOWNLOAD -->` markers and points to the matching language PDF on each page (`/index.html` → `_en.pdf`, `/fr/index.html` → `_fr.pdf`, etc.).
+
+The dedicated workflow `.github/workflows/regenerate-pdf.yml` installs the required TeX Live packages on Ubuntu and runs the script on every push that touches `resume.json`, the i18n overlays, the LaTeX class, or the script. Local prerequisites: Node 20+ and a `pdflatex` install with `altacv` deps (`paracol`, `fontawesome5`, `roboto`, `lato`, multilingual babel).
+
 Running locally: `node scripts/generate-from-resume.js` (Node 20+). Idempotent.
 
 Do not hand-edit anything between markers — overwritten on next run. Edit `resume.json` (canonical) or `assets/data/i18n/<lang>.json` (translations).

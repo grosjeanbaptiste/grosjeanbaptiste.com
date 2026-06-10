@@ -1,0 +1,251 @@
+{
+  "_meta": {
+    "language": "zh",
+    "description": "Overlay ZH (Simplified Chinese). Mirror resume.json shape with translated text fields only. Arrays matched by index — keep the same order as resume.json."
+  },
+  "basics": {
+    "label": "计算机科学家",
+    "summary": "蒙斯大学 (UMons) 夜间计算机科学专业学生，白天寻找新机会的同时创办 Acteble。\n\n所有参与的项目均以软件工艺原则（整洁代码、整洁架构、领域驱动设计）为核心开发，确保最高的质量、可维护性和可扩展性标准。",
+    "location": {
+      "region": "比利时"
+    }
+  },
+  "work": [
+    {
+      "position": "创始人",
+      "summary": "构建 Acteble，一个基于地理位置的社交平台，在时空和多标准约束下将旅行者围绕共享活动配对。唯一的创始人、架构师和开发者。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。",
+      "location": "布鲁塞尔，比利时"
+    },
+    {
+      "position": "AI 研究员",
+      "summary": "为比利时联邦议会进行 AI 研究和工程。设计了一个内部平台，让工作人员可以搜索、探索和与议会档案对话。撰写了一个开源评估协议，比较参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。",
+      "location": "布鲁塞尔，比利时",
+      "company": "比利时参议院"
+    },
+    {
+      "position": "AI 软件工艺负责人",
+      "summary": "Emvi App：为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描 (二维码和条形码) 以及适配的 Valhalla 路线规划系统。",
+      "location": "布鲁日，比利时"
+    },
+    {
+      "position": "AI 软件工艺师",
+      "summary": "Remi：一款追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。使用 DeepFace (Serengil) 进行面部识别管道，并为 LLM 生成的描述进行情感分析。",
+      "location": "布鲁日，比利时"
+    },
+    {
+      "position": "数据科学家",
+      "summary": "使用 Python 库 (SpaCy 等) 通过 NER 模型训练从文本中提取命名实体，并在 .NET 中实现。模型召回率：87%。",
+      "location": "安特卫普，弗拉芒大区，比利时"
+    },
+    {
+      "position": "软件工艺师",
+      "summary": "在 .NET 技术栈中遵循领域驱动设计和整洁代码原则进行软件现代化。在 .NET 解决方案中实施 Azure AI 服务。",
+      "location": "安特卫普，弗拉芒大区，比利时"
+    },
+    {
+      "position": ".NET/React 软件工艺师",
+      "location": "安特卫普，弗拉芒大区，比利时"
+    },
+    {
+      "position": "软件工艺师",
+      "summary": "EduCraft：让任何人都能定制个性化路径以获得新技能的解决方案。",
+      "location": "沙勒罗瓦及周边"
+    },
+    {
+      "position": ".NET/Blazor 软件工艺师",
+      "summary": "使用 .NET / Blazor 按照领域驱动设计和整洁代码原则开发 Axinco Kwalitijd Web 应用。",
+      "location": "安特卫普，弗拉芒大区，比利时"
+    },
+    {
+      "position": "全栈 Web 开发实习生",
+      "summary": "旨在加强我在 EPHEC 学士学位项目中获得的技术技能的资格培训。\n扩展期间，我们接受了 Microsoft 工具 (SSIS 等) 的商业智能和 ETL 流程 (数据仓库) 的介绍。\n培训涵盖了 SQL Server、Node.js、Express.js、React 和 Angular，从数据库开发到用户界面和后端。",
+      "location": "沙勒罗瓦，瓦隆大区，比利时"
+    },
+    {
+      "position": "全栈 Web 开发实习生",
+      "summary": "OnlyTogether：确保弱势用户始终有人陪伴的解决方案。",
+      "location": "沙勒罗瓦，瓦隆大区，比利时"
+    },
+    {
+      "position": "全栈 Web 开发实习生",
+      "location": "布鲁塞尔首都大区，比利时"
+    },
+    {
+      "position": "学生工",
+      "location": "布鲁塞尔首都大区，比利时"
+    },
+    {
+      "position": "全栈 Web 开发实习生",
+      "location": "布鲁塞尔首都大区，比利时"
+    },
+    {
+      "position": "学生工",
+      "location": "克莱内姆，弗拉芒大区，比利时"
+    }
+  ],
+  "volunteer": [
+    {
+      "position": "学生代表"
+    },
+    {
+      "position": "Buddy TandeMons"
+    },
+    {
+      "position": "学生代表"
+    },
+    {
+      "position": "辅导员"
+    }
+  ],
+  "education": [
+    {
+      "studyType": "理学硕士",
+      "area": "计算机科学 (校企合作项目) (120 ECTS)",
+      "gpa": "进行中 (MA2)",
+      "summary": "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 由蒙斯大学 (UMONS) 算法服务部的 Gauvain Devillez 和 Hadrien Mélot 指导。Python 参考实现 (50+ 模块、214 个单元测试、86% 分支覆盖率、mypy --strict、PEP 561 类型化) 具有比特级可复现性 (SHA-256 哈希数据集、CLI/Notebook 等价性测试)。110 页 LaTeX 报告。学生代表 & Buddy TandeMons。"
+    },
+    {
+      "studyType": "职业学士",
+      "area": "管理信息学",
+      "gpa": "62.8%，Satis Bene",
+      "summary": "学生代表和辅导员。\n\nTFE: WebMenu 2.0"
+    },
+    {
+      "studyType": "证书",
+      "area": "7e Spéciale Mathématiques",
+      "gpa": "证书"
+    },
+    {
+      "studyType": "文学学士 (BA)",
+      "area": "政治学",
+      "gpa": "2016-2017 获得 29 学分，请联系我了解更多信息。"
+    },
+    {
+      "studyType": "理学学士 (BSc)",
+      "area": "工商工程",
+      "gpa": "请联系我了解更多信息。"
+    },
+    {
+      "studyType": "理学学士 (BSc)",
+      "area": "工商工程",
+      "gpa": "请联系我了解更多信息。"
+    },
+    {
+      "studyType": "预科课程",
+      "area": "医学和牙科",
+      "gpa": "证书"
+    },
+    {
+      "studyType": "C.E.S.S.",
+      "area": "通识学习 — 数学和现代语言",
+      "gpa": "Satis bene"
+    },
+    {
+      "studyType": "",
+      "area": "通识学习 — 拉丁语和希腊语"
+    }
+  ],
+  "awards": [
+    {
+      "title": "TOEIC",
+      "awarder": "ETS",
+      "summary": "730"
+    }
+  ],
+  "languages": [
+    {
+      "language": "法语",
+      "fluency": "母语"
+    },
+    {
+      "language": "英语",
+      "fluency": "B1+/B2 (TOEIC 730 / ELAO)"
+    },
+    {
+      "language": "荷兰语",
+      "fluency": "B1"
+    }
+  ],
+  "interests": [
+    {
+      "name": "研究与开发",
+      "keywords": [
+        "创新",
+        "实验",
+        "POC"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "reference": "在 EMVI 项目中与 Baptiste Grosjean 一起工作是一次令人难以置信的有益经历——无论是在专业上还是个人上。Baptiste 不仅是一位技术非常出色的开发者，对设计和功能有着敏锐的眼光，而且在我们的合作中也一直是导师和灵感来源。\n\n我从他身上学到了很多——从 Flutter 开发的最佳实践到深思熟虑的 UI/UX 和整洁架构的重要性。他总是乐于分享知识，清晰地解释复杂的想法，并以一切可能的方式支持团队。\n\n最突出的是 Baptiste 将挑战转化为机会的能力。他冷静专注的方法和解决问题的思维方式帮助我们克服了技术难题，并构建了真正改善用户体验的功能。他的协作精神让团队合作变得顺畅且鼓舞人心。\n\n如果您正在寻找一个不仅能交付卓越成果还能激励周围所有人的人，我无法更强烈地推荐 Baptiste。他是一位出色的开发者、伟大的队友，也是我有幸向其学习的人。 — （译自英语）",
+      "name": "Waseem Virk，Emvi.ai Flutter 开发者"
+    },
+    {
+      "reference": "我有幸与 Baptiste 共事了一年，并额外地获得了在一个项目中指导他三个月的乐趣。如果说 Baptiste 有一件事最突出，那就是他无穷的精力。无论是早上 9 点还是晚上 9 点，他始终是房间里最热情的人——有时甚至比咖啡机还热情。\n\nBaptiste 给他参与的每个项目都带来感染力的能量。他外向、聪明，并拥有真正令人钦佩的求知欲。无论是钻研复杂任务还是提出深刻的问题，他始终在追求知识。他对学习的热情，特别是在利用 ChatGPT 等工具方面，既令人印象深刻又略显令人生畏。说真的，如果 ChatGPT 有一个最好的朋友，那一定是 Baptiste！\n\n他也极具动手能力，从不畏惧卷起袖子深入工作。他的方法不仅是理论上的；他追求的是实用、切实的成果。\n\n总而言之，如果您正在寻找一个为每项任务带来热情、智慧和一丝幽默的人，Baptiste 就是您要找的人。与他合作不仅富有成效，而且真正令人愉快。 — （译自英语）",
+      "name": "Tino Schuerewegen，Xtrada 软件开发者"
+    },
+    {
+      "reference": "尽管我们没有直接合作，但我与 Baptiste 始终保持着非常愉快的联系。在英语、荷兰语和法语的混合中，我们经常分享愉快的对话。他的热情和能量真的很有感染力，他知道如何在每次互动中营造愉快、轻松的氛围。Baptiste 是一个能带来积极动力的人。 — （译自荷兰语）",
+      "name": "Emiel Van Gysegem，Xtra Groep 营销与运营"
+    },
+    {
+      "reference": "Baptiste 是一位全栈软件开发者，受坚定不移的决心驱动。这种心态贯穿他职业生涯的每个方面。他曾在多个领域工作，使他能够迅速适应任何情况。这些角色磨砺了他的技术和人际交往能力，使他成为一个多才多艺的合作者，对他加入的每个项目都产生重大影响。在持续学习愿望的推动下，他通过攻读计算机科学硕士不断更新自己的知识。这种持续的学习之旅使他成为计算机科学领域全面的 IT 专业人士。 — （译自英语）",
+      "name": "Steven Claus，Xtra Groep 首席财务官"
+    },
+    {
+      "reference": "除了是软件开发者之外，Baptiste 还喜欢从事数据分析，并且是 ChatGPT 使用方面的专家。他喜欢学习新事物，并且学得很快。他在交往中非常热情，总是随时准备给予友好的话语或建议。 — （译自荷兰语）",
+      "name": "Tjörven Janssens，Xtrada 软件开发者"
+    },
+    {
+      "reference": "Baptiste 是一位出色且尽职的开发者，渴望继续学习新技术并提升自己的技能。您不仅会惊叹于他的知识，还会惊叹于他温暖、开放的热情。Baptiste，你将在生活中做出伟大的事情，只需保持你充满活力的精神 ✊ — （译自英语）",
+      "name": "Michael Culot，Xtrada 销售经理"
+    }
+  ],
+  "projects": [
+    {
+      "description": "在旅途中连接旅行者的移动应用。",
+      "type": "移动应用",
+      "roles": [
+        "创始人"
+      ],
+      "summary": "开发一款在旅途中连接旅行者的移动应用。Flutter 用于移动应用，Rust 用于后端。"
+    },
+    {
+      "description": "为视障人士提供的 AI 驱动视觉助手。",
+      "type": "移动应用",
+      "summary": "为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描（二维码和条形码）以及适配的 Valhalla 路线规划系统。"
+    },
+    {
+      "description": "为认知障碍患者设计的追忆应用。",
+      "type": "AI 应用",
+      "summary": "追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。DeepFace (Serengil) 管道。"
+    },
+    {
+      "description": "让任何人都能获得新技能的平台。"
+    },
+    {
+      "description": "学生教育管理工具。不再维护；数据库和身份验证不可用。",
+      "highlights": [
+        "UI/UX。",
+        "API 集成。"
+      ],
+      "type": "Web 应用",
+      "roles": [
+        "创始人"
+      ]
+    },
+    {
+      "summary": "用于从音频转录中提取库存项目的命名实体识别机器学习模型。"
+    },
+    {
+      "summary": "拍卖车队管理器。"
+    },
+    {
+      "summary": "体育俱乐部和联合会的调查管理器。"
+    },
+    {
+      "summary": "基于二维码的酒店、餐厅、咖啡馆 (HoReCa) 收银机。"
+    }
+  ]
+}

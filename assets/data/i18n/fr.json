@@ -4,63 +4,248 @@
     "description": "Overlay FR. Mirror resume.json shape with translated text fields only. Arrays are matched by index — keep the same order as resume.json."
   },
   "basics": {
+    "location": {
+      "region": "Belgique"
+    },
     "label": "Informaticien",
     "summary": "Étudiant en informatique à l'UMons le soir, à la recherche d'une nouvelle opportunité de jour tout en lançant Acteble.\n\nTous les projets auxquels j'ai participé ont été développés avec une forte orientation Software Craftsmanship (clean code, clean architecture, DDD) afin de garantir les plus hauts standards de qualité, maintenabilité et évolutivité."
   },
   "work": [
-    { "position": "Fondateur", "summary": "Construction d'Acteble, plateforme sociale géo-localisée qui met en relation les voyageurs autour d'activités partagées sous contraintes spatio-temporelles et multicritères. Fondateur, architecte et développeur unique. La couche R&D tient lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons." },
-    { "position": "Chercheur en IA", "summary": "Recherche et ingénierie IA pour le Parlement fédéral belge. Conception d'une plateforme interne permettant au personnel de chercher, explorer et converser avec les archives parlementaires. Auteur d'un protocole d'évaluation ouvert qui compare les stratégies de retrieval sur le corpus du Sénat, avec un focus sur la robustesse bilingue FR/NL." },
-    { "position": "AI Software Crafter Lead", "summary": "Emvi App : assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR & barres) et système de routage Valhalla adapté." },
-    { "position": "AI Software Crafter", "summary": "Remi : application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil) pour la reconnaissance et analyse de sentiment pour les descriptions LLM." },
-    { "position": "Data Scientist", "summary": "Bibliothèques Python (SpaCy…) pour extraire des entités nommées via entraînement d'un modèle NER et implémentation en .NET. Score de rappel du modèle : 87%." },
-    { "position": "Software Crafter", "summary": "Modernisation logicielle dans la stack .NET en suivant les principes DDD et clean code. Implémentation de services Azure AI dans une solution .NET." },
-    { "position": "Software Crafter .NET / React" },
-    { "position": "Software Crafter", "summary": "EduCraft : solution permettant à chacun de tracer son propre parcours personnalisé d'acquisition de compétences." },
-    { "position": "Software Crafter .NET / Blazor", "summary": "Développement de la webapp Axinco Kwalitijd en .NET / Blazor selon les principes DDD et clean code." },
-    { "position": "Stagiaire développeur Full Stack Web", "summary": "Formation qualifiante destinée à renforcer les compétences techniques acquises pendant mon bachelier à l'EPHEC.\nL'extension comprenait une introduction à la Business Intelligence et aux processus ETL (Data Warehousing) avec les outils Microsoft (SSIS, …).\nFormation couvrant SQL Server, Node.js, Express.js, React et Angular, du développement de base de données à l'interface utilisateur et au backend." },
-    { "position": "Stagiaire développeur Full Stack Web", "summary": "OnlyTogether : solution assurant que les utilisateurs vulnérables soient toujours accompagnés." },
-    { "position": "Stagiaire développeur Full Stack Web" },
-    { "position": "Job étudiant" },
-    { "position": "Stagiaire développeur Full Stack Web" },
-    { "position": "Job étudiant" }
+    {
+      "position": "Fondateur",
+      "summary": "Construction d'Acteble, plateforme sociale géo-localisée qui met en relation les voyageurs autour d'activités partagées sous contraintes spatio-temporelles et multicritères. Fondateur, architecte et développeur unique. La couche R&D tient lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.",
+      "location": "Bruxelles, Belgique"
+    },
+    {
+      "position": "Chercheur en IA",
+      "summary": "Recherche et ingénierie IA pour le Parlement fédéral belge. Conception d'une plateforme interne permettant au personnel de chercher, explorer et converser avec les archives parlementaires. Auteur d'un protocole d'évaluation ouvert qui compare les stratégies de retrieval sur le corpus du Sénat, avec un focus sur la robustesse bilingue FR/NL.",
+      "location": "Bruxelles, Belgique",
+      "company": "Sénat belge"
+    },
+    {
+      "position": "AI Software Crafter Lead",
+      "summary": "Emvi App : assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR & barres) et système de routage Valhalla adapté.",
+      "location": "Bruges, Belgique"
+    },
+    {
+      "position": "AI Software Crafter",
+      "summary": "Remi : application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil) pour la reconnaissance et analyse de sentiment pour les descriptions LLM.",
+      "location": "Bruges, Belgique"
+    },
+    {
+      "position": "Data Scientist",
+      "summary": "Bibliothèques Python (SpaCy…) pour extraire des entités nommées via entraînement d'un modèle NER et implémentation en .NET. Score de rappel du modèle : 87%.",
+      "location": "Anvers, Flandres, Belgique"
+    },
+    {
+      "position": "Software Crafter",
+      "summary": "Modernisation logicielle dans la stack .NET en suivant les principes DDD et clean code. Implémentation de services Azure AI dans une solution .NET.",
+      "location": "Anvers, Flandres, Belgique"
+    },
+    {
+      "position": "Software Crafter .NET / React",
+      "location": "Anvers, Flandres, Belgique"
+    },
+    {
+      "position": "Software Crafter",
+      "summary": "EduCraft : solution permettant à chacun de tracer son propre parcours personnalisé d'acquisition de compétences.",
+      "location": "Charleroi et périphérie"
+    },
+    {
+      "position": "Software Crafter .NET / Blazor",
+      "summary": "Développement de la webapp Axinco Kwalitijd en .NET / Blazor selon les principes DDD et clean code.",
+      "location": "Anvers, Flandres, Belgique"
+    },
+    {
+      "position": "Stagiaire développeur Full Stack Web",
+      "summary": "Formation qualifiante destinée à renforcer les compétences techniques acquises pendant mon bachelier à l'EPHEC.\nL'extension comprenait une introduction à la Business Intelligence et aux processus ETL (Data Warehousing) avec les outils Microsoft (SSIS, …).\nFormation couvrant SQL Server, Node.js, Express.js, React et Angular, du développement de base de données à l'interface utilisateur et au backend.",
+      "location": "Charleroi, Wallonie, Belgique"
+    },
+    {
+      "position": "Stagiaire développeur Full Stack Web",
+      "summary": "OnlyTogether : solution assurant que les utilisateurs vulnérables soient toujours accompagnés.",
+      "location": "Charleroi, Région wallonne, Belgique"
+    },
+    {
+      "position": "Stagiaire développeur Full Stack Web",
+      "location": "Région de Bruxelles-Capitale, Belgique"
+    },
+    {
+      "position": "Job étudiant",
+      "location": "Région de Bruxelles-Capitale, Belgique"
+    },
+    {
+      "position": "Stagiaire développeur Full Stack Web",
+      "location": "Région de Bruxelles-Capitale, Belgique"
+    },
+    {
+      "position": "Job étudiant",
+      "location": "Kraainem, Région flamande, Belgique"
+    }
   ],
   "volunteer": [
-    { "position": "Délégué étudiant" },
-    { "position": "Buddy TandeMons" },
-    { "position": "Délégué étudiant" },
-    { "position": "Tuteur" }
+    {
+      "position": "Délégué étudiant"
+    },
+    {
+      "position": "Buddy TandeMons"
+    },
+    {
+      "position": "Délégué étudiant"
+    },
+    {
+      "position": "Tuteur"
+    }
   ],
   "education": [
-    { "studyType": "Master en Sciences", "area": "Informatique (en alternance) (120 ECTS)", "gpa": "En cours (MA2)", "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS. Implémentation Python de référence (50+ modules, 214 tests unitaires à 86 % de couverture branches, mypy --strict, typé PEP 561) avec reproductibilité bit-identique (datasets hashés SHA-256, tests de parité CLI/notebook). Rapport LaTeX de 110 pages. Délégué étudiant & buddy TandeMons." },
-    { "studyType": "Bachelier professionnalisant", "area": "Gestion des Systèmes Informatiques", "gpa": "62.8%, Satis Bene", "summary": "Délégué étudiant et tuteur.\n\nTFE : WebMenu 2.0" },
-    { "studyType": "Attestation", "area": "7e Spéciale Mathématiques", "gpa": "Attestation" },
-    { "studyType": "Bachelier en Arts (BA)", "area": "Sciences politiques", "gpa": "29 crédits obtenus en 2016-2017, me contacter pour plus d'informations." },
-    { "studyType": "Bachelier en Sciences (BSc)", "area": "Ingénieur de gestion", "gpa": "Me contacter pour plus d'informations." },
-    { "studyType": "Bachelier en Sciences (BSc)", "area": "Ingénieur de gestion", "gpa": "Me contacter pour plus d'informations." },
-    { "studyType": "Cours préparatoires", "area": "Médecine et dentisterie", "gpa": "Attestation" },
-    { "studyType": "C.E.S.S.", "area": "Études générales — Mathématiques et langues modernes", "gpa": "Satis bene" },
-    { "studyType": "", "area": "Études générales — Latin et grec" }
+    {
+      "studyType": "Master en Sciences",
+      "area": "Informatique (en alternance) (120 ECTS)",
+      "gpa": "En cours (MA2)",
+      "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS. Implémentation Python de référence (50+ modules, 214 tests unitaires à 86 % de couverture branches, mypy --strict, typé PEP 561) avec reproductibilité bit-identique (datasets hashés SHA-256, tests de parité CLI/notebook). Rapport LaTeX de 110 pages. Délégué étudiant & buddy TandeMons."
+    },
+    {
+      "studyType": "Bachelier professionnalisant",
+      "area": "Informatique de gestion",
+      "gpa": "62.8%, Satis Bene",
+      "summary": "Délégué étudiant et tuteur.\n\nTFE : WebMenu 2.0"
+    },
+    {
+      "studyType": "Attestation",
+      "area": "7e Spéciale Mathématiques",
+      "gpa": "Attestation"
+    },
+    {
+      "studyType": "Bachelier en Arts (BA)",
+      "area": "Sciences politiques",
+      "gpa": "29 crédits obtenus en 2016-2017, me contacter pour plus d'informations."
+    },
+    {
+      "studyType": "Bachelier en Sciences (BSc)",
+      "area": "Ingénieur de gestion",
+      "gpa": "Me contacter pour plus d'informations."
+    },
+    {
+      "studyType": "Bachelier en Sciences (BSc)",
+      "area": "Ingénieur de gestion",
+      "gpa": "Me contacter pour plus d'informations."
+    },
+    {
+      "studyType": "Cours préparatoires",
+      "area": "Médecine et dentisterie",
+      "gpa": "Attestation"
+    },
+    {
+      "studyType": "C.E.S.S.",
+      "area": "Études générales — Mathématiques et langues modernes",
+      "gpa": "Satis bene"
+    },
+    {
+      "studyType": "",
+      "area": "Études générales — Latin et grec"
+    }
   ],
   "awards": [
-    { "title": "TOEIC", "awarder": "ETS", "summary": "730" }
+    {
+      "title": "TOEIC",
+      "awarder": "ETS",
+      "summary": "730"
+    }
   ],
   "languages": [
-    { "language": "Français", "fluency": "Langue maternelle" },
-    { "language": "Anglais", "fluency": "B1+/B2 (TOEIC 730 / ELAO)" },
-    { "language": "Néerlandais", "fluency": "B1" }
+    {
+      "language": "Français",
+      "fluency": "Langue maternelle"
+    },
+    {
+      "language": "Anglais",
+      "fluency": "B1+/B2 (TOEIC 730 / ELAO)"
+    },
+    {
+      "language": "Néerlandais",
+      "fluency": "B1"
+    }
   ],
   "interests": [
-    { "name": "Recherche et développement", "keywords": ["Innovations", "Expérimentation", "POCs"] }
+    {
+      "name": "Recherche et développement",
+      "keywords": [
+        "Innovations",
+        "Expérimentation",
+        "POCs"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Waseem Virk, dév Flutter chez Emvi.ai",
+      "reference": "Travailler aux côtés de Baptiste Grosjean sur le projet EMVI a été une expérience incroyablement enrichissante, tant sur le plan professionnel que personnel. Baptiste n'est pas seulement un développeur très compétent avec un œil aiguisé pour le design et la fonctionnalité, il a aussi été un mentor et une source d'inspiration tout au long de notre collaboration.\n\nJ'ai énormément appris de lui — des bonnes pratiques en développement Flutter à l'importance d'une UI/UX réfléchie et d'une architecture clean. Il est toujours prêt à partager ses connaissances, à expliquer clairement des idées complexes, et à soutenir l'équipe de toutes les manières possibles.\n\nCe qui ressort le plus, c'est sa capacité à transformer les défis en opportunités. Son approche calme et concentrée et son esprit de résolution de problèmes nous ont aidés à surmonter des obstacles techniques et à construire des fonctionnalités qui améliorent réellement l'expérience utilisateur. Sa nature collaborative a rendu le travail d'équipe fluide et motivant.\n\nSi vous cherchez quelqu'un qui non seulement fournit des résultats exceptionnels mais aussi inspire tout son entourage, je recommande Baptiste sans réserve. C'est un développeur fantastique, un excellent coéquipier, et quelqu'un dont j'ai eu la chance d'apprendre. — (traduit depuis l'anglais)"
+    },
+    {
+      "name": "Tino Schuerewegen, développeur logiciel chez Xtrada",
+      "reference": "J'ai eu le plaisir de travailler avec Baptiste pendant un an, avec la joie supplémentaire de l'avoir mentoré sur un projet pendant trois mois. S'il y a une chose qui se distingue chez Baptiste, c'est son énergie sans limites. Que ce soit 9h ou 21h, il est toujours la personne la plus enthousiaste de la pièce — parfois même plus enthousiaste que la machine à café.\n\nBaptiste apporte une énergie contagieuse à tout projet auquel il participe. Il est extraverti, intelligent, et a une soif d'apprendre vraiment admirable. Qu'il s'agisse de plonger dans une tâche complexe ou de poser des questions perspicaces, il est toujours en quête de connaissances. Son enthousiasme pour l'apprentissage, en particulier l'utilisation d'outils comme ChatGPT, est à la fois impressionnant et un peu intimidant. Sérieusement, si ChatGPT avait un meilleur ami, ce serait Baptiste !\n\nIl est aussi extrêmement opérationnel, n'hésitant jamais à se retrousser les manches et à entrer dans le concret. Son approche n'est pas que théorique ; il vise des résultats pratiques et tangibles.\n\nEn résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence et une touche d'humour à chaque tâche, Baptiste est votre personne. Travailler avec lui n'était pas seulement productif, c'était véritablement agréable. — (traduit depuis l'anglais)"
+    },
+    {
+      "name": "Emiel Van Gysegem, marketing et opérations chez Xtra Groep",
+      "reference": "Bien que nous n'ayons pas travaillé directement ensemble, j'ai toujours eu une très belle connexion avec Baptiste. Dans un mélange d'anglais, de néerlandais et de français, nous partagions souvent des conversations agréables. Son enthousiasme et son énergie sont vraiment contagieux, et il sait créer une ambiance agréable et informelle dans chaque interaction. Baptiste est quelqu'un qui apporte une dynamique positive. — (traduit depuis le néerlandais)"
+    },
+    {
+      "name": "Steven Claus, DAF chez Xtra Groep",
+      "reference": "Baptiste est un développeur full-stack animé d'une détermination inébranlable. Cet état d'esprit imprègne chaque aspect de sa carrière. Il a travaillé dans des domaines variés, ce qui lui permet de s'adapter rapidement à toute situation. Ces rôles ont aiguisé à la fois ses compétences techniques et interpersonnelles, faisant de lui un collaborateur polyvalent qui a un impact significatif sur chaque projet qu'il rejoint. Animé par un désir constant d'apprendre, il met continuellement à jour ses connaissances via un master en informatique. Ce parcours d'apprentissage continu fait de lui un professionnel IT bien équilibré dans le domaine de l'informatique. — (traduit depuis l'anglais)"
+    },
+    {
+      "name": "Tjörven Janssens, développeur logiciel chez Xtrada",
+      "reference": "En plus d'être développeur logiciel, Baptiste aime s'investir dans l'analyse de données et est un expert dans l'utilisation de ChatGPT. Il aime apprendre de nouvelles choses et le fait rapidement. Il est très enthousiaste dans ses interactions et toujours prêt à offrir un mot aimable ou un conseil. — (traduit depuis le néerlandais)"
+    },
+    {
+      "name": "Michael Culot, directeur commercial chez Xtrada",
+      "reference": "Baptiste est un développeur formidable et dévoué, désireux de continuer à apprendre de nouvelles technologies et d'élever ses compétences. Vous seriez impressionnés non seulement par ses connaissances mais aussi par son enthousiasme chaleureux et ouvert. Baptiste, tu vas accomplir de grandes choses dans ta vie, garde ton esprit vibrant ✊ — (traduit depuis l'anglais)"
+    }
   ],
   "projects": [
-    { "description": "Application mobile connectant les voyageurs pendant leurs trajets.", "summary": "Développement d'une application mobile qui connecte les voyageurs pendant leurs trajets. Flutter pour l'app mobile, Rust pour le backend.", "type": "Application mobile", "roles": ["Fondateur"] },
-    { "description": "Assistant visuel IA pour personnes malvoyantes.", "summary": "Assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR & barres) et système de routage Valhalla adapté.", "type": "Application mobile" },
-    { "description": "Application de réminiscence pour personnes souffrant de troubles cognitifs.", "summary": "Application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil).", "type": "Application IA" },
-    { "description": "Plateforme permettant à chacun d'acquérir de nouvelles compétences." },
-    { "description": "Gestionnaire de parcours éducatif pour étudiants. Plus maintenu ; la base de données et l'auth sont indisponibles.", "highlights": ["UI/UX.", "Intégration d'APIs."], "type": "Application web", "roles": ["Fondateur"] },
-    { "summary": "Modèle de Named Entity Recognition extrayant des éléments d'inventaire à partir d'une transcription audio." },
-    { "summary": "Gestionnaire de parc pour ventes aux enchères." },
-    { "summary": "Gestionnaire d'enquêtes pour clubs sportifs et fédérations." },
-    { "summary": "Caisse enregistreuse à base de QR codes pour les établissements HoReCa (Hôtel/Restaurant/Café)." }
+    {
+      "description": "Application mobile connectant les voyageurs pendant leurs trajets.",
+      "summary": "Développement d'une application mobile qui connecte les voyageurs pendant leurs trajets. Flutter pour l'app mobile, Rust pour le backend.",
+      "type": "Application mobile",
+      "roles": [
+        "Fondateur"
+      ]
+    },
+    {
+      "description": "Assistant visuel IA pour personnes malvoyantes.",
+      "summary": "Assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR & barres) et système de routage Valhalla adapté.",
+      "type": "Application mobile"
+    },
+    {
+      "description": "Application de réminiscence pour personnes souffrant de troubles cognitifs.",
+      "summary": "Application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil).",
+      "type": "Application IA"
+    },
+    {
+      "description": "Plateforme permettant à chacun d'acquérir de nouvelles compétences."
+    },
+    {
+      "description": "Gestionnaire de parcours éducatif pour étudiants. Plus maintenu ; la base de données et l'auth sont indisponibles.",
+      "highlights": [
+        "UI/UX.",
+        "Intégration d'APIs."
+      ],
+      "type": "Application web",
+      "roles": [
+        "Fondateur"
+      ]
+    },
+    {
+      "summary": "Modèle de Named Entity Recognition extrayant des éléments d'inventaire à partir d'une transcription audio."
+    },
+    {
+      "summary": "Gestionnaire de parc pour ventes aux enchères."
+    },
+    {
+      "summary": "Gestionnaire d'enquêtes pour clubs sportifs et fédérations."
+    },
+    {
+      "summary": "Caisse enregistreuse à base de QR codes pour les établissements HoReCa (Hôtel/Restaurant/Café)."
+    }
   ]
 }

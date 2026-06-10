@@ -1,0 +1,251 @@
+{
+  "_meta": {
+    "language": "de",
+    "description": "Overlay DE. Mirror resume.json shape with translated text fields only. Arrays matched by index — keep the same order as resume.json."
+  },
+  "basics": {
+    "label": "Informatiker",
+    "summary": "Informatikstudent an der UMons in der Nacht, auf der Suche nach einer neuen Gelegenheit tagsüber, während ich Acteble starte.\n\nAlle Projekte, an denen ich beteiligt war, wurden mit starkem Fokus auf Software-Craftsmanship-Prinzipien (Clean Code, Clean Architecture, DDD) entwickelt, um höchste Standards von Qualität, Wartbarkeit und Skalierbarkeit sicherzustellen.",
+    "location": {
+      "region": "Belgien"
+    }
+  },
+  "work": [
+    {
+      "position": "Gründer",
+      "summary": "Aufbau von Acteble, einer geolokalisierten sozialen Plattform, die Reisende rund um gemeinsame Aktivitäten unter raum-zeitlichen und multikriteriellen Einschränkungen zusammenbringt. Alleiniger Gründer, Architekt und Entwickler. Die F&E-Schicht dient gleichzeitig als Masterarbeit für meinen MSc in Informatik an der UMons.",
+      "location": "Brüssel, Belgien"
+    },
+    {
+      "position": "KI-Forschungswissenschaftler",
+      "summary": "KI-Forschung und Engineering für das belgische Bundesparlament. Entwurf einer internen Plattform, die Mitarbeitern erlaubt, parlamentarische Archive zu durchsuchen, zu erkunden und zu befragen. Autor eines offenen Bewertungsprotokolls, das Retrieval-Strategien auf dem Senatskorpus mit Fokus auf zweisprachige FR/NL-Robustheit vergleicht.",
+      "location": "Brüssel, Belgien",
+      "company": "Belgischer Senat"
+    },
+    {
+      "position": "AI Software Crafter Lead",
+      "summary": "Emvi App: KI-gestützter visueller Assistent für sehbehinderte Menschen, mit Beschreibung der Umgebung, OCR, Code-Scans (QR & Barcodes) und einem angepassten Valhalla-Routing-System.",
+      "location": "Brügge, Belgien"
+    },
+    {
+      "position": "AI Software Crafter",
+      "summary": "Remi: Reminiszenz-Anwendung, die Menschen mit kognitiven Problemen ermöglicht, ihre Erinnerungen durch Beschreibungen ihrer Fotos wiederzuerlangen, unterstützt durch Gesichtserkennung und LLMs.",
+      "location": "Brügge, Belgien"
+    },
+    {
+      "position": "Data Scientist",
+      "summary": "Verwendung von Python-Bibliotheken (SpaCy, ...) zur Extraktion benannter Entitäten via NER-Modelltraining und Implementierung in .NET. Recall-Score des Modells: 87 %.",
+      "location": "Antwerpen, Flandern, Belgien"
+    },
+    {
+      "position": "Software Crafter",
+      "summary": "Software-Modernisierung im .NET-Stack nach DDD und Clean-Code-Prinzipien. Implementierung von Azure AI-Services in einer .NET-Lösung.",
+      "location": "Antwerpen, Flandern, Belgien"
+    },
+    {
+      "position": ".NET/React Software Crafter",
+      "location": "Antwerpen, Flandern, Belgien"
+    },
+    {
+      "position": "Software Crafter",
+      "summary": "EduCraft: Lösung, mit der jeder seinen eigenen personalisierten Weg zum Erwerb neuer Fähigkeiten gestalten kann.",
+      "location": "Charleroi und Umgebung"
+    },
+    {
+      "position": ".NET/Blazor Software Crafter",
+      "summary": "Entwicklung der Axinco Kwalitijd Webanwendung in .NET / Blazor nach DDD und Clean-Code-Prinzipien.",
+      "location": "Antwerpen, Flandern, Belgien"
+    },
+    {
+      "position": "Full-Stack-Webentwickler Praktikant",
+      "summary": "Qualifizierende Ausbildung zur Stärkung der technischen Fähigkeiten aus meinem Bachelor an der EPHEC.\nDie Erweiterung beinhaltete eine Einführung in Business Intelligence und ETL-Prozesse (Data Warehousing) mit Microsoft-Tools (SSIS, ...).\nDie Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von Datenbankentwicklung bis Benutzeroberfläche und Backend.",
+      "location": "Charleroi, Wallonien, Belgien"
+    },
+    {
+      "position": "Full-Stack-Webentwickler Praktikant",
+      "summary": "OnlyTogether: Lösung, die sicherstellt, dass schutzbedürftige Nutzer immer begleitet werden.",
+      "location": "Charleroi, Wallonische Region, Belgien"
+    },
+    {
+      "position": "Full-Stack-Webentwickler Praktikant",
+      "location": "Region Brüssel-Hauptstadt, Belgien"
+    },
+    {
+      "position": "Studentenjob",
+      "location": "Region Brüssel-Hauptstadt, Belgien"
+    },
+    {
+      "position": "Full-Stack-Webentwickler Praktikant",
+      "location": "Region Brüssel-Hauptstadt, Belgien"
+    },
+    {
+      "position": "Studentenjob",
+      "location": "Kraainem, Flämische Region, Belgien"
+    }
+  ],
+  "volunteer": [
+    {
+      "position": "Studierendenvertreter"
+    },
+    {
+      "position": "Buddy TandeMons"
+    },
+    {
+      "position": "Studierendenvertreter"
+    },
+    {
+      "position": "Tutor"
+    }
+  ],
+  "education": [
+    {
+      "studyType": "Master of Science",
+      "area": "Informatik (duales Studium) (120 ECTS)",
+      "gpa": "Laufend (MA2)",
+      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — betreut von Gauvain Devillez und Hadrien Mélot am Service d'Algorithmique der UMONS. Python-Referenzimplementierung (50+ Module, 214 Unit-Tests mit 86 % Branch Coverage, mypy --strict, PEP 561 typisiert) mit bit-identischer Reproduzierbarkeit (SHA-256 gehashte Datasets, CLI/Notebook-Paritätstests). 110-seitiger LaTeX-Bericht. Studierendenvertreter & Buddy TandeMons."
+    },
+    {
+      "studyType": "Professioneller Bachelor",
+      "area": "Wirtschaftsinformatik",
+      "gpa": "62,8 %, Satis Bene",
+      "summary": "Studierendenvertreter und Tutor.\n\nTFE: WebMenu 2.0"
+    },
+    {
+      "studyType": "Attestation",
+      "area": "7e Spéciale Mathématiques",
+      "gpa": "Attestation"
+    },
+    {
+      "studyType": "Bachelor of Arts (BA)",
+      "area": "Politikwissenschaften",
+      "gpa": "29 Credits 2016-2017, kontaktiert mich für mehr Infos."
+    },
+    {
+      "studyType": "Bachelor of Science (BSc)",
+      "area": "Wirtschaftsingenieur",
+      "gpa": "Kontaktiert mich für mehr Infos."
+    },
+    {
+      "studyType": "Bachelor of Science (BSc)",
+      "area": "Wirtschaftsingenieur",
+      "gpa": "Kontaktiert mich für mehr Infos."
+    },
+    {
+      "studyType": "Vorbereitungskurse",
+      "area": "Medizin und Zahnmedizin",
+      "gpa": "Attestation"
+    },
+    {
+      "studyType": "C.E.S.S.",
+      "area": "Allgemeine Studien — Mathematik und moderne Sprachen",
+      "gpa": "Satis bene"
+    },
+    {
+      "studyType": "",
+      "area": "Allgemeine Studien — Latein und Griechisch"
+    }
+  ],
+  "awards": [
+    {
+      "title": "TOEIC",
+      "awarder": "ETS",
+      "summary": "730"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Französisch",
+      "fluency": "Muttersprache"
+    },
+    {
+      "language": "Englisch",
+      "fluency": "B1+/B2 (TOEIC 730 / ELAO)"
+    },
+    {
+      "language": "Niederländisch",
+      "fluency": "B1"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Forschung und Entwicklung",
+      "keywords": [
+        "Innovationen",
+        "Experimente",
+        "POCs"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "reference": "Mit Baptiste Grosjean am EMVI-Projekt zu arbeiten, war eine unglaublich bereichernde Erfahrung — sowohl beruflich als auch persönlich. Baptiste ist nicht nur ein hochqualifizierter Entwickler mit einem scharfen Auge für Design und Funktionalität, sondern war auch ein Mentor und eine Inspiration während unserer Zusammenarbeit.\n\nIch habe so viel von ihm gelernt — von Best Practices in der Flutter-Entwicklung bis zur Bedeutung durchdachter UI/UX und Clean Architecture. Er ist immer bereit, sein Wissen zu teilen, komplexe Ideen klar zu erklären und das Team auf jede erdenkliche Weise zu unterstützen.\n\nWas am meisten heraussticht, ist Baptistes Fähigkeit, Herausforderungen in Chancen zu verwandeln. Sein ruhiger, fokussierter Ansatz und seine problemlösende Denkweise halfen uns, technische Hürden zu überwinden und Funktionen zu entwickeln, die das Benutzererlebnis wirklich verbessern. Seine kollaborative Art machte die Teamarbeit nahtlos und motivierend.\n\nWenn Sie jemanden suchen, der nicht nur außergewöhnliche Ergebnisse liefert, sondern auch alle um sich herum erhebt, kann ich Baptiste nicht genug empfehlen. Er ist ein fantastischer Entwickler, ein großartiger Teamkollege und jemand, von dem zu lernen ich das Glück hatte. — (aus dem Englischen übersetzt)",
+      "name": "Waseem Virk, Flutter-Entwickler bei Emvi.ai"
+    },
+    {
+      "reference": "Ich hatte das Vergnügen, ein Jahr lang mit Baptiste zu arbeiten, mit der zusätzlichen Freude, ihn drei Monate lang in einem Projekt zu mentoren. Wenn es eine Sache gibt, die an Baptiste auffällt, dann ist es seine grenzenlose Energie. Ob 9 Uhr morgens oder 9 Uhr abends — er ist immer die enthusiastischste Person im Raum, manchmal sogar enthusiastischer als die Kaffeemaschine.\n\nBaptiste bringt ansteckende Energie in jedes Projekt, an dem er beteiligt ist. Er ist extrovertiert, klug und hat eine wirklich bewundernswerte Lernbegierde. Ob er sich in eine komplexe Aufgabe vertieft oder einsichtsvolle Fragen stellt, er ist immer auf der Suche nach Wissen. Sein Lernenthusiasmus, besonders wenn es um den Einsatz von Tools wie ChatGPT geht, ist sowohl beeindruckend als auch ein wenig einschüchternd. Ernsthaft: wenn ChatGPT einen besten Freund hätte, wäre es Baptiste!\n\nEr ist auch unglaublich praxisorientiert und scheut nie davor zurück, die Ärmel hochzukrempeln und tief in die Arbeit einzutauchen. Sein Ansatz ist nicht nur theoretisch; es geht ihm um praktische, greifbare Ergebnisse.\n\nZusammengefasst: Wenn Sie jemanden suchen, der jeder Aufgabe Enthusiasmus, Intelligenz und einen Hauch Humor verleiht, ist Baptiste Ihre Person. Mit ihm zu arbeiten war nicht nur produktiv, sondern auch wirklich angenehm. — (aus dem Englischen übersetzt)",
+      "name": "Tino Schuerewegen, Softwareentwickler bei Xtrada"
+    },
+    {
+      "reference": "Obwohl wir nicht direkt zusammengearbeitet haben, hatte ich immer eine sehr angenehme Verbindung zu Baptiste. In einer Mischung aus Englisch, Niederländisch und Französisch teilten wir oft schöne Gespräche. Sein Enthusiasmus und seine Energie sind wirklich ansteckend, und er weiß, in jeder Interaktion eine angenehme, informelle Atmosphäre zu schaffen. Baptiste ist jemand, der eine positive Dynamik mit sich bringt. — (aus dem Niederländischen übersetzt)",
+      "name": "Emiel Van Gysegem, Marketing und Operations bei Xtra Groep"
+    },
+    {
+      "reference": "Baptiste ist ein Full-Stack-Softwareentwickler, der von unerschütterlicher Entschlossenheit angetrieben wird. Diese Geisteshaltung durchdringt jeden Aspekt seiner Karriere. Er hat in verschiedenen Bereichen gearbeitet, was ihm ermöglicht, sich schnell an jede Situation anzupassen. Diese Rollen haben sowohl seine technischen als auch seine zwischenmenschlichen Fähigkeiten geschärft und ihn zu einem vielseitigen Mitarbeiter gemacht, der jedes Projekt, dem er beitritt, signifikant beeinflusst. Angetrieben von einem ständigen Lernwunsch aktualisiert er sein Wissen kontinuierlich durch einen Master in Informatik. Diese fortlaufende Lernreise macht ihn zu einem vielseitigen IT-Profi im Bereich der Informatik. — (aus dem Englischen übersetzt)",
+      "name": "Steven Claus, CFO bei Xtra Groep"
+    },
+    {
+      "reference": "Baptiste ist nicht nur Softwareentwickler, sondern beschäftigt sich auch gerne mit Datenanalyse und ist Experte im Umgang mit ChatGPT. Er lernt gerne neue Dinge und tut dies auch schnell. Er ist im Umgang sehr enthusiastisch und stets bereit für ein freundliches Wort oder einen Rat. — (aus dem Niederländischen übersetzt)",
+      "name": "Tjörven Janssens, Softwareentwickler bei Xtrada"
+    },
+    {
+      "reference": "Baptiste ist ein großartiger und engagierter Entwickler, der eifrig dabei ist, neue Technologien zu lernen und seine Fähigkeiten zu erweitern. Sie wären erstaunt, nicht nur über sein Wissen, sondern auch über seinen warmen, offenen Enthusiasmus. Baptiste, du wirst Großes in deinem Leben erreichen, behalte einfach deinen lebhaften Geist ✊ — (aus dem Englischen übersetzt)",
+      "name": "Michael Culot, Vertriebsleiter bei Xtrada"
+    }
+  ],
+  "projects": [
+    {
+      "description": "Mobile App, die Reisende während ihrer Reisen verbindet.",
+      "type": "Mobile Anwendung",
+      "roles": [
+        "Gründer"
+      ],
+      "summary": "Entwicklung einer mobilen Anwendung, die Reisende während ihrer Reisen verbindet. Flutter für die mobile App, Rust für das Backend."
+    },
+    {
+      "description": "KI-gestützter visueller Assistent für sehbehinderte Menschen.",
+      "type": "Mobile Anwendung",
+      "summary": "KI-gestützter visueller Assistent für sehbehinderte Menschen mit Beschreibung der Umgebung, OCR, Code-Scans (QR & Barcodes) und einem angepassten Valhalla-Routing-System."
+    },
+    {
+      "description": "Reminiszenz-App für Menschen mit kognitiven Problemen.",
+      "type": "KI-Anwendung",
+      "summary": "Reminiszenz-Anwendung, die Menschen mit kognitiven Problemen ermöglicht, ihre Erinnerungen durch Beschreibungen ihrer Fotos mit Gesichtserkennung und LLMs wiederzuerlangen. DeepFace (Serengil) Pipeline."
+    },
+    {
+      "description": "Plattform für den Erwerb neuer Fähigkeiten."
+    },
+    {
+      "description": "Bildungsmanager für Studierende. Nicht mehr gepflegt; Datenbank und Auth sind nicht verfügbar.",
+      "highlights": [
+        "UI/UX.",
+        "API-Integration."
+      ],
+      "type": "Web-Anwendung",
+      "roles": [
+        "Gründer"
+      ]
+    },
+    {
+      "summary": "NER-ML-Modell zur Extraktion von Inventarobjekten aus einer Audiotranskription."
+    },
+    {
+      "summary": "Fuhrparkmanager für Auktionen."
+    },
+    {
+      "summary": "Umfragemanager für Sportvereine und -verbände."
+    },
+    {
+      "summary": "QR-Code-basierte Kasse für HoReCa-Betriebe (Hotel/Restaurant/Café)."
+    }
+  ]
+}

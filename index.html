@@ -20,6 +20,8 @@
   <link rel="alternate" hreflang="fr" href="https://www.grosjeanbaptiste.com/fr/">
   <link rel="alternate" hreflang="nl" href="https://www.grosjeanbaptiste.com/nl/">
   <link rel="alternate" hreflang="es" href="https://www.grosjeanbaptiste.com/es/">
+  <link rel="alternate" hreflang="de" href="https://www.grosjeanbaptiste.com/de/">
+  <link rel="alternate" hreflang="zh" href="https://www.grosjeanbaptiste.com/zh/">
   <link rel="alternate" hreflang="x-default" href="https://www.grosjeanbaptiste.com/">
 
   <!-- Machine-readable alternates -->
@@ -38,6 +40,8 @@
   <meta property="og:locale:alternate" content="fr_FR">
   <meta property="og:locale:alternate" content="nl_BE">
   <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="zh_CN">
   <meta property="profile:first_name" content="Baptiste">
   <meta property="profile:last_name" content="Grosjean">
   <meta property="profile:username" content="grosjeanbaptiste">
@@ -168,7 +172,6 @@
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#experience" class="nav-link">Experience</a></li>
       <li><a href="#education" class="nav-link">Education</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#references" class="nav-link">References</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
@@ -177,6 +180,8 @@
       <a href="/fr/" hreflang="fr">FR</a>
       <a href="/nl/" hreflang="nl">NL</a>
       <a href="/es/" hreflang="es">ES</a>
+      <a href="/de/" hreflang="de">DE</a>
+      <a href="/zh/" hreflang="zh">ZH</a>
     </div>
     <button id="theme-toggle" aria-label="Toggle theme">
       <i class="fas fa-moon"></i>
@@ -258,20 +263,6 @@
       </div>
 
       <div class="skills">
-        <h2>Currently Learning</h2>
-        <div class="skill-category">
-          <div class="skill-tags">
-            <span class="skill-tag">TDD</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">Scikit-Learn</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">XQuery</span>
-            <span class="skill-tag">Blockchain</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills">
         <h2>Soft Skills</h2>
         <div class="skill-category">
           <div class="skill-tags">
@@ -323,12 +314,20 @@
           <p class="date"><time datetime="2025-07-01">Jul 2025</time> – <time>Present</time></p>
           <p class="location">Brussels, Belgium</p>
           <p>Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. Sole founder, architect, and developer. The R&amp;D layer doubles as the dissertation for my MSc in Computer Science at UMons.</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">Rust</span> <span class="skill-tag">Flutter</span> <span class="skill-tag">Dart</span> <span class="skill-tag">Tokio</span> <span class="skill-tag">Docker</span> <span class="skill-tag">DDD</span> <span class="skill-tag">CleanArchitecture</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>Acteble</strong> — Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.</li>
+            </ul>
+          </div>
         </article>
         <article class="experience-item">
           <h3>AI Research Scientist | <a href="https://www.senate.be" target="_blank" rel="noopener">Belgian Senate</a></h3>
           <p class="date"><time datetime="2025-11-03">Nov 2025</time> – <time datetime="2026-06-30">Jun 2026</time></p>
           <p class="location">Brussels, Belgium</p>
           <p>AI research and engineering for the Belgian Federal Parliament. Designed an internal platform that lets staff search, explore and converse with the parliamentary archives. Authored an open evaluation protocol that compares retrieval strategies on the Senate corpus, with a focus on bilingual FR/NL robustness.</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">Python</span> <span class="skill-tag">Java</span> <span class="skill-tag">.NET</span></div>
         </article>
         <article class="experience-item">
           <h3>AI Software Crafter Lead | <a href="https://www.emvi.ai" target="_blank" rel="noopener">Emvi.ai</a></h3>
@@ -336,6 +335,13 @@
           <p class="location">Brugge, Belgium</p>
           <p>Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes &amp; barcodes), and an adapted Valhalla routing system for the visually impaired.</p>
           <p>• Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">Dart</span> <span class="skill-tag">Flutter</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>Emvi App</strong> — AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes &amp; barcodes), and an adapted Valhalla routing system for the visually impaired.</li>
+            </ul>
+          </div>
         </article>
         <article class="experience-item">
           <h3>AI Software Crafter | <a href="https://www.emvi.ai" target="_blank" rel="noopener">Emvi.ai</a></h3>
@@ -343,41 +349,83 @@
           <p class="location">Brugge, Belgium</p>
           <p>Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM-generated descriptions.</p>
           <p>• Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">Python</span> <span class="skill-tag">Whisper</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>Remi</strong> — Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline.</li>
+            </ul>
+          </div>
         </article>
         <article class="experience-item">
           <h3>Data Scientist | <a href="https://www.xtrada.be" target="_blank" rel="noopener">Xtrada</a></h3>
           <p class="date"><time datetime="2024-03-01">Mar 2024</time> – <time datetime="2024-09-22">Sep 2024</time></p>
           <p class="location">Antwerp, Flanders, Belgium</p>
           <p>Used Python libraries (SpaCy, ...) to extract named entities from text via NER model training and implementation in .NET. Model recall score: 87%.</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">Python</span> <span class="skill-tag">SpaCy</span> <span class="skill-tag">Pandas</span> <span class="skill-tag">NumPy</span> <span class="skill-tag">.NET</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>VhAuctions NER Inventory Model</strong> — Named Entity Recognition machine learning model to extract inventory items from an audio transcription.</li>
+            </ul>
+          </div>
         </article>
         <article class="experience-item">
           <h3>Software Crafter | <a href="https://www.xtrada.be" target="_blank" rel="noopener">Xtrada</a></h3>
           <p class="date"><time datetime="2023-08-21">Aug 2023</time> – <time datetime="2024-09-22">Sep 2024</time></p>
           <p class="location">Antwerp, Flanders, Belgium</p>
           <p>Software modernization within the .NET stack following domain-driven design and clean code principles. Implementation of Azure AI services in a .NET solution.</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">.NET</span> <span class="skill-tag">DDD</span> <span class="skill-tag">CleanCode</span> <span class="skill-tag">CleanArchitecture</span></div>
         </article>
         <article class="experience-item">
           <h3>.NET/React Software Crafter | <a href="https://www.vhauctions.be" target="_blank" rel="noopener">VhAuctions</a></h3>
           <p class="date"><time datetime="2024-01-01">Jan 2024</time> – <time datetime="2024-08-07">Aug 2024</time></p>
           <p class="location">Anvers, Région flamande, Belgique</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">.NET</span> <span class="skill-tag">React</span> <span class="skill-tag">SQL Server</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>VhAuctions</strong> — Fleet manager for auctions.</li>
+            </ul>
+          </div>
         </article>
         <article class="experience-item">
           <h3>Software Crafter | <a href="https://www.cow.be" target="_blank" rel="noopener">Hackathon Citizens of Wallonia</a></h3>
           <p class="date"><time datetime="2024-03-15">Mar 2024</time> – <time datetime="2024-03-17">Mar 2024</time></p>
           <p class="location">Charleroi et périphérie</p>
           <p>EduCraft: solution allowing anyone to craft a personalized path to gain new skills.</p>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>EduCraft</strong> — Platform allowing users to get more skills.</li>
+            </ul>
+          </div>
         </article>
         <article class="experience-item">
           <h3>.NET/Blazor Software Crafter | <a href="https://www.axinco.be" target="_blank" rel="noopener">aXinco</a></h3>
           <p class="date"><time datetime="2023-09-01">Sep 2023</time> – <time datetime="2023-12-31">Dec 2023</time></p>
           <p class="location">Anvers, Région flamande, Belgique</p>
           <p>Crafting Axinco Kwalitijd webapp in .NET / Blazor following DDD and clean code principles.</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">.NET</span> <span class="skill-tag">Blazor</span> <span class="skill-tag">SQL Server</span> <span class="skill-tag">DDD</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>Kwalitijd</strong> — Survey manager for sports clubs and federations.</li>
+            </ul>
+          </div>
         </article>
         <article class="experience-item">
           <h3>Full Stack Developer Web Intern | <a href="https://www.technofutur-tic.be" target="_blank" rel="noopener">Technofutur TIC</a></h3>
           <p class="date"><time datetime="2022-12-01">Dec 2022</time> – <time datetime="2023-06-30">Jun 2023</time></p>
           <p class="location">Charleroi, Wallonia, Belgique</p>
           <p>This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC.<br>In addition, during the extension, we received an introduction to Business Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...).<br>This comprehensive training covered various areas including SQL Server, Node.js, Express.js, React, and Angular, encompassing everything from database development to user interface and backend.</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">SQL Server</span> <span class="skill-tag">Node.js</span> <span class="skill-tag">Express.js</span> <span class="skill-tag">React</span> <span class="skill-tag">Angular</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>MyWay</strong> <a href="https://my-way-bg.vercel.app" target="_blank" rel="noopener">↗</a> — Education manager for students. No longer maintained; database and auth are unavailable.</li>
+            </ul>
+          </div>
         </article>
         <article class="experience-item">
           <h3>Full Stack Developer Web Intern | <a href="https://www.cow.be" target="_blank" rel="noopener">Hackathon Citizens of Wallonia</a></h3>
@@ -399,6 +447,13 @@
           <h3>Full Stack Developer Web Intern | <a href="https://www.restomax.be" target="_blank" rel="noopener">RESTOMAX</a></h3>
           <p class="date"><time datetime="2021-11-01">Nov 2021</time> – <time datetime="2022-03-31">Mar 2022</time></p>
           <p class="location">Région de Bruxelles-Capitale, Belgique</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">.NET</span> <span class="skill-tag">Flutter</span> <span class="skill-tag">SQL Server</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>WebMenu</strong> — QR code based cash register for HoReCa establishments.</li>
+            </ul>
+          </div>
         </article>
         <article class="experience-item">
           <h3>Student Job | <a href="https://www.quick.be" target="_blank" rel="noopener">Quick Restaurant</a></h3>
@@ -415,6 +470,13 @@
           <p class="date"><time datetime="2022-10-15">Oct 2022</time> – <time>Present</time></p>
           <p>In progress (MA2)</p>
           <p>MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique. Reference Python implementation (50+ modules, 214 unit tests at 86 % branch coverage, mypy --strict, PEP 561 typed) with bit-identical reproducibility (SHA-256 hashed datasets, CLI/notebook parity tests). 110-page LaTeX report. Student representative &amp; buddy TandeMons.</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">Python</span> <span class="skill-tag">LaTeX</span> <span class="skill-tag">DDD</span> <span class="skill-tag">CleanArchitecture</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>Acteble</strong> — Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.</li>
+            </ul>
+          </div>
         </article>
         <article class="education-item">
           <h3>Professional Bachelor's degree in Information Systems Management</h3>
@@ -422,6 +484,13 @@
           <p class="date"><time datetime="2018-09-30">Sep 2018</time> – <time datetime="2022-10-15">Oct 2022</time></p>
           <p>62.8%, Satis Bene</p>
           <p>Student representative and tutor. <br><br>TFE: WebMenu 2.0</p>
+          <div class="skill-tags inline-skills"><span class="skill-tag">SQL</span> <span class="skill-tag">C#</span> <span class="skill-tag">.NET</span> <span class="skill-tag">Java</span> <span class="skill-tag">Python</span> <span class="skill-tag">JS</span> <span class="skill-tag">HTML</span> <span class="skill-tag">CSS</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">Projects:</p>
+            <ul>
+                  <li><strong>WebMenu</strong> — QR code based cash register for HoReCa establishments.</li>
+            </ul>
+          </div>
         </article>
         <article class="education-item">
           <h3>Attestation in 7e Spéciale Mathématiques</h3>
@@ -463,104 +532,6 @@
           <h3> in General studies Latin &amp; Greek</h3>
           <p class="institution">Lycée Mater Dei</p>
           <p class="date"><time datetime="2009-09-30">Sep 2009</time> – <time datetime="2012-06-30">Jun 2012</time></p>
-        </article>
-      </section>
-
-      <section id="volunteer">
-        <h2>Volunteer</h2>
-        <article class="experience-item">
-          <h3>Student Representative | <a href="https://www.umons.be" target="_blank" rel="noopener">UMons</a></h3>
-          <p class="date"><time datetime="2023-11-30">Nov 2023</time> – <time>Present</time></p>
-        </article>
-        <article class="experience-item">
-          <h3>Buddy Tandemons | <a href="https://www.umons.be" target="_blank" rel="noopener">UMons</a></h3>
-          <p class="date"><time datetime="2023-11-30">Nov 2023</time> – <time>Present</time></p>
-        </article>
-        <article class="experience-item">
-          <h3>Student Representative | <a href="https://www.ephec.be" target="_blank" rel="noopener">EPHEC École Supérieure de Promotion Sociale</a></h3>
-          <p class="date"><time datetime="2019-09-30">Sep 2019</time> – <time datetime="2022-10-15">Oct 2022</time></p>
-        </article>
-        <article class="experience-item">
-          <h3>Tutor | <a href="https://www.ephec.be" target="_blank" rel="noopener">EPHEC École Supérieure de Promotion Sociale</a></h3>
-          <p class="date"><time datetime="2019-09-30">Sep 2019</time> – <time datetime="2022-10-15">Oct 2022</time></p>
-        </article>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <article class="project-item">
-          <h3>Acteble</h3>
-          <p class="date"><time datetime="2025-07-01">Jul 2025</time> – <time>Present</time></p>
-          <p>Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.</p>
-          <p>Type: Mobile Application</p>
-          <p>Role: Founder</p>
-          <p>Keywords: Flutter, Rust, Mobile, Travel, Tokio, PostgreSQL, Docker, Dart</p>
-        </article>
-        <article class="project-item">
-          <h3>Emvi App</h3>
-          <p class="date"><time datetime="2024-12-01">Dec 2024</time> – <time datetime="2025-06-30">Jun 2025</time></p>
-          <p>AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes &amp; barcodes), and an adapted Valhalla routing system for the visually impaired.</p>
-          <p>Type: Mobile Application</p>
-          <p>Keywords: Flutter, Firebase, OpenAI, Valhalla, AI</p>
-        </article>
-        <article class="project-item">
-          <h3>Remi</h3>
-          <p class="date"><time datetime="2024-10-01">Oct 2024</time> – <time datetime="2025-06-30">Jun 2025</time></p>
-          <p>Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline.</p>
-          <p>Type: AI Application</p>
-          <p>Keywords: Python, FastAPI, OpenAI, Whisper, DeepFace</p>
-        </article>
-        <article class="project-item">
-          <h3>EduCraft</h3>
-          <p class="date"><time datetime="2024-03-29">Mar 2024</time> – <time datetime="2024-03-31">Mar 2024</time></p>
-          <p>Platform allowing users to get more skills.</p>
-          <p>Keywords: PHP, API, UI/UX</p>
-        </article>
-        <article class="project-item">
-          <h3>MyWay</h3>
-          <p class="date"><time datetime="2023-01-01">Jan 2023</time> – <time datetime="2023-06-30">Jun 2023</time></p>
-          <p>Education manager for students. No longer maintained; database and auth are unavailable.</p>
-          <p>Type: Web Application</p>
-          <p>Role: Founder</p>
-          <p>Keywords: Angular, JavaScript, TypeScript, Express.js, API, UI/UX, MSSQL Server</p>
-          <a href="https://my-way-bg.vercel.app">View project</a>
-        </article>
-        <article class="project-item">
-          <h3>VhAuctions NER Inventory Model</h3>
-          <p class="date"><time datetime="2024-03-01">Mar 2024</time> – <time datetime="2024-08-07">Aug 2024</time></p>
-          <p>Named Entity Recognition machine learning model to extract inventory items from an audio transcription.</p>
-        </article>
-        <article class="project-item">
-          <h3>VhAuctions</h3>
-          <p class="date"><time datetime="2024-01-01">Jan 2024</time> – <time datetime="2024-02-28">Feb 2024</time></p>
-          <p>Fleet manager for auctions.</p>
-        </article>
-        <article class="project-item">
-          <h3>Kwalitijd</h3>
-          <p class="date"><time datetime="2023-09-01">Sep 2023</time> – <time datetime="2023-12-31">Dec 2023</time></p>
-          <p>Survey manager for sports clubs and federations.</p>
-        </article>
-        <article class="project-item">
-          <h3>WebMenu</h3>
-          <p class="date"><time datetime="2021-11-01">Nov 2021</time> – <time datetime="2022-03-31">Mar 2022</time></p>
-          <p>QR code based cash register for HoReCa establishments.</p>
-        </article>
-      </section>
-
-      <section id="awards">
-        <h2>Awards</h2>
-        <article class="education-item">
-          <h3>TOEIC</h3>
-          <p class="date"><time datetime="2023-06-06">Jun 2023</time></p>
-          <p>ETS — 730</p>
-        </article>
-      </section>
-
-      <section id="interests">
-        <h2>Interests</h2>
-        <article class="education-item">
-          <h3>Research and Development</h3>
-          <p>Innovations, Experimentation, POCs</p>
         </article>
       </section>
 
@@ -606,9 +577,11 @@
     </main>
   </div>
 
+  <!-- CV-DOWNLOAD:START — generated from assets/data/resume.json + i18n, do not edit by hand -->
   <a href="/assets/cv/cv_grosjean_baptiste_en.pdf" class="cv-download-button" download>
     <i class="fas fa-download"></i>Download CV
   </a>
+  <!-- CV-DOWNLOAD:END -->
 
   <!-- JavaScript files are loaded at the end of the body for better performance -->
 </body>

@@ -50,6 +50,18 @@ All the projects I have been involved in have been developed with a strong focus
       <startDate>2025-07-01</startDate>
       <endDate>Present</endDate>
       <summary>Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. Sole founder, architect, and developer. The R&amp;D layer doubles as the dissertation for my MSc in Computer Science at UMons.</summary>
+      <projects>
+        <project>Acteble</project>
+      </projects>
+      <skills>
+        <skill>Rust</skill>
+        <skill>Flutter</skill>
+        <skill>Dart</skill>
+        <skill>Tokio</skill>
+        <skill>Docker</skill>
+        <skill>DDD</skill>
+        <skill>CleanArchitecture</skill>
+      </skills>
     </job>
     <job>
       <company>Belgian Senate</company>
@@ -59,6 +71,11 @@ All the projects I have been involved in have been developed with a strong focus
       <startDate>2025-11-03</startDate>
       <endDate>2026-06-30</endDate>
       <summary>AI research and engineering for the Belgian Federal Parliament. Designed an internal platform that lets staff search, explore and converse with the parliamentary archives. Authored an open evaluation protocol that compares retrieval strategies on the Senate corpus, with a focus on bilingual FR/NL robustness.</summary>
+      <skills>
+        <skill>Python</skill>
+        <skill>Java</skill>
+        <skill>.NET</skill>
+      </skills>
     </job>
     <job>
       <company>Emvi.ai</company>
@@ -71,6 +88,13 @@ All the projects I have been involved in have been developed with a strong focus
       <highlights>
         <highlight>Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla</highlight>
       </highlights>
+      <projects>
+        <project>Emvi App</project>
+      </projects>
+      <skills>
+        <skill>Dart</skill>
+        <skill>Flutter</skill>
+      </skills>
     </job>
     <job>
       <company>Emvi.ai</company>
@@ -83,6 +107,13 @@ All the projects I have been involved in have been developed with a strong focus
       <highlights>
         <highlight>Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil</highlight>
       </highlights>
+      <projects>
+        <project>Remi</project>
+      </projects>
+      <skills>
+        <skill>Python</skill>
+        <skill>Whisper</skill>
+      </skills>
     </job>
     <job>
       <company>Xtrada</company>
@@ -92,6 +123,16 @@ All the projects I have been involved in have been developed with a strong focus
       <startDate>2024-03-01</startDate>
       <endDate>2024-09-22</endDate>
       <summary>Used Python libraries (SpaCy, ...) to extract named entities from text via NER model training and implementation in .NET. Model recall score: 87%.</summary>
+      <projects>
+        <project>VhAuctions NER Inventory Model</project>
+      </projects>
+      <skills>
+        <skill>Python</skill>
+        <skill>SpaCy</skill>
+        <skill>Pandas</skill>
+        <skill>NumPy</skill>
+        <skill>.NET</skill>
+      </skills>
     </job>
     <job>
       <company>Xtrada</company>
@@ -101,6 +142,12 @@ All the projects I have been involved in have been developed with a strong focus
       <startDate>2023-08-21</startDate>
       <endDate>2024-09-22</endDate>
       <summary>Software modernization within the .NET stack following domain-driven design and clean code principles. Implementation of Azure AI services in a .NET solution.</summary>
+      <skills>
+        <skill>.NET</skill>
+        <skill>DDD</skill>
+        <skill>CleanCode</skill>
+        <skill>CleanArchitecture</skill>
+      </skills>
     </job>
     <job>
       <company>VhAuctions</company>
@@ -109,6 +156,14 @@ All the projects I have been involved in have been developed with a strong focus
       <url>https://www.vhauctions.be</url>
       <startDate>2024-01-01</startDate>
       <endDate>2024-08-07</endDate>
+      <projects>
+        <project>VhAuctions</project>
+      </projects>
+      <skills>
+        <skill>.NET</skill>
+        <skill>React</skill>
+        <skill>SQL Server</skill>
+      </skills>
     </job>
     <job>
       <company>Hackathon Citizens of Wallonia</company>
@@ -118,6 +173,9 @@ All the projects I have been involved in have been developed with a strong focus
       <startDate>2024-03-15</startDate>
       <endDate>2024-03-17</endDate>
       <summary>EduCraft: solution allowing anyone to craft a personalized path to gain new skills.</summary>
+      <projects>
+        <project>EduCraft</project>
+      </projects>
     </job>
     <job>
       <company>aXinco</company>
@@ -127,6 +185,15 @@ All the projects I have been involved in have been developed with a strong focus
       <startDate>2023-09-01</startDate>
       <endDate>2023-12-31</endDate>
       <summary>Crafting Axinco Kwalitijd webapp in .NET / Blazor following DDD and clean code principles.</summary>
+      <projects>
+        <project>Kwalitijd</project>
+      </projects>
+      <skills>
+        <skill>.NET</skill>
+        <skill>Blazor</skill>
+        <skill>SQL Server</skill>
+        <skill>DDD</skill>
+      </skills>
     </job>
     <job>
       <company>Technofutur TIC</company>
@@ -138,6 +205,16 @@ All the projects I have been involved in have been developed with a strong focus
       <summary>This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC.
 In addition, during the extension, we received an introduction to Business Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...).
 This comprehensive training covered various areas including SQL Server, Node.js, Express.js, React, and Angular, encompassing everything from database development to user interface and backend.</summary>
+      <projects>
+        <project>MyWay</project>
+      </projects>
+      <skills>
+        <skill>SQL Server</skill>
+        <skill>Node.js</skill>
+        <skill>Express.js</skill>
+        <skill>React</skill>
+        <skill>Angular</skill>
+      </skills>
     </job>
     <job>
       <company>Hackathon Citizens of Wallonia</company>
@@ -171,6 +248,14 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <url>https://www.restomax.be</url>
       <startDate>2021-11-01</startDate>
       <endDate>2022-03-31</endDate>
+      <projects>
+        <project>WebMenu</project>
+      </projects>
+      <skills>
+        <skill>.NET</skill>
+        <skill>Flutter</skill>
+        <skill>SQL Server</skill>
+      </skills>
     </job>
     <job>
       <company>Quick Restaurant</company>
@@ -329,6 +414,15 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <startDate>2022-10-15</startDate>
       <gpa>In progress (MA2)</gpa>
       <summary>MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique. Reference Python implementation (50+ modules, 214 unit tests at 86 % branch coverage, mypy --strict, PEP 561 typed) with bit-identical reproducibility (SHA-256 hashed datasets, CLI/notebook parity tests). 110-page LaTeX report. Student representative &amp; buddy TandeMons.</summary>
+      <projects>
+        <project>Acteble</project>
+      </projects>
+      <skills>
+        <skill>Python</skill>
+        <skill>LaTeX</skill>
+        <skill>DDD</skill>
+        <skill>CleanArchitecture</skill>
+      </skills>
     </school>
     <school>
       <institution>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</institution>
@@ -340,6 +434,19 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <summary>Student representative and tutor. 
 
 TFE: WebMenu 2.0</summary>
+      <projects>
+        <project>WebMenu</project>
+      </projects>
+      <skills>
+        <skill>SQL</skill>
+        <skill>C#</skill>
+        <skill>.NET</skill>
+        <skill>Java</skill>
+        <skill>Python</skill>
+        <skill>JS</skill>
+        <skill>HTML</skill>
+        <skill>CSS</skill>
+      </skills>
     </school>
     <school>
       <institution>Institut Saint-Louis Bruxelles</institution>

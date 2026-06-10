@@ -5,62 +5,245 @@
   },
   "basics": {
     "label": "Informaticus",
-    "summary": "Computerwetenschappen-student aan UMons 's nachts, op zoek naar een nieuwe kans overdag terwijl ik Acteble lanceer.\n\nAlle projecten waaraan ik heb deelgenomen werden ontwikkeld met een sterke focus op Software Craftsmanship (clean code, clean architecture, DDD) als best practices om de hoogste normen van kwaliteit, onderhoudbaarheid en schaalbaarheid te garanderen."
+    "summary": "Computerwetenschappen-student aan UMons 's nachts, op zoek naar een nieuwe kans overdag terwijl ik Acteble lanceer.\n\nAlle projecten waaraan ik heb deelgenomen werden ontwikkeld met een sterke focus op Software Craftsmanship (clean code, clean architecture, DDD) als best practices om de hoogste normen van kwaliteit, onderhoudbaarheid en schaalbaarheid te garanderen.",
+    "location": {
+      "region": "België"
+    }
   },
   "work": [
-    { "position": "Oprichter", "summary": "Bouwen van Acteble, een geolokaal sociaal platform dat reizigers koppelt rond gedeelde activiteiten onder ruimtelijk-temporele en multicriteria-beperkingen. Enige oprichter, architect en ontwikkelaar. De R&D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons." },
-    { "position": "AI-onderzoeker", "summary": "AI-onderzoek en engineering voor het Belgisch federaal Parlement. Ontwerp van een intern platform waarmee medewerkers de parlementaire archieven kunnen doorzoeken, verkennen en bevragen. Auteur van een open evaluatieprotocol dat retrieval-strategieën vergelijkt op het Senaat-corpus, met focus op tweetalige FR/NL-robuustheid." },
-    { "position": "AI Software Crafter Lead", "summary": "Emvi App: AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem." },
-    { "position": "AI Software Crafter", "summary": "Remi: reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) voor de gezichtsherkenningspipeline en sentimentanalyse voor de door LLM gegenereerde beschrijvingen." },
-    { "position": "Data Scientist", "summary": "Python-bibliotheken (SpaCy…) om benoemde entiteiten uit tekst te extraheren via NER-modeltraining en implementatie in .NET. Recall-score van het model: 87%." },
-    { "position": "Software Crafter", "summary": "Softwaremodernisering binnen de .NET-stack volgens DDD en clean code principes. Implementatie van Azure AI-services in een .NET-oplossing." },
-    { "position": ".NET / React Software Crafter" },
-    { "position": "Software Crafter", "summary": "EduCraft: oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven." },
-    { "position": ".NET / Blazor Software Crafter", "summary": "Ontwikkeling van de Axinco Kwalitijd webapp in .NET / Blazor volgens DDD en clean code principes." },
-    { "position": "Full Stack Webontwikkelaar Stagiair", "summary": "Kwalificerende opleiding om de technische vaardigheden te versterken die ik tijdens mijn bachelor aan EPHEC heb verworven.\nDe verlenging omvatte een introductie tot Business Intelligence en ETL-processen (Data Warehousing) met Microsoft-tools (SSIS, …).\nDe opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van databaseontwikkeling tot gebruikersinterface en backend." },
-    { "position": "Full Stack Webontwikkelaar Stagiair", "summary": "OnlyTogether: oplossing die ervoor zorgt dat kwetsbare gebruikers altijd begeleid worden." },
-    { "position": "Full Stack Webontwikkelaar Stagiair" },
-    { "position": "Studentenjob" },
-    { "position": "Full Stack Webontwikkelaar Stagiair" },
-    { "position": "Studentenjob" }
+    {
+      "position": "Oprichter",
+      "summary": "Bouwen van Acteble, een geolokaal sociaal platform dat reizigers koppelt rond gedeelde activiteiten onder ruimtelijk-temporele en multicriteria-beperkingen. Enige oprichter, architect en ontwikkelaar. De R&D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons.",
+      "location": "Brussel, België"
+    },
+    {
+      "position": "AI-onderzoeker",
+      "summary": "AI-onderzoek en engineering voor het Belgisch federaal Parlement. Ontwerp van een intern platform waarmee medewerkers de parlementaire archieven kunnen doorzoeken, verkennen en bevragen. Auteur van een open evaluatieprotocol dat retrieval-strategieën vergelijkt op het Senaat-corpus, met focus op tweetalige FR/NL-robuustheid.",
+      "location": "Brussel, België",
+      "company": "Belgische Senaat"
+    },
+    {
+      "position": "AI Software Crafter Lead",
+      "summary": "Emvi App: AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem.",
+      "location": "Brugge, België"
+    },
+    {
+      "position": "AI Software Crafter",
+      "summary": "Remi: reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) voor de gezichtsherkenningspipeline en sentimentanalyse voor de door LLM gegenereerde beschrijvingen.",
+      "location": "Brugge, België"
+    },
+    {
+      "position": "Data Scientist",
+      "summary": "Python-bibliotheken (SpaCy…) om benoemde entiteiten uit tekst te extraheren via NER-modeltraining en implementatie in .NET. Recall-score van het model: 87%.",
+      "location": "Antwerpen, Vlaanderen, België"
+    },
+    {
+      "position": "Software Crafter",
+      "summary": "Softwaremodernisering binnen de .NET-stack volgens DDD en clean code principes. Implementatie van Azure AI-services in een .NET-oplossing.",
+      "location": "Antwerpen, Vlaanderen, België"
+    },
+    {
+      "position": ".NET / React Software Crafter",
+      "location": "Antwerpen, Vlaanderen, België"
+    },
+    {
+      "position": "Software Crafter",
+      "summary": "EduCraft: oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven.",
+      "location": "Charleroi en omgeving"
+    },
+    {
+      "position": ".NET / Blazor Software Crafter",
+      "summary": "Ontwikkeling van de Axinco Kwalitijd webapp in .NET / Blazor volgens DDD en clean code principes.",
+      "location": "Antwerpen, Vlaanderen, België"
+    },
+    {
+      "position": "Full Stack Webontwikkelaar Stagiair",
+      "summary": "Kwalificerende opleiding om de technische vaardigheden te versterken die ik tijdens mijn bachelor aan EPHEC heb verworven.\nDe verlenging omvatte een introductie tot Business Intelligence en ETL-processen (Data Warehousing) met Microsoft-tools (SSIS, …).\nDe opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van databaseontwikkeling tot gebruikersinterface en backend.",
+      "location": "Charleroi, Wallonië, België"
+    },
+    {
+      "position": "Full Stack Webontwikkelaar Stagiair",
+      "summary": "OnlyTogether: oplossing die ervoor zorgt dat kwetsbare gebruikers altijd begeleid worden.",
+      "location": "Charleroi, Waals Gewest, België"
+    },
+    {
+      "position": "Full Stack Webontwikkelaar Stagiair",
+      "location": "Brussels Hoofdstedelijk Gewest, België"
+    },
+    {
+      "position": "Studentenjob",
+      "location": "Brussels Hoofdstedelijk Gewest, België"
+    },
+    {
+      "position": "Full Stack Webontwikkelaar Stagiair",
+      "location": "Brussels Hoofdstedelijk Gewest, België"
+    },
+    {
+      "position": "Studentenjob",
+      "location": "Kraainem, Vlaams Gewest, België"
+    }
   ],
   "volunteer": [
-    { "position": "Studentenvertegenwoordiger" },
-    { "position": "Buddy TandeMons" },
-    { "position": "Studentenvertegenwoordiger" },
-    { "position": "Tutor" }
+    {
+      "position": "Studentenvertegenwoordiger"
+    },
+    {
+      "position": "Buddy TandeMons"
+    },
+    {
+      "position": "Studentenvertegenwoordiger"
+    },
+    {
+      "position": "Tutor"
+    }
   ],
   "education": [
-    { "studyType": "Master of Science", "area": "Computerwetenschappen (duaal leren) (120 ECTS)", "gpa": "In uitvoering (MA2)", "summary": "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Python referentie-implementatie (50+ modules, 214 unit tests met 86 % branch coverage, mypy --strict, PEP 561 getypeerd) met bit-identieke reproduceerbaarheid (SHA-256 gehashte datasets, CLI/notebook pariteitstests). LaTeX-rapport van 110 pagina's. Studentenvertegenwoordiger & buddy TandeMons." },
-    { "studyType": "Professionele bachelor", "area": "Beheer van informatiesystemen", "gpa": "62.8%, Satis Bene", "summary": "Studentenvertegenwoordiger en tutor.\n\nTFE: WebMenu 2.0" },
-    { "studyType": "Attestation", "area": "7e Spéciale Mathématiques", "gpa": "Attestation" },
-    { "studyType": "Bachelor of Arts (BA)", "area": "Politieke wetenschappen", "gpa": "29 credits behaald in 2016-2017, contacteer mij voor meer info." },
-    { "studyType": "Bachelor of Science (BSc)", "area": "Handelsingenieur", "gpa": "Contacteer mij voor meer info." },
-    { "studyType": "Bachelor of Science (BSc)", "area": "Handelsingenieur", "gpa": "Contacteer mij voor meer info." },
-    { "studyType": "Voorbereidende cursussen", "area": "Geneeskunde en tandheelkunde", "gpa": "Attestation" },
-    { "studyType": "C.E.S.S.", "area": "Algemene studies — Wiskunde en moderne talen", "gpa": "Satis bene" },
-    { "studyType": "", "area": "Algemene studies — Latijn en Grieks" }
+    {
+      "studyType": "Master of Science",
+      "area": "Computerwetenschappen (duaal leren) (120 ECTS)",
+      "gpa": "In uitvoering (MA2)",
+      "summary": "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Python referentie-implementatie (50+ modules, 214 unit tests met 86 % branch coverage, mypy --strict, PEP 561 getypeerd) met bit-identieke reproduceerbaarheid (SHA-256 gehashte datasets, CLI/notebook pariteitstests). LaTeX-rapport van 110 pagina's. Studentenvertegenwoordiger & buddy TandeMons."
+    },
+    {
+      "studyType": "Professionele bachelor",
+      "area": "Bedrijfsinformatica",
+      "gpa": "62.8%, Satis Bene",
+      "summary": "Studentenvertegenwoordiger en tutor.\n\nTFE: WebMenu 2.0"
+    },
+    {
+      "studyType": "Attestation",
+      "area": "7e Spéciale Mathématiques",
+      "gpa": "Attestation"
+    },
+    {
+      "studyType": "Bachelor of Arts (BA)",
+      "area": "Politieke wetenschappen",
+      "gpa": "29 credits behaald in 2016-2017, contacteer mij voor meer info."
+    },
+    {
+      "studyType": "Bachelor of Science (BSc)",
+      "area": "Handelsingenieur",
+      "gpa": "Contacteer mij voor meer info."
+    },
+    {
+      "studyType": "Bachelor of Science (BSc)",
+      "area": "Handelsingenieur",
+      "gpa": "Contacteer mij voor meer info."
+    },
+    {
+      "studyType": "Voorbereidende cursussen",
+      "area": "Geneeskunde en tandheelkunde",
+      "gpa": "Attestation"
+    },
+    {
+      "studyType": "C.E.S.S.",
+      "area": "Algemene studies — Wiskunde en moderne talen",
+      "gpa": "Satis bene"
+    },
+    {
+      "studyType": "",
+      "area": "Algemene studies — Latijn en Grieks"
+    }
   ],
   "awards": [
-    { "title": "TOEIC", "awarder": "ETS", "summary": "730" }
+    {
+      "title": "TOEIC",
+      "awarder": "ETS",
+      "summary": "730"
+    }
   ],
   "languages": [
-    { "language": "Frans", "fluency": "Moedertaal" },
-    { "language": "Engels", "fluency": "B1+/B2 (TOEIC 730 / ELAO)" },
-    { "language": "Nederlands", "fluency": "B1" }
+    {
+      "language": "Frans",
+      "fluency": "Moedertaal"
+    },
+    {
+      "language": "Engels",
+      "fluency": "B1+/B2 (TOEIC 730 / ELAO)"
+    },
+    {
+      "language": "Nederlands",
+      "fluency": "B1"
+    }
   ],
   "interests": [
-    { "name": "Onderzoek en ontwikkeling", "keywords": ["Innovatie", "Experimenten", "POCs"] }
+    {
+      "name": "Onderzoek en ontwikkeling",
+      "keywords": [
+        "Innovatie",
+        "Experimenten",
+        "POCs"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "reference": "Samenwerken met Baptiste Grosjean aan het EMVI-project was een ongelooflijk verrijkende ervaring — zowel professioneel als persoonlijk. Baptiste is niet alleen een zeer bekwame ontwikkelaar met een scherp oog voor design en functionaliteit, maar hij is ook een mentor en inspiratiebron geweest tijdens onze samenwerking.\n\nIk heb enorm veel van hem geleerd — van best practices in Flutter-ontwikkeling tot het belang van doordachte UI/UX en clean architecture. Hij staat altijd klaar om zijn kennis te delen, complexe ideeën helder uit te leggen, en het team op elke mogelijke manier te ondersteunen.\n\nWat het meest opvalt is Baptistes vermogen om uitdagingen om te zetten in kansen. Zijn rustige, gefocuste aanpak en zijn probleemoplossende mindset hebben ons geholpen technische hindernissen te overwinnen en functies te bouwen die de gebruikerservaring echt verbeteren. Zijn collaboratieve aard maakte teamwerk soepel en motiverend.\n\nAls je iemand zoekt die niet alleen uitzonderlijke resultaten levert, maar ook iedereen om zich heen optilt, kan ik Baptiste niet genoeg aanbevelen. Hij is een fantastische ontwikkelaar, een geweldige teamgenoot, en iemand van wie ik het geluk heb gehad te mogen leren. — (vertaald uit het Engels)",
+      "name": "Waseem Virk, Flutter-ontwikkelaar bij Emvi.ai"
+    },
+    {
+      "reference": "Ik heb het genoegen gehad om een jaar met Baptiste samen te werken, met de extra vreugde hem drie maanden te hebben mogen mentoren in een project. Als er één ding aan Baptiste opvalt, is het zijn grenzeloze energie. Of het nu 9 uur 's ochtends of 9 uur 's avonds is, hij is altijd de meest enthousiaste persoon in de kamer — soms zelfs enthousiaster dan het koffiezetapparaat.\n\nBaptiste brengt aanstekelijke energie in elk project waaraan hij deelneemt. Hij is extravert, slim, en heeft een leergierigheid die echt bewonderenswaardig is. Of hij nu in een complexe taak duikt of inzichtelijke vragen stelt, hij is altijd op zoek naar kennis. Zijn enthousiasme om te leren, vooral als het gaat om tools als ChatGPT, is zowel indrukwekkend als een beetje intimiderend. Serieus, als ChatGPT een beste vriend had, zou het Baptiste zijn!\n\nHij is ook ongelooflijk hands-on, schroomt nooit om de mouwen op te stropen en diep in het werk te duiken. Zijn aanpak is niet alleen theoretisch; het draait helemaal om praktische, tastbare resultaten.\n\nKortom, als je iemand zoekt die enthousiasme, intelligentie en een vleugje humor in elke taak brengt, is Baptiste je man. Met hem werken was niet alleen productief, maar oprecht plezierig. — (vertaald uit het Engels)",
+      "name": "Tino Schuerewegen, softwareontwikkelaar bij Xtrada"
+    },
+    {
+      "name": "Emiel Van Gysegem, marketing en operations bij Xtra Groep"
+    },
+    {
+      "reference": "Baptiste is een full-stack softwareontwikkelaar gedreven door een onwankelbare vastberadenheid. Deze mindset doordringt elk aspect van zijn carrière. Hij heeft in verschillende domeinen gewerkt, waardoor hij zich snel aan elke situatie kan aanpassen. Deze rollen hebben zowel zijn technische als interpersoonlijke vaardigheden aangescherpt, waardoor hij een veelzijdige medewerker is die een significante impact heeft op elk project waaraan hij deelneemt. Gevoed door een constant verlangen om te leren, werkt hij zijn kennis voortdurend bij via een master in computerwetenschappen. Deze voortdurende leerreis maakt van hem een goed afgeronde IT-professional in het domein van computerwetenschappen. — (vertaald uit het Engels)",
+      "name": "Steven Claus, CFO bij Xtra Groep"
+    },
+    {
+      "name": "Tjörven Janssens, softwareontwikkelaar bij Xtrada"
+    },
+    {
+      "reference": "Baptiste is een geweldige en toegewijde ontwikkelaar die gretig is om nieuwe technologieën te blijven leren en zijn vaardigheden te verbeteren. Je zou verbaasd zijn over niet alleen zijn kennis, maar ook over zijn warme, open enthousiasme. Baptiste, je gaat geweldige dingen doen in je leven, blijf gewoon je levendige geest behouden ✊ — (vertaald uit het Engels)",
+      "name": "Michael Culot, sales manager bij Xtrada"
+    }
   ],
   "projects": [
-    { "description": "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.", "summary": "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend.", "type": "Mobiele applicatie", "roles": ["Oprichter"] },
-    { "description": "AI-aangedreven visuele assistent voor slechtzienden.", "summary": "AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem.", "type": "Mobiele applicatie" },
-    { "description": "Reminiscentie-applicatie voor mensen met cognitieve problemen.", "summary": "Reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) pipeline.", "type": "AI-applicatie" },
-    { "description": "Platform waarmee iedereen nieuwe vaardigheden kan verwerven." },
-    { "description": "Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar.", "highlights": ["UI/UX.", "API-integraties."], "type": "Webapplicatie", "roles": ["Oprichter"] },
-    { "summary": "Named Entity Recognition-model dat inventarisitems extraheert uit een audiotranscriptie." },
-    { "summary": "Wagenparkbeheerder voor veilingen." },
-    { "summary": "Enquêtebeheerder voor sportclubs en federaties." },
-    { "summary": "QR-code-gebaseerde kassa voor HoReCa-etablissementen (Hotel/Restaurant/Café)." }
+    {
+      "description": "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.",
+      "summary": "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend.",
+      "type": "Mobiele applicatie",
+      "roles": [
+        "Oprichter"
+      ]
+    },
+    {
+      "description": "AI-aangedreven visuele assistent voor slechtzienden.",
+      "summary": "AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem.",
+      "type": "Mobiele applicatie"
+    },
+    {
+      "description": "Reminiscentie-applicatie voor mensen met cognitieve problemen.",
+      "summary": "Reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) pipeline.",
+      "type": "AI-applicatie"
+    },
+    {
+      "description": "Platform waarmee iedereen nieuwe vaardigheden kan verwerven."
+    },
+    {
+      "description": "Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar.",
+      "highlights": [
+        "UI/UX.",
+        "API-integraties."
+      ],
+      "type": "Webapplicatie",
+      "roles": [
+        "Oprichter"
+      ]
+    },
+    {
+      "summary": "Named Entity Recognition-model dat inventarisitems extraheert uit een audiotranscriptie."
+    },
+    {
+      "summary": "Wagenparkbeheerder voor veilingen."
+    },
+    {
+      "summary": "Enquêtebeheerder voor sportclubs en federaties."
+    },
+    {
+      "summary": "QR-code-gebaseerde kassa voor HoReCa-etablissementen (Hotel/Restaurant/Café)."
+    }
   ]
 }
