@@ -47,7 +47,9 @@
       "startDate": "2025-07-01",
       "endDate": "Present",
       "summary": "Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. Sole founder, architect, and developer. The R&D layer doubles as the dissertation for my MSc in Computer Science at UMons.",
-      "highlights": []
+      "highlights": [],
+      "projects": ["Acteble"],
+      "skills": ["Rust", "Flutter", "Dart", "Tokio", "Docker", "DDD", "CleanArchitecture"]
     },
     {
       "company": "Belgian Senate",
@@ -57,7 +59,9 @@
       "startDate": "2025-11-03",
       "endDate": "2026-06-30",
       "summary": "AI research and engineering for the Belgian Federal Parliament. Designed an internal platform that lets staff search, explore and converse with the parliamentary archives. Authored an open evaluation protocol that compares retrieval strategies on the Senate corpus, with a focus on bilingual FR/NL robustness.",
-      "highlights": []
+      "highlights": [],
+      "projects": [],
+      "skills": ["Python", "Java", ".NET"]
     },
     {
       "company": "Emvi.ai",
@@ -69,7 +73,9 @@
       "summary": "Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired.",
       "highlights": [
         "Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla"
-      ]
+      ],
+      "projects": ["Emvi App"],
+      "skills": ["Dart", "Flutter"]
     },
     {
       "company": "Emvi.ai",
@@ -81,7 +87,9 @@
       "summary": "Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM-generated descriptions.",
       "highlights": [
         "Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil"
-      ]
+      ],
+      "projects": ["Remi"],
+      "skills": ["Python", "Whisper"]
     },
     {
       "company": "Xtrada",
@@ -91,7 +99,9 @@
       "startDate": "2024-03-01",
       "endDate": "2024-09-22",
       "summary": "Used Python libraries (SpaCy, ...) to extract named entities from text via NER model training and implementation in .NET. Model recall score: 87%.",
-      "highlights": []
+      "highlights": [],
+      "projects": ["VhAuctions NER Inventory Model"],
+      "skills": ["Python", "SpaCy", "Pandas", "NumPy", ".NET"]
     },
     {
       "company": "Xtrada",
@@ -101,7 +111,9 @@
       "startDate": "2023-08-21",
       "endDate": "2024-09-22",
       "summary": "Software modernization within the .NET stack following domain-driven design and clean code principles. Implementation of Azure AI services in a .NET solution.",
-      "highlights": []
+      "highlights": [],
+      "projects": [],
+      "skills": [".NET", "DDD", "CleanCode", "CleanArchitecture"]
     },
     {
       "company": "VhAuctions",
@@ -110,7 +122,9 @@
       "url": "https://www.vhauctions.be",
       "startDate": "2024-01-01",
       "endDate": "2024-08-07",
-      "highlights": []
+      "highlights": [],
+      "projects": ["VhAuctions"],
+      "skills": [".NET", "React", "SQL Server"]
     },
     {
       "company": "Hackathon Citizens of Wallonia",
@@ -120,7 +134,9 @@
       "startDate": "2024-03-15",
       "endDate": "2024-03-17",
       "summary": "EduCraft: solution allowing anyone to craft a personalized path to gain new skills.",
-      "highlights": []
+      "highlights": [],
+      "projects": ["EduCraft"],
+      "skills": []
     },
     {
       "company": "aXinco",
@@ -130,7 +146,9 @@
       "startDate": "2023-09-01",
       "endDate": "2023-12-31",
       "summary": "Crafting Axinco Kwalitijd webapp in .NET / Blazor following DDD and clean code principles.",
-      "highlights": []
+      "highlights": [],
+      "projects": ["Kwalitijd"],
+      "skills": [".NET", "Blazor", "SQL Server", "DDD"]
     },
     {
       "company": "Technofutur TIC",
@@ -140,7 +158,9 @@
       "startDate": "2022-12-01",
       "endDate": "2023-06-30",
       "summary": "This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC.\nIn addition, during the extension, we received an introduction to Business Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...).\nThis comprehensive training covered various areas including SQL Server, Node.js, Express.js, React, and Angular, encompassing everything from database development to user interface and backend.",
-      "highlights": []
+      "highlights": [],
+      "projects": ["MyWay"],
+      "skills": ["SQL Server", "Node.js", "Express.js", "React", "Angular"]
     },
     {
       "company": "Hackathon Citizens of Wallonia",
@@ -180,7 +200,9 @@
       "startDate": "2021-11-01",
       "endDate": "2022-03-31",
       "summary": "",
-      "highlights": []
+      "highlights": [],
+      "projects": ["WebMenu"],
+      "skills": [".NET", "Flutter", "SQL Server"]
     },
     {
       "company": "Quick Restaurant",
@@ -353,7 +375,9 @@
       "startDate": "2022-10-15",
       "gpa": "In progress (MA2)",
       "summary": "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique. Reference Python implementation (50+ modules, 214 unit tests at 86 % branch coverage, mypy --strict, PEP 561 typed) with bit-identical reproducibility (SHA-256 hashed datasets, CLI/notebook parity tests). 110-page LaTeX report. Student representative & buddy TandeMons.",
-      "courses": []
+      "courses": [],
+      "projects": ["Acteble"],
+      "skills": ["Python", "LaTeX", "DDD", "CleanArchitecture"]
     },
     {
       "institution": "Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)",
@@ -363,7 +387,9 @@
       "endDate": "2022-10-15",
       "gpa": "62.8%, Satis Bene",
       "summary": "Student representative and tutor. \n\nTFE: WebMenu 2.0",
-      "courses": []
+      "courses": [],
+      "projects": ["WebMenu"],
+      "skills": ["SQL", "C#", ".NET", "Java", "Python", "JS", "HTML", "CSS"]
     },
     {
       "institution": "Institut Saint-Louis Bruxelles",

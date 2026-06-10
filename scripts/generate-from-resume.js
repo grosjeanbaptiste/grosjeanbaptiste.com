@@ -23,7 +23,7 @@ const RESUME_PATH = path.join(ROOT, 'assets/data/resume.json');
 const I18N_DIR = path.join(ROOT, 'assets/data/i18n');
 const TEMPLATE_PATH = path.join(ROOT, 'index.html');
 
-const LANGS = ['en', 'fr', 'nl', 'es'];
+const LANGS = ['en', 'fr', 'nl', 'es', 'de', 'zh'];
 
 const MARKERS = {
   'LLM-HEAD': {
@@ -45,6 +45,11 @@ const MARKERS = {
     start: '<!-- BODY-MAIN:START — generated from assets/data/resume.json, do not edit by hand -->',
     end: '<!-- BODY-MAIN:END -->',
     indent: 6,
+  },
+  'CV-DOWNLOAD': {
+    start: '<!-- CV-DOWNLOAD:START — generated from assets/data/resume.json + i18n, do not edit by hand -->',
+    end: '<!-- CV-DOWNLOAD:END -->',
+    indent: 2,
   },
 };
 
@@ -81,6 +86,7 @@ const I18N = {
     inProgress: 'in progress',
     xmlResume: 'CV (XML + XSLT)',
     firefoxNote: 'best viewed in Firefox',
+    downloadCV: 'Download CV',
     nav: { about: 'About', experience: 'Experience', education: 'Education', projects: 'Projects', references: 'References', contact: 'Contact' },
   },
   fr: {
@@ -113,6 +119,7 @@ const I18N = {
     inProgress: 'en cours',
     xmlResume: 'CV (XML + XSLT)',
     firefoxNote: 'à ouvrir avec Firefox',
+    downloadCV: 'Télécharger le CV',
     nav: { about: 'À propos', experience: 'Expérience', education: 'Éducation', projects: 'Projets', references: 'Références', contact: 'Contact' },
   },
   nl: {
@@ -145,6 +152,7 @@ const I18N = {
     inProgress: 'in uitvoering',
     xmlResume: 'CV (XML + XSLT)',
     firefoxNote: 'best te bekijken in Firefox',
+    downloadCV: 'CV downloaden',
     nav: { about: 'Over', experience: 'Ervaring', education: 'Opleiding', projects: 'Projecten', references: 'Referenties', contact: 'Contact' },
   },
   es: {
@@ -177,7 +185,74 @@ const I18N = {
     inProgress: 'en curso',
     xmlResume: 'CV (XML + XSLT)',
     firefoxNote: 'mejor visto en Firefox',
+    downloadCV: 'Descargar CV',
     nav: { about: 'Sobre', experience: 'Experiencia', education: 'Educación', projects: 'Proyectos', references: 'Referencias', contact: 'Contacto' },
+  },
+  de: {
+    htmlLocale: 'de_DE',
+    about: 'Über mich',
+    experience: 'Berufserfahrung',
+    education: 'Ausbildung',
+    volunteer: 'Ehrenamt',
+    projects: 'Projekte',
+    awards: 'Auszeichnungen',
+    interests: 'Interessen',
+    references: 'Referenzen',
+    contact: 'Kontakt',
+    contactCTA: 'Kontaktieren Sie mich per E-Mail, Telefon oder über eines dieser Profile.',
+    technicalSkills: 'Technische Fähigkeiten',
+    currentlyLearning: 'Lerne gerade',
+    softSkills: 'Soziale Kompetenzen',
+    languages: 'Sprachen',
+    typicalDay: 'Ein typischer Tag',
+    viewProject: 'Projekt ansehen',
+    role: 'Rolle',
+    type: 'Typ',
+    keywords: 'Stichwörter',
+    driverLicense: 'Führerschein B',
+    menuLabel: 'Menü',
+    themeLabel: 'Thema wechseln',
+    darkMode: 'Dunkler Modus',
+    langMenuLabel: 'Sprache',
+    pageTitleSuffix: 'Lebenslauf',
+    inProgress: 'läuft',
+    xmlResume: 'Lebenslauf (XML + XSLT)',
+    firefoxNote: 'am besten in Firefox ansehen',
+    downloadCV: 'Lebenslauf herunterladen',
+    nav: { about: 'Über', experience: 'Erfahrung', education: 'Ausbildung', projects: 'Projekte', references: 'Referenzen', contact: 'Kontakt' },
+  },
+  zh: {
+    htmlLocale: 'zh_CN',
+    about: '关于我',
+    experience: '工作经验',
+    education: '教育',
+    volunteer: '志愿者',
+    projects: '项目',
+    awards: '奖项',
+    interests: '兴趣',
+    references: '推荐人',
+    contact: '联系方式',
+    contactCTA: '请通过电子邮件、电话或以下任一资料联系我。',
+    technicalSkills: '技术技能',
+    currentlyLearning: '正在学习',
+    softSkills: '软技能',
+    languages: '语言',
+    typicalDay: '我的一天',
+    viewProject: '查看项目',
+    role: '角色',
+    type: '类型',
+    keywords: '关键词',
+    driverLicense: 'B类驾照',
+    menuLabel: '菜单',
+    themeLabel: '切换主题',
+    darkMode: '深色模式',
+    langMenuLabel: '语言',
+    pageTitleSuffix: '简历',
+    inProgress: '进行中',
+    xmlResume: '简历 (XML + XSLT)',
+    firefoxNote: '建议使用 Firefox 查看',
+    downloadCV: '下载简历',
+    nav: { about: '关于', experience: '经验', education: '教育', projects: '项目', references: '推荐', contact: '联系' },
   },
 };
 
@@ -203,10 +278,13 @@ const MONTHS_LOCALIZED = {
   fr: ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'],
   nl: ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'],
   es: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'],
+  de: ['Jan.', 'Feb.', 'März', 'Apr.', 'Mai', 'Juni', 'Juli', 'Aug.', 'Sep.', 'Okt.', 'Nov.', 'Dez.'],
+  zh: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
 };
+const PRESENT_LABEL = { en: 'Present', fr: 'Aujourd’hui', nl: 'Heden', es: 'Actualidad', de: 'Heute', zh: '至今' };
 const formatDate = (iso, lang = 'en') => {
-  if (!iso) return { en: 'Present', fr: 'Aujourd’hui', nl: 'Heden', es: 'Actualidad' }[lang];
-  if (iso === 'Present') return { en: 'Present', fr: 'Aujourd’hui', nl: 'Heden', es: 'Actualidad' }[lang];
+  if (!iso) return PRESENT_LABEL[lang];
+  if (iso === 'Present') return PRESENT_LABEL[lang];
   const [y, m] = iso.split('-');
   if (m) return `${MONTHS_LOCALIZED[lang][parseInt(m, 10) - 1]} ${y}`;
   return y;
@@ -440,7 +518,6 @@ function generateNav(lang) {
     { id: 'about', label: t.nav.about },
     { id: 'experience', label: t.nav.experience },
     { id: 'education', label: t.nav.education },
-    { id: 'projects', label: t.nav.projects },
     { id: 'references', label: t.nav.references },
     { id: 'contact', label: t.nav.contact },
   ];
@@ -510,9 +587,11 @@ function generateSidebar(resume, lang) {
     '</div>',
   ].join('\n');
 
+  // The "Currently Learning" block is intentionally not rendered (kept as
+  // data in resume.json.skills for JSON Resume schema compliance and LLM
+  // ingestion, but hidden from the visible CV).
   const SKILL_CATEGORIES = [
     { name: 'HardSkills', title: t.technicalSkills },
-    { name: 'Learning', title: t.currentlyLearning },
     { name: 'SoftSkills', title: t.softSkills },
   ];
 
@@ -570,6 +649,34 @@ function generateMain(resume, lang) {
     '</section>',
   ].join('\n'));
 
+  // Helper: look up a project by name from the canonical projects[] array.
+  const findProject = (name) => (resume.projects || []).find((p) => p.name === name);
+
+  const renderEmbeddedSkills = (skills) => {
+    if (!skills?.length) return '';
+    const tags = skills.map((s) => `<span class="skill-tag">${escape(s)}</span>`).join(' ');
+    return `<div class="skill-tags inline-skills">${tags}</div>`;
+  };
+
+  const renderEmbeddedProjects = (projectNames) => {
+    if (!projectNames?.length) return '';
+    const projs = projectNames.map(findProject).filter(Boolean);
+    if (!projs.length) return '';
+    const items = projs.map((p) => {
+      const desc = p.summary || p.description || '';
+      const link = p.url ? ` <a href="${escape(p.url)}" target="_blank" rel="noopener">↗</a>` : '';
+      return `<li><strong>${escape(p.name)}</strong>${link}${desc ? ' — ' + escape(desc) : ''}</li>`;
+    }).join('\n        ');
+    return [
+      `<div class="embedded-projects">`,
+      `  <p class="embedded-label">${escape(t.projects)}:</p>`,
+      `  <ul>`,
+      `        ${items}`,
+      `  </ul>`,
+      `</div>`,
+    ].join('\n');
+  };
+
   // Experience
   if (resume.work?.length) {
     const items = resume.work.map((w) => {
@@ -586,6 +693,10 @@ function generateMain(resume, lang) {
       if (w.location) parts.push(`  <p class="location">${escape(w.location)}</p>`);
       if (w.summary) parts.push(`  <p>${escape(w.summary).replace(/\n/g, '<br>')}</p>`);
       (w.highlights || []).forEach((h) => parts.push(`  <p>• ${escape(h)}</p>`));
+      const skillsHtml = renderEmbeddedSkills(w.skills);
+      if (skillsHtml) parts.push('  ' + skillsHtml);
+      const projsHtml = renderEmbeddedProjects(w.projects);
+      if (projsHtml) parts.push(indentLines(projsHtml, 2));
       parts.push('</article>');
       return parts.join('\n');
     });
@@ -608,103 +719,16 @@ function generateMain(resume, lang) {
       ];
       if (e.gpa) parts.push(`  <p>${escape(e.gpa)}</p>`);
       if (e.summary) parts.push(`  <p>${escape(e.summary).replace(/\n/g, '<br>')}</p>`);
+      const skillsHtml = renderEmbeddedSkills(e.skills);
+      if (skillsHtml) parts.push('  ' + skillsHtml);
+      const projsHtml = renderEmbeddedProjects(e.projects);
+      if (projsHtml) parts.push(indentLines(projsHtml, 2));
       parts.push('</article>');
       return parts.join('\n');
     });
     sections.push([
       '<section id="education">',
       `  <h2>${escape(t.education)}</h2>`,
-      items.map((i) => indentLines(i, 2)).join('\n'),
-      '</section>',
-    ].join('\n'));
-  }
-
-  // Volunteer
-  if (resume.volunteer?.length) {
-    const items = resume.volunteer.map((v) => {
-      const orgHtml = v.organization
-        ? (v.url
-            ? `<a href="${escape(v.url)}" target="_blank" rel="noopener">${escape(v.organization)}</a>`
-            : escape(v.organization))
-        : '';
-      const parts = [
-        '<article class="experience-item">',
-        `  <h3>${escape(v.position)}${v.organization ? ' | ' + orgHtml : ''}</h3>`,
-        `  <p class="date">${dateRangeHtml(v.startDate, v.endDate, lang)}</p>`,
-      ];
-      if (v.summary) parts.push(`  <p>${escape(v.summary)}</p>`);
-      parts.push('</article>');
-      return parts.join('\n');
-    });
-    sections.push([
-      '<section id="volunteer">',
-      `  <h2>${escape(t.volunteer)}</h2>`,
-      items.map((i) => indentLines(i, 2)).join('\n'),
-      '</section>',
-    ].join('\n'));
-  }
-
-  // Projects
-  if (resume.projects?.length) {
-    const items = resume.projects.map((p) => {
-      const parts = [
-        '<article class="project-item">',
-        `  <h3>${escape(p.name)}</h3>`,
-        `  <p class="date">${dateRangeHtml(p.startDate, p.endDate, lang)}</p>`,
-      ];
-      const desc = p.summary || p.description;
-      if (desc) parts.push(`  <p>${escape(desc)}</p>`);
-      if (p.type) parts.push(`  <p>${escape(t.type)}: ${escape(p.type)}</p>`);
-      if (p.roles?.length) parts.push(`  <p>${escape(t.role)}: ${escape(p.roles.join(', '))}</p>`);
-      if (p.keywords?.length)
-        parts.push(`  <p>${escape(t.keywords)}: ${escape(p.keywords.join(', '))}</p>`);
-      if (p.url) parts.push(`  <a href="${escape(p.url)}">${escape(t.viewProject)}</a>`);
-      parts.push('</article>');
-      return parts.join('\n');
-    });
-    sections.push([
-      '<section id="projects">',
-      `  <h2>${escape(t.projects)}</h2>`,
-      items.map((i) => indentLines(i, 2)).join('\n'),
-      '</section>',
-    ].join('\n'));
-  }
-
-  // Awards
-  if (resume.awards?.length) {
-    const items = resume.awards.map((a) => {
-      const parts = [
-        '<article class="education-item">',
-        `  <h3>${escape(a.title)}</h3>`,
-        `  <p class="date">${timeHtml(a.date, lang)}</p>`,
-      ];
-      const detail = [a.awarder, a.summary].filter(Boolean).join(' — ');
-      if (detail) parts.push(`  <p>${escape(detail)}</p>`);
-      parts.push('</article>');
-      return parts.join('\n');
-    });
-    sections.push([
-      '<section id="awards">',
-      `  <h2>${escape(t.awards)}</h2>`,
-      items.map((i) => indentLines(i, 2)).join('\n'),
-      '</section>',
-    ].join('\n'));
-  }
-
-  // Interests
-  if (resume.interests?.length) {
-    const items = resume.interests.map((i) => {
-      const parts = [
-        '<article class="education-item">',
-        `  <h3>${escape(i.name)}</h3>`,
-      ];
-      if (i.keywords?.length) parts.push(`  <p>${escape(i.keywords.join(', '))}</p>`);
-      parts.push('</article>');
-      return parts.join('\n');
-    });
-    sections.push([
-      '<section id="interests">',
-      `  <h2>${escape(t.interests)}</h2>`,
       items.map((i) => indentLines(i, 2)).join('\n'),
       '</section>',
     ].join('\n'));
@@ -754,6 +778,17 @@ function generateMain(resume, lang) {
   ].join('\n'));
 
   return sections.join('\n\n');
+}
+
+// ------------------------------------------------------------ CV DOWNLOAD
+
+function generateCvDownload(lang) {
+  const t = I18N[lang];
+  return [
+    `<a href="/assets/cv/cv_grosjean_baptiste_${lang}.pdf" class="cv-download-button" download>`,
+    `  <i class="fas fa-download"></i>${escape(t.downloadCV)}`,
+    `</a>`,
+  ].join('\n');
 }
 
 // ---------------------------------------------------------- XML mirror
@@ -852,6 +887,7 @@ for (const lang of LANGS) {
   html = replaceBetween(html, MARKERS['NAV'], generateNav(lang));
   html = replaceBetween(html, MARKERS['BODY-SIDEBAR'], generateSidebar(resume, lang));
   html = replaceBetween(html, MARKERS['BODY-MAIN'], generateMain(resume, lang));
+  html = replaceBetween(html, MARKERS['CV-DOWNLOAD'], generateCvDownload(lang));
 
   const outPath = langOutFile(lang);
   ensureDir(outPath);

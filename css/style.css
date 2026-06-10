@@ -743,3 +743,30 @@ ul {
   color: var(--body-color);
   opacity: 0.6;
 }
+
+/* ---- Embedded skills + projects inside experience/education items ---- */
+.inline-skills {
+  margin: 6px 0 4px 0;
+}
+.inline-skills .skill-tag {
+  font-size: 0.8em;
+  padding: 2px 8px;
+}
+.embedded-projects {
+  margin: 8px 0 4px 0;
+}
+.embedded-label {
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  font-size: 0.95em;
+  color: var(--emphasis-color);
+}
+.embedded-projects ul {
+  margin: 0 0 0 18px;
+  padding: 0;
+}
+.embedded-projects li {
+  font-size: 0.9em;
+  margin: 2px 0;
+}
+.embedded-projects li::before { content: none; }

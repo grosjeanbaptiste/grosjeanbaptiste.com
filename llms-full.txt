@@ -27,10 +27,6 @@ Computer science student @UMons by night, looking for a new opportunity by day w
 
 SQL, C#, Java, Python, JavaScript, TypeScript, XML, JSON, HTML, CSS, Zsh, Dart, Rust, LaTeX, SQL Server, Entity Framework, .NET, Pandas, NumPy, Whisper, SpaCy, Node.js, Express.js, Blazor, Angular, React, Flutter, Tokio, Axum, Tower, Gradle, NPM, JWT, Auth0, SSH, Venv, Conda, Docker, UML, Merise, Visual Paradigm, Clean Code, Clean Architecture, DDD, CQRS.
 
-### Currently learning
-
-TDD, TensorFlow, Scikit-Learn, C, XQuery, Blockchain.
-
 ### Soft skills
 
 Adaptability, Resilience, Leadership, Creativity, Initiative, Analysis, Flexibility, Teamwork, Organization, Pragmatism, Resourcefulness, Thoroughness.

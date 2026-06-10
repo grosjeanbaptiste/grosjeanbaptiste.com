@@ -10,7 +10,10 @@ For programmatic ingestion, prefer the JSON Resume file (`/assets/data/resume.js
 
 - [Resume — JSON Resume v1.0.0](https://www.grosjeanbaptiste.com/assets/data/resume.json): Canonical structured CV (basics, work, education, skills, projects, volunteer, languages, references)
 - [Resume — XML](https://www.grosjeanbaptiste.com/assets/data/resume.xml): XML mirror of the same data
-- [CV — PDF](https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_en.pdf): Printable English CV
+- [CV — PDF (English)](https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_en.pdf): Printable English CV
+- [CV — PDF (Français)](https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_fr.pdf)
+- [CV — PDF (Nederlands)](https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_nl.pdf)
+- [CV — PDF (Español)](https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_es.pdf)
 
 ## Content
 
@@ -18,6 +21,8 @@ For programmatic ingestion, prefer the JSON Resume file (`/assets/data/resume.js
 - [Portfolio site — Français](https://www.grosjeanbaptiste.com/fr/): French version
 - [Portfolio site — Nederlands](https://www.grosjeanbaptiste.com/nl/): Dutch version
 - [Portfolio site — Español](https://www.grosjeanbaptiste.com/es/): Spanish version
+- [Portfolio site — Deutsch](https://www.grosjeanbaptiste.com/de/): German version
+- [Portfolio site — 简体中文](https://www.grosjeanbaptiste.com/zh/): Simplified Chinese version
 - [Full Markdown digest](https://www.grosjeanbaptiste.com/llms-full.txt): Flat single-file CV in Markdown (English), ideal for LLM context windows
 
 The site is published in four languages (en, fr, nl, es). All variants are derived from the same canonical `resume.json` by overlaying language-specific text in `assets/data/i18n/<lang>.json`. JSON-LD `inLanguage` and `hreflang` are emitted on every page.
