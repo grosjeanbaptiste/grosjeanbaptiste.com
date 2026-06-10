@@ -840,8 +840,10 @@ function emitXml(name, value, depth) {
   return `${pad}<${name}>${xmlEsc(value)}</${name}>`;
 }
 
-function generateXml(resume, themePath = '../xslt/resume-transform.xsl') {
-  const body = emitXml('resume', resume, 0);
+function generateXml(resume, themePath = '../xslt/resume-transform.xsl', lang = 'en') {
+  // Inject <meta><lang> so the XSLT can pick up which language to render.
+  const tagged = { ...resume, meta: { ...(resume.meta || {}), lang } };
+  const body = emitXml('resume', tagged, 0);
   return `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="${themePath}"?>
 ${body}
@@ -899,21 +901,28 @@ for (const lang of LANGS) {
   console.log(`${lang}: ${path.relative(ROOT, outPath)}`);
 }
 
-// Regenerate XML mirrors from canonical EN (one PI per theme).
-const canonical = loadResume('en');
-const xmlVariants = [
-  { file: 'resume.xml', theme: '../xslt/resume-transform.xsl' },
-  { file: 'resume-minimal.xml', theme: '../xslt/resume-transform-minimal.xsl' },
+// Regenerate XML mirrors: one per language × 2 themes, plus EN defaults
+// (resume.xml / resume-minimal.xml) for backwards-compatible links.
+const RICH = '../xslt/resume-transform.xsl';
+const MINIMAL = '../xslt/resume-transform-minimal.xsl';
+const xmlOutputs = [
+  { file: 'resume.xml', theme: RICH, lang: 'en' },
+  { file: 'resume-minimal.xml', theme: MINIMAL, lang: 'en' },
 ];
-for (const v of xmlVariants) {
+for (const lang of LANGS) {
+  xmlOutputs.push({ file: `resume-${lang}.xml`, theme: RICH, lang });
+  xmlOutputs.push({ file: `resume-${lang}-minimal.xml`, theme: MINIMAL, lang });
+}
+for (const v of xmlOutputs) {
   const xmlPath = path.join(ROOT, 'assets/data', v.file);
-  const newXml = generateXml(canonical, v.theme);
+  const resume = loadResume(v.lang);
+  const newXml = generateXml(resume, v.theme, v.lang);
   const previousXml = fs.existsSync(xmlPath) ? fs.readFileSync(xmlPath, 'utf8') : '';
   if (previousXml !== newXml) {
     fs.writeFileSync(xmlPath, newXml);
     wrote += 1;
   }
-  console.log(`xml: assets/data/${v.file}`);
 }
+console.log(`xml: assets/data/resume{,-minimal,-<lang>{,-minimal}}.xml × ${xmlOutputs.length}`);
 
 console.log(`generate-from-resume: ${wrote} file(s) updated`);
