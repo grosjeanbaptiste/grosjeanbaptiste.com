@@ -1,0 +1,22 @@
+{
+  "name": "grosjeanbaptiste.github.io",
+  "private": true,
+  "version": "0.0.0",
+  "type": "commonjs",
+  "description": "Personal portfolio/resume — static site generated from resume.json.",
+  "scripts": {
+    "generate": "node scripts/generate-from-resume.js",
+    "pdf": "node scripts/generate-pdf.js",
+    "lint": "biome check --error-on-warnings .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "lines": "node scripts/check-line-count.js",
+    "check": "npm run lint && npm run lines"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
+}

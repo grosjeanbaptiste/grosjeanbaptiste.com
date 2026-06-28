@@ -1,29 +1,22 @@
-// Initialize daily life chart
-document.addEventListener('DOMContentLoaded', function () {
-    var ctx = document.getElementById('dailyLifeChart').getContext('2d');
-    var dailyLifeChart = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: ['Sleep', 'Transport', 'Work', 'Classes', 'Sport', 'Others'],
-            datasets: [{
-                data: [8, 2, 9, 3, 1, 5],
-                backgroundColor: [
-                    '#F3890B',
-                    '#FF0000',
-                    '#001F5A',
-                    '#C0C0C0',
-                    '#008000',
-                    '#FFFF00'
-                ],
-            }]
-        },
-        options: {
-            responsive: false,
-            plugins: {
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }
-    });
+// Renders the "typical day" doughnut from data injected by the generator
+// (window.__DAILY_LIFE = {labels, data, colors}). Falls back to a no-op when
+// the canvas, payload, or Chart.js global is missing.
+document.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.getElementById('dailyLifeChart');
+  const payload = window.__DAILY_LIFE;
+  if (!canvas || !payload || typeof Chart === 'undefined') return;
+  if (!Array.isArray(payload.data) || payload.data.length === 0) return;
+
+  new Chart(canvas.getContext('2d'), {
+    type: 'doughnut',
+    data: {
+      labels: payload.labels,
+      datasets: [{ data: payload.data, backgroundColor: payload.colors }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: { legend: { position: 'bottom' } },
+    },
+  });
 });

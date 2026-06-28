@@ -26,8 +26,8 @@
 
   <!-- Machine-readable alternates -->
   <link rel="alternate" type="application/json" title="Resume (JSON Resume v1.0.0)" href="/assets/data/resume.json">
-  <link rel="alternate" type="application/xml" title="Resume (XML)" href="/assets/data/resume.xml">
-  <link rel="alternate" type="application/pdf" title="CV (PDF)" href="/assets/cv/cv_grosjean_baptiste_en.pdf">
+  <link rel="alternate" type="application/xml" title="Resume (XML)" href="/assets/data/resume-zh.xml">
+  <link rel="alternate" type="application/pdf" title="CV (PDF)" href="/assets/cv/cv_grosjean_baptiste_zh.pdf">
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
@@ -162,7 +162,7 @@
       <a href="/de/" hreflang="de">DE</a>
       <a href="/zh/" hreflang="zh" class="active" aria-current="page">ZH</a>
     </div>
-    <button id="theme-toggle" aria-label="切换主题">
+    <button id="theme-toggle" aria-label="切换主题" data-label-dark="深色模式" data-label-light="浅色模式">
       <i class="fas fa-moon"></i>
       <span>深色模式</span>
     </button>
@@ -269,14 +269,15 @@
       </div>
       <!-- BODY-SIDEBAR:END -->
 
+      <!-- DAILY-LIFE:START — generated from assets/data/resume.json + i18n, do not edit by hand -->
       <div class="daily-life">
-        <h2>Typical Day</h2>
-        <canvas id="dailyLifeChart" width="200" height="200"
-                role="img"
-                aria-label="Typical 24h split: 8h sleep, 9h work, 3h classes, 2h transport, 1h sport, 5h others.">
-          <p class="sr-only">Typical 24h split: 8h sleep, 9h work, 3h classes, 2h transport, 1h sport, 5h others.</p>
+        <h2>我的一天</h2>
+        <canvas id="dailyLifeChart" width="200" height="200" role="img" aria-label="24 小时典型分布: 8小时 睡眠, 2小时 通勤, 9小时 工作, 3小时 上课, 1小时 运动, 5小时 其他.">
+          <p class="sr-only">24 小时典型分布: 8小时 睡眠, 2小时 通勤, 9小时 工作, 3小时 上课, 1小时 运动, 5小时 其他.</p>
         </canvas>
+        <script>window.__DAILY_LIFE={"labels":["睡眠","通勤","工作","上课","运动","其他"],"data":[8,2,9,3,1,5],"colors":["#F3890B","#FF0000","#001F5A","#C0C0C0","#008000","#FFFF00"]};</script>
       </div>
+      <!-- DAILY-LIFE:END -->
     </aside>
     <main class="main-content" id="cvContent">
       <!-- BODY-MAIN:START — generated from assets/data/resume.json, do not edit by hand -->
@@ -550,7 +551,7 @@
         <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/grosjeanbaptiste" rel="me">LinkedIn</a></p>
         <p><i class="fab fa-github"></i> <a href="https://github.com/grosjeanbaptiste" rel="me">GitHub</a></p>
         <p><i class="fab fa-npm"></i> <a href="https://npm.com/grosjeanbaptiste" rel="me">Npm</a></p>
-        <p><i class="fas fa-code"></i> <a href="/assets/data/resume.xml">简历 (XML + XSLT)</a> <span class="muted-inline">(建议使用 Firefox 查看)</span></p>
+        <p><i class="fas fa-code"></i> <a href="/assets/data/resume-zh.xml">简历 (XML + XSLT)</a> <span class="muted-inline">(建议使用 Firefox 查看)</span></p>
       </section>
       <!-- BODY-MAIN:END -->
     </main>

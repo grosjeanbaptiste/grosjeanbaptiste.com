@@ -1,0 +1,84 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "ignore": [
+      "**/node_modules/**",
+      "**/.venv/**",
+      "**/site-packages/**",
+      "**/_vendor/**",
+      "**/dist/**",
+      "**/build/**",
+      "assets/cv/**",
+      "assets/data/resume-*.xml",
+      "assets/data/resume.xml",
+      "package-lock.json"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "lineEnding": "lf"
+  },
+  "organizeImports": { "enabled": true },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noUnusedImports": "error",
+        "noUnusedFunctionParameters": "error",
+        "noUndeclaredVariables": "error"
+      },
+      "complexity": {
+        "noForEach": "off",
+        "noExcessiveCognitiveComplexity": {
+          "level": "error",
+          "options": { "maxAllowedComplexity": 15 }
+        }
+      },
+      "style": {
+        "useConst": "error",
+        "useTemplate": "error",
+        "noVar": "error",
+        "useNodejsImportProtocol": "error",
+        "useImportType": "off"
+      },
+      "suspicious": {
+        "noConsoleLog": "off",
+        "noExplicitAny": "error",
+        "noDoubleEquals": "error"
+      },
+      "performance": {
+        "noDelete": "error"
+      },
+      "nursery": {}
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "bracketSpacing": true
+    },
+    "globals": ["Chart", "window", "document", "localStorage", "navigator"]
+  },
+  "json": {
+    "formatter": { "trailingCommas": "none" },
+    "parser": { "allowComments": false, "allowTrailingCommas": false }
+  },
+  "css": {
+    "formatter": { "enabled": true, "quoteStyle": "double" },
+    "linter": { "enabled": true }
+  }
+}

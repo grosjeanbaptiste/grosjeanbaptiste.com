@@ -3,40 +3,46 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.grosjeanbaptiste.com/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.grosjeanbaptiste.com/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.grosjeanbaptiste.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.grosjeanbaptiste.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.grosjeanbaptiste.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.grosjeanbaptiste.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.grosjeanbaptiste.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.grosjeanbaptiste.com/"/>
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/fr/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.grosjeanbaptiste.com/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.grosjeanbaptiste.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.grosjeanbaptiste.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.grosjeanbaptiste.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.grosjeanbaptiste.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.grosjeanbaptiste.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.grosjeanbaptiste.com/"/>
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/nl/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.grosjeanbaptiste.com/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.grosjeanbaptiste.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.grosjeanbaptiste.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.grosjeanbaptiste.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.grosjeanbaptiste.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.grosjeanbaptiste.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.grosjeanbaptiste.com/"/>
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/es/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.grosjeanbaptiste.com/"/>
@@ -49,7 +55,7 @@
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/de/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.grosjeanbaptiste.com/"/>
@@ -62,7 +68,7 @@
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/zh/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.grosjeanbaptiste.com/"/>
@@ -75,49 +81,61 @@
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/llms.txt</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/llms-full.txt</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/assets/data/resume.json</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/assets/data/resume.xml</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_en.pdf</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_fr.pdf</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_nl.pdf</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_es.pdf</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_de.pdf</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_zh.pdf</loc>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -169,11 +169,7 @@
   "interests": [
     {
       "name": "Forschung und Entwicklung",
-      "keywords": [
-        "Innovationen",
-        "Experimente",
-        "POCs"
-      ]
+      "keywords": ["Innovationen", "Experimente", "POCs"]
     }
   ],
   "references": [
@@ -206,9 +202,7 @@
     {
       "description": "Mobile App, die Reisende während ihrer Reisen verbindet.",
       "type": "Mobile Anwendung",
-      "roles": [
-        "Gründer"
-      ],
+      "roles": ["Gründer"],
       "summary": "Entwicklung einer mobilen Anwendung, die Reisende während ihrer Reisen verbindet. Flutter für die mobile App, Rust für das Backend."
     },
     {
@@ -226,14 +220,9 @@
     },
     {
       "description": "Bildungsmanager für Studierende. Nicht mehr gepflegt; Datenbank und Auth sind nicht verfügbar.",
-      "highlights": [
-        "UI/UX.",
-        "API-Integration."
-      ],
+      "highlights": ["UI/UX.", "API-Integration."],
       "type": "Web-Anwendung",
-      "roles": [
-        "Gründer"
-      ]
+      "roles": ["Gründer"]
     },
     {
       "summary": "NER-ML-Modell zur Extraktion von Inventarobjekten aus einer Audiotranskription."

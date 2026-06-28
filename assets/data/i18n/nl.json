@@ -169,11 +169,7 @@
   "interests": [
     {
       "name": "Onderzoek en ontwikkeling",
-      "keywords": [
-        "Innovatie",
-        "Experimenten",
-        "POCs"
-      ]
+      "keywords": ["Innovatie", "Experimenten", "POCs"]
     }
   ],
   "references": [
@@ -205,9 +201,7 @@
       "description": "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.",
       "summary": "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend.",
       "type": "Mobiele applicatie",
-      "roles": [
-        "Oprichter"
-      ]
+      "roles": ["Oprichter"]
     },
     {
       "description": "AI-aangedreven visuele assistent voor slechtzienden.",
@@ -224,14 +218,9 @@
     },
     {
       "description": "Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar.",
-      "highlights": [
-        "UI/UX.",
-        "API-integraties."
-      ],
+      "highlights": ["UI/UX.", "API-integraties."],
       "type": "Webapplicatie",
-      "roles": [
-        "Oprichter"
-      ]
+      "roles": ["Oprichter"]
     },
     {
       "summary": "Named Entity Recognition-model dat inventarisitems extraheert uit een audiotranscriptie."

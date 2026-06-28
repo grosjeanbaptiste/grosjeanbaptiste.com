@@ -169,11 +169,7 @@
   "interests": [
     {
       "name": "研究与开发",
-      "keywords": [
-        "创新",
-        "实验",
-        "POC"
-      ]
+      "keywords": ["创新", "实验", "POC"]
     }
   ],
   "references": [
@@ -206,9 +202,7 @@
     {
       "description": "在旅途中连接旅行者的移动应用。",
       "type": "移动应用",
-      "roles": [
-        "创始人"
-      ],
+      "roles": ["创始人"],
       "summary": "开发一款在旅途中连接旅行者的移动应用。Flutter 用于移动应用，Rust 用于后端。"
     },
     {
@@ -226,14 +220,9 @@
     },
     {
       "description": "学生教育管理工具。不再维护；数据库和身份验证不可用。",
-      "highlights": [
-        "UI/UX。",
-        "API 集成。"
-      ],
+      "highlights": ["UI/UX。", "API 集成。"],
       "type": "Web 应用",
-      "roles": [
-        "创始人"
-      ]
+      "roles": ["创始人"]
     },
     {
       "summary": "用于从音频转录中提取库存项目的命名实体识别机器学习模型。"

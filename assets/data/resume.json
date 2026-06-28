@@ -3,7 +3,17 @@
     "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
     "version": "v1.0.0",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
-    "theme": "grosjeanbaptiste"
+    "theme": "grosjeanbaptiste",
+    "dailyLife": {
+      "items": [
+        { "key": "sleep", "hours": 8, "color": "#F3890B" },
+        { "key": "transport", "hours": 2, "color": "#FF0000" },
+        { "key": "work", "hours": 9, "color": "#001F5A" },
+        { "key": "classes", "hours": 3, "color": "#C0C0C0" },
+        { "key": "sport", "hours": 1, "color": "#008000" },
+        { "key": "others", "hours": 5, "color": "#FFFF00" }
+      ]
+    }
   },
   "basics": {
     "name": "Baptiste Grosjean",
@@ -71,9 +81,7 @@
       "startDate": "2024-12-01",
       "endDate": "2025-06-30",
       "summary": "Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired.",
-      "highlights": [
-        "Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla"
-      ],
+      "highlights": ["Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla"],
       "projects": ["Emvi App"],
       "skills": ["Dart", "Flutter"]
     },
@@ -85,9 +93,7 @@
       "startDate": "2024-10-01",
       "endDate": "2025-06-30",
       "summary": "Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM-generated descriptions.",
-      "highlights": [
-        "Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil"
-      ],
+      "highlights": ["Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil"],
       "projects": ["Remi"],
       "skills": ["Python", "Whisper"]
     },
@@ -257,33 +263,16 @@
     {
       "name": "Acteble",
       "description": "Mobile application connecting travelers during their journeys.",
-      "keywords": [
-        "Flutter",
-        "Rust",
-        "Mobile",
-        "Travel",
-        "Tokio",
-        "PostgreSQL",
-        "Docker",
-        "Dart"
-      ],
+      "keywords": ["Flutter", "Rust", "Mobile", "Travel", "Tokio", "PostgreSQL", "Docker", "Dart"],
       "startDate": "2025-07-01",
       "summary": "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.",
       "type": "Mobile Application",
-      "roles": [
-        "Founder"
-      ]
+      "roles": ["Founder"]
     },
     {
       "name": "Emvi App",
       "description": "AI powered visual assistant for visually impaired people.",
-      "keywords": [
-        "Flutter",
-        "Firebase",
-        "OpenAI",
-        "Valhalla",
-        "AI"
-      ],
+      "keywords": ["Flutter", "Firebase", "OpenAI", "Valhalla", "AI"],
       "startDate": "2024-12-01",
       "endDate": "2025-06-30",
       "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired.",
@@ -292,13 +281,7 @@
     {
       "name": "Remi",
       "description": "Reminiscence application for people with cognitive issues.",
-      "keywords": [
-        "Python",
-        "FastAPI",
-        "OpenAI",
-        "Whisper",
-        "DeepFace"
-      ],
+      "keywords": ["Python", "FastAPI", "OpenAI", "Whisper", "DeepFace"],
       "startDate": "2024-10-01",
       "endDate": "2025-06-30",
       "summary": "Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline.",
@@ -307,11 +290,7 @@
     {
       "name": "EduCraft",
       "description": "Platform allowing users to get more skills.",
-      "keywords": [
-        "PHP",
-        "API",
-        "UI/UX"
-      ],
+      "keywords": ["PHP", "API", "UI/UX"],
       "startDate": "2024-03-29",
       "endDate": "2024-03-31",
       "summary": ""
@@ -319,10 +298,7 @@
     {
       "name": "MyWay",
       "description": "Education manager for students. No longer maintained; database and auth are unavailable.",
-      "highlights": [
-        "UI/UX.",
-        "APIs integration."
-      ],
+      "highlights": ["UI/UX.", "APIs integration."],
       "keywords": [
         "Angular",
         "JavaScript",
@@ -336,9 +312,7 @@
       "endDate": "2023-06-30",
       "summary": "",
       "url": "https://my-way-bg.vercel.app",
-      "roles": [
-        "Founder"
-      ],
+      "roles": ["Founder"],
       "entity": "Freelance",
       "type": "Web Application"
     },
@@ -517,14 +491,7 @@
     },
     {
       "name": "Learning",
-      "keywords": [
-        "TDD",
-        "TensorFlow",
-        "Scikit-Learn",
-        "C",
-        "XQuery",
-        "Blockchain"
-      ]
+      "keywords": ["TDD", "TensorFlow", "Scikit-Learn", "C", "XQuery", "Blockchain"]
     },
     {
       "name": "SoftSkills",
@@ -561,11 +528,7 @@
   "interests": [
     {
       "name": "Research and Development",
-      "keywords": [
-        "Innovations",
-        "Experimentation",
-        "POCs"
-      ]
+      "keywords": ["Innovations", "Experimentation", "POCs"]
     }
   ],
   "references": [

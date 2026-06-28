@@ -5,6 +5,40 @@
     <version>v1.0.0</version>
     <canonical>https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json</canonical>
     <theme>grosjeanbaptiste</theme>
+    <dailyLife>
+      <items>
+        <item>
+          <key>sleep</key>
+          <hours>8</hours>
+          <color>#F3890B</color>
+        </item>
+        <item>
+          <key>transport</key>
+          <hours>2</hours>
+          <color>#FF0000</color>
+        </item>
+        <item>
+          <key>work</key>
+          <hours>9</hours>
+          <color>#001F5A</color>
+        </item>
+        <item>
+          <key>classes</key>
+          <hours>3</hours>
+          <color>#C0C0C0</color>
+        </item>
+        <item>
+          <key>sport</key>
+          <hours>1</hours>
+          <color>#008000</color>
+        </item>
+        <item>
+          <key>others</key>
+          <hours>5</hours>
+          <color>#FFFF00</color>
+        </item>
+      </items>
+    </dailyLife>
     <lang>es</lang>
   </meta>
   <basics>

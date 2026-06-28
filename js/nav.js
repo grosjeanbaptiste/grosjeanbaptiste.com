@@ -1,19 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   // Menu mobile toggle
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
-  
+
   // Toggle mobile menu
-  menuToggle.addEventListener('click', function() {
+  menuToggle.addEventListener('click', function () {
     const nav = document.querySelector('nav');
     const isExpanded = navMenu.classList.toggle('active');
-    
+
     // Update ARIA attributes and icons
     this.setAttribute('aria-expanded', isExpanded);
     this.querySelector('i').classList.toggle('fa-bars');
     this.querySelector('i').classList.toggle('fa-times');
-    
+
     // Calculate and set dynamic height for the nav bar
     if (isExpanded) {
       const navHeight = nav.offsetHeight;
@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 400);
     }
   });
-  
+
   // Close menu when clicking on a nav link
-  navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     link.addEventListener('click', () => {
       if (window.innerWidth <= 768) {
         const nav = document.querySelector('nav');
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.querySelector('i').classList.add('fa-bars');
         menuToggle.querySelector('i').classList.remove('fa-times');
-        
+
         // Reset nav height
         nav.style.height = '70px';
         setTimeout(() => {
@@ -52,47 +52,47 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
+
   // Highlight active section in navigation
   const sections = document.querySelectorAll('section[id]');
-  
+
   function highlightActiveSection() {
     let current = '';
-    
-    sections.forEach(section => {
+
+    sections.forEach((section) => {
       const sectionTop = section.offsetTop - 100;
       const sectionHeight = section.offsetHeight;
-      
+
       if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        current = '#' + section.getAttribute('id');
+        current = `#${section.getAttribute('id')}`;
       }
     });
-    
-    navLinks.forEach(link => {
+
+    navLinks.forEach((link) => {
       link.classList.remove('active');
       if (link.getAttribute('href') === current) {
         link.classList.add('active');
       }
     });
   }
-  
+
   // Run on scroll and on load
   window.addEventListener('scroll', highlightActiveSection);
   highlightActiveSection();
-  
+
   // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      
+
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
-      
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         window.scrollTo({
           top: targetElement.offsetTop - 80,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
       }
     });

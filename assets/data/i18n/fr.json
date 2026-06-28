@@ -169,11 +169,7 @@
   "interests": [
     {
       "name": "Recherche et développement",
-      "keywords": [
-        "Innovations",
-        "Expérimentation",
-        "POCs"
-      ]
+      "keywords": ["Innovations", "Expérimentation", "POCs"]
     }
   ],
   "references": [
@@ -207,9 +203,7 @@
       "description": "Application mobile connectant les voyageurs pendant leurs trajets.",
       "summary": "Développement d'une application mobile qui connecte les voyageurs pendant leurs trajets. Flutter pour l'app mobile, Rust pour le backend.",
       "type": "Application mobile",
-      "roles": [
-        "Fondateur"
-      ]
+      "roles": ["Fondateur"]
     },
     {
       "description": "Assistant visuel IA pour personnes malvoyantes.",
@@ -226,14 +220,9 @@
     },
     {
       "description": "Gestionnaire de parcours éducatif pour étudiants. Plus maintenu ; la base de données et l'auth sont indisponibles.",
-      "highlights": [
-        "UI/UX.",
-        "Intégration d'APIs."
-      ],
+      "highlights": ["UI/UX.", "Intégration d'APIs."],
       "type": "Application web",
-      "roles": [
-        "Fondateur"
-      ]
+      "roles": ["Fondateur"]
     },
     {
       "summary": "Modèle de Named Entity Recognition extrayant des éléments d'inventaire à partir d'une transcription audio."

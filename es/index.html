@@ -26,8 +26,8 @@
 
   <!-- Machine-readable alternates -->
   <link rel="alternate" type="application/json" title="Resume (JSON Resume v1.0.0)" href="/assets/data/resume.json">
-  <link rel="alternate" type="application/xml" title="Resume (XML)" href="/assets/data/resume.xml">
-  <link rel="alternate" type="application/pdf" title="CV (PDF)" href="/assets/cv/cv_grosjean_baptiste_en.pdf">
+  <link rel="alternate" type="application/xml" title="Resume (XML)" href="/assets/data/resume-es.xml">
+  <link rel="alternate" type="application/pdf" title="CV (PDF)" href="/assets/cv/cv_grosjean_baptiste_es.pdf">
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
@@ -183,7 +183,7 @@
       <a href="/de/" hreflang="de">DE</a>
       <a href="/zh/" hreflang="zh">ZH</a>
     </div>
-    <button id="theme-toggle" aria-label="Cambiar tema">
+    <button id="theme-toggle" aria-label="Cambiar tema" data-label-dark="Modo oscuro" data-label-light="Modo claro">
       <i class="fas fa-moon"></i>
       <span>Modo oscuro</span>
     </button>
@@ -290,14 +290,15 @@
       </div>
       <!-- BODY-SIDEBAR:END -->
 
+      <!-- DAILY-LIFE:START — generated from assets/data/resume.json + i18n, do not edit by hand -->
       <div class="daily-life">
-        <h2>Typical Day</h2>
-        <canvas id="dailyLifeChart" width="200" height="200"
-                role="img"
-                aria-label="Typical 24h split: 8h sleep, 9h work, 3h classes, 2h transport, 1h sport, 5h others.">
-          <p class="sr-only">Typical 24h split: 8h sleep, 9h work, 3h classes, 2h transport, 1h sport, 5h others.</p>
+        <h2>Un día típico</h2>
+        <canvas id="dailyLifeChart" width="200" height="200" role="img" aria-label="Reparto típico de 24 h: 8h Sueño, 2h Transporte, 9h Trabajo, 3h Clases, 1h Deporte, 5h Otros.">
+          <p class="sr-only">Reparto típico de 24 h: 8h Sueño, 2h Transporte, 9h Trabajo, 3h Clases, 1h Deporte, 5h Otros.</p>
         </canvas>
+        <script>window.__DAILY_LIFE={"labels":["Sueño","Transporte","Trabajo","Clases","Deporte","Otros"],"data":[8,2,9,3,1,5],"colors":["#F3890B","#FF0000","#001F5A","#C0C0C0","#008000","#FFFF00"]};</script>
       </div>
+      <!-- DAILY-LIFE:END -->
     </aside>
     <main class="main-content" id="cvContent">
       <!-- BODY-MAIN:START — generated from assets/data/resume.json, do not edit by hand -->
@@ -571,7 +572,7 @@
         <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/grosjeanbaptiste" rel="me">LinkedIn</a></p>
         <p><i class="fab fa-github"></i> <a href="https://github.com/grosjeanbaptiste" rel="me">GitHub</a></p>
         <p><i class="fab fa-npm"></i> <a href="https://npm.com/grosjeanbaptiste" rel="me">Npm</a></p>
-        <p><i class="fas fa-code"></i> <a href="/assets/data/resume.xml">CV (XML + XSLT)</a> <span class="muted-inline">(mejor visto en Firefox)</span></p>
+        <p><i class="fas fa-code"></i> <a href="/assets/data/resume-es.xml">CV (XML + XSLT)</a> <span class="muted-inline">(mejor visto en Firefox)</span></p>
       </section>
       <!-- BODY-MAIN:END -->
     </main>
