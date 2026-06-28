@@ -38,17 +38,32 @@ function buildLanguagesBlock(resume, t) {
   return [`\\cvsectionsidebar{${nohyphen(t.languages)}}`, items].join('\n');
 }
 
-function buildDayBlock(t) {
-  const d = t.day;
+// Wheelchart style per slice index (separator + accent shade). Order matches
+// the slices declared in resume.json:meta.dailyLife.items. The 10em
+// separator on the 4th slice visually splits the chart, mimicking the
+// original hand-tuned layout.
+const WHEEL_STYLES = [
+  '1em/accent!30',
+  '1em/accent!40',
+  '1em/accent!60',
+  '10em/accent',
+  '1em/accent',
+  '1em/accent!20',
+];
+
+function buildDayBlock(resume, t) {
+  const items = resume.meta?.dailyLife?.items || [];
+  if (!items.length) return '';
+  const slices = items.map((item, i) => {
+    const style = WHEEL_STYLES[i] || WHEEL_STYLES[WHEEL_STYLES.length - 1];
+    const label = t.dailyLifeLabels[item.key] || item.key;
+    const tail = i === items.length - 1 ? '%' : ',';
+    return `    ${item.hours}/${style}/${tex(label)}${tail}`;
+  });
   return [
     `\\cvsectionsidebar{${nohyphen(t.typicalDay)}}`,
     '\\wheelchart{1cm}{0.4cm}{%',
-    `    7/1em/accent!30/${tex(d.sleep)},`,
-    `    2/1em/accent!40/${tex(d.transport)},`,
-    `    9/1em/accent!60/${tex(d.work)},`,
-    `    3/10em/accent/${tex(d.courses)},`,
-    `    1/1em/accent/${tex(d.sport)},`,
-    `    6/1em/accent!20/${tex(d.home)}%`,
+    ...slices,
     '}',
   ].join('\n');
 }

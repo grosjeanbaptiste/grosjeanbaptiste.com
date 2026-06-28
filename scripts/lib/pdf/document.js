@@ -20,7 +20,7 @@ function generateLatex(resume, lang, limits) {
     '\\begin{paracol}{2}',
     buildSkillsBlock(resume, t),
     buildLanguagesBlock(resume, t),
-    buildDayBlock(t),
+    buildDayBlock(resume, t),
     '\\newpage',
     '\\switchcolumn',
     buildAbout(resume, t, limits),
