@@ -1,34 +1,37 @@
-const { tex, truncate, formatDate } = require('../tex');
+// Education block — rendered in the narrow left sidebar (~25% column),
+// so we drop the altacv \cvevent layout (too wide) and use a compact
+// vertical stack instead. Embedded skill tags and project lists from
+// resume.json are intentionally omitted here; they live in resume.json
+// for the HTML site / data consumers but would overflow the sidebar.
+const { tex, nohyphen, formatDate } = require('../tex');
 const { topN } = require('../data');
-const { appendItemTrailer } = require('./_trailer');
 
-function renderEducationEntry(e, lang, resume, t, limits) {
+function renderEducationEntry(e, lang, t) {
   const start = formatDate(e.startDate, lang);
   const end = formatDate(e.endDate, lang);
   const title = e.area ? `${tex(e.studyType)} ${tex(t.degreeIn)} ${tex(e.area)}` : tex(e.studyType);
   const parts = [
-    '\\par\\needspace{5\\baselineskip}',
-    `\\cvevent{${title}}{| ${tex(e.institution)}}{${tex(start)} -- ${tex(end)}}{}`,
+    `\\noindent\\raggedright{\\textcolor{emphasis}{\\bfseries ${title}}}\\par`,
+    `\\noindent\\raggedright{\\footnotesize\\textit{${tex(e.institution)}}}\\par`,
+    `\\noindent\\raggedright{\\footnotesize\\textcolor{accent}{${tex(start)} -- ${tex(end)}}}\\par`,
   ];
-  const bullets = [];
-  if (e.gpa) bullets.push(`${tex(t.gpa)}: ${tex(e.gpa)}`);
-  if (e.summary) bullets.push(tex(truncate(e.summary, limits.summary)));
-  if (bullets.length) {
-    parts.push('\\begin{itemize}');
-    for (const b of bullets) parts.push(`    \\item ${b}`);
-    parts.push('\\end{itemize}');
+  // gpa stays (short, useful); summary/skills/projects are intentionally
+  // omitted — too verbose for the narrow column and they'd push the fit
+  // loop past 2 pages. They remain in resume.json for the HTML site /
+  // data consumers / verso if anyone wants to re-render them elsewhere.
+  if (e.gpa) {
+    parts.push(`\\noindent\\raggedright{\\footnotesize ${tex(t.gpa)}: ${tex(e.gpa)}}\\par`);
   }
-  appendItemTrailer(parts, e, resume, t, limits);
   return parts;
 }
 
 function buildEducation(resume, t, lang, limits) {
   const selected = topN(resume.education, limits.education);
   if (!selected.length) return '';
-  const parts = [`\\cvsection{${tex(t.education)}}`];
+  const parts = [`\\cvsectionsidebar{${nohyphen(t.education)}}`];
   selected.forEach((e, i, arr) => {
-    parts.push(...renderEducationEntry(e, lang, resume, t, limits));
-    if (i < arr.length - 1) parts.push('\\divider');
+    parts.push(...renderEducationEntry(e, lang, t));
+    if (i < arr.length - 1) parts.push('\\smallskip\\divider\\par');
   });
   return parts.join('\n');
 }
