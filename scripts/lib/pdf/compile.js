@@ -65,7 +65,9 @@ function compileOnce(texContent, outPath, lang) {
 }
 
 // Try every fit plan in turn; stop at the first that produces a 2-page PDF
-// (recto + verso references). Returns the page count of the chosen plan.
+// (recto + verso references). If none fit the 2-page target, fall back to
+// plan 0 (most generous) so each page is filled — better balance than
+// settling on plan 5 with sparse main column.
 function compileWithFit(resume, lang, outPath) {
   for (let i = 0; i < FIT_PLANS.length; i += 1) {
     const limits = FIT_PLANS[i];
@@ -75,9 +77,14 @@ function compileWithFit(resume, lang, outPath) {
     console.log(`  ${lang} plan ${i} → ${pages} pages`);
     if (pages === 2) return { ok: true, plan: i, pages };
     if (pages === 1 && !resume.references?.length) return { ok: true, plan: i, pages };
-    if (i === FIT_PLANS.length - 1) return { ok: true, plan: i, pages };
   }
-  return { ok: false };
+  // No plan fits 2 pages: re-render with plan 0 (most content per page) so
+  // the spread stays balanced rather than ending with a near-empty page.
+  const tex = generateLatex(resume, lang, FIT_PLANS[0]);
+  const { ok, pages } = compileOnce(tex, outPath, lang);
+  if (!ok) return { ok: false };
+  console.log(`  ${lang} plan 0 (fallback) → ${pages} pages`);
+  return { ok: true, plan: 0, pages };
 }
 
 module.exports = { compileWithFit };

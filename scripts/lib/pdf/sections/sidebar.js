@@ -22,18 +22,15 @@ function buildSkillsBlock(resume, t) {
 
 function buildLanguagesBlock(resume, t) {
   if (!resume.languages?.length) return '';
-  // Vertical layout: language name (bold, emphasis colour) on line 1,
-  // fluency (small, accent colour) on line 2. `\divider` ends with `\medskip`
-  // but leaves TeX in horizontal mode — force `\par` so the next item's
-  // `\noindent` restarts at the column's left margin.
+  // Compact one-line-per-language layout: name in bold, fluency in accent
+  // colour on the same line. Saves ~6 lines vs the two-line+divider
+  // variant, which is what lets Education + day chart still fit on a
+  // single recto.
   const items = resume.languages
-    .map((l, i, arr) => {
-      const block = [
-        `\\noindent\\raggedright{\\textcolor{emphasis}{\\bfseries\\mbox{${tex(l.language)}}}}\\par`,
-        `\\noindent\\raggedright{\\footnotesize\\textcolor{accent}{${tex(l.fluency)}}}\\par`,
-      ].join('\n');
-      return i < arr.length - 1 ? `${block}\n\\smallskip\\divider\\par` : block;
-    })
+    .map(
+      (l) =>
+        `\\noindent\\raggedright{\\footnotesize\\textcolor{emphasis}{\\bfseries\\mbox{${tex(l.language)}}} — \\textcolor{accent}{${tex(l.fluency)}}}\\par`,
+    )
     .join('\n');
   return [`\\cvsectionsidebar{${nohyphen(t.languages)}}`, items].join('\n');
 }
