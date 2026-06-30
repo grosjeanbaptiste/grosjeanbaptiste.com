@@ -107,8 +107,6 @@ const FIT_PLANS = [
 
 module.exports = {
   ROOT,
-  RESUME_PATH: path.join(ROOT, 'assets/data/resume.json'),
-  I18N_DIR: path.join(ROOT, 'assets/data/i18n'),
   CLS_PATH: path.join(ROOT, 'latex/altacv.cls'),
   PROFILE_IMG: path.join(ROOT, 'assets/images/profil.jpeg'),
   OUTPUT_DIR: path.join(ROOT, 'assets/cv'),

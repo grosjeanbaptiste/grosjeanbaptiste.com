@@ -10,7 +10,9 @@ const { buildReferences } = require('./sections/extras');
 
 function generateLatex(resume, lang, limits) {
   const t = I18N[lang];
-  const verso = resume.references?.length ? `\\clearpage\n${buildReferences(resume, t)}` : '';
+  const verso = resume.references?.length
+    ? `\\clearpage\n\\begin{paracol}{2}\n\\switchcolumn\n${buildReferences(resume, t)}\n\\end{paracol}`
+    : '';
   return [
     buildPreamble(lang),
     '\\begin{document}',
