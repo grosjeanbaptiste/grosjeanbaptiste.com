@@ -40,7 +40,7 @@ jobs:
             texlive-fonts-recommended \
             texlive-xetex \
             texlive-lang-french \
-            texlive-lang-dutch \
+            texlive-lang-european \
             texlive-lang-spanish \
             texlive-lang-german \
             texlive-lang-chinese \
