@@ -46,6 +46,7 @@
           <xsl:when test="$k='minimal'">minimal</xsl:when>
           <xsl:when test="$k='rich'">riche</xsl:when>
           <xsl:when test="$k='renderedNote'">Rendu depuis</xsl:when>
+          <xsl:when test="$k='htmlSite'">Site</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'nl'">
@@ -67,6 +68,7 @@
           <xsl:when test="$k='minimal'">minimaal</xsl:when>
           <xsl:when test="$k='rich'">rijk</xsl:when>
           <xsl:when test="$k='renderedNote'">Gegenereerd uit</xsl:when>
+          <xsl:when test="$k='htmlSite'">Site</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'es'">
@@ -88,6 +90,7 @@
           <xsl:when test="$k='minimal'">mínimo</xsl:when>
           <xsl:when test="$k='rich'">enriquecido</xsl:when>
           <xsl:when test="$k='renderedNote'">Generado desde</xsl:when>
+          <xsl:when test="$k='htmlSite'">Sitio</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'de'">
@@ -109,6 +112,7 @@
           <xsl:when test="$k='minimal'">minimal</xsl:when>
           <xsl:when test="$k='rich'">reich</xsl:when>
           <xsl:when test="$k='renderedNote'">Generiert aus</xsl:when>
+          <xsl:when test="$k='htmlSite'">Website</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'zh'">
@@ -130,6 +134,7 @@
           <xsl:when test="$k='minimal'">简约</xsl:when>
           <xsl:when test="$k='rich'">丰富</xsl:when>
           <xsl:when test="$k='renderedNote'">来源</xsl:when>
+          <xsl:when test="$k='htmlSite'">网站</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
@@ -151,6 +156,7 @@
           <xsl:when test="$k='minimal'">minimal</xsl:when>
           <xsl:when test="$k='rich'">rich</xsl:when>
           <xsl:when test="$k='renderedNote'">Rendered from</xsl:when>
+          <xsl:when test="$k='htmlSite'">Site</xsl:when>
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
@@ -344,6 +350,17 @@
 
         <!-- ============== TOOLBAR ============== -->
         <div class="toolbar">
+
+          <!-- Back to HTML site -->
+          <a>
+            <xsl:attribute name="href">
+              <xsl:choose>
+                <xsl:when test="$lang = 'en'">/</xsl:when>
+                <xsl:otherwise>/<xsl:value-of select="$lang"/>/</xsl:otherwise>
+              </xsl:choose>
+            </xsl:attribute>
+            ↩ <xsl:call-template name="t"><xsl:with-param name="k" select="'htmlSite'"/></xsl:call-template>
+          </a>
 
           <!-- Language switcher -->
           <div class="group">

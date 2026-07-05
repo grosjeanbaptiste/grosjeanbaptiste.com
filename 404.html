@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Baptiste Grosjean</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#800020" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favicon-180.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <style>
+    :root {
+      --primary: #800020;
+      --accent:  #f3890b;
+      --body:    #2e2e2e;
+      --muted:   #666;
+      --bg:      #ffffff;
+      --rule:    #ddd;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #ff4d6d;
+        --accent:  #f3890b;
+        --body:    #ede0c8;
+        --muted:   #b89a82;
+        --bg:      #121212;
+        --rule:    #333;
+      }
+    }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: 'Roboto', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--body);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    .code {
+      font-size: clamp(120px, 22vw, 220px);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--primary);
+      margin-bottom: 8px;
+      letter-spacing: -4px;
+    }
+    .msg { font-size: 1.25em; margin: 0 0 4px; }
+    .sub { color: var(--muted); margin-bottom: 32px; }
+    .langs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      max-width: 520px;
+    }
+    .langs a {
+      color: var(--body);
+      background: transparent;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 0.95em;
+      font-weight: 500;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+    .langs a:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .langs a strong { font-weight: 700; letter-spacing: 0.5px; }
+    footer {
+      margin-top: 40px;
+      font-size: 0.85em;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="code">404</div>
+  <p class="msg" id="msg">Page not found.</p>
+  <p class="sub" id="sub">Try one of the language homes below.</p>
+
+  <nav class="langs" aria-label="Go to home in another language">
+    <a href="/"><strong>EN</strong> — Home</a>
+    <a href="/fr/"><strong>FR</strong> — Accueil</a>
+    <a href="/nl/"><strong>NL</strong> — Home</a>
+    <a href="/es/"><strong>ES</strong> — Inicio</a>
+    <a href="/de/"><strong>DE</strong> — Startseite</a>
+    <a href="/zh/"><strong>ZH</strong> — 首页</a>
+  </nav>
+
+  <footer>
+    <a href="/">grosjeanbaptiste.com</a>
+  </footer>
+
+  <script>
+    (function () {
+      var msgs = {
+        en: { msg: 'Page not found.',   sub: 'Try one of the language homes below.' },
+        fr: { msg: 'Page introuvable.', sub: 'Essayez une des langues ci-dessous.' },
+        nl: { msg: 'Pagina niet gevonden.', sub: 'Kies hieronder een taal.' },
+        es: { msg: 'Página no encontrada.', sub: 'Prueba uno de los idiomas abajo.' },
+        de: { msg: 'Seite nicht gefunden.', sub: 'Wähle unten eine Sprache.' },
+        zh: { msg: '页面未找到。', sub: '请从下方选择一种语言。' }
+      };
+      var lang = (navigator.language || 'en').slice(0, 2).toLowerCase();
+      var m = msgs[lang] || msgs.en;
+      document.getElementById('msg').textContent = m.msg;
+      document.getElementById('sub').textContent = m.sub;
+      document.documentElement.setAttribute('lang', lang in msgs ? lang : 'en');
+    })();
+  </script>
+</body>
+</html>

@@ -39,6 +39,7 @@
           <xsl:when test="$k='minimal'">minimal</xsl:when>
           <xsl:when test="$k='rich'">riche</xsl:when>
           <xsl:when test="$k='note'">Thème minimal XSLT 1.0. Données canoniques :</xsl:when>
+          <xsl:when test="$k='htmlSite'">Site</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'nl'">
@@ -61,6 +62,7 @@
           <xsl:when test="$k='minimal'">minimaal</xsl:when>
           <xsl:when test="$k='rich'">rijk</xsl:when>
           <xsl:when test="$k='note'">Minimaal XSLT 1.0-thema. Canonieke data:</xsl:when>
+          <xsl:when test="$k='htmlSite'">Site</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'es'">
@@ -83,6 +85,7 @@
           <xsl:when test="$k='minimal'">mínimo</xsl:when>
           <xsl:when test="$k='rich'">enriquecido</xsl:when>
           <xsl:when test="$k='note'">Tema mínimo XSLT 1.0. Datos canónicos:</xsl:when>
+          <xsl:when test="$k='htmlSite'">Sitio</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'de'">
@@ -105,6 +108,7 @@
           <xsl:when test="$k='minimal'">minimal</xsl:when>
           <xsl:when test="$k='rich'">reich</xsl:when>
           <xsl:when test="$k='note'">Minimales XSLT-1.0-Thema. Kanonische Daten:</xsl:when>
+          <xsl:when test="$k='htmlSite'">Website</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'zh'">
@@ -127,6 +131,7 @@
           <xsl:when test="$k='minimal'">简约</xsl:when>
           <xsl:when test="$k='rich'">丰富</xsl:when>
           <xsl:when test="$k='note'">极简 XSLT 1.0 主题。原始数据：</xsl:when>
+          <xsl:when test="$k='htmlSite'">网站</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
@@ -149,6 +154,7 @@
           <xsl:when test="$k='minimal'">minimal</xsl:when>
           <xsl:when test="$k='rich'">rich</xsl:when>
           <xsl:when test="$k='note'">Minimal XSLT 1.0 theme. Canonical data:</xsl:when>
+          <xsl:when test="$k='htmlSite'">Site</xsl:when>
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
@@ -292,6 +298,15 @@
 
         <!-- TOOLBAR -->
         <div class="toolbar">
+          <a>
+            <xsl:attribute name="href">
+              <xsl:choose>
+                <xsl:when test="$lang = 'en'">/</xsl:when>
+                <xsl:otherwise>/<xsl:value-of select="$lang"/>/</xsl:otherwise>
+              </xsl:choose>
+            </xsl:attribute>
+            ↩ <xsl:call-template name="t"><xsl:with-param name="k" select="'htmlSite'"/></xsl:call-template>
+          </a>
           <div class="group">
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'en'"/></xsl:call-template>
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'fr'"/></xsl:call-template>
