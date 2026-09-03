@@ -201,7 +201,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             studyType t{ en: "Master of Science - MS", fr: "Master en Sciences", nl: "Master of Science", es: "Máster en Ciencias", de: "Master of Science", zh: "理学硕士" }
             area t{ en: "Computer Science (work-study program) — specialised professional focus (120 ECTS)", fr: "Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)", nl: "Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)", es: "Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)", de: "Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)", zh: "计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS)" }
             period 2022-10-15..2026-09-03
-            score t{ en: "Obtained", fr: "Obtenu", nl: "Behaald", es: "Obtenido", de: "Erhalten", zh: "已获得" }
+            score t{ en: "13.04/20 — obtained with satisfaction", fr: "13,04/20 — obtenu avec satisfaction", nl: "13,04/20 — behaald met voldoening", es: "13,04/20 — obtenido con satisfacción", de: "13,04/20 — mit Befriedigung bestanden", zh: "13.04/20 — 以满意成绩获得" }
             // Thesis supervisor names removed on request (2026-09-03) — kept here for recovery:
             //   en: supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique
             //   fr: encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS

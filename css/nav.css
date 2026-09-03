@@ -168,7 +168,10 @@ nav ul li a:hover {
     text-align: center;
   }
 
-  nav a {
+  /* Only the dropdown section links go full-width block; scope this to
+   * `nav ul a` so the language codes in `.lang-switcher` keep their inline
+   * pill layout instead of stacking vertically at full width. */
+  nav ul a {
     display: block;
     padding: 1rem;
     width: 100%;

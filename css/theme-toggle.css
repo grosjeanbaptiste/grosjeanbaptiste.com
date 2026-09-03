@@ -57,9 +57,20 @@
 }
 
 @media (max-width: 768px) {
+  /* Collapse the toggle to an icon-only circle so the row (hamburger + six
+   * language codes + toggle) fits the phone width instead of pushing the
+   * toggle off the right edge. The text stays available to screen readers
+   * via the button's aria-label. */
   #theme-toggle {
-    padding: 8px 12px;
+    padding: 10px;
+    min-width: 44px;
     min-height: 44px;
+    justify-content: center;
+    gap: 0;
+  }
+
+  #theme-toggle span {
+    display: none;
   }
 
   .menu-toggle {
