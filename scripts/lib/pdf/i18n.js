@@ -16,6 +16,7 @@ module.exports = {
     degreeIn: 'in',
     gpa: 'GPA',
     updated: 'Updated',
+    inProgress: 'in progress',
   },
   fr: {
     ...sharedFr,
@@ -24,6 +25,7 @@ module.exports = {
     degreeIn: '—',
     gpa: 'Note',
     updated: 'Mis à jour le',
+    inProgress: 'en cours',
   },
   nl: {
     ...sharedNl,
@@ -32,6 +34,7 @@ module.exports = {
     degreeIn: '—',
     gpa: 'Score',
     updated: 'Bijgewerkt',
+    inProgress: 'in uitvoering',
   },
   es: {
     ...sharedEs,
@@ -40,6 +43,7 @@ module.exports = {
     degreeIn: '—',
     gpa: 'Nota',
     updated: 'Actualizado',
+    inProgress: 'en curso',
   },
   de: {
     ...sharedDe,
@@ -48,6 +52,7 @@ module.exports = {
     degreeIn: '—',
     gpa: 'Note',
     updated: 'Aktualisiert',
+    inProgress: 'läuft',
   },
   zh: {
     ...sharedZh,
@@ -56,5 +61,6 @@ module.exports = {
     degreeIn: '—',
     gpa: '成绩',
     updated: '更新于',
+    inProgress: '进行中',
   },
 };

@@ -15,6 +15,8 @@ module.exports = {
   inProgress: 'en cours',
   xmlResume: 'CV (XML + XSLT)',
   firefoxNote: 'à ouvrir avec Firefox',
+  jsonRegistry: 'CV (JSON Resume registry)',
+  jsonRegistryNote: 'rendus thématiques du JSON canonique',
   downloadCV: 'Télécharger le CV',
   dailyLifeUnit: 'h',
   dailyLifeAria: 'Répartition typique sur 24 h',

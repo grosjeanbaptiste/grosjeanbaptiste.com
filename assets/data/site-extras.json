@@ -1,0 +1,305 @@
+{
+  "_note": "Generated from resume.grosjean by dsl/compile.py. Do not hand-edit.",
+  "work": [
+    {
+      "skills": [
+        "Rust",
+        "Flutter",
+        "Dart",
+        "Tokio",
+        "Docker",
+        "DDD",
+        "CleanArchitecture"
+      ],
+      "projects": [
+        "Acteble"
+      ]
+    },
+    {
+      "skills": [
+        "Python",
+        "Java",
+        ".NET"
+      ]
+    },
+    {
+      "skills": [
+        "Dart",
+        "Flutter"
+      ],
+      "projects": [
+        "Emvi App"
+      ]
+    },
+    {
+      "skills": [
+        "Python",
+        "Whisper"
+      ],
+      "projects": [
+        "Remi"
+      ]
+    },
+    {
+      "skills": [
+        "Python",
+        "SpaCy",
+        "Pandas",
+        "NumPy",
+        ".NET"
+      ],
+      "projects": [
+        "VhAuctions NER Inventory Model"
+      ]
+    },
+    {
+      "skills": [
+        ".NET",
+        "DDD",
+        "CleanCode",
+        "CleanArchitecture"
+      ]
+    },
+    {
+      "skills": [
+        ".NET",
+        "React",
+        "SQL Server"
+      ],
+      "projects": [
+        "VhAuctions"
+      ],
+      "client": "VhAuctions"
+    },
+    {
+      "skills": [
+        ".NET",
+        "Blazor",
+        "SQL Server",
+        "DDD"
+      ],
+      "projects": [
+        "Kwalitijd"
+      ],
+      "client": "aXinco"
+    },
+    {
+      "skills": [
+        "SQL Server",
+        "Node.js",
+        "Express.js",
+        "React",
+        "Angular"
+      ],
+      "projects": [
+        "MyWay"
+      ]
+    },
+    null,
+    null,
+    {
+      "skills": [
+        ".NET",
+        "Flutter",
+        "SQL Server"
+      ],
+      "projects": [
+        "WebMenu"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "gpa": "Obtained",
+      "summary": "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons.",
+      "skills": [
+        "Python",
+        "LaTeX",
+        "DDD",
+        "CleanArchitecture"
+      ],
+      "projects": [
+        "Acteble"
+      ],
+      "courses": []
+    },
+    {
+      "gpa": "62.8%, Satis Bene",
+      "summary": "Student representative and tutor. \n\nTFE: WebMenu 2.0",
+      "skills": [
+        "SQL",
+        "C#",
+        ".NET",
+        "Java",
+        "Python",
+        "JS",
+        "HTML",
+        "CSS"
+      ],
+      "projects": [
+        "WebMenu"
+      ],
+      "courses": []
+    },
+    {
+      "gpa": "Attestation",
+      "courses": []
+    },
+    {
+      "gpa": "29 credits earned in 2016-2017, contact me for more information.",
+      "courses": []
+    },
+    {
+      "gpa": "Contact me for more information.",
+      "courses": []
+    },
+    {
+      "gpa": "Contact me for more information.",
+      "courses": []
+    },
+    {
+      "gpa": "Attestation ",
+      "courses": []
+    },
+    {
+      "gpa": "Satis bene",
+      "courses": []
+    },
+    {
+      "courses": []
+    }
+  ],
+  "projects": [
+    {
+      "summary": "Five layers: Rust CLI shell, link-grammar syntactic parser, SWI-Prolog symbolic engine, domain vocabulary packs, action executors."
+    },
+    {
+      "summary": "Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, zero external dependencies in the core."
+    },
+    {
+      "summary": "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend."
+    },
+    {
+      "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired."
+    },
+    {
+      "summary": "Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline."
+    },
+    null,
+    null,
+    {
+      "summary": "Named Entity Recognition machine learning model to extract inventory items from an audio transcription."
+    },
+    {
+      "summary": "Fleet manager for auctions."
+    },
+    {
+      "summary": "Survey manager for sports clubs and federations."
+    },
+    {
+      "summary": "QR code based cash register for HoReCa establishments."
+    }
+  ],
+  "dailyLife": {
+    "items": [
+      {
+        "key": "sleep",
+        "hours": 7,
+        "color": "#F3890B"
+      },
+      {
+        "key": "transport",
+        "hours": 2,
+        "color": "#FF0000"
+      },
+      {
+        "key": "work",
+        "hours": 8,
+        "color": "#001F5A"
+      },
+      {
+        "key": "classes",
+        "hours": 3,
+        "color": "#C0C0C0"
+      },
+      {
+        "key": "sport",
+        "hours": 2,
+        "color": "#008000"
+      },
+      {
+        "key": "others",
+        "hours": 2,
+        "color": "#FFFF00"
+      }
+    ]
+  },
+  "competitions": [
+    {
+      "key": "HackathonCOW2024",
+      "title": "Hackathon Citizens of Wallonia 2024",
+      "date": "2024-03-17",
+      "organizer": "Citizens of Wallonia",
+      "summary": "EduCraft — solution allowing anyone to craft a personalized path to gain new skills.",
+      "url": "https://www.cow.be"
+    },
+    {
+      "key": "HackathonCOW2023",
+      "title": "Hackathon Citizens of Wallonia 2023",
+      "date": "2023-03-31",
+      "organizer": "Citizens of Wallonia",
+      "summary": "OnlyTogether — solution ensuring vulnerable users are always accompanied.",
+      "url": "https://www.cow.be"
+    }
+  ],
+  "brand": {
+    "primary": "#800020",
+    "accent": "#F3890B",
+    "darkBg": "#121212",
+    "siteSecondary": "#ff0000",
+    "siteBody": "#666666",
+    "siteEmphasis": "#2e2e2e",
+    "siteBg": "#e2e2e2",
+    "siteCard": "#ffffff",
+    "siteBorder": "#dddddd",
+    "sitePrimaryDark": "#ff4d6d",
+    "siteSecondaryDark": "#ff6b6b",
+    "siteAccentDark": "#ffb347",
+    "siteBodyDark": "#cccccc",
+    "siteEmphasisDark": "#e0e0e0",
+    "siteCardDark": "#1e1e1e",
+    "siteBorderDark": "#333333",
+    "xsltPrimary": "#001F5A",
+    "xsltBody": "#2E2E2E",
+    "xsltMuted": "#666",
+    "xsltBg": "#ffffff",
+    "xsltRuleLight": "#E2E2E2",
+    "xsltRuleRich": "#ddd",
+    "xsltBlockMin": "#555",
+    "xsltTbBg": "#F7F7F7",
+    "xsltPrimaryDark": "#FFB142",
+    "xsltBodyDark": "#EDE0C8",
+    "xsltMutedDark": "#B89A82",
+    "xsltBgDark": "#1F0E0E",
+    "xsltSidebarDark": "#2E1818",
+    "xsltRuleDark": "#4A2828",
+    "xsltBlockMinDark": "#D4C0A0",
+    "fontXslt": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif",
+    "fontSite": "'Roboto', sans-serif"
+  },
+  "sectionOrder": [
+    "about",
+    "work",
+    "education",
+    "skills",
+    "languages",
+    "dailyLife",
+    "references"
+  ],
+  "sidebarOrder": [
+    "languages",
+    "projects",
+    "skills",
+    "dailyLife"
+  ]
+}

@@ -15,6 +15,8 @@ module.exports = {
   inProgress: '进行中',
   xmlResume: '简历 (XML + XSLT)',
   firefoxNote: '建议使用 Firefox 查看',
+  jsonRegistry: '简历 (JSON Resume registry)',
+  jsonRegistryNote: '规范 JSON 的主题化视图',
   downloadCV: '下载简历',
   dailyLifeUnit: '小时',
   dailyLifeAria: '24 小时典型分布',

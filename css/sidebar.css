@@ -24,7 +24,7 @@
   font-size: 0.9em;
 }
 
-.sidebar i {
+.sidebar svg.icon {
   margin-right: 8px;
 }
 
@@ -58,7 +58,7 @@
   word-break: break-word;
 }
 
-.contact-info i {
+.contact-info svg.icon {
   margin-right: 10px;
   min-width: 20px;
 }
@@ -71,7 +71,7 @@
   margin-bottom: 12px;
 }
 
-.contact-info .degree i {
+.contact-info .degree svg.icon {
   color: var(--third-color);
 }
 

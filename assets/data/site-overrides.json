@@ -1,0 +1,18 @@
+{
+  "_note": "Generated from resume.grosjean by dsl/compile.py. Do not hand-edit.",
+  "hideOnHtml": {
+    "education": [
+      "Solvay Brussels School of Economics and Management",
+      "Université libre de Bruxelles"
+    ]
+  },
+  "displayOverrides": {
+    "education": [
+      {
+        "match": "Université Saint-Louis - Bruxelles",
+        "reason": "DSL display override",
+        "endDate": "2017-06-30"
+      }
+    ]
+  }
+}

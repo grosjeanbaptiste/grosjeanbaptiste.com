@@ -1,3 +1,5 @@
+const { highestObtainedDegree, highestInProgressDegree, formatDegreeLine } = require('./degrees');
+
 const XML_ITEM_NAMES = {
   work: 'job',
   education: 'school',
@@ -13,6 +15,8 @@ const XML_ITEM_NAMES = {
   keywords: 'keyword',
   courses: 'course',
   roles: 'role',
+  sectionOrder: 'section',
+  sidebarOrder: 'section',
 };
 
 const xmlEsc = (s) =>
@@ -46,8 +50,17 @@ function emitXml(name, value, depth) {
 }
 
 function generateXml(resume, themePath = '../xslt/resume-transform.xsl', lang = 'en') {
-  // Inject <meta><lang> so the XSLT can pick up which language to render.
-  const tagged = { ...resume, meta: { ...(resume.meta || {}), lang } };
+  // Inject <meta><lang> and <meta><degrees>{inProgress,obtained} so the XSLT
+  // can render the "highest degree" summary lines that the HTML site shows —
+  // XSLT 1.0 has no reliable current-date primitive, so we pre-compute here.
+  const inProgress = formatDegreeLine(highestInProgressDegree(resume.education), lang);
+  const obtained = formatDegreeLine(highestObtainedDegree(resume.education), lang);
+  const degrees = {};
+  if (inProgress) degrees.inProgress = inProgress;
+  if (obtained) degrees.obtained = obtained;
+  const meta = { ...(resume.meta || {}), lang };
+  if (Object.keys(degrees).length) meta.degrees = degrees;
+  const tagged = { ...resume, meta };
   const body = emitXml('resume', tagged, 0);
   return `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="${themePath}"?>\n${body}\n`;
 }

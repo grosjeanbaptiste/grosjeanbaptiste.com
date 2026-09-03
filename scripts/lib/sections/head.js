@@ -60,7 +60,7 @@ function buildJsonLd(resume, lang, b, summary) {
   };
 }
 
-function buildMeta(b, lang, description, ogTitle, imageUrl, t, hardSkills) {
+function buildMeta(b, lang, description, ogTitle, imageUrl, t, hardSkills, brand) {
   const linkedinUrl =
     (b.profiles || []).map((p) => p.url).find((u) => /linkedin\.com/i.test(u || '')) || '';
   const linkedinUsername = linkedinUrl.split('/').filter(Boolean).pop() || '';
@@ -75,8 +75,8 @@ function buildMeta(b, lang, description, ogTitle, imageUrl, t, hardSkills) {
     '',
     '<!-- Browser chrome + PWA -->',
     '<meta name="color-scheme" content="light dark">',
-    '<meta name="theme-color" content="#800020" media="(prefers-color-scheme: light)">',
-    '<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">',
+    `<meta name="theme-color" content="${brand.primary}" media="(prefers-color-scheme: light)">`,
+    `<meta name="theme-color" content="${brand.darkBg}" media="(prefers-color-scheme: dark)">`,
     '<link rel="icon" href="/favicon.ico" sizes="any">',
     '<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">',
     '<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">',
@@ -128,9 +128,10 @@ function generateHead(resume, lang) {
   const summary = (b.summary || b.label || '').replace(/\s+/g, ' ').trim();
   const description = summary.length > 200 ? `${summary.slice(0, 197)}…` : summary;
   const ogTitle = `${b.name} — ${b.label}`;
-  const pageTitle = `${ogTitle} | ${t.pageTitleSuffix}`;
+  const pageTitle = `${b.name} | ${t.pageTitleSuffix}`;
   const { jsonld, imageUrl, hardSkills } = buildJsonLd(resume, lang, b, summary);
-  const metaLines = buildMeta(b, lang, description, ogTitle, imageUrl, t, hardSkills);
+  const brand = resume.meta?.brand ?? {};
+  const metaLines = buildMeta(b, lang, description, ogTitle, imageUrl, t, hardSkills, brand);
 
   return [
     `<title>${escapeHtml(pageTitle)}</title>`,

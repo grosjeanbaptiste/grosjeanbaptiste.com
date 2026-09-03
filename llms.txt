@@ -1,6 +1,6 @@
 # Baptiste Grosjean
 
-> AI Software Crafter Lead and Computer Science MSc student at UMons (Belgium). Founder of Acteble (Flutter mobile app + Rust backend). Based in Kraainem, Belgium. Experienced in software craftsmanship (clean code, clean architecture, DDD), AI integration, and full-stack development across Rust, Flutter, .NET, Python, and TypeScript.
+> AI Software Crafter Lead and Computer Science MSc graduate from UMons (Belgium). Founder of Acteble (Flutter mobile app + Rust backend). Based in Kraainem, Belgium. Experienced in software craftsmanship (clean code, clean architecture, DDD), AI integration, and full-stack development across Rust, Flutter, .NET, Python, and TypeScript.
 
 This is the personal portfolio and CV of Baptiste Grosjean, published at https://www.grosjeanbaptiste.com. The canonical machine-readable CV is exposed as JSON Resume v1.0.0 and mirrored in XML and PDF.
 

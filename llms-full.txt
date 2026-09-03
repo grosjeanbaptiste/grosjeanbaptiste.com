@@ -1,13 +1,13 @@
 # Baptiste Grosjean — CV
 
-> AI Software Crafter Lead and Computer Science MSc student at UMons (Belgium). Founder of Acteble. Strong focus on software craftsmanship (clean code, clean architecture, DDD).
+> AI Software Crafter Lead and Computer Science MSc graduate from UMons (Belgium). Founder of Acteble. Strong focus on software craftsmanship (clean code, clean architecture, DDD).
 
 Canonical machine-readable source: https://www.grosjeanbaptiste.com/assets/data/resume.json (JSON Resume v1.0.0). This file is a flat Markdown digest of the same data.
 
 ## Identity
 
 - **Name**: Baptiste Grosjean
-- **Title**: Computer Scientist | Student @UMons by night & AI Software Crafter by day
+- **Title**: Computer Scientist | MSc @UMons & AI Software Crafter
 - **Location**: Kraainem, Belgium (BE, region Brussels)
 - **Email**: grosjeanbaptisteit@outlook.com
 - **Phone**: +32 496 28 97 05
@@ -19,7 +19,7 @@ Canonical machine-readable source: https://www.grosjeanbaptiste.com/assets/data/
 
 ## Summary
 
-Computer science student @UMons by night, looking for a new opportunity by day while launching Acteble. All projects developed with a strong focus on Software Craftsmanship principles (clean code, clean architecture, DDD) as best practices for quality, maintainability and scalability.
+Computer Science MSc graduate from UMons, building Acteble. All projects developed with a strong focus on Software Craftsmanship principles (clean code, clean architecture, DDD) as best practices for quality, maintainability and scalability.
 
 ## Skills
 
@@ -117,11 +117,11 @@ Adaptability, Resilience, Leadership, Creativity, Initiative, Analysis, Flexibil
 
 ## Education
 
-### Master of Science — Computer Science (work-study program, 120 ECTS)
+### Master of Science — Computer Science (work-study program, specialised professional focus, 120 ECTS)
 - **Institution**: UMons
-- **Period**: 2022-10-15 — Present
+- **Period**: 2022-10-15 — 2026-09-03
 - **Location**: Charleroi, Belgium
-- **GPA**: In progress (MA2)
+- **GPA**: Obtained
 - Student representative & buddy TandeMons.
 
 ### Professional Bachelor's degree — Information Systems Management

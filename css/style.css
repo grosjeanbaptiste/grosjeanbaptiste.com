@@ -1,6 +1,6 @@
 /* Manifest: aggregates the per-component modules. Each module ≤ 200 lines. */
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import "fonts.css";
 @import "variables.css";
 @import "base.css";
 @import "nav.css";

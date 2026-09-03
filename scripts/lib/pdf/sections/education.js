@@ -1,10 +1,9 @@
-// Education block — rendered in the left sidebar (~30% column). The altacv
-// \cvevent layout is too wide for this column, so each entry is a compact
-// vertical stack: bold title, italic institution, accent-coloured date
-// range, optional gpa, optional summary. Skill tags and embedded projects
-// from resume.json are intentionally skipped — they would overflow the
-// narrow column. They remain available in resume.json for the HTML site /
-// data consumers.
+// Education block — rendered in the wide main column (right of the paracol
+// split), right below Work. Each entry uses the altacv \cvevent layout:
+// title (studyType in area) / institution / date range / gpa. Optional
+// summary paragraph follows underneath. Skill tags and embedded projects
+// from resume.json are intentionally skipped to stay inside the 2-page
+// budget; they remain available in resume.json for the HTML site.
 const { tex, nohyphen, formatDate, truncate } = require('../tex');
 const { topN } = require('../data');
 
@@ -19,14 +18,16 @@ function renderEducationEntry(e, lang, t, limits) {
   const start = formatDate(e.startDate, lang);
   const end = formatDate(e.endDate, lang);
   const title = e.area ? `${tex(e.studyType)} ${tex(t.degreeIn)} ${tex(e.area)}` : tex(e.studyType);
+  // Fixed-width \parbox columns so long titles wrap on their own side instead
+  // of eating \hfill and colliding with the institution. Top-aligned so both
+  // columns share a baseline.
   const parts = [
-    `\\noindent\\raggedright{\\textcolor{emphasis}{\\bfseries ${title}}}\\par`,
-    `\\noindent\\raggedright{\\footnotesize\\textit{${tex(e.institution)}}}\\par`,
-    `\\noindent\\raggedright{\\footnotesize\\textcolor{accent}{${tex(start)} -- ${tex(end)}}}\\par`,
+    '\\par\\needspace{4\\baselineskip}',
+    `\\noindent\\parbox[t]{0.62\\linewidth}{\\raggedright\\large\\color{emphasis}${title}}\\hfill\\parbox[t]{0.35\\linewidth}{\\raggedleft\\large\\color{accent}${tex(e.institution)}}\\par`,
+    `\\smallskip\\noindent{\\small\\color{accent}\\faCalendar\\color{emphasis}~${tex(start)} -- ${tex(end)}}\\hfill${
+      e.gpa ? `{\\small\\color{accent}\\faStar\\color{emphasis}~${tex(e.gpa)}}` : ''
+    }\\par\\medskip`,
   ];
-  if (e.gpa) {
-    parts.push(`\\noindent\\raggedright{\\footnotesize ${tex(t.gpa)}: ${tex(e.gpa)}}\\par`);
-  }
   const summary = renderSummary(e.summary, limits.summary);
   if (summary) parts.push(summary);
   return parts;
@@ -35,10 +36,10 @@ function renderEducationEntry(e, lang, t, limits) {
 function buildEducation(resume, t, lang, limits) {
   const selected = topN(resume.education, limits.education);
   if (!selected.length) return '';
-  const parts = [`\\cvsectionsidebar{${nohyphen(t.education)}}`];
+  const parts = [`\\cvsection{${nohyphen(t.education)}}`];
   selected.forEach((e, i, arr) => {
     parts.push(...renderEducationEntry(e, lang, t, limits));
-    if (i < arr.length - 1) parts.push('\\smallskip\\divider\\par');
+    if (i < arr.length - 1) parts.push('\\divider');
   });
   return parts.join('\n');
 }

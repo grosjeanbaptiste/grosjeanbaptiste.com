@@ -1,0 +1,37 @@
+name: Sync JSON Resume gist
+
+# Mirrors assets/data/resume.json into the public gist that
+# registry.jsonresume.org reads, so https://registry.jsonresume.org/
+# grosjeanbaptiste always renders the latest CV.
+#
+# Setup (one-off): create a fine-grained PAT with scope "Gists → write",
+# add it to this repo's Actions secrets as GIST_SYNC_TOKEN.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'assets/data/resume.json'
+      - '.github/workflows/sync-jsonresume-gist.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: sync-jsonresume-gist
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update gist
+        env:
+          GH_TOKEN: ${{ secrets.GIST_SYNC_TOKEN }}
+          GIST_ID: 8663cff307d8f5e53ba982b841ebcd6f
+        run: |
+          jq -n --rawfile content assets/data/resume.json \
+            '{files: {"resume.json": {content: $content}}}' \
+          | gh api "gists/${GIST_ID}" \
+              --method PATCH \
+              --input -

@@ -17,6 +17,10 @@
       "assets/cv/**",
       "assets/data/resume-*.xml",
       "assets/data/resume.xml",
+      "assets/data/resume.json",
+      "assets/data/site-extras.json",
+      "assets/data/site-overrides.json",
+      "assets/data/i18n/**",
       "package-lock.json"
     ]
   },

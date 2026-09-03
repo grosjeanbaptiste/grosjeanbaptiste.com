@@ -15,6 +15,8 @@ module.exports = {
   inProgress: 'läuft',
   xmlResume: 'Lebenslauf (XML + XSLT)',
   firefoxNote: 'am besten in Firefox ansehen',
+  jsonRegistry: 'Lebenslauf (JSON Resume registry)',
+  jsonRegistryNote: 'thematisierte Ansichten des kanonischen JSON',
   downloadCV: 'Lebenslauf herunterladen',
   dailyLifeUnit: 'h',
   dailyLifeAria: 'Typische Aufteilung von 24 Stunden',

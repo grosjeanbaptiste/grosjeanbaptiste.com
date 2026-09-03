@@ -4,6 +4,7 @@ const SITE_URL = 'https://www.grosjeanbaptiste.com';
 const ROOT = path.resolve(__dirname, '..', '..');
 const RESUME_PATH = path.join(ROOT, 'assets/data/resume.json');
 const I18N_DIR = path.join(ROOT, 'assets/data/i18n');
+const SITE_EXTRAS_PATH = path.join(ROOT, 'assets/data/site-extras.json');
 const TEMPLATE_PATH = path.join(ROOT, 'index.html');
 
 const LANGS = ['en', 'fr', 'nl', 'es', 'de', 'zh'];
@@ -16,6 +17,7 @@ module.exports = {
   ROOT,
   RESUME_PATH,
   I18N_DIR,
+  SITE_EXTRAS_PATH,
   TEMPLATE_PATH,
   LANGS,
   langPath,

@@ -1,0 +1,51 @@
+name: DSL (compile + tests)
+
+# The .grosjean DSL is the single source of truth for the CV. This workflow
+# guards two invariants on every change under dsl/:
+#   1. resume.grosjean parses and passes semantic validation.
+#   2. The committed assets/data artifacts are byte-identical to what the
+#      compiler produces — i.e. nobody edited the DSL without recompiling.
+# It then runs the DSL test suite (parser smoke, validators, roundtrip).
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'dsl/**'
+      - '.github/workflows/dsl.yml'
+  pull_request:
+    paths:
+      - 'dsl/**'
+      - '.github/workflows/dsl.yml'
+  workflow_dispatch:
+
+jobs:
+  dsl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install DSL dependencies
+        run: pip install -r dsl/requirements.txt
+
+      - name: Compile the DSL (parse + validate -> resume.json + sidecars)
+        run: python compile.py
+        working-directory: dsl
+
+      - name: Assert generated artifacts are in sync with the DSL source
+        run: |
+          if [[ -n "$(git status --porcelain assets/data)" ]]; then
+            echo "::error::dsl/resume.grosjean is out of sync with committed assets/data."
+            echo "Run 'python dsl/compile.py' locally and commit the regenerated files."
+            git --no-pager diff -- assets/data
+            exit 1
+          fi
+          echo "assets/data is in sync with dsl/resume.grosjean."
+
+      - name: Run DSL test suite
+        run: python -m pytest -q
+        working-directory: dsl

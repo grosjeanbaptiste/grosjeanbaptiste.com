@@ -1,70 +1,56 @@
 {
-  "_meta": {
-    "language": "fr",
-    "description": "Overlay FR. Mirror resume.json shape with translated text fields only. Arrays are matched by index — keep the same order as resume.json."
-  },
   "basics": {
+    "label": "Informaticien",
+    "summary": "Informaticien — Master en sciences informatiques de l'UMons — construisant Acteble.\n\nAu croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude Code, agents autonomes, pipelines RAG, développement mobile — ancré dans le Software Craftsmanship : clean code, clean architecture, architecture hexagonale, DDD, TDD.",
     "location": {
       "region": "Belgique"
-    },
-    "label": "Informaticien",
-    "summary": "Étudiant en informatique à l'UMons le soir, à la recherche d'une nouvelle opportunité de jour tout en lançant Acteble.\n\nTous les projets auxquels j'ai participé ont été développés avec une forte orientation Software Craftsmanship (clean code, clean architecture, DDD) afin de garantir les plus hauts standards de qualité, maintenabilité et évolutivité."
+    }
   },
   "work": [
     {
       "position": "Fondateur",
-      "summary": "Construction d'Acteble, plateforme sociale géo-localisée qui met en relation les voyageurs autour d'activités partagées sous contraintes spatio-temporelles et multicritères. Fondateur, architecte et développeur unique. La couche R&D tient lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.",
-      "location": "Bruxelles, Belgique"
+      "location": "Bruxelles, Belgique",
+      "summary": "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons."
     },
     {
       "position": "Chercheur en IA",
-      "summary": "Recherche et ingénierie IA pour le Parlement fédéral belge. Conception d'une plateforme interne permettant au personnel de chercher, explorer et converser avec les archives parlementaires. Auteur d'un protocole d'évaluation ouvert qui compare les stratégies de retrieval sur le corpus du Sénat, avec un focus sur la robustesse bilingue FR/NL.",
+      "company": "Sénat belge",
       "location": "Bruxelles, Belgique",
-      "company": "Sénat belge"
+      "summary": "Recherche et ingénierie IA pour le Parlement fédéral belge. Conception d'une plateforme interne permettant au personnel de chercher, explorer et converser avec les archives parlementaires. Auteur d'un protocole d'évaluation ouvert qui compare les stratégies de retrieval sur le corpus du Sénat, avec un focus sur la robustesse bilingue FR/NL."
     },
     {
       "position": "AI Software Crafter Lead",
-      "summary": "Emvi App : assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR & barres) et système de routage Valhalla adapté.",
-      "location": "Bruges, Belgique"
+      "location": "Bruges, Belgique",
+      "summary": "Direction technique et développement de la conception à la livraison : pipeline OCR, scan de codes et système de routage Valhalla adapté aux malvoyants."
     },
     {
       "position": "AI Software Crafter",
-      "summary": "Remi : application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil) pour la reconnaissance et analyse de sentiment pour les descriptions LLM.",
-      "location": "Bruges, Belgique"
+      "location": "Bruges, Belgique",
+      "summary": "Construction du pipeline de reconnaissance faciale (DeepFace / Serengil, détection + reconnaissance) et de la couche d'analyse de sentiment pour les descriptions de photos générées par LLM."
     },
     {
       "position": "Data Scientist",
-      "summary": "Bibliothèques Python (SpaCy…) pour extraire des entités nommées via entraînement d'un modèle NER et implémentation en .NET. Score de rappel du modèle : 87%.",
-      "location": "Anvers, Flandres, Belgique"
+      "location": "Anvers, Flandres, Belgique",
+      "summary": "Bibliothèques Python (SpaCy…) pour extraire des entités nommées via entraînement d'un modèle NER et implémentation en .NET. Score de rappel du modèle : 87%."
     },
     {
       "position": "Software Crafter",
-      "summary": "Modernisation logicielle dans la stack .NET en suivant les principes DDD et clean code. Implémentation de services Azure AI dans une solution .NET.",
-      "location": "Anvers, Flandres, Belgique"
+      "location": "Anvers, Flandres, Belgique",
+      "summary": "Modernisation logicielle dans la stack .NET en suivant les principes DDD et clean code. Implémentation de services Azure AI dans une solution .NET."
     },
     {
       "position": "Software Crafter .NET / React",
       "location": "Anvers, Flandres, Belgique"
     },
     {
-      "position": "Software Crafter",
-      "summary": "EduCraft : solution permettant à chacun de tracer son propre parcours personnalisé d'acquisition de compétences.",
-      "location": "Charleroi et périphérie"
-    },
-    {
       "position": "Software Crafter .NET / Blazor",
-      "summary": "Développement de la webapp Axinco Kwalitijd en .NET / Blazor selon les principes DDD et clean code.",
-      "location": "Anvers, Flandres, Belgique"
+      "location": "Anvers, Flandres, Belgique",
+      "summary": "Développement de la webapp en .NET / Blazor selon les principes DDD et clean code."
     },
     {
       "position": "Stagiaire développeur Full Stack Web",
-      "summary": "Formation qualifiante destinée à renforcer les compétences techniques acquises pendant mon bachelier à l'EPHEC.\nL'extension comprenait une introduction à la Business Intelligence et aux processus ETL (Data Warehousing) avec les outils Microsoft (SSIS, …).\nFormation couvrant SQL Server, Node.js, Express.js, React et Angular, du développement de base de données à l'interface utilisateur et au backend.",
-      "location": "Charleroi, Wallonie, Belgique"
-    },
-    {
-      "position": "Stagiaire développeur Full Stack Web",
-      "summary": "OnlyTogether : solution assurant que les utilisateurs vulnérables soient toujours accompagnés.",
-      "location": "Charleroi, Région wallonne, Belgique"
+      "location": "Charleroi, Wallonie, Belgique",
+      "summary": "Formation qualifiante destinée à renforcer les compétences techniques acquises pendant mon bachelier à l'EPHEC.\nL'extension comprenait une introduction à la Business Intelligence et aux processus ETL (Data Warehousing) avec les outils Microsoft (SSIS, …).\nFormation couvrant SQL Server, Node.js, Express.js, React et Angular, du développement de base de données à l'interface utilisateur et au backend."
     },
     {
       "position": "Stagiaire développeur Full Stack Web",
@@ -83,26 +69,12 @@
       "location": "Kraainem, Région flamande, Belgique"
     }
   ],
-  "volunteer": [
-    {
-      "position": "Délégué étudiant"
-    },
-    {
-      "position": "Buddy TandeMons"
-    },
-    {
-      "position": "Délégué étudiant"
-    },
-    {
-      "position": "Tuteur"
-    }
-  ],
   "education": [
     {
       "studyType": "Master en Sciences",
-      "area": "Informatique (en alternance) (120 ECTS)",
-      "gpa": "En cours (MA2)",
-      "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS. Implémentation Python de référence (50+ modules, 214 tests unitaires à 86 % de couverture branches, mypy --strict, typé PEP 561) avec reproductibilité bit-identique (datasets hashés SHA-256, tests de parité CLI/notebook). Rapport LaTeX de 110 pages. Délégué étudiant & buddy TandeMons."
+      "area": "Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)",
+      "gpa": "Obtenu",
+      "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons."
     },
     {
       "studyType": "Bachelier professionnalisant",
@@ -141,35 +113,47 @@
       "gpa": "Satis bene"
     },
     {
-      "studyType": "",
       "area": "Études générales — Latin et grec"
     }
   ],
-  "awards": [
+  "projects": [
     {
-      "title": "TOEIC",
-      "awarder": "ETS",
-      "summary": "730"
-    }
-  ],
-  "languages": [
-    {
-      "language": "Français",
-      "fluency": "Langue maternelle"
+      "description": "CLI de type shell interrogé en anglais contrôlé via une IA symbolique pure — aucun LLM dans la boucle.",
+      "summary": "Cinq couches : shell CLI Rust, parseur syntaxique link-grammar, moteur symbolique SWI-Prolog, packs de vocabulaire de domaine, exécuteurs d'actions."
     },
     {
-      "language": "Anglais",
-      "fluency": "B1+/B2 (TOEIC 730 / ELAO)"
+      "description": "Framework Rust indépendant du domaine pour benchmarker les pipelines Retrieval-Augmented Generation.",
+      "summary": "Conception hexagonale + DDD + TDD où chaque étape (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) est un composant interchangeable sélectionné par label, sans dépendances externes dans le core."
     },
     {
-      "language": "Néerlandais",
-      "fluency": "B1"
-    }
-  ],
-  "interests": [
+      "description": "Application mobile connectant les voyageurs pendant leurs trajets.",
+      "summary": "Développement d'une application mobile qui connecte les voyageurs pendant leurs trajets. Flutter pour l'app mobile, Rust pour le backend."
+    },
     {
-      "name": "Recherche et développement",
-      "keywords": ["Innovations", "Expérimentation", "POCs"]
+      "description": "Assistant visuel IA pour personnes malvoyantes.",
+      "summary": "Assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR & barres) et système de routage Valhalla adapté."
+    },
+    {
+      "description": "Application de réminiscence pour personnes souffrant de troubles cognitifs.",
+      "summary": "Application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil)."
+    },
+    {
+      "description": "Plateforme permettant à chacun d'acquérir de nouvelles compétences."
+    },
+    {
+      "description": "Gestionnaire de parcours éducatif pour étudiants. Plus maintenu ; la base de données et l'auth sont indisponibles."
+    },
+    {
+      "summary": "Modèle de Named Entity Recognition extrayant des éléments d'inventaire à partir d'une transcription audio."
+    },
+    {
+      "summary": "Gestionnaire de parc pour ventes aux enchères."
+    },
+    {
+      "summary": "Gestionnaire d'enquêtes pour clubs sportifs et fédérations."
+    },
+    {
+      "summary": "Caisse enregistreuse à base de QR codes pour les établissements HoReCa (Hôtel/Restaurant/Café)."
     }
   ],
   "references": [
@@ -198,43 +182,56 @@
       "reference": "Baptiste est un développeur formidable et dévoué, désireux de continuer à apprendre de nouvelles technologies et d'élever ses compétences. Vous seriez impressionnés non seulement par ses connaissances mais aussi par son enthousiasme chaleureux et ouvert. Baptiste, tu vas accomplir de grandes choses dans ta vie, garde ton esprit vibrant ✊ — (traduit depuis l'anglais)"
     }
   ],
-  "projects": [
+  "awards": [
     {
-      "description": "Application mobile connectant les voyageurs pendant leurs trajets.",
-      "summary": "Développement d'une application mobile qui connecte les voyageurs pendant leurs trajets. Flutter pour l'app mobile, Rust pour le backend.",
-      "type": "Application mobile",
-      "roles": ["Fondateur"]
+      "title": "TOEIC",
+      "awarder": "ETS",
+      "summary": "730"
+    }
+  ],
+  "competitions": [
+    {
+      "title": "Hackathon Citizens of Wallonia 2024",
+      "organizer": "Citizens of Wallonia",
+      "summary": "EduCraft — solution permettant à chacun de tracer son propre parcours personnalisé d'acquisition de compétences."
     },
     {
-      "description": "Assistant visuel IA pour personnes malvoyantes.",
-      "summary": "Assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR & barres) et système de routage Valhalla adapté.",
-      "type": "Application mobile"
+      "title": "Hackathon Citizens of Wallonia 2023",
+      "organizer": "Citizens of Wallonia",
+      "summary": "OnlyTogether — solution assurant que les utilisateurs vulnérables soient toujours accompagnés."
+    }
+  ],
+  "interests": [
+    {
+      "name": "Recherche et développement"
+    }
+  ],
+  "volunteer": [
+    {
+      "position": "Délégué étudiant"
     },
     {
-      "description": "Application de réminiscence pour personnes souffrant de troubles cognitifs.",
-      "summary": "Application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil).",
-      "type": "Application IA"
+      "position": "Buddy TandeMons"
     },
     {
-      "description": "Plateforme permettant à chacun d'acquérir de nouvelles compétences."
+      "position": "Délégué étudiant"
     },
     {
-      "description": "Gestionnaire de parcours éducatif pour étudiants. Plus maintenu ; la base de données et l'auth sont indisponibles.",
-      "highlights": ["UI/UX.", "Intégration d'APIs."],
-      "type": "Application web",
-      "roles": ["Fondateur"]
+      "position": "Tuteur"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Français",
+      "fluency": "Langue maternelle"
     },
     {
-      "summary": "Modèle de Named Entity Recognition extrayant des éléments d'inventaire à partir d'une transcription audio."
+      "language": "Anglais",
+      "fluency": "B1+/B2 (TOEIC 730 / ELAO)"
     },
     {
-      "summary": "Gestionnaire de parc pour ventes aux enchères."
-    },
-    {
-      "summary": "Gestionnaire d'enquêtes pour clubs sportifs et fédérations."
-    },
-    {
-      "summary": "Caisse enregistreuse à base de QR codes pour les établissements HoReCa (Hôtel/Restaurant/Café)."
+      "language": "Néerlandais",
+      "fluency": "B1"
     }
   ]
 }

@@ -1,4 +1,9 @@
 const { tex, nohyphen } = require('../tex');
+const {
+  highestInProgressDegree,
+  highestObtainedDegree,
+  formatDegreeLine,
+} = require('../../degrees');
 
 function buildSkillsBlock(resume, t) {
   // The "Currently Learning" sidebar block is intentionally omitted in the
@@ -65,4 +70,27 @@ function buildDayBlock(resume, t) {
   ].join('\n');
 }
 
-module.exports = { buildSkillsBlock, buildLanguagesBlock, buildDayBlock };
+function buildDegreesSummary(resume, t, lang) {
+  const inProgressLine = formatDegreeLine(highestInProgressDegree(resume.education), lang);
+  const obtainedLine = formatDegreeLine(highestObtainedDegree(resume.education), lang);
+  if (!inProgressLine && !obtainedLine) return '';
+  const parts = [`\\cvsectionsidebar{${nohyphen(t.education)}}`];
+  if (inProgressLine) {
+    parts.push(
+      `\\noindent\\raggedright{\\footnotesize\\faBookOpen\\ ${tex(inProgressLine)} \\textcolor{accent}{(${tex(t.inProgress)})}}\\par`,
+    );
+  }
+  if (obtainedLine) {
+    parts.push(
+      `\\noindent\\raggedright{\\footnotesize\\faGraduationCap\\ ${tex(obtainedLine)}}\\par`,
+    );
+  }
+  return parts.join('\n');
+}
+
+module.exports = {
+  buildSkillsBlock,
+  buildLanguagesBlock,
+  buildDayBlock,
+  buildDegreesSummary,
+};

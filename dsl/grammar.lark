@@ -1,0 +1,281 @@
+// Grammar for the ".grosjean" resume DSL.
+//
+// Design principles:
+//   * Every construct is a named or unnamed block: `Name { ... }` /
+//     `keyword { ... }`. Fields inside blocks are `key value` pairs.
+//   * Translations are typed literals: `t{ en: "..." fr: "..." nl: "..." }`.
+//     A bare "..." (no `t` prefix) is a monolingual string.
+//   * Dates are `YYYY-MM` or `YYYY-MM-DD` or the keyword `present`.
+//     Ranges use `..` (Rust/MiniZinc idiom, ASCII-safe).
+//   * Cross-references use `ref NAME` and resolve at validation time.
+//   * Arrays are `[value, value, ...]`; commas are mandatory between
+//     elements to keep the grammar LALR-friendly.
+//   * Comments: `// line` and `/* block */`.
+//
+// The compiler emits strict JSON Resume v1.0.0 into `resume.json` and
+// carries every DSL-specific construct (translations, uses, notes,
+// dailyLife, hide/display overrides) into companion sidecar files.
+
+start: resume
+
+resume: "resume" STRING "{" section+ "}"
+
+section: basics_section
+       | work_section
+       | education_section
+       | projects_section
+       | references_section
+       | skills_section
+       | languages_section
+       | awards_section
+       | competitions_section
+       | interests_section
+       | volunteer_section
+       | meta_section
+
+// ---------------------------------------------------------------------------
+// basics
+// ---------------------------------------------------------------------------
+
+basics_section: "basics" "{" basics_field+ "}"
+
+basics_field: "name" value                             -> basics_name
+            | "label" value                            -> basics_label
+            | "image" value                            -> basics_image
+            | "email" value                            -> basics_email
+            | "phone" value                            -> basics_phone
+            | "url" value                              -> basics_url
+            | "summary" value                          -> basics_summary
+            | "location" "{" location_field+ "}"       -> basics_location
+            | "profile" NAME value ("username" value)? -> basics_profile
+
+location_field: "address" value      -> location_address
+              | "postalCode" value   -> location_postal
+              | "city" value         -> location_city
+              | "countryCode" value  -> location_country_code
+              | "region" value       -> location_region
+
+// ---------------------------------------------------------------------------
+// work
+// ---------------------------------------------------------------------------
+
+work_section: "work" "{" work_entry+ "}"
+
+work_entry: NAME hide_flag? "{" work_field+ "}"
+
+work_field: "position" value              -> work_position
+          | "at" value                    -> work_at
+          | "client" value                -> work_client
+          | "url" value                   -> work_url
+          | "location" value              -> work_location
+          | "period" date_range           -> work_period
+          | "summary" value               -> work_summary
+          | "highlights" array            -> work_highlights
+          | "uses" array                  -> work_uses
+          | "projects" array              -> work_projects
+
+// ---------------------------------------------------------------------------
+// education
+// ---------------------------------------------------------------------------
+
+education_section: "education" "{" education_entry+ "}"
+
+education_entry: NAME hide_flag? "{" education_field+ "}"
+
+education_field: "institution" value         -> edu_institution
+               | "url" value                 -> edu_url
+               | "studyType" value           -> edu_studytype
+               | "area" value                -> edu_area
+               | "period" date_range         -> edu_period
+               | "score" value               -> edu_score
+               | "note" value                -> edu_note
+               | "courses" array             -> edu_courses
+               | "uses" array                -> edu_uses
+               | "projects" array            -> edu_projects
+               | "display" display_override  -> edu_display
+
+display_override: "period:" date_range   -> display_period
+
+// ---------------------------------------------------------------------------
+// projects
+// ---------------------------------------------------------------------------
+
+projects_section: "projects" "{" project_entry+ "}"
+
+project_entry: NAME "{" project_field+ "}"
+
+project_field: "name" value          -> proj_name
+             | "description" value   -> proj_description
+             | "summary" value       -> proj_summary
+             | "highlights" array    -> proj_highlights
+             | "keywords" array      -> proj_keywords
+             | "startDate" DATE      -> proj_start
+             | "endDate" DATE        -> proj_end
+             | "url" value           -> proj_url
+             | "type" value          -> proj_type
+             | "roles" array         -> proj_roles
+             | "entity" value        -> proj_entity
+
+// ---------------------------------------------------------------------------
+// references
+// ---------------------------------------------------------------------------
+
+references_section: "references" "{" reference_entry+ "}"
+
+reference_entry: NAME "{" reference_field+ "}"
+
+reference_field: "name" value      -> ref_name
+               | "quote" value     -> ref_quote
+
+// ---------------------------------------------------------------------------
+// skills / languages
+// ---------------------------------------------------------------------------
+
+skills_section: "skills" "{" skills_field+ "}"
+
+skills_field: "hard" array   -> skills_hard
+            | "soft" array   -> skills_soft
+            | "learning" array -> skills_learning
+
+languages_section: "languages" "{" language_entry+ "}"
+
+// Two forms: shorthand `French native`/`English "B1+/B2"` and block form
+// with translated display name + fluency.
+language_entry: NAME language_level        -> lang_short
+              | NAME "{" language_field+ "}" -> lang_block
+
+language_level: "native"     -> lang_native
+              | STRING       -> lang_level_string
+              | translation  -> lang_level_translation
+
+language_field: "language" value  -> lang_display
+              | "fluency" value   -> lang_fluency
+              | "native"          -> lang_native_flag
+
+// ---------------------------------------------------------------------------
+// awards / interests / volunteer
+// ---------------------------------------------------------------------------
+
+awards_section: "awards" "{" award_entry+ "}"
+
+award_entry: NAME "{" award_field+ "}"
+
+award_field: "title" value      -> award_title
+           | "date" DATE        -> award_date
+           | "awarder" value    -> award_awarder
+           | "summary" value    -> award_summary
+
+competitions_section: "competitions" "{" competition_entry+ "}"
+
+competition_entry: NAME "{" competition_field+ "}"
+
+competition_field: "title" value      -> comp_title
+                 | "date" DATE        -> comp_date
+                 | "organizer" value  -> comp_organizer
+                 | "summary" value    -> comp_summary
+                 | "url" value        -> comp_url
+
+interests_section: "interests" "{" interest_entry+ "}"
+
+interest_entry: NAME "{" interest_field+ "}"
+
+interest_field: "name" value       -> interest_name
+              | "keywords" array   -> interest_keywords
+
+volunteer_section: "volunteer" "{" volunteer_entry+ "}"
+
+volunteer_entry: NAME "{" volunteer_field+ "}"
+
+volunteer_field: "position" value       -> vol_position
+               | "organization" value   -> vol_org
+               | "url" value            -> vol_url
+               | "period" date_range    -> vol_period
+               | "summary" value        -> vol_summary
+               | "highlights" array     -> vol_highlights
+
+// ---------------------------------------------------------------------------
+// meta / dailyLife
+// ---------------------------------------------------------------------------
+
+meta_section: "meta" "{" meta_field+ "}"
+
+meta_field: "theme" value                    -> meta_theme
+          | "dailyLife" "{" daily_item+ "}"  -> meta_daily
+          | "brand" "{" brand_field+ "}"     -> meta_brand
+          | "sectionOrder" "[" section_name+ "]"  -> meta_section_order
+          | "sidebarOrder" "[" section_name+ "]"  -> meta_sidebar_order
+
+daily_item: NAME NUMBER "color" STRING
+
+brand_field: NAME STRING
+
+section_name: NAME
+
+// ---------------------------------------------------------------------------
+// Shared: values, arrays, dates, translations, refs, flags
+// ---------------------------------------------------------------------------
+
+value: STRING              -> plain_string
+     | translation         -> t_string
+     | NUMBER              -> num_lit
+     | BOOL                -> bool_lit
+     | NAME                -> bare_name
+     | ref_expr            -> ref_value
+
+translation: "t" "{" translation_entry ("," translation_entry)* ","? "}"
+
+translation_entry: LANG_CODE ":" STRING
+
+array: "[" array_item ("," array_item)* ","? "]"
+     | "[" "]"                                       -> empty_array
+
+array_item: STRING          -> arr_string
+          | NAME             -> arr_name
+          | ref_expr         -> arr_ref
+          | NUMBER           -> arr_num
+
+ref_expr: "ref" NAME
+
+date_range: date_start ".." date_end
+date_start: DATE            -> ds_date
+date_end:   DATE            -> de_date
+          | "present"       -> de_present
+
+hide_flag: "hide" "on" ":" TARGET
+
+// ---------------------------------------------------------------------------
+// Terminals
+// ---------------------------------------------------------------------------
+
+// Language codes accepted by the DSL. Extend with the site's supported set.
+LANG_CODE: "en" | "fr" | "nl" | "es" | "de" | "zh"
+
+// Hide flags: which output pipeline drops the entry.
+TARGET.2: "html" | "pdf" | "both"
+
+// Boolean values
+BOOL: "true" | "false"
+
+// Date: YYYY-MM or YYYY-MM-DD. `present` is handled as a keyword above.
+DATE: /\d{4}-\d{2}(-\d{2})?/
+
+// Identifier: any sequence of letters/digits/underscore/dash starting
+// with a letter or underscore.
+NAME: /[A-Za-z_][A-Za-z0-9_-]*/
+
+// Numeric literal (integer or float).
+NUMBER: /-?\d+(\.\d+)?/
+
+// Strings: single-line "..." with backslash escapes, or triple-quoted
+// """..."""  spanning multiple lines. Triple-quoted strings preserve
+// newlines verbatim; leading indent is trimmed by the parser.
+STRING: TRIPLE_STRING | SINGLE_STRING
+SINGLE_STRING: /"([^"\\]|\\.)*"/
+TRIPLE_STRING: /"{3}[\s\S]*?"{3}/
+
+// Comments and whitespace are discarded.
+LINE_COMMENT: /\/\/[^\n]*/
+BLOCK_COMMENT: /\/\*[\s\S]*?\*\//
+%ignore LINE_COMMENT
+%ignore BLOCK_COMMENT
+%ignore /[ \t\r\n]+/

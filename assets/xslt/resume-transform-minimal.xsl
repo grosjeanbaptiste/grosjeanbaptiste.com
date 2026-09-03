@@ -9,6 +9,8 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="html" indent="yes"/>
 
+  <xsl:key name="project-by-name" match="/resume/projects/project[name]" use="name"/>
+
   <xsl:variable name="lang">
     <xsl:choose>
       <xsl:when test="/resume/meta/lang"><xsl:value-of select="/resume/meta/lang"/></xsl:when>
@@ -33,6 +35,7 @@
           <xsl:when test="$k='references'">Références</xsl:when>
           <xsl:when test="$k='viewProject'">Voir le projet</xsl:when>
           <xsl:when test="$k='present'">aujourd'hui</xsl:when>
+          <xsl:when test="$k='inProgress'">en cours</xsl:when>
           <xsl:when test="$k='downloadCV'">Télécharger le CV</xsl:when>
           <xsl:when test="$k='dark'">Mode sombre</xsl:when>
           <xsl:when test="$k='light'">Mode clair</xsl:when>
@@ -40,6 +43,8 @@
           <xsl:when test="$k='rich'">riche</xsl:when>
           <xsl:when test="$k='note'">Thème minimal XSLT 1.0. Données canoniques :</xsl:when>
           <xsl:when test="$k='htmlSite'">Site</xsl:when>
+          <xsl:when test="$k='typicalDay'">Une journée type</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'nl'">
@@ -56,12 +61,15 @@
           <xsl:when test="$k='references'">Referenties</xsl:when>
           <xsl:when test="$k='viewProject'">Bekijk project</xsl:when>
           <xsl:when test="$k='present'">heden</xsl:when>
+          <xsl:when test="$k='inProgress'">in uitvoering</xsl:when>
           <xsl:when test="$k='downloadCV'">CV downloaden</xsl:when>
           <xsl:when test="$k='dark'">Donkere modus</xsl:when>
           <xsl:when test="$k='light'">Lichte modus</xsl:when>
           <xsl:when test="$k='minimal'">minimaal</xsl:when>
           <xsl:when test="$k='rich'">rijk</xsl:when>
           <xsl:when test="$k='note'">Minimaal XSLT 1.0-thema. Canonieke data:</xsl:when>
+          <xsl:when test="$k='typicalDay'">Een typische dag</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
           <xsl:when test="$k='htmlSite'">Site</xsl:when>
         </xsl:choose>
       </xsl:when>
@@ -79,12 +87,15 @@
           <xsl:when test="$k='references'">Referencias</xsl:when>
           <xsl:when test="$k='viewProject'">Ver proyecto</xsl:when>
           <xsl:when test="$k='present'">actualidad</xsl:when>
+          <xsl:when test="$k='inProgress'">en curso</xsl:when>
           <xsl:when test="$k='downloadCV'">Descargar CV</xsl:when>
           <xsl:when test="$k='dark'">Modo oscuro</xsl:when>
           <xsl:when test="$k='light'">Modo claro</xsl:when>
           <xsl:when test="$k='minimal'">mínimo</xsl:when>
           <xsl:when test="$k='rich'">enriquecido</xsl:when>
           <xsl:when test="$k='note'">Tema mínimo XSLT 1.0. Datos canónicos:</xsl:when>
+          <xsl:when test="$k='typicalDay'">Un día típico</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
           <xsl:when test="$k='htmlSite'">Sitio</xsl:when>
         </xsl:choose>
       </xsl:when>
@@ -102,12 +113,15 @@
           <xsl:when test="$k='references'">Referenzen</xsl:when>
           <xsl:when test="$k='viewProject'">Projekt ansehen</xsl:when>
           <xsl:when test="$k='present'">heute</xsl:when>
+          <xsl:when test="$k='inProgress'">läuft</xsl:when>
           <xsl:when test="$k='downloadCV'">Lebenslauf herunterladen</xsl:when>
           <xsl:when test="$k='dark'">Dunkler Modus</xsl:when>
           <xsl:when test="$k='light'">Heller Modus</xsl:when>
           <xsl:when test="$k='minimal'">minimal</xsl:when>
           <xsl:when test="$k='rich'">reich</xsl:when>
           <xsl:when test="$k='note'">Minimales XSLT-1.0-Thema. Kanonische Daten:</xsl:when>
+          <xsl:when test="$k='typicalDay'">Ein typischer Tag</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
           <xsl:when test="$k='htmlSite'">Website</xsl:when>
         </xsl:choose>
       </xsl:when>
@@ -125,12 +139,15 @@
           <xsl:when test="$k='references'">推荐人</xsl:when>
           <xsl:when test="$k='viewProject'">查看项目</xsl:when>
           <xsl:when test="$k='present'">至今</xsl:when>
+          <xsl:when test="$k='inProgress'">进行中</xsl:when>
           <xsl:when test="$k='downloadCV'">下载简历</xsl:when>
           <xsl:when test="$k='dark'">深色模式</xsl:when>
           <xsl:when test="$k='light'">浅色模式</xsl:when>
           <xsl:when test="$k='minimal'">简约</xsl:when>
           <xsl:when test="$k='rich'">丰富</xsl:when>
           <xsl:when test="$k='note'">极简 XSLT 1.0 主题。原始数据：</xsl:when>
+          <xsl:when test="$k='typicalDay'">我的一天</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
           <xsl:when test="$k='htmlSite'">网站</xsl:when>
         </xsl:choose>
       </xsl:when>
@@ -148,12 +165,15 @@
           <xsl:when test="$k='references'">References</xsl:when>
           <xsl:when test="$k='viewProject'">View project</xsl:when>
           <xsl:when test="$k='present'">Present</xsl:when>
+          <xsl:when test="$k='inProgress'">in progress</xsl:when>
           <xsl:when test="$k='downloadCV'">Download CV</xsl:when>
           <xsl:when test="$k='dark'">Dark mode</xsl:when>
           <xsl:when test="$k='light'">Light mode</xsl:when>
           <xsl:when test="$k='minimal'">minimal</xsl:when>
           <xsl:when test="$k='rich'">rich</xsl:when>
           <xsl:when test="$k='note'">Minimal XSLT 1.0 theme. Canonical data:</xsl:when>
+          <xsl:when test="$k='typicalDay'">A Day of My Life</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
           <xsl:when test="$k='htmlSite'">Site</xsl:when>
         </xsl:choose>
       </xsl:otherwise>
@@ -165,30 +185,31 @@
       <xsl:attribute name="lang"><xsl:value-of select="$lang"/></xsl:attribute>
       <head>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title><xsl:value-of select="basics/name"/> — Resume</title>
         <style>
           :root {
-            --primary: #001F5A;
-            --accent:  #F3890B;
-            --muted:   #666;
-            --body:    #2E2E2E;
-            --bg:      #ffffff;
-            --rule:    #E2E2E2;
-            --block:   #555;
-            --tb-bg:   #F7F7F7;
+            --primary: <xsl:value-of select="meta/brand/xsltPrimary"/>;
+            --accent:  <xsl:value-of select="meta/brand/accent"/>;
+            --muted:   <xsl:value-of select="meta/brand/xsltMuted"/>;
+            --body:    <xsl:value-of select="meta/brand/xsltBody"/>;
+            --bg:      <xsl:value-of select="meta/brand/xsltBg"/>;
+            --rule:    <xsl:value-of select="meta/brand/xsltRuleLight"/>;
+            --block:   <xsl:value-of select="meta/brand/xsltBlockMin"/>;
+            --tb-bg:   <xsl:value-of select="meta/brand/xsltTbBg"/>;
           }
           html[data-theme="dark"] {
-            --primary: #FFB142;
-            --accent:  #FFB142;
-            --muted:   #B89A82;
-            --body:    #EDE0C8;
-            --bg:      #1F0E0E;
-            --rule:    #4A2828;
-            --block:   #D4C0A0;
-            --tb-bg:   #2E1818;
+            --primary: <xsl:value-of select="meta/brand/xsltPrimaryDark"/>;
+            --accent:  <xsl:value-of select="meta/brand/accent"/>;
+            --muted:   <xsl:value-of select="meta/brand/xsltMutedDark"/>;
+            --body:    <xsl:value-of select="meta/brand/xsltBodyDark"/>;
+            --bg:      <xsl:value-of select="meta/brand/xsltBgDark"/>;
+            --rule:    <xsl:value-of select="meta/brand/xsltRuleDark"/>;
+            --block:   <xsl:value-of select="meta/brand/xsltBlockMinDark"/>;
+            --tb-bg:   <xsl:value-of select="meta/brand/xsltSidebarDark"/>;
           }
           body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-family: <xsl:value-of select="meta/brand/fontXslt"/>;
             max-width: 880px;
             margin: 0 auto;
             padding: 0 24px 48px;
@@ -248,6 +269,7 @@
             letter-spacing: 0.02em;
           }
           h3 { font-size: 1em; margin: 14px 0 2px; }
+          h3 .company { color: var(--accent); }
           .label { color: var(--muted); font-style: italic; margin-bottom: 10px; }
           .meta-bar { font-size: 0.9em; color: var(--muted); margin-bottom: 8px; }
           .meta-bar span { margin-right: 14px; white-space: nowrap; }
@@ -280,6 +302,42 @@
             border-top: 1px solid var(--rule);
             font-size: 0.85em;
             color: var(--muted);
+          }
+          @media (max-width: 768px) {
+            body { padding: 0 18px 32px; }
+            .toolbar {
+              margin: 0 -18px 22px;
+              padding: 6px 12px;
+              font-size: 0.8em;
+              gap: 8px;
+            }
+            .toolbar a, .toolbar button { padding: 3px 7px; font-size: 0.85em; }
+            h1 { font-size: 1.65em; }
+            h2 { font-size: 1.05em; margin-top: 24px; }
+            h3 { font-size: 0.98em; }
+          }
+          @media (max-width: 480px) {
+            body { padding: 0 12px 24px; font-size: 15px; line-height: 1.5; }
+            .toolbar {
+              margin: 0 -12px 18px;
+              padding: 6px 8px;
+              gap: 5px;
+              justify-content: flex-start;
+              overflow-x: auto;
+              flex-wrap: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+            .toolbar .group { gap: 4px; flex-shrink: 0; }
+            .toolbar a, .toolbar button {
+              padding: 3px 6px;
+              font-size: 0.8em;
+              white-space: nowrap;
+            }
+            h1 { font-size: 1.4em; }
+            h2 { font-size: 1em; }
+            h3 { font-size: 0.95em; }
+            .meta-bar span { display: block; margin-right: 0; margin-bottom: 3px; }
+            blockquote { font-size: 0.9em; padding-left: 12px; }
           }
           @media print { .toolbar { display: none; } }
         </style>
@@ -315,16 +373,14 @@
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'de'"/></xsl:call-template>
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'zh'"/></xsl:call-template>
           </div>
-          <div class="group">
-            <a>
-              <xsl:attribute name="href">/assets/data/resume-<xsl:value-of select="$lang"/>.xml</xsl:attribute>
+          <!-- Theme toggle: single button pointing to the OTHER theme. -->
+          <a>
+            <xsl:attribute name="href">/assets/data/resume-<xsl:value-of select="$lang"/>.xml</xsl:attribute>
+            <xsl:attribute name="title">
               <xsl:call-template name="t"><xsl:with-param name="k" select="'rich'"/></xsl:call-template>
-            </a>
-            <a class="active">
-              <xsl:attribute name="href">/assets/data/resume-<xsl:value-of select="$lang"/>-minimal.xml</xsl:attribute>
-              <xsl:call-template name="t"><xsl:with-param name="k" select="'minimal'"/></xsl:call-template>
-            </a>
-          </div>
+            </xsl:attribute>
+            ⇄ <xsl:call-template name="t"><xsl:with-param name="k" select="'rich'"/></xsl:call-template>
+          </a>
           <button type="button" id="theme-toggle" aria-pressed="false">
             <span id="theme-toggle-label">
               <xsl:call-template name="t"><xsl:with-param name="k" select="'dark'"/></xsl:call-template>
@@ -339,6 +395,21 @@
 
         <h1><xsl:value-of select="basics/name"/></h1>
         <div class="label"><xsl:value-of select="basics/label"/></div>
+
+        <xsl:if test="meta/degrees/inProgress or meta/degrees/obtained">
+          <div class="degrees">
+            <xsl:if test="meta/degrees/inProgress">
+              <p class="degree degree-in-progress">
+                <xsl:value-of select="meta/degrees/inProgress"/>
+                <xsl:text> </xsl:text>
+                <span class="muted">(<xsl:call-template name="t"><xsl:with-param name="k" select="'inProgress'"/></xsl:call-template>)</span>
+              </p>
+            </xsl:if>
+            <xsl:if test="meta/degrees/obtained">
+              <p class="degree degree-obtained"><xsl:value-of select="meta/degrees/obtained"/></p>
+            </xsl:if>
+          </div>
+        </xsl:if>
 
         <div class="meta-bar">
           <xsl:if test="basics/email">
@@ -357,177 +428,29 @@
           </xsl:for-each>
         </div>
 
-        <xsl:if test="basics/summary">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
-          <p><xsl:value-of select="basics/summary"/></p>
-        </xsl:if>
-
-        <xsl:if test="work/job">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'experience'"/></xsl:call-template></h2>
-          <xsl:for-each select="work/job">
-            <div class="row">
-              <h3>
-                <xsl:value-of select="position"/>
-                <xsl:if test="company"> — <xsl:value-of select="company"/></xsl:if>
-              </h3>
-              <div class="muted">
-                <xsl:value-of select="startDate"/>
-                <xsl:text> – </xsl:text>
-                <xsl:choose>
-                  <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
-                  <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
-                </xsl:choose>
-                <xsl:if test="location"> · <xsl:value-of select="location"/></xsl:if>
-                <xsl:if test="url"> · <a><xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute><xsl:value-of select="url"/></a></xsl:if>
-              </div>
-              <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
-              <xsl:if test="highlights/highlight">
-                <ul>
-                  <xsl:for-each select="highlights/highlight"><li><xsl:value-of select="."/></li></xsl:for-each>
-                </ul>
-              </xsl:if>
-            </div>
-          </xsl:for-each>
-        </xsl:if>
-
-        <xsl:if test="education/school">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'education'"/></xsl:call-template></h2>
-          <xsl:for-each select="education/school">
-            <div class="row">
-              <h3>
-                <xsl:value-of select="studyType"/>
-                <xsl:if test="area"> — <xsl:value-of select="area"/></xsl:if>
-              </h3>
-              <div class="muted">
-                <xsl:value-of select="institution"/>
-                <xsl:text> · </xsl:text>
-                <xsl:value-of select="startDate"/>
-                <xsl:text> – </xsl:text>
-                <xsl:choose>
-                  <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
-                  <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
-                </xsl:choose>
-              </div>
-              <xsl:if test="gpa"><div class="muted"><xsl:value-of select="gpa"/></div></xsl:if>
-              <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
-            </div>
-          </xsl:for-each>
-        </xsl:if>
-
-        <xsl:if test="volunteer/volunteer-item">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template></h2>
-          <xsl:for-each select="volunteer/volunteer-item">
-            <div class="row">
-              <h3><xsl:value-of select="position"/> — <xsl:value-of select="organization"/></h3>
-              <div class="muted">
-                <xsl:value-of select="startDate"/>
-                <xsl:text> – </xsl:text>
-                <xsl:choose>
-                  <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
-                  <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
-                </xsl:choose>
-              </div>
-              <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
-            </div>
-          </xsl:for-each>
-        </xsl:if>
-
-        <xsl:if test="projects/project">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template></h2>
-          <xsl:for-each select="projects/project">
-            <div class="row">
-              <h3><xsl:value-of select="name"/></h3>
-              <div class="muted">
-                <xsl:value-of select="startDate"/>
-                <xsl:text> – </xsl:text>
-                <xsl:choose>
-                  <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
-                  <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
-                </xsl:choose>
-                <xsl:if test="type"> · <xsl:value-of select="type"/></xsl:if>
-              </div>
-              <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
-              <xsl:if test="description"><p><xsl:value-of select="description"/></p></xsl:if>
-              <xsl:if test="keywords/keyword">
-                <div>
-                  <xsl:for-each select="keywords/keyword">
-                    <span class="tag"><xsl:value-of select="."/></span>
-                  </xsl:for-each>
-                </div>
-              </xsl:if>
-              <xsl:if test="url">
-                <div><a><xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute><xsl:call-template name="t"><xsl:with-param name="k" select="'viewProject'"/></xsl:call-template></a></div>
-              </xsl:if>
-            </div>
-          </xsl:for-each>
-        </xsl:if>
-
-        <xsl:if test="skills/skill">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'skills'"/></xsl:call-template></h2>
-          <xsl:for-each select="skills/skill">
-            <h3><xsl:value-of select="name"/></h3>
-            <xsl:if test="keywords/keyword">
-              <div>
-                <xsl:for-each select="keywords/keyword">
-                  <span class="tag"><xsl:value-of select="."/></span>
-                </xsl:for-each>
-              </div>
-            </xsl:if>
-          </xsl:for-each>
-        </xsl:if>
-
-        <xsl:if test="languages/language-item">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'languages'"/></xsl:call-template></h2>
-          <ul>
-            <xsl:for-each select="languages/language-item">
-              <li><strong><xsl:value-of select="language"/></strong>: <xsl:value-of select="fluency"/></li>
-            </xsl:for-each>
-          </ul>
-        </xsl:if>
-
-        <xsl:if test="awards/award">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'awards'"/></xsl:call-template></h2>
-          <ul>
-            <xsl:for-each select="awards/award">
-              <li>
-                <strong><xsl:value-of select="title"/></strong>
-                <xsl:if test="awarder"> — <xsl:value-of select="awarder"/></xsl:if>
-                <xsl:if test="date"> (<xsl:value-of select="date"/>)</xsl:if>
-                <xsl:if test="summary">: <xsl:value-of select="summary"/></xsl:if>
-              </li>
-            </xsl:for-each>
-          </ul>
-        </xsl:if>
-
-        <xsl:if test="interests/interest">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'interests'"/></xsl:call-template></h2>
-          <xsl:for-each select="interests/interest">
-            <div class="row">
-              <strong><xsl:value-of select="name"/></strong>
-              <xsl:if test="keywords/keyword">:
-                <xsl:for-each select="keywords/keyword">
-                  <xsl:if test="position() &gt; 1">, </xsl:if>
-                  <xsl:value-of select="."/>
-                </xsl:for-each>
-              </xsl:if>
-            </div>
-          </xsl:for-each>
-        </xsl:if>
-
-        <xsl:if test="references/reference">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
-          <xsl:for-each select="references/reference">
-            <div class="row">
-              <div class="ref-author"><xsl:value-of select="name"/></div>
-              <blockquote><xsl:value-of select="reference"/></blockquote>
-            </div>
-          </xsl:for-each>
-        </xsl:if>
+        <xsl:for-each select="meta/sectionOrder/section">
+          <xsl:variable name="name" select="."/>
+          <xsl:choose>
+            <xsl:when test="$name='about'"><xsl:call-template name="section-about"/></xsl:when>
+            <xsl:when test="$name='work'"><xsl:call-template name="section-work"/></xsl:when>
+            <xsl:when test="$name='education'"><xsl:call-template name="section-education"/></xsl:when>
+            <xsl:when test="$name='skills'"><xsl:call-template name="section-skills"/></xsl:when>
+            <xsl:when test="$name='languages'"><xsl:call-template name="section-languages"/></xsl:when>
+            <xsl:when test="$name='dailyLife'"><xsl:call-template name="section-dailyLife"/></xsl:when>
+            <xsl:when test="$name='awards'"><xsl:call-template name="section-awards"/></xsl:when>
+            <xsl:when test="$name='interests'"><xsl:call-template name="section-interests"/></xsl:when>
+            <xsl:when test="$name='references'"><xsl:call-template name="section-references"/></xsl:when>
+          </xsl:choose>
+        </xsl:for-each>
 
         <div class="stylesheet-note">
           <xsl:call-template name="t"><xsl:with-param name="k" select="'note'"/></xsl:call-template>
           <xsl:text> </xsl:text>
           <a href="/assets/data/resume.json">resume.json</a>
+          <xsl:text> · </xsl:text>
+          <a href="https://registry.jsonresume.org/grosjeanbaptiste" target="_blank" rel="external noopener">
+            <xsl:call-template name="t"><xsl:with-param name="k" select="'registry'"/></xsl:call-template>
+          </a>
           <xsl:text> · </xsl:text>
           <a href="https://www.grosjeanbaptiste.com/">grosjeanbaptiste.com</a>.
         </div>
@@ -556,6 +479,259 @@
 
       </body>
     </html>
+  </xsl:template>
+
+  <xsl:template name="section-about">
+    <xsl:if test="/resume/basics/summary">
+      <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
+      <p><xsl:value-of select="/resume/basics/summary"/></p>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="section-work">
+    <xsl:if test="/resume/work/job">
+          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'experience'"/></xsl:call-template></h2>
+          <xsl:for-each select="/resume/work/job">
+            <div class="row">
+              <h3>
+                <xsl:value-of select="position"/>
+                <xsl:if test="client"> · <xsl:value-of select="client"/></xsl:if>
+                <xsl:if test="company"> — <span class="company"><xsl:value-of select="company"/></span></xsl:if>
+              </h3>
+              <div class="muted">
+                <xsl:value-of select="startDate"/>
+                <xsl:text> – </xsl:text>
+                <xsl:choose>
+                  <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
+                  <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                </xsl:choose>
+                <xsl:if test="location"> · <xsl:value-of select="location"/></xsl:if>
+                <xsl:if test="url"> · <a><xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute><xsl:value-of select="url"/></a></xsl:if>
+              </div>
+              <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
+              <xsl:if test="highlights/highlight">
+                <ul>
+                  <xsl:for-each select="highlights/highlight"><li><xsl:value-of select="."/></li></xsl:for-each>
+                </ul>
+              </xsl:if>
+              <xsl:if test="projects/project">
+                <div class="muted"><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template>:</div>
+                <ul>
+                  <xsl:for-each select="projects/project">
+                    <xsl:variable name="ref" select="."/>
+                    <xsl:variable name="proj" select="key('project-by-name', $ref)"/>
+                    <li>
+                      <strong><xsl:value-of select="$ref"/></strong>
+                      <xsl:choose>
+                        <xsl:when test="$proj/summary"> — <xsl:value-of select="$proj/summary"/></xsl:when>
+                        <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
+                      </xsl:choose>
+                    </li>
+                  </xsl:for-each>
+                </ul>
+              </xsl:if>
+              <xsl:variable name="workOrg" select="company"/>
+              <xsl:variable name="workVols" select="/resume/volunteer/volunteer-item[$workOrg and contains($workOrg, substring-before(concat(organization, ' '), ' '))]"/>
+              <xsl:if test="$workVols">
+                <div class="muted"><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template>:</div>
+                <ul>
+                  <xsl:for-each select="$workVols">
+                    <li>
+                      <strong><xsl:value-of select="position"/></strong>
+                      <xsl:text> — </xsl:text>
+                      <xsl:value-of select="startDate"/>
+                      <xsl:text> – </xsl:text>
+                      <xsl:choose>
+                        <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
+                        <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                      </xsl:choose>
+                    </li>
+                  </xsl:for-each>
+                </ul>
+              </xsl:if>
+              <xsl:variable name="workRefs" select="/resume/references/reference[$workOrg and contains(name, substring($workOrg, 1, 4))]"/>
+              <xsl:if test="$workRefs">
+                <div class="muted">
+                  <xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template>
+                  <xsl:text>: </xsl:text>
+                  <xsl:for-each select="$workRefs">
+                    <xsl:if test="position() &gt; 1">, </xsl:if>
+                    <a>
+                      <xsl:attribute name="href">#<xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                      <xsl:value-of select="name"/>
+                    </a>
+                  </xsl:for-each>
+                </div>
+              </xsl:if>
+            </div>
+          </xsl:for-each>
+        </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="section-education">
+    <xsl:if test="/resume/education/school">
+          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'education'"/></xsl:call-template></h2>
+          <xsl:for-each select="/resume/education/school">
+            <div class="row">
+              <h3>
+                <xsl:value-of select="studyType"/>
+                <xsl:if test="area"> — <xsl:value-of select="area"/></xsl:if>
+              </h3>
+              <div class="muted">
+                <xsl:value-of select="institution"/>
+                <xsl:text> · </xsl:text>
+                <xsl:value-of select="startDate"/>
+                <xsl:text> – </xsl:text>
+                <xsl:choose>
+                  <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
+                  <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                </xsl:choose>
+              </div>
+              <xsl:if test="gpa"><div class="muted"><xsl:value-of select="gpa"/></div></xsl:if>
+              <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
+              <xsl:if test="projects/project">
+                <div class="muted"><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template>:</div>
+                <ul>
+                  <xsl:for-each select="projects/project">
+                    <xsl:variable name="ref" select="."/>
+                    <xsl:variable name="proj" select="key('project-by-name', $ref)"/>
+                    <li>
+                      <strong><xsl:value-of select="$ref"/></strong>
+                      <xsl:choose>
+                        <xsl:when test="$proj/summary"> — <xsl:value-of select="$proj/summary"/></xsl:when>
+                        <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
+                      </xsl:choose>
+                    </li>
+                  </xsl:for-each>
+                </ul>
+              </xsl:if>
+              <xsl:variable name="eduInst" select="institution"/>
+              <xsl:variable name="eduVols" select="/resume/volunteer/volunteer-item[$eduInst and contains($eduInst, substring-before(concat(organization, ' '), ' '))]"/>
+              <xsl:if test="$eduVols">
+                <div class="muted"><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template>:</div>
+                <ul>
+                  <xsl:for-each select="$eduVols">
+                    <li>
+                      <strong><xsl:value-of select="position"/></strong>
+                      <xsl:text> — </xsl:text>
+                      <xsl:value-of select="startDate"/>
+                      <xsl:text> – </xsl:text>
+                      <xsl:choose>
+                        <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
+                        <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                      </xsl:choose>
+                    </li>
+                  </xsl:for-each>
+                </ul>
+              </xsl:if>
+              <xsl:variable name="eduRefs" select="/resume/references/reference[$eduInst and contains(name, $eduInst)]"/>
+              <xsl:if test="$eduRefs">
+                <div class="muted">
+                  <xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template>
+                  <xsl:text>: </xsl:text>
+                  <xsl:for-each select="$eduRefs">
+                    <xsl:if test="position() &gt; 1">, </xsl:if>
+                    <a>
+                      <xsl:attribute name="href">#<xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                      <xsl:value-of select="name"/>
+                    </a>
+                  </xsl:for-each>
+                </div>
+              </xsl:if>
+            </div>
+          </xsl:for-each>
+        </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="section-skills">
+    <xsl:if test="/resume/skills/skill">
+          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'skills'"/></xsl:call-template></h2>
+          <xsl:for-each select="/resume/skills/skill">
+            <h3><xsl:value-of select="name"/></h3>
+            <xsl:if test="keywords/keyword">
+              <div>
+                <xsl:for-each select="keywords/keyword">
+                  <span class="tag"><xsl:value-of select="."/></span>
+                </xsl:for-each>
+              </div>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="section-languages">
+    <xsl:if test="/resume/languages/language-item">
+          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'languages'"/></xsl:call-template></h2>
+          <ul>
+            <xsl:for-each select="/resume/languages/language-item">
+              <li><strong><xsl:value-of select="language"/></strong>: <xsl:value-of select="fluency"/></li>
+            </xsl:for-each>
+          </ul>
+        </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="section-dailyLife">
+    <xsl:if test="/resume/meta/dailyLife/items/item">
+          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'typicalDay'"/></xsl:call-template></h2>
+          <ul>
+            <xsl:for-each select="/resume/meta/dailyLife/items/item">
+              <li>
+                <span class="tag">
+                  <xsl:attribute name="style">background:<xsl:value-of select="color"/></xsl:attribute>
+                  <xsl:text>&#160;</xsl:text>
+                </span>
+                <xsl:text> </xsl:text>
+                <strong><xsl:value-of select="key"/></strong> — <xsl:value-of select="hours"/>h
+              </li>
+            </xsl:for-each>
+          </ul>
+        </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="section-awards">
+    <xsl:if test="/resume/awards/award">
+          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'awards'"/></xsl:call-template></h2>
+          <ul>
+            <xsl:for-each select="/resume/awards/award">
+              <li>
+                <strong><xsl:value-of select="title"/></strong>
+                <xsl:if test="awarder"> — <xsl:value-of select="awarder"/></xsl:if>
+                <xsl:if test="date"> (<xsl:value-of select="date"/>)</xsl:if>
+                <xsl:if test="summary">: <xsl:value-of select="summary"/></xsl:if>
+              </li>
+            </xsl:for-each>
+          </ul>
+        </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="section-interests">
+    <xsl:if test="/resume/interests/interest">
+          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'interests'"/></xsl:call-template></h2>
+          <xsl:for-each select="/resume/interests/interest">
+            <div class="row">
+              <strong><xsl:value-of select="name"/></strong>
+              <xsl:if test="keywords/keyword">:
+                <xsl:for-each select="keywords/keyword">
+                  <xsl:if test="position() &gt; 1">, </xsl:if>
+                  <xsl:value-of select="."/>
+                </xsl:for-each>
+              </xsl:if>
+            </div>
+          </xsl:for-each>
+        </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="section-references">
+    <xsl:if test="/resume/references/reference">
+          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
+          <xsl:for-each select="/resume/references/reference">
+            <div class="row">
+              <xsl:attribute name="id"><xsl:value-of select="generate-id(.)"/></xsl:attribute>
+              <div class="ref-author"><xsl:value-of select="name"/></div>
+              <blockquote><xsl:value-of select="reference"/></blockquote>
+            </div>
+          </xsl:for-each>
+        </xsl:if>
   </xsl:template>
 
   <xsl:template name="lang-link">

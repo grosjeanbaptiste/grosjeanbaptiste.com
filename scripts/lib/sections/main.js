@@ -1,36 +1,7 @@
 const I18N = require('../i18n');
 const { escapeHtml, dateRangeHtml } = require('../format');
-const { profileIcon } = require('../profiles');
 const { indentLines } = require('../markers');
-
-const renderEmbeddedSkills = (skills) => {
-  if (!skills?.length) return '';
-  const tags = skills.map((s) => `<span class="skill-tag">${escapeHtml(s)}</span>`).join(' ');
-  return `<div class="skill-tags inline-skills">${tags}</div>`;
-};
-
-function renderEmbeddedProjects(projectNames, projects, t) {
-  if (!projectNames?.length) return '';
-  const projs = projectNames.map((n) => projects.find((p) => p.name === n)).filter(Boolean);
-  if (!projs.length) return '';
-  const items = projs
-    .map((p) => {
-      const desc = p.summary || p.description || '';
-      const link = p.url
-        ? ` <a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">↗</a>`
-        : '';
-      return `<li><strong>${escapeHtml(p.name)}</strong>${link}${desc ? ` — ${escapeHtml(desc)}` : ''}</li>`;
-    })
-    .join('\n        ');
-  return [
-    '<div class="embedded-projects">',
-    `  <p class="embedded-label">${escapeHtml(t.projects)}:</p>`,
-    '  <ul>',
-    `        ${items}`,
-    '  </ul>',
-    '</div>',
-  ].join('\n');
-}
+const { appendEmbeds } = require('./embeds');
 
 function renderAbout(resume, t) {
   const paras = (resume.basics?.summary || '')
@@ -44,29 +15,32 @@ function renderAbout(resume, t) {
   );
 }
 
-function renderExperienceItem(w, lang, projects, t) {
+function renderExperienceItem(w, lang, ctx, t) {
   const companyHtml = w.company
     ? w.url
       ? `<a href="${escapeHtml(w.url)}" target="_blank" rel="noopener">${escapeHtml(w.company)}</a>`
       : escapeHtml(w.company)
     : '';
+  // "Position · Client" when the role is a consulting mission (e.g. Xtrada
+  // → VhAuctions) so the reader still sees the end-client alongside the
+  // employer (Xtrada) in the pipe-separated header.
+  const positionLabel = w.client
+    ? `${escapeHtml(w.position)} · ${escapeHtml(w.client)}`
+    : escapeHtml(w.position);
   const parts = [
     '<article class="experience-item">',
-    `  <h3>${escapeHtml(w.position)}${w.company ? ` | ${companyHtml}` : ''}</h3>`,
+    `  <h3>${positionLabel}${w.company ? ` | ${companyHtml}` : ''}</h3>`,
     `  <p class="date">${dateRangeHtml(w.startDate, w.endDate, lang)}</p>`,
   ];
   if (w.location) parts.push(`  <p class="location">${escapeHtml(w.location)}</p>`);
   if (w.summary) parts.push(`  <p>${escapeHtml(w.summary).replace(/\n/g, '<br>')}</p>`);
   for (const h of w.highlights || []) parts.push(`  <p>• ${escapeHtml(h)}</p>`);
-  const skillsHtml = renderEmbeddedSkills(w.skills);
-  if (skillsHtml) parts.push(`  ${skillsHtml}`);
-  const projsHtml = renderEmbeddedProjects(w.projects, projects, t);
-  if (projsHtml) parts.push(indentLines(projsHtml, 2));
+  appendEmbeds(parts, w, w.company, ctx, t);
   parts.push('</article>');
   return parts.join('\n');
 }
 
-function renderEducationItem(e, lang, projects, t) {
+function renderEducationItem(e, lang, ctx, t) {
   const parts = [
     '<article class="education-item">',
     `  <h3>${escapeHtml(e.studyType)}${e.area ? `${lang === 'en' ? ' in ' : ' — '}${escapeHtml(e.area)}` : ''}</h3>`,
@@ -75,99 +49,76 @@ function renderEducationItem(e, lang, projects, t) {
   ];
   if (e.gpa) parts.push(`  <p>${escapeHtml(e.gpa)}</p>`);
   if (e.summary) parts.push(`  <p>${escapeHtml(e.summary).replace(/\n/g, '<br>')}</p>`);
-  const skillsHtml = renderEmbeddedSkills(e.skills);
-  if (skillsHtml) parts.push(`  ${skillsHtml}`);
-  const projsHtml = renderEmbeddedProjects(e.projects, projects, t);
-  if (projsHtml) parts.push(indentLines(projsHtml, 2));
+  appendEmbeds(parts, e, e.institution, ctx, t);
   parts.push('</article>');
   return parts.join('\n');
 }
 
-function renderContact(b, t, lang) {
-  const phoneDigits = (b.phone || '').replace(/[^+\d]/g, '');
-  const lines = [
-    `  <p><i class="fas fa-envelope"></i> <a href="mailto:${escapeHtml(b.email)}">${escapeHtml(b.email)}</a></p>`,
-  ];
-  if (phoneDigits) {
-    lines.push(
-      `  <p><i class="fas fa-phone"></i> <a href="tel:${escapeHtml(phoneDigits)}">${escapeHtml(b.phone)}</a></p>`,
-    );
-  }
-  for (const p of b.profiles || []) {
-    lines.push(
-      `  <p><i class="${profileIcon(p.network)}"></i> <a href="${escapeHtml(p.url)}" rel="me">${escapeHtml(p.network)}</a></p>`,
-    );
-  }
-  lines.push(
-    `  <p><i class="fas fa-code"></i> <a href="/assets/data/resume-${lang}.xml">${escapeHtml(t.xmlResume)}</a> <span class="muted-inline">(${escapeHtml(t.firefoxNote)})</span></p>`,
-  );
+function renderReferenceArticle(r, idx) {
   return [
-    '<section id="contact">',
-    `  <h2>${escapeHtml(t.contact)}</h2>`,
-    `  <p>${escapeHtml(t.contactCTA)}</p>`,
-    lines.join('\n'),
-    '</section>',
+    `<article class="reference-item" id="ref-${idx}">`,
+    `  <p><strong>${escapeHtml(r.name)}</strong></p>`,
+    `  <blockquote>${escapeHtml(r.reference).replace(/\n/g, '<br>')}</blockquote>`,
+    '</article>',
   ].join('\n');
 }
 
+// The projects/volunteer/references pools an item renderer needs to embed
+// related entries. Bundled once per section so the item renderers stay short.
+function ctxOf(resume) {
+  return {
+    projects: resume.projects || [],
+    volunteer: resume.volunteer || [],
+    references: resume.references || [],
+  };
+}
+
+// Wrap a list of entries in a <section id>; each item is rendered then indented
+// two spaces to match the hand-written HTML nesting. Returns null (skipped
+// downstream) when the section is empty.
+function renderItemSection(id, heading, entries, renderItem) {
+  if (!entries?.length) return null;
+  const items = entries.map((e, i) => indentLines(renderItem(e, i), 2)).join('\n');
+  return [`<section id="${id}">`, `  <h2>${escapeHtml(heading)}</h2>`, items, '</section>'].join(
+    '\n',
+  );
+}
+
+function renderWorkSection(resume, lang, t) {
+  const ctx = ctxOf(resume);
+  return renderItemSection('experience', t.experience, resume.work, (w) =>
+    renderExperienceItem(w, lang, ctx, t),
+  );
+}
+
+function renderEducationSection(resume, lang, t) {
+  const ctx = ctxOf(resume);
+  return renderItemSection('education', t.education, resume.education, (e) =>
+    renderEducationItem(e, lang, ctx, t),
+  );
+}
+
+function renderReferencesSection(resume, t) {
+  return renderItemSection('references', t.references, resume.references, (r, idx) =>
+    renderReferenceArticle(r, idx),
+  );
+}
+
+// Maps a section name from meta.sectionOrder to a renderer for the HTML main
+// column. Sections not listed here (skills/languages/dailyLife → sidebar,
+// awards/interests → not part of the HTML site) are silently skipped when they
+// appear in the order.
+const MAIN_RENDERERS = {
+  about: (resume, _lang, t) => renderAbout(resume, t),
+  work: renderWorkSection,
+  education: renderEducationSection,
+  references: (resume, _lang, t) => renderReferencesSection(resume, t),
+};
+
 function generateMain(resume, lang) {
   const t = I18N[lang];
-  const projects = resume.projects || [];
-  const sections = [renderAbout(resume, t)];
-
-  if (resume.work?.length) {
-    const items = resume.work
-      .map((w) => indentLines(renderExperienceItem(w, lang, projects, t), 2))
-      .join('\n');
-    sections.push(
-      [
-        '<section id="experience">',
-        `  <h2>${escapeHtml(t.experience)}</h2>`,
-        items,
-        '</section>',
-      ].join('\n'),
-    );
-  }
-
-  if (resume.education?.length) {
-    const items = resume.education
-      .map((e) => indentLines(renderEducationItem(e, lang, projects, t), 2))
-      .join('\n');
-    sections.push(
-      [
-        '<section id="education">',
-        `  <h2>${escapeHtml(t.education)}</h2>`,
-        items,
-        '</section>',
-      ].join('\n'),
-    );
-  }
-
-  if (resume.references?.length) {
-    const items = resume.references
-      .map((r) =>
-        indentLines(
-          [
-            '<article class="reference-item">',
-            `  <p><strong>${escapeHtml(r.name)}</strong></p>`,
-            `  <blockquote>${escapeHtml(r.reference).replace(/\n/g, '<br>')}</blockquote>`,
-            '</article>',
-          ].join('\n'),
-          2,
-        ),
-      )
-      .join('\n');
-    sections.push(
-      [
-        '<section id="references">',
-        `  <h2>${escapeHtml(t.references)}</h2>`,
-        items,
-        '</section>',
-      ].join('\n'),
-    );
-  }
-
-  sections.push(renderContact(resume.basics, t, lang));
+  const order = resume.meta?.sectionOrder ?? ['about', 'work', 'education', 'references'];
+  const sections = order.map((name) => MAIN_RENDERERS[name]?.(resume, lang, t)).filter(Boolean);
   return sections.join('\n\n');
 }
 

@@ -1,14 +1,14 @@
 const PROFILE_ICONS = {
-  linkedin: 'fab fa-linkedin',
-  github: 'fab fa-github',
-  npm: 'fab fa-npm',
-  twitter: 'fab fa-x-twitter',
-  x: 'fab fa-x-twitter',
-  bluesky: 'fas fa-cloud',
-  mastodon: 'fab fa-mastodon',
-  stackoverflow: 'fab fa-stack-overflow',
+  linkedin: 'linkedin',
+  github: 'github',
+  npm: 'npm',
+  twitter: 'x-twitter',
+  x: 'x-twitter',
+  bluesky: 'cloud',
+  mastodon: 'mastodon',
+  stackoverflow: 'stack-overflow',
 };
 
-const profileIcon = (net) => PROFILE_ICONS[(net || '').toLowerCase()] || 'fas fa-link';
+const profileIcon = (net) => PROFILE_ICONS[(net || '').toLowerCase()] || 'link';
 
 module.exports = { profileIcon };

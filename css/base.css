@@ -1,5 +1,14 @@
 /* Base elements + page container. */
 
+svg.icon {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  vertical-align: -0.05em;
+  fill: currentColor;
+  margin-right: 0.4em;
+}
+
 body {
   margin: 0;
   padding: 0;

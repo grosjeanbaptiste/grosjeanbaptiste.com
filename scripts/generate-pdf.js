@@ -22,6 +22,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { ROOT, OUTPUT_DIR, LANGS } = require('./lib/pdf/config');
 const { loadResume } = require('./lib/pdf/data');
+const { applyPdfOverrides } = require('./lib/site-overrides');
 const { compileWithFit } = require('./lib/pdf/compile');
 
 fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -29,7 +30,7 @@ fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 let ok = 0;
 const failed = [];
 for (const lang of LANGS) {
-  const resume = loadResume(lang);
+  const resume = applyPdfOverrides(loadResume(lang));
   const outPath = path.join(OUTPUT_DIR, `cv_grosjean_baptiste_${lang}.pdf`);
   const result = compileWithFit(resume, lang, outPath);
   if (result.ok) {
