@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <!-- Home-screen / PWA icon: full-bleed bordeaux so iOS (transparent->black)
        and Android maskable crops never expose a corner; the OS rounds it.
-       "BG | MSc" kept inside the maskable safe zone (center 80% = x 51..461). -->
+       "BG | CV" kept inside the maskable safe zone (center 80% = x 51..461). -->
   <rect width="512" height="512" fill="#800020"/>
-  <text x="256" y="256" font-family="Helvetica, Arial, sans-serif" font-size="96" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central" letter-spacing="-4">BG | MSc</text>
+  <text x="256" y="256" font-family="Helvetica, Arial, sans-serif" font-size="108" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central" letter-spacing="-6">BG | CV</text>
 </svg>
