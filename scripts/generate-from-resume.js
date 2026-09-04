@@ -98,14 +98,14 @@ if (writeIfChanged(path.join(ROOT, 'sitemap.xml'), generateSitemap())) wrote += 
 console.log('sitemap: sitemap.xml');
 
 // Brand tokens live in the DSL — sync the static files that hard-code them:
-// the SVG favicon (bordeaux disc), the PWA manifest (theme_color), and
+// the SVG favicon (bordeaux rounded square), the PWA manifest (theme_color), and
 // css/variables.css (whole CSS var block, both themes).
 const brand = loadResume('en').meta?.brand;
 if (brand?.primary) {
   const svgPath = path.join(ROOT, 'assets/icons/favicon.svg');
   const svg = fs
     .readFileSync(svgPath, 'utf8')
-    .replace(/(<circle[^>]*fill=")#[0-9A-Fa-f]{3,8}(")/, `$1${brand.primary}$2`);
+    .replace(/(<rect[^>]*fill=")#[0-9A-Fa-f]{3,8}(")/, `$1${brand.primary}$2`);
   if (writeIfChanged(svgPath, svg)) wrote += 1;
 
   const manifestPath = path.join(ROOT, 'manifest.webmanifest');

@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <!-- Home-screen / PWA icon: full-bleed bordeaux so iOS (which composites
        transparent corners on BLACK) and Android maskable crops never expose a
-       white or black corner. "BG" stays inside the maskable safe zone (center
-       80%). The transparent-disc favicon.svg is for browser tabs only. -->
+       white or black corner — the OS rounds the corners itself. "BG | MSc" is
+       sized to stay inside the maskable safe zone (center 80%). The rounded
+       favicon.svg (transparent corners) is for browser tabs only. -->
   <rect width="512" height="512" fill="#800020"/>
-  <text x="256" y="256" font-family="Helvetica, Arial, sans-serif" font-size="260" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central" letter-spacing="-8">BG</text>
+  <text x="256" y="256" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central" letter-spacing="-2">BG | MSc</text>
 </svg>
