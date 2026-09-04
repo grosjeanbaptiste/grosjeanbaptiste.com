@@ -42,21 +42,21 @@
     <brand>
       <primary>#800020</primary>
       <accent>#F3890B</accent>
-      <darkBg>#121212</darkBg>
-      <siteSecondary>#ff0000</siteSecondary>
+      <darkBg>#1F0E0E</darkBg>
+      <siteSecondary>#F3890B</siteSecondary>
       <siteBody>#666666</siteBody>
       <siteEmphasis>#2e2e2e</siteEmphasis>
       <siteBg>#e2e2e2</siteBg>
       <siteCard>#ffffff</siteCard>
       <siteBorder>#dddddd</siteBorder>
-      <sitePrimaryDark>#ff4d6d</sitePrimaryDark>
-      <siteSecondaryDark>#ff6b6b</siteSecondaryDark>
+      <sitePrimaryDark>#FFB142</sitePrimaryDark>
+      <siteSecondaryDark>#F3890B</siteSecondaryDark>
       <siteAccentDark>#ffb347</siteAccentDark>
-      <siteBodyDark>#cccccc</siteBodyDark>
-      <siteEmphasisDark>#e0e0e0</siteEmphasisDark>
-      <siteCardDark>#1e1e1e</siteCardDark>
-      <siteBorderDark>#333333</siteBorderDark>
-      <xsltPrimary>#001F5A</xsltPrimary>
+      <siteBodyDark>#EDE0C8</siteBodyDark>
+      <siteEmphasisDark>#F5EAD8</siteEmphasisDark>
+      <siteCardDark>#2E1818</siteCardDark>
+      <siteBorderDark>#4A2828</siteBorderDark>
+      <xsltPrimary>#800020</xsltPrimary>
       <xsltBody>#2E2E2E</xsltBody>
       <xsltMuted>#666</xsltMuted>
       <xsltBg>#ffffff</xsltBg>

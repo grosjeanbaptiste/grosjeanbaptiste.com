@@ -3,7 +3,7 @@
 :root {
   /* Colors */
   --primary-color: #800020; /* Bordeaux */
-  --secondary-color: #ff0000; /* Rouge */
+  --secondary-color: #F3890B; /* Rouge */
   --third-color: #f3890b; /* Orange foncé */
   --body-color: #666666; /* Gris foncé */
   --emphasis-color: #2e2e2e; /* Gris très foncé */
@@ -11,36 +11,39 @@
   --card-background: #ffffff; /* White for cards */
   --text-color: #2e2e2e; /* Dark text */
   --border-color: #dddddd; /* Light border */
+  --on-accent-color: #ffffff; /* Text on primary/accent surfaces */
   --primary-color-rgb: 128, 0, 32; /* RGB for primary color in light mode */
   --card-background-rgb: 255, 255, 255; /* RGB for card background in light mode */
 }
 
 /* Dark theme */
 [data-theme="dark"] {
-  --primary-color: #ff4d6d; /* Lighter red for better visibility */
-  --secondary-color: #ff6b6b; /* Softer red */
-  --third-color: #ffb347; /* Lighter orange */
-  --body-color: #cccccc; /* Lighter gray for better readability */
-  --emphasis-color: #e0e0e0; /* Light gray for emphasis */
-  --background-color: #121212; /* Dark background */
-  --card-background: #1e1e1e; /* Slightly lighter than background */
-  --text-color: #e0e0e0; /* Light text */
-  --border-color: #333333; /* Dark border */
-  --primary-color-rgb: 255, 77, 109; /* RGB for primary color in dark mode */
-  --card-background-rgb: 30, 30, 30; /* RGB for card background in dark mode */
+  --primary-color: #FFB142; /* Amber (warm, XSLT-aligned) */
+  --secondary-color: #F3890B; /* Orange accent */
+  --third-color: #ffb347; /* Amber-orange */
+  --body-color: #EDE0C8; /* Cream body text */
+  --emphasis-color: #F5EAD8; /* Bright cream for emphasis */
+  --background-color: #1F0E0E; /* Dark bordeaux-brown */
+  --card-background: #2E1818; /* Raised bordeaux-brown surface */
+  --text-color: #F5EAD8; /* Cream text */
+  --border-color: #4A2828; /* Bordeaux-brown rule */
+  --on-accent-color: #1F0E0E; /* Dark text on light amber surfaces */
+  --primary-color-rgb: 255, 177, 66; /* RGB for primary color in dark mode */
+  --card-background-rgb: 46, 24, 24; /* RGB for card background in dark mode */
 }
 
 /* System preference for dark mode */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --primary-color: #ff4d6d;
-    --secondary-color: #ff6b6b;
+    --primary-color: #FFB142;
+    --secondary-color: #F3890B;
     --third-color: #ffb347;
-    --body-color: #cccccc;
-    --emphasis-color: #e0e0e0;
-    --background-color: #121212;
-    --card-background: #1e1e1e;
-    --text-color: #e0e0e0;
-    --border-color: #333333;
+    --body-color: #EDE0C8;
+    --emphasis-color: #F5EAD8;
+    --background-color: #1F0E0E;
+    --card-background: #2E1818;
+    --text-color: #F5EAD8;
+    --border-color: #4A2828;
+    --on-accent-color: #1F0E0E;
   }
 }

@@ -77,14 +77,14 @@ function buildMeta(b, lang, description, ogTitle, imageUrl, t, hardSkills, brand
     '<meta name="color-scheme" content="light dark">',
     `<meta name="theme-color" content="${brand.primary}" media="(prefers-color-scheme: light)">`,
     `<meta name="theme-color" content="${brand.darkBg}" media="(prefers-color-scheme: dark)">`,
-    // ?v=8 cache-buster: Chrome keeps favicons in a separate DB that ignores
+    // ?v=9 cache-buster: Chrome keeps favicons in a separate DB that ignores
     // normal refreshes, so the old "BG | MSc CS" text icon lingered after the
     // redesign. Bump this when the icon art changes to force a re-fetch.
-    '<link rel="icon" href="/favicon.ico?v=8" sizes="any">',
-    '<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg?v=8">',
-    '<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png?v=8">',
-    '<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png?v=8">',
-    '<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favicon-180.png?v=8">',
+    '<link rel="icon" href="/favicon.ico?v=9" sizes="any">',
+    '<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg?v=9">',
+    '<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png?v=9">',
+    '<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png?v=9">',
+    '<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favicon-180.png?v=9">',
     '<link rel="manifest" href="/manifest.webmanifest">',
     '',
     `<link rel="canonical" href="${SITE_URL}${langPath(lang)}">`,

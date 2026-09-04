@@ -24,7 +24,7 @@
 
 #theme-toggle:hover {
   background: var(--primary-color);
-  color: white;
+  color: var(--on-accent-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }

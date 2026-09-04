@@ -83,7 +83,7 @@ nav a.active {
 
 nav ul li a:hover {
   background-color: var(--third-color);
-  color: white;
+  color: var(--on-accent-color);
   text-decoration: none !important;
 }
 
@@ -113,13 +113,13 @@ nav ul li a:hover {
 
 .lang-switcher a:hover {
   background-color: var(--third-color);
-  color: #fff;
+  color: var(--on-accent-color);
   text-decoration: none;
 }
 
 .lang-switcher a.active {
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--on-accent-color);
 }
 
 /* Between hamburger (<=768) and full desktop, tighten the language row
