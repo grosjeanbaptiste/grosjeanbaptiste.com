@@ -16,11 +16,13 @@ function renderAbout(resume, t) {
 }
 
 function renderExperienceItem(w, lang, ctx, t) {
-  const companyHtml = w.company
-    ? w.url
-      ? `<a href="${escapeHtml(w.url)}" target="_blank" rel="noopener">${escapeHtml(w.company)}</a>`
-      : escapeHtml(w.company)
-    : '';
+  // Wrap the company in a .company span so it can carry its own colour (accent
+  // orange) distinct from the position, which is the h3 primary colour — in
+  // dark mode the link accent and the primary are both amber and blur together.
+  const companyInner = w.url
+    ? `<a href="${escapeHtml(w.url)}" target="_blank" rel="noopener">${escapeHtml(w.company)}</a>`
+    : escapeHtml(w.company);
+  const companyHtml = w.company ? `<span class="company">${companyInner}</span>` : '';
   // "Position · Client" when the role is a consulting mission (e.g. Xtrada
   // → VhAuctions) so the reader still sees the end-client alongside the
   // employer (Xtrada) in the pipe-separated header.

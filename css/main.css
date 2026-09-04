@@ -52,6 +52,13 @@
   margin-bottom: 5px;
 }
 
+/* Company name in a distinct accent orange so it never blurs into the
+ * position, which is the h3 primary colour (both are amber in dark mode). */
+.experience-item h3 .company,
+.experience-item h3 .company a {
+  color: var(--secondary-color);
+}
+
 .date,
 .location {
   font-size: 0.9em;
