@@ -175,7 +175,11 @@ if (brand?.primary) {
     '  }',
     '}',
     '',
-  ].join('\n');
+  ]
+    .join('\n')
+    // Biome (css/format) canonicalises hex colours to lowercase; emit them
+    // lowercase so the generated file stays lint-clean without a manual pass.
+    .replace(/#[0-9A-Fa-f]{3,8}\b/g, (m) => m.toLowerCase());
   const varsPath = path.join(ROOT, 'css/variables.css');
   if (writeIfChanged(varsPath, varsCss)) wrote += 1;
 }

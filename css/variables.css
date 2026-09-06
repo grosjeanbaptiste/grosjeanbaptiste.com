@@ -3,7 +3,7 @@
 :root {
   /* Colors */
   --primary-color: #800020; /* Bordeaux */
-  --secondary-color: #F3890B; /* Rouge */
+  --secondary-color: #f3890b; /* Rouge */
   --third-color: #f3890b; /* Orange foncé */
   --body-color: #666666; /* Gris foncé */
   --muted-color: #666666; /* Muted grey (dates, locations, footer) */
@@ -19,17 +19,17 @@
 
 /* Dark theme */
 [data-theme="dark"] {
-  --primary-color: #FFB142; /* Amber (warm, XSLT-aligned) */
-  --secondary-color: #F3890B; /* Orange accent */
+  --primary-color: #ffb142; /* Amber (warm, XSLT-aligned) */
+  --secondary-color: #f3890b; /* Orange accent */
   --third-color: #ffb347; /* Amber-orange */
-  --body-color: #EDE0C8; /* Cream body text */
-  --muted-color: #B89A82; /* Warm muted (XSLT-aligned --muted) */
-  --emphasis-color: #F5EAD8; /* Bright cream for emphasis */
-  --background-color: #1F0E0E; /* Dark bordeaux-brown */
-  --card-background: #2E1818; /* Raised bordeaux-brown surface */
-  --text-color: #F5EAD8; /* Cream text */
-  --border-color: #4A2828; /* Bordeaux-brown rule */
-  --on-accent-color: #1F0E0E; /* Dark text on light amber surfaces */
+  --body-color: #ede0c8; /* Cream body text */
+  --muted-color: #b89a82; /* Warm muted (XSLT-aligned --muted) */
+  --emphasis-color: #f5ead8; /* Bright cream for emphasis */
+  --background-color: #1f0e0e; /* Dark bordeaux-brown */
+  --card-background: #2e1818; /* Raised bordeaux-brown surface */
+  --text-color: #f5ead8; /* Cream text */
+  --border-color: #4a2828; /* Bordeaux-brown rule */
+  --on-accent-color: #1f0e0e; /* Dark text on light amber surfaces */
   --primary-color-rgb: 255, 177, 66; /* RGB for primary color in dark mode */
   --card-background-rgb: 46, 24, 24; /* RGB for card background in dark mode */
 }
@@ -37,16 +37,16 @@
 /* System preference for dark mode */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --primary-color: #FFB142;
-    --secondary-color: #F3890B;
+    --primary-color: #ffb142;
+    --secondary-color: #f3890b;
     --third-color: #ffb347;
-    --body-color: #EDE0C8;
-    --muted-color: #B89A82;
-    --emphasis-color: #F5EAD8;
-    --background-color: #1F0E0E;
-    --card-background: #2E1818;
-    --text-color: #F5EAD8;
-    --border-color: #4A2828;
-    --on-accent-color: #1F0E0E;
+    --body-color: #ede0c8;
+    --muted-color: #b89a82;
+    --emphasis-color: #f5ead8;
+    --background-color: #1f0e0e;
+    --card-background: #2e1818;
+    --text-color: #f5ead8;
+    --border-color: #4a2828;
+    --on-accent-color: #1f0e0e;
   }
 }
