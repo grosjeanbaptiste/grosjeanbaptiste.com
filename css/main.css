@@ -62,7 +62,7 @@
 .date,
 .location {
   font-size: 0.9em;
-  color: #666;
+  color: var(--muted-color);
 }
 
 .experience-item .date,
@@ -82,7 +82,7 @@
   margin: 10px 0;
   padding-left: 15px;
   border-left: 3px solid var(--third-color);
-  color: #555;
+  color: var(--muted-color);
   font-style: italic;
 }
 

@@ -512,7 +512,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
 
     // ---------- skills ----------
     skills {
-        hard [SQL, "C#", Java, Python, JS, TS, XML, JSON, HTML, CSS, Zsh, Dart, Rust, LaTeX, "SQL Server", EF, ".NET", Pandas, NumPy, Whisper, SpaCy, "Node.js", "Express.js", Blazor, Angular, React, Flutter, Tokio, Axum, Tower, Gradle, NPM, JWT, Auth0, SSH, Venv, Conda, Docker, UML, Merise, VisualParadigm, CleanCode, CleanArchitecture, DDD, CQRS]
+        hard [SQL, "C#", Java, Python, JS, TS, XML, JSON, HTML, CSS, Zsh, Dart, Rust, LaTeX, "SQL Server", EF, ".NET", Pandas, NumPy, Whisper, SpaCy, PyTorch, Transformers, HuggingFace, SentenceTransformers, LLMs, RAG, LangChain, OpenAI, Claude, Embeddings, ColBERT, Reranking, FAISS, OpenSearch, RAGAS, PromptEngineering, OCR, Docling, VLM, "Node.js", "Express.js", Blazor, Angular, React, Flutter, Tokio, Axum, Tower, Gradle, NPM, JWT, Auth0, SSH, Venv, Conda, Docker, UML, Merise, VisualParadigm, MiniZinc, ConstraintProgramming, CombinatorialOptimization, Pareto, Lark, DSL, Hypothesis, CleanCode, CleanArchitecture, DDD, CQRS]
         learning [TDD, TensorFlow, "Scikit-Learn", C, XQuery, Blockchain]
         soft [Adaptability, Resilience, Leadership, Creativity, Initiative, Analysis, Flexibility, Teamwork, Organization, Pragmatism, Resourcefulness, Thoroughness]
     }
@@ -615,6 +615,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             siteBg "#e2e2e2"
             siteCard "#ffffff"
             siteBorder "#dddddd"
+            siteMuted "#666666"
             sitePrimaryDark "#FFB142"
             siteSecondaryDark "#F3890B"
             siteAccentDark "#ffb347"
@@ -622,6 +623,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             siteEmphasisDark "#F5EAD8"
             siteCardDark "#2E1818"
             siteBorderDark "#4A2828"
+            siteMutedDark "#B89A82"
 
             // XSLT palette (rich + minimal :root)
             // Light primary is bordeaux (brand) rather than the old navy blue.

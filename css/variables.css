@@ -6,6 +6,7 @@
   --secondary-color: #F3890B; /* Rouge */
   --third-color: #f3890b; /* Orange foncé */
   --body-color: #666666; /* Gris foncé */
+  --muted-color: #666666; /* Muted grey (dates, locations, footer) */
   --emphasis-color: #2e2e2e; /* Gris très foncé */
   --background-color: #e2e2e2; /* Gris clair */
   --card-background: #ffffff; /* White for cards */
@@ -22,6 +23,7 @@
   --secondary-color: #F3890B; /* Orange accent */
   --third-color: #ffb347; /* Amber-orange */
   --body-color: #EDE0C8; /* Cream body text */
+  --muted-color: #B89A82; /* Warm muted (XSLT-aligned --muted) */
   --emphasis-color: #F5EAD8; /* Bright cream for emphasis */
   --background-color: #1F0E0E; /* Dark bordeaux-brown */
   --card-background: #2E1818; /* Raised bordeaux-brown surface */
@@ -39,6 +41,7 @@
     --secondary-color: #F3890B;
     --third-color: #ffb347;
     --body-color: #EDE0C8;
+    --muted-color: #B89A82;
     --emphasis-color: #F5EAD8;
     --background-color: #1F0E0E;
     --card-background: #2E1818;

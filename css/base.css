@@ -57,7 +57,7 @@ ul {
 .footer {
   text-align: center;
   font-size: 0.8em;
-  color: #888;
+  color: var(--muted-color);
   margin-top: 20px;
 }
 

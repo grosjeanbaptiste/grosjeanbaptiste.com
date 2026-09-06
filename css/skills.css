@@ -39,7 +39,7 @@
 }
 
 .skill-bar {
-  background-color: #ddd;
+  background-color: var(--border-color);
   border-radius: 5px;
   overflow: hidden;
   height: 10px;

@@ -49,6 +49,7 @@
       <siteBg>#e2e2e2</siteBg>
       <siteCard>#ffffff</siteCard>
       <siteBorder>#dddddd</siteBorder>
+      <siteMuted>#666666</siteMuted>
       <sitePrimaryDark>#FFB142</sitePrimaryDark>
       <siteSecondaryDark>#F3890B</siteSecondaryDark>
       <siteAccentDark>#ffb347</siteAccentDark>
@@ -56,6 +57,7 @@
       <siteEmphasisDark>#F5EAD8</siteEmphasisDark>
       <siteCardDark>#2E1818</siteCardDark>
       <siteBorderDark>#4A2828</siteBorderDark>
+      <siteMutedDark>#B89A82</siteMutedDark>
       <xsltPrimary>#800020</xsltPrimary>
       <xsltBody>#2E2E2E</xsltBody>
       <xsltMuted>#666</xsltMuted>
@@ -623,6 +625,25 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
         <keyword>NumPy</keyword>
         <keyword>Whisper</keyword>
         <keyword>SpaCy</keyword>
+        <keyword>PyTorch</keyword>
+        <keyword>Transformers</keyword>
+        <keyword>HuggingFace</keyword>
+        <keyword>SentenceTransformers</keyword>
+        <keyword>LLMs</keyword>
+        <keyword>RAG</keyword>
+        <keyword>LangChain</keyword>
+        <keyword>OpenAI</keyword>
+        <keyword>Claude</keyword>
+        <keyword>Embeddings</keyword>
+        <keyword>ColBERT</keyword>
+        <keyword>Reranking</keyword>
+        <keyword>FAISS</keyword>
+        <keyword>OpenSearch</keyword>
+        <keyword>RAGAS</keyword>
+        <keyword>PromptEngineering</keyword>
+        <keyword>OCR</keyword>
+        <keyword>Docling</keyword>
+        <keyword>VLM</keyword>
         <keyword>Node.js</keyword>
         <keyword>Express.js</keyword>
         <keyword>Blazor</keyword>
@@ -643,6 +664,13 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
         <keyword>UML</keyword>
         <keyword>Merise</keyword>
         <keyword>VisualParadigm</keyword>
+        <keyword>MiniZinc</keyword>
+        <keyword>ConstraintProgramming</keyword>
+        <keyword>CombinatorialOptimization</keyword>
+        <keyword>Pareto</keyword>
+        <keyword>Lark</keyword>
+        <keyword>DSL</keyword>
+        <keyword>Hypothesis</keyword>
         <keyword>CleanCode</keyword>
         <keyword>CleanArchitecture</keyword>
         <keyword>DDD</keyword>
