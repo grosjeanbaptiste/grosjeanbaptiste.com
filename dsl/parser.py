@@ -454,6 +454,9 @@ class _Builder(Transformer):
     def comp_url(self, meta, children):
         return ("url", children[0])
 
+    def comp_projects(self, meta, children):
+        return ("projects", tuple(children[0]))
+
     def interests_section(self, meta, children):
         return ("interests", children)
 

@@ -111,7 +111,7 @@
   "education": [
     {
       "gpa": "13.04/20 — obtained with satisfaction",
-      "summary": "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons.",
+      "summary": "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons. Core coursework: software engineering & project management, artificial intelligence, databases, data structures, operational research, cryptography & IT security, and ethics & computer law, with two paid company internships.",
       "skills": [
         "Python",
         "LaTeX",
@@ -125,7 +125,7 @@
     },
     {
       "gpa": "62.8%, Satis Bene",
-      "summary": "Student representative and tutor. \n\nTFE: WebMenu 2.0",
+      "summary": "Student representative and tutor. \n\nTFE: WebMenu 2.0\n\nProgramme: analysis & design, programming in .NET, Java and web, relational databases, e-business and integrated management software (ERP), networking and IT project management.",
       "skills": [
         "SQL",
         "C#",
@@ -241,7 +241,10 @@
       "date": "2024-03-17",
       "organizer": "Citizens of Wallonia",
       "summary": "EduCraft — solution allowing anyone to craft a personalized path to gain new skills.",
-      "url": "https://www.cow.be"
+      "url": "https://www.cow.be",
+      "projects": [
+        "EduCraft"
+      ]
     },
     {
       "key": "HackathonCOW2023",

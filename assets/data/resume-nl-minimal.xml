@@ -344,7 +344,7 @@ De opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van d
       <startDate>2022-10-15</startDate>
       <endDate>2026-09-03</endDate>
       <gpa>13,04/20 — behaald met voldoening</gpa>
-      <summary>Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger &amp; buddy TandeMons.</summary>
+      <summary>Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger &amp; buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>
@@ -364,7 +364,9 @@ De opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van d
       <gpa>62.8%, Satis Bene</gpa>
       <summary>Studentenvertegenwoordiger en tutor.
 
-TFE: WebMenu 2.0</summary>
+TFE: WebMenu 2.0
+
+Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele databanken, e-business en geïntegreerde beheersoftware (ERP), netwerken en IT-projectbeheer.</summary>
       <skills>
         <skill>SQL</skill>
         <skill>C#</skill>
@@ -774,6 +776,9 @@ Kortom, als je iemand zoekt die enthousiasme, intelligentie en een vleugje humor
       <organizer>Citizens of Wallonia</organizer>
       <summary>EduCraft — oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven.</summary>
       <url>https://www.cow.be</url>
+      <projects>
+        <project>EduCraft</project>
+      </projects>
     </item>
     <item>
       <key>HackathonCOW2023</key>

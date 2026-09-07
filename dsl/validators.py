@@ -145,6 +145,18 @@ def validate(resume: Resume) -> list[ValidationError]:
                     )
                 )
 
+    # competitions
+    for c in resume.competitions:
+        for ref in c.projects:
+            if isinstance(ref, Ref) and ref.target not in project_keys:
+                errors.append(
+                    ValidationError(
+                        section="competitions",
+                        entry=c.key,
+                        message=f"projects: unresolved ref to {ref.target!r}",
+                    )
+                )
+
     # projects
     for p in resume.projects:
         errors.extend(_walk_values(p.description, "projects", p.key, "description"))

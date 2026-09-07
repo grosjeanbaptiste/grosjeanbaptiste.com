@@ -7,6 +7,8 @@ DSL_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(DSL_DIR))
 
 from parser import parse  # noqa: E402
+from validators import validate  # noqa: E402
+from compilers import site_extras  # noqa: E402
 
 
 MINIMAL = """
@@ -87,3 +89,40 @@ def test_parses_and_populates_fields():
     assert len(r.meta.daily_life) == 2
     assert r.meta.daily_life[0].key == "sleep"
     assert r.meta.daily_life[0].hours == 8
+
+
+# A competition may cross-reference a project via `projects [ref NAME]`,
+# mirroring the work/education entries. The ref resolves at validation time
+# and site-extras emits the project's rendered name (data link only — no
+# renderer surfaces competitions today).
+COMP_BLOCK = """    competitions {
+        HackathonTest {
+            title "Test Hackathon"
+            date 2024-03-17
+            projects [ref Acteble]
+        }
+    }
+"""
+
+
+def test_competition_accepts_projects_ref():
+    doc = MINIMAL.replace("    meta {", COMP_BLOCK + "    meta {")
+    r = parse(doc)
+    assert len(r.competitions) == 1
+    c = r.competitions[0]
+    assert c.key == "HackathonTest"
+    assert c.projects[0].target == "Acteble"
+    # the ref resolves — no unresolved-ref error for this competition
+    assert not any("unresolved ref" in str(e) for e in validate(r))
+    extras = site_extras.emit(r)
+    assert extras["competitions"][0]["projects"] == ["Acteble"]
+
+
+def test_competition_unknown_project_ref_fails_validation():
+    bad = MINIMAL.replace(
+        "    meta {",
+        COMP_BLOCK.replace("ref Acteble", "ref Missing") + "    meta {",
+    )
+    r = parse(bad)
+    errors = validate(r)
+    assert any("Missing" in str(e) for e in errors)

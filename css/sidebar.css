@@ -88,12 +88,14 @@
   margin-top: 2px;
 }
 
-.languages h2 {
+.languages h2,
+.projects h2 {
   font-size: 1.5em;
   margin-top: 30px;
 }
 
-.languages p {
+.languages p,
+.projects p {
   margin: 5px 0;
   font-size: 0.9em;
 }

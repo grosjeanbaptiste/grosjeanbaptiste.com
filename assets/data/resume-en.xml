@@ -344,7 +344,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <startDate>2022-10-15</startDate>
       <endDate>2026-09-03</endDate>
       <gpa>13.04/20 — obtained with satisfaction</gpa>
-      <summary>MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative &amp; buddy TandeMons.</summary>
+      <summary>MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative &amp; buddy TandeMons. Core coursework: software engineering &amp; project management, artificial intelligence, databases, data structures, operational research, cryptography &amp; IT security, and ethics &amp; computer law, with two paid company internships.</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>
@@ -364,7 +364,9 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <gpa>62.8%, Satis Bene</gpa>
       <summary>Student representative and tutor. 
 
-TFE: WebMenu 2.0</summary>
+TFE: WebMenu 2.0
+
+Programme: analysis &amp; design, programming in .NET, Java and web, relational databases, e-business and integrated management software (ERP), networking and IT project management.</summary>
       <skills>
         <skill>SQL</skill>
         <skill>C#</skill>
@@ -774,6 +776,9 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <organizer>Citizens of Wallonia</organizer>
       <summary>EduCraft — solution allowing anyone to craft a personalized path to gain new skills.</summary>
       <url>https://www.cow.be</url>
+      <projects>
+        <project>EduCraft</project>
+      </projects>
     </item>
     <item>
       <key>HackathonCOW2023</key>

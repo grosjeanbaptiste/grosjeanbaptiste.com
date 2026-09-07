@@ -344,7 +344,7 @@
       <startDate>2022-10-15</startDate>
       <endDate>2026-09-03</endDate>
       <gpa>13.04/20 — 以满意成绩获得</gpa>
-      <summary>硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 &amp; Buddy TandeMons。</summary>
+      <summary>硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 &amp; Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>
@@ -364,7 +364,9 @@
       <gpa>62.8%，Satis Bene</gpa>
       <summary>学生代表和辅导员。
 
-TFE: WebMenu 2.0</summary>
+TFE: WebMenu 2.0
+
+课程内容：分析与设计，使用 .NET、Java 和 Web 进行编程，关系型数据库，电子商务与集成管理软件 (ERP)，网络与 IT 项目管理。</summary>
       <skills>
         <skill>SQL</skill>
         <skill>C#</skill>
@@ -774,6 +776,9 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <organizer>Citizens of Wallonia</organizer>
       <summary>EduCraft — 让任何人都能定制个性化路径以获得新技能的解决方案。</summary>
       <url>https://www.cow.be</url>
+      <projects>
+        <project>EduCraft</project>
+      </projects>
     </item>
     <item>
       <key>HackathonCOW2023</key>

@@ -205,7 +205,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             // Thesis supervisor names removed on request (2026-09-03) — kept here for recovery:
             //   en: supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique
             //   fr: encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS
-            note t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons.", nl: "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons.", es: "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons.", zh: "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。" }
+            note t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons. Core coursework: software engineering & project management, artificial intelligence, databases, data structures, operational research, cryptography & IT security, and ethics & computer law, with two paid company internships.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons. Cours principaux : génie logiciel et gestion de projet, intelligence artificielle, bases de données, structures de données, recherche opérationnelle, cryptographie et sécurité informatique, éthique et droit de l'informatique, avec deux stages en entreprise rémunérés.", nl: "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.", es: "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons. Cursos principales: ingeniería del software y gestión de proyectos, inteligencia artificial, bases de datos, estructuras de datos, investigación operativa, criptografía y seguridad informática, ética y derecho informático, con dos prácticas remuneradas en empresa.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons. Kernfächer: Software-Engineering und Projektmanagement, künstliche Intelligenz, Datenbanken, Datenstrukturen, Operations Research, Kryptografie und IT-Sicherheit, Ethik und Informatikrecht, mit zwei bezahlten Unternehmenspraktika.", zh: "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。" }
             uses [Python, LaTeX, DDD, CleanArchitecture]
             projects [ref Acteble]
         }
@@ -219,26 +219,38 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
 Student representative and tutor. 
 
 TFE: WebMenu 2.0
+
+Programme: analysis & design, programming in .NET, Java and web, relational databases, e-business and integrated management software (ERP), networking and IT project management.
 """, fr: """
 Délégué étudiant et tuteur.
 
 TFE : WebMenu 2.0
+
+Programme : analyse et conception, programmation en .NET, Java et web, bases de données relationnelles, e-business et progiciels de gestion intégrés (ERP), réseaux et gestion de projet informatique.
 """, nl: """
 Studentenvertegenwoordiger en tutor.
 
 TFE: WebMenu 2.0
+
+Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele databanken, e-business en geïntegreerde beheersoftware (ERP), netwerken en IT-projectbeheer.
 """, es: """
 Delegado de estudiantes y tutor.
 
 TFE: WebMenu 2.0
+
+Programa: análisis y diseño, programación en .NET, Java y web, bases de datos relacionales, e-business y software de gestión integrada (ERP), redes y gestión de proyectos informáticos.
 """, de: """
 Studierendenvertreter und Tutor.
 
 TFE: WebMenu 2.0
+
+Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale Datenbanken, E-Business und integrierte Unternehmenssoftware (ERP), Netzwerke und IT-Projektmanagement.
 """, zh: """
 学生代表和辅导员。
 
 TFE: WebMenu 2.0
+
+课程内容：分析与设计，使用 .NET、Java 和 Web 进行编程，关系型数据库，电子商务与集成管理软件 (ERP)，网络与 IT 项目管理。
 """ }
             uses [SQL, "C#", ".NET", Java, Python, JS, HTML, CSS]
             projects [ref WebMenu]
@@ -541,6 +553,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             organizer t{ en: "Citizens of Wallonia", fr: "Citizens of Wallonia", nl: "Citizens of Wallonia", es: "Citizens of Wallonia", de: "Citizens of Wallonia", zh: "Citizens of Wallonia" }
             url "https://www.cow.be"
             summary t{ en: "EduCraft — solution allowing anyone to craft a personalized path to gain new skills.", fr: "EduCraft — solution permettant à chacun de tracer son propre parcours personnalisé d'acquisition de compétences.", nl: "EduCraft — oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven.", es: "EduCraft — solución que permite a cualquiera diseñar su propio itinerario personalizado para adquirir nuevas competencias.", de: "EduCraft — Lösung, mit der jeder seinen eigenen personalisierten Weg zum Erwerb neuer Fähigkeiten gestalten kann.", zh: "EduCraft — 让任何人都能定制个性化路径以获得新技能的解决方案。" }
+            projects [ref EduCraft]
         }
         HackathonCOW2023 {
             title t{ en: "Hackathon Citizens of Wallonia 2023", fr: "Hackathon Citizens of Wallonia 2023", nl: "Hackathon Citizens of Wallonia 2023", es: "Hackathon Citizens of Wallonia 2023", de: "Hackathon Citizens of Wallonia 2023", zh: "Hackathon Citizens of Wallonia 2023" }

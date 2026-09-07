@@ -211,6 +211,7 @@ class CompetitionEntry(Node):
     organizer: Value | None = None
     summary: Value | None = None
     url: Value | None = None
+    projects: tuple[Ref, ...] = ()
 
 
 @dataclass(frozen=True, kw_only=True)

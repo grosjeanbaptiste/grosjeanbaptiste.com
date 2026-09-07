@@ -132,6 +132,10 @@ def _competitions(resume: Resume) -> list[dict[str, Any]]:
             entry["summary"] = val
         if (val := _text(c.url)) is not None:
             entry["url"] = val
+        if c.projects:
+            entry["projects"] = [
+                _resolve_project_name(resume, ref.target) for ref in c.projects
+            ]
         out.append(entry)
     return out
 
