@@ -331,6 +331,7 @@ TFE: WebMenu 2.0
             name "Acteble"
             description t{ en: "Mobile application connecting travelers during their journeys.", fr: "Application mobile connectant les voyageurs pendant leurs trajets.", nl: "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.", es: "Aplicación móvil que conecta a los viajeros durante sus trayectos.", de: "Mobile App, die Reisende während ihrer Reisen verbindet.", zh: "在旅途中连接旅行者的移动应用。" }
             summary t{ en: "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.", fr: "Développement d'une application mobile qui connecte les voyageurs pendant leurs trajets. Flutter pour l'app mobile, Rust pour le backend.", nl: "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend.", es: "Desarrollo de una aplicación móvil que conecta a los viajeros durante sus trayectos. Flutter para la app móvil y Rust para el backend.", de: "Entwicklung einer mobilen Anwendung, die Reisende während ihrer Reisen verbindet. Flutter für die mobile App, Rust für das Backend.", zh: "开发一款在旅途中连接旅行者的移动应用。Flutter 用于移动应用，Rust 用于后端。" }
+            url "https://www.acteble.com"
             keywords [Flutter, Rust, Mobile, Travel, Tokio, PostgreSQL, Docker, Dart]
             startDate 2025-07-01
             type "Mobile Application"
@@ -340,6 +341,7 @@ TFE: WebMenu 2.0
             name "Emvi App"
             description t{ en: "AI powered visual assistant for visually impaired people.", fr: "Assistant visuel IA pour personnes malvoyantes.", nl: "AI-aangedreven visuele assistent voor slechtzienden.", es: "Asistente visual con IA para personas con discapacidad visual.", de: "KI-gestützter visueller Assistent für sehbehinderte Menschen.", zh: "为视障人士提供的 AI 驱动视觉助手。" }
             summary t{ en: "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired.", fr: "Assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR & barres) et système de routage Valhalla adapté.", nl: "AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem.", es: "Asistente visual con IA para personas con discapacidad visual, ofrece descripción del entorno, OCR, escaneo de códigos (QR y de barras) y sistema de rutas Valhalla adaptado.", de: "KI-gestützter visueller Assistent für sehbehinderte Menschen mit Beschreibung der Umgebung, OCR, Code-Scans (QR & Barcodes) und einem angepassten Valhalla-Routing-System.", zh: "为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描（二维码和条形码）以及适配的 Valhalla 路线规划系统。" }
+            url "https://www.emvi.ai"
             keywords [Flutter, Firebase, OpenAI, Valhalla, AI]
             startDate 2024-12-01
             endDate 2025-06-30

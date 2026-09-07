@@ -471,6 +471,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>Dart</keyword>
       </keywords>
       <startDate>2025-07-01</startDate>
+      <url>https://www.acteble.com</url>
       <type>Mobile Application</type>
       <roles>
         <role>Founder</role>
@@ -489,6 +490,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       </keywords>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
+      <url>https://www.emvi.ai</url>
       <type>Mobile Application</type>
       <summary>Assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR &amp; barres) et système de routage Valhalla adapté.</summary>
     </project>

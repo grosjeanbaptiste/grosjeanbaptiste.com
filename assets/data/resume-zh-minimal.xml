@@ -471,6 +471,7 @@ TFE: WebMenu 2.0
         <keyword>Dart</keyword>
       </keywords>
       <startDate>2025-07-01</startDate>
+      <url>https://www.acteble.com</url>
       <type>Mobile Application</type>
       <roles>
         <role>Founder</role>
@@ -489,6 +490,7 @@ TFE: WebMenu 2.0
       </keywords>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
+      <url>https://www.emvi.ai</url>
       <type>Mobile Application</type>
       <summary>为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描（二维码和条形码）以及适配的 Valhalla 路线规划系统。</summary>
     </project>
