@@ -194,17 +194,19 @@
 
       <div class="projects">
         <h2>项目</h2>
-        <p><a href="https://github.com/grosjeanbaptiste/baba" target="_blank" rel="noopener"><strong>Baba</strong></a> — 五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。</p>
-        <p><a href="https://github.com/grosjeanbaptiste/KAG" target="_blank" rel="noopener"><strong>KAG</strong></a> — 采用六边形架构 + DDD + TDD，每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。</p>
-        <p><a href="https://www.acteble.com" target="_blank" rel="noopener"><strong>Acteble</strong></a> — 开发一款在旅途中连接旅行者的移动应用。Flutter 用于移动应用，Rust 用于后端。</p>
-        <p><a href="https://www.emvi.ai" target="_blank" rel="noopener"><strong>Emvi App</strong></a> — 为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描（二维码和条形码）以及适配的 Valhalla 路线规划系统。</p>
-        <p><strong>Remi</strong> — 追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。DeepFace (Serengil) 管道。</p>
+        <p><a href="https://github.com/grosjeanbaptiste/baba" target="_blank" rel="noopener"><strong>Baba</strong></a> — 类 shell CLI，通过纯符号 AI（无 LLM）以受控英语查询。</p>
+        <p><a href="https://github.com/grosjeanbaptiste/KAG" target="_blank" rel="noopener"><strong>KAG</strong></a> — 领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。</p>
+        <p><strong>Synergy</strong> — 比利时联邦议会的内部平台，用于搜索、探索并与议会档案对话。</p>
+        <p><strong>fedrag-be</strong> — 开源评估协议，比较比利时参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。</p>
+        <p><a href="https://www.acteble.com" target="_blank" rel="noopener"><strong>Acteble</strong></a> — 在旅途中连接旅行者的移动应用。</p>
+        <p><a href="https://www.emvi.ai" target="_blank" rel="noopener"><strong>Emvi App</strong></a> — 为视障人士提供的 AI 驱动视觉助手。</p>
+        <p><strong>Remi</strong> — 为认知障碍患者设计的追忆应用。</p>
         <p><strong>EduCraft</strong> — 让任何人都能获得新技能的平台。</p>
         <p><a href="https://my-way-bg.vercel.app" target="_blank" rel="noopener"><strong>MyWay</strong></a> — 学生教育管理工具。不再维护；数据库和身份验证不可用。</p>
-        <p><strong>VhAuctions NER Inventory Model</strong> — 用于从音频转录中提取库存项目的命名实体识别机器学习模型。</p>
-        <p><strong>VhAuctions</strong> — 拍卖车队管理器。</p>
-        <p><strong>Kwalitijd</strong> — 体育俱乐部和联合会的调查管理器。</p>
-        <p><strong>WebMenu</strong> — 基于二维码的酒店、餐厅、咖啡馆 (HoReCa) 收银机。</p>
+        <p><strong>VhAuctions NER Inventory Model</strong></p>
+        <p><strong>VhAuctions</strong></p>
+        <p><strong>Kwalitijd</strong></p>
+        <p><strong>WebMenu</strong></p>
       </div>
 
       <div class="skills">
@@ -358,6 +360,13 @@
           <p class="location">布鲁塞尔，比利时</p>
           <p>为比利时联邦议会进行 AI 研究和工程。设计了一个内部平台，让工作人员可以搜索、探索和与议会档案对话。撰写了一个开源评估协议，比较参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。</p>
           <div class="skill-tags inline-skills"><span class="skill-tag">Python</span> <span class="skill-tag">Java</span> <span class="skill-tag">.NET</span></div>
+          <div class="embedded-projects">
+            <p class="embedded-label">项目:</p>
+            <ul>
+                  <li><strong>Synergy</strong> — 内部平台，让议会工作人员可以搜索、探索并与比利时联邦议会的档案对话，由检索增强（RAG）管道驱动，支持法语/荷兰语双语。</li>
+                  <li><strong>fedrag-be</strong> — 开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。</li>
+            </ul>
+          </div>
         </article>
         <article class="experience-item">
           <h3>AI 软件工艺负责人 | <span class="company"><a href="https://www.emvi.ai" target="_blank" rel="noopener">Emvi.ai</a></span></h3>
@@ -493,6 +502,10 @@
             <p class="embedded-label">项目:</p>
             <ul>
                   <li><strong>Acteble</strong> <a href="https://www.acteble.com" target="_blank" rel="noopener">↗</a> — 开发一款在旅途中连接旅行者的移动应用。Flutter 用于移动应用，Rust 用于后端。</li>
+                  <li><strong>Synergy</strong> — 内部平台，让议会工作人员可以搜索、探索并与比利时联邦议会的档案对话，由检索增强（RAG）管道驱动，支持法语/荷兰语双语。</li>
+                  <li><strong>fedrag-be</strong> — 开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。</li>
+                  <li><strong>Emvi App</strong> <a href="https://www.emvi.ai" target="_blank" rel="noopener">↗</a> — 为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描（二维码和条形码）以及适配的 Valhalla 路线规划系统。</li>
+                  <li><strong>Remi</strong> — 追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。DeepFace (Serengil) 管道。</li>
             </ul>
           </div>
           <div class="embedded-projects">

@@ -165,6 +165,10 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
         <skill>Java</skill>
         <skill>.NET</skill>
       </skills>
+      <projects>
+        <project>Synergy</project>
+        <project>fedrag-be</project>
+      </projects>
     </job>
     <job>
       <company>Emvi.ai</company>
@@ -353,6 +357,10 @@ Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du dévelo
       </skills>
       <projects>
         <project>Acteble</project>
+        <project>Synergy</project>
+        <project>fedrag-be</project>
+        <project>Emvi App</project>
+        <project>Remi</project>
       </projects>
     </school>
     <school>
@@ -456,6 +464,41 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <role>Author</role>
       </roles>
       <summary>Conception hexagonale + DDD + TDD où chaque étape (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) est un composant interchangeable sélectionné par label, sans dépendances externes dans le core.</summary>
+    </project>
+    <project>
+      <name>Synergy</name>
+      <description>Plateforme interne du Parlement fédéral belge pour chercher, explorer et converser avec les archives parlementaires.</description>
+      <keywords>
+        <keyword>Python</keyword>
+        <keyword>Java</keyword>
+        <keyword>.NET</keyword>
+        <keyword>RAG</keyword>
+        <keyword>AI</keyword>
+      </keywords>
+      <startDate>2025-11-03</startDate>
+      <endDate>2026-06-30</endDate>
+      <type>Platform</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Plateforme interne permettant au personnel parlementaire de chercher, explorer et converser avec les archives du Parlement fédéral belge, portée par un pipeline de retrieval-augmented generation avec prise en charge bilingue FR/NL.</summary>
+    </project>
+    <project>
+      <name>fedrag-be</name>
+      <description>Protocole d'évaluation ouvert comparant les stratégies de retrieval sur le corpus du Sénat belge, avec un focus sur la robustesse bilingue FR/NL.</description>
+      <keywords>
+        <keyword>RAG</keyword>
+        <keyword>Python</keyword>
+        <keyword>Evaluation</keyword>
+        <keyword>Benchmark</keyword>
+      </keywords>
+      <startDate>2025-11-03</startDate>
+      <endDate>2026-06-30</endDate>
+      <type>Research</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Protocole ouvert et reproductible qui évalue les stratégies de retrieval sur le corpus bilingue du Sénat, en mesurant la robustesse FR/NL tout au long du pipeline de retrieval.</summary>
     </project>
     <project>
       <name>Acteble</name>

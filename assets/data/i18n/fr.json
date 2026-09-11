@@ -126,6 +126,14 @@
       "summary": "Conception hexagonale + DDD + TDD où chaque étape (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) est un composant interchangeable sélectionné par label, sans dépendances externes dans le core."
     },
     {
+      "description": "Plateforme interne du Parlement fédéral belge pour chercher, explorer et converser avec les archives parlementaires.",
+      "summary": "Plateforme interne permettant au personnel parlementaire de chercher, explorer et converser avec les archives du Parlement fédéral belge, portée par un pipeline de retrieval-augmented generation avec prise en charge bilingue FR/NL."
+    },
+    {
+      "description": "Protocole d'évaluation ouvert comparant les stratégies de retrieval sur le corpus du Sénat belge, avec un focus sur la robustesse bilingue FR/NL.",
+      "summary": "Protocole ouvert et reproductible qui évalue les stratégies de retrieval sur le corpus bilingue du Sénat, en mesurant la robustesse FR/NL tout au long du pipeline de retrieval."
+    },
+    {
       "description": "Application mobile connectant les voyageurs pendant leurs trajets.",
       "summary": "Développement d'une application mobile qui connecte les voyageurs pendant leurs trajets. Flutter pour l'app mobile, Rust pour le backend."
     },

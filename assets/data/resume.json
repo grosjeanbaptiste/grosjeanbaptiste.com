@@ -257,6 +257,39 @@
       ]
     },
     {
+      "name": "Synergy",
+      "description": "Internal platform for the Belgian Federal Parliament to search, explore and converse with the parliamentary archives.",
+      "keywords": [
+        "Python",
+        "Java",
+        ".NET",
+        "RAG",
+        "AI"
+      ],
+      "startDate": "2025-11-03",
+      "endDate": "2026-06-30",
+      "type": "Platform",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "fedrag-be",
+      "description": "Open evaluation protocol comparing retrieval strategies on the Belgian Senate corpus, with a focus on bilingual FR/NL robustness.",
+      "keywords": [
+        "RAG",
+        "Python",
+        "Evaluation",
+        "Benchmark"
+      ],
+      "startDate": "2025-11-03",
+      "endDate": "2026-06-30",
+      "type": "Research",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
       "name": "Acteble",
       "description": "Mobile application connecting travelers during their journeys.",
       "keywords": [

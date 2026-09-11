@@ -126,6 +126,14 @@
       "summary": "Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core."
     },
     {
+      "description": "Interne Plattform des belgischen Bundesparlaments zum Durchsuchen, Erkunden und Befragen der parlamentarischen Archive.",
+      "summary": "Interne Plattform, die parlamentarischen Mitarbeitern ermöglicht, die Archive des belgischen Bundesparlaments zu durchsuchen, zu erkunden und zu befragen — angetrieben von einer Retrieval-Augmented-Pipeline mit zweisprachiger FR/NL-Unterstützung."
+    },
+    {
+      "description": "Offenes Bewertungsprotokoll, das Retrieval-Strategien auf dem Korpus des belgischen Senats vergleicht, mit Fokus auf zweisprachige FR/NL-Robustheit.",
+      "summary": "Offenes, reproduzierbares Protokoll, das Retrieval-Strategien auf dem zweisprachigen Senatskorpus benchmarkt und die FR/NL-Robustheit über die gesamte Retrieval-Pipeline misst."
+    },
+    {
       "description": "Mobile App, die Reisende während ihrer Reisen verbindet.",
       "summary": "Entwicklung einer mobilen Anwendung, die Reisende während ihrer Reisen verbindet. Flutter für die mobile App, Rust für das Backend."
     },

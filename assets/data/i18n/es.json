@@ -126,6 +126,14 @@
       "summary": "Diseño hexagonal + DDD + TDD donde cada etapa (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) es un componente intercambiable seleccionado por label, sin dependencias externas en el core."
     },
     {
+      "description": "Plataforma interna del Parlamento federal belga para buscar, explorar y conversar con los archivos parlamentarios.",
+      "summary": "Plataforma interna que permite al personal parlamentario buscar, explorar y conversar con los archivos del Parlamento federal belga, impulsada por un pipeline de retrieval-augmented generation con soporte bilingüe FR/NL."
+    },
+    {
+      "description": "Protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado belga, con énfasis en la robustez bilingüe FR/NL.",
+      "summary": "Protocolo abierto y reproducible que evalúa estrategias de recuperación sobre el corpus bilingüe del Senado, midiendo la robustez FR/NL a lo largo del pipeline de recuperación."
+    },
+    {
       "description": "Aplicación móvil que conecta a los viajeros durante sus trayectos.",
       "summary": "Desarrollo de una aplicación móvil que conecta a los viajeros durante sus trayectos. Flutter para la app móvil y Rust para el backend."
     },

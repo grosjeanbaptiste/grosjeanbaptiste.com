@@ -50,7 +50,7 @@ function renderProjectsBlock(resume, t) {
       const label = p.url
         ? `<a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${name}</a>`
         : name;
-      const desc = p.summary || p.description || '';
+      const desc = p.description || '';
       return `  <p>${label}${desc ? ` — ${escapeHtml(desc)}` : ''}</p>`;
     })
     .join('\n');
