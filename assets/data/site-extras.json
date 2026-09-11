@@ -20,6 +20,10 @@
         "Python",
         "Java",
         ".NET"
+      ],
+      "projects": [
+        "Synergy",
+        "fedrag-be"
       ]
     },
     {
@@ -119,7 +123,11 @@
         "CleanArchitecture"
       ],
       "projects": [
-        "Acteble"
+        "Acteble",
+        "Synergy",
+        "fedrag-be",
+        "Emvi App",
+        "Remi"
       ],
       "courses": []
     },
@@ -175,6 +183,12 @@
     },
     {
       "summary": "Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, zero external dependencies in the core."
+    },
+    {
+      "summary": "Internal platform that lets parliamentary staff search, explore and converse with the archives of the Belgian Federal Parliament, powered by a retrieval-augmented pipeline with bilingual FR/NL support."
+    },
+    {
+      "summary": "Open, reproducible protocol that benchmarks retrieval strategies on the bilingual Senate corpus, measuring FR/NL robustness across the retrieval pipeline."
     },
     {
       "summary": "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend."

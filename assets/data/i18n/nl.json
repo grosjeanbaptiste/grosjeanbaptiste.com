@@ -126,6 +126,14 @@
       "summary": "Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core."
     },
     {
+      "description": "Intern platform van het Belgisch federaal Parlement om de parlementaire archieven te doorzoeken, verkennen en bevragen.",
+      "summary": "Intern platform waarmee parlementaire medewerkers de archieven van het Belgisch federaal Parlement kunnen doorzoeken, verkennen en bevragen, aangedreven door een retrieval-augmented pijplijn met tweetalige FR/NL-ondersteuning."
+    },
+    {
+      "description": "Open evaluatieprotocol dat retrieval-strategieën vergelijkt op het corpus van de Belgische Senaat, met focus op tweetalige FR/NL-robuustheid.",
+      "summary": "Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet."
+    },
+    {
       "description": "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.",
       "summary": "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend."
     },

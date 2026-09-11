@@ -165,6 +165,10 @@ Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-wor
         <skill>Java</skill>
         <skill>.NET</skill>
       </skills>
+      <projects>
+        <project>Synergy</project>
+        <project>fedrag-be</project>
+      </projects>
     </job>
     <job>
       <company>Emvi.ai</company>
@@ -353,6 +357,10 @@ De opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van d
       </skills>
       <projects>
         <project>Acteble</project>
+        <project>Synergy</project>
+        <project>fedrag-be</project>
+        <project>Emvi App</project>
+        <project>Remi</project>
       </projects>
     </school>
     <school>
@@ -456,6 +464,41 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <role>Author</role>
       </roles>
       <summary>Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core.</summary>
+    </project>
+    <project>
+      <name>Synergy</name>
+      <description>Intern platform van het Belgisch federaal Parlement om de parlementaire archieven te doorzoeken, verkennen en bevragen.</description>
+      <keywords>
+        <keyword>Python</keyword>
+        <keyword>Java</keyword>
+        <keyword>.NET</keyword>
+        <keyword>RAG</keyword>
+        <keyword>AI</keyword>
+      </keywords>
+      <startDate>2025-11-03</startDate>
+      <endDate>2026-06-30</endDate>
+      <type>Platform</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Intern platform waarmee parlementaire medewerkers de archieven van het Belgisch federaal Parlement kunnen doorzoeken, verkennen en bevragen, aangedreven door een retrieval-augmented pijplijn met tweetalige FR/NL-ondersteuning.</summary>
+    </project>
+    <project>
+      <name>fedrag-be</name>
+      <description>Open evaluatieprotocol dat retrieval-strategieën vergelijkt op het corpus van de Belgische Senaat, met focus op tweetalige FR/NL-robuustheid.</description>
+      <keywords>
+        <keyword>RAG</keyword>
+        <keyword>Python</keyword>
+        <keyword>Evaluation</keyword>
+        <keyword>Benchmark</keyword>
+      </keywords>
+      <startDate>2025-11-03</startDate>
+      <endDate>2026-06-30</endDate>
+      <type>Research</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet.</summary>
     </project>
     <project>
       <name>Acteble</name>
