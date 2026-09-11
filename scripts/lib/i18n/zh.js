@@ -12,6 +12,7 @@ module.exports = {
   lightMode: '浅色模式',
   langMenuLabel: '语言',
   pageTitleSuffix: '简历',
+  degreeConnector: ' — ',
   inProgress: '进行中',
   xmlResume: '简历 (XML + XSLT)',
   firefoxNote: '建议使用 Firefox 查看',

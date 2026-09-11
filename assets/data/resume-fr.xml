@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=ec158a96"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=d72fc333"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -346,7 +346,7 @@ Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du dévelo
       <studyType>Master en Sciences</studyType>
       <area>Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
-      <endDate>2026-09-03</endDate>
+      <endDate>2026-09-04</endDate>
       <gpa>13,04/20 — obtenu avec satisfaction</gpa>
       <summary>Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant &amp; buddy TandeMons. Cours principaux : génie logiciel et gestion de projet, intelligence artificielle, bases de données, structures de données, recherche opérationnelle, cryptographie et sécurité informatique, éthique et droit de l'informatique, avec deux stages en entreprise rémunérés.</summary>
       <skills>

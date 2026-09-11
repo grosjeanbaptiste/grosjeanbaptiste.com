@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=ec158a96"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=d72fc333"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -93,7 +93,7 @@
     </sidebarOrder>
     <lang>es</lang>
     <degrees>
-      <obtained>Bachelor profesional — Informática de gestión</obtained>
+      <obtained>Máster en Ciencias — Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)</obtained>
     </degrees>
   </meta>
   <basics>
@@ -346,7 +346,7 @@ Formación que abarcó SQL Server, Node.js, Express.js, React y Angular, desde e
       <studyType>Máster en Ciencias</studyType>
       <area>Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
-      <endDate>2026-09-03</endDate>
+      <endDate>2026-09-04</endDate>
       <gpa>13,04/20 — obtenido con satisfacción</gpa>
       <summary>Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons. Cursos principales: ingeniería del software y gestión de proyectos, inteligencia artificial, bases de datos, estructuras de datos, investigación operativa, criptografía y seguridad informática, ética y derecho informático, con dos prácticas remuneradas en empresa.</summary>
       <skills>

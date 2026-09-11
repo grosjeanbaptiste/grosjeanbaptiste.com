@@ -322,12 +322,10 @@
               margin: 0 -12px 18px;
               padding: 6px 8px;
               gap: 5px;
-              justify-content: flex-start;
-              overflow-x: auto;
-              flex-wrap: nowrap;
-              -webkit-overflow-scrolling: touch;
+              justify-content: center;
+              flex-wrap: wrap;
             }
-            .toolbar .group { gap: 4px; flex-shrink: 0; }
+            .toolbar .group { gap: 4px; }
             .toolbar a, .toolbar button {
               padding: 3px 6px;
               font-size: 0.8em;

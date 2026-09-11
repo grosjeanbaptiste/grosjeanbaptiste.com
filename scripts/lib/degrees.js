@@ -1,12 +1,18 @@
 // Ranks education entries by degree level (Master > Bachelor > Attestation >
 // CESS > other), ties broken by most recent endDate (or startDate when no end).
 
+const I18N = require('./i18n');
+
 function degreeScore(studyType) {
   if (!studyType) return 0;
-  if (/master|MSc?\b|MA\b/i.test(studyType)) return 4;
-  if (/bachelor|bachelier|BSc|BA\b/i.test(studyType)) return 3;
-  if (/attestation|certificat/i.test(studyType)) return 2;
-  if (/CESS|cours|secondaire/i.test(studyType)) return 1;
+  // Strip diacritics so localized spellings (es "Máster", fr "Maîtrise") match
+  // their unaccented latin forms. CJK titles (zh 硕士/学士) carry no diacritics
+  // and are matched by explicit alternatives below.
+  const s = studyType.normalize('NFD').replace(/\p{Diacritic}/gu, '');
+  if (/master|magister|maitrise|\bMSc?\b|\bMA\b|硕士/i.test(s)) return 4;
+  if (/bachelor|bachelier|licence|\bBSc\b|\bBA\b|学士/i.test(s)) return 3;
+  if (/attestation|certificat/i.test(s)) return 2;
+  if (/CESS|cours|secondaire/i.test(s)) return 1;
   return 0;
 }
 
@@ -38,7 +44,7 @@ function formatDegreeLine(degree, lang) {
   if (!degree) return null;
   const parts = [degree.studyType, degree.area].filter(Boolean);
   if (!parts.length) return null;
-  const sep = lang === 'en' ? ' in ' : ' — ';
+  const sep = (I18N[lang] || I18N.en).degreeConnector;
   return parts.join(sep);
 }
 

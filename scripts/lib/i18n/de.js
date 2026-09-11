@@ -12,6 +12,7 @@ module.exports = {
   lightMode: 'Heller Modus',
   langMenuLabel: 'Sprache',
   pageTitleSuffix: 'Lebenslauf',
+  degreeConnector: ' — ',
   inProgress: 'läuft',
   xmlResume: 'Lebenslauf (XML + XSLT)',
   firefoxNote: 'am besten in Firefox ansehen',
