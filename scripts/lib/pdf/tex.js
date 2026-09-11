@@ -75,7 +75,14 @@ function truncate(s, n) {
   if (!s) return '';
   const str = String(s).replace(/\s+/g, ' ').trim();
   if (str.length <= n) return str;
-  return `${str.slice(0, n - 1).trimEnd()}…`;
+  // Cut on the last word boundary that fits (reserving one slot for the
+  // ellipsis) so we never slice a word in half; fall back to a hard cut when
+  // a single token is longer than the budget. Drop any dangling separator so
+  // the ellipsis reads "word…", not "word,…".
+  const slice = str.slice(0, n - 1);
+  const lastSpace = slice.lastIndexOf(' ');
+  const head = lastSpace > 0 ? slice.slice(0, lastSpace) : slice;
+  return `${head.replace(/[\s,;:.–—-]+$/, '')}…`;
 }
 
 function formatDate(iso, lang) {

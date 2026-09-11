@@ -12,6 +12,7 @@ module.exports = {
   lightMode: 'Light mode',
   langMenuLabel: 'Language',
   pageTitleSuffix: 'CV',
+  degreeConnector: ' in ',
   inProgress: 'in progress',
   xmlResume: 'CV (XML + XSLT)',
   firefoxNote: 'best viewed in Firefox',

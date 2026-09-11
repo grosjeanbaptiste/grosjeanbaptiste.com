@@ -67,19 +67,25 @@ const FIT_PLANS = [
     show_skills: true,
     education_in_body: false,
   },
+  // This is the plan that currently wins for all six languages. Once the skill
+  // tags are off and Education moves to the sidebar, the recto has plenty of
+  // vertical room, so summaries stay generous (220) rather than being clipped
+  // mid-line — verified: en/fr/nl/es/de/zh all still render exactly 2 pages.
   {
     work: 8,
     education: 2,
-    summary: 140,
-    proj_desc: 60,
+    summary: 220,
+    proj_desc: 80,
     show_skills: false,
     education_in_body: false,
   },
+  // Last-resort safety net: only reached if the plan above ever overflows
+  // (e.g. much longer future content). Drops to 6 work entries and trims text.
   {
     work: 6,
     education: 2,
-    summary: 120,
-    proj_desc: 50,
+    summary: 160,
+    proj_desc: 60,
     show_skills: false,
     education_in_body: false,
   },

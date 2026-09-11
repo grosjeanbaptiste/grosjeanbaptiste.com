@@ -45,7 +45,7 @@ function renderExperienceItem(w, lang, ctx, t) {
 function renderEducationItem(e, lang, ctx, t) {
   const parts = [
     '<article class="education-item">',
-    `  <h3>${escapeHtml(e.studyType)}${e.area ? `${lang === 'en' ? ' in ' : ' — '}${escapeHtml(e.area)}` : ''}</h3>`,
+    `  <h3>${escapeHtml(e.studyType)}${e.area ? `${t.degreeConnector}${escapeHtml(e.area)}` : ''}</h3>`,
     `  <p class="institution">${escapeHtml(e.institution)}</p>`,
     `  <p class="date">${dateRangeHtml(e.startDate, e.endDate, lang)}</p>`,
   ];
