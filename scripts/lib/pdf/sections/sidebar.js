@@ -1,4 +1,4 @@
-const { tex, nohyphen } = require('../tex');
+const { tex, nohyphen, tagText } = require('../tex');
 const {
   highestInProgressDegree,
   highestObtainedDegree,
@@ -12,8 +12,13 @@ function buildSkillsBlock(resume, t) {
   const hard = (resume.skills || []).find((s) => s.name === 'HardSkills');
   const soft = (resume.skills || []).find((s) => s.name === 'SoftSkills');
   const parts = [];
+  // \footnotesize (not \small): at \small the widest tags ("ConstraintProgramming",
+  // "CombinatorialOptimization") pack two-per-line wider than the 30% column and
+  // the last one bleeds into the main column. \footnotesize keeps every packed
+  // line within the column. Pairs with the varwidth \cvtag + camelCase breaks so
+  // a single over-long tag can never overflow either.
   const tagLine = (kw) =>
-    `\\noindent\\raggedright{\\small ${kw.map((k) => `\\cvtag{${tex(k)}}`).join(' ')}}\\par`;
+    `\\noindent\\raggedright{\\footnotesize ${kw.map((k) => `\\cvtag{${tagText(k)}}`).join(' ')}}\\par`;
   if (hard?.keywords?.length) {
     parts.push(`\\cvsectionsidebar{${nohyphen(t.technicalSkills)}}`);
     parts.push(tagLine(hard.keywords));

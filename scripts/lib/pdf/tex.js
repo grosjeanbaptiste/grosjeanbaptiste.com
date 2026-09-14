@@ -71,6 +71,15 @@ function nohyphen(value) {
     .join('');
 }
 
+// A skill tag is a single token that must fit the narrow left column. camelCase
+// tags like "CombinatorialOptimization" have no space, so the wrapping \cvtag
+// box (see CVTAG_WRAP_MACRO) has nowhere to break and overflows into the main
+// column. Insert a zero-width, hyphen-free break opportunity at each
+// lowercase→uppercase seam so long tags wrap in place; short ones are untouched.
+function tagText(value) {
+  return tex(value).replace(/([a-z])([A-Z])/g, '$1\\allowbreak{}$2');
+}
+
 function truncate(s, n) {
   if (!s) return '';
   const str = String(s).replace(/\s+/g, ' ').trim();
@@ -93,4 +102,4 @@ function formatDate(iso, lang) {
   return `${MONTHS[lang][Number.parseInt(m[2], 10) - 1]} ${m[1]}`;
 }
 
-module.exports = { tex, nohyphen, truncate, formatDate };
+module.exports = { tex, nohyphen, tagText, truncate, formatDate };

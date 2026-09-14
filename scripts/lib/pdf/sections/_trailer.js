@@ -1,12 +1,12 @@
 // Shared trailer for experience + education entries: optional skill tags
 // followed by an optional bulleted list of related projects. Extracted to
 // keep buildWork/buildEducation under the cognitive-complexity budget.
-const { tex, truncate } = require('../tex');
+const { tex, tagText, truncate } = require('../tex');
 const { findProject } = require('../data');
 
 function renderSkillTags(skills, limits) {
   if (!limits.show_skills || !skills?.length) return null;
-  const tags = skills.map((s) => `\\cvtag{${tex(s)}}`).join(' ');
+  const tags = skills.map((s) => `\\cvtag{${tagText(s)}}`).join(' ');
   return `\\par\\nobreak\\noindent{\\footnotesize ${tags}}\\par\\nobreak\\smallskip`;
 }
 
