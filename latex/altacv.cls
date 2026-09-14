@@ -374,7 +374,15 @@
 
             % Draw the data labels
             % v1.6: Use accsupp so that the numeric number is copied/pasted too
-            \draw  [*-,thin,emphasis] node [append after command={(\midangle:\midradius pt) -- (\midangle:\outerradius + 1ex) -- (\tikzlastnode)}] at (\midangle:\outerradius + 1ex) [xshift=\labelshiftdir*0.5cm,inner sep=1ex, outer sep=0pt, text width=\width,anchor=\textanchor,align=\textalign,font=\small,text=body]{\BeginAccSupp{method=pdfstringdef,ActualText={\name: \value}}\name\EndAccSupp{}};
+            % Fork: the leader line used to end at (\tikzlastnode), i.e. the
+            % node's CENTRE, so it ran straight through the label and looked
+            % like a strike-through. The west/east heuristic above misassigns
+            % the near-vertical top/bottom slices, so terminating at any single
+            % node anchor can't be right for every label. Instead stop the line
+            % at the elbow just outside the ring (a short radial tick from the
+            % ring dot) and let the label sit beside it -- no segment ever
+            % enters the text, so no label can be crossed on either side.
+            \draw  [*-,thin,emphasis] node [append after command={(\midangle:\midradius pt) -- (\midangle:\outerradius + 1ex)}] at (\midangle:\outerradius + 1ex) [xshift=\labelshiftdir*0.5cm,inner sep=1ex, outer sep=0pt, text width=\width,anchor=\textanchor,align=\textalign,font=\small,text=body]{\BeginAccSupp{method=pdfstringdef,ActualText={\name: \value}}\name\EndAccSupp{}};
             % Set the old cumulated angle to the new value
             \global\let\cumnum=\newcumnum
         }
