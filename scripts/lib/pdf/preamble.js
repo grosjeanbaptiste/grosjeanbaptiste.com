@@ -30,6 +30,19 @@ const COLOURS = [
   '\\pagecolor{BackgroundColor}',
 ];
 
+// altacv's \cvtag wraps each tag in an unbreakable TikZ node, so a tag longer
+// than the narrow left column (e.g. "CombinatorialOptimization") overflows into
+// the main column. Override it so the node's content sits in a varwidth box
+// capped at \linewidth: short tags keep their natural width and look identical,
+// long ones wrap inside the column instead of bleeding across the gutter.
+const CVTAG_WRAP_MACRO = [
+  '\\renewcommand{\\cvtag}[1]{%',
+  '  \\tikz[baseline]\\node[anchor=base,draw=body,rounded corners,inner xsep=1ex,inner ysep=0.75ex,text depth=.25ex]{%',
+  '    \\begin{varwidth}{\\dimexpr\\linewidth-2.5ex\\relax}#1\\end{varwidth}};%',
+  '  \\vspace{0.25ex}%',
+  '}',
+];
+
 const SIDEBAR_HEADING_MACRO = [
   // Compact section heading for the narrow left column. Smaller font +
   // hard \raggedright + high hyphenation penalty so no word breaks AND no
@@ -52,6 +65,7 @@ function buildPreamble(lang) {
     '\\usepackage{paracol}',
     '\\usepackage{fontawesome5}',
     '\\usepackage{needspace}',
+    '\\usepackage{varwidth}',
     '\\geometry{left=0.9cm,right=0.9cm,top=0.8cm,bottom=0.8cm,columnsep=0.6cm}',
     '\\ifxetexorluatex',
     // xelatex path (used for zh): try Roboto Slab + Lato if installed.
@@ -73,6 +87,7 @@ function buildPreamble(lang) {
     '\\renewcommand{\\cvsubsectionfont}{\\large\\bfseries}',
     '\\renewcommand{\\itemmarker}{{\\small\\textbullet}}',
     '\\renewcommand{\\ratingmarker}{\\faCircle}',
+    ...CVTAG_WRAP_MACRO,
     ...SIDEBAR_HEADING_MACRO,
   ].join('\n');
 }
