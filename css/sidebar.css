@@ -2,6 +2,7 @@
 
 .sidebar {
   width: 25%;
+  box-sizing: border-box;
   background-color: var(--card-background);
   padding: clamp(0.75rem, 2.5vw, 1.25rem);
   border-radius: 8px;
