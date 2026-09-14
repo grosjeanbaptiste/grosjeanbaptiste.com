@@ -17,10 +17,11 @@ function renderEmbeddedProjects(projectNames, projects, t) {
   const items = projs
     .map((p) => {
       const desc = p.summary || p.description || '';
-      const link = p.url
-        ? ` <a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">↗</a>`
-        : '';
-      return `<li><strong>${escapeHtml(p.name)}</strong>${link}${desc ? ` — ${escapeHtml(desc)}` : ''}</li>`;
+      const name = `<strong>${escapeHtml(p.name)}</strong>`;
+      const label = p.url
+        ? `<a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${name}</a>`
+        : name;
+      return `<li>${label}${desc ? ` — ${escapeHtml(desc)}` : ''}</li>`;
     })
     .join('\n        ');
   return [
