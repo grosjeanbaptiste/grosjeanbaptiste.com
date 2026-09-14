@@ -65,7 +65,12 @@ function buildDayBlock(resume, t) {
     const style = WHEEL_STYLES[i] || WHEEL_STYLES[WHEEL_STYLES.length - 1];
     const label = t.dailyLifeLabels[item.key] || item.key;
     const tail = i === items.length - 1 ? '%' : ',';
-    return `    ${item.hours}/${style}/${tex(label)}${tail}`;
+    // Show the hour count on each slice label (the donut had no numbers at all).
+    // A non-breaking space keeps "Work 8h" together; the count is set in the
+    // accent colour to read as a value, not part of the name. No comma/slash in
+    // the name field so the wheelchart \foreach still splits value/width/colour.
+    const name = `${tex(label)}~\\textcolor{accent}{${item.hours}h}`;
+    return `    ${item.hours}/${style}/${name}${tail}`;
   });
   return [
     `\\cvsectionsidebar{${nohyphen(t.typicalDay)}}`,
