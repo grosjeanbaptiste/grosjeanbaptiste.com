@@ -2,7 +2,7 @@
 
 .main-content {
   width: 70%;
-  padding: 20px;
+  padding: clamp(0.75rem, 2.5vw, 1.25rem);
   box-sizing: border-box;
   background-color: var(--card-background);
   border-radius: 8px;
@@ -132,10 +132,6 @@
 }
 
 @media (max-width: 480px) {
-  .main-content {
-    padding: 15px;
-  }
-
   .main-content h2 {
     font-size: 1.4em;
   }
