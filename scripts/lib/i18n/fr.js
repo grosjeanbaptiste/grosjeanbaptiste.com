@@ -19,6 +19,7 @@ module.exports = {
   jsonRegistry: 'CV (JSON Resume registry)',
   jsonRegistryNote: 'rendus thématiques du JSON canonique',
   downloadCV: 'Télécharger le CV',
+  printPdf: 'Imprimer / PDF',
   dailyLifeUnit: 'h',
   dailyLifeAria: 'Répartition typique sur 24 h',
   nav: {
