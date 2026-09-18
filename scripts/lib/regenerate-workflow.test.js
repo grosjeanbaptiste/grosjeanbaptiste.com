@@ -11,6 +11,9 @@
 //   2. It fires, but the PATHS list in the commit step is narrower than what
 //      the generator writes, so regenerated files are left behind uncommitted
 //      and discarded when the runner is torn down.
+//   3. It watches the generator entry point but not the modules it requires, so
+//      editing a label under scripts/lib/i18n/ or a section renderer changes
+//      what the site should say without any regeneration being triggered.
 //
 // Both are silent: no failing step, no warning. Hence these tests.
 
@@ -79,5 +82,42 @@ test('the commit step covers every file the generator writes', () => {
     missed,
     [],
     `regenerated but never committed: ${missed.join(', ')}`,
+  );
+});
+
+// Every local module the generator transitively requires, relative to the repo
+// root. Derived from the source rather than listed by hand, so a new module is
+// covered the day it is added.
+function generatorDeps() {
+  const entry = path.join(ROOT, 'scripts/generate-from-resume.js');
+  const seen = new Set();
+  const stack = [entry];
+  while (stack.length > 0) {
+    const file = stack.pop();
+    if (seen.has(file)) continue;
+    seen.add(file);
+    for (const m of fs.readFileSync(file, 'utf8').matchAll(/require\((['"])(\.[^'"]+)\1\)/g)) {
+      let dep = path.resolve(path.dirname(file), m[2]);
+      if (fs.existsSync(dep) && fs.statSync(dep).isDirectory()) dep = path.join(dep, 'index.js');
+      else if (!dep.endsWith('.js')) dep += '.js';
+      if (fs.existsSync(dep)) stack.push(dep);
+    }
+  }
+  return [...seen].map((f) => path.relative(ROOT, f));
+}
+
+// A push filter entry watches a file if it names it or is a `dir/**` prefix.
+function watches(pattern, file) {
+  if (pattern === file) return true;
+  return pattern.endsWith('/**') && file.startsWith(pattern.slice(0, -2));
+}
+
+test('the workflow watches every module the generator depends on', () => {
+  const patterns = pushPaths();
+  const unwatched = generatorDeps().filter((f) => !patterns.some((p) => watches(p, f)));
+  assert.deepEqual(
+    unwatched,
+    [],
+    `editing these would change the generated site without triggering a rebuild: ${unwatched.join(', ')}`,
   );
 });
