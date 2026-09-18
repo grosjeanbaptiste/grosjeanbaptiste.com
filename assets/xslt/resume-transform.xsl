@@ -41,6 +41,7 @@
           <xsl:when test="$k='present'">aujourd'hui</xsl:when>
           <xsl:when test="$k='inProgress'">en cours</xsl:when>
           <xsl:when test="$k='downloadCV'">Télécharger le CV</xsl:when>
+          <xsl:when test="$k='printPdf'">Imprimer / PDF</xsl:when>
           <xsl:when test="$k='dark'">Mode sombre</xsl:when>
           <xsl:when test="$k='light'">Mode clair</xsl:when>
           <xsl:when test="$k='theme'">Thème</xsl:when>
@@ -68,6 +69,7 @@
           <xsl:when test="$k='present'">heden</xsl:when>
           <xsl:when test="$k='inProgress'">in uitvoering</xsl:when>
           <xsl:when test="$k='downloadCV'">CV downloaden</xsl:when>
+          <xsl:when test="$k='printPdf'">Afdrukken / PDF</xsl:when>
           <xsl:when test="$k='dark'">Donkere modus</xsl:when>
           <xsl:when test="$k='light'">Lichte modus</xsl:when>
           <xsl:when test="$k='theme'">Thema</xsl:when>
@@ -95,6 +97,7 @@
           <xsl:when test="$k='present'">actualidad</xsl:when>
           <xsl:when test="$k='inProgress'">en curso</xsl:when>
           <xsl:when test="$k='downloadCV'">Descargar CV</xsl:when>
+          <xsl:when test="$k='printPdf'">Imprimir / PDF</xsl:when>
           <xsl:when test="$k='dark'">Modo oscuro</xsl:when>
           <xsl:when test="$k='light'">Modo claro</xsl:when>
           <xsl:when test="$k='theme'">Tema</xsl:when>
@@ -122,6 +125,7 @@
           <xsl:when test="$k='present'">heute</xsl:when>
           <xsl:when test="$k='inProgress'">läuft</xsl:when>
           <xsl:when test="$k='downloadCV'">Lebenslauf herunterladen</xsl:when>
+          <xsl:when test="$k='printPdf'">Drucken / PDF</xsl:when>
           <xsl:when test="$k='dark'">Dunkler Modus</xsl:when>
           <xsl:when test="$k='light'">Heller Modus</xsl:when>
           <xsl:when test="$k='theme'">Thema</xsl:when>
@@ -149,6 +153,7 @@
           <xsl:when test="$k='present'">至今</xsl:when>
           <xsl:when test="$k='inProgress'">进行中</xsl:when>
           <xsl:when test="$k='downloadCV'">下载简历</xsl:when>
+          <xsl:when test="$k='printPdf'">打印 / PDF</xsl:when>
           <xsl:when test="$k='dark'">深色模式</xsl:when>
           <xsl:when test="$k='light'">浅色模式</xsl:when>
           <xsl:when test="$k='theme'">主题</xsl:when>
@@ -176,6 +181,7 @@
           <xsl:when test="$k='present'">Present</xsl:when>
           <xsl:when test="$k='inProgress'">in progress</xsl:when>
           <xsl:when test="$k='downloadCV'">Download CV</xsl:when>
+          <xsl:when test="$k='printPdf'">Print / PDF</xsl:when>
           <xsl:when test="$k='dark'">Dark mode</xsl:when>
           <xsl:when test="$k='light'">Light mode</xsl:when>
           <xsl:when test="$k='theme'">Theme</xsl:when>
@@ -399,8 +405,30 @@
             #profile-picture { max-width: 160px; }
             blockquote { font-size: 0.88em; padding: 6px 12px; }
           }
+          @page { size: A4; margin: 12mm; }
           @media print {
             .toolbar { display: none; }
+            /* Force the light palette so a dark-mode reader still prints a
+               clean, ink-light sheet. Mirrors the :root light values. */
+            html[data-theme="dark"] {
+              --primary:    <xsl:value-of select="meta/brand/xsltPrimary"/>;
+              --accent:     <xsl:value-of select="meta/brand/accent"/>;
+              --body:       <xsl:value-of select="meta/brand/xsltBody"/>;
+              --muted:      <xsl:value-of select="meta/brand/xsltMuted"/>;
+              --bg-page:    <xsl:value-of select="meta/brand/xsltBg"/>;
+              --bg-sidebar: <xsl:value-of select="meta/brand/xsltRuleLight"/>;
+              --bg-block:   rgba(243, 137, 11, 0.05);
+              --rule:       <xsl:value-of select="meta/brand/xsltRuleRich"/>;
+            }
+            html, body { background: #fff; }
+            /* Keep the sidebar tint and accent rules instead of white boxes. */
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .container { max-width: none; margin: 0; padding: 0; gap: 14px; }
+            .sidebar { border-radius: 0; }
+            /* Don't split an entry, quote or section heading across pages. */
+            .item, blockquote, .sidebar h2, .sidebar p { break-inside: avoid; }
+            .main h2 { break-after: avoid; }
+            a { color: var(--body); text-decoration: none; }
           }
         </style>
         <!-- Dark mode bootstrap: applied before <body> renders to avoid flash. -->
@@ -457,12 +485,19 @@
             </span>
           </button>
 
-          <!-- PDF download -->
+          <!-- PDF download (pre-built LaTeX CV, high-quality, 2-page fit) -->
           <a class="download">
             <xsl:attribute name="href">/assets/cv/cv_grosjean_baptiste_<xsl:value-of select="$lang"/>.pdf</xsl:attribute>
             <xsl:attribute name="download">cv_grosjean_baptiste_<xsl:value-of select="$lang"/>.pdf</xsl:attribute>
             ⬇ <xsl:call-template name="t"><xsl:with-param name="k" select="'downloadCV'"/></xsl:call-template>
           </a>
+
+          <!-- Live PDF: print this XSLT-rendered view straight from the
+               browser (Cmd/Ctrl+P → Save as PDF). Always in sync with the XML,
+               no build step. Complements — does not replace — the LaTeX PDF. -->
+          <button type="button" class="print" onclick="window.print()">
+            🖨 <xsl:call-template name="t"><xsl:with-param name="k" select="'printPdf'"/></xsl:call-template>
+          </button>
 
         </div>
 
