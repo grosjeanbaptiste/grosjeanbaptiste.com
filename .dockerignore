@@ -1,0 +1,15 @@
+# Everything that builds the site but is not part of it.
+.git
+.github
+node_modules
+scripts
+latex
+dsl
+package.json
+package-lock.json
+biome.json
+Dockerfile
+.dockerignore
+docker-compose.yml
+AGENTS.md
+CLAUDE.md
