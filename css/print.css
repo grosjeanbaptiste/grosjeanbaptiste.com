@@ -24,12 +24,12 @@
   :root,
   :root[data-theme="dark"],
   :root[data-theme="light"] {
-    --primary-color: #001F5A;    /* PrimaryColor   — name, section headings */
-    --secondary-color: #FF0000;  /* SecondaryColor — tagline, subheadings */
-    --accent-color: #F3890B;     /* ThirdColor     — heading rules */
-    --body-color: #666666;       /* BodyColor      — running text */
-    --emphasis-color: #2E2E2E;   /* EmphasisColor  — emphasised runs */
-    --page-color: #E2E2E2;       /* BackgroundColor — \pagecolor */
+    --primary-color: #001f5a; /* PrimaryColor   — name, section headings */
+    --secondary-color: #ff0000; /* SecondaryColor — tagline, subheadings */
+    --accent-color: #f3890b; /* ThirdColor     — heading rules */
+    --body-color: #666666; /* BodyColor      — running text */
+    --emphasis-color: #2e2e2e; /* EmphasisColor  — emphasised runs */
+    --page-color: #e2e2e2; /* BackgroundColor — \pagecolor */
   }
 
   /* \geometry{left=0.9cm,right=0.9cm,top=0.8cm,bottom=0.8cm} */

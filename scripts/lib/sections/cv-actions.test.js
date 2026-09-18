@@ -12,10 +12,7 @@ const path = require('node:path');
 const { generateCvDownload } = require('./cv-download');
 const I18N = require('../i18n');
 
-const widgetsCss = fs.readFileSync(
-  path.resolve(__dirname, '../../../css/widgets.css'),
-  'utf8',
-);
+const widgetsCss = fs.readFileSync(path.resolve(__dirname, '../../../css/widgets.css'), 'utf8');
 
 const LANGS = ['en', 'fr', 'nl', 'es', 'de', 'zh'];
 
