@@ -7,6 +7,7 @@ on:
       - 'assets/data/resume.json'
       - 'assets/data/i18n/**'
       - 'scripts/generate-from-resume.js'
+      - 'assets/xslt/**'
       - '.github/workflows/regenerate-from-resume.yml'
   workflow_dispatch:
 
@@ -27,7 +28,7 @@ jobs:
 
       - name: Commit changes if any
         run: |
-          PATHS="index.html fr/ nl/ es/ assets/data/resume.xml"
+          PATHS="index.html fr/ nl/ es/ de/ zh/ assets/data/*.xml sitemap.xml"
           if [[ -z "$(git status --porcelain $PATHS)" ]]; then
             echo "No changes to commit."
             exit 0
