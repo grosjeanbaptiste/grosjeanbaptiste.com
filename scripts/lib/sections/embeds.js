@@ -3,6 +3,7 @@
 // Kept separate from main.js so the section renderers there stay short.
 const { escapeHtml } = require('../format');
 const { indentLines } = require('../markers');
+const { printText, PRINT_PLAN } = require('../print-selection');
 
 const renderEmbeddedSkills = (skills) => {
   if (!skills?.length) return '';
@@ -21,7 +22,12 @@ function renderEmbeddedProjects(projectNames, projects, t) {
       const label = p.url
         ? `<a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${name}</a>`
         : name;
-      return `<li>${label}${desc ? ` — ${escapeHtml(desc)}` : ''}</li>`;
+      // Project blurbs are clipped harder than summaries in the PDF; the span
+      // gives print-layout.js something to swap without touching the link.
+      const clipped = desc ? printText(desc, PRINT_PLAN.proj_desc) : null;
+      const descAttr = clipped ? ` data-print-text="${escapeHtml(clipped)}"` : '';
+      const descHtml = desc ? ` — <span${descAttr}>${escapeHtml(desc)}</span>` : '';
+      return `<li>${label}${descHtml}</li>`;
     })
     .join('\n        ');
   return [

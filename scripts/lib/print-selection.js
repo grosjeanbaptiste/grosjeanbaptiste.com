@@ -10,6 +10,7 @@
 
 const { FIT_PLANS, PRINT_PLAN_INDEX } = require('./pdf/config');
 const { topN } = require('./pdf/data');
+const { truncate } = require('./pdf/tex');
 
 const PRINT_PLAN = FIT_PLANS[PRINT_PLAN_INDEX];
 
@@ -21,4 +22,15 @@ function printedWork(resume) {
   return new Set(topN(resume.work, PRINT_PLAN.work));
 }
 
-module.exports = { PRINT_PLAN, printedWork };
+/**
+ * The text the PDF would print for `value` under `budget` characters, or null
+ * when the PDF prints it unchanged. Uses the LaTeX build's own truncate so the
+ * two cannot word-break differently.
+ */
+function printText(value, budget) {
+  if (!value) return null;
+  const cut = truncate(value, budget);
+  return cut === String(value).replace(/\s+/g, ' ').trim() ? null : cut;
+}
+
+module.exports = { PRINT_PLAN, printedWork, printText };
