@@ -7,8 +7,10 @@
 //   - the LaTeX CV opens with a full-width banner (photo, name, tagline,
 //     contact details) above both columns, while the page nests all of that
 //     inside the sidebar;
-//   - it renders Education in the narrow left column, while the page renders it
-//     in the main column.
+//   - it renders Education in the narrow left column, and as a two-line degrees
+//     summary rather than a list of entries (the fit plan drops the entries);
+//     the page renders a full Education section in the main column and files the
+//     degree lines under the contact details.
 //
 // So we move those nodes for the duration of the print and restore them after.
 // With JavaScript disabled nothing moves and the sheet still prints correctly —
@@ -18,10 +20,11 @@
   let undo = [];
   let header = null;
 
-  function move(node, parent) {
+  function move(node, parent, { first = false } = {}) {
     if (!node || !parent) return;
     undo.push({ node, parent: node.parentNode, next: node.nextSibling });
-    parent.appendChild(node);
+    if (first) parent.insertBefore(node, parent.firstChild);
+    else parent.appendChild(node);
   }
 
   function prepare() {
@@ -36,7 +39,19 @@
 
     move(document.getElementById('profile-picture'), header);
     move(document.querySelector('.contact-info'), header);
-    move(document.getElementById('education'), sidebar);
+
+    // The LaTeX sidebar carries a degrees summary under the Education heading.
+    // Reuse that section — already localized — as its home: its own entries are
+    // hidden in print, matching education_in_body: false.
+    // \cvsectionsidebar for the degrees is the FIRST block of the LaTeX sidebar,
+    // ahead of languages, skills and the day chart.
+    const education = document.getElementById('education');
+    move(education, sidebar, { first: true });
+    if (education) {
+      for (const degree of document.querySelectorAll('.contact-info .degree')) {
+        move(degree, education);
+      }
+    }
   }
 
   function restore() {

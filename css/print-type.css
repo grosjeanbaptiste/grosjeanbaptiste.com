@@ -85,7 +85,17 @@
     display: none;
   }
 
-  #experience .experience-item:nth-of-type(n + 9) {
+  /* scripts/lib/print-selection.js marks every work entry the PDF's fit plan
+     leaves out. Hiding by position instead would only work while resume.json
+     happens to be stored in recency order. */
+  .print-hidden {
+    display: none;
+  }
+
+  /* education_in_body: false — the PDF drops the Education entries and keeps
+     only the sidebar's degrees summary, which print-layout.js moves under this
+     section's heading. */
+  #education .education-item {
     display: none;
   }
 

@@ -74,18 +74,18 @@ test('the print column split matches the LaTeX \\columnratio', () => {
 });
 
 test('the print view applies the same content reductions as the winning fit plan', () => {
-  // The plan the compiler settles on for all six languages: 8 work entries and
-  // no per-entry skill tags (see the comments in pdf/config.js). If the plans
-  // are reshaped, this trips and print.css must be revisited alongside them.
-  const WORK_CAP = 8;
+  // Which entries survive is decided in the generator and checked against the
+  // generated HTML by print-selection.test.js. What this file owns is that the
+  // stylesheet actually acts on that decision, and drops the per-entry skill
+  // tags the plan turns off.
   assert.ok(
-    FIT_PLANS.some((p) => p.work === WORK_CAP && p.show_skills === false),
-    `no fit plan with work=${WORK_CAP} and show_skills=false — print.css mirrors a plan that no longer exists`,
+    FIT_PLANS.some((p) => p.show_skills === false),
+    'no fit plan turns the per-entry skill tags off any more',
   );
   assert.match(
     css,
-    new RegExp(`nth-of-type\\(n\\s*\\+\\s*${WORK_CAP + 1}\\)`),
-    `print.css does not cap the work timeline at ${WORK_CAP} entries`,
+    /\.print-hidden[^{]*\{[^}]*display:\s*none/,
+    'print.css never hides the entries the generator marked as dropped',
   );
   assert.match(
     css,
