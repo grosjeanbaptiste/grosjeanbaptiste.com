@@ -63,7 +63,9 @@ function covers(pattern, file) {
   if (pattern === file) return true;
   if (pattern.endsWith('/') && file.startsWith(pattern)) return true;
   if (!pattern.includes('*')) return false;
-  const rx = new RegExp(`^${pattern.replace(/[.+^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '[^/]*')}$`);
+  const rx = new RegExp(
+    `^${pattern.replace(/[.+^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '[^/]*')}$`,
+  );
   return rx.test(file);
 }
 
@@ -78,11 +80,7 @@ test('the workflow re-runs the generator when the XSLT changes', () => {
 test('the commit step covers every file the generator writes', () => {
   const patterns = commitPaths();
   const missed = GENERATED.filter((f) => !patterns.some((p) => covers(p, f)));
-  assert.deepEqual(
-    missed,
-    [],
-    `regenerated but never committed: ${missed.join(', ')}`,
-  );
+  assert.deepEqual(missed, [], `regenerated but never committed: ${missed.join(', ')}`);
 });
 
 // Every local module the generator transitively requires, relative to the repo

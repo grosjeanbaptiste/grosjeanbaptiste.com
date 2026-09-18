@@ -40,7 +40,11 @@ test('every LaTeX colour is declared in the print stylesheet', () => {
   const missing = Object.entries(latexColours())
     .filter(([, hex]) => !new RegExp(`#${hex}`, 'i').test(css))
     .map(([name, hex]) => `${name} (#${hex})`);
-  assert.deepEqual(missing, [], `colours in the LaTeX CV but not in print.css: ${missing.join(', ')}`);
+  assert.deepEqual(
+    missing,
+    [],
+    `colours in the LaTeX CV but not in print.css: ${missing.join(', ')}`,
+  );
 });
 
 test('the print page geometry matches the LaTeX geometry', () => {
@@ -57,7 +61,10 @@ test('the print column split matches the LaTeX \\columnratio', () => {
   const m = documentJs.match(/\\\\columnratio\{([\d.]+)\}/);
   assert.ok(m, 'no \\columnratio{...} found in pdf/document.js');
   const percent = `${Number(m[1]) * 100}%`;
-  assert.ok(css.includes(percent), `\\columnratio{${m[1]}} means a ${percent} column; print.css does not use it`);
+  assert.ok(
+    css.includes(percent),
+    `\\columnratio{${m[1]}} means a ${percent} column; print.css does not use it`,
+  );
 });
 
 test('the print view applies the same content reductions as the winning fit plan', () => {
@@ -74,7 +81,11 @@ test('the print view applies the same content reductions as the winning fit plan
     new RegExp(`nth-of-type\\(n\\s*\\+\\s*${WORK_CAP + 1}\\)`),
     `print.css does not cap the work timeline at ${WORK_CAP} entries`,
   );
-  assert.match(css, /\.skill-tags[^{]*\{[^}]*display:\s*none/, 'print.css does not hide the skill tags');
+  assert.match(
+    css,
+    /\.skill-tags[^{]*\{[^}]*display:\s*none/,
+    'print.css does not hide the skill tags',
+  );
 });
 
 test('the browser chrome is not printed', () => {
