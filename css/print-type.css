@@ -1,0 +1,104 @@
+/* Print typography and content — the second half of the print sheet.
+ *
+ * css/print.css sets the page up (palette, geometry, columns, the banner);
+ * this file styles what sits on it and applies the LaTeX fit plan's content
+ * reductions. Same source of truth, same caveats — see that file's header.
+ */
+
+@media print {
+  /* \renewcommand{\namefont}{\Huge\rmfamily\bfseries} + \colorlet{name} */
+  .contact-info h1 {
+    font-family: "Roboto Slab", "Roboto", serif;
+    font-weight: 700;
+    font-size: 20pt;
+    line-height: 1.1;
+    color: var(--primary-color);
+    margin: 0 0 2pt;
+  }
+
+  /* \colorlet{tagline}{SecondaryColor} */
+  .contact-info h2 {
+    font-size: 10pt;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin: 0 0 6pt;
+    border: none;
+  }
+
+  /* \cvsectionfont: \LARGE\rmfamily\bfseries, uppercase, over a
+     \rule{\linewidth}{1.5pt} in headingrule (ThirdColor). */
+  .main-content h2,
+  .sidebar h2:not(.contact-info h2),
+  .sidebar h3 {
+    font-family: "Roboto Slab", "Roboto", serif;
+    font-weight: 700;
+    font-size: 11pt;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    border-bottom: 1.5pt solid var(--accent-color);
+    padding-bottom: 1pt;
+    margin: 10pt 0 5pt;
+    /* A heading alone at the foot of a column reads as a mistake. */
+    break-after: avoid;
+  }
+
+  /* \renewcommand{\cvsubsectionfont}{\large\bfseries} + \colorlet{subheading} */
+  .experience-item h3,
+  .experience-item h4 {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0 0 1pt;
+  }
+
+  .experience-item {
+    margin-bottom: 6pt;
+    break-inside: avoid;
+  }
+
+  strong,
+  b {
+    color: var(--emphasis-color);
+  }
+
+  /* Printed links are dead links: keep the text, drop the decoration. */
+  a {
+    color: var(--body-color);
+    text-decoration: none;
+  }
+
+  /* Fit plan (config.js): the winning plan sets show_skills=false and caps the
+     recto at 8 work entries. Mirror both so the sheet carries the same content
+     as the PDF.
+     show_skills governs the PER-ENTRY tags only — the sidebar's own skills
+     block (buildSkillsBlock) is always rendered in the PDF, so hiding every
+     .skill-tags would leave two headings standing over nothing. */
+  #experience .skill-tags,
+  .inline-skills {
+    display: none;
+  }
+
+  /* The LaTeX sidebar carries degrees, languages, skills and the day block.
+     There is no projects list there; projects appear under the work entries
+     that reference them, which .embedded-projects already provides. */
+  .sidebar .projects {
+    display: none;
+  }
+
+  #experience .experience-item:nth-of-type(n + 9) {
+    display: none;
+  }
+
+  /* The day chart stays: altacv draws the same donut with \wheelchart, and the
+     page renders it as inline SVG, which prints faithfully. */
+
+  /* The LaTeX build puts references alone on the verso. */
+  #references {
+    break-before: page;
+  }
+
+  img#profile-picture {
+    max-width: 3cm;
+    height: auto;
+  }
+}

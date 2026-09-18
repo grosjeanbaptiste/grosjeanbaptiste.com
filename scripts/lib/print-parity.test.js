@@ -16,7 +16,13 @@ const { buildPreamble } = require('./pdf/preamble');
 const { FIT_PLANS } = require('./pdf/config');
 
 const ROOT = path.resolve(__dirname, '../..');
-const css = fs.readFileSync(path.join(ROOT, 'css/print.css'), 'utf8');
+// The print sheet is split across css/print*.css; assertions are about the
+// sheet as a whole, so read them as one corpus rather than naming one file.
+const css = fs
+  .readdirSync(path.join(ROOT, 'css'))
+  .filter((f) => /^print.*\.css$/.test(f))
+  .map((f) => fs.readFileSync(path.join(ROOT, 'css', f), 'utf8'))
+  .join('\n');
 const preamble = buildPreamble('en');
 const documentJs = fs.readFileSync(path.join(__dirname, 'pdf/document.js'), 'utf8');
 
