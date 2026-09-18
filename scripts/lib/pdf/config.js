@@ -91,8 +91,16 @@ const FIT_PLANS = [
   },
 ];
 
+// The fit plan the printable HTML view mirrors. compileWithFit picks a plan per
+// language at PDF build time; for all six it settles on this one (see the
+// comment on that plan above). scripts/generate-pdf.js records what it actually
+// used in assets/cv/fit-plan.json, and print-selection.test.js fails if a
+// recorded build ever disagrees — so this is checked, not merely asserted.
+const PRINT_PLAN_INDEX = 4;
+
 module.exports = {
   ROOT,
+  PRINT_PLAN_INDEX,
   CLS_PATH: path.join(ROOT, 'latex/altacv.cls'),
   PROFILE_IMG: path.join(ROOT, 'assets/images/profil.jpeg'),
   OUTPUT_DIR: path.join(ROOT, 'assets/cv'),

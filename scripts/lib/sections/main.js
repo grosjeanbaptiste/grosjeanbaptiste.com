@@ -1,4 +1,5 @@
 const I18N = require('../i18n');
+const { printedWork } = require('../print-selection');
 const { escapeHtml, dateRangeHtml } = require('../format');
 const { indentLines } = require('../markers');
 const { appendEmbeds } = require('./embeds');
@@ -15,7 +16,7 @@ function renderAbout(resume, t) {
   );
 }
 
-function renderExperienceItem(w, lang, ctx, t) {
+function renderExperienceItem(w, lang, ctx, t, opts = { printed: true }) {
   // Wrap the company in a .company span so it can carry its own colour (accent
   // orange) distinct from the position, which is the h3 primary colour — in
   // dark mode the link accent and the primary are both amber and blur together.
@@ -30,7 +31,7 @@ function renderExperienceItem(w, lang, ctx, t) {
     ? `${escapeHtml(w.position)} · ${escapeHtml(w.client)}`
     : escapeHtml(w.position);
   const parts = [
-    '<article class="experience-item">',
+    `<article class="experience-item${opts.printed ? '' : ' print-hidden'}">`,
     `  <h3>${positionLabel}${w.company ? ` | ${companyHtml}` : ''}</h3>`,
     `  <p class="date">${dateRangeHtml(w.startDate, w.endDate, lang)}</p>`,
   ];
@@ -88,8 +89,12 @@ function renderItemSection(id, heading, entries, renderItem) {
 
 function renderWorkSection(resume, lang, t) {
   const ctx = ctxOf(resume);
+  // Entries the LaTeX CV's fit plan leaves out are marked rather than removed:
+  // the page keeps the full history on screen, css/print-type.css hides the
+  // marked ones so the printed sheet carries exactly the PDF's selection.
+  const printed = printedWork(resume);
   return renderItemSection('experience', t.experience, resume.work, (w) =>
-    renderExperienceItem(w, lang, ctx, t),
+    renderExperienceItem(w, lang, ctx, t, { printed: printed.has(w) }),
   );
 }
 

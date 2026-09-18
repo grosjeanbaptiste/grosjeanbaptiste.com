@@ -29,6 +29,10 @@ fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
 let ok = 0;
 const failed = [];
+// What each language actually compiled with. print-selection.test.js compares
+// this against the plan the printable HTML view mirrors, so a drift between the
+// PDF and the print sheet surfaces instead of going unnoticed.
+const plans = {};
 for (const lang of LANGS) {
   const resume = applyPdfOverrides(loadResume(lang));
   const outPath = path.join(OUTPUT_DIR, `cv_grosjean_baptiste_${lang}.pdf`);
@@ -37,10 +41,14 @@ for (const lang of LANGS) {
     console.log(
       `${lang}: ${path.relative(ROOT, outPath)} (plan ${result.plan}, ${result.pages} pages)`,
     );
+    plans[lang] = result.plan;
     ok += 1;
   } else {
     failed.push(lang);
   }
+}
+if (Object.keys(plans).length) {
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'fit-plan.json'), `${JSON.stringify(plans, null, 2)}\n`);
 }
 console.log(`generate-pdf: ${ok}/${LANGS.length} compiled successfully`);
 if (failed.length) {

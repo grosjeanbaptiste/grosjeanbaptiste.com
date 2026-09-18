@@ -29,3 +29,13 @@ test('it relocates exactly the nodes CSS cannot move', () => {
     assert.ok(script.includes(hook), `no handling for the ${hook} node`);
   }
 });
+
+test('the degrees summary is filed under the Education heading', () => {
+  // In the PDF the qualifications appear in the sidebar under Education, not
+  // among the contact details where the page keeps them.
+  assert.match(
+    script,
+    /\.contact-info \.degree/,
+    'the degree lines would print among the contact details instead',
+  );
+});
