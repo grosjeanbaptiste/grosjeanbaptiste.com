@@ -18,6 +18,8 @@
 (() => {
   /** @type {{node: Element, parent: Node, next: Node|null}[]} */
   let undo = [];
+  /** @type {{el: Element, text: string}[]} */
+  let clipped = [];
   let header = null;
 
   function move(node, parent, { first = false } = {}) {
@@ -52,9 +54,21 @@
         move(degree, education);
       }
     }
+
+    // The generator carries the PDF's clipped wording in data-print-text,
+    // computed with the LaTeX build's own truncate. Swap it in for the print so
+    // the sheet says what the PDF says, and keep the full text on screen.
+    for (const el of document.querySelectorAll('[data-print-text]')) {
+      clipped.push({ el, text: el.textContent });
+      el.textContent = el.dataset.printText;
+    }
   }
 
   function restore() {
+    for (const { el, text } of clipped) {
+      el.textContent = text;
+    }
+    clipped = [];
     for (const { node, parent, next } of undo.reverse()) {
       parent.insertBefore(node, next);
     }

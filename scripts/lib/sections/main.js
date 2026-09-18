@@ -1,5 +1,5 @@
 const I18N = require('../i18n');
-const { printedWork } = require('../print-selection');
+const { printedWork, printText, PRINT_PLAN } = require('../print-selection');
 const { escapeHtml, dateRangeHtml } = require('../format');
 const { indentLines } = require('../markers');
 const { appendEmbeds } = require('./embeds');
@@ -36,7 +36,14 @@ function renderExperienceItem(w, lang, ctx, t, opts = { printed: true }) {
     `  <p class="date">${dateRangeHtml(w.startDate, w.endDate, lang)}</p>`,
   ];
   if (w.location) parts.push(`  <p class="location">${escapeHtml(w.location)}</p>`);
-  if (w.summary) parts.push(`  <p>${escapeHtml(w.summary).replace(/\n/g, '<br>')}</p>`);
+  if (w.summary) {
+    // The PDF clips summaries to its fit plan's budget. Carry that shorter text
+    // on the element so js/print-layout.js can swap it in for the print only —
+    // the screen keeps the full text, and the DOM carries no duplicate copy.
+    const clipped = printText(w.summary, PRINT_PLAN.summary);
+    const attr = clipped ? ` data-print-text="${escapeHtml(clipped)}"` : '';
+    parts.push(`  <p${attr}>${escapeHtml(w.summary).replace(/\n/g, '<br>')}</p>`);
+  }
   for (const h of w.highlights || []) parts.push(`  <p>• ${escapeHtml(h)}</p>`);
   appendEmbeds(parts, w, w.company, ctx, t);
   parts.push('</article>');
