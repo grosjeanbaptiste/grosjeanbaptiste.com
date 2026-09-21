@@ -28,9 +28,31 @@ const TYPES = {
  * Serve the site. A /__print/ prefix returns the same page with a script that
  * calls print() — Firefox exposes no --print-to-pdf, so the page must ask.
  */
+/**
+ * The rich XSLT theme, rendered for one language. Served from the site root so
+ * its stylesheets, fonts and images resolve exactly as they do online — over
+ * file:// they would not, and the fonts would silently fall back to metrics
+ * that are not the ones being measured.
+ */
+function renderXslt(lang) {
+  const xsl = path.join(ROOT, 'assets/xslt/resume-transform.xsl');
+  const xml = path.join(ROOT, `assets/data/resume-${lang}.xml`);
+  return execFileSync('xsltproc', [xsl, xml], { encoding: 'utf8', maxBuffer: 1 << 24 });
+}
+
 function serve() {
   const server = http.createServer((req, res) => {
     let rel = decodeURIComponent(req.url.split('?')[0]);
+    const xslt = /^\/__xslt\/([a-z-]+)$/.exec(rel);
+    if (xslt) {
+      const html = renderXslt(xslt[1]).replace(
+        '</body>',
+        '<script>addEventListener("load",()=>(document.fonts?document.fonts.ready:Promise.resolve()).then(()=>setTimeout(()=>print(),800)));</script></body>',
+      );
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(html);
+      return;
+    }
     const autoprint = rel.startsWith('/__print');
     if (autoprint) rel = rel.slice('/__print'.length) || '/';
     let file = path.join(ROOT, rel);
@@ -105,4 +127,4 @@ function pageHeads(pdf, pages) {
   return heads.join(' | ');
 }
 
-module.exports = { serve, countPages, pageHeads, EXPECTED_PAGES, ROOT };
+module.exports = { serve, countPages, pageHeads, renderXslt, EXPECTED_PAGES, ROOT };

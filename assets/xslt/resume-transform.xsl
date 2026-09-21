@@ -350,6 +350,8 @@
           .embedded-projects .label { font-weight: 600; color: var(--primary); margin: 0; }
           .embedded-projects ul { margin: 4px 0 0 4px; padding-left: 16px; }
           .embedded-projects li { margin: 2px 0; }
+          /* Print-only copies of text the LaTeX fit plan clips. */
+          .clipped-text { display: none; }
           .ref-links { margin: 6px 0 0; font-size: 0.92em; color: var(--muted); }
           .ref-links a { color: var(--accent); text-decoration: none; }
           .ref-links a:hover { text-decoration: underline; }
@@ -405,7 +407,7 @@
             #profile-picture { max-width: 160px; }
             blockquote { font-size: 0.88em; padding: 6px 12px; }
           }
-          @page { size: A4; margin: 12mm; }
+          @page { size: A4; margin: 0.8cm 0.9cm; } /* \geometry of the LaTeX CV */
           @media print {
             .toolbar { display: none; }
             /* Force the light palette so a dark-mode reader still prints a
@@ -422,15 +424,92 @@
             }
             html, body { background: #fff; }
             /* Keep the sidebar tint and accent rules instead of white boxes. */
-            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-            .container { max-width: none; margin: 0; padding: 0; gap: 14px; }
-            .sidebar { border-radius: 0; }
-            /* Don't split an entry, quote or section heading across pages. */
+            body {
+              -webkit-print-color-adjust: exact; print-color-adjust: exact;
+              /* The CV is a two-page document. A browser lays text out less
+                 densely than TeX, and neither engine will split the two-column
+                 block across sheets, so the recto has to fit one page on its
+                 own. scripts/lib/print-fit-xslt.test.js holds it to that. */
+              font-size: 6.5pt; line-height: 1.2; margin: 0; padding: 0;
+            }
+            .container {
+              /* A printed page is about 726px wide, which trips this sheet's
+                 own max-width: 820px breakpoint — so without this the CV prints
+                 in the MOBILE layout: one stacked column, twice as tall, and
+                 deaf to any type size. Put the two columns back. */
+              flex-direction: row;
+              max-width: none; margin: 0; padding: 0; gap: 0.6cm;
+              align-items: flex-start;
+            }
+            .sidebar { border-radius: 0; width: 30%; padding: 0.2cm; }
+            .main { width: 70%; padding: 0; }
+            /* What the LaTeX fit plan leaves out: the roles past the eighth,
+               the education entries below the top two, and the sections the
+               PDF does not carry at all. */
+            .print-hidden, .print-drop { display: none; }
+            /* The recto of the PDF carries no per-entry reference back-links;
+               the references live on the verso. */
+            .ref-links { display: none; }
+            /* Swap the full wording for the clipped one the PDF prints. The
+               clipped copy comes first, so the full text can be hidden as the
+               element that follows it; where nothing was clipped there is no
+               first copy and the full text simply stands. */
+            .clipped-text { display: block; }
+            span.clipped-text { display: inline; }
+            .clipped-text + .full-text { display: none; }
+            /* The references get the verso, as they do in the PDF. */
+            .refs { break-before: page; }
+            h2 { font-size: 9pt; margin: 6pt 0 3pt; break-after: avoid; }
+            h3 { font-size: 7.5pt; margin: 0; }
+            p, ul, ol { margin: 0 0 2pt; }
+            .item { margin-bottom: 4pt; break-inside: avoid; }
+            .date, .location, .label { margin: 0; }
+            blockquote { margin: 1pt 0 3pt; padding: 0 0 0 4pt; font-size: 0.95em; }
+            /* The left column has to end on the first sheet: what spills from
+               it lands beside the references on the verso, which is not the
+               shape of the PDF. */
+            .skill-tags { gap: 0.5pt; }
+            .skill-tag { font-size: 0.62em; padding: 0 1pt; }
+            .lang-item { margin: 0; }
+            .sidebar h2 { font-size: 7.5pt; margin: 4pt 0 2pt; }
+            .day-list li { margin: 0; }
+            .day-list .dot { width: 4px; height: 4px; margin-right: 3px; }
+            #profile-picture { max-width: 1.6cm; }
             .item, blockquote, .sidebar h2, .sidebar p { break-inside: avoid; }
             .main h2 { break-after: avoid; }
             a { color: var(--body); text-decoration: none; }
           }
         </style>
+        <!-- Print layout: the LaTeX CV carries the degrees in the narrow left
+             column, not the main one. Moving the block there for the print also
+             uses the slack the sidebar leaves, which is what keeps the recto on
+             a single sheet. Restored afterwards, so the screen is untouched. -->
+        <script>
+          (function () {
+            var edu, parent, next;
+            function prepare() {
+              if (parent) return;
+              edu = document.querySelector('.edu-block');
+              var side = document.querySelector('.sidebar');
+              if (!edu || !side) return;
+              parent = edu.parentNode;
+              next = edu.nextSibling;
+              side.insertBefore(edu, side.querySelector('h2'));
+            }
+            function restore() {
+              if (!parent) return;
+              parent.insertBefore(edu, next);
+              parent = null;
+            }
+            window.addEventListener('beforeprint', prepare);
+            window.addEventListener('afterprint', restore);
+            var mq = window.matchMedia('print');
+            if (mq.addEventListener) {
+              mq.addEventListener('change', function (e) { e.matches ? prepare() : restore(); });
+            }
+          })();
+        </script>
+
         <!-- Dark mode bootstrap: applied before <body> renders to avoid flash. -->
         <script>
           (function() {
@@ -658,6 +737,9 @@
 
   <xsl:template name="sidebar-projects">
     <xsl:if test="/resume/projects/project">
+      <!-- Not in the LaTeX sidebar: its projects appear under the roles that
+           reference them. Wrapped so the print sheet can leave it out. -->
+      <div class="print-drop">
       <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template></h2>
       <xsl:for-each select="/resume/projects/project">
         <div class="lang-item">
@@ -673,6 +755,7 @@
           <xsl:if test="description"><br/><xsl:value-of select="description"/></xsl:if>
         </div>
       </xsl:for-each>
+    </div>
     </xsl:if>
   </xsl:template>
 
@@ -706,7 +789,11 @@
     <xsl:if test="/resume/work/job">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'experience'"/></xsl:call-template></h2>
               <xsl:for-each select="/resume/work/job">
-                <div class="item">
+                <div>
+                  <!-- The LaTeX CV prints the 8 most recent roles. The rest are
+                       marked rather than dropped: the screen keeps the whole
+                       history, only the sheet is trimmed. -->
+                  <xsl:attribute name="class">item<xsl:if test="position() &gt; 8"> print-hidden</xsl:if></xsl:attribute>
                   <h3>
                     <xsl:value-of select="position"/>
                     <xsl:if test="client"> · <xsl:value-of select="client"/></xsl:if>
@@ -732,7 +819,12 @@
                     </xsl:choose>
                   </p>
                   <xsl:if test="location"><p class="location">📍 <xsl:value-of select="location"/></p></xsl:if>
-                  <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
+                  <xsl:if test="summary">
+                    <xsl:if test="string-length(summary) &gt; 220">
+                      <p class="clipped-text"><xsl:value-of select="substring(summary, 1, 219)"/>…</p>
+                    </xsl:if>
+                    <p class="full-text"><xsl:value-of select="summary"/></p>
+                  </xsl:if>
                   <xsl:if test="highlights/highlight">
                     <ul>
                       <xsl:for-each select="highlights/highlight"><li><xsl:value-of select="."/></li></xsl:for-each>
@@ -755,7 +847,7 @@
                           <li>
                             <strong><xsl:value-of select="$ref"/></strong>
                             <xsl:choose>
-                              <xsl:when test="$proj/summary"> — <xsl:value-of select="$proj/summary"/></xsl:when>
+                              <xsl:when test="$proj/summary"> — <xsl:if test="string-length($proj/summary) &gt; 80"><span class="clipped-text"><xsl:value-of select="substring($proj/summary, 1, 79)"/>…</span></xsl:if><span class="full-text"><xsl:value-of select="$proj/summary"/></span></xsl:when>
                               <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
                             </xsl:choose>
                           </li>
@@ -807,9 +899,13 @@
 
   <xsl:template name="main-education">
     <xsl:if test="/resume/education/school">
+              <div class="edu-block">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'education'"/></xsl:call-template></h2>
               <xsl:for-each select="/resume/education/school">
-                <div class="item">
+                <div>
+                  <!-- The PDF drops the Education entries and keeps a two-line
+                       degrees summary, so the sheet shows the top two only. -->
+                  <xsl:attribute name="class">item<xsl:if test="position() &gt; 2"> print-hidden</xsl:if></xsl:attribute>
                   <h3>
                     <xsl:value-of select="studyType"/>
                     <xsl:if test="area"> — <xsl:value-of select="area"/></xsl:if>
@@ -887,11 +983,13 @@
                   </xsl:if>
                 </div>
               </xsl:for-each>
-            </xsl:if>
+            </div>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="main-awards">
     <xsl:if test="/resume/awards/award">
+              <div class="print-drop">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'awards'"/></xsl:call-template></h2>
               <xsl:for-each select="/resume/awards/award">
                 <div class="item">
@@ -904,11 +1002,13 @@
                   <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
                 </div>
               </xsl:for-each>
-            </xsl:if>
+            </div>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="main-interests">
     <xsl:if test="/resume/interests/interest">
+              <div class="print-drop">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'interests'"/></xsl:call-template></h2>
               <xsl:for-each select="/resume/interests/interest">
                 <div class="item">
@@ -920,11 +1020,14 @@
                   </xsl:if>
                 </div>
               </xsl:for-each>
-            </xsl:if>
+            </div>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="main-references">
     <xsl:if test="/resume/references/reference">
+              <!-- The LaTeX CV gives the references the verso to themselves. -->
+              <div class="refs">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
               <xsl:for-each select="/resume/references/reference">
                 <div class="item">
@@ -933,7 +1036,8 @@
                   <blockquote><xsl:value-of select="reference"/></blockquote>
                 </div>
               </xsl:for-each>
-            </xsl:if>
+            </div>
+    </xsl:if>
   </xsl:template>
 
   <!-- Helper: a single language switcher button. -->
