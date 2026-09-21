@@ -19,10 +19,10 @@
   let clipped = [];
   let prepared = false;
 
-  function move(node, parent, { first = false } = {}) {
+  function move(node, parent, { before } = {}) {
     if (!node || !parent) return;
     undo.push({ node, parent: node.parentNode, next: node.nextSibling });
-    if (first) parent.insertBefore(node, parent.firstChild);
+    if (before) parent.insertBefore(node, before);
     else parent.appendChild(node);
   }
 
@@ -32,10 +32,14 @@
     if (!sidebar) return;
     prepared = true;
 
-    // \cvsectionsidebar for the degrees is the FIRST block of the LaTeX sidebar,
-    // ahead of languages, skills and the day chart.
+    // In the LaTeX CV the degrees summary is the first sidebar SECTION — under
+    // the header, not above it. The banner used to carry the photo and the name
+    // out of the sidebar, so putting Education at the very top was right then;
+    // without it they stayed, and the sheet opened on EDUCATION above the name.
+    // Slot it in after the identity block instead.
+    const contact = document.querySelector('.contact-info');
     const education = document.getElementById('education');
-    move(education, sidebar, { first: true });
+    move(education, sidebar, { before: contact ? contact.nextSibling : sidebar.firstChild });
     if (education) {
       for (const degree of document.querySelectorAll('.contact-info .degree')) {
         move(degree, education);

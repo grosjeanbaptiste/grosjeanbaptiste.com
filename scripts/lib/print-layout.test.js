@@ -42,6 +42,22 @@ test('no header banner is built, since Firefox pays a whole page for it', () => 
   );
 });
 
+test('Education lands under the identity block, not above it', () => {
+  // It used to go in as the sidebar's first child, which was right while the
+  // banner carried the photo and the name out of the column. With the banner
+  // gone they stayed, and the sheet opened on EDUCATION above the name.
+  assert.doesNotMatch(
+    script,
+    /first:\s*true/,
+    'Education is inserted at the very top of the sidebar, ahead of the name',
+  );
+  assert.match(
+    script,
+    /contact[\s\S]{0,200}before/,
+    'Education is not positioned relative to the identity block',
+  );
+});
+
 test('the degrees summary is filed under the Education heading', () => {
   // In the PDF the qualifications appear in the sidebar under Education, not
   // among the contact details where the page keeps them.
