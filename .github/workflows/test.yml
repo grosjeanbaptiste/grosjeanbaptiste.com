@@ -1,0 +1,37 @@
+name: Tests
+
+# Runs the whole suite on every push and pull request.
+#
+# Deliberately no `paths:` filter. The tests read the stylesheets, the generated
+# HTML, the self-hosted fonts, the resume data, the LaTeX build config and the
+# other workflow files — close to the whole repository. A filter narrow enough
+# to be worth writing would be narrower than that dependency set, which is
+# exactly how the regeneration workflow came to never fire on a stylesheet edit.
+# The suite takes well under a minute; that is cheaper than the class of bug a
+# filter invites.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # print-fit.test.js prints the six localized pages with a real browser and
+      # asserts the CV still comes out on two sheets. Report the version up
+      # front so a runner image that drops Chrome fails here, with an obvious
+      # cause, rather than inside the suite.
+      - name: Browser for the print-fit test
+        run: google-chrome --version
+
+      - name: Test suite
+        run: npm test
