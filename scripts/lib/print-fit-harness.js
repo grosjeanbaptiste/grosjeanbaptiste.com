@@ -40,12 +40,12 @@ function serve() {
       return;
     }
     if (autoprint) {
-      const html = fs
-        .readFileSync(file, 'utf8')
-        .replace(
-          '</body>',
-          '<script>addEventListener("load",()=>setTimeout(()=>print(),2000));</script></body>',
-        );
+      const html = fs.readFileSync(file, 'utf8').replace(
+        '</body>',
+        // Wait for the webfonts: printing before they land measures the
+        // fallback's metrics, and the sheet count then varies run to run.
+        '<script>addEventListener("load",()=>(document.fonts?document.fonts.ready:Promise.resolve()).then(()=>setTimeout(()=>print(),750)));</script></body>',
+      );
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(html);
       return;
