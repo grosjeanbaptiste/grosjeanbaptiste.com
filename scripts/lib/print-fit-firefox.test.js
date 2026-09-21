@@ -51,20 +51,28 @@ function profileFor(out) {
   return { dir, pdf };
 }
 
+// A PDF is only finished once its trailer is on disk. Waiting for the size to
+// settle is not enough — it catches a file mid-write, which parses as zero
+// pages and reads like a layout failure instead of a harness one.
+function isComplete(pdf) {
+  if (!fs.existsSync(pdf) || fs.statSync(pdf).size === 0) return false;
+  const bytes = fs.readFileSync(pdf, 'latin1');
+  return bytes.startsWith('%PDF') && bytes.includes('%%EOF');
+}
+
 // Firefox stays open after printing, so watch for the file and stop it.
 async function printWith(bin, profile, pdf, url) {
-  const child = spawn(bin, ['--headless', '--profile', profile, url], { stdio: 'ignore' });
+  const child = spawn(bin, ['--headless', '--profile', profile, url], {
+    stdio: 'ignore',
+    env: { ...process.env, MOZ_HEADLESS: '1' },
+  });
   try {
-    for (let waited = 0; waited < 90000; waited += 500) {
+    for (let waited = 0; waited < 120000; waited += 500) {
       await new Promise((r) => setTimeout(r, 500));
-      // Wait for the size to settle: the file appears before it is complete.
-      if (fs.existsSync(pdf)) {
-        const first = fs.statSync(pdf).size;
-        await new Promise((r) => setTimeout(r, 1500));
-        if (first > 0 && fs.statSync(pdf).size === first) return;
-      }
+      if (isComplete(pdf)) return;
     }
-    throw new Error('Firefox never produced a PDF');
+    const size = fs.existsSync(pdf) ? fs.statSync(pdf).size : 'no file';
+    throw new Error(`Firefox never finished a PDF (${size} bytes after 120s)`);
   } finally {
     child.kill('SIGKILL');
   }
