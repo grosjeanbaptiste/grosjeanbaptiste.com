@@ -15,7 +15,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const { spawn } = require('node:child_process');
-const { serve, countPages, EXPECTED_PAGES } = require('./print-fit-harness');
+const { serve, countPages, pageHeads, EXPECTED_PAGES } = require('./print-fit-harness');
 
 const CANDIDATES = [
   process.env.FIREFOX_PATH,
@@ -96,7 +96,7 @@ test('the printed CV is two pages in Firefox too', async (t) => {
     assert.equal(
       pages,
       EXPECTED_PAGES,
-      `Firefox prints the CV on ${pages} pages, not ${EXPECTED_PAGES} — it will not split the two-column block, so the recto must fit one sheet on its own`,
+      `Firefox prints the CV on ${pages} pages, not ${EXPECTED_PAGES} — ${pageHeads(pdf, pages)}`,
     );
   } finally {
     fs.rmSync(out, { recursive: true, force: true });

@@ -84,4 +84,25 @@ function countPages(pdf) {
   return scanned;
 }
 
-module.exports = { serve, countPages, EXPECTED_PAGES, ROOT };
+/**
+ * First line of text on each page, for a failure message worth reading: a page
+ * count alone says the layout broke, not where it went.
+ */
+function pageHeads(pdf, pages) {
+  const heads = [];
+  for (let i = 1; i <= pages; i += 1) {
+    try {
+      const text = execFileSync('pdftotext', ['-f', `${i}`, '-l', `${i}`, pdf, '-'], {
+        encoding: 'utf8',
+        stdio: 'pipe',
+      });
+      const first = text.split('\n').find((l) => l.trim()) || '(empty)';
+      heads.push(`p${i}: ${first.trim().slice(0, 40)}`);
+    } catch {
+      heads.push(`p${i}: ?`);
+    }
+  }
+  return heads.join(' | ');
+}
+
+module.exports = { serve, countPages, pageHeads, EXPECTED_PAGES, ROOT };
