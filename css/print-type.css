@@ -144,17 +144,31 @@
     max-width: 1.8cm;
   }
 
+  /* The day block is the last thing in the left column, so it is what spills
+     when the recto is a hair too tall — and a spilled sidebar costs a whole
+     sheet, since the two-column block cannot be split. Give it real headroom
+     rather than a margin measured in millimetres. */
   .daily-life-chart {
-    max-width: 3cm;
+    max-width: 2.2cm;
   }
 
   .daily-life-legend {
-    margin: 2pt 0 0;
-    font-size: 0.8em;
+    margin: 1pt 0 0;
+    font-size: 0.72em;
+    line-height: 1.15;
+    /* Two short columns instead of one tall list. */
+    column-count: 2;
+    column-gap: 4pt;
   }
 
   .daily-life-legend li {
     padding: 0;
+    break-inside: avoid;
+  }
+
+  .daily-life-dot {
+    width: 4pt;
+    height: 4pt;
   }
 
   /* The recto of the PDF carries no per-entry reference back-links; the
