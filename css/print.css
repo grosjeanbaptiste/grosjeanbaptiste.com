@@ -38,9 +38,23 @@
     margin: 0.8cm 0.9cm;
   }
 
+  /* The page colour is laid down by a fixed layer, not by body: a background
+     on body paints only body's box, which on the verso ends with the columns
+     and leaves the references standing on bare white. A fixed element is
+     painted onto every sheet. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--page-color);
+    z-index: -1;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   html,
   body {
-    background: var(--page-color);
+    background: none;
     color: var(--body-color);
     /* altacv sets \pagecolor; keep it and the accent rules rather than
        letting the browser drop every background to save ink. */
