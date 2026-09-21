@@ -345,7 +345,7 @@
           .item .location { color: var(--muted); font-size: 0.85em; margin: 0 0 6px; }
           .item p { margin: 6px 0; font-size: 0.92em; }
           .inline-skills { margin: 6px 0; }
-          .inline-skills .skill-tag { font-size: 0.74em; padding: 1px 7px; }
+          .inline-skills .skill-tag { font-size: 0.7em; padding: 1px 7px; }
           .embedded-projects { margin: 6px 0 0; font-size: 0.92em; }
           .embedded-projects .label { font-weight: 600; color: var(--primary); margin: 0; }
           .embedded-projects ul { margin: 4px 0 0 4px; padding-left: 16px; }
@@ -443,16 +443,27 @@
             }
             .sidebar { border-radius: 0; width: 30%; padding: 0.2cm; }
             .main { width: 70%; padding: 0; }
-            /* What the LaTeX fit plan leaves out: the roles past the eighth,
-               the education entries below the top two, and the sections the
-               PDF does not carry at all. */
-            .print-hidden, .print-drop { display: none; }
+            /* What the LaTeX fit plan leaves out: the roles past the eighth
+               and the education entries below the top two. */
+            .print-hidden { display: none; }
+            /* The sections the PDF does not carry — awards and interests — are
+               dropped; the sidebar's Projects list is NOT. A deliberate
+               divergence: this view is richer than the PDF, and without it the
+               left column ends halfway down the sheet. */
+            .print-drop { display: none; }
+            .sidebar .print-drop { display: block; }
             /* education_in_body: false — the PDF prints no Education entries,
                only the two-line degrees summary the identity block carries.
                Keeping the entries cost eighteen lines of the narrow column and
                repeated the degree that was already three lines above. */
-            .edu-block .item { display: none; }
-            .edu-block .degree { margin: 0 0 1pt; }
+            /* The PDF prints no Education entries, only the degrees summary.
+               Keeping the entries whole cost eighteen lines of a five-centimetre
+               column; keeping their heading and institution line costs four and
+               fills a column that was otherwise ending halfway down the sheet. */
+            .edu-block .item > *:not(h3):not(.date) { display: none; }
+            .edu-block .item { margin-bottom: 3pt; }
+            .edu-block .item h3 { font-size: 1em; }
+            .edu-block .degree { margin: 0 0 2pt; }
             /* The recto of the PDF carries no per-entry reference back-links;
                the references live on the verso. */
             .ref-links { display: none; }
@@ -471,16 +482,21 @@
             .item { margin-bottom: 4pt; break-inside: avoid; }
             .date, .location, .label { margin: 0; }
             blockquote { margin: 1pt 0 3pt; padding: 0 0 0 4pt; font-size: 0.95em; }
-            /* The left column has to end on the first sheet: what spills from
-               it lands beside the references on the verso, which is not the
-               shape of the PDF. */
-            .skill-tags { gap: 0.5pt; }
-            .skill-tag { font-size: 0.62em; padding: 0 1pt; }
-            .lang-item { margin: 0; }
-            .sidebar h2 { font-size: 7.5pt; margin: 4pt 0 2pt; }
-            .day-list li { margin: 0; }
-            .day-list .dot { width: 4px; height: 4px; margin-right: 3px; }
-            #profile-picture { max-width: 1.6cm; }
+            /* The left column has to end on the first sheet — what spills from
+               it lands beside the references, and the PDF gives the verso to
+               the references alone. It was squeezed far harder than that needs
+               while the Education entries were still in it; with those gone
+               the room is there, so the type goes back to a readable size. */
+            .skill-tags { gap: 1.5pt; }
+            .skill-tag { font-size: 0.82em; padding: 0.5pt 2pt; }
+            .lang-item { margin: 0 0 1pt; }
+            .sidebar h2 { font-size: 8pt; margin: 6pt 0 3pt; }
+            /* Two short columns instead of one tall list: it is the last block
+               of the sidebar, so it is what spills first. */
+            .day-list { column-count: 2; column-gap: 4pt; }
+            .day-list li { margin: 0.5pt 0; break-inside: avoid; }
+            .day-list .dot { width: 5px; height: 5px; margin-right: 4px; }
+            #profile-picture { max-width: 2.0cm; }
             .item, blockquote, .sidebar h2, .sidebar p { break-inside: avoid; }
             .main h2 { break-after: avoid; }
             a { color: var(--body); text-decoration: none; }
@@ -760,7 +776,10 @@
       <div class="print-drop">
       <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template></h2>
       <xsl:for-each select="/resume/projects/project">
-        <div class="lang-item">
+        <div>
+          <!-- Thirty projects would run the sidebar off the sheet; the printed
+               list stops at ten and the screen keeps them all. -->
+          <xsl:attribute name="class">lang-item<xsl:if test="position() &gt; 6"> print-hidden</xsl:if></xsl:attribute>
           <xsl:choose>
             <xsl:when test="url">
               <a target="_blank" rel="noopener">
