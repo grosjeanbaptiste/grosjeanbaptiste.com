@@ -131,17 +131,17 @@
 
   /* \footnotesize \cvtag: a thin outlined chip, not a padded pill. */
   .skill-tags {
-    gap: 1.5pt;
+    gap: 1pt;
   }
 
   .skill-tag {
-    font-size: 0.8em;
-    padding: 0.5pt 2pt;
+    font-size: 0.78em;
+    padding: 0 1.5pt;
     border-radius: 1.5pt;
   }
 
   #profile-picture {
-    max-width: 2.4cm;
+    max-width: 1.8cm;
   }
 
   .daily-life-chart {

@@ -51,7 +51,7 @@
        stops being a two-page document. 7.7pt is the largest size that still
        fits; 7.5pt keeps a margin so one more entry does not silently push it
        to three pages. scripts/lib/print-fit.test.js enforces the fit. */
-    font-size: 7.5pt;
+    font-size: 6.5pt;
     font-family: "Lato", "Roboto", sans-serif;
     margin: 0;
     padding: 0;
@@ -65,39 +65,6 @@
   .cv-download-button,
   .cv-print-button {
     display: none !important;
-  }
-
-  /* The banner js/print-layout.js builds above the two columns, mirroring the
-     LaTeX header: photo on the left, name / tagline / contact details beside
-     it, the whole thing spanning the sheet. */
-  .print-header {
-    display: flex;
-    align-items: center;
-    gap: 0.35cm;
-    margin-bottom: 0.25cm;
-    break-after: avoid;
-  }
-
-  .print-header #profile-picture {
-    flex: 0 0 auto;
-  }
-
-  .print-header .contact-info {
-    flex: 1 1 auto;
-  }
-
-  /* altacv's \personalinfo flows its items inline and wraps; as blocks they
-     stack one per line and the banner grows to three times its height. The
-     degree line is a sentence, not an item, so it stays a block. */
-  .print-header .contact-info p:not(.degree) {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.12cm;
-    margin: 0 0.45cm 0.08cm 0;
-  }
-
-  .print-header .contact-info .degree {
-    margin: 0.1cm 0;
   }
 
   /* Education is moved into the narrow column for printing, so it takes the
@@ -114,6 +81,12 @@
     max-width: none;
     margin: 0;
     padding: 0;
+    /* base.css gives the container min-height: 100vh so the screen layout fills
+       the viewport. On paper a vh resolves against the page box, so the
+       container is never shorter than a full sheet however little it holds —
+       which pushed it off the banner's page entirely and made the sheet count
+       deaf to any density work. */
+    min-height: 0;
   }
 
   .sidebar,

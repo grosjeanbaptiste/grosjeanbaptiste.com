@@ -30,8 +30,14 @@ jobs:
       # asserts the CV still comes out on two sheets. Report the version up
       # front so a runner image that drops Chrome fails here, with an obvious
       # cause, rather than inside the suite.
-      - name: Browser for the print-fit test
-        run: google-chrome --version
+      # Both engines, on purpose: they paginate the same stylesheet differently
+      # and a Chrome-only check once passed while the site printed four pages in
+      # Firefox. Report the versions up front so a runner image that drops one
+      # fails here, with an obvious cause, rather than inside the suite.
+      - name: Browsers for the print-fit tests
+        run: |
+          google-chrome --version
+          firefox --version
 
       # xslt-print.test.js renders the XSLT theme with xsltproc. It is not on the
       # runner image, and without it those tests fail as six ENOENTs rather than

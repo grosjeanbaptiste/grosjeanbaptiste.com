@@ -1,7 +1,11 @@
-// js/print-layout.js moves the header banner and Education into their LaTeX
+// js/print-layout.js moves Education and the degrees summary into their LaTeX
 // positions just before printing. Two ways that goes silently wrong: the script
 // exists but no page loads it, or it moves nodes without restoring them, which
 // would leave the on-screen page rearranged after the print dialog closes.
+//
+// It no longer builds a full-width header banner. Firefox will not fragment the
+// two-column block across sheets, so a banner above it pushed the whole block
+// to its own page and the CV printed on three sheets instead of two.
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -25,9 +29,17 @@ test('the script restores the page after printing', () => {
 });
 
 test('it relocates exactly the nodes CSS cannot move', () => {
-  for (const hook of ['profile-picture', 'contact-info', 'education']) {
+  for (const hook of ['contact-info', 'education']) {
     assert.ok(script.includes(hook), `no handling for the ${hook} node`);
   }
+});
+
+test('no header banner is built, since Firefox pays a whole page for it', () => {
+  assert.doesNotMatch(
+    script,
+    /print-header/,
+    'a banner above the two columns costs Firefox an entire sheet — see print-fit-firefox.test.js',
+  );
 });
 
 test('the degrees summary is filed under the Education heading', () => {

@@ -8,25 +8,30 @@
 // and the recto spills onto a second sheet; nothing in the markup, the CSS or
 // the other tests would say so, and the CV quietly becomes a three-page document.
 //
-// Needs Chrome. Locally, when it cannot be found the test skips loudly rather
-// than passing, so a machine without a browser is not mistaken for a pass. In
-// CI it fails instead: a runner that quietly skips this check would turn the
-// whole guarantee into a green tick that verified nothing.
+// Two engines, deliberately. Chrome and Firefox paginate the same stylesheet
+// differently — Firefox will not fragment the two-column block across sheets —
+// and a version of this test that knew only Chrome reported two pages while the
+// site actually printed four in Firefox. Chrome covers all six languages;
+// Firefox checks one, which is enough to catch an engine-level regression
+// without paying for six more browser launches.
+//
+// When a browser cannot be found the test skips loudly rather than passing, so
+// a machine without one is not mistaken for a pass. In CI it fails instead: a
+// runner that quietly skips this check would turn the whole guarantee into a
+// green tick that verified nothing.
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const http = require('node:http');
 const { execFile } = require('node:child_process');
 const { promisify } = require('node:util');
+const { serve, countPages, EXPECTED_PAGES } = require('./print-fit-harness');
 
 const run = promisify(execFile);
 
-const ROOT = path.resolve(__dirname, '../..');
 const PAGES = ['', 'fr/', 'nl/', 'es/', 'de/', 'zh/'];
-const EXPECTED_PAGES = 2;
 
 const CHROME_CANDIDATES = [
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
@@ -50,43 +55,6 @@ function findChrome() {
 }
 
 const chrome = findChrome();
-
-const TYPES = {
-  '.html': 'text/html',
-  '.css': 'text/css',
-  '.js': 'text/javascript',
-  '.json': 'application/json',
-  '.svg': 'image/svg+xml',
-  '.png': 'image/png',
-  '.jpg': 'image/jpeg',
-  '.jpeg': 'image/jpeg',
-  '.ico': 'image/x-icon',
-  '.woff2': 'font/woff2',
-  '.xml': 'application/xml',
-  '.pdf': 'application/pdf',
-};
-
-function serve() {
-  const server = http.createServer((req, res) => {
-    const rel = decodeURIComponent(req.url.split('?')[0]);
-    let file = path.join(ROOT, rel);
-    if (rel.endsWith('/')) file = path.join(file, 'index.html');
-    if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
-      res.writeHead(404).end();
-      return;
-    }
-    res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream' });
-    fs.createReadStream(file).pipe(res);
-  });
-  return new Promise((resolve) => server.listen(0, '127.0.0.1', () => resolve(server)));
-}
-
-// /Type /Page marks a page object; /Type /Pages is the tree root and the \b
-// keeps it out. Cheaper than shelling out to pdfinfo, which is not always there.
-function countPages(pdf) {
-  const bytes = fs.readFileSync(pdf, 'latin1');
-  return (bytes.match(/\/Type\s*\/Page\b/g) || []).length;
-}
 
 test('the printed CV is two pages in every language', async (t) => {
   if (!chrome) {
