@@ -67,3 +67,15 @@ test('the degrees summary is filed under the Education heading', () => {
     'the degree lines would print among the contact details instead',
   );
 });
+
+test('the page colour is laid down by a fixed layer, not by body', () => {
+  // A background on body paints body's box only. On the verso that box ends
+  // with the columns, so the references — pushed there by break-before —
+  // printed on bare white below it. A fixed element is painted on every sheet.
+  const css = fs.readFileSync(path.resolve(__dirname, '../../css/print.css'), 'utf8');
+  assert.match(
+    css,
+    /body::before[^}]*position:\s*fixed/,
+    'nothing paints the page colour across every sheet',
+  );
+});
