@@ -4,6 +4,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const http = require('node:http');
+const { execFileSync } = require('node:child_process');
 
 const ROOT = path.resolve(__dirname, '../..');
 const EXPECTED_PAGES = 2;
@@ -55,11 +56,32 @@ function serve() {
   return new Promise((resolve) => server.listen(0, '127.0.0.1', () => resolve(server)));
 }
 
-// /Type /Page marks a page object; /Type /Pages is the tree root and the \b
-// keeps it out. Cheaper than shelling out to pdfinfo, which is not always there.
+/**
+ * Page count of a PDF.
+ *
+ * Scanning for "/Type /Page" only works while the page objects sit in the file
+ * as plain text. Firefox packs them into compressed object streams, where the
+ * scan finds nothing and reports zero — which reads like a catastrophic layout
+ * failure and is merely an unreadable file. So parse it properly with pdfinfo,
+ * and fall back to the scan only when poppler is absent, refusing to return a
+ * zero it cannot justify.
+ */
 function countPages(pdf) {
+  try {
+    const info = execFileSync('pdfinfo', [pdf], { encoding: 'utf8', stdio: 'pipe' });
+    const m = /^Pages:\s*(\d+)/m.exec(info);
+    if (m) return Number.parseInt(m[1], 10);
+  } catch {
+    // poppler not installed — fall through to the scan below.
+  }
   const bytes = fs.readFileSync(pdf, 'latin1');
-  return (bytes.match(/\/Type\s*\/Page\b/g) || []).length;
+  const scanned = (bytes.match(/\/Type\s*\/Page\b/g) || []).length;
+  if (scanned === 0) {
+    throw new Error(
+      `cannot count the pages of ${path.basename(pdf)}: pdfinfo is unavailable and the page objects are not in plain text (install poppler-utils)`,
+    );
+  }
+  return scanned;
 }
 
 module.exports = { serve, countPages, EXPECTED_PAGES, ROOT };

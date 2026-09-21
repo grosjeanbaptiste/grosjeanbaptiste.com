@@ -42,8 +42,11 @@ jobs:
       # xslt-print.test.js renders the XSLT theme with xsltproc. It is not on the
       # runner image, and without it those tests fail as six ENOENTs rather than
       # being skipped — install it so they actually run.
-      - name: XSLT processor for the theme tests
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq xsltproc
+      # poppler-utils supplies pdfinfo, which counts the pages of the printed
+      # PDFs — Firefox compresses its page objects, so they cannot be counted by
+      # scanning the file as text.
+      - name: XSLT processor and PDF tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq xsltproc poppler-utils
 
       - name: Test suite
         run: npm test
