@@ -113,6 +113,10 @@ test('the printed CV is two pages in every language', async (t) => {
           '--headless',
           '--disable-gpu',
           '--no-sandbox',
+          // Its own profile: sharing the developer's would contend with their
+          // running Chrome, and a killed run can leave locks behind that make
+          // the next one hang until the timeout.
+          `--user-data-dir=${path.join(out, 'profile')}`,
           '--virtual-time-budget=6000',
           '--no-pdf-header-footer',
           `--print-to-pdf=${pdf}`,

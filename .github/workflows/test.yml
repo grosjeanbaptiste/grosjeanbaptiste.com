@@ -33,5 +33,11 @@ jobs:
       - name: Browser for the print-fit test
         run: google-chrome --version
 
+      # xslt-print.test.js renders the XSLT theme with xsltproc. It is not on the
+      # runner image, and without it those tests fail as six ENOENTs rather than
+      # being skipped — install it so they actually run.
+      - name: XSLT processor for the theme tests
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq xsltproc
+
       - name: Test suite
         run: npm test

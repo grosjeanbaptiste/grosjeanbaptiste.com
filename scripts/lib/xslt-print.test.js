@@ -19,7 +19,18 @@ const XSL = path.join(ROOT, 'assets/xslt/resume-transform.xsl');
 
 function render(lang) {
   const xml = path.join(ROOT, `assets/data/resume-${lang}.xml`);
-  return execFileSync('xsltproc', [XSL, xml], { encoding: 'utf8' });
+  try {
+    return execFileSync('xsltproc', [XSL, xml], { encoding: 'utf8' });
+  } catch (err) {
+    // "spawnSync xsltproc ENOENT" says nothing about what to do next, and it
+    // reads like six broken assertions rather than one missing package.
+    if (err.code === 'ENOENT') {
+      throw new Error(
+        'xsltproc is not installed — it renders the XSLT theme these tests check (apt: xsltproc, brew: libxslt)',
+      );
+    }
+    throw err;
+  }
 }
 
 test('rich theme exposes a live print/PDF button wired to window.print()', () => {

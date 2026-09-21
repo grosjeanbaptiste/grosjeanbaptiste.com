@@ -50,3 +50,15 @@ test('a missing browser fails CI instead of skipping', () => {
     'print-fit.test.js skips unconditionally — on a runner without Chrome, CI would pass having checked nothing',
   );
 });
+
+test('the workflow installs the tools the suite shells out to', () => {
+  const yaml = fs.readFileSync(WORKFLOW, 'utf8');
+  // The suite runs two external binaries. Neither is a node dependency, so
+  // nothing but this workflow puts them on the runner.
+  for (const [tool, why] of [
+    ['xsltproc', 'xslt-print.test.js renders the theme with it'],
+    ['google-chrome', 'print-fit.test.js prints the pages with it'],
+  ]) {
+    assert.ok(yaml.includes(tool), `test.yml never provides ${tool} — ${why}`);
+  }
+});
