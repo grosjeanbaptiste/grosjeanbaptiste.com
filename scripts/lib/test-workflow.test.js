@@ -60,6 +60,7 @@ test('the workflow installs the tools the suite shells out to', () => {
     ['google-chrome', 'print-fit.test.js prints the pages with it'],
     ['firefox', 'print-fit-firefox.test.js prints with the other engine'],
     ['poppler-utils', 'pdfinfo counts the pages of what they printed'],
+    ['xsltproc', 'print-fit-xslt.test.js renders the XSLT theme to print it'],
   ]) {
     assert.ok(yaml.includes(tool), `test.yml never provides ${tool} — ${why}`);
   }
