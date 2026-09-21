@@ -8,8 +8,10 @@
 // and the recto spills onto a second sheet; nothing in the markup, the CSS or
 // the other tests would say so, and the CV quietly becomes a three-page document.
 //
-// Needs Chrome. When it cannot be found the test skips loudly rather than
-// passing, so an environment without a browser cannot be mistaken for a pass.
+// Needs Chrome. Locally, when it cannot be found the test skips loudly rather
+// than passing, so a machine without a browser is not mistaken for a pass. In
+// CI it fails instead: a runner that quietly skips this check would turn the
+// whole guarantee into a green tick that verified nothing.
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -27,14 +29,27 @@ const PAGES = ['', 'fr/', 'nl/', 'es/', 'de/', 'zh/'];
 const EXPECTED_PAGES = 2;
 
 const CHROME_CANDIDATES = [
-  process.env.CHROME_PATH,
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
   '/usr/bin/google-chrome',
   '/usr/bin/chromium',
   '/usr/bin/chromium-browser',
-].filter(Boolean);
+];
 
-const chrome = CHROME_CANDIDATES.find((c) => fs.existsSync(c));
+// An explicit CHROME_PATH is an instruction, not a hint: if it points nowhere,
+// say so instead of quietly testing some other browser the caller did not ask
+// for — that silent fallback is how a deliberate override goes unnoticed.
+function findChrome() {
+  const explicit = process.env.CHROME_PATH;
+  if (explicit) {
+    if (!fs.existsSync(explicit)) {
+      throw new Error(`CHROME_PATH points at a missing binary: ${explicit}`);
+    }
+    return explicit;
+  }
+  return CHROME_CANDIDATES.find((c) => fs.existsSync(c));
+}
+
+const chrome = findChrome();
 
 const TYPES = {
   '.html': 'text/html',
@@ -75,6 +90,11 @@ function countPages(pdf) {
 
 test('the printed CV is two pages in every language', async (t) => {
   if (!chrome) {
+    if (process.env.CI) {
+      throw new Error(
+        'no Chrome on this runner, so the two-page fit went unchecked — install one or set CHROME_PATH',
+      );
+    }
     t.skip('no Chrome found — set CHROME_PATH to enforce the two-page fit here');
     return;
   }
@@ -93,6 +113,10 @@ test('the printed CV is two pages in every language', async (t) => {
           '--headless',
           '--disable-gpu',
           '--no-sandbox',
+          // Its own profile: sharing the developer's would contend with their
+          // running Chrome, and a killed run can leave locks behind that make
+          // the next one hang until the timeout.
+          `--user-data-dir=${path.join(out, 'profile')}`,
           '--virtual-time-budget=6000',
           '--no-pdf-header-footer',
           `--print-to-pdf=${pdf}`,
