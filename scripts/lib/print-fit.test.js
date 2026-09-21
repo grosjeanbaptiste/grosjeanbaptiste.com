@@ -96,10 +96,11 @@ test('the printed CV is two pages in every language', async (t) => {
         throw new Error(`/${page}: Chrome failed to print — ${err.message}`);
       });
       assert.ok(fs.existsSync(pdf), `/${page}: Chrome produced no PDF`);
+      const pages = countPages(pdf);
       assert.equal(
-        countPages(pdf),
+        pages,
         EXPECTED_PAGES,
-        `/${page}: the printed CV is not ${EXPECTED_PAGES} pages — the recto has spilled`,
+        `/${page}: the printed CV is ${pages} pages, not ${EXPECTED_PAGES} — the recto has spilled`,
       );
     }
   } finally {

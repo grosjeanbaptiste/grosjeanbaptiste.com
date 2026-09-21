@@ -84,10 +84,11 @@ test('the printed CV is two pages in Firefox too', async (t) => {
   try {
     const { dir, pdf } = profileFor(out);
     await printWith(firefox, dir, pdf, `http://127.0.0.1:${port}/__print/`);
+    const pages = countPages(pdf);
     assert.equal(
-      countPages(pdf),
+      pages,
       EXPECTED_PAGES,
-      `Firefox prints the CV on more than ${EXPECTED_PAGES} pages — it will not split the two-column block, so the recto must fit one sheet on its own`,
+      `Firefox prints the CV on ${pages} pages, not ${EXPECTED_PAGES} — it will not split the two-column block, so the recto must fit one sheet on its own`,
     );
   } finally {
     fs.rmSync(out, { recursive: true, force: true });
