@@ -131,30 +131,44 @@
 
   /* \footnotesize \cvtag: a thin outlined chip, not a padded pill. */
   .skill-tags {
-    gap: 1.5pt;
+    gap: 1pt;
   }
 
   .skill-tag {
-    font-size: 0.8em;
-    padding: 0.5pt 2pt;
+    font-size: 0.7em;
+    padding: 0 1.5pt;
     border-radius: 1.5pt;
   }
 
   #profile-picture {
-    max-width: 2.4cm;
+    max-width: 1.8cm;
   }
 
+  /* The day block is the last thing in the left column, so it is what spills
+     when the recto is a hair too tall — and a spilled sidebar costs a whole
+     sheet, since the two-column block cannot be split. Give it real headroom
+     rather than a margin measured in millimetres. */
   .daily-life-chart {
-    max-width: 3cm;
+    max-width: 2.2cm;
   }
 
   .daily-life-legend {
-    margin: 2pt 0 0;
-    font-size: 0.8em;
+    margin: 1pt 0 0;
+    font-size: 0.72em;
+    line-height: 1.15;
+    /* Two short columns instead of one tall list. */
+    column-count: 2;
+    column-gap: 4pt;
   }
 
   .daily-life-legend li {
     padding: 0;
+    break-inside: avoid;
+  }
+
+  .daily-life-dot {
+    width: 4pt;
+    height: 4pt;
   }
 
   /* The recto of the PDF carries no per-entry reference back-links; the

@@ -4,9 +4,6 @@
 // Two differences cannot be expressed in the print stylesheet, because CSS
 // cannot move a node between containers:
 //
-//   - the LaTeX CV opens with a full-width banner (photo, name, tagline,
-//     contact details) above both columns, while the page nests all of that
-//     inside the sidebar;
 //   - it renders Education in the narrow left column, and as a two-line degrees
 //     summary rather than a list of entries (the fit plan drops the entries);
 //     the page renders a full Education section in the main column and files the
@@ -20,7 +17,7 @@
   let undo = [];
   /** @type {{el: Element, text: string}[]} */
   let clipped = [];
-  let header = null;
+  let prepared = false;
 
   function move(node, parent, { first = false } = {}) {
     if (!node || !parent) return;
@@ -30,21 +27,11 @@
   }
 
   function prepare() {
-    if (header) return; // already prepared; print dialogs can fire twice
-    const container = document.querySelector('.container');
+    if (prepared) return; // print dialogs can fire the event twice
     const sidebar = document.querySelector('.sidebar');
-    if (!container || !sidebar) return;
+    if (!sidebar) return;
+    prepared = true;
 
-    header = document.createElement('div');
-    header.className = 'print-header';
-    container.parentNode.insertBefore(header, container);
-
-    move(document.getElementById('profile-picture'), header);
-    move(document.querySelector('.contact-info'), header);
-
-    // The LaTeX sidebar carries a degrees summary under the Education heading.
-    // Reuse that section — already localized — as its home: its own entries are
-    // hidden in print, matching education_in_body: false.
     // \cvsectionsidebar for the degrees is the FIRST block of the LaTeX sidebar,
     // ahead of languages, skills and the day chart.
     const education = document.getElementById('education');
@@ -73,10 +60,7 @@
       parent.insertBefore(node, next);
     }
     undo = [];
-    if (header) {
-      header.remove();
-      header = null;
-    }
+    prepared = false;
   }
 
   window.addEventListener('beforeprint', prepare);
