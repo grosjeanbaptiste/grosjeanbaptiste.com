@@ -97,6 +97,14 @@ test('the XSLT theme prints on two pages too', async (t) => {
       EXPECTED_PAGES,
       `the XSLT view prints on ${pages} pages, not ${EXPECTED_PAGES} — ${pageHeads(pdf, pages)}`,
     );
+    // Two pages is not enough on its own: the left column used to run past the
+    // first sheet and sit beside the references, where the PDF gives the verso
+    // to the references alone.
+    assert.match(
+      pageHeads(pdf, pages),
+      /p2: References/,
+      `the verso does not open on the references — the left column has spilled onto it: ${pageHeads(pdf, pages)}`,
+    );
   } finally {
     fs.rmSync(out, { recursive: true, force: true });
     server.close();

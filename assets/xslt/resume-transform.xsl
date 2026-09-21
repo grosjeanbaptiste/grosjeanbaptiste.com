@@ -447,6 +447,12 @@
                the education entries below the top two, and the sections the
                PDF does not carry at all. */
             .print-hidden, .print-drop { display: none; }
+            /* education_in_body: false — the PDF prints no Education entries,
+               only the two-line degrees summary the identity block carries.
+               Keeping the entries cost eighteen lines of the narrow column and
+               repeated the degree that was already three lines above. */
+            .edu-block .item { display: none; }
+            .edu-block .degree { margin: 0 0 1pt; }
             /* The recto of the PDF carries no per-entry reference back-links;
                the references live on the verso. */
             .ref-links { display: none; }
@@ -486,7 +492,7 @@
              a single sheet. Restored afterwards, so the screen is untouched. -->
         <script>
           (function () {
-            var edu, parent, next;
+            var edu, parent, next, degrees, degreeHomes;
             function prepare() {
               if (parent) return;
               edu = document.querySelector('.edu-block');
@@ -495,9 +501,21 @@
               parent = edu.parentNode;
               next = edu.nextSibling;
               side.insertBefore(edu, side.querySelector('h2'));
+              // The identity block already carries the degrees summary — the
+              // same two lines the PDF prints. File them under the heading and
+              // the section is complete without its detailed entries.
+              degrees = [].slice.call(document.querySelectorAll('.degree'));
+              degreeHomes = degrees.map(function (d) {
+                return { node: d, parent: d.parentNode, next: d.nextSibling };
+              });
+              degrees.forEach(function (d) { edu.appendChild(d); });
             }
             function restore() {
               if (!parent) return;
+              (degreeHomes || []).forEach(function (h) {
+                h.parent.insertBefore(h.node, h.next);
+              });
+              degreeHomes = null;
               parent.insertBefore(edu, next);
               parent = null;
             }
