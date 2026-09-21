@@ -77,6 +77,21 @@ async function printWith(bin, profile, pdf, url) {
   }
 }
 
+test('the printed Education section states each degree once', () => {
+  // The identity block carries a degrees summary that repeats the first
+  // Education entry word for word, three lines apart. The entries win — they
+  // carry the institution and the dates as well — so the summary is hidden.
+  const xsl = fs.readFileSync(
+    path.resolve(__dirname, '../../assets/xslt/resume-transform.xsl'),
+    'utf8',
+  );
+  assert.match(
+    xsl,
+    /\.sidebar \.degree \{ display: none/,
+    'the degrees summary prints alongside the Education entries, so the degree appears twice',
+  );
+});
+
 test('the XSLT theme prints on two pages too', async (t) => {
   if (!firefox) {
     if (process.env.CI) {
