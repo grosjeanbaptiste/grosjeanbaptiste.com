@@ -461,7 +461,10 @@
             .edu-block .item > *:not(h3):not(.date) { display: none; }
             .edu-block .item { margin-bottom: 3pt; }
             .edu-block .item h3 { font-size: 1em; }
-            .edu-block .degree { margin: 0 0 2pt; }
+            /* The identity block's degrees summary says the same thing as the
+               first entry above — same degree, same wording, three lines apart.
+               The entries win: they carry the institution and the dates too. */
+            .sidebar .degree { display: none; }
             /* The recto of the PDF carries no per-entry reference back-links;
                the references live on the verso. */
             .ref-links { display: none; }
@@ -509,7 +512,7 @@
              a single sheet. Restored afterwards, so the screen is untouched. -->
         <script>
           (function () {
-            var edu, parent, next, degrees, degreeHomes;
+            var edu, parent, next;
             function prepare() {
               if (parent) return;
               edu = document.querySelector('.edu-block');
@@ -518,21 +521,9 @@
               parent = edu.parentNode;
               next = edu.nextSibling;
               side.insertBefore(edu, side.querySelector('h2'));
-              // The identity block already carries the degrees summary — the
-              // same two lines the PDF prints. File them under the heading and
-              // the section is complete without its detailed entries.
-              degrees = [].slice.call(document.querySelectorAll('.degree'));
-              degreeHomes = degrees.map(function (d) {
-                return { node: d, parent: d.parentNode, next: d.nextSibling };
-              });
-              degrees.forEach(function (d) { edu.appendChild(d); });
             }
             function restore() {
               if (!parent) return;
-              (degreeHomes || []).forEach(function (h) {
-                h.parent.insertBefore(h.node, h.next);
-              });
-              degreeHomes = null;
               parent.insertBefore(edu, next);
               parent = null;
             }
