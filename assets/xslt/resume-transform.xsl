@@ -490,14 +490,14 @@
                Carrying the PDF's sidebar content and nothing more, this column
                does not fill an A4 page at any honest size — so the room left
                over goes to legibility rather than to filler. */
-            .sidebar { font-size: 1.1em; }
-            .skill-tags { gap: 2pt; }
-            .skill-tag { font-size: 0.92em; padding: 1pt 2.5pt; }
-            .lang-item { margin: 0 0 1.5pt; }
-            .sidebar h2 { font-size: 9.5pt; margin: 8pt 0 4pt; }
-            .day-list li { margin: 1pt 0; }
-            .day-list .dot { width: 6px; height: 6px; margin-right: 5px; }
-            #profile-picture { max-width: 3cm; }
+            .sidebar { font-size: 1.04em; }
+            .skill-tags { gap: 1.5pt; }
+            .skill-tag { font-size: 0.86em; padding: 0.5pt 2pt; }
+            .lang-item { margin: 0 0 1pt; }
+            .sidebar h2 { font-size: 8.5pt; margin: 6pt 0 3pt; }
+            .day-list li { margin: 0.5pt 0; }
+            .day-list .dot { width: 5px; height: 5px; margin-right: 4px; }
+            #profile-picture { max-width: 2.4cm; }
             .item, blockquote, .sidebar h2, .sidebar p { break-inside: avoid; }
             .main h2 { break-after: avoid; }
             a { color: var(--body); text-decoration: none; }
