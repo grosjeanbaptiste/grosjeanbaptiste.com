@@ -113,10 +113,11 @@ test('the printed CV is two pages in every language', async (t) => {
           '--headless',
           '--disable-gpu',
           '--no-sandbox',
-          // Its own profile: sharing the developer's would contend with their
-          // running Chrome, and a killed run can leave locks behind that make
-          // the next one hang until the timeout.
-          `--user-data-dir=${path.join(out, 'profile')}`,
+          // A fresh profile per language. Sharing the developer's contends with
+          // their running Chrome; sharing one across the six launches contends
+          // with the previous launch, whose singleton lock can outlive the
+          // process and make the next one wait indefinitely.
+          `--user-data-dir=${path.join(out, `profile-${page.replace('/', '') || 'en'}`)}`,
           '--virtual-time-budget=6000',
           '--no-pdf-header-footer',
           `--print-to-pdf=${pdf}`,
