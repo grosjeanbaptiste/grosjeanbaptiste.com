@@ -446,12 +446,10 @@
             /* What the LaTeX fit plan leaves out: the roles past the eighth
                and the education entries below the top two. */
             .print-hidden { display: none; }
-            /* The sections the PDF does not carry — awards and interests — are
-               dropped; the sidebar's Projects list is NOT. A deliberate
-               divergence: this view is richer than the PDF, and without it the
-               left column ends halfway down the sheet. */
+            /* Sections the PDF does not carry: the sidebar's Projects list —
+               its projects appear under the roles that reference them — plus
+               awards and interests. */
             .print-drop { display: none; }
-            .sidebar .print-drop { display: block; }
             /* education_in_body: false — the PDF prints no Education entries,
                only the two-line degrees summary the identity block carries.
                Keeping the entries cost eighteen lines of the narrow column and
@@ -487,16 +485,19 @@
                the references alone. It was squeezed far harder than that needs
                while the Education entries were still in it; with those gone
                the room is there, so the type goes back to a readable size. */
+            /* Only the left column is sized up: the main one already runs the
+               full page and a larger body size there would cost a sheet.
+               Carrying the PDF's sidebar content and nothing more, this column
+               does not fill an A4 page at any honest size — so the room left
+               over goes to legibility rather than to filler. */
+            .sidebar { font-size: 1.04em; }
             .skill-tags { gap: 1.5pt; }
-            .skill-tag { font-size: 0.82em; padding: 0.5pt 2pt; }
+            .skill-tag { font-size: 0.86em; padding: 0.5pt 2pt; }
             .lang-item { margin: 0 0 1pt; }
-            .sidebar h2 { font-size: 8pt; margin: 6pt 0 3pt; }
-            /* Two short columns instead of one tall list: it is the last block
-               of the sidebar, so it is what spills first. */
-            .day-list { column-count: 2; column-gap: 4pt; }
-            .day-list li { margin: 0.5pt 0; break-inside: avoid; }
+            .sidebar h2 { font-size: 8.5pt; margin: 6pt 0 3pt; }
+            .day-list li { margin: 0.5pt 0; }
             .day-list .dot { width: 5px; height: 5px; margin-right: 4px; }
-            #profile-picture { max-width: 2.0cm; }
+            #profile-picture { max-width: 2.4cm; }
             .item, blockquote, .sidebar h2, .sidebar p { break-inside: avoid; }
             .main h2 { break-after: avoid; }
             a { color: var(--body); text-decoration: none; }
@@ -776,10 +777,7 @@
       <div class="print-drop">
       <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template></h2>
       <xsl:for-each select="/resume/projects/project">
-        <div>
-          <!-- Thirty projects would run the sidebar off the sheet; the printed
-               list stops at ten and the screen keeps them all. -->
-          <xsl:attribute name="class">lang-item<xsl:if test="position() &gt; 6"> print-hidden</xsl:if></xsl:attribute>
+        <div class="lang-item">
           <xsl:choose>
             <xsl:when test="url">
               <a target="_blank" rel="noopener">
