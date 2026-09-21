@@ -51,7 +51,7 @@
        stops being a two-page document. 7.7pt is the largest size that still
        fits; 7.5pt keeps a margin so one more entry does not silently push it
        to three pages. scripts/lib/print-fit.test.js enforces the fit. */
-    font-size: 6.5pt;
+    font-size: 6.0pt;
     font-family: "Lato", "Roboto", sans-serif;
     margin: 0;
     padding: 0;
