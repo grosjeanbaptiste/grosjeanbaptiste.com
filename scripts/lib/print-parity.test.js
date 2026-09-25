@@ -18,11 +18,16 @@ const { FIT_PLANS } = require('./pdf/config');
 const ROOT = path.resolve(__dirname, '../..');
 // The print sheet is split across css/print*.css; assertions are about the
 // sheet as a whole, so read them as one corpus rather than naming one file.
+// Comments are stripped: a colour named only in prose ("deliberately NOT
+// #e2e2e2") would otherwise satisfy the colour check without the sheet ever
+// declaring it, which is exactly how this test passed while the page colour
+// had already been changed to white.
 const css = fs
   .readdirSync(path.join(ROOT, 'css'))
   .filter((f) => /^print.*\.css$/.test(f))
   .map((f) => fs.readFileSync(path.join(ROOT, 'css', f), 'utf8'))
-  .join('\n');
+  .join('\n')
+  .replace(/\/\*[\s\S]*?\*\//g, ' ');
 const preamble = buildPreamble('en');
 const documentJs = fs.readFileSync(path.join(__dirname, 'pdf/document.js'), 'utf8');
 
@@ -42,8 +47,13 @@ function latexGeometry() {
   return Object.fromEntries(m[1].split(',').map((kv) => kv.split('=')));
 }
 
+// The page colour is the one deliberate divergence: the CV prints on white
+// rather than on altacv's grey \pagecolor. print-page-colour.test.js owns it.
+const DIVERGES = new Set(['BackgroundColor']);
+
 test('every LaTeX colour is declared in the print stylesheet', () => {
   const missing = Object.entries(latexColours())
+    .filter(([name]) => !DIVERGES.has(name))
     .filter(([, hex]) => !new RegExp(`#${hex}`, 'i').test(css))
     .map(([name, hex]) => `${name} (#${hex})`);
   assert.deepEqual(

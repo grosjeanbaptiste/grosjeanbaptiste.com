@@ -1,4 +1,5 @@
 const { tex } = require('../tex');
+const { formatLongDate } = require('../today');
 
 const PROFILE_INFO = {
   linkedin: (u) => `\\linkedin{${tex(u)}}`,
@@ -6,7 +7,7 @@ const PROFILE_INFO = {
   npm: (u) => `\\printinfo{\\faNpm}{${tex(u)}}`,
 };
 
-function buildHeader(resume, t) {
+function buildHeader(resume, t, lang, now = new Date()) {
   const b = resume.basics || {};
   const profiles = (b.profiles || [])
     .map((p) => {
@@ -26,7 +27,9 @@ function buildHeader(resume, t) {
     `    \\location{${loc}}\\\\`,
     `    ${profiles}`,
     `    \\printinfo{\\faCar}{${tex(t.driverLicense)}}`,
-    `    \\begin{center}\\printinfo{\\faRedo}{${tex(t.updated)} \\today}\\end{center}`,
+    // \today would localize from babel, and zh compiles under babel's
+    // `english` on purpose — see ../today.js.
+    `    \\begin{center}\\printinfo{\\faRedo}{${tex(t.updated)} ${tex(formatLongDate(now, lang))}}\\end{center}`,
     '}',
     '\\makecvheader',
   ].join('\n');
