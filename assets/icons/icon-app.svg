@@ -1,7 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- Home-screen / PWA icon: full-bleed bordeaux so iOS (transparent->black)
+  <!-- Home-screen / PWA icon. Full-bleed bordeaux so iOS (transparent->black)
        and Android maskable crops never expose a corner; the OS rounds it.
-       "BG | MSc" kept inside the maskable safe zone (center 80% = x 51..461). -->
+       Separate from favicon.svg on purpose: that one draws its own rounded
+       square, this one must not.
+       Initials only, matching the tab icon. manifest.webmanifest declares this
+       "any maskable", so the label has to fit the safe zone — a centred circle
+       of 80% diameter, i.e. 204.8px from centre at this viewBox. At 240px the
+       cap block is 350x172, reaching 195px from centre.
+       Baseline set explicitly rather than with dominant-baseline: unevenly
+       supported, and OS launchers rasterize this too.
+       y = (512 + 0.717*240) / 2 ≈ 342. -->
   <rect width="512" height="512" fill="#800020"/>
-  <text x="256" y="256" font-family="Helvetica, Arial, sans-serif" font-size="96" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central" letter-spacing="-4">BG | MSc</text>
+  <text x="256" y="342" font-family="Helvetica, Arial, sans-serif" font-size="240" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-10">BG</text>
 </svg>
