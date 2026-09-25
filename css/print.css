@@ -29,7 +29,11 @@
     --accent-color: #f3890b; /* ThirdColor     — heading rules */
     --body-color: #666666; /* BodyColor      — running text */
     --emphasis-color: #2e2e2e; /* EmphasisColor  — emphasised runs */
-    --page-color: #e2e2e2; /* BackgroundColor — \pagecolor */
+    /* Deliberately NOT altacv's \pagecolor{BackgroundColor} (#e2e2e2):
+       a full-bleed grey wash costs ink on every sheet and buys no
+       legibility on paper. The rest of the palette still tracks the
+       LaTeX preamble — see scripts/lib/print-page-colour.test.js. */
+    --page-color: #ffffff;
   }
 
   /* \geometry{left=0.9cm,right=0.9cm,top=0.8cm,bottom=0.8cm} */
