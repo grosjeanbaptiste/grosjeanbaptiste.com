@@ -12,10 +12,18 @@ on:
     branches: [master]
     paths:
       - 'dsl/**'
+      # The gate compares assets/data against a fresh compile, so it has to
+      # fire when the generated side moves too — editing resume.json alone
+      # otherwise merges green and is reverted by the next compile.
+      - 'assets/data/**'
       - '.github/workflows/dsl.yml'
   pull_request:
     paths:
       - 'dsl/**'
+      # The gate compares assets/data against a fresh compile, so it has to
+      # fire when the generated side moves too — editing resume.json alone
+      # otherwise merges green and is reverted by the next compile.
+      - 'assets/data/**'
       - '.github/workflows/dsl.yml'
   workflow_dispatch:
 
