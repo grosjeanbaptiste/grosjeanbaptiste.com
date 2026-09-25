@@ -611,13 +611,13 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             position t{ en: "Student Representative", fr: "Délégué étudiant", nl: "Studentenvertegenwoordiger", es: "Delegado de estudiantes", de: "Studierendenvertreter", zh: "学生代表" }
             organization "UMons"
             url "https://www.umons.be"
-            period 2023-11-30..present
+            period 2023-11-30..2026-09-04
         }
         BuddyTandemons {
             position t{ en: "Buddy Tandemons", fr: "Buddy TandeMons", nl: "Buddy TandeMons", es: "Buddy TandeMons", de: "Buddy TandeMons", zh: "Buddy TandeMons" }
             organization "UMons"
             url "https://www.umons.be"
-            period 2023-11-30..present
+            period 2023-11-30..2026-09-04
         }
         StudentRepresentative2 {
             position t{ en: "Student Representative", fr: "Délégué étudiant", nl: "Studentenvertegenwoordiger", es: "Delegado de estudiantes", de: "Studierendenvertreter", zh: "学生代表" }
