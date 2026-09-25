@@ -22,7 +22,7 @@ function generateLatex(resume, lang, limits) {
     buildPreamble(lang),
     '\\begin{document}',
     `\\selectlanguage{${BABEL[lang]}}`,
-    buildHeader(resume, t),
+    buildHeader(resume, t, lang),
     '\\columnratio{0.30}',
     '\\begin{paracol}{2}',
     buildDegreesSummary(resume, t, lang),
