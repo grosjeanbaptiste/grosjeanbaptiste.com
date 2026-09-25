@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect x="6" y="6" width="500" height="500" rx="56" fill="#800020"/>
-  <text x="256" y="180" font-family="Helvetica, Arial, sans-serif" font-size="252" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central" letter-spacing="-8">BG</text>
-  <text x="256" y="378" font-family="Helvetica, Arial, sans-serif" font-size="252" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central" letter-spacing="-8">MSc</text>
+  <!-- Initials only: the tab renders this at 16px, where a second line of
+       "MSc" was about seven pixels tall and read as a smudge.
+       Baseline set explicitly rather than via dominant-baseline, which is
+       unevenly supported and a favicon meets a lot of rendering engines.
+       Helvetica Bold cap height is ~0.717em, so a 330px cap block centres on
+       y = (512 + 0.717*330) / 2 ≈ 374. -->
+  <text x="256" y="374" font-family="Helvetica, Arial, sans-serif" font-size="330" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-10">BG</text>
 </svg>
