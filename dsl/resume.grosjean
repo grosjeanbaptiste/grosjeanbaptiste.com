@@ -312,8 +312,9 @@ TFE: WebMenu 2.0
             name "Baba"
             description t{ en: "Shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop.", fr: "CLI de type shell interrogé en anglais contrôlé via une IA symbolique pure — aucun LLM dans la boucle.", nl: "Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.", es: "CLI tipo shell consultada en inglés controlado mediante IA simbólica pura — sin LLM en el bucle.", de: "Shell-artige CLI, in kontrolliertem Englisch abgefragt über reine symbolische KI — ohne LLM im Ablauf.", zh: "类 shell CLI，通过纯符号 AI（无 LLM）以受控英语查询。" }
             summary t{ en: "Five layers: Rust CLI shell, link-grammar syntactic parser, SWI-Prolog symbolic engine, domain vocabulary packs, action executors.", fr: "Cinq couches : shell CLI Rust, parseur syntaxique link-grammar, moteur symbolique SWI-Prolog, packs de vocabulaire de domaine, exécuteurs d'actions.", nl: "Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders.", es: "Cinco capas: shell CLI en Rust, parser sintáctico link-grammar, motor simbólico SWI-Prolog, paquetes de vocabulario de dominio, ejecutores de acciones.", de: "Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer.", zh: "五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。" }
-            url "https://github.com/grosjeanbaptiste/baba"
-            keywords [Rust, Prolog, LinkGrammar, DDD, CleanArchitecture]
+            // No url: the repo is private, so the link answered 404 to
+            // everyone who clicked it. Put it back when it opens.
+            keywords [Rust, Prolog, LinkGrammar, DDD, CleanArchitecture, TDD]
             startDate 2026-07-02
             type "CLI"
             roles [Author]
@@ -322,7 +323,7 @@ TFE: WebMenu 2.0
             name "KAG"
             description t{ en: "Domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines.", fr: "Framework Rust indépendant du domaine pour benchmarker les pipelines Retrieval-Augmented Generation.", nl: "Domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines.", es: "Framework Rust independiente del dominio para benchmarking de pipelines Retrieval-Augmented Generation.", de: "Domänenunabhängiges Rust-Framework zum Benchmarking von Retrieval-Augmented-Generation-Pipelines.", zh: "领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。" }
             summary t{ en: "Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, zero external dependencies in the core.", fr: "Conception hexagonale + DDD + TDD où chaque étape (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) est un composant interchangeable sélectionné par label, sans dépendances externes dans le core.", nl: "Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core.", es: "Diseño hexagonal + DDD + TDD donde cada etapa (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) es un componente intercambiable seleccionado por label, sin dependencias externas en el core.", de: "Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core.", zh: "采用六边形架构 + DDD + TDD，每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。" }
-            url "https://github.com/grosjeanbaptiste/KAG"
+            // No url: the repo is private (and is named `kag`, not `KAG`).
             keywords [Rust, DDD, CleanArchitecture, TDD, RAG]
             startDate 2026-07-05
             type "Framework"
@@ -387,7 +388,7 @@ TFE: WebMenu 2.0
         MyWay {
             name "MyWay"
             description t{ en: "Education manager for students. No longer maintained; database and auth are unavailable.", fr: "Gestionnaire de parcours éducatif pour étudiants. Plus maintenu ; la base de données et l'auth sont indisponibles.", nl: "Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar.", es: "Gestor educativo para estudiantes. Sin mantenimiento; la base de datos y la autenticación no están disponibles.", de: "Bildungsmanager für Studierende. Nicht mehr gepflegt; Datenbank und Auth sind nicht verfügbar.", zh: "学生教育管理工具。不再维护；数据库和身份验证不可用。" }
-            keywords [Angular, JavaScript, TypeScript, "Express.js", API, "UI/UX", "MSSQL Server"]
+            keywords [Angular, JavaScript, TypeScript, "Express.js", API, "UI/UX", "MSSQL Server", Auth0, PayPal, Sequelize]
             startDate 2023-01-01
             endDate 2023-06-30
             url "https://my-way-bg.vercel.app"

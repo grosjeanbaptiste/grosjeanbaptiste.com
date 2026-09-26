@@ -438,9 +438,9 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>LinkGrammar</keyword>
         <keyword>DDD</keyword>
         <keyword>CleanArchitecture</keyword>
+        <keyword>TDD</keyword>
       </keywords>
       <startDate>2026-07-02</startDate>
-      <url>https://github.com/grosjeanbaptiste/baba</url>
       <type>CLI</type>
       <roles>
         <role>Author</role>
@@ -458,7 +458,6 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>RAG</keyword>
       </keywords>
       <startDate>2026-07-05</startDate>
-      <url>https://github.com/grosjeanbaptiste/KAG</url>
       <type>Framework</type>
       <roles>
         <role>Author</role>
@@ -574,6 +573,9 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>API</keyword>
         <keyword>UI/UX</keyword>
         <keyword>MSSQL Server</keyword>
+        <keyword>Auth0</keyword>
+        <keyword>PayPal</keyword>
+        <keyword>Sequelize</keyword>
       </keywords>
       <startDate>2023-01-01</startDate>
       <endDate>2023-06-30</endDate>
