@@ -490,6 +490,9 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>Python</keyword>
         <keyword>Evaluation</keyword>
         <keyword>Benchmark</keyword>
+        <keyword>OCR</keyword>
+        <keyword>SentenceTransformers</keyword>
+        <keyword>Pandas</keyword>
       </keywords>
       <startDate>2025-11-03</startDate>
       <endDate>2026-06-30</endDate>
@@ -545,6 +548,8 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>OpenAI</keyword>
         <keyword>Whisper</keyword>
         <keyword>DeepFace</keyword>
+        <keyword>PostgreSQL</keyword>
+        <keyword>SQLAlchemy</keyword>
       </keywords>
       <startDate>2024-10-01</startDate>
       <endDate>2025-06-30</endDate>
@@ -594,6 +599,16 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
     </project>
     <project>
       <name>VhAuctions</name>
+      <keywords>
+        <keyword>.NET</keyword>
+        <keyword>C#</keyword>
+        <keyword>EntityFramework</keyword>
+        <keyword>React</keyword>
+        <keyword>TypeScript</keyword>
+        <keyword>Docker</keyword>
+        <keyword>Azure</keyword>
+        <keyword>OpenTelemetry</keyword>
+      </keywords>
       <startDate>2024-01-01</startDate>
       <endDate>2024-02-28</endDate>
       <summary>Gestionnaire de parc pour ventes aux enchères.</summary>

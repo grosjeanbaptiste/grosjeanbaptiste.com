@@ -343,7 +343,7 @@ TFE: WebMenu 2.0
             name "fedrag-be"
             description t{ en: "Open evaluation protocol comparing retrieval strategies on the Belgian Senate corpus, with a focus on bilingual FR/NL robustness.", fr: "Protocole d'évaluation ouvert comparant les stratégies de retrieval sur le corpus du Sénat belge, avec un focus sur la robustesse bilingue FR/NL.", nl: "Open evaluatieprotocol dat retrieval-strategieën vergelijkt op het corpus van de Belgische Senaat, met focus op tweetalige FR/NL-robuustheid.", es: "Protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado belga, con énfasis en la robustez bilingüe FR/NL.", de: "Offenes Bewertungsprotokoll, das Retrieval-Strategien auf dem Korpus des belgischen Senats vergleicht, mit Fokus auf zweisprachige FR/NL-Robustheit.", zh: "开源评估协议，比较比利时参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。" }
             summary t{ en: "Open, reproducible protocol that benchmarks retrieval strategies on the bilingual Senate corpus, measuring FR/NL robustness across the retrieval pipeline.", fr: "Protocole ouvert et reproductible qui évalue les stratégies de retrieval sur le corpus bilingue du Sénat, en mesurant la robustesse FR/NL tout au long du pipeline de retrieval.", nl: "Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet.", es: "Protocolo abierto y reproducible que evalúa estrategias de recuperación sobre el corpus bilingüe del Senado, midiendo la robustez FR/NL a lo largo del pipeline de recuperación.", de: "Offenes, reproduzierbares Protokoll, das Retrieval-Strategien auf dem zweisprachigen Senatskorpus benchmarkt und die FR/NL-Robustheit über die gesamte Retrieval-Pipeline misst.", zh: "开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。" }
-            keywords [RAG, Python, Evaluation, Benchmark]
+            keywords [RAG, Python, Evaluation, Benchmark, OCR, SentenceTransformers, Pandas]
             startDate 2025-11-03
             endDate 2026-06-30
             type "Research"
@@ -373,7 +373,7 @@ TFE: WebMenu 2.0
             name "Remi"
             description t{ en: "Reminiscence application for people with cognitive issues.", fr: "Application de réminiscence pour personnes souffrant de troubles cognitifs.", nl: "Reminiscentie-applicatie voor mensen met cognitieve problemen.", es: "Aplicación de reminiscencia para personas con problemas cognitivos.", de: "Reminiszenz-App für Menschen mit kognitiven Problemen.", zh: "为认知障碍患者设计的追忆应用。" }
             summary t{ en: "Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline.", fr: "Application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil).", nl: "Reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) pipeline.", es: "Aplicación de reminiscencia que permite a personas con problemas cognitivos recuperar sus recuerdos mediante descripciones de fotos generadas por reconocimiento facial y LLMs. Pipeline DeepFace (Serengil).", de: "Reminiszenz-Anwendung, die Menschen mit kognitiven Problemen ermöglicht, ihre Erinnerungen durch Beschreibungen ihrer Fotos mit Gesichtserkennung und LLMs wiederzuerlangen. DeepFace (Serengil) Pipeline.", zh: "追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。DeepFace (Serengil) 管道。" }
-            keywords [Python, FastAPI, OpenAI, Whisper, DeepFace]
+            keywords [Python, FastAPI, OpenAI, Whisper, DeepFace, PostgreSQL, SQLAlchemy]
             startDate 2024-10-01
             endDate 2025-06-30
             type "AI Application"
@@ -405,6 +405,7 @@ TFE: WebMenu 2.0
         VhAuctions {
             name "VhAuctions"
             summary t{ en: "Fleet manager for auctions.", fr: "Gestionnaire de parc pour ventes aux enchères.", nl: "Wagenparkbeheerder voor veilingen.", es: "Gestor de flota para subastas.", de: "Fuhrparkmanager für Auktionen.", zh: "拍卖车队管理器。" }
+            keywords [".NET", "C#", EntityFramework, React, TypeScript, Docker, Azure, OpenTelemetry]
             startDate 2024-01-01
             endDate 2024-02-28
         }

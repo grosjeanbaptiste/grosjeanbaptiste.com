@@ -279,7 +279,10 @@
         "RAG",
         "Python",
         "Evaluation",
-        "Benchmark"
+        "Benchmark",
+        "OCR",
+        "SentenceTransformers",
+        "Pandas"
       ],
       "startDate": "2025-11-03",
       "endDate": "2026-06-30",
@@ -331,7 +334,9 @@
         "FastAPI",
         "OpenAI",
         "Whisper",
-        "DeepFace"
+        "DeepFace",
+        "PostgreSQL",
+        "SQLAlchemy"
       ],
       "startDate": "2024-10-01",
       "endDate": "2025-06-30",
@@ -379,6 +384,16 @@
     },
     {
       "name": "VhAuctions",
+      "keywords": [
+        ".NET",
+        "C#",
+        "EntityFramework",
+        "React",
+        "TypeScript",
+        "Docker",
+        "Azure",
+        "OpenTelemetry"
+      ],
       "startDate": "2024-01-01",
       "endDate": "2024-02-28"
     },

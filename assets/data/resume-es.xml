@@ -490,6 +490,9 @@ Programa: análisis y diseño, programación en .NET, Java y web, bases de datos
         <keyword>Python</keyword>
         <keyword>Evaluation</keyword>
         <keyword>Benchmark</keyword>
+        <keyword>OCR</keyword>
+        <keyword>SentenceTransformers</keyword>
+        <keyword>Pandas</keyword>
       </keywords>
       <startDate>2025-11-03</startDate>
       <endDate>2026-06-30</endDate>
@@ -545,6 +548,8 @@ Programa: análisis y diseño, programación en .NET, Java y web, bases de datos
         <keyword>OpenAI</keyword>
         <keyword>Whisper</keyword>
         <keyword>DeepFace</keyword>
+        <keyword>PostgreSQL</keyword>
+        <keyword>SQLAlchemy</keyword>
       </keywords>
       <startDate>2024-10-01</startDate>
       <endDate>2025-06-30</endDate>
@@ -594,6 +599,16 @@ Programa: análisis y diseño, programación en .NET, Java y web, bases de datos
     </project>
     <project>
       <name>VhAuctions</name>
+      <keywords>
+        <keyword>.NET</keyword>
+        <keyword>C#</keyword>
+        <keyword>EntityFramework</keyword>
+        <keyword>React</keyword>
+        <keyword>TypeScript</keyword>
+        <keyword>Docker</keyword>
+        <keyword>Azure</keyword>
+        <keyword>OpenTelemetry</keyword>
+      </keywords>
       <startDate>2024-01-01</startDate>
       <endDate>2024-02-28</endDate>
       <summary>Gestor de flota para subastas.</summary>

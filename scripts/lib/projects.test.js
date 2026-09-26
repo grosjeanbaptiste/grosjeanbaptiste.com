@@ -49,3 +49,37 @@ test('Baba declares the test discipline its repositories show', () => {
   assert.ok(baba, 'the Baba project is gone');
   assert.ok(baba.keywords.includes('TDD'), 'Baba does not declare TDD');
 });
+
+// Audited 2026-09-26 against the local source folders, counting first-party
+// files only — vendored trees, node_modules, target/ and build/ excluded.
+// Nothing here was inferred from a project's description; each keyword was
+// counted in the code:
+//
+//   VhAuctions  790 .cs / 19 .csproj · EntityFramework 513 · 115 .jsx|.tsx +
+//               111 .ts · Dockerfile + docker-compose · azure-pipeline.yaml ·
+//               OpenTelemetry 13, Jaeger 16
+//   fedrag-be   OCR 288 · SentenceTransformers 39 · Pandas 116
+//   Remi        SQLAlchemy 5 · asyncpg/psycopg2 in requirements.txt
+const AUDITED = {
+  VhAuctions: [
+    '.NET',
+    'C#',
+    'EntityFramework',
+    'React',
+    'TypeScript',
+    'Docker',
+    'Azure',
+    'OpenTelemetry',
+  ],
+  'fedrag-be': ['OCR', 'SentenceTransformers', 'Pandas'],
+  Remi: ['PostgreSQL', 'SQLAlchemy'],
+};
+
+test('every audited project declares what its sources show', () => {
+  for (const [name, expected] of Object.entries(AUDITED)) {
+    const project = projects.find((p) => p.name === name);
+    assert.ok(project, `the ${name} project is gone`);
+    const missing = expected.filter((k) => !(project.keywords || []).includes(k));
+    assert.deepEqual(missing, [], `${name} does not declare: ${missing.join(', ')}`);
+  }
+});
