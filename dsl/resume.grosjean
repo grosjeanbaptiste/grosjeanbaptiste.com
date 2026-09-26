@@ -613,8 +613,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             url "https://www.umons.be"
             period 2023-11-30..2026-09-04
         }
-        BuddyTandemons {
-            position t{ en: "Buddy Tandemons", fr: "Buddy TandeMons", nl: "Buddy TandeMons", es: "Buddy TandeMons", de: "Buddy TandeMons", zh: "Buddy TandeMons" }
+        BuddyTandeMons {
+            position t{ en: "Buddy TandeMons", fr: "Buddy TandeMons", nl: "Buddy TandeMons", es: "Buddy TandeMons", de: "Buddy TandeMons", zh: "Buddy TandeMons" }
             organization "UMons"
             url "https://www.umons.be"
             period 2023-11-30..2026-09-04
