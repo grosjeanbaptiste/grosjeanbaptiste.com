@@ -18,4 +18,4 @@ function sortByRecency(arr) {
 const topN = (arr, n) => sortByRecency(arr || []).slice(0, n);
 const findProject = (resume, name) => (resume.projects || []).find((p) => p.name === name);
 
-module.exports = { loadResume, topN, findProject };
+module.exports = { loadResume, sortByRecency, topN, findProject };
