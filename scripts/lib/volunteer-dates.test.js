@@ -96,3 +96,18 @@ test('the llms-full.txt digest agrees about the UMons roles', () => {
     assert.match(line, new RegExp(`${UMONS_END_DATE}\\)$`), `stale digest line: ${line}`);
   }
 });
+
+// The digest is English prose, so its role names must be the English strings
+// resume.json carries. They had drifted: it read "Buddy TandemMons", a third
+// spelling of a word the data already spells two ways. Nothing generates this
+// file, so only an assertion keeps the two in step.
+test('the digest spells the UMons roles the way the data does', () => {
+  const expected = JSON.parse(read('assets/data/resume.json'))
+    .volunteer.filter((v) => v.organization === 'UMons')
+    .map((v) => v.position);
+  const spelled = read('llms-full.txt')
+    .split('\n')
+    .filter((l) => l.startsWith('- **') && l.includes('UMons ('))
+    .map((l) => l.match(/^- \*\*(.+?)\*\*/)?.[1]);
+  assert.deepEqual(spelled, expected);
+});

@@ -42,19 +42,30 @@ The HTML content is currently hardcoded in `index.html` rather than dynamically 
 
 ### Build Process
 
-`assets/data/resume.json` is the canonical single source of truth (English). Three i18n overlays live at `assets/data/i18n/{fr,nl,es}.json` and contain only translated text fields — the generator deep-merges canonical + overlay per language.
+`dsl/resume.grosjean` is the single source of truth. **Edit the CV there and nowhere else.** `dsl/compile.py` parses it, validates it, and emits everything under `assets/data/`:
 
-`scripts/generate-from-resume.js` produces four language variants:
+- `assets/data/resume.json` — strict JSON Resume v1.0.0 (English)
+- `assets/data/i18n/{fr,nl,es,de,zh}.json` — per-language overlays, translated text fields only
+- `assets/data/site-overrides.json` — hide/display overrides
+- `assets/data/site-extras.json` — non-schema data (uses, notes, dailyLife)
+
+Those four are **generated output that happens to be committed**. Editing one directly looks like it works — the site regenerates, the tests pass — and then the next `python dsl/compile.py` throws the edit away. `.github/workflows/dsl.yml` guards this by recompiling and failing if any committed artifact differs, and it watches both `dsl/**` and `assets/data/**` so the gate fires whichever side moved.
+
+`scripts/generate-from-resume.js` then deep-merges canonical + overlay per language and produces six language variants:
 
 - `/index.html` (English, canonical at root)
-- `/fr/index.html`, `/nl/index.html`, `/es/index.html`
+- `/fr/index.html`, `/nl/index.html`, `/es/index.html`, `/de/index.html`, `/zh/index.html`
 
-Each variant has four marker blocks replaced from data:
+It also writes the fourteen XML mirrors under `assets/data/` (read by the XSLT themes) and `sitemap.xml`. `llms.txt` and `llms-full.txt` are **not** generated — they are hand-maintained and drift silently; `scripts/lib/volunteer-dates.test.js` is an example of pinning one against the data.
 
-- `LLM-HEAD` (in `<head>`) — localized `<title>`, meta tags (description, author, keywords, OG, Twitter, robots), canonical, **hreflang** alternates for all four languages + `x-default`, machine-readable alternates (JSON/XML/PDF), JSON-LD `schema.org/Person` with `inLanguage`.
+Each variant has six marker blocks replaced from data:
+
+- `LLM-HEAD` (in `<head>`) — localized `<title>`, meta tags (description, author, keywords, OG, Twitter, robots), canonical, **hreflang** alternates for all six languages + `x-default`, machine-readable alternates (JSON/XML/PDF), JSON-LD `schema.org/Person` with `inLanguage`.
 - `NAV` (in `<body>`) — localized nav links, language switcher with active state, theme toggle.
 - `BODY-SIDEBAR` (in `<aside class="sidebar">`) — contact info, skills categories, languages.
 - `BODY-MAIN` (in `<main class="main-content">`) — about, experience, education, volunteer, projects, awards, interests, references, contact. Each item uses semantic `<article>` and `<time datetime>`.
+- `CV-DOWNLOAD` — the floating CV action cluster: download the pre-built LaTeX PDF, or print the page itself through `css/print.css`.
+- `DAILY-LIFE` — the hand-built SVG donut chart of a typical day, from `site-extras.json`.
 
 `<html lang="…">` is patched per language.
 
@@ -68,13 +79,13 @@ The generator also rewrites `assets/data/resume.xml` from the canonical JSON. Th
 
 **Hard rule: every generated PDF must fit on a single sheet — one recto (front) + one verso (back), maximum 2 pages total.** `scripts/lib/pdf/compile.js` enforces this via an iterative fit loop that walks the `FIT_PLANS` array in `scripts/lib/pdf/config.js` from the most generous plan to the tightest, retrying the LaTeX compile with progressively lower entry counts / shorter summaries / dropped optional sections until the resulting PDF has ≤ 2 pages. The recto carries the header + paracol two-column body (sidebar with education/skills/languages/day-chart, main with about/work); the verso carries only the references block (also emitted inside `paracol{2}` with `\switchcolumn` so it stays in the right-hand column). If no plan fits within 2 pages the pipeline fails hard rather than shipping a 3-page CV — do not relax this constraint when tuning content or fit plans.
 
-The dedicated workflow `.github/workflows/regenerate-pdf.yml` installs the required TeX Live packages on Ubuntu and runs the script on every push that touches `resume.json`, the i18n overlays, the LaTeX class, or the script. Local prerequisites: Node 20+ and a `pdflatex` install with `altacv` deps (`paracol`, `fontawesome5`, `roboto`, `lato`, multilingual babel).
+The dedicated workflow `.github/workflows/regenerate-pdf.yml.disabled` installed the required TeX Live packages on Ubuntu and ran the script on every push that touched the resume data, the LaTeX class, or the script. It is **currently disabled** (hence the extension) — the PDFs are rebuilt locally and committed. Local prerequisites: Node 20+ and a `pdflatex` install with `altacv` deps (`paracol`, `fontawesome5`, `roboto`, `lato`, multilingual babel).
 
 Running locally: `node scripts/generate-from-resume.js` (Node 20+). Idempotent.
 
-Do not hand-edit anything between markers — overwritten on next run. Edit `resume.json` (canonical) or `assets/data/i18n/<lang>.json` (translations).
+Do not hand-edit anything between markers — overwritten on next run. Do not hand-edit the files under `assets/data/` either; they are compiled. Change `dsl/resume.grosjean`, run `python dsl/compile.py`, then `node scripts/generate-from-resume.js`.
 
-Static (hand-maintained) parts of `index.html` outside markers: profile picture `<img>`, daily-life chart `<canvas>`, CV download button, CDN scripts (pinned + SRI). All static paths are **absolute** (`/css/…`, `/js/…`, `/assets/…`) so they resolve from any language subdir.
+Static (hand-maintained) parts of `index.html` outside markers: profile picture `<img>`, CDN scripts (pinned + SRI). The daily-life chart and the CV action cluster used to be static; both are generated now, inside the `DAILY-LIFE` and `CV-DOWNLOAD` markers. All static paths are **absolute** (`/css/…`, `/js/…`, `/assets/…`) so they resolve from any language subdir.
 
 ### i18n overlay format
 
