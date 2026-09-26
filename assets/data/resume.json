@@ -230,10 +230,10 @@
         "Prolog",
         "LinkGrammar",
         "DDD",
-        "CleanArchitecture"
+        "CleanArchitecture",
+        "TDD"
       ],
       "startDate": "2026-07-02",
-      "url": "https://github.com/grosjeanbaptiste/baba",
       "type": "CLI",
       "roles": [
         "Author"
@@ -250,7 +250,6 @@
         "RAG"
       ],
       "startDate": "2026-07-05",
-      "url": "https://github.com/grosjeanbaptiste/KAG",
       "type": "Framework",
       "roles": [
         "Author"
@@ -359,7 +358,10 @@
         "Express.js",
         "API",
         "UI/UX",
-        "MSSQL Server"
+        "MSSQL Server",
+        "Auth0",
+        "PayPal",
+        "Sequelize"
       ],
       "startDate": "2023-01-01",
       "endDate": "2023-06-30",
