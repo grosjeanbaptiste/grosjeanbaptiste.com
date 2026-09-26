@@ -16,7 +16,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const { ROOT } = require('./config');
+const { ROOT, LANGS, langOutFile } = require('./config');
 const projects = JSON.parse(
   fs.readFileSync(path.join(ROOT, 'assets/data/resume.json'), 'utf8'),
 ).projects;
@@ -81,5 +81,32 @@ test('every audited project declares what its sources show', () => {
     assert.ok(project, `the ${name} project is gone`);
     const missing = expected.filter((k) => !(project.keywords || []).includes(k));
     assert.deepEqual(missing, [], `${name} does not declare: ${missing.join(', ')}`);
+  }
+});
+
+// One term per concept. The product was spelled two ways — "SQL Server" on the
+// experiences, "MSSQL Server" on the MyWay project — and deriving an
+// experience's tags from its projects put both on the same line, one after the
+// other, where a reader could see they were the same thing.
+//
+// Published content only. This file names the wrong spelling in the prose
+// above, and a scan that included scripts/ would fail on its own comment —
+// the trap that has now caught four guards in this repo.
+const PUBLISHED_FILES = [
+  'llms-full.txt',
+  ...LANGS.map((l) => path.relative(ROOT, langOutFile(l))),
+  ...fs
+    .readdirSync(path.join(ROOT, 'assets/data'))
+    .filter((f) => /^resume.*\.(xml|json)$/.test(f))
+    .map((f) => `assets/data/${f}`),
+];
+
+test('the database product has one name across everything published', () => {
+  for (const file of PUBLISHED_FILES) {
+    const text = fs.readFileSync(path.join(ROOT, file), 'utf8');
+    const variants = new Set(text.match(/\bM?S[ _-]?SQL[ _-]?Server\b/gi) || []);
+    for (const variant of variants) {
+      assert.equal(variant, 'SQL Server', `${file} also calls it "${variant}"`);
+    }
   }
 });

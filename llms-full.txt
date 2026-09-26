@@ -196,7 +196,7 @@ Adaptability, Resilience, Leadership, Creativity, Initiative, Analysis, Flexibil
 - **Role**: Founder
 - **URL**: https://my-way-bg.vercel.app
 - Education manager for students. No longer maintained; database and auth unavailable.
-- **Keywords**: Angular, JavaScript, TypeScript, Express.js, API, UI/UX, MSSQL Server.
+- **Keywords**: Angular, JavaScript, TypeScript, Express.js, API, UI/UX, SQL Server.
 
 ### VhAuctions NER Inventory Model
 - **Period**: 2024-03-01 — 2024-08-07
@@ -208,19 +208,19 @@ Adaptability, Resilience, Leadership, Creativity, Initiative, Analysis, Flexibil
 - **Period**: 2024-01-01 — 2024-02-28
 - **Role**: Software Crafter
 - Fleet manager for auctions.
-- **Keywords**: .NET, React, MSSQL Server.
+- **Keywords**: .NET, React, SQL Server.
 
 ### Kwalitijd
 - **Period**: 2023-09-01 — 2023-12-31
 - **Role**: Software Crafter
 - Survey manager for sports clubs and federations.
-- **Keywords**: .NET, Blazor, MSSQL Server.
+- **Keywords**: .NET, Blazor, SQL Server.
 
 ### WebMenu
 - **Period**: 2021-11-01 — 2022-03-31
 - **Role**: Full-stack Dev
 - QR-code-based cash register for HoReCa (Hotel/Restaurant/Café) establishments.
-- **Keywords**: .NET, Flutter, Dart, MSSQL Server.
+- **Keywords**: .NET, Flutter, Dart, SQL Server.
 
 ## Volunteer
 
