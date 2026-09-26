@@ -5,6 +5,18 @@ const { escapeHtml, dateRangeHtml } = require('../format');
 const { indentLines } = require('../markers');
 const { printText, PRINT_PLAN } = require('../print-selection');
 
+// An experience's skills ARE its projects' skills. Keeping the two lists by
+// hand meant maintaining the same fact twice, and the project keywords never
+// reached the page at all — only the entry's own `uses` was rendered. Union,
+// not replacement: `uses` still contributes what no project covers (a role's
+// practices, a client's stack that never became a listed project).
+function skillsWithProjects(entry, projects) {
+  const fromProjects = (entry.projects || []).flatMap(
+    (name) => (projects || []).find((p) => p.name === name)?.keywords || [],
+  );
+  return [...new Set([...(entry.skills || []), ...fromProjects])];
+}
+
 const renderEmbeddedSkills = (skills) => {
   if (!skills?.length) return '';
   const tags = skills.map((s) => `<span class="skill-tag">${escapeHtml(s)}</span>`).join(' ');
@@ -105,4 +117,4 @@ function appendEmbeds(parts, entry, hostName, ctx, t, lang) {
   if (refsHtml) parts.push(`  ${refsHtml}`);
 }
 
-module.exports = { appendEmbeds };
+module.exports = { appendEmbeds, skillsWithProjects };
