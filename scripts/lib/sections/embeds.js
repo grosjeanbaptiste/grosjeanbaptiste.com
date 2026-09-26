@@ -1,7 +1,7 @@
 // Helpers that embed related entities (skills, projects, volunteering,
 // reference back-links) inside a work or education article on the HTML site.
 // Kept separate from main.js so the section renderers there stay short.
-const { escapeHtml } = require('../format');
+const { escapeHtml, dateRangeHtml } = require('../format');
 const { indentLines } = require('../markers');
 const { printText, PRINT_PLAN } = require('../print-selection');
 
@@ -43,7 +43,7 @@ function renderEmbeddedProjects(projectNames, projects, t) {
 // Match volunteer entries to a work/education host by the first word of the
 // volunteer's organization: "UMons" matches UMons, "EPHEC …" matches
 // "Ecole … (EPHEC-EPS)". Same heuristic as the XSLT views.
-function renderEmbeddedVolunteer(volunteer, hostName, t) {
+function renderEmbeddedVolunteer(volunteer, hostName, t, lang) {
   if (!hostName || !volunteer?.length) return '';
   const matched = volunteer.filter((v) => {
     if (!v.organization) return false;
@@ -53,8 +53,11 @@ function renderEmbeddedVolunteer(volunteer, hostName, t) {
   if (!matched.length) return '';
   const items = matched
     .map((v) => {
-      const dates = `${v.startDate || ''} – ${v.endDate || 'Present'}`;
-      return `<li><strong>${escapeHtml(v.position)}</strong> — ${escapeHtml(dates)}</li>`;
+      // dateRangeHtml, not a hand-built string: it localizes the months and
+      // the open-ended label, and emits <time datetime> so the row is
+      // machine-readable like every other date on the page.
+      const dates = dateRangeHtml(v.startDate, v.endDate, lang);
+      return `<li><strong>${escapeHtml(v.position)}</strong> — ${dates}</li>`;
     })
     .join('\n        ');
   return [
@@ -91,12 +94,12 @@ function renderEmbeddedReferenceLinks(references, hostName, t) {
 // skill tags, embedded projects, matched volunteering, reference back-links.
 // `hostName` is the company (work) or institution (education) used to match
 // volunteer entries and references.
-function appendEmbeds(parts, entry, hostName, ctx, t) {
+function appendEmbeds(parts, entry, hostName, ctx, t, lang) {
   const skillsHtml = renderEmbeddedSkills(entry.skills);
   if (skillsHtml) parts.push(`  ${skillsHtml}`);
   const projsHtml = renderEmbeddedProjects(entry.projects, ctx.projects, t);
   if (projsHtml) parts.push(indentLines(projsHtml, 2));
-  const volsHtml = renderEmbeddedVolunteer(ctx.volunteer, hostName, t);
+  const volsHtml = renderEmbeddedVolunteer(ctx.volunteer, hostName, t, lang);
   if (volsHtml) parts.push(indentLines(volsHtml, 2));
   const refsHtml = renderEmbeddedReferenceLinks(ctx.references, hostName, t);
   if (refsHtml) parts.push(`  ${refsHtml}`);

@@ -15,7 +15,7 @@
 (() => {
   /** @type {{node: Element, parent: Node, next: Node|null}[]} */
   let undo = [];
-  /** @type {{el: Element, text: string}[]} */
+  /** @type {{el: Element, html: string}[]} */
   let clipped = [];
   /** @type {Element|null} */
   let versoVolunteer = null;
@@ -88,15 +88,21 @@
     // The generator carries the PDF's clipped wording in data-print-text,
     // computed with the LaTeX build's own truncate. Swap it in for the print so
     // the sheet says what the PDF says, and keep the full text on screen.
+    //
+    // Save innerHTML, not textContent: these summaries carry <br> for their
+    // paragraph breaks, and textContent flattens the markup away — restoring
+    // from it left the page with the line break permanently gone, on screen,
+    // after any print. The clipped text itself is plain, so it still goes in
+    // through textContent.
     for (const el of document.querySelectorAll('[data-print-text]')) {
-      clipped.push({ el, text: el.textContent });
+      clipped.push({ el, html: el.innerHTML });
       el.textContent = el.dataset.printText;
     }
   }
 
   function restore() {
-    for (const { el, text } of clipped) {
-      el.textContent = text;
+    for (const { el, html } of clipped) {
+      el.innerHTML = html;
     }
     clipped = [];
     // Drop the built section first; the loop below puts its rows back where
