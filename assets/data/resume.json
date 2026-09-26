@@ -399,6 +399,13 @@
     },
     {
       "name": "Kwalitijd",
+      "keywords": [
+        ".NET",
+        "C#",
+        "Blazor",
+        "EntityFramework",
+        "xUnit"
+      ],
       "startDate": "2023-09-01",
       "endDate": "2023-12-31"
     },

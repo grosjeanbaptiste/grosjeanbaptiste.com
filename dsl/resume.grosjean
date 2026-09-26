@@ -54,7 +54,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             location t{ en: "Brussels, Belgium", fr: "Bruxelles, Belgique", nl: "Brussel, België", es: "Bruselas, Bélgica", de: "Brüssel, Belgien", zh: "布鲁塞尔，比利时" }
             period 2025-07-01..present
             summary t{ en: "Sole founder, architect and developer. Rust backend + Flutter mobile. The R&D layer also served as the dissertation for my MSc in Computer Science at UMons.", fr: "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.", nl: "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.", es: "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirvió como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.", de: "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.", zh: "唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。" }
-            uses [Rust, Flutter, Dart, Tokio, Docker, DDD, CleanArchitecture]
+            uses [Rust, Flutter, Dart, Tokio, Docker, DDD, CleanArchitecture, PostgreSQL]
             projects [ref Acteble]
         }
         AIResearchScientist {
@@ -64,7 +64,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             location t{ en: "Brussels, Belgium", fr: "Bruxelles, Belgique", nl: "Brussel, België", es: "Bruselas, Bélgica", de: "Brüssel, Belgien", zh: "布鲁塞尔，比利时" }
             period 2025-11-03..2026-06-30
             summary t{ en: "AI research and engineering for the Belgian Federal Parliament. Designed an internal platform that lets staff search, explore and converse with the parliamentary archives. Authored an open evaluation protocol that compares retrieval strategies on the Senate corpus, with a focus on bilingual FR/NL robustness.", fr: "Recherche et ingénierie IA pour le Parlement fédéral belge. Conception d'une plateforme interne permettant au personnel de chercher, explorer et converser avec les archives parlementaires. Auteur d'un protocole d'évaluation ouvert qui compare les stratégies de retrieval sur le corpus du Sénat, avec un focus sur la robustesse bilingue FR/NL.", nl: "AI-onderzoek en engineering voor het Belgisch federaal Parlement. Ontwerp van een intern platform waarmee medewerkers de parlementaire archieven kunnen doorzoeken, verkennen en bevragen. Auteur van een open evaluatieprotocol dat retrieval-strategieën vergelijkt op het Senaat-corpus, met focus op tweetalige FR/NL-robuustheid.", es: "Investigación e ingeniería de IA para el Parlamento federal belga. Diseño de una plataforma interna que permite al personal buscar, explorar y conversar con los archivos parlamentarios. Autor de un protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado, con énfasis en la robustez bilingüe FR/NL.", de: "KI-Forschung und Engineering für das belgische Bundesparlament. Entwurf einer internen Plattform, die Mitarbeitern erlaubt, parlamentarische Archive zu durchsuchen, zu erkunden und zu befragen. Autor eines offenen Bewertungsprotokolls, das Retrieval-Strategien auf dem Senatskorpus mit Fokus auf zweisprachige FR/NL-Robustheit vergleicht.", zh: "为比利时联邦议会进行 AI 研究和工程。设计了一个内部平台，让工作人员可以搜索、探索和与议会档案对话。撰写了一个开源评估协议，比较参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。" }
-            uses [Python, Java, ".NET"]
+            uses [Python, Java, ".NET", RAG, OCR, SentenceTransformers, Pandas]
             projects [ref Synergy, ref FedRAGBE]
         }
         AISoftwareCrafterLead {
@@ -75,7 +75,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             period 2024-12-01..2025-06-30
             summary t{ en: "Led the crafting from technical design through delivery: OCR pipeline, code scanning, and a Valhalla routing system adapted for the visually impaired.", fr: "Direction technique et développement de la conception à la livraison : pipeline OCR, scan de codes et système de routage Valhalla adapté aux malvoyants.", nl: "Technische leiding en ontwikkeling van ontwerp tot oplevering: OCR-pijplijn, code-scans en aangepast Valhalla-routesysteem voor slechtzienden.", es: "Dirección técnica y desarrollo desde el diseño hasta la entrega: pipeline OCR, escaneo de códigos y sistema de rutas Valhalla adaptado para personas con discapacidad visual.", de: "Technische Leitung und Entwicklung vom Design bis zur Auslieferung: OCR-Pipeline, Code-Scans und angepasstes Valhalla-Routing-System für sehbehinderte Menschen.", zh: "从技术设计到交付主导开发：OCR 管道、代码扫描以及为视障人士适配的 Valhalla 路线规划系统。" }
             highlights ["Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla"]
-            uses [Dart, Flutter]
+            uses [Dart, Flutter, Firebase, OpenAI, Valhalla]
             projects [ref EmviApp]
         }
         AISoftwareCrafter {
@@ -86,7 +86,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             period 2024-10-01..2025-06-30
             summary t{ en: "Built the facial recognition pipeline (DeepFace / Serengil — detection + recognition) and the sentiment-analysis stack for the LLM-generated photo descriptions.", fr: "Construction du pipeline de reconnaissance faciale (DeepFace / Serengil, détection + reconnaissance) et de la couche d'analyse de sentiment pour les descriptions de photos générées par LLM.", nl: "Bouwde de gezichtsherkenningspijplijn (DeepFace / Serengil, detectie + herkenning) en de sentimentanalyse-stack voor de door LLM gegenereerde fotobeschrijvingen.", es: "Construcción del pipeline de reconocimiento facial (DeepFace / Serengil, detección + reconocimiento) y de la capa de análisis de sentimiento para las descripciones de fotos generadas por LLM.", de: "Aufbau der Gesichtserkennungs-Pipeline (DeepFace / Serengil, Erkennung + Wiedererkennung) und des Sentiment-Analyse-Stacks für die durch LLM erzeugten Fotobeschreibungen.", zh: "构建面部识别管道 (DeepFace / Serengil，检测与识别) 以及为 LLM 生成的照片描述提供情感分析栈。" }
             highlights ["Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil"]
-            uses [Python, Whisper]
+            uses [Python, Whisper, FastAPI, DeepFace, OpenAI, PostgreSQL, SQLAlchemy]
             projects [ref Remi]
         }
         DataScientist {
@@ -115,7 +115,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             url "https://www.vhauctions.be"
             location t{ en: "Anvers, Région flamande, Belgique", fr: "Anvers, Flandres, Belgique", nl: "Antwerpen, Vlaanderen, België", es: "Amberes, Flandes, Bélgica", de: "Antwerpen, Flandern, Belgien", zh: "安特卫普，弗拉芒大区，比利时" }
             period 2024-01-01..2024-08-07
-            uses [".NET", React, "SQL Server"]
+            uses [".NET", React, "SQL Server", TypeScript, EntityFramework, Docker, Azure, OpenTelemetry]
             projects [ref VhAuctions]
         }
         NETBlazorSoftwareCrafter {
@@ -126,7 +126,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             location t{ en: "Anvers, Région flamande, Belgique", fr: "Anvers, Flandres, Belgique", nl: "Antwerpen, Vlaanderen, België", es: "Amberes, Flandes, Bélgica", de: "Antwerpen, Flandern, Belgien", zh: "安特卫普，弗拉芒大区，比利时" }
             period 2023-09-01..2023-12-31
             summary t{ en: "Crafted the webapp in .NET / Blazor following DDD and clean code principles.", fr: "Développement de la webapp en .NET / Blazor selon les principes DDD et clean code.", nl: "Ontwikkeling van de webapp in .NET / Blazor volgens DDD en clean code principes.", es: "Desarrollo de la webapp en .NET / Blazor siguiendo DDD y clean code.", de: "Entwicklung der Webanwendung in .NET / Blazor nach DDD und Clean-Code-Prinzipien.", zh: "使用 .NET / Blazor 按照领域驱动设计和整洁代码原则开发 Web 应用。" }
-            uses [".NET", Blazor, "SQL Server", DDD]
+            uses [".NET", Blazor, "SQL Server", DDD, EntityFramework, xUnit]
             projects [ref Kwalitijd]
         }
         FullStackDeveloperWebIntern {
@@ -160,7 +160,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
 扩展期间，我们接受了 Microsoft 工具 (SSIS 等) 的商业智能和 ETL 流程 (数据仓库) 的介绍。
 培训涵盖了 SQL Server、Node.js、Express.js、React 和 Angular，从数据库开发到用户界面和后端。
 """ }
-            uses ["SQL Server", "Node.js", "Express.js", React, Angular]
+            uses ["SQL Server", "Node.js", "Express.js", React, Angular, TypeScript, Auth0, Sequelize]
             projects [ref MyWay]
         }
         FullStackDeveloperWebIntern3 {
@@ -412,6 +412,7 @@ TFE: WebMenu 2.0
         Kwalitijd {
             name "Kwalitijd"
             summary t{ en: "Survey manager for sports clubs and federations.", fr: "Gestionnaire d'enquêtes pour clubs sportifs et fédérations.", nl: "Enquêtebeheerder voor sportclubs en federaties.", es: "Gestor de encuestas para clubes deportivos y federaciones.", de: "Umfragemanager für Sportvereine und -verbände.", zh: "体育俱乐部和联合会的调查管理器。" }
+            keywords [".NET", "C#", Blazor, EntityFramework, xUnit]
             startDate 2023-09-01
             endDate 2023-12-31
         }
