@@ -2,7 +2,7 @@ const I18N = require('../i18n');
 const { printedWork, printText, PRINT_PLAN } = require('../print-selection');
 const { escapeHtml, dateRangeHtml } = require('../format');
 const { indentLines } = require('../markers');
-const { appendEmbeds } = require('./embeds');
+const { appendEmbeds, skillsWithProjects } = require('./embeds');
 
 function renderAbout(resume, t) {
   const paras = (resume.basics?.summary || '')
@@ -45,7 +45,10 @@ function renderExperienceItem(w, lang, ctx, t, opts = { printed: true }) {
     parts.push(`  <p${attr}>${escapeHtml(w.summary).replace(/\n/g, '<br>')}</p>`);
   }
   for (const h of w.highlights || []) parts.push(`  <p>• ${escapeHtml(h)}</p>`);
-  appendEmbeds(parts, w, w.company, ctx, t, lang);
+  // Work only: an education entry references every project of its degree, and
+  // unioning five projects' keywords under a diploma is noise, not signal.
+  const withProjectSkills = { ...w, skills: skillsWithProjects(w, ctx.projects) };
+  appendEmbeds(parts, withProjectSkills, w.company, ctx, t, lang);
   parts.push('</article>');
   return parts.join('\n');
 }
