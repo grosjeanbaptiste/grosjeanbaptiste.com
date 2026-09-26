@@ -147,6 +147,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
         <skill>Docker</skill>
         <skill>DDD</skill>
         <skill>CleanArchitecture</skill>
+        <skill>PostgreSQL</skill>
       </skills>
       <projects>
         <project>Acteble</project>
@@ -164,6 +165,10 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
         <skill>Python</skill>
         <skill>Java</skill>
         <skill>.NET</skill>
+        <skill>RAG</skill>
+        <skill>OCR</skill>
+        <skill>SentenceTransformers</skill>
+        <skill>Pandas</skill>
       </skills>
       <projects>
         <project>Synergy</project>
@@ -184,6 +189,9 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
       <skills>
         <skill>Dart</skill>
         <skill>Flutter</skill>
+        <skill>Firebase</skill>
+        <skill>OpenAI</skill>
+        <skill>Valhalla</skill>
       </skills>
       <projects>
         <project>Emvi App</project>
@@ -203,6 +211,11 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
       <skills>
         <skill>Python</skill>
         <skill>Whisper</skill>
+        <skill>FastAPI</skill>
+        <skill>DeepFace</skill>
+        <skill>OpenAI</skill>
+        <skill>PostgreSQL</skill>
+        <skill>SQLAlchemy</skill>
       </skills>
       <projects>
         <project>Remi</project>
@@ -253,6 +266,11 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
         <skill>.NET</skill>
         <skill>React</skill>
         <skill>SQL Server</skill>
+        <skill>TypeScript</skill>
+        <skill>EntityFramework</skill>
+        <skill>Docker</skill>
+        <skill>Azure</skill>
+        <skill>OpenTelemetry</skill>
       </skills>
       <projects>
         <project>VhAuctions</project>
@@ -272,6 +290,8 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
         <skill>Blazor</skill>
         <skill>SQL Server</skill>
         <skill>DDD</skill>
+        <skill>EntityFramework</skill>
+        <skill>xUnit</skill>
       </skills>
       <projects>
         <project>Kwalitijd</project>
@@ -294,6 +314,9 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
         <skill>Express.js</skill>
         <skill>React</skill>
         <skill>Angular</skill>
+        <skill>TypeScript</skill>
+        <skill>Auth0</skill>
+        <skill>Sequelize</skill>
       </skills>
       <projects>
         <project>MyWay</project>
@@ -615,6 +638,13 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
     </project>
     <project>
       <name>Kwalitijd</name>
+      <keywords>
+        <keyword>.NET</keyword>
+        <keyword>C#</keyword>
+        <keyword>Blazor</keyword>
+        <keyword>EntityFramework</keyword>
+        <keyword>xUnit</keyword>
+      </keywords>
       <startDate>2023-09-01</startDate>
       <endDate>2023-12-31</endDate>
       <summary>Umfragemanager für Sportvereine und -verbände.</summary>

@@ -9,7 +9,8 @@
         "Tokio",
         "Docker",
         "DDD",
-        "CleanArchitecture"
+        "CleanArchitecture",
+        "PostgreSQL"
       ],
       "projects": [
         "Acteble"
@@ -19,7 +20,11 @@
       "skills": [
         "Python",
         "Java",
-        ".NET"
+        ".NET",
+        "RAG",
+        "OCR",
+        "SentenceTransformers",
+        "Pandas"
       ],
       "projects": [
         "Synergy",
@@ -29,7 +34,10 @@
     {
       "skills": [
         "Dart",
-        "Flutter"
+        "Flutter",
+        "Firebase",
+        "OpenAI",
+        "Valhalla"
       ],
       "projects": [
         "Emvi App"
@@ -38,7 +46,12 @@
     {
       "skills": [
         "Python",
-        "Whisper"
+        "Whisper",
+        "FastAPI",
+        "DeepFace",
+        "OpenAI",
+        "PostgreSQL",
+        "SQLAlchemy"
       ],
       "projects": [
         "Remi"
@@ -68,7 +81,12 @@
       "skills": [
         ".NET",
         "React",
-        "SQL Server"
+        "SQL Server",
+        "TypeScript",
+        "EntityFramework",
+        "Docker",
+        "Azure",
+        "OpenTelemetry"
       ],
       "projects": [
         "VhAuctions"
@@ -80,7 +98,9 @@
         ".NET",
         "Blazor",
         "SQL Server",
-        "DDD"
+        "DDD",
+        "EntityFramework",
+        "xUnit"
       ],
       "projects": [
         "Kwalitijd"
@@ -93,7 +113,10 @@
         "Node.js",
         "Express.js",
         "React",
-        "Angular"
+        "Angular",
+        "TypeScript",
+        "Auth0",
+        "Sequelize"
       ],
       "projects": [
         "MyWay"
