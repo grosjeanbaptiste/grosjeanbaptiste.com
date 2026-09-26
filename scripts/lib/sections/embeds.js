@@ -58,7 +58,10 @@ function renderEmbeddedVolunteer(volunteer, hostName, t) {
     })
     .join('\n        ');
   return [
-    '<div class="embedded-projects">',
+    // The extra class is the hook js/print-layout.js uses to gather these rows
+    // onto the verso: print hides the education entries they live in, so
+    // without it the printed sheet loses the volunteering the PDF prints.
+    '<div class="embedded-projects embedded-volunteer">',
     `  <p class="embedded-label">${escapeHtml(t.volunteer)}:</p>`,
     '  <ul>',
     `        ${items}`,

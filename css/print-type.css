@@ -171,12 +171,6 @@
     height: 4pt;
   }
 
-  /* The recto of the PDF carries no per-entry reference back-links; the
-     references live on the verso, which #references already becomes. */
-  .ref-links {
-    display: none;
-  }
-
   /* education_in_body: false — the PDF drops the Education entries and keeps
      only the sidebar's degrees summary, which print-layout.js moves under this
      section's heading. */
@@ -186,11 +180,6 @@
 
   /* The day chart stays: altacv draws the same donut with \wheelchart, and the
      page renders it as inline SVG, which prints faithfully. */
-
-  /* The LaTeX build puts references alone on the verso. */
-  #references {
-    break-before: page;
-  }
 
   img#profile-picture {
     max-width: 3cm;

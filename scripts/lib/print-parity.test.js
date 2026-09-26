@@ -112,3 +112,15 @@ test('the browser chrome is not printed', () => {
     );
   }
 });
+
+// This file reads every css/print*.css as one corpus, which silently assumes
+// the browser does too. It does not: css/style.css @import-s them by name, so
+// a new print stylesheet is asserted here and served nowhere — the rules look
+// present to the suite and never reach a sheet. Splitting print-type.css into
+// print-verso.css created exactly that gap.
+test('every print stylesheet is actually served', () => {
+  const style = fs.readFileSync(path.join(ROOT, 'css/style.css'), 'utf8');
+  const sheets = fs.readdirSync(path.join(ROOT, 'css')).filter((f) => /^print.*\.css$/.test(f));
+  const unserved = sheets.filter((f) => !style.includes(`@import "${f}"`));
+  assert.deepEqual(unserved, [], `asserted but never imported: ${unserved.join(', ')}`);
+});
