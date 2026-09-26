@@ -1,0 +1,36 @@
+/* The verso — what the print sheet puts on its second page.
+ *
+ * Split out of css/print-type.css, which had reached the 200-line gate. The
+ * seam is the sheet itself: this file owns page two, that one owns the type
+ * scale and the recto's density. Both are @import-ed by css/style.css and both
+ * are read by scripts/lib/print-parity.test.js, which globs css/print*.css.
+ */
+
+@media print {
+  /* The recto of the PDF carries no per-entry reference back-links; the
+     references live on the verso, which #references already becomes. */
+  .ref-links {
+    display: none;
+  }
+
+  /* The LaTeX build puts references alone on the verso. */
+  #references {
+    break-before: page;
+  }
+
+  /* The PDF prints the volunteering in the VERSO'S LEFT COLUMN, beside the
+     references — the one part of the sheet that was blank. js/print-layout.js
+     gathers the rows into the sidebar; this break drops them onto the second
+     sheet so they land in that same column rather than at the foot of the
+     recto. Stacking them above #references instead costs Firefox a third
+     sheet: the verso is already nearly full. */
+  #print-volunteer {
+    break-before: page;
+    margin: 0;
+  }
+
+  #print-volunteer ul {
+    margin: 0;
+    padding-left: 9pt;
+  }
+}

@@ -17,6 +17,8 @@
   let undo = [];
   /** @type {{el: Element, text: string}[]} */
   let clipped = [];
+  /** @type {Element|null} */
+  let versoVolunteer = null;
   let prepared = false;
 
   function move(node, parent, { before } = {}) {
@@ -24,6 +26,41 @@
     undo.push({ node, parent: node.parentNode, next: node.nextSibling });
     if (before) parent.insertBefore(node, before);
     else parent.appendChild(node);
+  }
+
+  // The LaTeX CV prints a Volunteer section on the verso. The page keeps the
+  // same roles embedded under the education entry that hosts them, and
+  // print-type.css hides those entries wholesale to mirror the fit plan's
+  // education_in_body: false — so without this the printed sheet drops the
+  // volunteering the PDF shows.
+  //
+  // The rows are gathered into one list, because the page splits them per host
+  // (UMons, EPHEC) while the PDF prints a single section. It is nested INSIDE
+  // #references on purpose: that section already carries break-before: page,
+  // so the block rides its break instead of needing one of its own — a second
+  // break here would start a third sheet.
+  function gatherVolunteering() {
+    const blocks = document.querySelectorAll('.embedded-volunteer');
+    const sidebarEl = document.querySelector('.sidebar');
+    if (!blocks.length || !sidebarEl) return;
+
+    const section = document.createElement('section');
+    section.id = 'print-volunteer';
+    const heading = document.createElement('h2');
+    // Take the label off the page rather than hardcoding a string: it is
+    // already localized in all six languages.
+    const label = blocks[0].querySelector('.embedded-label');
+    heading.textContent = (label ? label.textContent : '').replace(/\s*:\s*$/, '');
+    section.appendChild(heading);
+
+    const list = document.createElement('ul');
+    for (const block of blocks) {
+      for (const row of block.querySelectorAll('li')) move(row, list);
+    }
+    section.appendChild(list);
+
+    sidebarEl.appendChild(section);
+    versoVolunteer = section;
   }
 
   function prepare() {
@@ -46,6 +83,8 @@
       }
     }
 
+    gatherVolunteering();
+
     // The generator carries the PDF's clipped wording in data-print-text,
     // computed with the LaTeX build's own truncate. Swap it in for the print so
     // the sheet says what the PDF says, and keep the full text on screen.
@@ -60,6 +99,10 @@
       el.textContent = text;
     }
     clipped = [];
+    // Drop the built section first; the loop below puts its rows back where
+    // they came from, and removing it afterwards would take them with it.
+    versoVolunteer?.remove();
+    versoVolunteer = null;
     for (const { node, parent, next } of undo.reverse()) {
       parent.insertBefore(node, next);
     }

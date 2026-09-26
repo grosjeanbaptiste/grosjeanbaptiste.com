@@ -29,7 +29,7 @@ test('the script restores the page after printing', () => {
 });
 
 test('it relocates exactly the nodes CSS cannot move', () => {
-  for (const hook of ['contact-info', 'education']) {
+  for (const hook of ['contact-info', 'education', 'embedded-volunteer']) {
     assert.ok(script.includes(hook), `no handling for the ${hook} node`);
   }
 });
@@ -78,4 +78,17 @@ test('the page colour is laid down by a fixed layer, not by body', () => {
     /body::before[^}]*position:\s*fixed/,
     'nothing paints the page colour across every sheet',
   );
+});
+
+// The script now CREATES a node as well as moving existing ones, and undo only
+// covers moves. A build without a matching teardown leaves an empty Volunteer
+// block in the sidebar once the print dialog closes — invisible until someone
+// prints, then permanent until reload.
+//
+// Retro-fit guard: the teardown was verified behaviourally first, by firing
+// beforeprint/afterprint in headless Chrome and diffing the DOM. This is the
+// cheap standing check, not that proof.
+test('the verso block it builds is torn down again', () => {
+  assert.match(script, /createElement\(['"]section['"]\)/, 'nothing builds the verso block');
+  assert.match(script, /versoVolunteer\?\.remove\(\)/, 'the built block is never removed');
 });
