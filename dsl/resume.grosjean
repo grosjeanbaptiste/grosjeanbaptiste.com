@@ -388,7 +388,7 @@ TFE: WebMenu 2.0
         MyWay {
             name "MyWay"
             description t{ en: "Education manager for students. No longer maintained; database and auth are unavailable.", fr: "Gestionnaire de parcours éducatif pour étudiants. Plus maintenu ; la base de données et l'auth sont indisponibles.", nl: "Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar.", es: "Gestor educativo para estudiantes. Sin mantenimiento; la base de datos y la autenticación no están disponibles.", de: "Bildungsmanager für Studierende. Nicht mehr gepflegt; Datenbank und Auth sind nicht verfügbar.", zh: "学生教育管理工具。不再维护；数据库和身份验证不可用。" }
-            keywords [Angular, JavaScript, TypeScript, "Express.js", API, "UI/UX", "MSSQL Server", Auth0, PayPal, Sequelize]
+            keywords [Angular, JavaScript, TypeScript, "Express.js", API, "UI/UX", "SQL Server", Auth0, PayPal, Sequelize]
             startDate 2023-01-01
             endDate 2023-06-30
             url "https://my-way-bg.vercel.app"
