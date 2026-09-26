@@ -45,7 +45,7 @@ function renderExperienceItem(w, lang, ctx, t, opts = { printed: true }) {
     parts.push(`  <p${attr}>${escapeHtml(w.summary).replace(/\n/g, '<br>')}</p>`);
   }
   for (const h of w.highlights || []) parts.push(`  <p>• ${escapeHtml(h)}</p>`);
-  appendEmbeds(parts, w, w.company, ctx, t);
+  appendEmbeds(parts, w, w.company, ctx, t, lang);
   parts.push('</article>');
   return parts.join('\n');
 }
@@ -59,7 +59,7 @@ function renderEducationItem(e, lang, ctx, t) {
   ];
   if (e.gpa) parts.push(`  <p>${escapeHtml(e.gpa)}</p>`);
   if (e.summary) parts.push(`  <p>${escapeHtml(e.summary).replace(/\n/g, '<br>')}</p>`);
-  appendEmbeds(parts, e, e.institution, ctx, t);
+  appendEmbeds(parts, e, e.institution, ctx, t, lang);
   parts.push('</article>');
   return parts.join('\n');
 }

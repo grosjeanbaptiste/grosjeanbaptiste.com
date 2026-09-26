@@ -40,36 +40,56 @@ function renderXslt(lang) {
   return execFileSync('xsltproc', [xsl, xml], { encoding: 'utf8', maxBuffer: 1 << 24 });
 }
 
-function serve() {
+// Ask the page to print itself once the webfonts have landed. Printing before
+// they do measures the fallback's metrics, and the sheet count then varies run
+// to run. Firefox exposes no --print-to-pdf, so the page must ask.
+const autoprintScript = (delay) =>
+  `<script>addEventListener("load",()=>(document.fonts?document.fonts.ready:Promise.resolve()).then(()=>setTimeout(()=>print(),${delay})));</script>`;
+
+// /__print/<page> prints itself; /__probe/<page> gets the caller's script in
+// its <head>. Head, not body: a probe that reads document.body.innerHTML would
+// otherwise find its own source there and diff the page against itself.
+const MODES = { '/__print': 'print', '/__probe': 'probe' };
+
+function route(rel) {
+  for (const [prefix, mode] of Object.entries(MODES)) {
+    if (rel.startsWith(prefix)) return { rel: rel.slice(prefix.length) || '/', mode };
+  }
+  return { rel, mode: 'static' };
+}
+
+function sendHtml(res, html) {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.end(html);
+}
+
+const injected = (file, anchor, script) =>
+  fs.readFileSync(file, 'utf8').replace(anchor, `${script}${anchor}`);
+
+/** Serve the site. `headScript` enables the /__probe/ prefix described above. */
+function serve(headScript) {
   const server = http.createServer((req, res) => {
-    let rel = decodeURIComponent(req.url.split('?')[0]);
-    const xslt = /^\/__xslt\/([a-z-]+)$/.exec(rel);
+    const url = decodeURIComponent(req.url.split('?')[0]);
+    const xslt = /^\/__xslt\/([a-z-]+)$/.exec(url);
     if (xslt) {
-      const html = renderXslt(xslt[1]).replace(
-        '</body>',
-        '<script>addEventListener("load",()=>(document.fonts?document.fonts.ready:Promise.resolve()).then(()=>setTimeout(()=>print(),800)));</script></body>',
-      );
-      res.writeHead(200, { 'Content-Type': 'text/html' });
-      res.end(html);
+      // Before </body>, as it was: a script after the document is tolerated
+      // but is not what this path has been measuring.
+      sendHtml(res, renderXslt(xslt[1]).replace('</body>', `${autoprintScript(800)}</body>`));
       return;
     }
-    const autoprint = rel.startsWith('/__print');
-    if (autoprint) rel = rel.slice('/__print'.length) || '/';
+    const { rel, mode } = route(url);
     let file = path.join(ROOT, rel);
     if (rel.endsWith('/')) file = path.join(file, 'index.html');
     if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
       res.writeHead(404).end();
       return;
     }
-    if (autoprint) {
-      const html = fs.readFileSync(file, 'utf8').replace(
-        '</body>',
-        // Wait for the webfonts: printing before they land measures the
-        // fallback's metrics, and the sheet count then varies run to run.
-        '<script>addEventListener("load",()=>(document.fonts?document.fonts.ready:Promise.resolve()).then(()=>setTimeout(()=>print(),750)));</script></body>',
-      );
-      res.writeHead(200, { 'Content-Type': 'text/html' });
-      res.end(html);
+    if (mode === 'probe' && headScript) {
+      sendHtml(res, injected(file, '</head>', headScript));
+      return;
+    }
+    if (mode === 'print') {
+      sendHtml(res, injected(file, '</body>', autoprintScript(750)));
       return;
     }
     res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream' });

@@ -40,11 +40,13 @@ function dslUmonsPeriods() {
     .map((e) => e.match(/period\s+(\S+)/)?.[1]);
 }
 
-// The embedded list renders "<li><strong>role</strong> — start – end</li>", and
-// an open-ended role puts the literal "Present" in the end slot (untranslated,
-// in every language — see renderEmbeddedVolunteer). The work header instead
-// emits <time>Present</time>, so this shape is specific to volunteering.
-const ONGOING_VOLUNTEER_LINE = /–\s*Present<\/li>/;
+// The embedded list renders "<li><strong>role</strong> — <time>..</time> –
+// <time>..</time></li>". timeHtml omits the datetime attribute exactly when a
+// date is open-ended, so an attribute-less <time> closing the row IS the
+// ongoing shape — and unlike the old check it no longer depends on the English
+// word "Present", which these rows hardcoded in all six languages until
+// dateRangeHtml took over.
+const ONGOING_VOLUNTEER_LINE = /— <time[^>]*>[^<]*<\/time> – <time>[^<]*<\/time><\/li>/;
 
 const umonsItemsIn = (xml) =>
   xml.match(/<volunteer-item>\s*<organization>UMons<\/organization>[\s\S]*?<\/volunteer-item>/g) ||
@@ -136,5 +138,28 @@ test('the TandeMons programme is spelled the same way everywhere', () => {
     for (const spelling of spellings) {
       assert.equal(spelling, 'TandeMons', `${file} spells it "${spelling}"`);
     }
+  }
+});
+
+// The embedded rows printed raw ISO ("2023-11-30 – 2026-09-04") while every
+// other date on the site is localized through format.js, and they spelled an
+// open end as a hardcoded English "Present" in all six languages. Both come
+// from the same cause: renderEmbeddedVolunteer built the range by hand instead
+// of calling dateRangeHtml, so it never received `lang`.
+const LOCALIZED_RANGE = {
+  en: /<time datetime="2023-11-30">Nov 2023<\/time> – <time datetime="2026-09-04">Sep 2026<\/time>/,
+  fr: /<time datetime="2023-11-30">nov\. 2023<\/time> – <time datetime="2026-09-04">sept\. 2026<\/time>/,
+  de: /<time datetime="2023-11-30">Nov\. 2023<\/time> – <time datetime="2026-09-04">Sep\. 2026<\/time>/,
+};
+
+test('the embedded volunteer rows carry localized dates, not raw ISO', () => {
+  for (const [lang, pattern] of Object.entries(LOCALIZED_RANGE)) {
+    const html = fs.readFileSync(langOutFile(lang), 'utf8');
+    assert.match(html, pattern, `${lang} still prints an unlocalized range`);
+    assert.doesNotMatch(
+      html,
+      /<strong>[^<]*<\/strong> — 2023-11-30/,
+      `${lang} still prints a raw ISO range`,
+    );
   }
 });
