@@ -111,3 +111,30 @@ test('the digest spells the UMons roles the way the data does', () => {
     .map((l) => l.match(/^- \*\*(.+?)\*\*/)?.[1]);
   assert.deepEqual(spelled, expected);
 });
+
+// TandeMons is UMons' buddy programme — a proper noun, identical in all six
+// languages. It had drifted into three spellings: TandeMons (correct, 59
+// places), Tandemons (the English value and everything compiled from it), and
+// TandemMons (the digest). Asserted across published content only: this file
+// quotes the wrong spellings in its own prose, and a scan that included
+// scripts/ would fail on its own comments — which is how two earlier guards in
+// this repo broke.
+const PUBLISHED = [
+  'dsl/resume.grosjean',
+  'assets/data/resume.json',
+  'llms-full.txt',
+  ...LANGS.map((l) => path.relative(ROOT, langOutFile(l))),
+  ...fs
+    .readdirSync(DATA_DIR)
+    .filter((f) => /^resume.*\.xml$/.test(f))
+    .map((f) => `assets/data/${f}`),
+];
+
+test('the TandeMons programme is spelled the same way everywhere', () => {
+  for (const file of PUBLISHED) {
+    const spellings = new Set(read(file).match(/[Tt]ande[mM]+ons/g) || []);
+    for (const spelling of spellings) {
+      assert.equal(spelling, 'TandeMons', `${file} spells it "${spelling}"`);
+    }
+  }
+});
