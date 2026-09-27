@@ -208,7 +208,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             //   fr: encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS
             note t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons. Core coursework: software engineering & project management, artificial intelligence, databases, data structures, operational research, cryptography & IT security, and ethics & computer law, with two paid company internships.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons. Cours principaux : génie logiciel et gestion de projet, intelligence artificielle, bases de données, structures de données, recherche opérationnelle, cryptographie et sécurité informatique, éthique et droit de l'informatique, avec deux stages en entreprise rémunérés.", nl: "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.", es: "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons. Cursos principales: ingeniería del software y gestión de proyectos, inteligencia artificial, bases de datos, estructuras de datos, investigación operativa, criptografía y seguridad informática, ética y derecho informático, con dos prácticas remuneradas en empresa.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons. Kernfächer: Software-Engineering und Projektmanagement, künstliche Intelligenz, Datenbanken, Datenstrukturen, Operations Research, Kryptografie und IT-Sicherheit, Ethik und Informatikrecht, mit zwei bezahlten Unternehmenspraktika.", zh: "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。" }
             uses [Python, LaTeX, DDD, CleanArchitecture]
-            projects [ref Acteble, ref Synergy, ref FedRAGBE, ref EmviApp, ref Remi]
+            projects [ref Acteble, ref Synergy, ref FedRAGBE, ref EmviApp, ref Remi, ref UeAlgorithmique, ref UeAnglais1, ref UeBasesDeDonneesI, ref UeLectureRedactionScientifique, ref UeMathematique, ref UeModelisationLogicielle, ref UeReseaux, ref UeStrategieRH, ref UeSystemesExploitation, ref UeAnglais2, ref UeBasesDeDonneesII, ref UeIngenierieLogicielle, ref UeIntelligenceArtificielle, ref UeRechercheOperationnelle, ref UeStructuresDeDonnees, ref UeSeminairesVeille, ref UeCryptographieSecurite, ref UeEthiqueDroit]
         }
         EcolePratiqueHautesEtudesCommercialesEPHECEPS {
             institution "Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)"
@@ -354,7 +354,7 @@ TFE: WebMenu 2.0
             description t{ en: "Mobile application connecting travelers during their journeys.", fr: "Application mobile connectant les voyageurs pendant leurs trajets.", nl: "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.", es: "Aplicación móvil que conecta a los viajeros durante sus trayectos.", de: "Mobile App, die Reisende während ihrer Reisen verbindet.", zh: "在旅途中连接旅行者的移动应用。" }
             summary t{ en: "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.", fr: "Développement d'une application mobile qui connecte les voyageurs pendant leurs trajets. Flutter pour l'app mobile, Rust pour le backend.", nl: "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend.", es: "Desarrollo de una aplicación móvil que conecta a los viajeros durante sus trayectos. Flutter para la app móvil y Rust para el backend.", de: "Entwicklung einer mobilen Anwendung, die Reisende während ihrer Reisen verbindet. Flutter für die mobile App, Rust für das Backend.", zh: "开发一款在旅途中连接旅行者的移动应用。Flutter 用于移动应用，Rust 用于后端。" }
             url "https://www.acteble.com"
-            keywords [Flutter, Rust, Mobile, Travel, Tokio, PostgreSQL, Docker, Dart, DDD, CleanArchitecture]
+            keywords [Flutter, Rust, Mobile, Travel, Tokio, PostgreSQL, Docker, Dart, DDD, CleanArchitecture, MiniZinc, ConstraintProgramming, CombinatorialOptimization, Pareto]
             startDate 2025-07-01
             type "Mobile Application"
             roles [Founder]
@@ -423,6 +423,132 @@ TFE: WebMenu 2.0
             keywords [".NET", Flutter, "SQL Server", QRCode]
             startDate 2021-11-01
             endDate 2022-03-31
+        }
+        UeAlgorithmique {
+            name "Algorithmique"
+            summary t{ en: "Algorithmics", fr: "Algorithmique", nl: "Algoritmiek", es: "Algorítmica", de: "Algorithmik", zh: "算法" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [Algorithms, DataStructures, Complexity, Trees]
+        }
+        UeAnglais1 {
+            name "Anglais I"
+            summary t{ en: "English I", fr: "Anglais I", nl: "Engels I", es: "Inglés I", de: "Englisch I", zh: "英语 I" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [English]
+        }
+        UeBasesDeDonneesI {
+            name "Bases de données I"
+            summary t{ en: "Databases I", fr: "Bases de données I", nl: "Databanken I", es: "Bases de datos I", de: "Datenbanken I", zh: "数据库 I" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [SQL, RelationalAlgebra, Normalization, Indexing, NoSQL, BigData]
+        }
+        UeLectureRedactionScientifique {
+            name "Lecture et rédaction scientifique"
+            summary t{ en: "Scientific reading and writing", fr: "Lecture et rédaction scientifique", nl: "Wetenschappelijk lezen en schrijven", es: "Lectura y redacción científica", de: "Wissenschaftliches Lesen und Schreiben", zh: "科学阅读与写作" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [ScientificWriting, LiteratureReview]
+        }
+        UeMathematique {
+            name "Mathématique"
+            summary t{ en: "Mathematics", fr: "Mathématique", nl: "Wiskunde", es: "Matemáticas", de: "Mathematik", zh: "数学" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [GraphTheory, Combinatorics, Complexity, PropositionalLogic, PredicateLogic]
+        }
+        UeModelisationLogicielle {
+            name "Modélisation logicielle"
+            summary t{ en: "Software modelling", fr: "Modélisation logicielle", nl: "Softwaremodellering", es: "Modelado de software", de: "Softwaremodellierung", zh: "软件建模" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [Java, UML, DesignPatterns, UnitTesting, MockTesting, BDD]
+        }
+        UeReseaux {
+            name "Réseaux"
+            summary t{ en: "Networks", fr: "Réseaux", nl: "Netwerken", es: "Redes", de: "Netzwerke", zh: "计算机网络" }
+            entity "UMONS"
+            type "Course unit"
+            keywords ["TCP/IP", HTTP, DNS, OSPF, BGP, Ethernet]
+        }
+        UeStrategieRH {
+            name "Stratégie et politiques en ressources humaines"
+            summary t{ en: "HR strategy and policy", fr: "Stratégie et politiques en ressources humaines", nl: "HR-strategie en -beleid", es: "Estrategia y políticas de recursos humanos", de: "HR-Strategie und -Politik", zh: "人力资源战略与政策" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [HRM]
+        }
+        UeSystemesExploitation {
+            name "Systèmes d'exploitation"
+            summary t{ en: "Operating systems", fr: "Systèmes d'exploitation", nl: "Besturingssystemen", es: "Sistemas operativos", de: "Betriebssysteme", zh: "操作系统" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [Concurrency, Threads, Scheduling, Paging, Virtualization]
+        }
+        UeAnglais2 {
+            name "Anglais II"
+            summary t{ en: "English II", fr: "Anglais II", nl: "Engels II", es: "Inglés II", de: "Englisch II", zh: "英语 II" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [English]
+        }
+        UeBasesDeDonneesII {
+            name "Bases de données II"
+            summary t{ en: "Databases II", fr: "Bases de données II", nl: "Databanken II", es: "Bases de datos II", de: "Datenbanken II", zh: "数据库 II" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [XML, XSLT, XQuery, XPath, BaseX, DataMining, Weka]
+        }
+        UeIngenierieLogicielle {
+            name "Ingénierie de logiciels et gestion de projets"
+            summary t{ en: "Software engineering and project management", fr: "Ingénierie de logiciels et gestion de projets", nl: "Software engineering en projectbeheer", es: "Ingeniería del software y gestión de proyectos", de: "Software-Engineering und Projektmanagement", zh: "软件工程与项目管理" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [Agile, Scrum, SoftwareEngineering]
+        }
+        UeIntelligenceArtificielle {
+            name "Intelligence artificielle"
+            summary t{ en: "Artificial intelligence", fr: "Intelligence artificielle", nl: "Artificiële intelligentie", es: "Inteligencia artificial", de: "Künstliche Intelligenz", zh: "人工智能" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [SearchAlgorithms, Metaheuristics, FirstOrderLogic, SupervisedLearning]
+        }
+        UeRechercheOperationnelle {
+            name "Recherche opérationnelle et applications"
+            summary t{ en: "Operations research and applications", fr: "Recherche opérationnelle et applications", nl: "Operationeel onderzoek en toepassingen", es: "Investigación operativa y aplicaciones", de: "Operations Research und Anwendungen", zh: "运筹学及其应用" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [OperationsResearch, LinearProgramming, IntegerProgramming, Duality]
+        }
+        UeStructuresDeDonnees {
+            name "Structures de données"
+            summary t{ en: "Data structures", fr: "Structures de données", nl: "Datastructuren", es: "Estructuras de datos", de: "Datenstrukturen", zh: "数据结构" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [AVLTrees, BTrees, HashTables, Sorting, Complexity]
+        }
+        UeSeminairesVeille {
+            name "Séminaires d'informatique en veille technologique"
+            summary t{ en: "Computing seminars in technology watch", fr: "Séminaires d'informatique en veille technologique", nl: "Informaticaseminaries in technologiewatch", es: "Seminarios de informática en vigilancia tecnológica", de: "Informatikseminare zur Technologiebeobachtung", zh: "技术观察信息学研讨会" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [TechWatch]
+        }
+        UeCryptographieSecurite {
+            name "Cryptographie et sécurité des systèmes informatiques"
+            summary t{ en: "Cryptography and systems security", fr: "Cryptographie et sécurité des systèmes informatiques", nl: "Cryptografie en systeembeveiliging", es: "Criptografía y seguridad de sistemas", de: "Kryptografie und Systemsicherheit", zh: "密码学与系统安全" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [Cryptography, Unix, NetworkSecurity, ApplicationSecurity]
+        }
+        UeEthiqueDroit {
+            name "Éthique et droit de l'informatique"
+            summary t{ en: "Ethics and IT law", fr: "Éthique et droit de l'informatique", nl: "Ethiek en informaticarecht", es: "Ética y derecho informático", de: "Ethik und Informatikrecht", zh: "信息伦理与法律" }
+            entity "UMONS"
+            type "Course unit"
+            keywords [IntellectualProperty, DataProtection, GDPR]
         }
     }
 
