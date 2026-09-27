@@ -428,6 +428,30 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
       </skills>
       <projects>
         <project>WebMenu</project>
+        <project>Structure des ordinateurs</project>
+        <project>Informatique - Système d'exploitation</project>
+        <project>Mathématique appliquée à l'informatique</project>
+        <project>Principes algorithmiques et programmation</project>
+        <project>Principes d'analyse informatique</project>
+        <project>Information et communication professionnelles</project>
+        <project>Web : principes de base</project>
+        <project>Initiation aux bases de données</project>
+        <project>Gestion et exploitation de bases de données</project>
+        <project>Programmation orientée objet</project>
+        <project>Projet d'analyse et de conception</project>
+        <project>Techniques de gestion de projet</project>
+        <project>Éléments de statistique</project>
+        <project>Projet de développement web</project>
+        <project>Notions de e-business</project>
+        <project>Projet de développement SGBD</project>
+        <project>Bases des réseaux</project>
+        <project>Organisation des entreprises et éléments de management</project>
+        <project>Produits logiciels de gestion intégrés</project>
+        <project>Projet d'intégration de développement</project>
+        <project>Veille technologique</project>
+        <project>Administration, gestion et sécurisation des réseaux</project>
+        <project>Langue en situation appliquée à l'enseignement supérieur UE1</project>
+        <project>Langue en situation appliquée à l'enseignement supérieur UE2</project>
       </projects>
     </school>
     <school>
@@ -910,6 +934,271 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Ethik und Informatikrecht</summary>
+    </project>
+    <project>
+      <name>Structure des ordinateurs</name>
+      <keywords>
+        <keyword>ComputerArchitecture</keyword>
+        <keyword>Binary</keyword>
+        <keyword>Hexadecimal</keyword>
+        <keyword>Hardware</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Rechnerstruktur</summary>
+    </project>
+    <project>
+      <name>Informatique - Système d'exploitation</name>
+      <keywords>
+        <keyword>OperatingSystems</keyword>
+        <keyword>ShellScripting</keyword>
+        <keyword>SystemAdministration</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Betriebssysteme</summary>
+    </project>
+    <project>
+      <name>Mathématique appliquée à l'informatique</name>
+      <keywords>
+        <keyword>LinearAlgebra</keyword>
+        <keyword>GraphTheory</keyword>
+        <keyword>SetTheory</keyword>
+        <keyword>RelationalAlgebra</keyword>
+        <keyword>MathematicalLogic</keyword>
+        <keyword>Cryptography</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Mathematik für die Informatik</summary>
+    </project>
+    <project>
+      <name>Principes algorithmiques et programmation</name>
+      <keywords>
+        <keyword>Algorithms</keyword>
+        <keyword>DataTypes</keyword>
+        <keyword>ControlFlow</keyword>
+        <keyword>Programming</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Algorithmische Grundlagen und Programmierung</summary>
+    </project>
+    <project>
+      <name>Principes d'analyse informatique</name>
+      <keywords>
+        <keyword>UML</keyword>
+        <keyword>EntityRelationship</keyword>
+        <keyword>SystemsAnalysis</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Grundlagen der Systemanalyse</summary>
+    </project>
+    <project>
+      <name>Information et communication professionnelles</name>
+      <keywords>
+        <keyword>ProfessionalCommunication</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Berufliche Information und Kommunikation</summary>
+    </project>
+    <project>
+      <name>Web : principes de base</name>
+      <keywords>
+        <keyword>HTML</keyword>
+        <keyword>CSS</keyword>
+        <keyword>URL</keyword>
+        <keyword>DNS</keyword>
+        <keyword>WebHosting</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Web: Grundlagen</summary>
+    </project>
+    <project>
+      <name>Initiation aux bases de données</name>
+      <keywords>
+        <keyword>SQL</keyword>
+        <keyword>RelationalModel</keyword>
+        <keyword>Joins</keyword>
+        <keyword>Indexing</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Einführung in Datenbanken</summary>
+    </project>
+    <project>
+      <name>Gestion et exploitation de bases de données</name>
+      <keywords>
+        <keyword>Triggers</keyword>
+        <keyword>StoredProcedures</keyword>
+        <keyword>DataWarehouse</keyword>
+        <keyword>QueryOptimization</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Datenbankverwaltung und -betrieb</summary>
+    </project>
+    <project>
+      <name>Programmation orientée objet</name>
+      <keywords>
+        <keyword>OOP</keyword>
+        <keyword>Inheritance</keyword>
+        <keyword>Polymorphism</keyword>
+        <keyword>Encapsulation</keyword>
+        <keyword>Overloading</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Objektorientierte Programmierung</summary>
+    </project>
+    <project>
+      <name>Projet d'analyse et de conception</name>
+      <keywords>
+        <keyword>SystemsAnalysis</keyword>
+        <keyword>SoftwareDesign</keyword>
+        <keyword>Modelling</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Analyse- und Entwurfsprojekt</summary>
+    </project>
+    <project>
+      <name>Techniques de gestion de projet</name>
+      <keywords>
+        <keyword>ProjectManagement</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Projektmanagementtechniken</summary>
+    </project>
+    <project>
+      <name>Éléments de statistique</name>
+      <keywords>
+        <keyword>Statistics</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Grundlagen der Statistik</summary>
+    </project>
+    <project>
+      <name>Projet de développement web</name>
+      <keywords>
+        <keyword>JavaScript</keyword>
+        <keyword>AJAX</keyword>
+        <keyword>JSON</keyword>
+        <keyword>XML</keyword>
+        <keyword>ClientSideScripting</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Webentwicklungsprojekt</summary>
+    </project>
+    <project>
+      <name>Notions de e-business</name>
+      <keywords>
+        <keyword>Ebusiness</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Grundlagen des E-Business</summary>
+    </project>
+    <project>
+      <name>Projet de développement SGBD</name>
+      <keywords>
+        <keyword>DataAccessLayer</keyword>
+        <keyword>Transactions</keyword>
+        <keyword>DatabaseProgramming</keyword>
+        <keyword>Debugging</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>DBMS-Entwicklungsprojekt</summary>
+    </project>
+    <project>
+      <name>Bases des réseaux</name>
+      <keywords>
+        <keyword>Ethernet</keyword>
+        <keyword>MAC</keyword>
+        <keyword>TCP/IP</keyword>
+        <keyword>Networking</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Netzwerkgrundlagen</summary>
+    </project>
+    <project>
+      <name>Organisation des entreprises et éléments de management</name>
+      <keywords>
+        <keyword>Management</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Unternehmensorganisation und Management</summary>
+    </project>
+    <project>
+      <name>Produits logiciels de gestion intégrés</name>
+      <keywords>
+        <keyword>ERP</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Integrierte Unternehmenssoftware</summary>
+    </project>
+    <project>
+      <name>Projet d'intégration de développement</name>
+      <keywords>
+        <keyword>AJAX</keyword>
+        <keyword>JSON</keyword>
+        <keyword>XML</keyword>
+        <keyword>SQLInjection</keyword>
+        <keyword>XSS</keyword>
+        <keyword>Caching</keyword>
+        <keyword>URLRewriting</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Entwicklungsintegrationsprojekt</summary>
+    </project>
+    <project>
+      <name>Veille technologique</name>
+      <keywords>
+        <keyword>TechWatch</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Technologiebeobachtung</summary>
+    </project>
+    <project>
+      <name>Administration, gestion et sécurisation des réseaux</name>
+      <keywords>
+        <keyword>NetworkAdministration</keyword>
+        <keyword>NetworkSecurity</keyword>
+        <keyword>ApplicationServer</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Netzwerkadministration und -sicherheit</summary>
+    </project>
+    <project>
+      <name>Langue en situation appliquée à l'enseignement supérieur UE1</name>
+      <keywords>
+        <keyword>ProfessionalCommunication</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Angewandte Sprache Hochschulbildung UE1</summary>
+    </project>
+    <project>
+      <name>Langue en situation appliquée à l'enseignement supérieur UE2</name>
+      <keywords>
+        <keyword>ProfessionalCommunication</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>EPHEC</entity>
+      <summary>Angewandte Sprache Hochschulbildung UE2</summary>
     </project>
   </projects>
   <references>

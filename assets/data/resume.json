@@ -633,6 +633,247 @@
       ],
       "type": "Course unit",
       "entity": "UMONS"
+    },
+    {
+      "name": "Structure des ordinateurs",
+      "keywords": [
+        "ComputerArchitecture",
+        "Binary",
+        "Hexadecimal",
+        "Hardware"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Informatique - Système d'exploitation",
+      "keywords": [
+        "OperatingSystems",
+        "ShellScripting",
+        "SystemAdministration"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Mathématique appliquée à l'informatique",
+      "keywords": [
+        "LinearAlgebra",
+        "GraphTheory",
+        "SetTheory",
+        "RelationalAlgebra",
+        "MathematicalLogic",
+        "Cryptography"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Principes algorithmiques et programmation",
+      "keywords": [
+        "Algorithms",
+        "DataTypes",
+        "ControlFlow",
+        "Programming"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Principes d'analyse informatique",
+      "keywords": [
+        "UML",
+        "EntityRelationship",
+        "SystemsAnalysis"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Information et communication professionnelles",
+      "keywords": [
+        "ProfessionalCommunication"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Web : principes de base",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "URL",
+        "DNS",
+        "WebHosting"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Initiation aux bases de données",
+      "keywords": [
+        "SQL",
+        "RelationalModel",
+        "Joins",
+        "Indexing"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Gestion et exploitation de bases de données",
+      "keywords": [
+        "Triggers",
+        "StoredProcedures",
+        "DataWarehouse",
+        "QueryOptimization"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Programmation orientée objet",
+      "keywords": [
+        "OOP",
+        "Inheritance",
+        "Polymorphism",
+        "Encapsulation",
+        "Overloading"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Projet d'analyse et de conception",
+      "keywords": [
+        "SystemsAnalysis",
+        "SoftwareDesign",
+        "Modelling"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Techniques de gestion de projet",
+      "keywords": [
+        "ProjectManagement"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Éléments de statistique",
+      "keywords": [
+        "Statistics"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Projet de développement web",
+      "keywords": [
+        "JavaScript",
+        "AJAX",
+        "JSON",
+        "XML",
+        "ClientSideScripting"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Notions de e-business",
+      "keywords": [
+        "Ebusiness"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Projet de développement SGBD",
+      "keywords": [
+        "DataAccessLayer",
+        "Transactions",
+        "DatabaseProgramming",
+        "Debugging"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Bases des réseaux",
+      "keywords": [
+        "Ethernet",
+        "MAC",
+        "TCP/IP",
+        "Networking"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Organisation des entreprises et éléments de management",
+      "keywords": [
+        "Management"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Produits logiciels de gestion intégrés",
+      "keywords": [
+        "ERP"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Projet d'intégration de développement",
+      "keywords": [
+        "AJAX",
+        "JSON",
+        "XML",
+        "SQLInjection",
+        "XSS",
+        "Caching",
+        "URLRewriting"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Veille technologique",
+      "keywords": [
+        "TechWatch"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Administration, gestion et sécurisation des réseaux",
+      "keywords": [
+        "NetworkAdministration",
+        "NetworkSecurity",
+        "ApplicationServer"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Langue en situation appliquée à l'enseignement supérieur UE1",
+      "keywords": [
+        "ProfessionalCommunication"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
+    },
+    {
+      "name": "Langue en situation appliquée à l'enseignement supérieur UE2",
+      "keywords": [
+        "ProfessionalCommunication"
+      ],
+      "type": "Course unit",
+      "entity": "EPHEC"
     }
   ],
   "references": [
