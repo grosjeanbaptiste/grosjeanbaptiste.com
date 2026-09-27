@@ -384,6 +384,24 @@
         <project>fedrag-be</project>
         <project>Emvi App</project>
         <project>Remi</project>
+        <project>Algorithmique</project>
+        <project>Anglais I</project>
+        <project>Bases de données I</project>
+        <project>Lecture et rédaction scientifique</project>
+        <project>Mathématique</project>
+        <project>Modélisation logicielle</project>
+        <project>Réseaux</project>
+        <project>Stratégie et politiques en ressources humaines</project>
+        <project>Systèmes d'exploitation</project>
+        <project>Anglais II</project>
+        <project>Bases de données II</project>
+        <project>Ingénierie de logiciels et gestion de projets</project>
+        <project>Intelligence artificielle</project>
+        <project>Recherche opérationnelle et applications</project>
+        <project>Structures de données</project>
+        <project>Séminaires d'informatique en veille technologique</project>
+        <project>Cryptographie et sécurité des systèmes informatiques</project>
+        <project>Éthique et droit de l'informatique</project>
       </projects>
     </school>
     <school>
@@ -539,6 +557,10 @@ TFE: WebMenu 2.0
         <keyword>Dart</keyword>
         <keyword>DDD</keyword>
         <keyword>CleanArchitecture</keyword>
+        <keyword>MiniZinc</keyword>
+        <keyword>ConstraintProgramming</keyword>
+        <keyword>CombinatorialOptimization</keyword>
+        <keyword>Pareto</keyword>
       </keywords>
       <startDate>2025-07-01</startDate>
       <url>https://www.acteble.com</url>
@@ -676,6 +698,218 @@ TFE: WebMenu 2.0
       <startDate>2021-11-01</startDate>
       <endDate>2022-03-31</endDate>
       <summary>基于二维码的酒店、餐厅、咖啡馆 (HoReCa) 收银机。</summary>
+    </project>
+    <project>
+      <name>Algorithmique</name>
+      <keywords>
+        <keyword>Algorithms</keyword>
+        <keyword>DataStructures</keyword>
+        <keyword>Complexity</keyword>
+        <keyword>Trees</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>算法</summary>
+    </project>
+    <project>
+      <name>Anglais I</name>
+      <keywords>
+        <keyword>English</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>英语 I</summary>
+    </project>
+    <project>
+      <name>Bases de données I</name>
+      <keywords>
+        <keyword>SQL</keyword>
+        <keyword>RelationalAlgebra</keyword>
+        <keyword>Normalization</keyword>
+        <keyword>Indexing</keyword>
+        <keyword>NoSQL</keyword>
+        <keyword>BigData</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>数据库 I</summary>
+    </project>
+    <project>
+      <name>Lecture et rédaction scientifique</name>
+      <keywords>
+        <keyword>ScientificWriting</keyword>
+        <keyword>LiteratureReview</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>科学阅读与写作</summary>
+    </project>
+    <project>
+      <name>Mathématique</name>
+      <keywords>
+        <keyword>GraphTheory</keyword>
+        <keyword>Combinatorics</keyword>
+        <keyword>Complexity</keyword>
+        <keyword>PropositionalLogic</keyword>
+        <keyword>PredicateLogic</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>数学</summary>
+    </project>
+    <project>
+      <name>Modélisation logicielle</name>
+      <keywords>
+        <keyword>Java</keyword>
+        <keyword>UML</keyword>
+        <keyword>DesignPatterns</keyword>
+        <keyword>UnitTesting</keyword>
+        <keyword>MockTesting</keyword>
+        <keyword>BDD</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>软件建模</summary>
+    </project>
+    <project>
+      <name>Réseaux</name>
+      <keywords>
+        <keyword>TCP/IP</keyword>
+        <keyword>HTTP</keyword>
+        <keyword>DNS</keyword>
+        <keyword>OSPF</keyword>
+        <keyword>BGP</keyword>
+        <keyword>Ethernet</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>计算机网络</summary>
+    </project>
+    <project>
+      <name>Stratégie et politiques en ressources humaines</name>
+      <keywords>
+        <keyword>HRM</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>人力资源战略与政策</summary>
+    </project>
+    <project>
+      <name>Systèmes d'exploitation</name>
+      <keywords>
+        <keyword>Concurrency</keyword>
+        <keyword>Threads</keyword>
+        <keyword>Scheduling</keyword>
+        <keyword>Paging</keyword>
+        <keyword>Virtualization</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>操作系统</summary>
+    </project>
+    <project>
+      <name>Anglais II</name>
+      <keywords>
+        <keyword>English</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>英语 II</summary>
+    </project>
+    <project>
+      <name>Bases de données II</name>
+      <keywords>
+        <keyword>XML</keyword>
+        <keyword>XSLT</keyword>
+        <keyword>XQuery</keyword>
+        <keyword>XPath</keyword>
+        <keyword>BaseX</keyword>
+        <keyword>DataMining</keyword>
+        <keyword>Weka</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>数据库 II</summary>
+    </project>
+    <project>
+      <name>Ingénierie de logiciels et gestion de projets</name>
+      <keywords>
+        <keyword>Agile</keyword>
+        <keyword>Scrum</keyword>
+        <keyword>SoftwareEngineering</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>软件工程与项目管理</summary>
+    </project>
+    <project>
+      <name>Intelligence artificielle</name>
+      <keywords>
+        <keyword>SearchAlgorithms</keyword>
+        <keyword>Metaheuristics</keyword>
+        <keyword>FirstOrderLogic</keyword>
+        <keyword>SupervisedLearning</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>人工智能</summary>
+    </project>
+    <project>
+      <name>Recherche opérationnelle et applications</name>
+      <keywords>
+        <keyword>OperationsResearch</keyword>
+        <keyword>LinearProgramming</keyword>
+        <keyword>IntegerProgramming</keyword>
+        <keyword>Duality</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>运筹学及其应用</summary>
+    </project>
+    <project>
+      <name>Structures de données</name>
+      <keywords>
+        <keyword>AVLTrees</keyword>
+        <keyword>BTrees</keyword>
+        <keyword>HashTables</keyword>
+        <keyword>Sorting</keyword>
+        <keyword>Complexity</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>数据结构</summary>
+    </project>
+    <project>
+      <name>Séminaires d'informatique en veille technologique</name>
+      <keywords>
+        <keyword>TechWatch</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>技术观察信息学研讨会</summary>
+    </project>
+    <project>
+      <name>Cryptographie et sécurité des systèmes informatiques</name>
+      <keywords>
+        <keyword>Cryptography</keyword>
+        <keyword>Unix</keyword>
+        <keyword>NetworkSecurity</keyword>
+        <keyword>ApplicationSecurity</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>密码学与系统安全</summary>
+    </project>
+    <project>
+      <name>Éthique et droit de l'informatique</name>
+      <keywords>
+        <keyword>IntellectualProperty</keyword>
+        <keyword>DataProtection</keyword>
+        <keyword>GDPR</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>UMONS</entity>
+      <summary>信息伦理与法律</summary>
     </project>
   </projects>
   <references>

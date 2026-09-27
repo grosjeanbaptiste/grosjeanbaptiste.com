@@ -150,7 +150,25 @@
         "Synergy",
         "fedrag-be",
         "Emvi App",
-        "Remi"
+        "Remi",
+        "Algorithmique",
+        "Anglais I",
+        "Bases de données I",
+        "Lecture et rédaction scientifique",
+        "Mathématique",
+        "Modélisation logicielle",
+        "Réseaux",
+        "Stratégie et politiques en ressources humaines",
+        "Systèmes d'exploitation",
+        "Anglais II",
+        "Bases de données II",
+        "Ingénierie de logiciels et gestion de projets",
+        "Intelligence artificielle",
+        "Recherche opérationnelle et applications",
+        "Structures de données",
+        "Séminaires d'informatique en veille technologique",
+        "Cryptographie et sécurité des systèmes informatiques",
+        "Éthique et droit de l'informatique"
       ],
       "courses": []
     },
@@ -235,6 +253,60 @@
     },
     {
       "summary": "QR code based cash register for HoReCa establishments."
+    },
+    {
+      "summary": "Algorithmics"
+    },
+    {
+      "summary": "English I"
+    },
+    {
+      "summary": "Databases I"
+    },
+    {
+      "summary": "Scientific reading and writing"
+    },
+    {
+      "summary": "Mathematics"
+    },
+    {
+      "summary": "Software modelling"
+    },
+    {
+      "summary": "Networks"
+    },
+    {
+      "summary": "HR strategy and policy"
+    },
+    {
+      "summary": "Operating systems"
+    },
+    {
+      "summary": "English II"
+    },
+    {
+      "summary": "Databases II"
+    },
+    {
+      "summary": "Software engineering and project management"
+    },
+    {
+      "summary": "Artificial intelligence"
+    },
+    {
+      "summary": "Operations research and applications"
+    },
+    {
+      "summary": "Data structures"
+    },
+    {
+      "summary": "Computing seminars in technology watch"
+    },
+    {
+      "summary": "Cryptography and systems security"
+    },
+    {
+      "summary": "Ethics and IT law"
     }
   ],
   "dailyLife": {

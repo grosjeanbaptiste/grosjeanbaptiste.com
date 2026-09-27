@@ -162,6 +162,60 @@
     },
     {
       "summary": "Caisse enregistreuse à base de QR codes pour les établissements HoReCa (Hôtel/Restaurant/Café)."
+    },
+    {
+      "summary": "Algorithmique"
+    },
+    {
+      "summary": "Anglais I"
+    },
+    {
+      "summary": "Bases de données I"
+    },
+    {
+      "summary": "Lecture et rédaction scientifique"
+    },
+    {
+      "summary": "Mathématique"
+    },
+    {
+      "summary": "Modélisation logicielle"
+    },
+    {
+      "summary": "Réseaux"
+    },
+    {
+      "summary": "Stratégie et politiques en ressources humaines"
+    },
+    {
+      "summary": "Systèmes d'exploitation"
+    },
+    {
+      "summary": "Anglais II"
+    },
+    {
+      "summary": "Bases de données II"
+    },
+    {
+      "summary": "Ingénierie de logiciels et gestion de projets"
+    },
+    {
+      "summary": "Intelligence artificielle"
+    },
+    {
+      "summary": "Recherche opérationnelle et applications"
+    },
+    {
+      "summary": "Structures de données"
+    },
+    {
+      "summary": "Séminaires d'informatique en veille technologique"
+    },
+    {
+      "summary": "Cryptographie et sécurité des systèmes informatiques"
+    },
+    {
+      "summary": "Éthique et droit de l'informatique"
     }
   ],
   "references": [

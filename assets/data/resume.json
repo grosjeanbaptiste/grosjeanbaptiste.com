@@ -304,7 +304,11 @@
         "Docker",
         "Dart",
         "DDD",
-        "CleanArchitecture"
+        "CleanArchitecture",
+        "MiniZinc",
+        "ConstraintProgramming",
+        "CombinatorialOptimization",
+        "Pareto"
       ],
       "startDate": "2025-07-01",
       "url": "https://www.acteble.com",
@@ -435,6 +439,200 @@
       ],
       "startDate": "2021-11-01",
       "endDate": "2022-03-31"
+    },
+    {
+      "name": "Algorithmique",
+      "keywords": [
+        "Algorithms",
+        "DataStructures",
+        "Complexity",
+        "Trees"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Anglais I",
+      "keywords": [
+        "English"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Bases de données I",
+      "keywords": [
+        "SQL",
+        "RelationalAlgebra",
+        "Normalization",
+        "Indexing",
+        "NoSQL",
+        "BigData"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Lecture et rédaction scientifique",
+      "keywords": [
+        "ScientificWriting",
+        "LiteratureReview"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Mathématique",
+      "keywords": [
+        "GraphTheory",
+        "Combinatorics",
+        "Complexity",
+        "PropositionalLogic",
+        "PredicateLogic"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Modélisation logicielle",
+      "keywords": [
+        "Java",
+        "UML",
+        "DesignPatterns",
+        "UnitTesting",
+        "MockTesting",
+        "BDD"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Réseaux",
+      "keywords": [
+        "TCP/IP",
+        "HTTP",
+        "DNS",
+        "OSPF",
+        "BGP",
+        "Ethernet"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Stratégie et politiques en ressources humaines",
+      "keywords": [
+        "HRM"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Systèmes d'exploitation",
+      "keywords": [
+        "Concurrency",
+        "Threads",
+        "Scheduling",
+        "Paging",
+        "Virtualization"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Anglais II",
+      "keywords": [
+        "English"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Bases de données II",
+      "keywords": [
+        "XML",
+        "XSLT",
+        "XQuery",
+        "XPath",
+        "BaseX",
+        "DataMining",
+        "Weka"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Ingénierie de logiciels et gestion de projets",
+      "keywords": [
+        "Agile",
+        "Scrum",
+        "SoftwareEngineering"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Intelligence artificielle",
+      "keywords": [
+        "SearchAlgorithms",
+        "Metaheuristics",
+        "FirstOrderLogic",
+        "SupervisedLearning"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Recherche opérationnelle et applications",
+      "keywords": [
+        "OperationsResearch",
+        "LinearProgramming",
+        "IntegerProgramming",
+        "Duality"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Structures de données",
+      "keywords": [
+        "AVLTrees",
+        "BTrees",
+        "HashTables",
+        "Sorting",
+        "Complexity"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Séminaires d'informatique en veille technologique",
+      "keywords": [
+        "TechWatch"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Cryptographie et sécurité des systèmes informatiques",
+      "keywords": [
+        "Cryptography",
+        "Unix",
+        "NetworkSecurity",
+        "ApplicationSecurity"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
+    },
+    {
+      "name": "Éthique et droit de l'informatique",
+      "keywords": [
+        "IntellectualProperty",
+        "DataProtection",
+        "GDPR"
+      ],
+      "type": "Course unit",
+      "entity": "UMONS"
     }
   ],
   "references": [
