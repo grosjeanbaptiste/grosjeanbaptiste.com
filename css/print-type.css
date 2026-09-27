@@ -73,8 +73,13 @@
      show_skills governs the PER-ENTRY tags only — the sidebar's own skills
      block (buildSkillsBlock) is always rendered in the PDF, so hiding every
      .skill-tags would leave two headings standing over nothing. */
+  /* .project-skills sits inside .embedded-projects, which DOES print — unlike
+     .inline-skills. The LaTeX fit plan sets show_skills: false, and letting
+     the per-project tags through would add a line to almost every entry,
+     straight into a third sheet. */
   #experience .skill-tags,
-  .inline-skills {
+  .inline-skills,
+  .project-skills {
     display: none;
   }
 
