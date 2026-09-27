@@ -186,7 +186,31 @@
         "CSS"
       ],
       "projects": [
-        "WebMenu"
+        "WebMenu",
+        "Structure des ordinateurs",
+        "Informatique - Système d'exploitation",
+        "Mathématique appliquée à l'informatique",
+        "Principes algorithmiques et programmation",
+        "Principes d'analyse informatique",
+        "Information et communication professionnelles",
+        "Web : principes de base",
+        "Initiation aux bases de données",
+        "Gestion et exploitation de bases de données",
+        "Programmation orientée objet",
+        "Projet d'analyse et de conception",
+        "Techniques de gestion de projet",
+        "Éléments de statistique",
+        "Projet de développement web",
+        "Notions de e-business",
+        "Projet de développement SGBD",
+        "Bases des réseaux",
+        "Organisation des entreprises et éléments de management",
+        "Produits logiciels de gestion intégrés",
+        "Projet d'intégration de développement",
+        "Veille technologique",
+        "Administration, gestion et sécurisation des réseaux",
+        "Langue en situation appliquée à l'enseignement supérieur UE1",
+        "Langue en situation appliquée à l'enseignement supérieur UE2"
       ],
       "courses": []
     },
@@ -307,6 +331,78 @@
     },
     {
       "summary": "Ethics and IT law"
+    },
+    {
+      "summary": "Computer structure"
+    },
+    {
+      "summary": "Operating systems"
+    },
+    {
+      "summary": "Mathematics applied to computing"
+    },
+    {
+      "summary": "Algorithmic principles and programming"
+    },
+    {
+      "summary": "Principles of systems analysis"
+    },
+    {
+      "summary": "Professional information and communication"
+    },
+    {
+      "summary": "Web: fundamentals"
+    },
+    {
+      "summary": "Introduction to databases"
+    },
+    {
+      "summary": "Database management and operation"
+    },
+    {
+      "summary": "Object-oriented programming"
+    },
+    {
+      "summary": "Analysis and design project"
+    },
+    {
+      "summary": "Project management techniques"
+    },
+    {
+      "summary": "Elements of statistics"
+    },
+    {
+      "summary": "Web development project"
+    },
+    {
+      "summary": "Principles of e-business"
+    },
+    {
+      "summary": "DBMS development project"
+    },
+    {
+      "summary": "Network fundamentals"
+    },
+    {
+      "summary": "Business organisation and management"
+    },
+    {
+      "summary": "Integrated management software"
+    },
+    {
+      "summary": "Development integration project"
+    },
+    {
+      "summary": "Technology watch"
+    },
+    {
+      "summary": "Network administration and security"
+    },
+    {
+      "summary": "Applied language for higher education I"
+    },
+    {
+      "summary": "Applied language for higher education II"
     }
   ],
   "dailyLife": {

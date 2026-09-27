@@ -66,3 +66,53 @@ test('course units stay off the printed sheet', () => {
   const css = fs.readFileSync(path.join(ROOT, 'css/print-type.css'), 'utf8');
   assert.match(css, /#education \.education-item\s*\{[^}]*display:\s*none/);
 });
+
+// The EPHEC bachelor, from the school's own dossiers pédagogiques (the
+// "4. PROGRAMME" section of each unité de formation). Those are inter-network
+// reference documents written in competency terms, so most name concepts
+// rather than products — only 8 of 26 name a technology at all, and two of
+// those were false positives read in context: "Média Access Control" and
+// "Data Access Layer" are not Microsoft Access.
+//
+// Three units are deliberately not modelled, as at UMONS: the stage, the
+// activités professionnelles de formation and the épreuve intégrée are the
+// internship and the final project, already on the CV.
+const EPHEC_FROM_THE_DOSSIERS = {
+  'Web : principes de base': ['HTML', 'CSS', 'DNS'],
+  'Initiation aux bases de données': ['SQL', 'RelationalModel'],
+  'Projet de développement web': ['JavaScript', 'AJAX', 'JSON', 'XML'],
+  "Principes d'analyse informatique": ['UML', 'EntityRelationship'],
+  'Programmation orientée objet': ['OOP', 'Inheritance', 'Polymorphism'],
+};
+
+test('the EPHEC bachelor references its course units', () => {
+  const bachelor = resume.education.find((e) => /EPHEC/.test(e.institution || ''));
+  assert.ok(bachelor, 'the EPHEC entry is gone');
+  const units = resume.projects.filter((p) => p.entity === 'EPHEC');
+  assert.equal(units.length, 24, `found ${units.length} EPHEC units`);
+  const unreferenced = units.filter((u) => !(bachelor.projects || []).includes(u.name));
+  assert.deepEqual(unreferenced, [], 'EPHEC units the bachelor does not reference');
+});
+
+test('each sampled EPHEC unit carries what its dossier names', () => {
+  for (const [name, expected] of Object.entries(EPHEC_FROM_THE_DOSSIERS)) {
+    const unit = project(name);
+    assert.ok(unit, `no course unit named ${name}`);
+    const missing = expected.filter((k) => !(unit.keywords || []).includes(k));
+    assert.deepEqual(missing, [], `${name} omits: ${missing.join(', ')}`);
+  }
+});
+
+// The 24 EPHEC units first landed on the RESTOMAX job, because it and the EPHEC
+// degree both referenced WebMenu and the job came first in the file. A course
+// unit belongs to a degree; no job may claim one.
+//
+// Keyed on type, not on entity: MyWay carries entity "Freelance" and is a web
+// application, not a course — this test caught that on its first run.
+test('no job references a course unit', () => {
+  const units = new Set(resume.projects.filter((p) => p.type === 'Course unit').map((p) => p.name));
+  for (const w of resume.work) {
+    const wrong = (w.projects || []).filter((n) => units.has(n));
+    assert.deepEqual(wrong, [], `${w.position} references course units: ${wrong.join(', ')}`);
+  }
+});

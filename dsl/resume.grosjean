@@ -254,7 +254,7 @@ TFE: WebMenu 2.0
 课程内容：分析与设计，使用 .NET、Java 和 Web 进行编程，关系型数据库，电子商务与集成管理软件 (ERP)，网络与 IT 项目管理。
 """ }
             uses [SQL, "C#", ".NET", Java, Python, JS, HTML, CSS]
-            projects [ref WebMenu]
+            projects [ref WebMenu, ref EpStructureOrdinateurs, ref EpSystemeExploitation, ref EpMathematiqueInformatique, ref EpPrincipesAlgorithmiques, ref EpPrincipesAnalyse, ref EpInformationCommunication, ref EpWebPrincipesBase, ref EpInitiationBasesDonnees, ref EpGestionBasesDonnees, ref EpProgrammationOrienteeObjet, ref EpProjetAnalyseConception, ref EpTechniquesGestionProjet, ref EpElementsStatistique, ref EpProjetDeveloppementWeb, ref EpNotionsEbusiness, ref EpProjetDeveloppementSGBD, ref EpBasesReseaux, ref EpOrganisationEntreprises, ref EpProduitsLogicielsIntegres, ref EpProjetIntegrationDeveloppement, ref EpVeilleTechnologique, ref EpAdministrationReseaux, ref EpLangueAppliquee1, ref EpLangueAppliquee2]
         }
         InstitutSaintLouisBruxelles {
             institution "Institut Saint-Louis Bruxelles"
@@ -549,6 +549,174 @@ TFE: WebMenu 2.0
             entity "UMONS"
             type "Course unit"
             keywords [IntellectualProperty, DataProtection, GDPR]
+        }
+        EpStructureOrdinateurs {
+            name "Structure des ordinateurs"
+            summary t{ en: "Computer structure", fr: "Structure des ordinateurs", nl: "Computerstructuur", es: "Estructura de los ordenadores", de: "Rechnerstruktur", zh: "计算机结构" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [ComputerArchitecture, Binary, Hexadecimal, Hardware]
+        }
+        EpSystemeExploitation {
+            name "Informatique - Système d'exploitation"
+            summary t{ en: "Operating systems", fr: "Informatique - Système d'exploitation", nl: "Besturingssystemen", es: "Sistemas operativos", de: "Betriebssysteme", zh: "操作系统" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [OperatingSystems, ShellScripting, SystemAdministration]
+        }
+        EpMathematiqueInformatique {
+            name "Mathématique appliquée à l'informatique"
+            summary t{ en: "Mathematics applied to computing", fr: "Mathématique appliquée à l'informatique", nl: "Wiskunde toegepast op informatica", es: "Matemática aplicada a la informática", de: "Mathematik für die Informatik", zh: "应用于信息学的数学" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [LinearAlgebra, GraphTheory, SetTheory, RelationalAlgebra, MathematicalLogic, Cryptography]
+        }
+        EpPrincipesAlgorithmiques {
+            name "Principes algorithmiques et programmation"
+            summary t{ en: "Algorithmic principles and programming", fr: "Principes algorithmiques et programmation", nl: "Algoritmische principes en programmeren", es: "Principios algorítmicos y programación", de: "Algorithmische Grundlagen und Programmierung", zh: "算法原理与编程" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [Algorithms, DataTypes, ControlFlow, Programming]
+        }
+        EpPrincipesAnalyse {
+            name "Principes d'analyse informatique"
+            summary t{ en: "Principles of systems analysis", fr: "Principes d'analyse informatique", nl: "Principes van informatica-analyse", es: "Principios de análisis informático", de: "Grundlagen der Systemanalyse", zh: "信息分析原理" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [UML, EntityRelationship, SystemsAnalysis]
+        }
+        EpInformationCommunication {
+            name "Information et communication professionnelles"
+            summary t{ en: "Professional information and communication", fr: "Information et communication professionnelles", nl: "Professionele informatie en communicatie", es: "Información y comunicación profesionales", de: "Berufliche Information und Kommunikation", zh: "专业信息与沟通" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [ProfessionalCommunication]
+        }
+        EpWebPrincipesBase {
+            name "Web : principes de base"
+            summary t{ en: "Web: fundamentals", fr: "Web : principes de base", nl: "Web: basisprincipes", es: "Web: principios básicos", de: "Web: Grundlagen", zh: "Web 基础" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [HTML, CSS, URL, DNS, WebHosting]
+        }
+        EpInitiationBasesDonnees {
+            name "Initiation aux bases de données"
+            summary t{ en: "Introduction to databases", fr: "Initiation aux bases de données", nl: "Inleiding tot databanken", es: "Iniciación a las bases de datos", de: "Einführung in Datenbanken", zh: "数据库入门" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [SQL, RelationalModel, Joins, Indexing]
+        }
+        EpGestionBasesDonnees {
+            name "Gestion et exploitation de bases de données"
+            summary t{ en: "Database management and operation", fr: "Gestion et exploitation de bases de données", nl: "Beheer en exploitatie van databanken", es: "Gestión y explotación de bases de datos", de: "Datenbankverwaltung und -betrieb", zh: "数据库管理与运维" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [Triggers, StoredProcedures, DataWarehouse, QueryOptimization]
+        }
+        EpProgrammationOrienteeObjet {
+            name "Programmation orientée objet"
+            summary t{ en: "Object-oriented programming", fr: "Programmation orientée objet", nl: "Objectgeoriënteerd programmeren", es: "Programación orientada a objetos", de: "Objektorientierte Programmierung", zh: "面向对象编程" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [OOP, Inheritance, Polymorphism, Encapsulation, Overloading]
+        }
+        EpProjetAnalyseConception {
+            name "Projet d'analyse et de conception"
+            summary t{ en: "Analysis and design project", fr: "Projet d'analyse et de conception", nl: "Analyse- en ontwerpproject", es: "Proyecto de análisis y diseño", de: "Analyse- und Entwurfsprojekt", zh: "分析与设计项目" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [SystemsAnalysis, SoftwareDesign, Modelling]
+        }
+        EpTechniquesGestionProjet {
+            name "Techniques de gestion de projet"
+            summary t{ en: "Project management techniques", fr: "Techniques de gestion de projet", nl: "Projectbeheertechnieken", es: "Técnicas de gestión de proyectos", de: "Projektmanagementtechniken", zh: "项目管理技术" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [ProjectManagement]
+        }
+        EpElementsStatistique {
+            name "Éléments de statistique"
+            summary t{ en: "Elements of statistics", fr: "Éléments de statistique", nl: "Elementen van statistiek", es: "Elementos de estadística", de: "Grundlagen der Statistik", zh: "统计学基础" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [Statistics]
+        }
+        EpProjetDeveloppementWeb {
+            name "Projet de développement web"
+            summary t{ en: "Web development project", fr: "Projet de développement web", nl: "Webontwikkelingsproject", es: "Proyecto de desarrollo web", de: "Webentwicklungsprojekt", zh: "Web 开发项目" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [JavaScript, AJAX, JSON, XML, ClientSideScripting]
+        }
+        EpNotionsEbusiness {
+            name "Notions de e-business"
+            summary t{ en: "Principles of e-business", fr: "Notions de e-business", nl: "Beginselen van e-business", es: "Nociones de e-business", de: "Grundlagen des E-Business", zh: "电子商务概念" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [Ebusiness]
+        }
+        EpProjetDeveloppementSGBD {
+            name "Projet de développement SGBD"
+            summary t{ en: "DBMS development project", fr: "Projet de développement SGBD", nl: "DBMS-ontwikkelingsproject", es: "Proyecto de desarrollo SGBD", de: "DBMS-Entwicklungsprojekt", zh: "数据库系统开发项目" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [DataAccessLayer, Transactions, DatabaseProgramming, Debugging]
+        }
+        EpBasesReseaux {
+            name "Bases des réseaux"
+            summary t{ en: "Network fundamentals", fr: "Bases des réseaux", nl: "Netwerkbasis", es: "Fundamentos de redes", de: "Netzwerkgrundlagen", zh: "网络基础" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [Ethernet, MAC, "TCP/IP", Networking]
+        }
+        EpOrganisationEntreprises {
+            name "Organisation des entreprises et éléments de management"
+            summary t{ en: "Business organisation and management", fr: "Organisation des entreprises et éléments de management", nl: "Bedrijfsorganisatie en management", es: "Organización de empresas y gestión", de: "Unternehmensorganisation und Management", zh: "企业组织与管理" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [Management]
+        }
+        EpProduitsLogicielsIntegres {
+            name "Produits logiciels de gestion intégrés"
+            summary t{ en: "Integrated management software", fr: "Produits logiciels de gestion intégrés", nl: "Geïntegreerde beheersoftware", es: "Productos de software de gestión integrados", de: "Integrierte Unternehmenssoftware", zh: "集成管理软件" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [ERP]
+        }
+        EpProjetIntegrationDeveloppement {
+            name "Projet d'intégration de développement"
+            summary t{ en: "Development integration project", fr: "Projet d'intégration de développement", nl: "Ontwikkelingsintegratieproject", es: "Proyecto de integración de desarrollo", de: "Entwicklungsintegrationsprojekt", zh: "开发集成项目" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [AJAX, JSON, XML, SQLInjection, XSS, Caching, URLRewriting]
+        }
+        EpVeilleTechnologique {
+            name "Veille technologique"
+            summary t{ en: "Technology watch", fr: "Veille technologique", nl: "Technologiewatch", es: "Vigilancia tecnológica", de: "Technologiebeobachtung", zh: "技术观察" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [TechWatch]
+        }
+        EpAdministrationReseaux {
+            name "Administration, gestion et sécurisation des réseaux"
+            summary t{ en: "Network administration and security", fr: "Administration, gestion et sécurisation des réseaux", nl: "Netwerkbeheer en -beveiliging", es: "Administración y seguridad de redes", de: "Netzwerkadministration und -sicherheit", zh: "网络管理与安全" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [NetworkAdministration, NetworkSecurity, ApplicationServer]
+        }
+        EpLangueAppliquee1 {
+            name "Langue en situation appliquée à l'enseignement supérieur UE1"
+            summary t{ en: "Applied language for higher education I", fr: "Langue en situation appliquée à l'enseignement supérieur UE1", nl: "Toegepaste taal hoger onderwijs UE1", es: "Lengua aplicada a la enseñanza superior UE1", de: "Angewandte Sprache Hochschulbildung UE1", zh: "高等教育应用语言 UE1" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [ProfessionalCommunication]
+        }
+        EpLangueAppliquee2 {
+            name "Langue en situation appliquée à l'enseignement supérieur UE2"
+            summary t{ en: "Applied language for higher education II", fr: "Langue en situation appliquée à l'enseignement supérieur UE2", nl: "Toegepaste taal hoger onderwijs UE2", es: "Lengua aplicada a la enseñanza superior UE2", de: "Angewandte Sprache Hochschulbildung UE2", zh: "高等教育应用语言 UE2" }
+            entity "EPHEC"
+            type "Course unit"
+            keywords [ProfessionalCommunication]
         }
     }
 
