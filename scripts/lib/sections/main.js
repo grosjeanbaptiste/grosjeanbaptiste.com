@@ -2,7 +2,7 @@ const I18N = require('../i18n');
 const { printedWork, printText, PRINT_PLAN } = require('../print-selection');
 const { escapeHtml, dateRangeHtml } = require('../format');
 const { indentLines } = require('../markers');
-const { appendEmbeds, skillsWithProjects } = require('./embeds');
+const { appendEmbeds } = require('./embeds');
 
 function renderAbout(resume, t) {
   const paras = (resume.basics?.summary || '')
@@ -45,10 +45,15 @@ function renderExperienceItem(w, lang, ctx, t, opts = { printed: true }) {
     parts.push(`  <p${attr}>${escapeHtml(w.summary).replace(/\n/g, '<br>')}</p>`);
   }
   for (const h of w.highlights || []) parts.push(`  <p>• ${escapeHtml(h)}</p>`);
-  // Work only: an education entry references every project of its degree, and
-  // unioning five projects' keywords under a diploma is noise, not signal.
-  const withProjectSkills = { ...w, skills: skillsWithProjects(w, ctx.projects) };
-  appendEmbeds(parts, withProjectSkills, w.company, ctx, t, lang);
+  // Skills hang off the projects now. The entry-level cluster survives only
+  // for an experience that references no project at all — otherwise there is
+  // nowhere else for its `uses` to show.
+  //
+  // Education still aggregates: its `uses` carries things no project covers
+  // (LaTeX for the MSc, the whole EPHEC stack), and their proper home is the
+  // course units, which do not exist yet. Dropping it here would lose them.
+  const entry = w.projects?.length ? { ...w, skills: [] } : w;
+  appendEmbeds(parts, entry, w.company, ctx, t, lang);
   parts.push('</article>');
   return parts.join('\n');
 }

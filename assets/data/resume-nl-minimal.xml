@@ -537,6 +537,8 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>PostgreSQL</keyword>
         <keyword>Docker</keyword>
         <keyword>Dart</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CleanArchitecture</keyword>
       </keywords>
       <startDate>2025-07-01</startDate>
       <url>https://www.acteble.com</url>
@@ -555,6 +557,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>OpenAI</keyword>
         <keyword>Valhalla</keyword>
         <keyword>AI</keyword>
+        <keyword>Dart</keyword>
       </keywords>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
@@ -604,6 +607,8 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Auth0</keyword>
         <keyword>PayPal</keyword>
         <keyword>Sequelize</keyword>
+        <keyword>Node.js</keyword>
+        <keyword>React</keyword>
       </keywords>
       <startDate>2023-01-01</startDate>
       <endDate>2023-06-30</endDate>
@@ -616,6 +621,14 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
     </project>
     <project>
       <name>VhAuctions NER Inventory Model</name>
+      <keywords>
+        <keyword>Python</keyword>
+        <keyword>SpaCy</keyword>
+        <keyword>Pandas</keyword>
+        <keyword>NumPy</keyword>
+        <keyword>.NET</keyword>
+        <keyword>NER</keyword>
+      </keywords>
       <startDate>2024-03-01</startDate>
       <endDate>2024-08-07</endDate>
       <summary>Named Entity Recognition-model dat inventarisitems extraheert uit een audiotranscriptie.</summary>
@@ -631,6 +644,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Docker</keyword>
         <keyword>Azure</keyword>
         <keyword>OpenTelemetry</keyword>
+        <keyword>SQL Server</keyword>
       </keywords>
       <startDate>2024-01-01</startDate>
       <endDate>2024-02-28</endDate>
@@ -644,6 +658,8 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Blazor</keyword>
         <keyword>EntityFramework</keyword>
         <keyword>xUnit</keyword>
+        <keyword>SQL Server</keyword>
+        <keyword>DDD</keyword>
       </keywords>
       <startDate>2023-09-01</startDate>
       <endDate>2023-12-31</endDate>
@@ -651,6 +667,12 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
     </project>
     <project>
       <name>WebMenu</name>
+      <keywords>
+        <keyword>.NET</keyword>
+        <keyword>Flutter</keyword>
+        <keyword>SQL Server</keyword>
+        <keyword>QRCode</keyword>
+      </keywords>
       <startDate>2021-11-01</startDate>
       <endDate>2022-03-31</endDate>
       <summary>QR-code-gebaseerde kassa voor HoReCa-etablissementen (Hotel/Restaurant/Café).</summary>

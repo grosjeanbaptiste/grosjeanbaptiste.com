@@ -5,22 +5,25 @@ const { escapeHtml, dateRangeHtml } = require('../format');
 const { indentLines } = require('../markers');
 const { printText, PRINT_PLAN } = require('../print-selection');
 
-// An experience's skills ARE its projects' skills. Keeping the two lists by
-// hand meant maintaining the same fact twice, and the project keywords never
-// reached the page at all — only the entry's own `uses` was rendered. Union,
-// not replacement: `uses` still contributes what no project covers (a role's
-// practices, a client's stack that never became a listed project).
-function skillsWithProjects(entry, projects) {
-  const fromProjects = (entry.projects || []).flatMap(
-    (name) => (projects || []).find((p) => p.name === name)?.keywords || [],
-  );
-  return [...new Set([...(entry.skills || []), ...fromProjects])];
-}
-
+// Tags for an entry that references no project at all. With a project, the
+// skills hang off the project that earned them — see renderProjectTags.
 const renderEmbeddedSkills = (skills) => {
   if (!skills?.length) return '';
   const tags = skills.map((s) => `<span class="skill-tag">${escapeHtml(s)}</span>`).join(' ');
   return `<div class="skill-tags inline-skills">${tags}</div>`;
+};
+
+// Skills belong to the project that used them. Rendered inside the row so a
+// reader can tell which of two projects under one job brought which stack —
+// the aggregated cluster this replaces could not say.
+//
+// .project-skills, not .inline-skills: this sits inside .embedded-projects,
+// which DOES print, and the LaTeX fit plan sets show_skills: false. The class
+// exists so print-type.css can hide it without hiding the row.
+const renderProjectTags = (keywords) => {
+  if (!keywords?.length) return '';
+  const tags = keywords.map((k) => `<span class="skill-tag">${escapeHtml(k)}</span>`).join(' ');
+  return ` <span class="skill-tags project-skills">${tags}</span>`;
 };
 
 function renderEmbeddedProjects(projectNames, projects, t) {
@@ -39,7 +42,7 @@ function renderEmbeddedProjects(projectNames, projects, t) {
       const clipped = desc ? printText(desc, PRINT_PLAN.proj_desc) : null;
       const descAttr = clipped ? ` data-print-text="${escapeHtml(clipped)}"` : '';
       const descHtml = desc ? ` — <span${descAttr}>${escapeHtml(desc)}</span>` : '';
-      return `<li>${label}${descHtml}</li>`;
+      return `<li>${label}${descHtml}${renderProjectTags(p.keywords)}</li>`;
     })
     .join('\n        ');
   return [
@@ -117,4 +120,4 @@ function appendEmbeds(parts, entry, hostName, ctx, t, lang) {
   if (refsHtml) parts.push(`  ${refsHtml}`);
 }
 
-module.exports = { appendEmbeds, skillsWithProjects };
+module.exports = { appendEmbeds };
