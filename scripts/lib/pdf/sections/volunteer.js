@@ -14,7 +14,11 @@ function buildVolunteer(resume, t, lang) {
   if (!entries.length) return '';
   const items = entries.map((v) => {
     const period = `${formatDate(v.startDate, lang)} -- ${formatDate(v.endDate, lang)}`;
-    return `    \\item \\textbf{${tex(v.position)}} — ${tex(v.organization)}, ${tex(period)}`;
+    // \mbox: the column is 30% of the page, and a long translated position
+    // pushed the period past its edge. TeX then broke it at the last space and
+    // left the year stranded on the next line — visible in nl and es only,
+    // because the other four fitted. Atomic, it wraps whole or not at all.
+    return `    \\item \\textbf{${tex(v.position)}} — ${tex(v.organization)}, \\mbox{${tex(period)}}`;
   });
   return [
     `\\cvsectionsidebar{${nohyphen(t.volunteer)}}`,
