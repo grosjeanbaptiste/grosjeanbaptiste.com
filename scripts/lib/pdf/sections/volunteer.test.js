@@ -80,3 +80,16 @@ test('the section occupies the verso left column, before the switch', () => {
   assert.ok(heading > 0, 'the volunteering section is not in the document');
   assert.ok(heading < switchAt, 'the volunteering section is not in the left column');
 });
+
+// The verso's left column is 30% of the page. In Dutch and Spanish the
+// translated position is long enough to push the period past the column edge,
+// and TeX broke it at the last space — leaving the year alone on the next
+// line, "… nov 2023 – sep" / "2026". English, French, German and Chinese all
+// fitted, so it only showed in two of the six sheets.
+//
+// An \mbox makes the period atomic: it moves to the next line whole, or not
+// at all.
+test('the period never breaks across lines', () => {
+  const latex = buildVolunteer(resume, I18N.en, 'en');
+  assert.match(latex, /\\mbox\{Nov 2023 -- Sep 2026\}/);
+});
