@@ -43,8 +43,12 @@ function renderLanguagesBlock(resume, t) {
 
 // Sidebar projects list — parity with the XSLT `sidebar-projects` template:
 // project name (linked when a url is present) plus its short description.
+//
+// Course units are referenced like projects in the data but are not projects:
+// they belong to their degree, under their own heading, never in this list.
 function renderProjectsBlock(resume, t) {
   const items = (resume.projects || [])
+    .filter((p) => p.type !== 'Course unit')
     .map((p) => {
       const name = `<strong>${escapeHtml(p.name)}</strong>`;
       const label = p.url
