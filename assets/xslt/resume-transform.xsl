@@ -34,6 +34,7 @@
           <xsl:when test="$k='education'">Éducation</xsl:when>
           <xsl:when test="$k='references'">Références</xsl:when>
           <xsl:when test="$k='projects'">Projets</xsl:when>
+          <xsl:when test="$k='courseUnits'">Unités d'enseignement</xsl:when>
           <xsl:when test="$k='technicalSkills'">Compétences techniques</xsl:when>
           <xsl:when test="$k='softSkills'">Compétences personnelles</xsl:when>
           <xsl:when test="$k='languages'">Langues</xsl:when>
@@ -62,6 +63,7 @@
           <xsl:when test="$k='education'">Opleiding</xsl:when>
           <xsl:when test="$k='references'">Referenties</xsl:when>
           <xsl:when test="$k='projects'">Projecten</xsl:when>
+          <xsl:when test="$k='courseUnits'">Opleidingsonderdelen</xsl:when>
           <xsl:when test="$k='technicalSkills'">Technische vaardigheden</xsl:when>
           <xsl:when test="$k='softSkills'">Persoonlijke vaardigheden</xsl:when>
           <xsl:when test="$k='languages'">Talen</xsl:when>
@@ -90,6 +92,7 @@
           <xsl:when test="$k='education'">Educación</xsl:when>
           <xsl:when test="$k='references'">Referencias</xsl:when>
           <xsl:when test="$k='projects'">Proyectos</xsl:when>
+          <xsl:when test="$k='courseUnits'">Unidades de enseñanza</xsl:when>
           <xsl:when test="$k='technicalSkills'">Habilidades técnicas</xsl:when>
           <xsl:when test="$k='softSkills'">Habilidades personales</xsl:when>
           <xsl:when test="$k='languages'">Idiomas</xsl:when>
@@ -118,6 +121,7 @@
           <xsl:when test="$k='education'">Ausbildung</xsl:when>
           <xsl:when test="$k='references'">Referenzen</xsl:when>
           <xsl:when test="$k='projects'">Projekte</xsl:when>
+          <xsl:when test="$k='courseUnits'">Lehreinheiten</xsl:when>
           <xsl:when test="$k='technicalSkills'">Technische Fähigkeiten</xsl:when>
           <xsl:when test="$k='softSkills'">Soziale Kompetenzen</xsl:when>
           <xsl:when test="$k='languages'">Sprachen</xsl:when>
@@ -146,6 +150,7 @@
           <xsl:when test="$k='education'">教育</xsl:when>
           <xsl:when test="$k='references'">推荐人</xsl:when>
           <xsl:when test="$k='projects'">项目</xsl:when>
+          <xsl:when test="$k='courseUnits'">教学单元</xsl:when>
           <xsl:when test="$k='technicalSkills'">技术技能</xsl:when>
           <xsl:when test="$k='softSkills'">软技能</xsl:when>
           <xsl:when test="$k='languages'">语言</xsl:when>
@@ -174,6 +179,7 @@
           <xsl:when test="$k='education'">Education</xsl:when>
           <xsl:when test="$k='references'">References</xsl:when>
           <xsl:when test="$k='projects'">Projects</xsl:when>
+          <xsl:when test="$k='courseUnits'">Course units</xsl:when>
           <xsl:when test="$k='technicalSkills'">Technical Skills</xsl:when>
           <xsl:when test="$k='softSkills'">Soft Skills</xsl:when>
           <xsl:when test="$k='languages'">Languages</xsl:when>
@@ -762,12 +768,15 @@
   </xsl:template>
 
   <xsl:template name="sidebar-projects">
-    <xsl:if test="/resume/projects/project">
+    <!-- Course units are referenced like projects in the data but are not
+         projects: they belong to their degree, never to this list. -->
+    <xsl:variable name="shown" select="/resume/projects/project[not(type='Course unit')]"/>
+    <xsl:if test="$shown">
       <!-- Not in the LaTeX sidebar: its projects appear under the roles that
            reference them. Wrapped so the print sheet can leave it out. -->
       <div class="print-drop">
       <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template></h2>
-      <xsl:for-each select="/resume/projects/project">
+      <xsl:for-each select="$shown">
         <div class="lang-item">
           <xsl:choose>
             <xsl:when test="url">
@@ -782,6 +791,40 @@
         </div>
       </xsl:for-each>
     </div>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- One list of referenced entries under a work or education item. Course
+       units are referenced exactly like projects, so the caller splits them on
+       type and calls this twice, each with its own heading. `clip` picks the
+       two-span clipped/full pair the print sheet swaps between; the education
+       list never clipped, and still doesn't. -->
+  <xsl:template name="embedded-list">
+    <xsl:param name="refs"/>
+    <xsl:param name="k"/>
+    <xsl:param name="clip" select="0"/>
+    <xsl:if test="$refs">
+      <div class="embedded-projects">
+        <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="$k"/></xsl:call-template></p>
+        <ul>
+          <xsl:for-each select="$refs">
+            <xsl:variable name="ref" select="."/>
+            <xsl:variable name="proj" select="key('project-by-name', $ref)"/>
+            <li>
+              <strong><xsl:value-of select="$ref"/></strong>
+              <xsl:choose>
+                <!-- A course unit's name is its official French designation and
+                     its summary the localized title, so on the French page the
+                     two are the same string. Say it once. -->
+                <xsl:when test="$proj/summary = $ref"/>
+                <xsl:when test="$proj/summary and $clip = 1"> — <xsl:if test="string-length($proj/summary) &gt; 80"><span class="clipped-text"><xsl:value-of select="substring($proj/summary, 1, 79)"/>…</span></xsl:if><span class="full-text"><xsl:value-of select="$proj/summary"/></span></xsl:when>
+                <xsl:when test="$proj/summary"> — <xsl:value-of select="$proj/summary"/></xsl:when>
+                <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
+              </xsl:choose>
+            </li>
+          </xsl:for-each>
+        </ul>
+      </div>
     </xsl:if>
   </xsl:template>
 
@@ -863,24 +906,16 @@
                     </div>
                   </xsl:if>
 
-                  <xsl:if test="projects/project">
-                    <div class="embedded-projects">
-                      <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template></p>
-                      <ul>
-                        <xsl:for-each select="projects/project">
-                          <xsl:variable name="ref" select="."/>
-                          <xsl:variable name="proj" select="key('project-by-name', $ref)"/>
-                          <li>
-                            <strong><xsl:value-of select="$ref"/></strong>
-                            <xsl:choose>
-                              <xsl:when test="$proj/summary"> — <xsl:if test="string-length($proj/summary) &gt; 80"><span class="clipped-text"><xsl:value-of select="substring($proj/summary, 1, 79)"/>…</span></xsl:if><span class="full-text"><xsl:value-of select="$proj/summary"/></span></xsl:when>
-                              <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
-                            </xsl:choose>
-                          </li>
-                        </xsl:for-each>
-                      </ul>
-                    </div>
-                  </xsl:if>
+                  <xsl:call-template name="embedded-list">
+                    <xsl:with-param name="refs" select="projects/project[not(key('project-by-name', .)/type='Course unit')]"/>
+                    <xsl:with-param name="k" select="'projects'"/>
+                    <xsl:with-param name="clip" select="1"/>
+                  </xsl:call-template>
+                  <xsl:call-template name="embedded-list">
+                    <xsl:with-param name="refs" select="projects/project[key('project-by-name', .)/type='Course unit']"/>
+                    <xsl:with-param name="k" select="'courseUnits'"/>
+                    <xsl:with-param name="clip" select="1"/>
+                  </xsl:call-template>
 
                   <xsl:variable name="workOrg" select="company"/>
                   <xsl:variable name="workVols" select="/resume/volunteer/volunteer-item[$workOrg and contains($workOrg, substring-before(concat(organization, ' '), ' '))]"/>
@@ -952,24 +987,16 @@
                       <xsl:for-each select="skills/skill"><span class="skill-tag"><xsl:value-of select="."/></span></xsl:for-each>
                     </div>
                   </xsl:if>
-                  <xsl:if test="projects/project">
-                    <div class="embedded-projects">
-                      <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template></p>
-                      <ul>
-                        <xsl:for-each select="projects/project">
-                          <xsl:variable name="ref" select="."/>
-                          <xsl:variable name="proj" select="key('project-by-name', $ref)"/>
-                          <li>
-                            <strong><xsl:value-of select="$ref"/></strong>
-                            <xsl:choose>
-                              <xsl:when test="$proj/summary"> — <xsl:value-of select="$proj/summary"/></xsl:when>
-                              <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
-                            </xsl:choose>
-                          </li>
-                        </xsl:for-each>
-                      </ul>
-                    </div>
-                  </xsl:if>
+                  <xsl:call-template name="embedded-list">
+                    <xsl:with-param name="refs" select="projects/project[not(key('project-by-name', .)/type='Course unit')]"/>
+                    <xsl:with-param name="k" select="'projects'"/>
+                    <xsl:with-param name="clip" select="0"/>
+                  </xsl:call-template>
+                  <xsl:call-template name="embedded-list">
+                    <xsl:with-param name="refs" select="projects/project[key('project-by-name', .)/type='Course unit']"/>
+                    <xsl:with-param name="k" select="'courseUnits'"/>
+                    <xsl:with-param name="clip" select="0"/>
+                  </xsl:call-template>
 
                   <xsl:variable name="eduInst" select="institution"/>
                   <xsl:variable name="eduVols" select="/resume/volunteer/volunteer-item[$eduInst and contains($eduInst, substring-before(concat(organization, ' '), ' '))]"/>

@@ -79,3 +79,26 @@ test('no row echoes its own name as its description', () => {
     assert.deepEqual(echoes, [], `${lang}: ${echoes.length} rows echo their name`);
   }
 });
+
+// The sidebar has its own "Projects" list, rendered from the same
+// resume.projects array — so the 42 course units landed there too, wedged
+// between Kwalitijd and WebMenu. Same rule, second renderer.
+const sidebarProjects = (html) => {
+  const start = html.indexOf('<div class="projects">');
+  return start < 0 ? '' : html.slice(start, html.indexOf('</div>', start));
+};
+
+test('no course unit appears in the sidebar projects list', () => {
+  for (const lang of LANGS) {
+    const block = sidebarProjects(fs.readFileSync(langOutFile(lang), 'utf8'));
+    const listed = unitNames(lang).filter((n) => block.includes(`<strong>${n}</strong>`));
+    assert.deepEqual(listed, [], `${lang}: ${listed.length} course units in the sidebar`);
+  }
+});
+
+test('a real project still appears in the sidebar projects list', () => {
+  for (const lang of LANGS) {
+    const block = sidebarProjects(fs.readFileSync(langOutFile(lang), 'utf8'));
+    assert.match(block, /<strong>Acteble<\/strong>/, `${lang}: Acteble left the sidebar`);
+  }
+});

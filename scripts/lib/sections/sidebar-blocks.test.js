@@ -44,3 +44,23 @@ test('a project url wraps the name in a link', () => {
 test('an empty projects list yields no block', () => {
   assert.equal(renderProjectsBlock({ projects: [] }, T), null);
 });
+
+// A degree's teaching units are referenced like projects in the data, but they
+// are not projects: listing them here put 42 course names between Kwalitijd
+// and WebMenu in the sidebar.
+test('course units are excluded from the sidebar projects list', () => {
+  const resume = {
+    projects: [
+      { name: 'Acteble', description: 'Short desc.' },
+      { name: 'Algorithmique', type: 'Course unit', entity: 'UMONS' },
+    ],
+  };
+  const html = renderProjectsBlock(resume, T);
+  assert.match(html, /<strong>Acteble<\/strong>/);
+  assert.doesNotMatch(html, /Algorithmique/);
+});
+
+test('a list of nothing but course units yields no block', () => {
+  const resume = { projects: [{ name: 'Algorithmique', type: 'Course unit' }] };
+  assert.equal(renderProjectsBlock(resume, T), null);
+});
