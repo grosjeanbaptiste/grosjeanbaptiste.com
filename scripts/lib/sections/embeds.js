@@ -32,7 +32,12 @@ function renderEmbeddedProjects(projectNames, projects, label) {
   if (!projs.length) return '';
   const items = projs
     .map((p) => {
-      const desc = p.summary || p.description || '';
+      // A course unit's name is its official French designation and its
+      // summary the localized title, so on the French page the two are the
+      // same string and the row would read "Algorithmique — Algorithmique".
+      // Say it once.
+      const blurb = p.summary || p.description || '';
+      const desc = blurb.trim() === (p.name || '').trim() ? '' : blurb;
       const name = `<strong>${escapeHtml(p.name)}</strong>`;
       const label = p.url
         ? `<a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${name}</a>`

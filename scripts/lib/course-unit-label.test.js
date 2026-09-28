@@ -62,3 +62,20 @@ test('the course-unit label is localized', () => {
     assert.notEqual(label, I18N[lang].projects, `${lang} reuses the Projects label`);
   }
 });
+
+// A course unit's `name` is its official French designation and its `summary`
+// is the localized title, so the embedded row renders "name — summary". On the
+// French page those are the same string, and all 42 rows read their own name
+// twice: "Algorithmique — Algorithmique".
+//
+// Every other language is fine — "Algorithmique — Algorithmics", "Algorithmique
+// — 算法" — which is why screenshotting one language would have missed it.
+test('no row echoes its own name as its description', () => {
+  for (const lang of LANGS) {
+    const html = fs.readFileSync(langOutFile(lang), 'utf8');
+    const echoes = [...html.matchAll(/<li><strong>([^<]*)<\/strong> — <span[^>]*>([^<]*)<\/span>/g)]
+      .filter(([, name, desc]) => name.trim() === desc.trim())
+      .map(([, name]) => name);
+    assert.deepEqual(echoes, [], `${lang}: ${echoes.length} rows echo their name`);
+  }
+});
