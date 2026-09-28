@@ -3,6 +3,7 @@ module.exports = {
   education: 'Educación',
   volunteer: 'Voluntariado',
   projects: 'Proyectos',
+  courseUnits: 'Unidades de enseñanza',
   awards: 'Premios',
   interests: 'Intereses',
   references: 'Referencias',

@@ -26,7 +26,7 @@ const renderProjectTags = (keywords) => {
   return ` <span class="skill-tags project-skills">${tags}</span>`;
 };
 
-function renderEmbeddedProjects(projectNames, projects, t) {
+function renderEmbeddedProjects(projectNames, projects, label) {
   if (!projectNames?.length) return '';
   const projs = projectNames.map((n) => projects.find((p) => p.name === n)).filter(Boolean);
   if (!projs.length) return '';
@@ -47,7 +47,7 @@ function renderEmbeddedProjects(projectNames, projects, t) {
     .join('\n        ');
   return [
     '<div class="embedded-projects">',
-    `  <p class="embedded-label">${escapeHtml(t.projects)}:</p>`,
+    `  <p class="embedded-label">${escapeHtml(label)}:</p>`,
     '  <ul>',
     `        ${items}`,
     '  </ul>',
@@ -112,8 +112,24 @@ function renderEmbeddedReferenceLinks(references, hostName, t) {
 function appendEmbeds(parts, entry, hostName, ctx, t, lang) {
   const skillsHtml = renderEmbeddedSkills(entry.skills);
   if (skillsHtml) parts.push(`  ${skillsHtml}`);
-  const projsHtml = renderEmbeddedProjects(entry.projects, ctx.projects, t);
+  // A degree's teaching units are not projects. They are referenced the same
+  // way, so without this split the embedded list files Algorithmique and
+  // Anglais I under "Projects" beside Acteble — telling the reader the
+  // opposite of what they are.
+  const named = (entry.projects || []).map((n) => ctx.projects.find((p) => p.name === n));
+  const isUnit = (p) => p?.type === 'Course unit';
+  const projsHtml = renderEmbeddedProjects(
+    named.filter((p) => p && !isUnit(p)).map((p) => p.name),
+    ctx.projects,
+    t.projects,
+  );
   if (projsHtml) parts.push(indentLines(projsHtml, 2));
+  const unitsHtml = renderEmbeddedProjects(
+    named.filter(isUnit).map((p) => p.name),
+    ctx.projects,
+    t.courseUnits,
+  );
+  if (unitsHtml) parts.push(indentLines(unitsHtml, 2));
   const volsHtml = renderEmbeddedVolunteer(ctx.volunteer, hostName, t, lang);
   if (volsHtml) parts.push(indentLines(volsHtml, 2));
   const refsHtml = renderEmbeddedReferenceLinks(ctx.references, hostName, t);

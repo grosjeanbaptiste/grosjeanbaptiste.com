@@ -7,6 +7,7 @@ module.exports = {
   education: 'Education',
   volunteer: 'Volunteer',
   projects: 'Projects',
+  courseUnits: 'Course units',
   awards: 'Awards',
   interests: 'Interests',
   references: 'References',
