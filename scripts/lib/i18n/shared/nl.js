@@ -3,6 +3,7 @@ module.exports = {
   education: 'Opleiding',
   volunteer: 'Vrijwilligerswerk',
   projects: 'Projecten',
+  courseUnits: 'Opleidingsonderdelen',
   awards: 'Onderscheidingen',
   interests: 'Interesses',
   references: 'Referenties',

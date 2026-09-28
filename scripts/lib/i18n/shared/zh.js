@@ -3,6 +3,7 @@ module.exports = {
   education: '教育',
   volunteer: '志愿者',
   projects: '项目',
+  courseUnits: '教学单元',
   awards: '奖项',
   interests: '兴趣',
   references: '推荐人',
