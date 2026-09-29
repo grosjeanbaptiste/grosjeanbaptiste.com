@@ -17,6 +17,7 @@ module.exports = {
     gpa: 'GPA',
     updated: 'Updated',
     inProgress: 'in progress',
+    curriculumVitae: 'Curriculum Vitae',
   },
   fr: {
     ...sharedFr,
@@ -26,6 +27,7 @@ module.exports = {
     gpa: 'Note',
     updated: 'Mis à jour le',
     inProgress: 'en cours',
+    curriculumVitae: 'Curriculum vitæ',
   },
   nl: {
     ...sharedNl,
@@ -35,6 +37,7 @@ module.exports = {
     gpa: 'Score',
     updated: 'Bijgewerkt',
     inProgress: 'in uitvoering',
+    curriculumVitae: 'Curriculum vitae',
   },
   es: {
     ...sharedEs,
@@ -44,6 +47,7 @@ module.exports = {
     gpa: 'Nota',
     updated: 'Actualizado',
     inProgress: 'en curso',
+    curriculumVitae: 'Currículum vítae',
   },
   de: {
     ...sharedDe,
@@ -53,6 +57,7 @@ module.exports = {
     gpa: 'Note',
     updated: 'Aktualisiert',
     inProgress: 'läuft',
+    curriculumVitae: 'Lebenslauf',
   },
   zh: {
     ...sharedZh,
@@ -62,5 +67,6 @@ module.exports = {
     gpa: '成绩',
     updated: '更新于',
     inProgress: '进行中',
+    curriculumVitae: '简历',
   },
 };
