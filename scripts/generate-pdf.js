@@ -14,6 +14,7 @@
  *   scripts/lib/pdf/preamble.js        — LaTeX preamble (fonts, colours)
  *   scripts/lib/pdf/sections/*.js      — one file per CV block
  *   scripts/lib/pdf/document.js        — assembles preamble + sections
+ *   scripts/lib/pdf/metadata.js        — pdfx .xmpdata (title/author/keywords)
  *   scripts/lib/pdf/compile.js         — pdflatex driver + fit loop
  *
  * Run from the repo root: node scripts/generate-pdf.js

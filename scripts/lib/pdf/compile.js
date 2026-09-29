@@ -4,6 +4,8 @@ const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 const { CLS_PATH, PROFILE_IMG, NEEDS_CJK, FIT_PLANS } = require('./config');
 const { generateLatex } = require('./document');
+const I18N = require('./i18n');
+const { buildXmpData } = require('./metadata');
 
 function countPages(pdfPath, logFile) {
   try {
@@ -23,18 +25,36 @@ function countPages(pdfPath, logFile) {
   return matches ? matches.length : null;
 }
 
+// XeTeX answers \IfFontExistsTF for a missing system font by looking for a TFM,
+// and kpathsea then tries to generate one with METAFONT — which fails and takes
+// the whole run down with "Emergency stop" instead of letting the preamble's
+// fallback branch run. Disable on-the-fly font generation so the probe simply
+// comes back false, as it did before the local TeX Live upgrade.
+const latexEnv = (base) => ({ ...base, MKTEXTFM: '0', MKTEXMF: '0' });
+
+// Why the engine stopped. A run killed by the timeout writes no log and leaves
+// only its startup banner on stdout, so without this line the report is
+// indistinguishable from an error in the document itself.
+function latexFailure(err, engine, pass) {
+  const cause =
+    err.killed || err.code === 'ETIMEDOUT'
+      ? `timed out (${err.signal || err.code})`
+      : `exit status ${err.status ?? err.code ?? 'unknown'}`;
+  return `${engine} failed on pass ${pass + 1} — ${cause}:`;
+}
+
 function runLatex(engine, texFile, workDir) {
   for (let pass = 0; pass < 2; pass += 1) {
     try {
       execFileSync(
         engine,
         ['-interaction=nonstopmode', '-halt-on-error', '-output-directory', workDir, texFile],
-        { cwd: workDir, stdio: 'pipe', timeout: 90_000 },
+        { cwd: workDir, stdio: 'pipe', timeout: 90_000, env: latexEnv(process.env) },
       );
     } catch (err) {
       const stdout = err.stdout ? err.stdout.toString().slice(-3000) : '';
       const stderr = err.stderr ? err.stderr.toString().slice(-1500) : '';
-      console.error(`${engine} failed (pass ${pass + 1}):`);
+      console.error(latexFailure(err, engine, pass));
       console.error(stdout);
       if (stderr) console.error(stderr);
       return false;
@@ -43,13 +63,16 @@ function runLatex(engine, texFile, workDir) {
   return true;
 }
 
-function compileOnce(texContent, outPath, lang) {
+function compileOnce(texContent, xmpContent, outPath, lang) {
   const work = fs.mkdtempSync(path.join(os.tmpdir(), `cv-${lang}-`));
   try {
     fs.copyFileSync(CLS_PATH, path.join(work, 'altacv.cls'));
     fs.copyFileSync(PROFILE_IMG, path.join(work, 'profil.jpeg'));
     const texFile = path.join(work, `cv_${lang}.tex`);
     fs.writeFileSync(texFile, texContent);
+    // pdfx reads the document properties from \jobname.xmpdata, so this file
+    // has to sit next to the source under exactly the .tex's base name.
+    fs.writeFileSync(texFile.replace(/\.tex$/, '.xmpdata'), xmpContent);
     // CJK requires xelatex + system fonts; other langs use pdflatex with
     // TeX Live's bundled roboto/lato (no system fonts needed).
     const engine = NEEDS_CJK(lang) ? 'xelatex' : 'pdflatex';
@@ -70,10 +93,13 @@ function compileOnce(texContent, outPath, lang) {
 // plan fits, fail loudly rather than shipping an oversized CV.
 function compileWithFit(resume, lang, outPath) {
   let last = 0;
+  // Title/author/keywords describe the CV, not the layout, so they are built
+  // once and reused by every fit attempt.
+  const xmp = buildXmpData(resume, I18N[lang], lang);
   for (let i = 0; i < FIT_PLANS.length; i += 1) {
     const limits = FIT_PLANS[i];
     const tex = generateLatex(resume, lang, limits);
-    const { ok, pages } = compileOnce(tex, outPath, lang);
+    const { ok, pages } = compileOnce(tex, xmp, outPath, lang);
     if (!ok) return { ok: false };
     last = pages;
     console.log(`  ${lang} plan ${i} → ${pages} pages`);
@@ -86,4 +112,4 @@ function compileWithFit(resume, lang, outPath) {
   return { ok: false };
 }
 
-module.exports = { compileWithFit };
+module.exports = { compileWithFit, latexEnv, latexFailure };
