@@ -40,7 +40,7 @@
      either side is what \hfill actually does anyway. */
   .experience-item .date,
   .experience-item .location {
-    font-size: 6.97pt;
+    font-size: 0.874rem;
     font-style: normal;
     color: var(--emphasis-color);
   }

@@ -61,6 +61,32 @@
     print-color-adjust: exact;
   }
 
+  /* THE one size on the sheet. Everything else is a ratio of it — altacv's own
+     magsteps, measured out of a shipped PDF's content stream: \Huge 2.161,
+     \LARGE 1.501, \Large 1.369, \large 1.250, \small 0.874, \footnotesize
+     0.750. So the PROPORTIONS are the PDF's exactly, whatever this is set to,
+     and there is a single knob for the one thing a browser cannot match.
+     \documentclass[8pt] means 7.97pt here. That is what the sheet ran at, and
+     it left 39pt of slack on the recto in Firefox on macOS — enough there, not
+     enough for the same engine on Linux, which printed the recto on its own
+     sheet. TeX packs more words per line than any browser, so the sheet needs
+     to be a little smaller than the PDF to hold the same content in the same
+     two pages. This is the largest value that does, with room to spare. */
+  :root {
+    --print-base: 7.4pt;
+  }
+
+  html {
+    font-size: var(--print-base);
+  }
+
+  /* body only, never html: `font-size: 1rem` on the ROOT is a self-reference,
+     which the spec resolves to the initial 16px — it silently overrode
+     --print-base and printed the sheet half again too large. */
+  body {
+    font-size: 1rem;
+  }
+
   html,
   body {
     background: none;
@@ -69,14 +95,6 @@
        letting the browser drop every background to save ink. */
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    /* \documentclass[8pt]{altacv}. The sheet ran at 6pt for as long as the
-       identity block sat in the 30% column: nine stacked contact rows and a
-       two-line name made that column so tall that only shrinking everything
-       kept the recto on one page. With the block lifted into the banner the
-       column fits at the PDF's own size, which is the point — a CV set a
-       third smaller than the PDF it mirrors does not look like it.
-       scripts/lib/print-fit.test.js prints and counts, in both engines. */
-    font-size: 8pt;
     /* TeX hyphenates — ragged2e turns justification off, not hyphenation — and
        a browser does not unless asked. That difference is lines, not
        millimetres, on a sheet whose main column runs to the last one. Every

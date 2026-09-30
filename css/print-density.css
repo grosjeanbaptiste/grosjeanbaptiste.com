@@ -39,7 +39,7 @@
   .embedded-projects,
   .embedded-projects li,
   .embedded-label {
-    font-size: 5.98pt;
+    font-size: 0.750rem;
   }
 
   .embedded-projects {
@@ -65,7 +65,7 @@
      The screen paints these solid in ThirdColor, which on the sheet came out as
      a block of orange where the PDF has thin grey outlines. */
   .skill-tag {
-    font-size: 5.98pt;
+    font-size: 0.750rem;
     /* \cvtag's node is drawn with inner xsep=1ex, inner ysep=0.75ex — at this
        size roughly 3pt and 2.2pt. At 0 1.5pt the chips came out visibly
        tighter than the PDF's. */

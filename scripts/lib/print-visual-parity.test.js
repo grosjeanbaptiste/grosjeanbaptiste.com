@@ -36,17 +36,41 @@ const preamble = buildPreamble('en');
 const cls = read('latex/altacv.cls');
 const workJs = read('scripts/lib/pdf/sections/work.js');
 
-test('the printed body is set at the LaTeX class size', () => {
-  // \documentclass[8pt]{altacv} is the size everything else in the PDF is
-  // derived from. The sheet printed at 6pt while this said 8: a third smaller,
-  // which no amount of matching colours disguises.
+test('the sheet is sized by one base, close to the LaTeX class size', () => {
+  // Everything on the sheet is a ratio of --print-base, so the proportions are
+  // the PDF's whatever it is set to. What this pins is that the base exists,
+  // that the sheet is driven by it, and that it stays within a tenth of
+  // \documentclass[8pt] — a browser needs a little less than TeX to hold the
+  // same content in two pages, but "a little" is the whole claim.
   const m = preamble.match(/\\documentclass\[(\d+)pt/);
   assert.ok(m, 'no point size in \\documentclass');
-  assert.match(
-    css,
-    new RegExp(`font-size:\\s*${m[1]}(\\.0+)?pt`),
-    `the LaTeX CV is set at ${m[1]}pt; no print rule uses that size`,
+  const base = css.match(/--print-base:\s*([\d.]+)pt/);
+  assert.ok(base, 'the sheet declares no --print-base');
+  const drift = Math.abs(Number(base[1]) - Number(m[1])) / Number(m[1]);
+  assert.ok(
+    drift <= 0.1,
+    `the sheet is set at ${base[1]}pt against the PDF's ${m[1]}pt — ${Math.round(drift * 100)}% off`,
   );
+  assert.match(css, /font-size:\s*var\(--print-base\)/, 'nothing is driven by the base');
+});
+
+test('every size on the sheet keeps the PDF ratio it was measured from', () => {
+  // altacv's magsteps, read out of a shipped PDF's content stream and divided
+  // by \normalsize. A literal pt size creeping back in would be a size that
+  // stops scaling with the base — the sheet would go out of proportion the
+  // moment the base moved.
+  for (const [ratio, step] of [
+    ['2.161rem', '\\Huge'],
+    ['1.501rem', '\\LARGE'],
+    ['1.369rem', '\\Large'],
+    ['1.250rem', '\\large'],
+    ['0.874rem', '\\small'],
+    ['0.750rem', '\\footnotesize'],
+  ]) {
+    assert.ok(css.includes(ratio), `nothing on the sheet is set at ${step} (${ratio})`);
+  }
+  const literals = [...css.matchAll(/font-size:\s*([\d.]+pt)/g)].map((m) => m[1]);
+  assert.deepEqual(literals, [], `sizes that will not scale with the base: ${literals.join(', ')}`);
 });
 
 test('the photo is the diameter the PDF gives it', () => {
