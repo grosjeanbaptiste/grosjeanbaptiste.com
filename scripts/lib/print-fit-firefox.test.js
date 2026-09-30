@@ -16,6 +16,7 @@ const os = require('node:os');
 const path = require('node:path');
 const { spawn } = require('node:child_process');
 const { serve, countPages, pageHeads, EXPECTED_PAGES } = require('./print-fit-harness');
+const { printedWithRetry } = require('./print-fit-retry');
 
 const CANDIDATES = [
   process.env.FIREFOX_PATH,
@@ -26,10 +27,11 @@ const CANDIDATES = [
 
 const firefox = CANDIDATES.find((c) => fs.existsSync(c));
 
-function profileFor(out) {
-  const dir = path.join(out, 'profile');
+// A fresh profile per launch: the retry must not inherit the lock or the cache
+// of the launch that just timed out.
+function profileFor(out, attempt, pdf) {
+  const dir = path.join(out, `profile-${attempt}`);
   fs.mkdirSync(dir, { recursive: true });
-  const pdf = path.join(out, 'firefox.pdf');
   const p = 'print.printer_Mozilla_Save_to_PDF';
   fs.writeFileSync(
     path.join(dir, 'user.js'),
@@ -48,7 +50,7 @@ function profileFor(out) {
       '',
     ].join('\n'),
   );
-  return { dir, pdf };
+  return dir;
 }
 
 // A PDF is only finished once its trailer is on disk. Waiting for the size to
@@ -60,8 +62,12 @@ function isComplete(pdf) {
   return bytes.startsWith('%PDF') && bytes.includes('%%EOF');
 }
 
-// Firefox stays open after printing, so watch for the file and stop it.
+// Firefox stays open after printing, so watch for the file and stop it. A
+// deadline that runs out is reported, not thrown: on a loaded machine the render
+// simply did not fit in two minutes, and print-fit-retry.js gives it one more
+// launch before calling the layout broken.
 async function printWith(bin, profile, pdf, url) {
+  fs.rmSync(pdf, { force: true });
   const child = spawn(bin, ['--headless', '--profile', profile, url], {
     stdio: 'ignore',
     env: { ...process.env, MOZ_HEADLESS: '1' },
@@ -69,10 +75,10 @@ async function printWith(bin, profile, pdf, url) {
   try {
     for (let waited = 0; waited < 120000; waited += 500) {
       await new Promise((r) => setTimeout(r, 500));
-      if (isComplete(pdf)) return;
+      if (isComplete(pdf)) return null;
     }
     const size = fs.existsSync(pdf) ? fs.statSync(pdf).size : 'no file';
-    throw new Error(`Firefox never finished a PDF (${size} bytes after 120s)`);
+    return `Firefox never finished a PDF (${size} bytes after 120s)`;
   } finally {
     child.kill('SIGKILL');
   }
@@ -90,8 +96,13 @@ test('the printed CV is two pages in Firefox too', async (t) => {
   const { port } = server.address();
   const out = fs.mkdtempSync(path.join(os.tmpdir(), 'cv-ff-'));
   try {
-    const { dir, pdf } = profileFor(out);
-    await printWith(firefox, dir, pdf, `http://127.0.0.1:${port}/__print/`);
+    const pdf = path.join(out, 'firefox.pdf');
+    const url = `http://127.0.0.1:${port}/__print/`;
+    // A launch that produced nothing is retried once and says so; the page
+    // count below never is. See print-fit-retry.js.
+    await printedWithRetry('Firefox', (attempt) =>
+      printWith(firefox, profileFor(out, attempt, pdf), pdf, url),
+    );
     const pages = countPages(pdf);
     assert.equal(
       pages,
