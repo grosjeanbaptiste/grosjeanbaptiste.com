@@ -102,4 +102,4 @@ function formatDate(iso, lang) {
   return `${MONTHS[lang][Number.parseInt(m[2], 10) - 1]} ${m[1]}`;
 }
 
-module.exports = { tex, nohyphen, tagText, truncate, formatDate };
+module.exports = { tex, nohyphen, tagText, truncate, formatDate, EMOJI_RANGES };

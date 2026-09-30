@@ -3,9 +3,14 @@
 // exists but no page loads it, or it moves nodes without restoring them, which
 // would leave the on-screen page rearranged after the print dialog closes.
 //
-// It no longer builds a full-width header banner. Firefox will not fragment the
-// two-column block across sheets, so a banner above it pushed the whole block
-// to its own page and the CV printed on three sheets instead of two.
+// It also builds the full-width header banner back. That banner was dropped
+// once, because Firefox will not fragment the two-column block across sheets
+// and a banner above it pushed the whole block onto its own page. It is back
+// under an explicit instruction that the sheet must look like the PDF, and it
+// pays for itself: the identity block leaving the narrow column frees more
+// height there than the banner costs across the full width. The two-page
+// guarantee is unchanged and still enforced by print-fit*.test.js in both
+// engines — that is what keeps this from being a regression.
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -34,27 +39,31 @@ test('it relocates exactly the nodes CSS cannot move', () => {
   }
 });
 
-test('no header banner is built, since Firefox pays a whole page for it', () => {
-  assert.doesNotMatch(
-    script,
-    /print-header/,
-    'a banner above the two columns costs Firefox an entire sheet — see print-fit-firefox.test.js',
-  );
+test('the identity block is lifted into a full-width banner', () => {
+  // The PDF puts photo, name, tagline and contact details in a banner above
+  // both columns (\\makecvheader). CSS cannot move a node between containers,
+  // so the banner only exists if this script builds it.
+  assert.match(script, /print-banner/, 'nothing builds the full-width banner');
+  assert.match(script, /profile-picture/, 'the photo stays in the narrow column');
 });
 
-test('Education lands under the identity block, not above it', () => {
-  // It used to go in as the sidebar's first child, which was right while the
-  // banner carried the photo and the name out of the column. With the banner
-  // gone they stayed, and the sheet opened on EDUCATION above the name.
-  assert.doesNotMatch(
-    script,
-    /first:\s*true/,
-    'Education is inserted at the very top of the sidebar, ahead of the name',
-  );
+test('Education leads the sidebar once the identity block has left it', () => {
+  // With the banner carrying the name away, the narrow column starts on its
+  // first real section — Education — exactly as the PDF does. While there was
+  // no banner this had to sit *after* the identity block instead, or the sheet
+  // opened on EDUCATION above the name.
+  // Pinned as the actual insertion, not as a mention of sidebar.firstChild:
+  // that name also appeared in the fallback arm of the ternary this replaces,
+  // so the loose check passed while Education still went in after the name.
   assert.match(
     script,
-    /contact[\s\S]{0,200}before/,
-    'Education is not positioned relative to the identity block',
+    /move\(education, sidebar, \{ before: sidebar\.firstChild \}\)/,
+    'Education is not inserted ahead of everything else in the sidebar',
+  );
+  assert.doesNotMatch(
+    script,
+    /contact\.nextSibling/,
+    'Education is still positioned relative to the identity block, which has left the column',
   );
 });
 
@@ -91,4 +100,26 @@ test('the page colour is laid down by a fixed layer, not by body', () => {
 test('the verso block it builds is torn down again', () => {
   assert.match(script, /createElement\(['"]section['"]\)/, 'nothing builds the verso block');
   assert.match(script, /versoVolunteer\?\.remove\(\)/, 'the built block is never removed');
+  assert.match(script, /verso\?\.remove\(\)/, 'the verso container is never removed');
+  assert.match(script, /banner\?\.remove\(\)/, 'the banner is never removed');
+});
+
+test('the verso is a second two-column block, not a break inside the first', () => {
+  // \clearpage\begin{paracol}{2} in document.js. Faking it with break-before on
+  // nodes still inside the recto's grid cost Firefox — which will not fragment
+  // a grid — a page for the volunteering and another for the references: four
+  // sheets where the PDF has two. print-fit-firefox.test.js is what caught it,
+  // and is what keeps it caught; this is the cheap standing check.
+  assert.match(script, /print-verso/, 'nothing builds the verso container');
+  const css = fs.readFileSync(path.resolve(__dirname, '../../css/print-verso.css'), 'utf8');
+  assert.match(
+    css,
+    /#print-verso[^}]*grid-template-columns/,
+    'the verso container is not laid out in two columns',
+  );
+  assert.doesNotMatch(
+    css,
+    /#references\s*\{[^}]*break-before/,
+    'the references still carry their own page break, inside the recto grid',
+  );
 });

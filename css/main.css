@@ -59,6 +59,13 @@
   color: var(--secondary-color);
 }
 
+/* Carried for the printed sheet only — the PDF sets a calendar and a map
+   marker before these, the page never has. See css/print-entry.css. */
+.print-icon,
+.print-org {
+  display: none;
+}
+
 .date,
 .location {
   font-size: 0.9em;

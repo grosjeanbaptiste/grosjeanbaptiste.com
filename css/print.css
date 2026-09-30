@@ -6,16 +6,21 @@
  * config.js. scripts/lib/print-parity.test.js pins those constants so a change
  * on the LaTeX side cannot silently drift from this file.
  *
+ * Everything CSS can carry across is carried across: the palette, the page
+ * geometry, the column split, the type scale, the banner, the photo and the
+ * shape of a work entry. What moves a node between containers — the banner
+ * itself, Education into the narrow column, the volunteering onto the verso —
+ * is js/print-layout.js, since CSS cannot.
+ *
  * What this CANNOT reproduce, by construction:
  *   - TeX's line breaking, hyphenation and page-breaking algorithms, so line
- *     endings and page boundaries will differ from the PDF;
- *   - the full-width header: the LaTeX CV puts name + contact details in a
- *     banner above both columns, while the page nests them inside the sidebar,
- *     and CSS cannot move a node between containers;
- *   - Education in the left column: LaTeX renders it there, the page renders it
- *     in the main column, same limitation;
- *   - Roboto Slab / Lato, which are not self-hosted here. They are asked for
- *     first and fall back to the self-hosted Roboto.
+ *     endings and page boundaries will differ from the PDF. That is the whole
+ *     of the remaining difference, and no stylesheet closes it.
+ *
+ * Two divergences are deliberate rather than technical: the sheet prints on
+ * white instead of altacv's grey \pagecolor (a full-bleed wash costs ink and
+ * buys no legibility), and consecutive roles at one employer are not collapsed
+ * into the PDF's continuation form.
  */
 
 @media print {
@@ -64,12 +69,19 @@
        letting the browser drop every background to save ink. */
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    /* \documentclass[8pt]{altacv} — but a browser lays text out less densely
-       than TeX, so at 8pt the recto spills onto a second sheet and the CV
-       stops being a two-page document. 7.7pt is the largest size that still
-       fits; 7.5pt keeps a margin so one more entry does not silently push it
-       to three pages. scripts/lib/print-fit.test.js enforces the fit. */
-    font-size: 6.0pt;
+    /* \documentclass[8pt]{altacv}. The sheet ran at 6pt for as long as the
+       identity block sat in the 30% column: nine stacked contact rows and a
+       two-line name made that column so tall that only shrinking everything
+       kept the recto on one page. With the block lifted into the banner the
+       column fits at the PDF's own size, which is the point — a CV set a
+       third smaller than the PDF it mirrors does not look like it.
+       scripts/lib/print-fit.test.js prints and counts, in both engines. */
+    font-size: 8pt;
+    /* TeX hyphenates — ragged2e turns justification off, not hyphenation — and
+       a browser does not unless asked. That difference is lines, not
+       millimetres, on a sheet whose main column runs to the last one. Every
+       page carries its own lang, so the right dictionary is used. */
+    hyphens: auto;
     font-family: "Lato", "Roboto", sans-serif;
     margin: 0;
     padding: 0;
@@ -83,12 +95,6 @@
   .cv-download-button,
   .cv-print-button {
     display: none !important;
-  }
-
-  /* Education is moved into the narrow column for printing, so it takes the
-     sidebar's compact measure rather than the main column's. */
-  .sidebar #education {
-    font-size: 0.95em;
   }
 
   /* \columnratio{0.30} with \geometry{columnsep=0.6cm} */

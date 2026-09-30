@@ -14,6 +14,7 @@ module.exports = {
   typicalDay: '我的一天',
   type: '类型',
   keywords: '关键词',
+  updated: '更新于',
   driverLicense: 'B类驾照',
   dailyLifeLabels: {
     sleep: '睡眠',

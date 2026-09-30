@@ -1,6 +1,7 @@
 const I18N = require('../i18n');
-const { printedWork, printText, PRINT_PLAN } = require('../print-selection');
-const { escapeHtml, dateRangeHtml } = require('../format');
+const { printedWork, printText, printHeading, PRINT_PLAN } = require('../print-selection');
+const { escapeHtml, dateRangeHtml, wrapPictographs } = require('../format');
+const { icon } = require('../icons');
 const { indentLines } = require('../markers');
 const { appendEmbeds } = require('./embeds');
 
@@ -32,10 +33,19 @@ function renderExperienceItem(w, lang, ctx, t, opts = { printed: true }) {
     : escapeHtml(w.position);
   const parts = [
     `<article class="experience-item${opts.printed ? '' : ' print-hidden'}">`,
-    `  <h3>${positionLabel}${w.company ? ` | ${companyHtml}` : ''}</h3>`,
-    `  <p class="date">${dateRangeHtml(w.startDate, w.endDate, lang)}</p>`,
+    // Position and employer each in their own span, with the pipe in a third:
+    // the PDF sets the position left and the employer hard right on the same
+    // line, so the print sheet has to be able to address the three separately.
+    `  <h3><span class="position">${positionLabel}</span>${w.company ? `<span class="h3-sep"> | </span>${companyHtml}` : ''}</h3>`,
+    // \cvevent sets \faCalendar before the dates and \faMapMarker before the
+    // location, both in accent. .print-icon keeps them off the screen, where
+    // the page has never shown them.
+    `  <p class="date"><span class="print-icon">${icon('calendar')}</span>${dateRangeHtml(w.startDate, w.endDate, lang)}</p>`,
   ];
-  if (w.location) parts.push(`  <p class="location">${escapeHtml(w.location)}</p>`);
+  if (w.location)
+    parts.push(
+      `  <p class="location"><span class="print-icon">${icon('map-marker-alt')}</span>${escapeHtml(w.location)}</p>`,
+    );
   if (w.summary) {
     // The PDF clips summaries to its fit plan's budget. Carry that shorter text
     // on the element so js/print-layout.js can swap it in for the print only —
@@ -44,7 +54,11 @@ function renderExperienceItem(w, lang, ctx, t, opts = { printed: true }) {
     const attr = clipped ? ` data-print-text="${escapeHtml(clipped)}"` : '';
     parts.push(`  <p${attr}>${escapeHtml(w.summary).replace(/\n/g, '<br>')}</p>`);
   }
-  for (const h of w.highlights || []) parts.push(`  <p>• ${escapeHtml(h)}</p>`);
+  // .entry-highlight: sections/work.js never renders `highlights`, so these
+  // lines exist on the page only. Classed so the print sheet can drop them
+  // instead of printing a technology list the PDF has nowhere.
+  for (const h of w.highlights || [])
+    parts.push(`  <p class="entry-highlight">• ${escapeHtml(h)}</p>`);
   // Skills hang off the projects now. The entry-level cluster survives only
   // for an experience that references no project at all — otherwise there is
   // nowhere else for its `uses` to show.
@@ -76,7 +90,7 @@ function renderReferenceArticle(r, idx) {
   return [
     `<article class="reference-item" id="ref-${idx}">`,
     `  <p><strong>${escapeHtml(r.name)}</strong></p>`,
-    `  <blockquote>${escapeHtml(r.reference).replace(/\n/g, '<br>')}</blockquote>`,
+    `  <blockquote>${wrapPictographs(escapeHtml(r.reference).replace(/\n/g, '<br>'))}</blockquote>`,
     '</article>',
   ].join('\n');
 }
@@ -94,12 +108,19 @@ function ctxOf(resume) {
 // Wrap a list of entries in a <section id>; each item is rendered then indented
 // two spaces to match the hand-written HTML nesting. Returns null (skipped
 // downstream) when the section is empty.
-function renderItemSection(id, heading, entries, renderItem) {
+function renderItemSection(id, heading, entries, renderItem, printHeadingText = null) {
   if (!entries?.length) return null;
   const items = entries.map((e, i) => indentLines(renderItem(e, i), 2)).join('\n');
-  return [`<section id="${id}">`, `  <h2>${escapeHtml(heading)}</h2>`, items, '</section>'].join(
-    '\n',
-  );
+  // The PDF gives a few sections a shorter title than the site does
+  // ("Experience" against "Work Experience"); data-print-text lets the sheet
+  // use the PDF's while the page keeps its own.
+  const attr = printHeadingText ? ` data-print-text="${escapeHtml(printHeadingText)}"` : '';
+  return [
+    `<section id="${id}">`,
+    `  <h2${attr}>${escapeHtml(heading)}</h2>`,
+    items,
+    '</section>',
+  ].join('\n');
 }
 
 function renderWorkSection(resume, lang, t) {
@@ -108,8 +129,12 @@ function renderWorkSection(resume, lang, t) {
   // the page keeps the full history on screen, css/print-type.css hides the
   // marked ones so the printed sheet carries exactly the PDF's selection.
   const printed = printedWork(resume);
-  return renderItemSection('experience', t.experience, resume.work, (w) =>
-    renderExperienceItem(w, lang, ctx, t, { printed: printed.has(w) }),
+  return renderItemSection(
+    'experience',
+    t.experience,
+    resume.work,
+    (w) => renderExperienceItem(w, lang, ctx, t, { printed: printed.has(w) }),
+    printHeading('experience', t, lang),
   );
 }
 

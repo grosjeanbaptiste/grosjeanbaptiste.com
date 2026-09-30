@@ -11,22 +11,45 @@ const {
 
 function renderContactInfo(b, t, lang, degreeLines, profileLines) {
   const phoneDigits = (b.phone || '').replace(/[^+\d]/g, '');
+  // The PDF writes the country out in the page's language; the screen keeps the
+  // ISO code. data-print-text is this repo's existing way of letting the sheet
+  // say what the PDF says — carried on a span, not on the <p>, so the swap
+  // cannot take the icon with it.
+  const placeShort = [b.location?.city, b.location?.countryCode].filter(Boolean).join(', ');
+  const placeLong = [b.location?.city, b.location?.region].filter(Boolean).join(', ');
   return [
     '<div class="contact-info">',
     `  <h1>${escapeHtml(b.name)}</h1>`,
     `  <h2>${escapeHtml(b.label)}</h2>`,
     ...degreeLines,
-    `  <p>${icon('envelope')} <a href="mailto:${escapeHtml(b.email)}">${escapeHtml(b.email)}</a></p>`,
-    `  <p>${icon('phone')} <a href="tel:${escapeHtml(phoneDigits)}">${escapeHtml(b.phone)}</a></p>`,
-    `  <p>${icon('map-marker-alt')} ${escapeHtml(b.location?.city)}, ${escapeHtml(b.location?.countryCode)}</p>`,
-    ...profileLines,
-    `  <p>${icon('car')} ${escapeHtml(t.driverLicense)}</p>`,
+    // Grouped the way \personalinfo groups them: the PDF banner runs
+    // email/phone/location on one line and the profiles plus the licence on the
+    // next. Real wrappers rather than a positional selector, so the split
+    // survives a new profile being added. On screen they stay stacked blocks.
+    '  <div class="contact-primary">',
+    `    <p>${icon('envelope')} <a href="mailto:${escapeHtml(b.email)}">${escapeHtml(b.email)}</a></p>`,
+    `    <p>${icon('phone')} <a href="tel:${escapeHtml(phoneDigits)}">${escapeHtml(b.phone)}</a></p>`,
+    `    <p>${icon('map-marker-alt')} <span class="contact-place" data-print-text="${escapeHtml(placeLong)}">${escapeHtml(placeShort)}</span></p>`,
+    '  </div>',
+    '  <div class="contact-profiles">',
+    ...profileLines.map((line) => `  ${line}`),
+    `    <p>${icon('car')} ${escapeHtml(t.driverLicense)}</p>`,
+    '  </div>',
     // Machine-readable views — XML for Firefox / registry for JSON Resume.
     // These used to live in the redundant standalone Contact section at
     // the bottom of the page; folded into the sidebar so the CV has a
     // single point of contact information.
-    `  <p>${icon('code')} <a href="/assets/data/resume-${lang}.xml">${escapeHtml(t.xmlResume)}</a></p>`,
-    `  <p>${icon('code-branch')} <a href="https://registry.jsonresume.org/grosjeanbaptiste" rel="external noopener" target="_blank">${escapeHtml(t.jsonRegistry)}</a></p>`,
+    //
+    // .contact-machine: the PDF's \personalinfo has no equivalent, so the print
+    // stylesheet drops the pair rather than the sheet carrying links the CV it
+    // is meant to mirror does not have.
+    `  <p class="contact-machine">${icon('code')} <a href="/assets/data/resume-${lang}.xml">${escapeHtml(t.xmlResume)}</a></p>`,
+    `  <p class="contact-machine">${icon('code-branch')} <a href="https://registry.jsonresume.org/grosjeanbaptiste" rel="external noopener" target="_blank">${escapeHtml(t.jsonRegistry)}</a></p>`,
+    // The PDF closes its header on a centred "Updated <date>" line. Printed
+    // only, and the date is filled in by js/print-layout.js at print time: a
+    // build-time date here would put all six pages into every regeneration
+    // commit, and would go stale against the PDF anyway.
+    `  <p class="print-updated">${icon('redo')} ${escapeHtml(t.updated)} <time></time></p>`,
     '</div>',
   ].join('\n');
 }

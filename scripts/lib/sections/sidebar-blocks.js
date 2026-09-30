@@ -34,7 +34,13 @@ function renderSkillsBlocks(resume, t) {
 
 function renderLanguagesBlock(resume, t) {
   const items = (resume.languages || [])
-    .map((l) => `  <p>${escapeHtml(l.language)}: ${escapeHtml(l.fluency)}</p>`)
+    // Three spans, because the PDF writes this line differently: the language
+    // bold in emphasis, an em dash instead of a colon, the fluency in accent.
+    // The page keeps "Language: fluency"; css/print-density.css re-shapes it.
+    .map(
+      (l) =>
+        `  <p><span class="language-name">${escapeHtml(l.language)}</span><span class="language-sep">: </span><span class="language-level">${escapeHtml(l.fluency)}</span></p>`,
+    )
     .join('\n');
   return ['<div class="languages">', `  <h2>${escapeHtml(t.languages)}</h2>`, items, '</div>'].join(
     '\n',
