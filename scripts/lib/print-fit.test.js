@@ -28,6 +28,7 @@ const path = require('node:path');
 const { execFile } = require('node:child_process');
 const { promisify } = require('node:util');
 const { serve, countPages, EXPECTED_PAGES } = require('./print-fit-harness');
+const { printedWithRetry } = require('./print-fit-retry');
 
 const run = promisify(execFile);
 
@@ -56,6 +57,36 @@ function findChrome() {
 
 const chrome = findChrome();
 
+// One launch. Reports what is missing rather than throwing it, so the retry can
+// tell a starved machine from a layout regression — a rejection from Chrome
+// itself (a 60s kill, a non-zero exit) belongs to the same resource class and
+// travels back as a message too, intact, for the final report to name.
+async function printOnce(bin, { pdf, profile, url }) {
+  fs.rmSync(pdf, { force: true });
+  // execFile, not spawnSync: the server lives in this process, and a
+  // synchronous spawn would block the event loop so it could never answer
+  // Chrome — the run would deadlock until the timeout.
+  const crashed = await run(
+    bin,
+    [
+      '--headless',
+      '--disable-gpu',
+      '--no-sandbox',
+      `--user-data-dir=${profile}`,
+      '--virtual-time-budget=6000',
+      '--no-pdf-header-footer',
+      `--print-to-pdf=${pdf}`,
+      url,
+    ],
+    { timeout: 60000 },
+  ).then(
+    () => null,
+    (err) => `Chrome failed to print — ${err.message}`,
+  );
+  if (crashed) return crashed;
+  return fs.existsSync(pdf) ? null : 'Chrome produced no PDF';
+}
+
 test('the printed CV is two pages in every language', async (t) => {
   if (!chrome) {
     if (process.env.CI) {
@@ -71,31 +102,21 @@ test('the printed CV is two pages in every language', async (t) => {
   const out = fs.mkdtempSync(path.join(os.tmpdir(), 'cv-print-'));
   try {
     for (const page of PAGES) {
-      const pdf = path.join(out, `${page.replace('/', '') || 'en'}.pdf`);
-      // execFile, not spawnSync: the server lives in this process, and a
-      // synchronous spawn would block the event loop so it could never answer
-      // Chrome — the run would deadlock until the timeout.
-      await run(
-        chrome,
-        [
-          '--headless',
-          '--disable-gpu',
-          '--no-sandbox',
-          // A fresh profile per language. Sharing the developer's contends with
-          // their running Chrome; sharing one across the six launches contends
-          // with the previous launch, whose singleton lock can outlive the
-          // process and make the next one wait indefinitely.
-          `--user-data-dir=${path.join(out, `profile-${page.replace('/', '') || 'en'}`)}`,
-          '--virtual-time-budget=6000',
-          '--no-pdf-header-footer',
-          `--print-to-pdf=${pdf}`,
-          `http://127.0.0.1:${port}/${page}`,
-        ],
-        { timeout: 60000 },
-      ).catch((err) => {
-        throw new Error(`/${page}: Chrome failed to print — ${err.message}`);
-      });
-      assert.ok(fs.existsSync(pdf), `/${page}: Chrome produced no PDF`);
+      const name = page.replace('/', '') || 'en';
+      const pdf = path.join(out, `${name}.pdf`);
+      // A browser that produced nothing gets one more launch and says so; the
+      // page count below is never retried. See print-fit-retry.js.
+      await printedWithRetry(`/${page}`, (attempt) =>
+        printOnce(chrome, {
+          pdf,
+          // A fresh profile per launch. Sharing the developer's contends with
+          // their running Chrome; sharing one across launches contends with the
+          // previous one, whose singleton lock can outlive the process and make
+          // the next launch wait indefinitely — including the retry's.
+          profile: path.join(out, `profile-${name}-${attempt}`),
+          url: `http://127.0.0.1:${port}/${page}`,
+        }),
+      );
       const pages = countPages(pdf);
       assert.equal(
         pages,
