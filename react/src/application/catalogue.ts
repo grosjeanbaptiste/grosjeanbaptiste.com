@@ -3,7 +3,7 @@
 import { entriesOf } from '../domain/entries';
 import type { Entry, EntryKind } from '../domain/entry';
 import { Period } from '../domain/period';
-import type { Basics, Resume, ResumeDocument } from '../domain/resume';
+import type { Basics, Resume, ResumeDocument, ViewLink } from '../domain/resume';
 
 const newestFirst = (a: Entry, b: Entry) =>
   a.period && b.period ? Period.newestFirst(a.period, b.period) : 0;
@@ -16,12 +16,15 @@ export class Catalogue {
     private readonly ui: Readonly<Record<string, unknown>>,
     readonly resume: Resume,
     readonly entries: readonly Entry[],
+    readonly viewsTitle: string,
+    readonly views: readonly ViewLink[],
   ) {
     this.byId = new Map(entries.map((e) => [e.id, e]));
   }
 
   static from(document: ResumeDocument): Catalogue {
-    return new Catalogue(document.lang, document.ui, document.resume, entriesOf(document.resume));
+    const { lang, ui, resume, viewsTitle, views } = document;
+    return new Catalogue(lang, ui, resume, entriesOf(resume), viewsTitle, views);
   }
 
   get basics(): Basics {

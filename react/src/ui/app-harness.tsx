@@ -2,6 +2,7 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, useLocation } from 'react-router';
+import { aViews } from '../domain/fixture-views';
 import { aResume } from '../domain/fixtures';
 import type { ResumeDocument } from '../domain/resume';
 import type { ResumeSource } from '../domain/resume-source';
@@ -25,7 +26,7 @@ export class InMemorySource implements ResumeSource {
   async load(lang: string): Promise<ResumeDocument> {
     this.requested.push(lang);
     if (this.failing) throw new Error('offline');
-    return { lang, ui: aUi(), resume: aResume() };
+    return { lang, ui: aUi(), resume: aResume(), ...aViews(lang) };
   }
 }
 

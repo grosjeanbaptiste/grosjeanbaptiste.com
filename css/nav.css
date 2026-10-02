@@ -6,7 +6,8 @@ nav {
   -webkit-backdrop-filter: blur(10px);
   padding: 6px 4vw;
   position: fixed;
-  top: 0;
+  /* Below the views bar (views-bar.css), which sits above every display. */
+  top: var(--views-bar-h, 0);
   left: 0;
   right: 0;
   z-index: 1000;
@@ -144,7 +145,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   nav ul {
     position: fixed;
-    top: 70px;
+    top: calc(70px + var(--views-bar-h, 0px));
     left: 0;
     right: 0;
     background-color: var(--card-background);

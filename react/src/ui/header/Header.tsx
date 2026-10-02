@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { useReading } from '../context';
-import { classicPath, homePath } from '../paths';
+import { homePath } from '../paths';
 import { LangMenu } from './LangMenu';
 
 const isMac = () => /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
@@ -27,9 +27,6 @@ export function Header({ onSearch }: { onSearch: () => void }) {
         >
           <span aria-hidden="true">{theme === 'dark' ? '☾' : '☀'}</span>
         </button>
-        <a className="topbar-classic" href={classicPath(lang)}>
-          {strings.classicSite}
-        </a>
       </nav>
     </header>
   );

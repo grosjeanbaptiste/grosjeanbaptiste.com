@@ -9,7 +9,7 @@ const {
   renderProjectsBlock,
 } = require('./sidebar-blocks');
 
-function renderContactInfo(b, t, lang, degreeLines, profileLines) {
+function renderContactInfo(b, t, degreeLines, profileLines) {
   const phoneDigits = (b.phone || '').replace(/[^+\d]/g, '');
   // The PDF writes the country out in the page's language; the screen keeps the
   // ISO code. data-print-text is this repo's existing way of letting the sheet
@@ -35,7 +35,8 @@ function renderContactInfo(b, t, lang, degreeLines, profileLines) {
     ...profileLines.map((line) => `  ${line}`),
     `    <p>${icon('car')} ${escapeHtml(t.driverLicense)}</p>`,
     '  </div>',
-    // Machine-readable views — XML for Firefox / registry for JSON Resume.
+    // The JSON Resume registry: an external rendering of the canonical JSON.
+    // The site's own displays (XSLT included) are in the views bar.
     // These used to live in the redundant standalone Contact section at
     // the bottom of the page; folded into the sidebar so the CV has a
     // single point of contact information.
@@ -43,7 +44,6 @@ function renderContactInfo(b, t, lang, degreeLines, profileLines) {
     // .contact-machine: the PDF's \personalinfo has no equivalent, so the print
     // stylesheet drops the pair rather than the sheet carrying links the CV it
     // is meant to mirror does not have.
-    `  <p class="contact-machine">${icon('code')} <a href="/assets/data/resume-${lang}.xml">${escapeHtml(t.xmlResume)}</a></p>`,
     `  <p class="contact-machine">${icon('code-branch')} <a href="https://registry.jsonresume.org/grosjeanbaptiste" rel="external noopener" target="_blank">${escapeHtml(t.jsonRegistry)}</a></p>`,
     // The PDF closes its header on a centred "Updated <date>" line. Printed
     // only, and the date is filled in by js/print-layout.js at print time: a
@@ -87,7 +87,7 @@ function generateSidebar(resume, lang) {
 
   const order = resume.meta?.sidebarOrder ?? ['languages', 'skills'];
   const blocks = order.map((name) => SIDEBAR_RENDERERS[name]?.(resume, t)).filter(Boolean);
-  return [renderContactInfo(b, t, lang, degreeLines, profileLines), ...blocks].join('\n\n');
+  return [renderContactInfo(b, t, degreeLines, profileLines), ...blocks].join('\n\n');
 }
 
 module.exports = { generateSidebar };

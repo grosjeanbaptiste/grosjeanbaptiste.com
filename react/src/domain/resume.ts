@@ -70,8 +70,18 @@ export interface Resume {
   readonly references?: readonly { readonly name: string; readonly reference: string }[];
 }
 
+// One display of the CV (classic, interactive, XSLT…), from scripts/lib/views.js.
+export interface ViewLink {
+  readonly id: string;
+  readonly href: string;
+  readonly label: string;
+  readonly note?: string;
+}
+
 export interface ResumeDocument {
   readonly lang: string;
   readonly ui: Readonly<Record<string, unknown>>;
   readonly resume: Resume;
+  readonly viewsTitle: string;
+  readonly views: readonly ViewLink[];
 }

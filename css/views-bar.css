@@ -1,0 +1,115 @@
+/* The views bar — one stylesheet for every display of the CV (classic site,
+ * interactive /app/, both XSLT themes), so the buttons look the same
+ * everywhere. Colours come from variables.css (the DSL palette), which each
+ * display loads; the theme follows [data-theme] on <html> like the rest.
+ *
+ * The bar is fixed at the very top and every display makes room for it with
+ * --views-bar-h. Selectors are `nav.views-bar …` on purpose: the classic site
+ * styles the bare `nav` element (fixed, flex, a dropdown `nav ul` on mobile),
+ * and those rules must not reach this bar. */
+
+:root {
+  --views-bar-h: 2.25rem;
+}
+
+body {
+  padding-top: var(--views-bar-h);
+}
+
+nav.views-bar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1100;
+  height: var(--views-bar-h);
+  min-height: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 0 clamp(0.75rem, 3vw, 2rem);
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: var(--card-background);
+  border-bottom: 0.0625rem solid var(--border-color);
+  box-shadow: none;
+  backdrop-filter: none;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+nav.views-bar .views-bar-title {
+  color: var(--muted-color);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+nav.views-bar ul {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: none;
+  box-shadow: none;
+  transform: none;
+  opacity: 1;
+}
+
+nav.views-bar li {
+  position: static;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+
+nav.views-bar a.views-bar-link {
+  display: inline-block;
+  width: auto;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 0.3rem 0.75rem;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 999rem;
+  background: none;
+  color: var(--text-color);
+  font-size: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+}
+
+nav.views-bar a.views-bar-link::after {
+  content: none;
+}
+
+nav.views-bar a.views-bar-link:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+nav.views-bar a.views-bar-link[aria-current="page"] {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--on-accent-color);
+}
+
+@media print {
+  nav.views-bar {
+    display: none;
+  }
+
+  body {
+    padding-top: 0;
+  }
+}

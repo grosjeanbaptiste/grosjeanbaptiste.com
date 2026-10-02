@@ -22,6 +22,14 @@ module.exports = {
   printPdf: 'Imprimer / PDF',
   dailyLifeUnit: 'h',
   dailyLifeAria: 'Répartition typique sur 24 h',
+  views: {
+    title: 'Affichages',
+    classic: 'Classique',
+    interactive: 'Interactif',
+    xsltRich: 'XSLT riche',
+    xsltMinimal: 'XSLT minimal',
+    pdf: 'PDF',
+  },
   nav: {
     about: 'À propos',
     experience: 'Expérience',
@@ -29,6 +37,5 @@ module.exports = {
     projects: 'Projets',
     references: 'Références',
     contact: 'Contact',
-    interactive: 'CV interactif',
   },
 };
