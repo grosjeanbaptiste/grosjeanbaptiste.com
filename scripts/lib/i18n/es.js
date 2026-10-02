@@ -29,5 +29,6 @@ module.exports = {
     projects: 'Proyectos',
     references: 'Referencias',
     contact: 'Contacto',
+    interactive: 'CV interactivo',
   },
 };
