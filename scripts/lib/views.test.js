@@ -72,6 +72,14 @@ for (const lang of LANGS) {
       assert.ok(html.includes('href="/css/variables.css"'), 'the bar would miss the DSL palette');
     });
 
+    // fonts.css serves Roboto, which sits in the XSLT theme's own font stack
+    // behind -apple-system: harmless on macOS, but on Linux it swaps Arial for
+    // Roboto across the whole page and re-paginates the printed sheet (CI's
+    // print-fit-xslt.test.js caught a third page). The bar must not do that.
+    test(`the ${theme} ${lang} page leaves the theme's own fonts alone`, () => {
+      assert.doesNotMatch(xslt(theme, lang), /href="\/css\/fonts\.css"/);
+    });
+
     test(`the ${theme} ${lang} page drops its own ⇄ theme switch`, () => {
       assert.doesNotMatch(xslt(theme, lang), /⇄/);
     });
@@ -99,4 +107,10 @@ test('the classic site loads the shared sheet', () => {
 test('the bar never prints', () => {
   const css = fs.readFileSync(path.join(ROOT, 'css/views-bar.css'), 'utf8');
   assert.match(css, /@media print\s*\{[^}]*\.views-bar[^{]*\{[^}]*display:\s*none/);
+});
+
+test('the bar uses the system font, so it looks the same without any web font', () => {
+  const css = fs.readFileSync(path.join(ROOT, 'css/views-bar.css'), 'utf8');
+  assert.match(css, /font-family:\s*system-ui, sans-serif;/);
+  assert.doesNotMatch(css, /Roboto/);
 });

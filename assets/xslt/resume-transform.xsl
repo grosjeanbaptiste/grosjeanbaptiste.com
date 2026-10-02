@@ -576,9 +576,10 @@
             } catch (e) {}
           })();
         </script>
-        <!-- Shared with every display: fonts, DSL palette, views bar. After the
-             inline style so the bar's body offset is not overridden. -->
-        <link rel="stylesheet" href="/css/fonts.css"/>
+        <!-- Shared with every display: DSL palette, views bar. After the inline
+             style so the bar's body offset is not overridden. Not fonts.css:
+             its Roboto sits in this theme's own font stack and would re-typeset
+             (and re-paginate) the page wherever -apple-system is missing. -->
         <link rel="stylesheet" href="/css/variables.css"/>
         <link rel="stylesheet" href="/css/views-bar.css"/>
       </head>

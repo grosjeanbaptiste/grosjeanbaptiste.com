@@ -34,7 +34,8 @@ nav.views-bar {
   border-bottom: 0.0625rem solid var(--border-color);
   box-shadow: none;
   backdrop-filter: none;
-  font-family: "Roboto", system-ui, sans-serif;
+  /* The system font: every display has it, so the bar looks the same in all. */
+  font-family: system-ui, sans-serif;
   font-size: 0.8rem;
   line-height: 1;
   white-space: nowrap;
