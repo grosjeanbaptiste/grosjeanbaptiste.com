@@ -1,0 +1,43 @@
+/* Browsing through the timeline: the open entry's bar and the hover preview. */
+/* The open entry's bar. */
+.timeline-bar[aria-current="page"] {
+  z-index: 2;
+  outline: 0.15rem solid var(--app-text);
+  outline-offset: 0.1rem;
+  opacity: 1;
+}
+
+.timeline-preview {
+  position: absolute;
+  /* Above the sticky lane labels (z-index 4) it may overlap. */
+  z-index: 5;
+  top: calc((var(--row) + 1) * var(--row-height));
+  transform: translateX(var(--shift));
+  display: grid;
+  gap: 0.15rem;
+  width: max-content;
+  max-width: min(22rem, 70vw);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.8em;
+  background: var(--app-surface);
+  border: var(--hairline) solid var(--app-line);
+  border-radius: 0.6rem;
+  box-shadow: var(--shadow);
+  pointer-events: none;
+  white-space: normal;
+  animation: palette-fade 0.12s var(--ease);
+}
+
+/* In the last lane, above the bar: below it, the scrolling frame would clip it. */
+.timeline-preview[data-place="above"] {
+  top: auto;
+  bottom: calc((var(--rows) - var(--row)) * var(--row-height));
+}
+
+.timeline-preview span {
+  color: var(--app-muted);
+}
+
+.timeline-preview .timeline-preview-skills {
+  color: var(--app-accent);
+}

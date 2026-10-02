@@ -6,7 +6,6 @@ import { type Lang, isLang } from '../application/lang';
 import type { ResumeSource } from '../domain/resume-source';
 import { NotFound } from './NotFound';
 import { ReadingProvider } from './context';
-import { EntryPage } from './entry/EntryPage';
 import { Header } from './header/Header';
 import { ViewsBar } from './header/ViewsBar';
 import { HomePage } from './home/HomePage';
@@ -61,7 +60,8 @@ function LoadedShell({ source, today, lang }: { source: ResumeSource; today: Dat
       <main className="page">
         <Routes>
           <Route index element={<HomePage />} />
-          <Route path=":kind/:id" element={<EntryPage />} />
+          {/* The same page, with that entry open under the timeline. */}
+          <Route path=":kind/:id" element={<HomePage />} />
           <Route path="*" element={<NotFound strings={strings} />} />
         </Routes>
       </main>

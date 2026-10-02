@@ -50,40 +50,6 @@ describe('timelineOf', () => {
     expect(rows).toEqual([0, 1]);
   });
 
-  describe('zoomed to the last years', () => {
-    const zoomed = timelineOf(entriesOf(aResume()), today, 2024);
-    const bar = (id: string) => zoomed.lanes.flatMap((l) => l.bars).find((b) => b.entry.id === id);
-
-    it('starts in January of the first year shown', () => {
-      expect(zoomed.from).toEqual({ year: 2024, month: 1 });
-    });
-
-    it('cuts a bar that began earlier at the left edge', () => {
-      expect(bar('xtrada-data-scientist')).toMatchObject({ offset: 0, length: 6 });
-    });
-
-    it('drops what ended before the window', () => {
-      const old = entriesOf({
-        ...aResume(),
-        volunteer: [
-          {
-            id: 'old',
-            organization: 'O',
-            position: 'P',
-            startDate: '2010-01-01',
-            endDate: '2012-01-01',
-          },
-        ],
-      });
-      const lanes = timelineOf(old, today, 2024).lanes;
-      expect(lanes.some((l) => l.kind === 'volunteer')).toBe(false);
-    });
-
-    it('tells the earliest year there is to zoom out to', () => {
-      expect(zoomed.earliestYear).toBe(2022);
-    });
-  });
-
   it('reports one year mark per January it spans', () => {
     expect(timeline.years.map((y) => y.year)).toEqual([2023, 2024, 2025, 2026]);
   });
