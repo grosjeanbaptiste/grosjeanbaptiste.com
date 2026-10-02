@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static personal portfolio/resume website for Baptiste Grosjean, hosted on GitHub Pages. The site is built with vanilla HTML, CSS, and JavaScript without any build process or package manager dependencies.
+This is a static personal portfolio/resume website for Baptiste Grosjean, hosted on GitHub Pages. The site is built with vanilla HTML, CSS, and JavaScript without any build process or package manager dependencies — except the React view at `/app/`, which has its own build (see "The React view" below).
 
 ## Architecture
 
@@ -108,6 +108,18 @@ LLM/agent-discovery files alongside the site:
 - `llms-full.txt` — flat Markdown digest of the CV
 - `robots.txt` — explicit allow for major LLM crawlers + sitemap reference
 - `sitemap.xml` — XML sitemap including the JSON/XML/PDF data files
+
+### The React view (`/app/`)
+
+A third view of the same CV, next to the static HTML site and the XSLT themes: an interactive one — ⌘K command palette, filter by skill (shareable `?skill=` URLs), a zoomable timeline, and one page per entry (`/app/{lang}/{kind}/{id}`). `dsl/resume.grosjean` stays the single source of truth; the app only re-reads its compiled output.
+
+- **Source** in `react/` (Vite + React + TypeScript, its own `package.json`; Node 24 — `scripts/export-data.mjs` imports the domain's `.ts` slugger natively).
+- **Build** in `app/`, **committed** like the localized `index.html` files, because GitHub Pages serves the repository as-is. Do not hand-edit `app/`: `cd react && npm run build` rewrites it whole.
+- `npm run build` = `scripts/export-data.mjs` (merges canonical + overlay + overrides per language with the same `scripts/lib/data.js` / `site-overrides.js` the static generator uses, and gives every entry a stable id taken from the **English** entry, so `/app/fr/project/x` and `/app/en/project/x` are one page in two languages) → type check → `vite build` → `scripts/route-pages.mjs` (one `index.html` per route with a localized title and description, since Pages cannot rewrite URLs).
+- Layers: `src/domain/` (pure: `Entry`, `Period`, search, skill usage, timeline — no React, no I/O, the clock is passed in), `src/application/` (`Catalogue` read model, languages), `src/infrastructure/` (`HttpResumeSource`, the adapter behind the `ResumeSource` port), `src/ui/` (React). Section titles come from the exported `scripts/lib/i18n` strings; strings only the app needs live in `src/ui/strings.ts`.
+- The fonts and the DSL-generated palette are **not copied**: a Vite plugin links `/css/fonts.css` and `/css/variables.css` after HTML processing and, in dev, serves them from the repository root. The theme is stored under the same `theme` key as `js/theme.js`, so the choice follows the visitor across views.
+- Tests: `cd react && npm test` (Vitest; specs are `*.spec.*` so the root `node --test` never picks them up). `src/infrastructure/exported-data.spec.ts` builds the catalogue of every exported language, so a dangling project reference or an id that differs between languages fails there. `scripts/lib/react-app.test.js` guards the CI wiring: the `react` job in `test.yml`, and the regeneration workflow rebuilding **and committing** `app/`.
+- Dev: `cd react && npm run dev` → <http://localhost:5173/app/>.
 
 ### Local Development
 Simply open `index.html` in a web browser or serve the directory with any static web server:

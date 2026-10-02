@@ -50,3 +50,29 @@ jobs:
 
       - name: Test suite
         run: npm test
+
+  # The React view (react/, served at /app/). Its own job: it needs a Node that
+  # runs TypeScript natively (the data export imports the domain's .ts slugger)
+  # and its own dependencies, neither of which the main suite wants.
+  react:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: react
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: react/package-lock.json
+
+      - name: Dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Test suite
+        run: npm test

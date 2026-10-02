@@ -1,0 +1,133 @@
+.hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(1.25rem, 4vw, 3rem);
+  align-items: start;
+  padding-top: clamp(1rem, 4vw, 3rem);
+}
+
+.hero-photo {
+  width: clamp(6rem, 16vw, 10rem);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.2rem solid var(--app-surface);
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 1.4rem + 3vw, 3.4rem);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-label {
+  margin: 0.25rem 0 0;
+  font-size: 1.15em;
+  color: var(--app-accent);
+  font-weight: 500;
+}
+
+.hero-location {
+  margin: 0.25rem 0 1rem;
+  color: var(--app-muted);
+}
+
+.hero-summary {
+  max-width: 62ch;
+  margin: 0 0 0.75rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  list-style: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 999rem;
+  border: var(--hairline) solid var(--app-line);
+  background: var(--app-surface);
+  color: var(--app-text);
+  text-decoration: none;
+  transition: transform 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.button:hover {
+  transform: translateY(-0.1rem);
+  border-color: var(--app-accent);
+}
+
+.button-primary {
+  background: var(--app-accent);
+  border-color: var(--app-accent);
+  color: var(--on-accent-color);
+  font-weight: 600;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  font: inherit;
+  font-size: 0.9em;
+  color: var(--app-text);
+  background: var(--app-surface);
+  border: var(--hairline) solid var(--app-line);
+  border-radius: 999rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.chip:hover {
+  border-color: var(--app-accent);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--app-accent);
+  border-color: var(--app-accent);
+  color: var(--on-accent-color);
+}
+
+.chip-count {
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+.chip-more {
+  border-style: dashed;
+  color: var(--app-muted);
+}
+
+.skill-filter-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: baseline;
+  margin: 1rem 0 0;
+  font-weight: 500;
+}
+
+@media (max-width: 40rem) {
+  .hero {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
