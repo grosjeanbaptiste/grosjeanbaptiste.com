@@ -2,7 +2,7 @@
 import { useLocation, useNavigate } from 'react-router';
 import { LANGS } from '../../application/lang';
 import { useReading } from '../context';
-import { LANG_NAMES, classicPath, pdfPath, withLang } from '../paths';
+import { LANG_NAMES, pdfPath, withLang } from '../paths';
 
 export interface PaletteAction {
   readonly id: string;
@@ -32,10 +32,14 @@ export function usePaletteActions(): PaletteAction[] {
       hint: 'PDF',
       run: () => window.open(pdfPath(lang), '_blank', 'noopener'),
     },
-    {
-      id: 'classic',
-      label: strings.classicSite,
-      run: () => window.location.assign(classicPath(lang)),
-    },
+    // The other displays of the CV — the same list the views bar shows.
+    ...catalogue.views
+      .filter((view) => view.id !== 'interactive')
+      .map((view) => ({
+        id: `view:${view.id}`,
+        label: view.label,
+        hint: catalogue.viewsTitle,
+        run: () => window.location.assign(view.href),
+      })),
   ];
 }

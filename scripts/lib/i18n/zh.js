@@ -22,6 +22,14 @@ module.exports = {
   printPdf: '打印 / PDF',
   dailyLifeUnit: '小时',
   dailyLifeAria: '24 小时典型分布',
+  views: {
+    title: '视图',
+    classic: '经典',
+    interactive: '交互式',
+    xsltRich: 'XSLT（完整）',
+    xsltMinimal: 'XSLT（简洁）',
+    pdf: 'PDF',
+  },
   nav: {
     about: '关于',
     experience: '经验',
@@ -29,6 +37,5 @@ module.exports = {
     projects: '项目',
     references: '推荐',
     contact: '联系',
-    interactive: '交互式简历',
   },
 };

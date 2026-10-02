@@ -1,8 +1,14 @@
 import { describe, expect, it } from 'vitest';
+import { aViews } from '../domain/fixture-views';
 import { aResume } from '../domain/fixtures';
 import { Catalogue } from './catalogue';
 
-const catalogue = Catalogue.from({ lang: 'fr', ui: { projects: 'Projets' }, resume: aResume() });
+const catalogue = Catalogue.from({
+  lang: 'fr',
+  ui: { projects: 'Projets' },
+  resume: aResume(),
+  ...aViews('fr'),
+});
 
 describe('Catalogue', () => {
   it('finds an entry by id', () => {

@@ -22,6 +22,14 @@ module.exports = {
   printPdf: 'Drucken / PDF',
   dailyLifeUnit: 'h',
   dailyLifeAria: 'Typische Aufteilung von 24 Stunden',
+  views: {
+    title: 'Ansichten',
+    classic: 'Klassisch',
+    interactive: 'Interaktiv',
+    xsltRich: 'XSLT (ausführlich)',
+    xsltMinimal: 'XSLT (minimal)',
+    pdf: 'PDF',
+  },
   nav: {
     about: 'Über',
     experience: 'Erfahrung',
@@ -29,6 +37,5 @@ module.exports = {
     projects: 'Projekte',
     references: 'Referenzen',
     contact: 'Kontakt',
-    interactive: 'Interaktiver Lebenslauf',
   },
 };

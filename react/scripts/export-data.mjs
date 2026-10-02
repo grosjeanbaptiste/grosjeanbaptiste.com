@@ -12,6 +12,7 @@ const { loadResume } = require('../../scripts/lib/data.js');
 const { applyHtmlOverrides } = require('../../scripts/lib/site-overrides.js');
 const { LANGS } = require('../../scripts/lib/config.js');
 const I18N = require('../../scripts/lib/i18n/index.js');
+const { viewsOf } = require('../../scripts/lib/views.js');
 
 const OUT_DIR = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'data');
 mkdirSync(OUT_DIR, { recursive: true });
@@ -19,7 +20,8 @@ mkdirSync(OUT_DIR, { recursive: true });
 const canonical = loadResume('en');
 for (const lang of LANGS) {
   const resume = applyHtmlOverrides(identify(canonical, loadResume(lang)));
-  const document = { lang, ui: I18N[lang], resume };
+  const views = viewsOf(lang);
+  const document = { lang, ui: I18N[lang], resume, viewsTitle: I18N[lang].views.title, views };
   writeFileSync(join(OUT_DIR, `${lang}.json`), `${JSON.stringify(document)}\n`);
 }
 writeFileSync(join(OUT_DIR, 'languages.json'), `${JSON.stringify(LANGS)}\n`);

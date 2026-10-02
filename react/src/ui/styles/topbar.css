@@ -1,6 +1,7 @@
 .topbar {
   position: sticky;
-  top: 0;
+  /* Under the views bar (/css/views-bar.css), fixed above every display. */
+  top: var(--views-bar-h, 0);
   z-index: 10;
   display: flex;
   align-items: center;
@@ -115,15 +116,8 @@
   color: var(--app-accent);
 }
 
-.topbar-classic {
-  font-size: 0.85em;
-  padding-inline: 0.5rem;
-  white-space: nowrap;
-}
-
 @media (max-width: 40rem) {
   .topbar-brand,
-  .topbar-classic,
   .topbar-search kbd {
     display: none;
   }

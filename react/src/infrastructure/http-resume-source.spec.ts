@@ -1,8 +1,9 @@
 import { describe, expect, it, vi } from 'vitest';
+import { aViews } from '../domain/fixture-views';
 import { aResume } from '../domain/fixtures';
 import { HttpResumeSource } from './http-resume-source';
 
-const document = { lang: 'fr', ui: {}, resume: aResume() };
+const document = { lang: 'fr', ui: {}, resume: aResume(), ...aViews('fr') };
 
 const respond = (status: number, body: unknown) =>
   vi.fn(async (_url: string) => new Response(JSON.stringify(body), { status }));

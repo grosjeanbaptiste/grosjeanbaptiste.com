@@ -20,7 +20,6 @@ export interface Strings {
   readonly back: string;
   readonly ongoing: string;
   readonly switchTo: string;
-  readonly classicSite: string;
   readonly loading: string;
   readonly loadFailed: string;
   readonly notFound: string;
@@ -47,7 +46,6 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     back: 'Back to the CV',
     ongoing: 'present',
     switchTo: 'Read in',
-    classicSite: 'Classic site',
     loading: 'Loading the CV…',
     loadFailed: 'The CV could not be loaded.',
     notFound: 'This page does not exist.',
@@ -72,7 +70,6 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     back: 'Retour au CV',
     ongoing: 'aujourd’hui',
     switchTo: 'Lire en',
-    classicSite: 'Site classique',
     loading: 'Chargement du CV…',
     loadFailed: 'Le CV n’a pas pu être chargé.',
     notFound: 'Cette page n’existe pas.',
@@ -97,7 +94,6 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     back: 'Terug naar het CV',
     ongoing: 'heden',
     switchTo: 'Lezen in',
-    classicSite: 'Klassieke site',
     loading: 'CV wordt geladen…',
     loadFailed: 'Het CV kon niet worden geladen.',
     notFound: 'Deze pagina bestaat niet.',
@@ -122,7 +118,6 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     back: 'Volver al CV',
     ongoing: 'actualidad',
     switchTo: 'Leer en',
-    classicSite: 'Sitio clásico',
     loading: 'Cargando el CV…',
     loadFailed: 'No se pudo cargar el CV.',
     notFound: 'Esta página no existe.',
@@ -147,7 +142,6 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     back: 'Zurück zum Lebenslauf',
     ongoing: 'heute',
     switchTo: 'Lesen auf',
-    classicSite: 'Klassische Seite',
     loading: 'Lebenslauf wird geladen…',
     loadFailed: 'Der Lebenslauf konnte nicht geladen werden.',
     notFound: 'Diese Seite existiert nicht.',
@@ -172,7 +166,6 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     back: '返回简历',
     ongoing: '至今',
     switchTo: '阅读语言',
-    classicSite: '经典版网站',
     loading: '正在加载简历…',
     loadFailed: '简历加载失败。',
     notFound: '页面不存在。',

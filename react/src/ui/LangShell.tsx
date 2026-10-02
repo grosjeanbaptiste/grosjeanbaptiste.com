@@ -8,6 +8,7 @@ import { NotFound } from './NotFound';
 import { ReadingProvider } from './context';
 import { EntryPage } from './entry/EntryPage';
 import { Header } from './header/Header';
+import { ViewsBar } from './header/ViewsBar';
 import { HomePage } from './home/HomePage';
 import { CommandPalette } from './palette/CommandPalette';
 import { STRINGS } from './strings';
@@ -55,6 +56,7 @@ function LoadedShell({ source, today, lang }: { source: ResumeSource; today: Dat
   };
   return (
     <ReadingProvider value={reading}>
+      <ViewsBar />
       <Header onSearch={() => setPaletteOpen(true)} />
       <main className="page">
         <Routes>

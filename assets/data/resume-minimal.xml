@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=33ea3317"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=df10430e"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -92,6 +92,36 @@
       <section>dailyLife</section>
     </sidebarOrder>
     <lang>en</lang>
+    <viewsTitle>Views</viewsTitle>
+    <views>
+      <view>
+        <id>classic</id>
+        <href>/</href>
+        <label>Classic</label>
+      </view>
+      <view>
+        <id>interactive</id>
+        <href>/app/en/</href>
+        <label>Interactive</label>
+      </view>
+      <view>
+        <id>xsltRich</id>
+        <href>/assets/data/resume-en.xml</href>
+        <label>XSLT (rich)</label>
+        <note>best viewed in Firefox</note>
+      </view>
+      <view>
+        <id>xsltMinimal</id>
+        <href>/assets/data/resume-en-minimal.xml</href>
+        <label>XSLT (minimal)</label>
+        <note>best viewed in Firefox</note>
+      </view>
+      <view>
+        <id>pdf</id>
+        <href>/assets/cv/cv_grosjean_baptiste_en.pdf</href>
+        <label>PDF</label>
+      </view>
+    </views>
     <degrees>
       <obtained>Master of Science - MS in Computer Science (work-study program) — specialised professional focus (120 ECTS)</obtained>
     </degrees>

@@ -1,3 +1,5 @@
+const { viewsOf } = require('./views');
+const I18N = require('./i18n');
 const { highestObtainedDegree, highestInProgressDegree, formatDegreeLine } = require('./degrees');
 
 const XML_ITEM_NAMES = {
@@ -17,6 +19,7 @@ const XML_ITEM_NAMES = {
   roles: 'role',
   sectionOrder: 'section',
   sidebarOrder: 'section',
+  views: 'view',
 };
 
 const xmlEsc = (s) =>
@@ -58,7 +61,13 @@ function generateXml(resume, themePath = '../xslt/resume-transform.xsl', lang = 
   const degrees = {};
   if (inProgress) degrees.inProgress = inProgress;
   if (obtained) degrees.obtained = obtained;
-  const meta = { ...(resume.meta || {}), lang };
+  // The views bar the XSLT themes draw, from the same registry as every display.
+  const meta = {
+    ...(resume.meta || {}),
+    lang,
+    viewsTitle: I18N[lang].views.title,
+    views: viewsOf(lang),
+  };
   if (Object.keys(degrees).length) meta.degrees = degrees;
   const tagged = { ...resume, meta };
   const body = emitXml('resume', tagged, 0);

@@ -4,6 +4,7 @@
 @import "variables.css";
 @import "base.css";
 @import "nav.css";
+@import "views-bar.css";
 @import "theme-toggle.css";
 @import "sidebar.css";
 @import "skills.css";

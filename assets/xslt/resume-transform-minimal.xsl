@@ -180,6 +180,29 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- The views bar: the same buttons every display of the CV shows, from the
+       <meta><views> registry the generator writes (scripts/lib/views.js),
+       styled by the shared /css/views-bar.css. -->
+  <xsl:template name="views-bar">
+    <xsl:param name="current"/>
+    <nav class="views-bar">
+      <xsl:attribute name="aria-label"><xsl:value-of select="meta/viewsTitle"/></xsl:attribute>
+      <span class="views-bar-title"><xsl:value-of select="meta/viewsTitle"/></span>
+      <ul>
+        <xsl:for-each select="meta/views/view">
+          <li>
+            <a class="views-bar-link">
+              <xsl:attribute name="href"><xsl:value-of select="href"/></xsl:attribute>
+              <xsl:if test="id = $current"><xsl:attribute name="aria-current">page</xsl:attribute></xsl:if>
+              <xsl:if test="note"><xsl:attribute name="title"><xsl:value-of select="note"/></xsl:attribute></xsl:if>
+              <xsl:value-of select="label"/>
+            </a>
+          </li>
+        </xsl:for-each>
+      </ul>
+    </nav>
+  </xsl:template>
+
   <xsl:template match="/resume">
     <html>
       <xsl:attribute name="lang"><xsl:value-of select="$lang"/></xsl:attribute>
@@ -349,20 +372,18 @@
             } catch (e) {}
           })();
         </script>
+        <!-- Shared with every display: DSL palette, views bar. After the inline
+             style so the bar's body offset is not overridden. Not fonts.css:
+             its Roboto sits in this theme's own font stack and would re-typeset
+             (and re-paginate) the page wherever -apple-system is missing. -->
+        <link rel="stylesheet" href="/css/variables.css"/>
+        <link rel="stylesheet" href="/css/views-bar.css"/>
       </head>
       <body>
+        <xsl:call-template name="views-bar"><xsl:with-param name="current" select="'xsltMinimal'"/></xsl:call-template>
 
         <!-- TOOLBAR -->
         <div class="toolbar">
-          <a>
-            <xsl:attribute name="href">
-              <xsl:choose>
-                <xsl:when test="$lang = 'en'">/</xsl:when>
-                <xsl:otherwise>/<xsl:value-of select="$lang"/>/</xsl:otherwise>
-              </xsl:choose>
-            </xsl:attribute>
-            ↩ <xsl:call-template name="t"><xsl:with-param name="k" select="'htmlSite'"/></xsl:call-template>
-          </a>
           <div class="group">
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'en'"/></xsl:call-template>
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'fr'"/></xsl:call-template>
@@ -371,14 +392,6 @@
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'de'"/></xsl:call-template>
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'zh'"/></xsl:call-template>
           </div>
-          <!-- Theme toggle: single button pointing to the OTHER theme. -->
-          <a>
-            <xsl:attribute name="href">/assets/data/resume-<xsl:value-of select="$lang"/>.xml</xsl:attribute>
-            <xsl:attribute name="title">
-              <xsl:call-template name="t"><xsl:with-param name="k" select="'rich'"/></xsl:call-template>
-            </xsl:attribute>
-            ⇄ <xsl:call-template name="t"><xsl:with-param name="k" select="'rich'"/></xsl:call-template>
-          </a>
           <button type="button" id="theme-toggle" aria-pressed="false">
             <span id="theme-toggle-label">
               <xsl:call-template name="t"><xsl:with-param name="k" select="'dark'"/></xsl:call-template>

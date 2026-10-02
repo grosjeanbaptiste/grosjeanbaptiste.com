@@ -12,9 +12,6 @@ export const skillPath = (lang: Lang, skill: string) =>
 export const withLang = (pathname: string, search: string, lang: Lang) =>
   `${pathname.replace(/^\/[^/]+/, `/${lang}`)}${search}`;
 
-// The static site's page for a language: / for English, /fr/ for French…
-export const classicPath = (lang: Lang) => (lang === 'en' ? '/' : `/${lang}/`);
-
 export const pdfPath = (lang: Lang) => `/assets/cv/cv_grosjean_baptiste_${lang}.pdf`;
 
 export const LANG_NAMES: Readonly<Record<Lang, string>> = {

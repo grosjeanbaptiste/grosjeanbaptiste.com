@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=16b40b30"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=f9f15540"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -92,6 +92,36 @@
       <section>dailyLife</section>
     </sidebarOrder>
     <lang>de</lang>
+    <viewsTitle>Ansichten</viewsTitle>
+    <views>
+      <view>
+        <id>classic</id>
+        <href>/de/</href>
+        <label>Klassisch</label>
+      </view>
+      <view>
+        <id>interactive</id>
+        <href>/app/de/</href>
+        <label>Interaktiv</label>
+      </view>
+      <view>
+        <id>xsltRich</id>
+        <href>/assets/data/resume-de.xml</href>
+        <label>XSLT (ausführlich)</label>
+        <note>am besten in Firefox ansehen</note>
+      </view>
+      <view>
+        <id>xsltMinimal</id>
+        <href>/assets/data/resume-de-minimal.xml</href>
+        <label>XSLT (minimal)</label>
+        <note>am besten in Firefox ansehen</note>
+      </view>
+      <view>
+        <id>pdf</id>
+        <href>/assets/cv/cv_grosjean_baptiste_de.pdf</href>
+        <label>PDF</label>
+      </view>
+    </views>
     <degrees>
       <obtained>Master of Science — Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)</obtained>
     </degrees>

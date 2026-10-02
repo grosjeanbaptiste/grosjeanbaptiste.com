@@ -25,6 +25,7 @@ function siteAssets(): Plugin {
     transformIndexHtml: () => [
       { tag: 'link', attrs: { rel: 'stylesheet', href: '/css/fonts.css' }, injectTo: 'head' },
       { tag: 'link', attrs: { rel: 'stylesheet', href: '/css/variables.css' }, injectTo: 'head' },
+      { tag: 'link', attrs: { rel: 'stylesheet', href: '/css/views-bar.css' }, injectTo: 'head' },
       { tag: 'link', attrs: { rel: 'icon', href: '/favicon.ico', sizes: 'any' }, injectTo: 'head' },
       {
         tag: 'link',

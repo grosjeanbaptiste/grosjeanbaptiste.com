@@ -109,6 +109,10 @@ LLM/agent-discovery files alongside the site:
 - `robots.txt` — explicit allow for major LLM crawlers + sitemap reference
 - `sitemap.xml` — XML sitemap including the JSON/XML/PDF data files
 
+### The views bar
+
+The classic site, the interactive view, both XSLT themes and the PDF are all *displays* of one CV, so every HTML display carries the same bar at the very top, listing them in the same order with the same localized labels, the current one marked `aria-current="page"`. One registry, `scripts/lib/views.js` (labels under `views` in `scripts/lib/i18n/*.js`), feeds three renderers: `renderViewsBar()` in the static generator's NAV block, `<meta><views>` in the XML mirrors for the `views-bar` template of each XSLT theme, and the `views` field of the React export. One stylesheet, `css/views-bar.css`, styles it everywhere (each display also loads `css/variables.css` for the DSL palette); it is fixed, and each display makes room with `--views-bar-h`. `scripts/lib/views.test.js` holds the classic page and both XSLT themes to the registry, `react/src/ui/views-bar.spec.tsx` the React side. Links to another display belong in the registry, not scattered in a view's own toolbar.
+
 ### The React view (`/app/`)
 
 A third view of the same CV, next to the static HTML site and the XSLT themes: an interactive one — ⌘K command palette, filter by skill (shareable `?skill=` URLs), a zoomable timeline, and one page per entry (`/app/{lang}/{kind}/{id}`). `dsl/resume.grosjean` stays the single source of truth; the app only re-reads its compiled output.

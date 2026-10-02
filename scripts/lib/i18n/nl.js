@@ -22,6 +22,14 @@ module.exports = {
   printPdf: 'Afdrukken / PDF',
   dailyLifeUnit: 'u',
   dailyLifeAria: 'Typische verdeling van 24 uur',
+  views: {
+    title: 'Weergaven',
+    classic: 'Klassiek',
+    interactive: 'Interactief',
+    xsltRich: 'XSLT (uitgebreid)',
+    xsltMinimal: 'XSLT (minimaal)',
+    pdf: 'PDF',
+  },
   nav: {
     about: 'Over',
     experience: 'Ervaring',
@@ -29,6 +37,5 @@ module.exports = {
     projects: 'Projecten',
     references: 'Referenties',
     contact: 'Contact',
-    interactive: 'Interactief cv',
   },
 };
