@@ -64,6 +64,12 @@
   min-width: 20px;
 }
 
+/* Printed only — the PDF header's "Updated <date>" line. js/print-layout.js
+   fills the date in at print time. */
+.print-updated {
+  display: none;
+}
+
 .contact-info .degree {
   font-size: 0.9em;
   color: var(--emphasis-color);

@@ -14,6 +14,8 @@ function generateNav(lang) {
   const navLinks = navItems
     .map((i) => `    <li><a href="#${i.id}" class="nav-link">${escapeHtml(i.label)}</a></li>`)
     .join('\n');
+  // The React view of the same CV, in the same language (see react/).
+  const appLink = `    <li><a href="/app/${lang}/" class="nav-link nav-app">${escapeHtml(t.nav.interactive)}</a></li>`;
   const langLinks = LANGS.map((l) => {
     const cls = l === lang ? ' class="active"' : '';
     const aria = l === lang ? ' aria-current="page"' : '';
@@ -26,6 +28,7 @@ function generateNav(lang) {
     '  </button>',
     '  <ul id="nav-menu">',
     navLinks,
+    appLink,
     '  </ul>',
     `  <div class="lang-switcher" aria-label="${escapeHtml(t.langMenuLabel)}">`,
     langLinks,

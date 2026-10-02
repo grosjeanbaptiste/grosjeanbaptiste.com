@@ -8,6 +8,7 @@
 // the stylesheet guessing by position: the page renders work in resume.json
 // order while the PDF sorts by recency, and those agree only by chance.
 
+const PDF_I18N = require('./pdf/i18n');
 const { FIT_PLANS, PRINT_PLAN_INDEX } = require('./pdf/config');
 const { topN } = require('./pdf/data');
 const { truncate } = require('./pdf/tex');
@@ -23,6 +24,18 @@ function printedWork(resume) {
 }
 
 /**
+ * The heading the PDF gives a section, when it differs from the page's own.
+ * scripts/lib/pdf/i18n.js overrides a few deliberately — "Experience" against
+ * the site's "Work Experience" — and the printed sheet has to follow the PDF,
+ * not the page. Returns null when the two already agree, so the generator only
+ * carries an attribute where there is really something to swap.
+ */
+function printHeading(key, t, lang) {
+  const pdf = PDF_I18N[lang]?.[key];
+  return pdf && pdf !== t[key] ? pdf : null;
+}
+
+/**
  * The text the PDF would print for `value` under `budget` characters, or null
  * when the PDF prints it unchanged. Uses the LaTeX build's own truncate so the
  * two cannot word-break differently.
@@ -33,4 +46,4 @@ function printText(value, budget) {
   return cut === String(value).replace(/\s+/g, ' ').trim() ? null : cut;
 }
 
-module.exports = { PRINT_PLAN, printedWork, printText };
+module.exports = { PRINT_PLAN, printedWork, printText, printHeading };

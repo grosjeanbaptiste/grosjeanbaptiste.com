@@ -16,7 +16,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { FIT_PLANS, PRINT_PLAN_INDEX } = require('./pdf/config');
 const { loadResume, topN } = require('./pdf/data');
-const { PRINT_PLAN, printedWork } = require('./print-selection');
+const I18N = require('./i18n');
+const { PRINT_PLAN, printedWork, printHeading } = require('./print-selection');
 
 const ROOT = path.resolve(__dirname, '../..');
 const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
@@ -105,4 +106,25 @@ test('a recorded PDF build agrees with the mirrored plan', () => {
     [],
     `the PDFs were built with a different plan than the print view mirrors: ${JSON.stringify(drifted)}`,
   );
+});
+
+// printHeading exists because the two artefacts deliberately disagree on a few
+// section titles — pdf/i18n.js says so in its own header — and the printed
+// sheet has to follow the PDF rather than the page it is printed from.
+
+test('a section the PDF titles differently is swapped for the print', () => {
+  const t = I18N.fr;
+  assert.equal(t.experience, 'Expérience professionnelle');
+  assert.equal(printHeading('experience', t, 'fr'), 'Expérience');
+});
+
+test('a section the two already agree on carries no swap', () => {
+  // nl calls it "Werkervaring" on both sides. Returning the string anyway
+  // would put a data-print-text on every heading of every page for nothing.
+  assert.equal(printHeading('experience', I18N.nl, 'nl'), null);
+});
+
+test('an unknown key asks for no swap rather than erasing the heading', () => {
+  assert.equal(printHeading('nosuchsection', I18N.fr, 'fr'), null);
+  assert.equal(printHeading('experience', I18N.fr, 'xx'), null);
 });

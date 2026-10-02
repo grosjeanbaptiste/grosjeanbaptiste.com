@@ -49,6 +49,8 @@ const PRESENT_LABEL = {
   zh: '至今',
 };
 
+const { EMOJI_RANGES } = require('./pdf/tex');
+
 const ISO_DATE_RE = /^\d{4}(-\d{2}){0,2}$/;
 
 function formatDate(iso, lang = 'en') {
@@ -67,4 +69,15 @@ function timeHtml(iso, lang) {
 
 const dateRangeHtml = (start, end, lang) => `${timeHtml(start, lang)} – ${timeHtml(end, lang)}`;
 
-module.exports = { escapeHtml, formatDate, timeHtml, dateRangeHtml };
+// The PDF strips pictographs — scripts/lib/pdf/tex.js does it on the way into
+// LaTeX, which cannot set them. The page shows them, and the printed sheet
+// therefore carried an emoji the CV it mirrors does not have. Wrapping rather
+// than stripping: the screen keeps the character, print hides the span.
+function wrapPictographs(html) {
+  return String(html ?? '').replace(
+    EMOJI_RANGES,
+    (glyph) => `<span class="print-drop">${glyph}</span>`,
+  );
+}
+
+module.exports = { escapeHtml, formatDate, timeHtml, dateRangeHtml, wrapPictographs };

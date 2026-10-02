@@ -11,4 +11,8 @@
 @import "widgets.css";
 @import "print.css";
 @import "print-type.css";
+@import "print-density.css";
+@import "print-daychart.css";
+@import "print-banner.css";
+@import "print-entry.css";
 @import "print-verso.css";

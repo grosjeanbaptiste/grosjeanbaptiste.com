@@ -14,6 +14,7 @@ module.exports = {
   typicalDay: 'Un día típico',
   type: 'Tipo',
   keywords: 'Palabras clave',
+  updated: 'Actualizado',
   driverLicense: 'Permiso de conducir B',
   dailyLifeLabels: {
     sleep: 'Sueño',

@@ -77,7 +77,13 @@ function renderEmbeddedVolunteer(volunteer, hostName, t, lang) {
       // the open-ended label, and emits <time datetime> so the row is
       // machine-readable like every other date on the page.
       const dates = dateRangeHtml(v.startDate, v.endDate, lang);
-      return `<li><strong>${escapeHtml(v.position)}</strong> — ${dates}</li>`;
+      // The organization is implied on the page — these rows sit under their
+      // host entry. On the verso they stand alone, as they do in the PDF's
+      // own Volunteer section, so it is carried print-only.
+      const org = v.organization
+        ? `<span class="print-org">${escapeHtml(v.organization)}, </span>`
+        : '';
+      return `<li><strong>${escapeHtml(v.position)}</strong> — ${org}${dates}</li>`;
     })
     .join('\n        ');
   return [

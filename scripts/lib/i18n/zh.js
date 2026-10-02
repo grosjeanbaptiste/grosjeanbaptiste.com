@@ -29,5 +29,6 @@ module.exports = {
     projects: '项目',
     references: '推荐',
     contact: '联系',
+    interactive: '交互式简历',
   },
 };

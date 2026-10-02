@@ -6,9 +6,12 @@ on:
     paths:
       - 'assets/data/resume.json'
       - 'assets/data/i18n/**'
+      - 'assets/data/site-extras.json'
+      - 'assets/data/site-overrides.json'
       - 'scripts/generate-from-resume.js'
       - 'scripts/lib/**'
       - 'assets/xslt/**'
+      - 'react/**'
       - '.github/workflows/regenerate-from-resume.yml'
   workflow_dispatch:
 
@@ -27,9 +30,19 @@ jobs:
       - name: Regenerate
         run: node scripts/generate-from-resume.js
 
+      # The React view at /app/ is built from the same data. Node 24: its data
+      # export imports the domain's TypeScript slugger natively.
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Rebuild the React view
+        working-directory: react
+        run: npm ci && npm run build
+
       - name: Commit changes if any
         run: |
-          PATHS="index.html fr/ nl/ es/ de/ zh/ assets/data/*.xml sitemap.xml"
+          PATHS="index.html fr/ nl/ es/ de/ zh/ assets/data/*.xml sitemap.xml app/"
           if [[ -z "$(git status --porcelain $PATHS)" ]]; then
             echo "No changes to commit."
             exit 0
@@ -37,5 +50,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add $PATHS
-          git commit -m "chore: regenerate localized index.html + resume.xml from resume.json"
+          git commit -m "chore: regenerate localized index.html, resume.xml and /app/ from resume.json"
           git push

@@ -1,0 +1,121 @@
+/* The day chart — altacv's \wheelchart, in the narrow column.
+ *
+ * Split out of css/print-density.css at the 200-line gate. The seam is the
+ * widget: that file owns how tightly the sheet is packed, this one owns the
+ * donut, its tints and its legend.
+ *
+ * The PDF places each slice's label around the ring on a leader line; the page
+ * lists them under it. That difference is NOT closed here — it would mean
+ * rebuilding the SVG, not restyling it — so what this file matches is the
+ * palette and the size.
+ */
+
+@media print {
+  /* \wheelchart draws every slice in a tint of `accent`: WHEEL_STYLES in
+     scripts/lib/pdf/sections/sidebar.js reads accent!30, !40, !60, accent,
+     accent, !20, in the order the items are declared. The page gives each item
+     its own colour from resume.json, which printed as a blue/orange/green
+     donut next to the PDF's red one. xcolor's accent!N is N% of #FF0000 over
+     white, so the tints below are that arithmetic, in that order.
+     print-visual-parity.test.js ties the count of these to WHEEL_STYLES. */
+  .daily-life-chart path:nth-of-type(1) {
+    fill: #ffb3b3;
+  }
+
+  .daily-life-chart path:nth-of-type(2) {
+    fill: #ff9999;
+  }
+
+  .daily-life-chart path:nth-of-type(3) {
+    fill: #ff6666;
+  }
+
+  .daily-life-chart path:nth-of-type(4),
+  .daily-life-chart path:nth-of-type(5) {
+    fill: var(--secondary-color);
+  }
+
+  .daily-life-chart path:nth-of-type(6) {
+    fill: #ffcccc;
+  }
+
+  /* The legend dots repeat the slice colours, so they follow the same tints.
+     They carry theirs in a style attribute, which only !important outranks —
+     the alternative is a class per item in the generator, which buys the sheet
+     nothing it can see. */
+  .daily-life-legend li:nth-of-type(1) .daily-life-dot {
+    background: #ffb3b3 !important;
+  }
+
+  .daily-life-legend li:nth-of-type(2) .daily-life-dot {
+    background: #ff9999 !important;
+  }
+
+  .daily-life-legend li:nth-of-type(3) .daily-life-dot {
+    background: #ff6666 !important;
+  }
+
+  .daily-life-legend li:nth-of-type(4) .daily-life-dot,
+  .daily-life-legend li:nth-of-type(5) .daily-life-dot {
+    background: var(--secondary-color) !important;
+  }
+
+  .daily-life-legend li:nth-of-type(6) .daily-life-dot {
+    background: #ffcccc !important;
+  }
+
+  /* buildDegreesSummary and buildLanguagesBlock both set \footnotesize; the
+     sheet ran them at the sidebar's own size, which pushed the degree line
+     onto a third row. */
+  .sidebar #education,
+  .languages p {
+    font-size: 0.750rem;
+  }
+
+  .language-name {
+    font-weight: 700;
+    color: var(--emphasis-color);
+  }
+
+  /* "— fluency" in accent, against the page's "Language: fluency". */
+  .language-sep {
+    display: none;
+  }
+
+  .language-name::after {
+    content: " — ";
+    font-weight: 400;
+    color: var(--body-color);
+  }
+
+  .language-level {
+    color: var(--secondary-color);
+  }
+
+  /* The day block is the last thing in the left column, so it is what spills
+     when the recto is a hair too tall — and a spilled sidebar costs a whole
+     sheet, since the two-column block cannot be split. Give it real headroom
+     rather than a margin measured in millimetres. */
+  .daily-life-chart {
+    max-width: 2.2cm;
+  }
+
+  .daily-life-legend {
+    margin: 1pt 0 0;
+    font-size: 0.72em;
+    line-height: 1.15;
+    /* Two short columns instead of one tall list. */
+    column-count: 2;
+    column-gap: 4pt;
+  }
+
+  .daily-life-legend li {
+    padding: 0;
+    break-inside: avoid;
+  }
+
+  .daily-life-dot {
+    width: 4pt;
+    height: 4pt;
+  }
+}

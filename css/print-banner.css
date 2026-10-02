@@ -1,0 +1,85 @@
+/* The full-width header — altacv's \makecvheader.
+ *
+ * js/print-layout.js lifts the photo and the identity block out of the narrow
+ * column into #print-banner, because CSS cannot move a node between
+ * containers. This file lays them out the way the PDF does: photo left at its
+ * \photoL diameter, then name, tagline and two rows of contact details, closed
+ * by the centred "Updated <date>" line.
+ *
+ * The banner is also what makes the rest of the sheet affordable. Nine stacked
+ * contact rows and a two-line name cost the 30% column far more height than
+ * the same details cost spread across the full width, so the narrow column
+ * ends up shorter than it was without a banner at all.
+ */
+
+@media print {
+  #print-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4cm;
+    margin: 0 0 0.3cm;
+  }
+
+  /* \photoL{4cm}{profil}. altacv strokes the circle in headingrule
+     (ThirdColor); the screen rings it in the primary navy. */
+  #print-banner #profile-picture {
+    flex: 0 0 4cm;
+    width: 4cm;
+    max-width: 4cm;
+    height: 4cm;
+    margin: 0;
+    border: 1.5pt solid var(--accent-color);
+    box-shadow: none;
+  }
+
+  #print-banner .contact-info {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+  }
+
+  /* \personalinfofont is \small\bfseries, and \printinfo separates entries with
+     \hspace{2em} and colours the icon in accent. */
+  .contact-primary,
+  .contact-profiles,
+  .print-updated {
+    font-size: 0.874rem;
+    font-weight: 700;
+    color: var(--body-color);
+  }
+
+  .contact-primary,
+  .contact-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2em;
+  }
+
+  .contact-primary p,
+  .contact-profiles p,
+  .print-updated {
+    margin: 0;
+  }
+
+  #print-banner .contact-info svg.icon {
+    width: 1em;
+    height: 1em;
+    min-width: 0;
+    margin-right: 0.4em;
+    color: var(--secondary-color);
+  }
+
+  /* \begin{center}\printinfo{\faRedo}{...}\end{center} */
+  .print-updated {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.12cm;
+  }
+
+  /* The PDF's \personalinfo has no equivalent of these two views. Qualified
+     by .contact-info because the screen's own `.contact-info p { display: flex }`
+     outranks a lone class and the links printed anyway. */
+  .contact-info .contact-machine {
+    display: none;
+  }
+}

@@ -63,7 +63,14 @@ test('the dissertation stack sits on Acteble, not on Operations Research', () =>
 });
 
 test('course units stay off the printed sheet', () => {
-  const css = fs.readFileSync(path.join(ROOT, 'css/print-type.css'), 'utf8');
+  // The print sheet is spread over css/print*.css and rules move between those
+  // files as they grow past the line gate. Reading one of them made a rule that
+  // had merely MOVED look like a rule that had been dropped.
+  const css = fs
+    .readdirSync(path.join(ROOT, 'css'))
+    .filter((f) => /^print.*\.css$/.test(f))
+    .map((f) => fs.readFileSync(path.join(ROOT, 'css', f), 'utf8'))
+    .join('\n');
   assert.match(css, /#education \.education-item\s*\{[^}]*display:\s*none/);
 });
 

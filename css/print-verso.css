@@ -13,24 +13,69 @@
     display: none;
   }
 
-  /* The LaTeX build puts references alone on the verso. */
-  #references {
+  /* \clearpage\begin{paracol}{2} … \end{paracol} — the verso is a SECOND
+     two-column block, and js/print-layout.js now builds it as one. It used to
+     be faked with break-before on #references and #print-volunteer while both
+     still sat inside the recto's grid; Firefox will not fragment a grid and
+     answered with a page for each, printing four sheets. One block that
+     breaks before itself has no such ambiguity. */
+  #print-verso {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 0.6cm;
     break-before: page;
   }
 
-  /* The PDF prints the volunteering in the VERSO'S LEFT COLUMN, beside the
-     references — the one part of the sheet that was blank. js/print-layout.js
-     gathers the rows into the sidebar; this break drops them onto the second
-     sheet so they land in that same column rather than at the foot of the
-     recto. Stacking them above #references instead costs Firefox a third
-     sheet: the verso is already nearly full. */
   #print-volunteer {
-    break-before: page;
     margin: 0;
   }
 
   #print-volunteer ul {
     margin: 0;
     padding-left: 9pt;
+  }
+
+  /* buildVolunteer sets the whole block \footnotesize and names the
+     organization: \textbf{position} — organization, period. */
+  #print-volunteer,
+  #print-volunteer li {
+    font-size: 0.750rem;
+  }
+
+  #print-volunteer .print-org {
+    display: inline;
+  }
+
+  /* buildVolunteer sets an itemize, so every row carries \itemmarker. The
+     sidebar has no equivalent of .main-content's bullet rule and base.css
+     removes the list marker, so the rows printed flush. */
+  #print-volunteer li::before {
+    content: "•";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  /* buildReferences: \textbf{name} then \begin{quote}\small\itshape — the
+     quote environment is red (accent) and \small overrides its \large. The
+     screen rules add a thick orange rule down the left and grey the text,
+     neither of which the PDF has. */
+  .reference-item blockquote {
+    margin: 2pt 0 0;
+    padding-left: 0;
+    border-left: none;
+    font-size: 0.874rem;
+    font-style: italic;
+    color: var(--secondary-color);
+  }
+
+  .reference-item p {
+    margin: 4pt 0 0;
+  }
+
+  /* scripts/lib/pdf/tex.js strips pictographs on the way into LaTeX, which
+     cannot set them. Same glyphs, same absence. */
+  .print-drop {
+    display: none;
   }
 }

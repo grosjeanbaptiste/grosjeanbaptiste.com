@@ -1,0 +1,113 @@
+/* Density and the sidebar's own blocks — the second half of the print sheet.
+ *
+ * css/print-type.css owns the type scale; this file owns how tightly the
+ * result is packed and the widgets that only the narrow column carries. Split
+ * out of that file when it reached the 200-line gate. Same source of truth,
+ * same caveats — see the header of css/print.css.
+ */
+
+@media print {
+  /* altacv sets the whole document at 8pt with TeX's tight leading; the
+     screen styles are built for reading at arm's length and are far airier.
+     1.2 is \baselineskip over \normalsize in an 8pt class. */
+  body {
+    /* \baselineskip over \normalsize in an 8pt class is 9.5/8 — 1.1875, not
+       the 1.2 this rounded to. */
+    line-height: 1.19;
+  }
+
+  p,
+  ul,
+  ol {
+    margin: 0 0 2pt;
+  }
+
+  .experience-item .date,
+  .experience-item .location,
+  .education-item .institution {
+    margin: 0;
+  }
+
+  .experience-item {
+    margin-bottom: 4pt;
+  }
+
+  /* renderProjectList in pdf/sections/_trailer.js wraps the whole block —
+     label and items — in {\footnotesize …}. The page runs it at 0.9em of the
+     body, so every entry's project list printed a point and a half larger than
+     the PDF's, on a column that runs to its last line. */
+  .embedded-projects,
+  .embedded-projects li,
+  .embedded-label {
+    font-size: 0.750rem;
+  }
+
+  .embedded-projects {
+    margin: 1pt 0 0;
+  }
+
+  .embedded-projects ul {
+    margin: 0;
+    padding-left: 9pt;
+  }
+
+  .embedded-label {
+    margin: 0;
+  }
+
+  /* \footnotesize \cvtag: a thin outlined chip, not a padded pill. */
+  .skill-tags {
+    gap: 1pt;
+  }
+
+  /* \footnotesize in an 8pt class — 5.98pt in the shipped PDF.
+     \cvtag draws `draw=body, rounded corners` — an outlined chip with no fill.
+     The screen paints these solid in ThirdColor, which on the sheet came out as
+     a block of orange where the PDF has thin grey outlines. */
+  .skill-tag {
+    font-size: 0.750rem;
+    /* \cvtag's node is drawn with inner xsep=1ex, inner ysep=0.75ex — at this
+       size roughly 3pt and 2.2pt. At 0 1.5pt the chips came out visibly
+       tighter than the PDF's. */
+    padding: 2.2pt 3pt;
+    border: 0.4pt solid var(--body-color);
+    border-radius: 1.5pt;
+    background: none;
+    color: var(--body-color);
+    margin: 0;
+  }
+
+  /* \renewcommand{\itemmarker}{{\small\textbullet}} — the marker takes the
+     running colour. The page draws it with a ::before in ThirdColor, so the
+     sheet had orange bullets where the PDF has grey ones. ::marker is no use
+     here: base.css sets list-style-type: none. */
+  .main-content ul li::before {
+    color: var(--body-color);
+  }
+
+  /* The PDF sets each summary as \begin{itemize}\item; the page renders it as
+     a bare paragraph, so the sheet lost the bullet that lines every entry up. */
+  .experience-item p[data-print-text]::before {
+    content: "• ";
+  }
+
+  /* education_in_body: false — the PDF drops the Education entries and keeps
+     only the sidebar's degrees summary, which print-layout.js moves under this
+     section's heading. */
+  #education .education-item {
+    display: none;
+  }
+
+  /* The day chart stays: altacv draws the same donut with \wheelchart, and the
+     page renders it as inline SVG, which prints faithfully. */
+
+  /* The photo's printed size is set by css/print-banner.css, where the banner
+     puts it at the PDF's \photoL{4cm}. This is the fallback for a reader with
+     JavaScript off: no banner is built, the photo stays in the narrow column,
+     and 3cm is as wide as that column can carry. Two rules used to sit here,
+     1.8cm and 3cm, with the later one silently winning. */
+  .sidebar img#profile-picture {
+    max-width: 3cm;
+    height: auto;
+  }
+}

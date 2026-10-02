@@ -1,0 +1,94 @@
+/* The shape of one work entry — scripts/lib/pdf/sections/work.js.
+ *
+ * The PDF sets the position in a 0.62\linewidth box and the employer
+ * right-aligned in a 0.35 one on the SAME line, then dates and location side
+ * by side underneath. The page stacks all three, one per line, which is both
+ * three lines where the PDF uses two and a different silhouette entirely.
+ */
+
+@media print {
+  .experience-item h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.3cm;
+  }
+
+  /* \parbox[t]{0.62\linewidth}{\raggedright\large\color{emphasis}...} */
+  .experience-item h3 .position {
+    flex: 0 1 62%;
+    color: var(--emphasis-color);
+  }
+
+  /* \hfill\parbox[t]{0.35\linewidth}{\raggedleft\large\color{accent}...} */
+  .experience-item h3 .company {
+    flex: 0 0 35%;
+    text-align: right;
+    color: var(--secondary-color);
+  }
+
+  /* The pipe is the page's own separator; the PDF divides the two by the
+     width of the column instead. */
+  .experience-item h3 .h3-sep {
+    display: none;
+  }
+
+  /* {\small ...\faCalendar~dates}\hfill{\small ...\faMapMarker~location} —
+     one pushed to each edge by the glue between them. Two 50% floats would be
+     the obvious reading of that, and they wrapped: 50% + 50% leaves no room
+     for the rounding, so the second dropped to its own line. Content width
+     either side is what \hfill actually does anyway. */
+  .experience-item .date,
+  .experience-item .location {
+    font-size: 0.874rem;
+    font-style: normal;
+    color: var(--emphasis-color);
+  }
+
+  .experience-item .print-icon {
+    display: inline-block;
+    color: var(--secondary-color);
+  }
+
+  .experience-item .print-icon svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.35em;
+    vertical-align: -0.1em;
+  }
+
+  .experience-item .date {
+    float: left;
+  }
+
+  .experience-item .location {
+    float: right;
+  }
+
+  /* Anything after the pair has to drop below both halves; without this the
+     summary wraps into the gap beside the dates. */
+  .experience-item .date ~ :not(.date):not(.location) {
+    clear: both;
+  }
+
+  /* An open-ended range reads "aujourd'hui" mid-sentence in the PDF and
+     "Aujourd'hui" standalone on the page. The undated <time> is exactly the
+     open end, so this touches nothing else. */
+  .experience-item .date time:not([datetime]) {
+    text-transform: lowercase;
+  }
+
+  /* \divider — \hdashrule in body!30, between employers only. Consecutive
+     entries at the SAME employer are separated by a \smallskip in the PDF. */
+  .experience-item + .experience-item:not(.continuation) {
+    border-top: 0.6pt dashed rgb(102 102 102 / 30%);
+    padding-top: 3pt;
+  }
+
+  /* sections/work.js renders the summary and the trailer; `highlights` is not
+     part of the PDF at all. On this CV that is a technology list under almost
+     every entry. */
+  .entry-highlight {
+    display: none;
+  }
+}

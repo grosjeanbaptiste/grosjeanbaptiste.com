@@ -21,7 +21,9 @@
       "assets/data/site-extras.json",
       "assets/data/site-overrides.json",
       "assets/data/i18n/**",
-      "package-lock.json"
+      "package-lock.json",
+      "app/**",
+      "react/public/data/**"
     ]
   },
   "formatter": {

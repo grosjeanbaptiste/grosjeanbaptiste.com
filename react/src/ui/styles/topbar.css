@@ -1,0 +1,136 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem var(--gutter);
+  background: color-mix(in srgb, var(--app-bg) 82%, transparent);
+  backdrop-filter: saturate(1.4) blur(0.75rem);
+  border-bottom: var(--hairline) solid var(--app-line);
+}
+
+.topbar-brand {
+  font-weight: 700;
+  color: var(--emphasis-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.topbar-search {
+  flex: 1;
+  max-width: 26rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  font: inherit;
+  color: var(--app-muted);
+  background: var(--app-surface);
+  border: var(--hairline) solid var(--app-line);
+  border-radius: 999rem;
+  cursor: pointer;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.topbar-search:hover {
+  border-color: var(--app-accent);
+  box-shadow: var(--shadow);
+}
+
+.topbar-search kbd {
+  margin-left: auto;
+  font: inherit;
+  font-size: 0.75em;
+  padding: 0.1rem 0.4rem;
+  border: var(--hairline) solid var(--app-line);
+  border-radius: 0.35rem;
+}
+
+.topbar-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.icon-button,
+.lang-menu summary {
+  font: inherit;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 0;
+  border-radius: 999rem;
+  color: var(--app-text);
+  cursor: pointer;
+}
+
+.icon-button:hover,
+.lang-menu summary:hover {
+  background: var(--app-soft);
+}
+
+.lang-menu {
+  position: relative;
+}
+
+.lang-menu summary {
+  list-style: none;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.lang-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.lang-menu ul {
+  position: absolute;
+  right: 0;
+  margin: 0.25rem 0 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--app-surface);
+  border: var(--hairline) solid var(--app-line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-width: 10rem;
+}
+
+.lang-menu a {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--app-text);
+  text-decoration: none;
+}
+
+.lang-menu a:hover,
+.lang-menu a[aria-current] {
+  background: var(--app-soft);
+  color: var(--app-accent);
+}
+
+.topbar-classic {
+  font-size: 0.85em;
+  padding-inline: 0.5rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 40rem) {
+  .topbar-brand,
+  .topbar-classic,
+  .topbar-search kbd {
+    display: none;
+  }
+}
+
+/* Magnifier drawn in CSS so the button's accessible name stays its label. */
+.topbar-search-label::before {
+  content: "⌕";
+  margin-right: 0.5rem;
+}

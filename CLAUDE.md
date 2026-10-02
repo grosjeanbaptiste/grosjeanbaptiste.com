@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static personal portfolio/resume website for Baptiste Grosjean, hosted on GitHub Pages. The site is built with vanilla HTML, CSS, and JavaScript without any build process or package manager dependencies.
+This is a static personal portfolio/resume website for Baptiste Grosjean, hosted on GitHub Pages. The site is built with vanilla HTML, CSS, and JavaScript without any build process or package manager dependencies — except the React view at `/app/`, which has its own build (see "The React view" below).
 
 ## Architecture
 
@@ -81,6 +81,16 @@ The generator also rewrites `assets/data/resume.xml` from the canonical JSON. Th
 
 Each PDF carries its own document properties (Title, Author, Subject, Keywords, Language) so a reader shows “Baptiste Grosjean — Curriculum vitæ” rather than the file name. `altacv` loads `pdfx` for PDF/A-1b, and `pdfx` takes those from a `\jobname.xmpdata` file written next to the source by `scripts/lib/pdf/metadata.js` — **not** from `\hypersetup{pdftitle=…}`, which would fill the docinfo dictionary and leave the XMP packet empty, the exact mismatch PDF/A forbids. `scripts/lib/pdf-metadata.test.js` reads the XMP packet back out of the six shipped PDFs, so anonymous artefacts fail the suite. The keywords live in `dc:subject` only — `pdfx` does not mirror them into the docinfo dictionary, so `pdfinfo` prints no `Keywords` line even though ATS and XMP-aware readers index them.
 
+### Printing the page
+
+Printing the HTML CV from a browser is meant to produce the LaTeX PDF, not a web page on paper. The LaTeX build is the source of truth for all of it: the palette and geometry come from `scripts/lib/pdf/preamble.js`, the column split from `document.js`, the entry shape from `sections/work.js`, the content reductions from the fit plan in `config.js`, and the type scale from `\documentclass[8pt]` — the sizes in `css/print*.css` (17.22 / 11.96 / 10.91 / 9.96 / 7.97 / 6.97 / 5.98 pt) are the ones measured out of a shipped PDF's own content stream, not guesses at TeX's steps.
+
+Anything that moves a node between containers is `js/print-layout.js`, since CSS cannot: the full-width banner (`\makecvheader`), Education into the narrow column, the volunteering onto the verso. Everything it builds or rewrites is undone on `afterprint` — `scripts/lib/print-restore.test.js` compares the whole DOM before and after and fails on any residue. Where the wording itself differs, the page carries the PDF's version in `data-print-text` (clipped summaries, the localized country, the sections the PDF titles more briefly via `printHeading`) instead of the two being typed out twice.
+
+The banner was removed once, because Firefox will not fragment the two-column block across sheets and a header above it pushed the whole block onto a third page. It is affordable now for the reason it was expensive then: the identity block is what leaves the narrow column, and nine stacked contact rows cost that 30% column far more height than the same details cost across the full width. That is also what let the sheet go back from 6pt to the PDF's 8pt. None of this is assumed — `print-fit.test.js` (Chrome, six languages), `print-fit-firefox.test.js` and `print-fit-xslt.test.js` print with real browsers and count the sheets.
+
+Two divergences are deliberate: the sheet prints on white rather than altacv's grey `\pagecolor`, and consecutive roles at one employer are not collapsed into the PDF's continuation form. What remains beyond reach is TeX's line breaking, hyphenation and pagination, so line endings differ from the PDF and always will.
+
 The dedicated workflow `.github/workflows/regenerate-pdf.yml.disabled` installed the required TeX Live packages on Ubuntu and ran the script on every push that touched the resume data, the LaTeX class, or the script. It is **currently disabled** (hence the extension) — the PDFs are rebuilt locally and committed. Local prerequisites: Node 20+ and a `pdflatex` install with `altacv` deps (`paracol`, `fontawesome5`, `roboto`, `lato`, multilingual babel).
 
 Running locally: `node scripts/generate-from-resume.js` (Node 20+). Idempotent.
@@ -98,6 +108,18 @@ LLM/agent-discovery files alongside the site:
 - `llms-full.txt` — flat Markdown digest of the CV
 - `robots.txt` — explicit allow for major LLM crawlers + sitemap reference
 - `sitemap.xml` — XML sitemap including the JSON/XML/PDF data files
+
+### The React view (`/app/`)
+
+A third view of the same CV, next to the static HTML site and the XSLT themes: an interactive one — ⌘K command palette, filter by skill (shareable `?skill=` URLs), a zoomable timeline, and one page per entry (`/app/{lang}/{kind}/{id}`). `dsl/resume.grosjean` stays the single source of truth; the app only re-reads its compiled output.
+
+- **Source** in `react/` (Vite + React + TypeScript, its own `package.json`; Node 24 — `scripts/export-data.mjs` imports the domain's `.ts` slugger natively).
+- **Build** in `app/`, **committed** like the localized `index.html` files, because GitHub Pages serves the repository as-is. Do not hand-edit `app/`: `cd react && npm run build` rewrites it whole.
+- `npm run build` = `scripts/export-data.mjs` (merges canonical + overlay + overrides per language with the same `scripts/lib/data.js` / `site-overrides.js` the static generator uses, and gives every entry a stable id taken from the **English** entry, so `/app/fr/project/x` and `/app/en/project/x` are one page in two languages) → type check → `vite build` → `scripts/route-pages.mjs` (one `index.html` per route with a localized title and description, since Pages cannot rewrite URLs).
+- Layers: `src/domain/` (pure: `Entry`, `Period`, search, skill usage, timeline — no React, no I/O, the clock is passed in), `src/application/` (`Catalogue` read model, languages), `src/infrastructure/` (`HttpResumeSource`, the adapter behind the `ResumeSource` port), `src/ui/` (React). Section titles come from the exported `scripts/lib/i18n` strings; strings only the app needs live in `src/ui/strings.ts`.
+- The fonts and the DSL-generated palette are **not copied**: a Vite plugin links `/css/fonts.css` and `/css/variables.css` after HTML processing and, in dev, serves them from the repository root. The theme is stored under the same `theme` key as `js/theme.js`, so the choice follows the visitor across views.
+- Tests: `cd react && npm test` (Vitest; specs are `*.spec.*` so the root `node --test` never picks them up). `src/infrastructure/exported-data.spec.ts` builds the catalogue of every exported language, so a dangling project reference or an id that differs between languages fails there. `scripts/lib/react-app.test.js` guards the CI wiring: the `react` job in `test.yml`, and the regeneration workflow rebuilding **and committing** `app/`.
+- Dev: `cd react && npm run dev` → <http://localhost:5173/app/>.
 
 ### Local Development
 Simply open `index.html` in a web browser or serve the directory with any static web server:

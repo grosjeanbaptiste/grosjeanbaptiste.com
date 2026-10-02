@@ -5,6 +5,9 @@ on:
     branches: [master]
     paths:
       - '**/*.js'
+      - '**/*.mjs'
+      - '**/*.ts'
+      - '**/*.tsx'
       - '**/*.css'
       - '**/*.json'
       - 'biome.json'
@@ -13,6 +16,9 @@ on:
   pull_request:
     paths:
       - '**/*.js'
+      - '**/*.mjs'
+      - '**/*.ts'
+      - '**/*.tsx'
       - '**/*.css'
       - '**/*.json'
       - 'biome.json'
@@ -30,5 +36,5 @@ jobs:
           node-version: '20'
       - name: Biome (lint + format check)
         run: npx --yes @biomejs/biome@1.9.4 ci .
-      - name: Line-count check (max 200, .js/.css)
+      - name: Line-count check (max 200, .js/.mjs/.ts/.tsx/.css)
         run: node scripts/check-line-count.js
