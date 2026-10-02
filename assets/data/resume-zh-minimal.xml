@@ -118,7 +118,7 @@
       </view>
       <view>
         <id>pdf</id>
-        <href>/assets/cv/cv_grosjean_baptiste_zh.pdf</href>
+        <href>/app/zh/pdf/</href>
         <label>PDF</label>
       </view>
     </views>

@@ -7,6 +7,7 @@ import { aResume } from '../domain/fixtures';
 import type { ResumeDocument } from '../domain/resume';
 import type { ResumeSource } from '../domain/resume-source';
 import { App } from './App';
+import type { PdfRenderer, PdfView } from './pdf/pdf-renderer';
 
 export const aUi = (): Record<string, string> => ({
   experience: 'Work Experience',
@@ -30,6 +31,26 @@ export class InMemorySource implements ResumeSource {
   }
 }
 
+// A PDF engine that draws nothing and remembers what it was asked.
+export class FakePdfRenderer implements PdfRenderer {
+  readonly opened: string[] = [];
+  readonly calls: string[] = [];
+  constructor(private readonly failing = false) {}
+
+  async open(url: string): Promise<PdfView> {
+    this.opened.push(url);
+    if (this.failing) throw new Error('corrupt PDF');
+    const calls = this.calls;
+    return {
+      pages: 2,
+      zoomIn: () => calls.push('zoomIn'),
+      zoomOut: () => calls.push('zoomOut'),
+      fitWidth: () => calls.push('fitWidth'),
+      destroy: () => calls.push('destroy'),
+    };
+  }
+}
+
 let current = '';
 function LocationProbe() {
   const location = useLocation();
@@ -38,11 +59,20 @@ function LocationProbe() {
 }
 export const currentLocation = () => current;
 
-export function renderApp(path: string, source: ResumeSource = new InMemorySource()) {
+export function renderApp(
+  path: string,
+  source: ResumeSource = new InMemorySource(),
+  pdf: PdfRenderer = new FakePdfRenderer(),
+) {
   const user = userEvent.setup();
   const view = render(
     <MemoryRouter initialEntries={[path]}>
-      <App source={source} browserLanguages={['nl-BE', 'en']} today={new Date('2026-10-01')} />
+      <App
+        source={source}
+        pdf={pdf}
+        browserLanguages={['nl-BE', 'en']}
+        today={new Date('2026-10-01')}
+      />
       <LocationProbe />
     </MemoryRouter>,
   );

@@ -13,4 +13,5 @@ globalThis.ResizeObserver ??= class {
   unobserve() {}
   disconnect() {}
 };
-Element.prototype.scrollIntoView ??= () => {};
+// Only under jsdom: specs that declare `@vitest-environment node` have no DOM.
+if (typeof Element !== 'undefined') Element.prototype.scrollIntoView ??= () => {};

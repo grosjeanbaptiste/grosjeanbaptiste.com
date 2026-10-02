@@ -20,7 +20,8 @@ const VIEWS = [
     href: (lang) => `/assets/data/resume-${lang}-minimal.xml`,
     firefoxOnly: true,
   },
-  { id: 'pdf', href: (lang) => `/assets/cv/cv_grosjean_baptiste_${lang}.pdf` },
+  // The reader page (react/), which shows the LaTeX PDF inside the site.
+  { id: 'pdf', href: (lang) => `/app/${lang}/pdf/` },
 ];
 
 // The displays as one language shows them: { id, href, label, note? }.
