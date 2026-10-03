@@ -121,6 +121,11 @@
         <href>/app/fr/pdf/</href>
         <label>PDF</label>
       </view>
+      <view>
+        <id>timeline</id>
+        <href>/app/fr/pdf/timeline/</href>
+        <label>Chronologie (PDF)</label>
+      </view>
     </views>
     <degrees>
       <obtained>Master en Sciences — Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)</obtained>

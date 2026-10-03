@@ -43,14 +43,21 @@ const xslt = (theme, lang) => {
   return execFileSync('xsltproc', [xsl, xml], { encoding: 'utf8' });
 };
 
-test('the registry lists the five displays, classic first', () => {
+test('the registry lists the six displays, classic first', () => {
   assert.deepEqual(
     VIEWS.map((v) => v.id),
-    ['classic', 'interactive', 'xsltRich', 'xsltMinimal', 'pdf'],
+    ['classic', 'interactive', 'xsltRich', 'xsltMinimal', 'pdf', 'timeline'],
   );
 });
 
 test('the PDF display is the reader inside the site, not the raw file', () => {
+  test('the timeline display is the reader on the landscape timeline PDF', () => {
+    for (const lang of LANGS) {
+      const timeline = viewsOf(lang).find((v) => v.id === 'timeline');
+      assert.equal(timeline.href, `/app/${lang}/pdf/timeline/`);
+    }
+  });
+
   for (const lang of LANGS) {
     const pdf = viewsOf(lang).find((v) => v.id === 'pdf');
     assert.equal(pdf.href, `/app/${lang}/pdf/`);

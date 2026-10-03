@@ -98,6 +98,7 @@ function buildMeta(b, lang, description, ogTitle, imageUrl, t, hardSkills, brand
     '<link rel="alternate" type="application/json" title="Resume (JSON Resume v1.0.0)" href="/assets/data/resume.json">',
     `<link rel="alternate" type="application/xml" title="Resume (XML)" href="/assets/data/resume-${lang}.xml">`,
     `<link rel="alternate" type="application/pdf" title="CV (PDF)" href="/assets/cv/cv_grosjean_baptiste_${lang}.pdf">`,
+    `<link rel="alternate" type="application/pdf" title="Timeline (PDF)" href="/assets/cv/cv_grosjean_baptiste_timeline_${lang}.pdf">`,
     '',
     '<!-- Open Graph -->',
     '<meta property="og:type" content="profile">',

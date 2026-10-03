@@ -19,6 +19,7 @@ module.exports = {
   jsonRegistry: 'Lebenslauf (JSON Resume registry)',
   jsonRegistryNote: 'thematisierte Ansichten des kanonischen JSON',
   downloadCV: 'Lebenslauf herunterladen',
+  downloadTimeline: 'Zeitleiste herunterladen',
   printPdf: 'Drucken / PDF',
   dailyLifeUnit: 'h',
   dailyLifeAria: 'Typische Aufteilung von 24 Stunden',
@@ -29,6 +30,7 @@ module.exports = {
     xsltRich: 'XSLT (ausführlich)',
     xsltMinimal: 'XSLT (minimal)',
     pdf: 'PDF',
+    timeline: 'Zeitleiste (PDF)',
   },
   nav: {
     about: 'Über',

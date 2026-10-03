@@ -1,7 +1,8 @@
-/* Floating CV actions (download the LaTeX PDF / print this page) + daily-life
+/* Floating CV actions (download the LaTeX PDF / the timeline PDF / print this
+ * page) + daily-life
  * doughnut chart.
  *
- * The cluster owns the fixed positioning; the two buttons are ordinary flow
+ * The cluster owns the fixed positioning; the buttons are ordinary flow
  * children of it and share one look, so they stack instead of overlapping. */
 
 .cv-actions {
@@ -81,6 +82,28 @@
   height: 12px;
   border-radius: 3px;
   flex-shrink: 0;
+}
+
+/* Three actions stacked would reach down into the first section's text. On a
+ * wide screen they line up, in the empty band right of its heading; below
+ * that, the CV keeps its line and the other two share the one under it — the
+ * footprint the two original actions had. Phones keep the column at the bottom. */
+@media (min-width: 80rem) {
+  .cv-actions {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 48.0625rem) and (max-width: 79.9375rem) {
+  .cv-actions {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: end;
+  }
+
+  .cv-actions > :first-child {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 480px) {

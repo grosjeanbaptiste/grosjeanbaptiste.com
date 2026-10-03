@@ -38,7 +38,7 @@ function render(template, lang, title, description) {
 
 export function routePages(template, documents) {
   if (!HEAD.test(template)) throw new Error('index.html has lost its ROUTE-HEAD markers');
-  return documents.flatMap(({ lang, resume }) => {
+  return documents.flatMap(({ lang, resume, views }) => {
     const { name, label } = resume.basics;
     const home = {
       path: `${lang}/index.html`,
@@ -57,6 +57,12 @@ export function routePages(template, documents) {
       path: `${lang}/pdf/index.html`,
       html: render(template, lang, `CV (PDF) · ${name}`, `${name} — ${label} (PDF)`),
     };
-    return [home, reader, ...entries];
+    const timeline = (views ?? []).find((view) => view.id === 'timeline');
+    if (!timeline) throw new Error(`The ${lang} export lists no timeline display`);
+    const timelineReader = {
+      path: `${lang}/pdf/timeline/index.html`,
+      html: render(template, lang, `${timeline.label} · ${name}`, `${name} — ${timeline.label}`),
+    };
+    return [home, reader, timelineReader, ...entries];
   });
 }

@@ -2,8 +2,14 @@
 import type { ViewLink } from './resume';
 
 const LABELS: Record<string, [string, string[]]> = {
-  en: ['Views', ['Classic', 'Interactive', 'XSLT (rich)', 'XSLT (minimal)', 'PDF']],
-  fr: ['Affichages', ['Classique', 'Interactif', 'XSLT riche', 'XSLT minimal', 'PDF']],
+  en: [
+    'Views',
+    ['Classic', 'Interactive', 'XSLT (rich)', 'XSLT (minimal)', 'PDF', 'Timeline (PDF)'],
+  ],
+  fr: [
+    'Affichages',
+    ['Classique', 'Interactif', 'XSLT riche', 'XSLT minimal', 'PDF', 'Chronologie (PDF)'],
+  ],
 };
 
 export function aViews(lang: string): { viewsTitle: string; views: ViewLink[] } {
@@ -14,8 +20,9 @@ export function aViews(lang: string): { viewsTitle: string; views: ViewLink[] } 
     `/assets/data/resume-${lang}.xml`,
     `/assets/data/resume-${lang}-minimal.xml`,
     `/app/${lang}/pdf/`,
+    `/app/${lang}/pdf/timeline/`,
   ];
-  const ids = ['classic', 'interactive', 'xsltRich', 'xsltMinimal', 'pdf'];
+  const ids = ['classic', 'interactive', 'xsltRich', 'xsltMinimal', 'pdf', 'timeline'];
   return {
     viewsTitle,
     views: ids.map((id, i) => ({ id, href: hrefs[i] ?? '', label: labels[i] ?? '' })),

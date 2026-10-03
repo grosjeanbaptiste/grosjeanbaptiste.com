@@ -19,6 +19,7 @@ module.exports = {
   jsonRegistry: 'CV (JSON Resume registry)',
   jsonRegistryNote: 'gestylede weergaven van de canonieke JSON',
   downloadCV: 'CV downloaden',
+  downloadTimeline: 'Tijdlijn downloaden',
   printPdf: 'Afdrukken / PDF',
   dailyLifeUnit: 'u',
   dailyLifeAria: 'Typische verdeling van 24 uur',
@@ -29,6 +30,7 @@ module.exports = {
     xsltRich: 'XSLT (uitgebreid)',
     xsltMinimal: 'XSLT (minimaal)',
     pdf: 'PDF',
+    timeline: 'Tijdlijn (PDF)',
   },
   nav: {
     about: 'Over',

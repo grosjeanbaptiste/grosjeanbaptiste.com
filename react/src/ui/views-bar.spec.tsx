@@ -16,6 +16,7 @@ describe('the views bar', () => {
       ['XSLT (rich)', '/assets/data/resume-en.xml'],
       ['XSLT (minimal)', '/assets/data/resume-en-minimal.xml'],
       ['PDF', '/app/en/pdf/'],
+      ['Timeline (PDF)', '/app/en/pdf/timeline/'],
     ]);
   });
 

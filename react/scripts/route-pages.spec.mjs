@@ -9,6 +9,7 @@ const template = `<html lang="en"><head>
 
 const doc = (lang, position) => ({
   lang,
+  views: [{ id: 'timeline', href: `/app/${lang}/pdf/timeline/`, label: 'Timeline (PDF)' }],
   resume: {
     basics: { name: 'Baptiste Grosjean', label: 'Computer Scientist' },
     work: [{ id: 'acteble-founder', company: 'Acteble', position, summary: 'Rust & <Flutter>' }],
@@ -36,6 +37,18 @@ describe('routePages', () => {
 
   it('writes the PDF reader page of each language', () => {
     expect(page('fr/pdf/index.html').html).toContain('<title>CV (PDF) · Baptiste Grosjean</title>');
+  });
+
+  it('writes the timeline reader page of each language', () => {
+    expect(page('fr/pdf/timeline/index.html').html).toContain(
+      '<title>Timeline (PDF) · Baptiste Grosjean</title>',
+    );
+  });
+
+  it('fails when the export has lost the timeline display', () => {
+    expect(() => routePages(template, [{ ...doc('en', 'Founder'), views: [] }])).toThrow(
+      /timeline/,
+    );
   });
 
   it('files course units under the course kind', () => {

@@ -30,6 +30,10 @@ function generateSitemap() {
       loc: `/assets/cv/cv_grosjean_baptiste_${l}.pdf`,
       priority: '0.7',
     })),
+    ...LANGS.map((l) => ({
+      loc: `/assets/cv/cv_grosjean_baptiste_timeline_${l}.pdf`,
+      priority: '0.6',
+    })),
   ].map((u) =>
     [
       '  <url>',

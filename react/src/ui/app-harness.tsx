@@ -17,6 +17,7 @@ export const aUi = (): Record<string, string> => ({
   courseUnits: 'Course units',
   volunteer: 'Volunteering',
   downloadCV: 'Download CV',
+  downloadTimeline: 'Download the timeline',
   themeLabel: 'Toggle theme',
   langMenuLabel: 'Language',
 });

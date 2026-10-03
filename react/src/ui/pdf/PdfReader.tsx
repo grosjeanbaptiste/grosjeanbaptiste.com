@@ -1,27 +1,45 @@
-// The PDF display: the LaTeX CV of the language being read, drawn inside the
-// site by the PDF engine behind the PdfRenderer port, with a reader toolbar
-// (pages, zoom, download, the raw file). A failure is logged and shown.
+// The PDF displays: one of the two LaTeX PDFs of the language being read (the
+// CV, or the landscape timeline), drawn inside the site by the PDF engine
+// behind the PdfRenderer port, with a reader toolbar (pages, zoom, download,
+// the raw file). A failure is logged and shown.
 import { useEffect, useRef, useState } from 'react';
 import { useReading } from '../context';
 import { LangMenu } from '../header/LangMenu';
-import { pdfPath } from '../paths';
+import { pdfPath, timelinePdfPath } from '../paths';
 import type { PdfRenderer, PdfView } from './pdf-renderer';
-import { PDF_STRINGS } from './pdf-strings';
+import { PDF_STRINGS, type PdfStrings } from './pdf-strings';
 
 type State =
   | { readonly status: 'loading' }
   | { readonly status: 'ready'; readonly view: PdfView }
   | { readonly status: 'failed' };
 
-export function PdfReader({ renderer }: { renderer: PdfRenderer }) {
+// What each of the two PDFs reads as: its file, its title, its download label.
+const DOCUMENTS = {
+  cv: { file: pdfPath, title: (_: PdfStrings) => 'CV (PDF)', download: 'downloadCV' },
+  timeline: {
+    file: timelinePdfPath,
+    title: (s: PdfStrings) => s.timelineTitle,
+    download: 'downloadTimeline',
+  },
+} as const;
+
+interface Props {
+  readonly renderer: PdfRenderer;
+  readonly document?: keyof typeof DOCUMENTS;
+}
+
+export function PdfReader({ renderer, document: shown = 'cv' }: Props) {
   const { lang, catalogue, theme, toggleTheme } = useReading();
   const strings = PDF_STRINGS[lang];
   const container = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<State>({ status: 'loading' });
-  const file = pdfPath(lang);
+  const spec = DOCUMENTS[shown];
+  const file = spec.file(lang);
+  const title = spec.title(strings);
 
   useEffect(() => {
-    document.title = `CV (PDF) — ${catalogue.basics.name}`;
+    document.title = `${title} — ${catalogue.basics.name}`;
     const target = container.current;
     if (!target) return;
     let opened: PdfView | undefined;
@@ -42,7 +60,7 @@ export function PdfReader({ renderer }: { renderer: PdfRenderer }) {
       current = false;
       opened?.destroy();
     };
-  }, [renderer, file, catalogue]);
+  }, [renderer, file, title, catalogue]);
 
   const view = state.status === 'ready' ? state.view : undefined;
   return (
@@ -73,7 +91,7 @@ export function PdfReader({ renderer }: { renderer: PdfRenderer }) {
           </button>
         </div>
         <a className="pdf-download" href={file} download>
-          {catalogue.text('downloadCV')}
+          {catalogue.text(spec.download)}
         </a>
         <a className="pdf-open" href={file} target="_blank" rel="noopener noreferrer">
           {strings.openFile}
