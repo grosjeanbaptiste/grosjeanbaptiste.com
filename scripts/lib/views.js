@@ -1,5 +1,5 @@
 // The displays of the CV. Classic HTML, interactive (React), the two XSLT
-// themes and the PDF are all just ways of showing the same CV, so every HTML
+// themes, the PDF and the landscape timeline PDF are all just ways of showing the same CV, so every HTML
 // display carries one identical bar listing them (css/views-bar.css).
 //
 // This registry is the single list. Three renderers read it:
@@ -22,6 +22,8 @@ const VIEWS = [
   },
   // The reader page (react/), which shows the LaTeX PDF inside the site.
   { id: 'pdf', href: (lang) => `/app/${lang}/pdf/` },
+  // The same reader, on the landscape PDF that carries the timeline alone.
+  { id: 'timeline', href: (lang) => `/app/${lang}/pdf/timeline/` },
 ];
 
 // The displays as one language shows them: { id, href, label, note? }.

@@ -14,6 +14,10 @@ export const withLang = (pathname: string, search: string, lang: Lang) =>
 
 export const pdfPath = (lang: Lang) => `/assets/cv/cv_grosjean_baptiste_${lang}.pdf`;
 
+// The second LaTeX PDF: the timeline alone, on a landscape page.
+export const timelinePdfPath = (lang: Lang) =>
+  `/assets/cv/cv_grosjean_baptiste_timeline_${lang}.pdf`;
+
 export const LANG_NAMES: Readonly<Record<Lang, string>> = {
   en: 'English',
   fr: 'Français',

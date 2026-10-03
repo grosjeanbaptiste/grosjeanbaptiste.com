@@ -59,6 +59,15 @@ function LoadedShell({ source, pdf, today, lang }: ShellProps & { lang: Lang }) 
     <ReadingProvider value={reading}>
       <Routes>
         <Route
+          path="pdf/timeline"
+          element={
+            <>
+              <ViewsBar current="timeline" />
+              <PdfReader renderer={pdf} document="timeline" />
+            </>
+          }
+        />
+        <Route
           path="pdf"
           element={
             <>

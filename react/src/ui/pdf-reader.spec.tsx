@@ -56,3 +56,25 @@ describe('the PDF reader', () => {
     expect(pdf.calls).toContain('destroy');
   });
 });
+
+describe('the timeline reader', () => {
+  it('marks the timeline display as current in the views bar', async () => {
+    renderApp('/en/pdf/timeline');
+    const bar = await screen.findByRole('navigation', { name: 'Views' });
+    expect(within(bar).getByRole('link', { current: 'page' })).toHaveTextContent('Timeline (PDF)');
+  });
+
+  it('opens the timeline PDF of the language being read', async () => {
+    const pdf = new FakePdfRenderer();
+    renderApp('/fr/pdf/timeline', undefined, pdf);
+    await screen.findByText('2 pages');
+    expect(pdf.opened).toEqual(['/assets/cv/cv_grosjean_baptiste_timeline_fr.pdf']);
+  });
+
+  it('offers the timeline file for download', async () => {
+    renderApp('/en/pdf/timeline');
+    const link = await screen.findByRole('link', { name: 'Download the timeline' });
+    expect(link).toHaveAttribute('href', '/assets/cv/cv_grosjean_baptiste_timeline_en.pdf');
+    expect(link).toHaveAttribute('download');
+  });
+});

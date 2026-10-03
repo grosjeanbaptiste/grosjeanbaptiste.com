@@ -4,8 +4,8 @@
 // display is another document, not a route of this app.
 import { useReading } from '../context';
 
-// `current`: the display this bar is drawn into — this app serves two.
-export function ViewsBar({ current }: { current: 'interactive' | 'pdf' }) {
+// `current`: the display this bar is drawn into — this app serves three.
+export function ViewsBar({ current }: { current: 'interactive' | 'pdf' | 'timeline' }) {
   const { catalogue } = useReading();
   return (
     <nav className="views-bar" aria-label={catalogue.viewsTitle}>

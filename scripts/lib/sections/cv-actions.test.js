@@ -71,3 +71,26 @@ test('the print button is styled, not shipped bare', () => {
     '.cv-actions must own the fixed positioning the single button used to have',
   );
 });
+
+test('the landscape timeline PDF is offered for download next to the CV', () => {
+  for (const lang of LANGS) {
+    const link = generateCvDownload(lang).match(
+      new RegExp(`<a href="/assets/cv/cv_grosjean_baptiste_timeline_${lang}\\.pdf"[^>]*>`),
+    );
+    assert.ok(link, `${lang}: no link to the timeline PDF`);
+    assert.match(link[0], /\bdownload\b/, `${lang}: the timeline link lost its download attribute`);
+  }
+});
+
+// Named as the views bar names it — short enough for three actions to line up.
+test('the timeline download is labelled in every language, apart from the CV', () => {
+  for (const lang of LANGS) {
+    const label = I18N[lang].views.timeline;
+    assert.ok(label, `${lang}: no views.timeline label`);
+    assert.notEqual(label, I18N[lang].downloadCV, `${lang}: CV and timeline share a label`);
+    assert.ok(
+      generateCvDownload(lang).includes(label),
+      `${lang}: "${label}" missing from the markup`,
+    );
+  }
+});

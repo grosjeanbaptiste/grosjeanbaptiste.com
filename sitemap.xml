@@ -139,4 +139,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_timeline_en.pdf</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_timeline_fr.pdf</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_timeline_nl.pdf</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_timeline_es.pdf</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_timeline_de.pdf</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.grosjeanbaptiste.com/assets/cv/cv_grosjean_baptiste_timeline_zh.pdf</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

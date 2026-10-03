@@ -19,6 +19,7 @@ module.exports = {
   jsonRegistry: '简历 (JSON Resume registry)',
   jsonRegistryNote: '规范 JSON 的主题化视图',
   downloadCV: '下载简历',
+  downloadTimeline: '下载时间线',
   printPdf: '打印 / PDF',
   dailyLifeUnit: '小时',
   dailyLifeAria: '24 小时典型分布',
@@ -29,6 +30,7 @@ module.exports = {
     xsltRich: 'XSLT（完整）',
     xsltMinimal: 'XSLT（简洁）',
     pdf: 'PDF',
+    timeline: '时间线 (PDF)',
   },
   nav: {
     about: '关于',
