@@ -112,4 +112,4 @@ function compileWithFit(resume, lang, outPath) {
   return { ok: false };
 }
 
-module.exports = { compileWithFit, latexEnv, latexFailure };
+module.exports = { compileWithFit, compileOnce, latexEnv, latexFailure };
