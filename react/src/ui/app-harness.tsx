@@ -10,6 +10,7 @@ import { App } from './App';
 import type { PdfRenderer, PdfView } from './pdf/pdf-renderer';
 
 export const aUi = (): Record<string, string> => ({
+  about: 'About',
   experience: 'Work Experience',
   education: 'Education',
   projects: 'Projects',
