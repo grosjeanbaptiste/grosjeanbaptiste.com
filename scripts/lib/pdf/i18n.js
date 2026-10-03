@@ -17,6 +17,7 @@ module.exports = {
     gpa: 'GPA',
     inProgress: 'in progress',
     curriculumVitae: 'Curriculum Vitae',
+    timeline: 'Timeline',
   },
   fr: {
     ...sharedFr,
@@ -26,6 +27,7 @@ module.exports = {
     gpa: 'Note',
     inProgress: 'en cours',
     curriculumVitae: 'Curriculum vitæ',
+    timeline: 'Chronologie',
   },
   nl: {
     ...sharedNl,
@@ -35,6 +37,7 @@ module.exports = {
     gpa: 'Score',
     inProgress: 'in uitvoering',
     curriculumVitae: 'Curriculum vitae',
+    timeline: 'Tijdlijn',
   },
   es: {
     ...sharedEs,
@@ -44,6 +47,7 @@ module.exports = {
     gpa: 'Nota',
     inProgress: 'en curso',
     curriculumVitae: 'Currículum vítae',
+    timeline: 'Cronología',
   },
   de: {
     ...sharedDe,
@@ -53,6 +57,7 @@ module.exports = {
     gpa: 'Note',
     inProgress: 'läuft',
     curriculumVitae: 'Lebenslauf',
+    timeline: 'Zeitleiste',
   },
   zh: {
     ...sharedZh,
@@ -62,5 +67,6 @@ module.exports = {
     gpa: '成绩',
     inProgress: '进行中',
     curriculumVitae: '简历',
+    timeline: '时间线',
   },
 };
