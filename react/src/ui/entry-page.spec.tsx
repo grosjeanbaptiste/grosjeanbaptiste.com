@@ -2,10 +2,10 @@ import { screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { currentLocation, renderApp } from './app-harness';
 
-describe('an entry page', () => {
+describe('an entry panel', () => {
   it('is titled by the entry', async () => {
     renderApp('/en/work/acteble-founder');
-    expect(await screen.findByRole('heading', { level: 1, name: 'Founder' })).toBeVisible();
+    expect(await screen.findByRole('heading', { level: 2, name: 'Founder' })).toBeVisible();
   });
 
   it('shows when it happened', async () => {

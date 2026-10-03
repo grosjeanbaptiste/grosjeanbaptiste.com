@@ -1,30 +1,37 @@
-// Everything under /:lang — loads that language's CV, then lays out the
-// header, the page and the command palette around it.
+// Everything under /:lang — loads that language's CV, then lays out one of the
+// two displays this app serves: the interactive CV (header, timeline, ⌘K
+// palette) or, under /:lang/pdf, the PDF reader. Both sit under the views bar.
 import { useEffect, useState } from 'react';
 import { Route, Routes, useParams } from 'react-router';
 import { type Lang, isLang } from '../application/lang';
 import type { ResumeSource } from '../domain/resume-source';
 import { NotFound } from './NotFound';
-import { ReadingProvider } from './context';
-import { EntryPage } from './entry/EntryPage';
+import { ReadingProvider, useReading } from './context';
 import { Header } from './header/Header';
 import { ViewsBar } from './header/ViewsBar';
 import { HomePage } from './home/HomePage';
 import { CommandPalette } from './palette/CommandPalette';
+import { PdfReader } from './pdf/PdfReader';
+import type { PdfRenderer } from './pdf/pdf-renderer';
 import { STRINGS } from './strings';
 import { useTheme } from './theme';
 import { useCatalogue } from './use-catalogue';
 
-export function LangShell({ source, today }: { source: ResumeSource; today: Date }) {
-  const { lang } = useParams();
-  if (!isLang(lang)) return <NotFound strings={STRINGS.en} />;
-  return <LoadedShell source={source} today={today} lang={lang} />;
+interface ShellProps {
+  readonly source: ResumeSource;
+  readonly pdf: PdfRenderer;
+  readonly today: Date;
 }
 
-function LoadedShell({ source, today, lang }: { source: ResumeSource; today: Date; lang: Lang }) {
+export function LangShell(props: ShellProps) {
+  const { lang } = useParams();
+  if (!isLang(lang)) return <NotFound strings={STRINGS.en} />;
+  return <LoadedShell {...props} lang={lang} />;
+}
+
+function LoadedShell({ source, pdf, today, lang }: ShellProps & { lang: Lang }) {
   const loading = useCatalogue(source, lang);
   const { theme, toggle } = useTheme();
-  const [paletteOpen, setPaletteOpen] = useState(false);
   const strings = STRINGS[lang];
 
   useEffect(() => {
@@ -46,26 +53,42 @@ function LoadedShell({ source, today, lang }: { source: ResumeSource; today: Dat
     );
   }
 
-  const reading = {
-    lang,
-    catalogue: loading.catalogue,
-    strings,
-    today,
-    theme,
-    toggleTheme: toggle,
-  };
+  const catalogue = loading.catalogue;
+  const reading = { lang, catalogue, strings, today, theme, toggleTheme: toggle };
   return (
     <ReadingProvider value={reading}>
-      <ViewsBar />
+      <Routes>
+        <Route
+          path="pdf"
+          element={
+            <>
+              <ViewsBar current="pdf" />
+              <PdfReader renderer={pdf} />
+            </>
+          }
+        />
+        <Route path="*" element={<InteractiveCv />} />
+      </Routes>
+    </ReadingProvider>
+  );
+}
+
+function InteractiveCv() {
+  const { strings } = useReading();
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  return (
+    <>
+      <ViewsBar current="interactive" />
       <Header onSearch={() => setPaletteOpen(true)} />
       <main className="page">
         <Routes>
           <Route index element={<HomePage />} />
-          <Route path=":kind/:id" element={<EntryPage />} />
+          {/* The same page, with that entry open under the timeline. */}
+          <Route path=":kind/:id" element={<HomePage />} />
           <Route path="*" element={<NotFound strings={strings} />} />
         </Routes>
       </main>
       <CommandPalette open={paletteOpen} onOpenChange={setPaletteOpen} />
-    </ReadingProvider>
+    </>
   );
 }

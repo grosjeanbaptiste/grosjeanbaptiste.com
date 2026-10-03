@@ -2,10 +2,12 @@ import { screen, within } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { currentLocation, renderApp } from './app-harness';
 
-const listedTitles = () =>
-  within(screen.getByRole('region', { name: 'Work Experience' }))
-    .queryAllByRole('heading', { level: 3 })
-    .map((h) => h.textContent);
+// The work bars the filter leaves lit, by title.
+const litWork = () =>
+  within(screen.getByRole('region', { name: 'Timeline' }))
+    .getAllByRole('link')
+    .filter((a) => a.closest('[data-kind="work"]') && a.getAttribute('data-dimmed') !== 'true')
+    .map((a) => a.getAttribute('aria-label')?.split(' — ')[0]);
 
 describe('filtering the CV by skill', () => {
   it('puts the chosen skill in the URL so the view can be shared', async () => {
@@ -17,7 +19,7 @@ describe('filtering the CV by skill', () => {
   it('keeps only the entries that use the skill', async () => {
     renderApp('/en?skill=Python');
     await screen.findByRole('heading', { level: 1 });
-    expect(listedTitles()).toEqual(['Data Scientist']);
+    expect(litWork()).toEqual(['Data Scientist']);
   });
 
   it('announces how many entries use it', async () => {
@@ -36,7 +38,7 @@ describe('filtering the CV by skill', () => {
   it('clears back to the whole CV', async () => {
     const { user } = renderApp('/en?skill=Python');
     await user.click(await screen.findByRole('button', { name: 'Clear filter' }));
-    expect(listedTitles()).toEqual(['Founder', 'Data Scientist']);
+    expect(litWork()).toEqual(['Data Scientist', 'Founder']);
   });
 
   it('dims the timeline bars that do not use the skill', async () => {

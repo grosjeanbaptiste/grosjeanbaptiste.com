@@ -1,38 +1,34 @@
-import { useSearchParams } from 'react-router';
+// The CV, centred on its timeline: who in one band, then the timeline to
+// browse it, the skill filter that lights its bars, and the summary. Under
+// /:lang/:kind/:id the same page opens that entry right under the timeline.
+import { useParams, useSearchParams } from 'react-router';
 import { entriesUsing } from '../../domain/skills';
+import { NotFound } from '../NotFound';
 import { useReading } from '../context';
-import { EntrySection } from './EntrySection';
+import { EntryPanel } from '../entry/EntryPanel';
+import { About } from './About';
 import { Hero } from './Hero';
 import { SkillFilter } from './SkillFilter';
 import { TimelineView } from './TimelineView';
 
-const SECTION_KINDS = ['work', 'project', 'education', 'volunteer'] as const;
-
 export function HomePage() {
-  const { catalogue } = useReading();
+  const { catalogue, strings } = useReading();
+  const { kind, id } = useParams();
   const [params] = useSearchParams();
   const skill = params.get('skill');
+  const entry = id ? catalogue.entry(id) : undefined;
+  if (id && (!entry || entry.kind !== kind)) return <NotFound strings={strings} />;
+
   const visible = new Set(
     (skill ? entriesUsing(catalogue.entries, skill) : catalogue.entries).map((e) => e.id),
   );
-
   return (
     <>
       <Hero />
+      <TimelineView highlight={skill ? visible : null} selectedId={entry?.id} />
+      {entry && <EntryPanel entry={entry} />}
       <SkillFilter selected={skill} matches={skill ? visible.size : 0} />
-      <TimelineView highlight={skill ? visible : null} />
-      {SECTION_KINDS.map((kind) => (
-        <EntrySection
-          key={kind}
-          kind={kind}
-          entries={catalogue.ofKind(kind).filter((e) => visible.has(e.id))}
-          courses={
-            kind === 'education'
-              ? catalogue.ofKind('course').filter((e) => visible.has(e.id))
-              : undefined
-          }
-        />
-      ))}
+      <About />
     </>
   );
 }

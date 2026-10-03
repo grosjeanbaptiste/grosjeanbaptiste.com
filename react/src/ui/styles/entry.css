@@ -1,18 +1,49 @@
-.entry-page {
-  max-width: 50rem;
+.entry-panel {
+  position: relative;
   display: grid;
   gap: 0.75rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--app-surface);
+  border: var(--hairline) solid var(--app-line);
+  border-radius: calc(var(--radius) * 1.5);
+  box-shadow: var(--shadow);
+  scroll-margin-top: calc(var(--views-bar-h, 0rem) + 5rem);
+  animation: entry-in 0.25s var(--ease);
   view-transition-name: entry;
 }
 
-.back-link {
-  justify-self: start;
-  text-decoration: none;
-  font-weight: 500;
+.entry-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  font: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--app-muted);
+  background: none;
+  border: 0;
+  border-radius: 999rem;
+  cursor: pointer;
+}
+
+.entry-close:hover {
+  background: var(--app-soft);
+  color: var(--app-accent);
+}
+
+@keyframes entry-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
 }
 
 .entry-kind {
-  margin: 1rem 0 0;
+  margin: 0;
   font-size: 0.8em;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -20,9 +51,10 @@
   color: var(--app-accent-2);
 }
 
-.entry-page h1 {
+.entry-panel h2 {
   margin: 0;
-  font-size: clamp(1.8rem, 1.3rem + 2.5vw, 2.8rem);
+  padding-right: 2.5rem;
+  font-size: clamp(1.5rem, 1.2rem + 1.6vw, 2.2rem);
   letter-spacing: -0.015em;
 }
 
@@ -51,8 +83,13 @@
   padding-left: 1.2rem;
 }
 
-.entry-page section {
-  margin-top: 1.5rem;
+.entry-related {
+  margin-top: 0.75rem;
+}
+
+.entry-related h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
 }
 
 .related {

@@ -18,6 +18,7 @@ export interface Strings {
   readonly timeline: string;
   readonly related: string;
   readonly back: string;
+  readonly close: string;
   readonly ongoing: string;
   readonly switchTo: string;
   readonly loading: string;
@@ -44,6 +45,7 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     timeline: 'Timeline',
     related: 'Related',
     back: 'Back to the CV',
+    close: 'Close',
     ongoing: 'present',
     switchTo: 'Read in',
     loading: 'Loading the CV…',
@@ -68,6 +70,7 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     timeline: 'Chronologie',
     related: 'Lié',
     back: 'Retour au CV',
+    close: 'Fermer',
     ongoing: 'aujourd’hui',
     switchTo: 'Lire en',
     loading: 'Chargement du CV…',
@@ -92,6 +95,7 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     timeline: 'Tijdlijn',
     related: 'Gerelateerd',
     back: 'Terug naar het CV',
+    close: 'Sluiten',
     ongoing: 'heden',
     switchTo: 'Lezen in',
     loading: 'CV wordt geladen…',
@@ -116,6 +120,7 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     timeline: 'Cronología',
     related: 'Relacionado',
     back: 'Volver al CV',
+    close: 'Cerrar',
     ongoing: 'actualidad',
     switchTo: 'Leer en',
     loading: 'Cargando el CV…',
@@ -140,6 +145,7 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     timeline: 'Zeitleiste',
     related: 'Verknüpft',
     back: 'Zurück zum Lebenslauf',
+    close: 'Schließen',
     ongoing: 'heute',
     switchTo: 'Lesen auf',
     loading: 'Lebenslauf wird geladen…',
@@ -164,6 +170,7 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     timeline: '时间线',
     related: '相关',
     back: '返回简历',
+    close: '关闭',
     ongoing: '至今',
     switchTo: '阅读语言',
     loading: '正在加载简历…',

@@ -1,13 +1,17 @@
+/* One compact band: the timeline under it is what the page is about. */
 .hero {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: clamp(1.25rem, 4vw, 3rem);
-  align-items: start;
-  padding-top: clamp(1rem, 4vw, 3rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.hero-text {
+  flex: 1 1 14rem;
 }
 
 .hero-photo {
-  width: clamp(6rem, 16vw, 10rem);
+  width: clamp(3.5rem, 7vw, 5rem);
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
@@ -17,24 +21,24 @@
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 1.4rem + 3vw, 3.4rem);
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.2rem);
   margin: 0;
   letter-spacing: -0.02em;
 }
 
 .hero-label {
-  margin: 0.25rem 0 0;
-  font-size: 1.15em;
+  margin: 0.15rem 0 0;
   color: var(--app-accent);
   font-weight: 500;
 }
 
 .hero-location {
-  margin: 0.25rem 0 1rem;
+  margin: 0;
+  font-size: 0.9em;
   color: var(--app-muted);
 }
 
-.hero-summary {
+.about-summary {
   max-width: 62ch;
   margin: 0 0 0.75rem;
 }
@@ -44,7 +48,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0;
-  margin: 1.25rem 0 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -123,11 +127,4 @@
   align-items: baseline;
   margin: 1rem 0 0;
   font-weight: 500;
-}
-
-@media (max-width: 40rem) {
-  .hero {
-    grid-template-columns: 1fr;
-    justify-items: start;
-  }
 }

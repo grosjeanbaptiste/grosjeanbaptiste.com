@@ -34,6 +34,10 @@ describe('routePages', () => {
     );
   });
 
+  it('writes the PDF reader page of each language', () => {
+    expect(page('fr/pdf/index.html').html).toContain('<title>CV (PDF) · Baptiste Grosjean</title>');
+  });
+
   it('files course units under the course kind', () => {
     expect(page('en/course/algo/index.html')).toBeDefined();
   });

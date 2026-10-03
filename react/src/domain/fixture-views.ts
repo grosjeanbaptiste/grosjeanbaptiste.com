@@ -13,7 +13,7 @@ export function aViews(lang: string): { viewsTitle: string; views: ViewLink[] } 
     `/app/${lang}/`,
     `/assets/data/resume-${lang}.xml`,
     `/assets/data/resume-${lang}-minimal.xml`,
-    `/assets/cv/cv_grosjean_baptiste_${lang}.pdf`,
+    `/app/${lang}/pdf/`,
   ];
   const ids = ['classic', 'interactive', 'xsltRich', 'xsltMinimal', 'pdf'];
   return {

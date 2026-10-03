@@ -6,7 +6,8 @@
 
 .cv-actions {
   position: fixed;
-  top: 5rem;
+  /* Under the site nav, itself under the views bar (views-bar.css). */
+  top: calc(5rem + var(--views-bar-h, 0rem));
   right: 1.25rem;
   z-index: 900;
   display: flex;

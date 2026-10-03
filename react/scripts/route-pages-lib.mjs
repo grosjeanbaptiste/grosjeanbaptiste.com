@@ -53,6 +53,10 @@ export function routePages(template, documents) {
         };
       }),
     );
-    return [home, ...entries];
+    const reader = {
+      path: `${lang}/pdf/index.html`,
+      html: render(template, lang, `CV (PDF) · ${name}`, `${name} — ${label} (PDF)`),
+    };
+    return [home, reader, ...entries];
   });
 }

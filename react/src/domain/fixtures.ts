@@ -3,7 +3,11 @@ import type { Resume } from './resume';
 
 export function aResume(): Resume {
   return {
-    basics: { name: 'Baptiste Grosjean', label: 'Computer Scientist' },
+    basics: {
+      name: 'Baptiste Grosjean',
+      label: 'Computer Scientist',
+      summary: 'Builds software with care.',
+    },
     work: [
       {
         id: 'acteble-founder',

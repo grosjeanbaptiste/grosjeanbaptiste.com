@@ -56,11 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Highlight active section in navigation
   const sections = document.querySelectorAll('section[id]');
 
+  // Bottom edge of the fixed site nav, measured rather than assumed: the views
+  // bar above it (css/views-bar.css) pushes it down, and its height varies.
+  const navBottom = () => document.querySelector('nav').getBoundingClientRect().bottom;
+
   function highlightActiveSection() {
     let current = '';
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100;
+      const sectionTop = section.offsetTop - navBottom() - 30;
       const sectionHeight = section.offsetHeight;
 
       if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
@@ -91,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - 80,
+          top: targetElement.getBoundingClientRect().top + window.scrollY - navBottom() - 10,
           behavior: 'smooth',
         });
       }

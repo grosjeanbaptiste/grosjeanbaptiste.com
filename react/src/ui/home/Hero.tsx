@@ -1,14 +1,14 @@
+// Who the CV is about, kept to one compact band so the timeline leads the page.
 import { useReading } from '../context';
 import { pdfPath } from '../paths';
 
 export function Hero() {
   const { lang, catalogue } = useReading();
-  const { name, label, summary, image, email, location, profiles } = catalogue.basics;
-  const paragraphs = (summary ?? '').split(/\n{2,}/).filter(Boolean);
+  const { name, label, image, email, location, profiles } = catalogue.basics;
 
   return (
     <section className="hero" aria-labelledby="hero-name">
-      {image && <img className="hero-photo" src={`/${image}`} alt="" width={160} height={160} />}
+      {image && <img className="hero-photo" src={`/${image}`} alt="" width={96} height={96} />}
       <div className="hero-text">
         <h1 id="hero-name">{name}</h1>
         <p className="hero-label">{label}</p>
@@ -17,33 +17,28 @@ export function Hero() {
             {[location.city, location.region].filter(Boolean).join(', ')}
           </p>
         )}
-        {paragraphs.map((p) => (
-          <p key={p} className="hero-summary">
-            {p}
-          </p>
-        ))}
-        <ul className="hero-links">
+      </div>
+      <ul className="hero-links">
+        <li>
+          <a className="button button-primary" href={pdfPath(lang)} download>
+            {catalogue.text('downloadCV')}
+          </a>
+        </li>
+        {email && (
           <li>
-            <a className="button button-primary" href={pdfPath(lang)} download>
-              {catalogue.text('downloadCV')}
+            <a className="button" href={`mailto:${email}`}>
+              {email}
             </a>
           </li>
-          {email && (
-            <li>
-              <a className="button" href={`mailto:${email}`}>
-                {email}
-              </a>
-            </li>
-          )}
-          {(profiles ?? []).map((p) => (
-            <li key={p.url}>
-              <a className="button" href={p.url} target="_blank" rel="noopener noreferrer">
-                {p.network}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+        )}
+        {(profiles ?? []).map((p) => (
+          <li key={p.url}>
+            <a className="button" href={p.url} target="_blank" rel="noopener noreferrer">
+              {p.network}
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

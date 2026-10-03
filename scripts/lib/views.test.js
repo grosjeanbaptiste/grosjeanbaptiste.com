@@ -50,6 +50,13 @@ test('the registry lists the five displays, classic first', () => {
   );
 });
 
+test('the PDF display is the reader inside the site, not the raw file', () => {
+  for (const lang of LANGS) {
+    const pdf = viewsOf(lang).find((v) => v.id === 'pdf');
+    assert.equal(pdf.href, `/app/${lang}/pdf/`);
+  }
+});
+
 for (const lang of LANGS) {
   test(`every display has a ${lang} label`, () => {
     for (const view of viewsOf(lang)) assert.ok(view.label, `${lang}: no label for ${view.id}`);

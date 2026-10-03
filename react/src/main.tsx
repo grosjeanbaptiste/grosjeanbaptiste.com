@@ -3,6 +3,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
 import { HttpResumeSource } from './infrastructure/http-resume-source';
+import { PdfJsRenderer } from './infrastructure/pdfjs-renderer';
 import { App } from './ui/App';
 import './ui/styles/index.css';
 
@@ -14,6 +15,7 @@ createRoot(container).render(
     <BrowserRouter basename="/app">
       <App
         source={new HttpResumeSource(import.meta.env.BASE_URL)}
+        pdf={new PdfJsRenderer()}
         browserLanguages={navigator.languages}
         today={new Date()}
       />

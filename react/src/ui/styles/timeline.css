@@ -45,6 +45,13 @@
 }
 
 .timeline-lane-label {
+  /* Stays in view while a zoomed-in timeline scrolls sideways. */
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  align-self: stretch;
+  margin-right: 0.5rem;
+  background: linear-gradient(to right, var(--app-bg) 85%, transparent);
   font-size: 0.85em;
   font-weight: 600;
   color: var(--app-muted);

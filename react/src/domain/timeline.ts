@@ -26,7 +26,6 @@ export interface Timeline {
   readonly months: number;
   readonly years: readonly { readonly year: number; readonly offset: number }[];
   readonly lanes: readonly TimelineLane[];
-  readonly earliestYear: number;
 }
 
 const ordinal = (ym: YearMonth) => ym.year * 12 + ym.month - 1;
@@ -45,29 +44,22 @@ function packRows(bars: readonly Omit<TimelineBar, 'row'>[]): TimelineBar[] {
     });
 }
 
-// Places an entry in a window starting at month ordinal `start`: cut at the
-// left edge, or null when it ended before the window opens.
-function place(entry: Dated, start: number, today: Date): Omit<TimelineBar, 'row'> | null {
-  const offset = ordinal(entry.period.start) - start;
-  const end = offset + entry.period.months(today);
-  if (end <= 0) return null;
-  return { entry, offset: Math.max(0, offset), length: end - Math.max(0, offset) };
-}
+// Places an entry by its month offset from the start of the career.
+const place = (entry: Dated, start: number, today: Date): Omit<TimelineBar, 'row'> => ({
+  entry,
+  offset: ordinal(entry.period.start) - start,
+  length: entry.period.months(today),
+});
 
-// The whole span by default; from January of `sinceYear` when zoomed in.
-export function timelineOf(entries: readonly Entry[], today: Date, sinceYear?: number): Timeline {
+export function timelineOf(entries: readonly Entry[], today: Date): Timeline {
   const dated = entries.filter((e) => e.kind !== 'course').filter(isDated);
   const to = monthOf(today);
-  const earliest = Math.min(...dated.map((e) => ordinal(e.period.start)), ordinal(to));
-  const start = sinceYear === undefined ? earliest : Math.max(earliest, sinceYear * 12);
+  const start = Math.min(...dated.map((e) => ordinal(e.period.start)), ordinal(to));
   const from = { year: Math.floor(start / 12), month: (start % 12) + 1 };
   const months = ordinal(to) - start + 1;
 
   const lanes = ENTRY_KINDS.flatMap((kind) => {
-    const placed = dated
-      .filter((e) => e.kind === kind)
-      .flatMap((e) => place(e, start, today) ?? []);
-    const bars = packRows(placed);
+    const bars = packRows(dated.filter((e) => e.kind === kind).map((e) => place(e, start, today)));
     if (bars.length === 0) return [];
     return [{ kind, rows: Math.max(...bars.map((b) => b.row)) + 1, bars }];
   });
@@ -76,5 +68,5 @@ export function timelineOf(entries: readonly Entry[], today: Date, sinceYear?: n
   for (let year = from.year + 1; year <= to.year; year++) {
     years.push({ year, offset: year * 12 - start });
   }
-  return { from, to, months, years, lanes, earliestYear: Math.floor(earliest / 12) };
+  return { from, to, months, years, lanes };
 }

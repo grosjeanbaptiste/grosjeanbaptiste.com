@@ -15,7 +15,7 @@ describe('the views bar', () => {
       ['Interactive', '/app/en/'],
       ['XSLT (rich)', '/assets/data/resume-en.xml'],
       ['XSLT (minimal)', '/assets/data/resume-en-minimal.xml'],
-      ['PDF', '/assets/cv/cv_grosjean_baptiste_en.pdf'],
+      ['PDF', '/app/en/pdf/'],
     ]);
   });
 

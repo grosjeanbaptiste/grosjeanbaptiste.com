@@ -1,0 +1,83 @@
+/* The PDF reader: a toolbar under the views bar, then the document filling the
+ * rest of the screen. PDF.js's viewer wants an absolutely positioned,
+ * scrolling container; its pages keep their own white paper. */
+
+.pdf-reader {
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - var(--views-bar-h, 0rem));
+}
+
+.pdf-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.5rem var(--gutter);
+  background: color-mix(in srgb, var(--app-bg) 85%, transparent);
+  border-bottom: var(--hairline) solid var(--app-line);
+  font-size: 0.9em;
+}
+
+.pdf-pages {
+  color: var(--app-muted);
+  margin-right: auto;
+}
+
+.pdf-zoom {
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.pdf-zoom button,
+.pdf-download,
+.pdf-open {
+  font: inherit;
+  padding: 0.3rem 0.75rem;
+  border: var(--hairline) solid var(--app-line);
+  border-radius: 999rem;
+  background: var(--app-surface);
+  color: var(--app-text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pdf-zoom button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.pdf-zoom button:not(:disabled):hover,
+.pdf-open:hover {
+  border-color: var(--app-accent);
+}
+
+.pdf-download {
+  background: var(--app-accent);
+  border-color: var(--app-accent);
+  color: var(--on-accent-color);
+  font-weight: 600;
+}
+
+.pdf-failed {
+  margin: 1rem var(--gutter);
+}
+
+.pdf-frame {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: color-mix(in srgb, var(--app-text) 8%, var(--app-bg));
+}
+
+.pdf-container {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+}
+
+.pdf-container .pdfViewer .page {
+  margin: 1rem auto;
+  border: 0;
+  box-shadow: var(--shadow);
+}
