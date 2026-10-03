@@ -87,3 +87,23 @@ test('an unreadable date is refused', () => {
   const broken = aResume({ volunteer: [{ id: 'x', organization: 'O', startDate: 'spring 2024' }] });
   assert.throws(() => timelineBars(broken, TODAY), /Unreadable date "spring 2024"/);
 });
+
+// The 2- and 5-year PDFs: the same lanes, cut to the last years.
+test('a span starts its axis that many years before the current month', () => {
+  assert.equal(timelineBars(aResume(), TODAY, 2).from, at(2024, 11));
+});
+
+test('a span leaves out the entries that ended before it', () => {
+  const ids = lane(timelineBars(aResume(), TODAY, 2), 'work').bars.map((b) => b.id);
+  assert.deepEqual(ids, ['founder']);
+});
+
+test('an entry begun before the span is cut at its start', () => {
+  const bar = lane(timelineBars(aResume(), TODAY, 2), 'education').bars[0];
+  assert.deepEqual([bar.start, bar.clipped], [at(2024, 11), true]);
+});
+
+test('an entry inside the span is not marked as cut', () => {
+  const bar = lane(timelineBars(aResume(), TODAY, 2), 'projects').bars[0];
+  assert.equal(bar.clipped, false);
+});

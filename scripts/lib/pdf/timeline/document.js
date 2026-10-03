@@ -9,25 +9,28 @@ const { timelineBars } = require('./bars');
 const { layOut } = require('./page');
 const { buildPicture } = require('./picture');
 
-function buildHeader(resume, t, lang, today) {
+function buildHeader(resume, t, lang, today, years) {
   const b = resume.basics || {};
+  // The 2- and 5-year PDFs say so beside the date; the whole career needs no note.
+  const span = years === null ? '' : `${tex(t.timelineSpan(years))} · `;
   return [
     `\\noindent{\\color{name}\\namefont ${tex(b.name)}}\\hfill{\\color{heading}\\LARGE\\rmfamily\\bfseries\\MakeUppercase{${tex(t.timeline)}}}\\par`,
-    `\\noindent{\\color{tagline}\\large\\bfseries ${tex(b.label)}}\\hfill{\\color{body}\\small ${tex(t.updated)} ${tex(formatLongDate(today, lang))}}\\par`,
+    `\\noindent{\\color{tagline}\\large\\bfseries ${tex(b.label)}}\\hfill{\\color{body}\\small ${span}${tex(t.updated)} ${tex(formatLongDate(today, lang))}}\\par`,
     '\\vspace{1mm}{\\color{headingrule}\\rule{\\linewidth}{1.5pt}}\\par\\vspace{4mm}',
   ].join('\n');
 }
 
-function generateTimelineLatex(resume, lang, today) {
+// `years`: null for the whole career, or the span of the 2- and 5-year PDFs.
+function generateTimelineLatex(resume, lang, today, years = null) {
   const t = I18N[lang];
-  const sheet = layOut(timelineBars(resume, today));
+  const sheet = layOut(timelineBars(resume, today, years));
   return [
     buildPreamble(lang),
     '\\geometry{landscape,left=10mm,right=10mm,top=10mm,bottom=8mm}',
     '\\pagestyle{empty}',
     '\\begin{document}',
     `\\selectlanguage{${BABEL[lang]}}`,
-    buildHeader(resume, t, lang, today),
+    buildHeader(resume, t, lang, today, years),
     buildPicture(sheet, t),
     '\\end{document}',
     '',

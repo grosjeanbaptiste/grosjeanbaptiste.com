@@ -3,9 +3,12 @@
 // behind the PdfRenderer port, with a reader toolbar (pages, zoom, download,
 // the raw file). A failure is logged and shown.
 import { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router';
+import type { Lang } from '../../application/lang';
 import { useReading } from '../context';
 import { LangMenu } from '../header/LangMenu';
-import { pdfPath, timelinePdfPath } from '../paths';
+import { type TimelineSpan, pdfPath, timelinePdfPath } from '../paths';
+import { TimelineSpans, spanOf } from './TimelineSpans';
 import type { PdfRenderer, PdfView } from './pdf-renderer';
 import { PDF_STRINGS, type PdfStrings } from './pdf-strings';
 
@@ -16,7 +19,11 @@ type State =
 
 // What each of the two PDFs reads as: its file, its title, its download label.
 const DOCUMENTS = {
-  cv: { file: pdfPath, title: (_: PdfStrings) => 'CV (PDF)', download: 'downloadCV' },
+  cv: {
+    file: (lang: Lang, _: TimelineSpan) => pdfPath(lang),
+    title: (_: PdfStrings) => 'CV (PDF)',
+    download: 'downloadCV',
+  },
   timeline: {
     file: timelinePdfPath,
     title: (s: PdfStrings) => s.timelineTitle,
@@ -34,8 +41,9 @@ export function PdfReader({ renderer, document: shown = 'cv' }: Props) {
   const strings = PDF_STRINGS[lang];
   const container = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<State>({ status: 'loading' });
+  const [params] = useSearchParams();
   const spec = DOCUMENTS[shown];
-  const file = spec.file(lang);
+  const file = spec.file(lang, shown === 'timeline' ? spanOf(params) : null);
   const title = spec.title(strings);
 
   useEffect(() => {
@@ -69,6 +77,7 @@ export function PdfReader({ renderer, document: shown = 'cv' }: Props) {
         <span className="pdf-pages">
           {view ? strings.pages(view.pages) : state.status === 'loading' ? strings.pdfLoading : ''}
         </span>
+        {shown === 'timeline' && <TimelineSpans />}
         <div className="pdf-zoom">
           <button
             type="button"

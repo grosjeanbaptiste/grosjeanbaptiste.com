@@ -34,7 +34,14 @@ function barLines(lane, sheet) {
     const inside = bar.label.place === 'inside';
     const anchor = bar.label.place === 'left' ? 'east' : 'west';
     const text = `\\textbf{${tex(bar.strong)}}${tex(restOf(bar))}`;
+    // A bar the span cut short points left, into the gap before the axis.
+    const cut = bar.clipped
+      ? [
+          `\\fill[${FILL[lane.kind]}] (-0.20,${mm(y)}) -- (-1.60,${mm(y - sheet.bar / 2)}) -- (-0.20,${mm(y - sheet.bar)}) -- cycle;`,
+        ]
+      : [];
     return [
+      ...cut,
       `\\fill[${FILL[lane.kind]},rounded corners=0.5mm] (${mm(bar.x0)},${mm(y)}) rectangle (${mm(bar.x1)},${mm(y - sheet.bar)});`,
       `\\node[anchor=${anchor},text=${inside ? 'white' : 'EmphasisColor'}] at (${mm(bar.label.x)},${mm(y - sheet.bar / 2)}) {${text}};`,
     ];

@@ -1,6 +1,8 @@
 // Query: the read model behind the landscape timeline PDF — the interactive
 // view's timeline, on paper. One lane per kind of entry, one bar per dated
-// entry, measured in months (year * 12 + month - 1), up to the current month.
+// entry, measured in months (year * 12 + month - 1), up to the current month —
+// over the whole career, or over the last `years` only (the 2- and 5-year PDFs),
+// where an entry begun earlier is cut at the start of the span.
 
 const { truncate } = require('../tex');
 
@@ -54,20 +56,29 @@ function barOf(lane, record, now) {
     start,
     end,
     ongoing,
+    clipped: false,
     strong: truncate(lane.strong(record), STRONG_MAX),
     rest: truncate(lane.rest(record), REST_MAX),
   };
 }
 
-function timelineBars(resume, today) {
+// Keeps what reaches into the span, cutting what began before it.
+const within = (bars, from) =>
+  bars
+    .filter((bar) => bar.end >= from)
+    .map((bar) => (bar.start < from ? { ...bar, start: from, clipped: true } : bar));
+
+function timelineBars(resume, today, years = null) {
   const now = today.getUTCFullYear() * 12 + today.getUTCMonth();
+  const spanStart = years === null ? null : now - years * 12 + 1;
   const lanes = LANES.flatMap((lane) => {
     const dated = (lane.records(resume) || []).filter((record) => record.startDate);
-    const bars = dated.map((record) => barOf(lane, record, now));
+    const all = dated.map((record) => barOf(lane, record, now));
+    const bars = spanStart === null ? all : within(all, spanStart);
     return bars.length ? [{ kind: lane.kind, bars }] : [];
   });
   const starts = lanes.flatMap((lane) => lane.bars.map((bar) => bar.start));
-  return { from: Math.min(now, ...starts), to: now, lanes };
+  return { from: spanStart ?? Math.min(now, ...starts), to: now, lanes };
 }
 
 module.exports = { timelineBars, monthOf };

@@ -6,11 +6,14 @@ const { compileOnce } = require('../compile');
 const { buildXmpData } = require('../metadata');
 const { generateTimelineLatex } = require('./document');
 
-function compileTimeline(resume, lang, outPath, today = new Date()) {
+function compileTimeline(resume, lang, outPath, today = new Date(), years = null) {
   const t = I18N[lang];
-  // Titled "<name> — <timeline>" in a reader's tab, not "— Curriculum vitæ".
-  const xmp = buildXmpData(resume, { ...t, curriculumVitae: t.timeline }, lang);
-  const { ok, pages } = compileOnce(generateTimelineLatex(resume, lang, today), xmp, outPath, lang);
+  // Titled "<name> — <timeline>" in a reader's tab, not "— Curriculum vitæ";
+  // the 2- and 5-year PDFs add their span.
+  const title = years === null ? t.timeline : `${t.timeline} (${t.timelineSpan(years)})`;
+  const xmp = buildXmpData(resume, { ...t, curriculumVitae: title }, lang);
+  const tex = generateTimelineLatex(resume, lang, today, years);
+  const { ok, pages } = compileOnce(tex, xmp, outPath, lang);
   if (!ok) return { ok: false };
   if (pages !== 1) {
     console.error(

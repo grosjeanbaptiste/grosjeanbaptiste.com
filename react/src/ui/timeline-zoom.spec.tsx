@@ -9,6 +9,16 @@ const width = (region: HTMLElement) =>
 const bars = (region: HTMLElement) => within(region).getAllByRole('link').length;
 
 describe('zooming the timeline', () => {
+  it('offers two years, five years and the whole career', async () => {
+    renderApp('/en');
+    const zoom = within(await timeline()).getByRole('group');
+    expect(
+      within(zoom)
+        .getAllByRole('button')
+        .map((b) => b.textContent),
+    ).toEqual(['2 years', '5 years', 'All']);
+  });
+
   it('opens on five years per screen', async () => {
     renderApp('/en');
     const zoom = within(await timeline()).getByRole('button', { name: '5 years' });
@@ -18,7 +28,7 @@ describe('zooming the timeline', () => {
   it('zooms in by drawing the career wider than its frame', async () => {
     const { user } = renderApp('/en');
     const region = await timeline();
-    await user.click(within(region).getByRole('button', { name: '3 years' }));
+    await user.click(within(region).getByRole('button', { name: '2 years' }));
     expect(width(region)).toBeGreaterThan(100);
   });
 
@@ -26,7 +36,7 @@ describe('zooming the timeline', () => {
     const { user } = renderApp('/en');
     const region = await timeline();
     const before = bars(region);
-    await user.click(within(region).getByRole('button', { name: '3 years' }));
+    await user.click(within(region).getByRole('button', { name: '2 years' }));
     expect(bars(region)).toBe(before);
   });
 

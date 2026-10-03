@@ -18,6 +18,7 @@ module.exports = {
     inProgress: 'in progress',
     curriculumVitae: 'Curriculum Vitae',
     timeline: 'Timeline',
+    timelineSpan: (n) => `last ${n} years`,
   },
   fr: {
     ...sharedFr,
@@ -28,6 +29,7 @@ module.exports = {
     inProgress: 'en cours',
     curriculumVitae: 'Curriculum vitæ',
     timeline: 'Chronologie',
+    timelineSpan: (n) => `${n} dernières années`,
   },
   nl: {
     ...sharedNl,
@@ -38,6 +40,7 @@ module.exports = {
     inProgress: 'in uitvoering',
     curriculumVitae: 'Curriculum vitae',
     timeline: 'Tijdlijn',
+    timelineSpan: (n) => `laatste ${n} jaar`,
   },
   es: {
     ...sharedEs,
@@ -48,6 +51,7 @@ module.exports = {
     inProgress: 'en curso',
     curriculumVitae: 'Currículum vítae',
     timeline: 'Cronología',
+    timelineSpan: (n) => `últimos ${n} años`,
   },
   de: {
     ...sharedDe,
@@ -58,6 +62,7 @@ module.exports = {
     inProgress: 'läuft',
     curriculumVitae: 'Lebenslauf',
     timeline: 'Zeitleiste',
+    timelineSpan: (n) => `letzte ${n} Jahre`,
   },
   zh: {
     ...sharedZh,
@@ -68,5 +73,6 @@ module.exports = {
     inProgress: '进行中',
     curriculumVitae: '简历',
     timeline: '时间线',
+    timelineSpan: (n) => `最近 ${n} 年`,
   },
 };
