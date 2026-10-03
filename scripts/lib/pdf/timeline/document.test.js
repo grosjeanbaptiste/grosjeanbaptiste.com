@@ -29,3 +29,22 @@ test('each bar is named, with TeX specials escaped', () => {
 test('each lane is titled in the language of the CV', () => {
   assert.match(generateTimelineLatex(resume, 'de', TODAY), /Berufserfahrung/);
 });
+
+test('a span says which years it covers, under the title', () => {
+  assert.match(generateTimelineLatex(resume, 'fr', TODAY, 5), /5 dernières années/);
+});
+
+test('the whole career names no span', () => {
+  assert.doesNotMatch(generateTimelineLatex(resume, 'fr', TODAY), /dernières années/);
+});
+
+test('a bar cut by the span points left, past the start of the axis', () => {
+  const old = {
+    ...resume,
+    work: [{ ...resume.work[0], startDate: '2020-01', endDate: '2025-06' }],
+  };
+  assert.match(
+    generateTimelineLatex(old, 'fr', TODAY, 2),
+    /\(-0\.20,[^)]*\) -- \(-1\.60,[^)]*\) -- \(-0\.20,[^)]*\) -- cycle/,
+  );
+});

@@ -1,6 +1,6 @@
 import { useReading } from '../context';
 
-export const ZOOMS = [3, 5, null] as const; // years per screen; null = the whole career
+export const ZOOMS = [2, 5, null] as const; // years per screen; null = the whole career
 export type Zoom = (typeof ZOOMS)[number];
 export const DEFAULT_ZOOM: Zoom = 5;
 

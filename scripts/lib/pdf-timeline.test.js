@@ -1,5 +1,5 @@
-// The shipped landscape timeline PDFs, read back with poppler: one landscape
-// page, named after what they are, every dated entry on it, and no label
+// The shipped landscape timeline PDFs — the whole career, the last five years,
+// the last two — read back with poppler: one landscape page, named after what they are, every dated entry on it, and no label
 // printed over another — row packing works from estimated label widths, and
 // this is where an estimate that came out short would show.
 
@@ -12,8 +12,8 @@ const I18N = require('./pdf/i18n');
 const { loadResume } = require('./pdf/data');
 const { applyPdfOverrides } = require('./site-overrides');
 const { timelineBars } = require('./pdf/timeline/bars');
+const { SPANS, timelineFile } = require('./pdf/timeline/spans');
 
-const pdfOf = (lang) => path.join(OUTPUT_DIR, `cv_grosjean_baptiste_timeline_${lang}.pdf`);
 const run = (tool, args) => execFileSync(tool, args, { encoding: 'utf8' });
 
 // Each word poppler finds, with its box in points.
@@ -33,25 +33,34 @@ const overprints = (a, b) =>
 // xeCJK, as the midline "⋯": all three are the same truncation.
 const squeeze = (s) => s.replace(/\s+/g, '').replace(/\.\.\.|⋯/g, '…');
 
-for (const lang of LANGS) {
-  test(`${lang}: the timeline PDF is one page`, () => {
-    assert.match(run('pdfinfo', [pdfOf(lang)]), /^Pages:\s+1$/m);
+// What pdfinfo prints as the title, regex-escaped: the span is in parentheses.
+function titleOf(lang, years) {
+  const t = I18N[lang];
+  const title = years === null ? t.timeline : `${t.timeline} (${t.timelineSpan(years)})`;
+  return `${loadResume(lang).basics.name} — ${title}`.replace(/[()]/g, '\\$&');
+}
+
+function checkTimelinePdf(lang, span) {
+  const file = path.join(OUTPUT_DIR, timelineFile(lang, span));
+  const name = timelineFile(lang, span);
+
+  test(`${name} is one page`, () => {
+    assert.match(run('pdfinfo', [file]), /^Pages:\s+1$/m);
   });
 
-  test(`${lang}: the timeline PDF is A4 in landscape`, () => {
-    assert.match(run('pdfinfo', [pdfOf(lang)]), /^Page size:\s+841\.\d+ x 595\.\d+ pts \(A4\)/m);
+  test(`${name} is A4 in landscape`, () => {
+    assert.match(run('pdfinfo', [file]), /^Page size:\s+841\.\d+ x 595\.\d+ pts \(A4\)/m);
   });
 
-  test(`${lang}: the timeline PDF is titled after the person and the timeline`, () => {
-    const name = loadResume(lang).basics.name;
+  test(`${name} is titled after the person, the timeline and its span`, () => {
     assert.match(
-      run('pdfinfo', [pdfOf(lang)]),
-      new RegExp(`^Title:\\s+${name} — ${I18N[lang].timeline}$`, 'm'),
+      run('pdfinfo', [file]),
+      new RegExp(`^Title:\\s+${titleOf(lang, span.years)}$`, 'm'),
     );
   });
 
-  test(`${lang}: no label is printed over another`, () => {
-    const words = wordsOf(pdfOf(lang));
+  test(`${name} prints no label over another`, () => {
+    const words = wordsOf(file);
     const clashes = [];
     for (let i = 0; i < words.length; i++)
       for (let j = i + 1; j < words.length; j++)
@@ -59,14 +68,15 @@ for (const lang of LANGS) {
     assert.deepEqual(clashes, []);
   });
 
-  test(`${lang}: every dated entry is on the page`, () => {
-    const page = squeeze(run('pdftotext', ['-raw', pdfOf(lang), '-']));
-    const bars = timelineBars(applyPdfOverrides(loadResume(lang)), new Date()).lanes.flatMap(
-      (l) => l.bars,
-    );
+  test(`${name} carries every entry of its span`, () => {
+    const page = squeeze(run('pdftotext', ['-raw', file, '-']));
+    const resume = applyPdfOverrides(loadResume(lang));
+    const bars = timelineBars(resume, new Date(), span.years).lanes.flatMap((l) => l.bars);
     const missing = bars
       .filter((b) => b.strong && !page.includes(squeeze(b.strong)))
       .map((b) => b.strong);
     assert.deepEqual(missing, []);
   });
 }
+
+for (const span of SPANS) for (const lang of LANGS) checkTimelinePdf(lang, span);
