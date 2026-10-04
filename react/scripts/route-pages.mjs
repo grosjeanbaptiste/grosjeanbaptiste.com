@@ -3,6 +3,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { engineOf } from './engine-lib.mjs';
 import { routePages } from './route-pages-lib.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -11,7 +12,12 @@ const DATA = join(APP, 'data');
 
 const langs = JSON.parse(readFileSync(join(DATA, 'languages.json'), 'utf8'));
 const documents = langs.map((lang) => JSON.parse(readFileSync(join(DATA, `${lang}.json`), 'utf8')));
-const pages = routePages(readFileSync(join(APP, 'index.html'), 'utf8'), documents);
+const manifest = JSON.parse(readFileSync(join(APP, '.vite', 'manifest.json'), 'utf8'));
+const pages = routePages(
+  readFileSync(join(APP, 'index.html'), 'utf8'),
+  documents,
+  engineOf(manifest),
+);
 
 for (const { path, html } of pages) {
   const file = join(APP, path);

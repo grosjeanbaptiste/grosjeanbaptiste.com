@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#1F0E0E" media="(prefers-color-scheme: dark)" />
     <!-- ROUTE-HEAD -->
     <title>全栈 Web 开发实习生 — Technofutur TIC · Baptiste Grosjean</title>
+    <link rel="preload" as="fetch" href="/app/data/zh.json" crossorigin="anonymous" />
     <meta name="description" content="旨在加强我在 EPHEC 学士学位项目中获得的技术技能的资格培训。
 扩展期间，我们接受了 Microsoft 工具 (SSIS 等) 的商业智能和 ETL 流程 (数据仓库) 的介绍。
 培训涵盖了 SQL Server、Node.js、Express.js、React 和 Angular，从数据库开发到用户界面和后端。" />
@@ -25,11 +26,17 @@
         console.warn('Theme preference unreadable, following the system:', error);
       }
     </script>
+    <!-- Chrome and Edge prepare the classic page on the way to its link in the views
+         bar. Not this app's own displays: those are routes, switched without a load. -->
+    <script type="speculationrules">
+    {"prerender":[{"where":{"and":[{"selector_matches":".views-bar-link"},{"not":{"href_matches":"/app/*"}},{"not":{"href_matches":"/*.xml"}}]},"eagerness":"moderate"}]}
+    </script>
     <script type="module" crossorigin src="/app/assets/index-B5UDVB7i.js"></script>
     <link rel="stylesheet" crossorigin href="/app/assets/index-BmdiV9pO.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="/css/views-bar.css">
+    <script src="/js/views-ahead.js" defer></script>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
   </head>

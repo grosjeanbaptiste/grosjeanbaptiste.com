@@ -27,7 +27,13 @@ const doc = (lang, position) => ({
   },
 });
 
-const pages = routePages(template, [doc('en', 'Founder'), doc('fr', 'Fondateur')]);
+// What the build says the PDF engine is made of (from Vite's manifest).
+const engine = {
+  modules: ['/app/assets/pdf-abc.js', '/app/assets/pdf_viewer-def.js'],
+  styles: ['/app/assets/pdf_viewer-ghi.css'],
+  worker: '/app/assets/pdf.worker.min-jkl.mjs',
+};
+const pages = routePages(template, [doc('en', 'Founder'), doc('fr', 'Fondateur')], engine);
 const page = (path) => pages.find((p) => p.path === path);
 
 describe('routePages', () => {
@@ -54,7 +60,7 @@ describe('routePages', () => {
   });
 
   it('fails when the export has lost the timeline display', () => {
-    expect(() => routePages(template, [{ ...doc('en', 'Founder'), views: [] }])).toThrow(
+    expect(() => routePages(template, [{ ...doc('en', 'Founder'), views: [] }], engine)).toThrow(
       /timeline/,
     );
   });
@@ -72,13 +78,70 @@ describe('routePages', () => {
   });
 
   it('fetches no picture ahead on the interactive pages', () => {
-    expect(page('fr/index.html').html).not.toContain('rel="preload"');
+    expect(page('fr/index.html').html).not.toContain('as="image"');
   });
 
   it('fails when the export has no picture of a reader’s PDF', () => {
-    expect(() => routePages(template, [{ ...doc('en', 'Founder'), pictures: {} }])).toThrow(
+    expect(() => routePages(template, [{ ...doc('en', 'Founder'), pictures: {} }], engine)).toThrow(
       /no page picture of cv_grosjean_baptiste_en\.pdf/,
     );
+  });
+
+  it('starts fetching the language’s data with every page, for the app to find it there', () => {
+    for (const path of [
+      'fr/index.html',
+      'fr/work/acteble-founder/index.html',
+      'fr/pdf/index.html',
+    ]) {
+      expect(page(path).html).toContain(
+        '<link rel="preload" as="fetch" href="/app/data/fr.json" crossorigin="anonymous" />',
+      );
+    }
+  });
+
+  // What another display may warm ahead for a reader page: a list the browser
+  // ignores and js/views-ahead.js reads.
+  const listed = (path) => {
+    const block = page(path).html.match(
+      /<script type="application\/json" class="views-ahead">(.*?)<\/script>/,
+    );
+    return block ? JSON.parse(block[1]) : null;
+  };
+
+  it('lists the PDF engine and the PDF on a reader page, for another display to warm', () => {
+    expect(listed('fr/pdf/index.html')).toEqual([
+      '/assets/cv/cv_grosjean_baptiste_fr.pdf',
+      '/app/assets/pdf-abc.js',
+      '/app/assets/pdf_viewer-def.js',
+      '/app/assets/pdf_viewer-ghi.css',
+      '/app/assets/pdf.worker.min-jkl.mjs',
+    ]);
+  });
+
+  it('lists the timeline PDF on its reader page', () => {
+    expect(listed('fr/pdf/timeline/index.html')[0]).toBe(
+      '/assets/cv/cv_grosjean_baptiste_timeline_fr.pdf',
+    );
+  });
+
+  // Measured twice: preloaded, then prefetched, the engine and the PDF took the
+  // bandwidth the first page's picture needed — it showed at 3.5 s, not 1.9 s.
+  it('has the reader page itself fetch nothing ahead but its picture and its data', () => {
+    const links = page('fr/pdf/index.html').html.match(
+      /<link rel="(?:preload|prefetch|modulepreload)"[^>]*>/g,
+    );
+    expect(links).toEqual([
+      '<link rel="preload" as="image" href="/p/cv_fr-1.webp" fetchpriority="high" />',
+      '<link rel="preload" as="fetch" href="/app/data/fr.json" crossorigin="anonymous" />',
+    ]);
+  });
+
+  it('lists nothing on the interactive pages', () => {
+    expect(listed('fr/index.html')).toBeNull();
+  });
+
+  it('leaves the PDF engine out of the interactive pages', () => {
+    expect(page('fr/index.html').html).not.toContain('pdf-abc.js');
   });
 
   it('files course units under the course kind', () => {
@@ -96,6 +159,6 @@ describe('routePages', () => {
   });
 
   it('fails when the template has lost its head markers', () => {
-    expect(() => routePages('<head></head>', [doc('en', 'Founder')])).toThrow(/ROUTE-HEAD/);
+    expect(() => routePages('<head></head>', [doc('en', 'Founder')], engine)).toThrow(/ROUTE-HEAD/);
   });
 });

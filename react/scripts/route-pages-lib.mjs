@@ -24,15 +24,13 @@ const escapeHtml = (text) =>
 
 const HEAD = /<!-- ROUTE-HEAD -->[\s\S]*?<!-- \/ROUTE-HEAD -->/;
 
-// `picture`: a reader page's first-page picture, fetched with the page itself
-// instead of once the app has booted and read its data.
-function render(template, lang, title, description, picture) {
+// `ahead`: what the page starts fetching with its own HTML, instead of once
+// the app has booted — <link> tags, already written.
+function render(template, lang, title, description, ahead = []) {
   const head = [
     '<!-- ROUTE-HEAD -->',
     `<title>${escapeHtml(title)}</title>`,
-    ...(picture
-      ? [`<link rel="preload" as="image" href="${escapeHtml(picture)}" fetchpriority="high" />`]
-      : []),
+    ...ahead,
     `<meta name="description" content="${escapeHtml(description)}" />`,
     `<meta property="og:title" content="${escapeHtml(title)}" />`,
     `<meta property="og:description" content="${escapeHtml(description)}" />`,
@@ -41,25 +39,48 @@ function render(template, lang, title, description, picture) {
   return template.replace(HEAD, head).replace(/<html lang="[^"]*"/, `<html lang="${lang}"`);
 }
 
-export function routePages(template, documents) {
+// A fetch() the app will make, started early. crossorigin="anonymous" is what
+// makes the browser hand this very response to that fetch().
+const fetchAhead = (href) =>
+  `<link rel="preload" as="fetch" href="${escapeHtml(href)}" crossorigin="anonymous" />`;
+
+// What another display may warm ahead for this page: a JSON list the browser
+// ignores and js/views-ahead.js reads. Not <link rel="preload"> nor "prefetch":
+// both were measured to take the bandwidth the first page's picture needed
+// (it showed at 3.5 s instead of 1.9 s on a slow connection).
+const listAhead = (urls) =>
+  `<script type="application/json" class="views-ahead">${JSON.stringify(urls).replaceAll('<', '\\u003c')}</script>`;
+
+// The PDF engine — dynamic imports the reader makes once booted — named by the
+// build (Vite's manifest).
+const engineFiles = ({ modules, styles, worker }) => [...modules, ...styles, worker];
+
+export function routePages(template, documents, engine) {
   if (!HEAD.test(template)) throw new Error('index.html has lost its ROUTE-HEAD markers');
   return documents.flatMap(({ lang, resume, views, pictures }) => {
-    const firstPicture = (pdf) => {
+    const data = fetchAhead(`/app/data/${lang}.json`);
+    // A reader page: its first page's picture and the data, fetched with it; the
+    // PDF and the engine, listed for the other displays to warm.
+    const readerAhead = (pdf) => {
       const src = pictures?.[`/assets/cv/${pdf}`]?.[0]?.src;
       if (!src) throw new Error(`The ${lang} export has no page picture of ${pdf}`);
-      return src;
+      return [
+        `<link rel="preload" as="image" href="${escapeHtml(src)}" fetchpriority="high" />`,
+        data,
+        listAhead([`/assets/cv/${pdf}`, ...engineFiles(engine)]),
+      ];
     };
     const { name, label } = resume.basics;
     const home = {
       path: `${lang}/index.html`,
-      html: render(template, lang, `${name} — ${label}`, label),
+      html: render(template, lang, `${name} — ${label}`, label, [data]),
     };
     const entries = SECTIONS.flatMap(([section, describe]) =>
       (resume[section] ?? []).map((entry) => {
         const { title, text } = describe(entry);
         return {
           path: `${lang}/${kindOf(section, entry)}/${entry.id}/index.html`,
-          html: render(template, lang, `${title} · ${name}`, text ?? title),
+          html: render(template, lang, `${title} · ${name}`, text ?? title, [data]),
         };
       }),
     );
@@ -70,7 +91,7 @@ export function routePages(template, documents) {
         lang,
         `CV (PDF) · ${name}`,
         `${name} — ${label} (PDF)`,
-        firstPicture(`cv_grosjean_baptiste_${lang}.pdf`),
+        readerAhead(`cv_grosjean_baptiste_${lang}.pdf`),
       ),
     };
     const timeline = (views ?? []).find((view) => view.id === 'timeline');
@@ -82,7 +103,7 @@ export function routePages(template, documents) {
         lang,
         `${timeline.label} · ${name}`,
         `${name} — ${timeline.label}`,
-        firstPicture(`cv_grosjean_baptiste_timeline_${lang}.pdf`),
+        readerAhead(`cv_grosjean_baptiste_timeline_${lang}.pdf`),
       ),
     };
     return [home, reader, timelineReader, ...entries];
