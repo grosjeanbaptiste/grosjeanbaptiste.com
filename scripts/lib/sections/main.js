@@ -3,7 +3,9 @@ const { printedWork, printText, printHeading, PRINT_PLAN } = require('../print-s
 const { escapeHtml, dateRangeHtml, wrapPictographs } = require('../format');
 const { icon } = require('../icons');
 const { indentLines } = require('../markers');
+const { anchorOf } = require('../anchors');
 const { appendEmbeds } = require('./embeds');
+const { generateTimeline } = require('./timeline');
 
 function renderAbout(resume, t) {
   const paras = (resume.basics?.summary || '')
@@ -32,7 +34,7 @@ function renderExperienceItem(w, lang, ctx, t, opts = { printed: true }) {
     ? `${escapeHtml(w.position)} · ${escapeHtml(w.client)}`
     : escapeHtml(w.position);
   const parts = [
-    `<article class="experience-item${opts.printed ? '' : ' print-hidden'}">`,
+    `<article class="experience-item${opts.printed ? '' : ' print-hidden'}" id="${anchorOf('work', w)}">`,
     // Position and employer each in their own span, with the pipe in a third:
     // the PDF sets the position left and the employer hard right on the same
     // line, so the print sheet has to be able to address the three separately.
@@ -74,7 +76,7 @@ function renderExperienceItem(w, lang, ctx, t, opts = { printed: true }) {
 
 function renderEducationItem(e, lang, ctx, t) {
   const parts = [
-    '<article class="education-item">',
+    `<article class="education-item" id="${anchorOf('education', e)}">`,
     `  <h3>${escapeHtml(e.studyType)}${e.area ? `${t.degreeConnector}${escapeHtml(e.area)}` : ''}</h3>`,
     `  <p class="institution">${escapeHtml(e.institution)}</p>`,
     `  <p class="date">${dateRangeHtml(e.startDate, e.endDate, lang)}</p>`,
@@ -162,11 +164,32 @@ const MAIN_RENDERERS = {
   references: (resume, _lang, t) => renderReferencesSection(resume, t),
 };
 
-function generateMain(resume, lang) {
+// The timeline goes right after About: it is the way into everything below.
+// It is rendered last, from the ids the other sections put on the page, so a
+// bar links only to an entry that is actually there.
+function generateMain(resume, lang, today = new Date()) {
   const t = I18N[lang];
   const order = resume.meta?.sectionOrder ?? ['about', 'work', 'education', 'references'];
-  const sections = order.map((name) => MAIN_RENDERERS[name]?.(resume, lang, t)).filter(Boolean);
-  return sections.join('\n\n');
+  // A project shown under both its job and its degree would carry its id twice:
+  // only its first appearance keeps it, and that is where its bar leads.
+  const seen = new Set();
+  const firstOnly = (html) =>
+    html.replace(/\sid="([^"]+)"/g, (attr, id) => {
+      if (seen.has(id)) return '';
+      seen.add(id);
+      return attr;
+    });
+  const sections = order
+    .map((name) => [name, MAIN_RENDERERS[name]?.(resume, lang, t)])
+    .filter(([, html]) => html)
+    .map(([name, html]) => [name, firstOnly(html)]);
+  const onPage = new Set(
+    sections.flatMap(([, html]) => [...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1])),
+  );
+  const timeline = generateTimeline(resume, lang, today, onPage);
+  const at = sections.findIndex(([name]) => name === 'about') + 1;
+  sections.splice(at, 0, ['timeline', timeline]);
+  return sections.map(([, html]) => html).join('\n\n');
 }
 
 module.exports = { generateMain };

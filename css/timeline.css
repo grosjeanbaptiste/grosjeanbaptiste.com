@@ -1,0 +1,197 @@
+/* The timeline on the classic page (scripts/lib/sections/timeline.js): one
+ * lane per kind of entry, bars placed in percent of the career. js/timeline.js
+ * adds the zoom, the arrow keys and the preview; without it the bars are plain
+ * links to their entries and the whole career fits the frame. */
+
+.tl-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/* The heading takes the line: the zoom sits under it, on the left, clear of the
+ * CV actions floating at the top right of the page. */
+.tl-head h2 {
+  flex: 1 1 100%;
+  margin-bottom: 0.25rem;
+}
+
+.tl-zoom {
+  display: inline-flex;
+  padding: 0.2rem;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 999rem;
+}
+
+.tl-zoom[hidden] {
+  display: none;
+}
+
+.tl-zoom button {
+  font: inherit;
+  font-size: 0.85em;
+  padding: 0.3rem 0.8rem;
+  border: 0;
+  border-radius: 999rem;
+  background: none;
+  color: var(--muted-color);
+  cursor: pointer;
+}
+
+.tl-zoom button[aria-pressed="true"] {
+  background: var(--primary-color);
+  color: var(--on-accent-color);
+}
+
+.tl-scroll {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.tl-grid {
+  --lane-label: 7rem;
+  --row-height: 1.9rem;
+  position: relative;
+  min-width: 100%;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.tl-years {
+  position: relative;
+  height: 1.5rem;
+  margin-left: var(--lane-label);
+  font-size: 0.75em;
+  color: var(--muted-color);
+}
+
+.tl-years span {
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.tl-lane {
+  display: grid;
+  grid-template-columns: var(--lane-label) 1fr;
+  align-items: start;
+}
+
+.tl-lane-label {
+  /* Stays in view while a zoomed-in timeline scrolls sideways. */
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  align-self: stretch;
+  padding: 0.3rem 0.5rem 0 0;
+  background: linear-gradient(to right, var(--card-background) 85%, transparent);
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--muted-color);
+}
+
+.tl-track {
+  position: relative;
+  height: calc(var(--rows) * var(--row-height));
+}
+
+.tl-bar {
+  --hue: var(--primary-color);
+  position: absolute;
+  top: calc(var(--row) * var(--row-height));
+  height: calc(var(--row-height) - 0.35rem);
+  min-width: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--on-accent-color);
+  background: var(--hue);
+  border-radius: 0.4rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.tl-bar span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tl-lane[data-kind="education"] .tl-bar {
+  --hue: var(--third-color);
+}
+
+.tl-lane[data-kind="projects"] .tl-bar {
+  --hue: color-mix(in srgb, var(--primary-color) 55%, var(--third-color));
+}
+
+.tl-lane[data-kind="volunteer"] .tl-bar {
+  --hue: color-mix(in srgb, var(--primary-color) 35%, var(--muted-color));
+}
+
+.tl-bar:hover,
+.tl-bar:focus-visible {
+  z-index: 1;
+  transform: scaleY(1.12);
+  filter: brightness(1.1);
+  color: var(--on-accent-color);
+  text-decoration: none;
+}
+
+/* The bar of the entry the page is showing. */
+.tl-bar[aria-current="true"] {
+  z-index: 2;
+  outline: 0.15rem solid var(--text-color);
+  outline-offset: 0.1rem;
+}
+
+.tl-preview {
+  position: absolute;
+  z-index: 4;
+  display: grid;
+  gap: 0.15rem;
+  width: max-content;
+  max-width: min(20rem, 70vw);
+  padding: 0.5rem 0.7rem;
+  font-size: 0.8em;
+  background: var(--card-background);
+  color: var(--text-color);
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.tl-preview span {
+  color: var(--muted-color);
+}
+
+/* An embedded row's anchor: an empty span at its end, pinned to its top so a
+ * bar's link lands on the row and not on its last line. */
+.main-content li:has(> .tl-anchor) {
+  position: relative;
+}
+
+.tl-anchor {
+  position: absolute;
+  top: 0;
+}
+
+/* The entry a bar led to (js/timeline.js marks it). */
+.main-content .tl-shown {
+  outline: 0.15rem solid var(--third-color);
+  outline-offset: 0.35rem;
+  border-radius: 0.3rem;
+}
+
+@media (max-width: 48rem) {
+  .tl-grid {
+    --lane-label: 5.5rem;
+  }
+}

@@ -2,6 +2,13 @@
 // reference back-links) inside a work or education article on the HTML site.
 // Kept separate from main.js so the section renderers there stay short.
 const { escapeHtml, dateRangeHtml } = require('../format');
+const { anchorOf } = require('../anchors');
+
+// What the timeline's bar for an embedded row links to: an empty span at the
+// end of the row, so the <li> markup — which a dozen tests and the print
+// script read as is — stays untouched. css/timeline.css pins it to the row's top.
+const anchorHtml = (kind, record) =>
+  `<span class="tl-anchor" id="${anchorOf(kind, record)}"></span>`;
 const { indentLines } = require('../markers');
 const { printText, PRINT_PLAN } = require('../print-selection');
 
@@ -47,7 +54,7 @@ function renderEmbeddedProjects(projectNames, projects, label) {
       const clipped = desc ? printText(desc, PRINT_PLAN.proj_desc) : null;
       const descAttr = clipped ? ` data-print-text="${escapeHtml(clipped)}"` : '';
       const descHtml = desc ? ` — <span${descAttr}>${escapeHtml(desc)}</span>` : '';
-      return `<li>${label}${descHtml}${renderProjectTags(p.keywords)}</li>`;
+      return `<li>${label}${descHtml}${renderProjectTags(p.keywords)}${anchorHtml('project', p)}</li>`;
     })
     .join('\n        ');
   return [
@@ -83,7 +90,7 @@ function renderEmbeddedVolunteer(volunteer, hostName, t, lang) {
       const org = v.organization
         ? `<span class="print-org">${escapeHtml(v.organization)}, </span>`
         : '';
-      return `<li><strong>${escapeHtml(v.position)}</strong> — ${org}${dates}</li>`;
+      return `<li><strong>${escapeHtml(v.position)}</strong> — ${org}${dates}${anchorHtml('volunteer', v)}</li>`;
     })
     .join('\n        ');
   return [
