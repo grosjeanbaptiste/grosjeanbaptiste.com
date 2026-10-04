@@ -1,0 +1,1374 @@
+/* fonts.css */
+/* Self-hosted Roboto variable font (weights 100-900 in one file per subset). */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/roboto-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/roboto-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Self-hosted LaTeX CV typefaces, used by css/print.css so the printed
+ * sheet matches the PDF: Roboto Slab for the name and section headings
+ * (\rmfamily in the preamble), Lato for running text (\sfdefault).
+ * Roboto Slab ships as one variable file per subset; Lato is static, so
+ * regular and bold are separate files. */
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/roboto-slab-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/roboto-slab-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/lato-400-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/lato-400-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/lato-700-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/lato-700-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* variables.css */
+/* Auto-generated from dsl/resume.grosjean meta.brand. Do not hand-edit. */
+/* Default light theme */
+:root {
+  /* Colors */
+  --primary-color: #800020; /* Bordeaux */
+  --secondary-color: #f3890b; /* Rouge */
+  --third-color: #f3890b; /* Orange foncé */
+  --body-color: #666666; /* Gris foncé */
+  --muted-color: #666666; /* Muted grey (dates, locations, footer) */
+  --emphasis-color: #2e2e2e; /* Gris très foncé */
+  --background-color: #e2e2e2; /* Gris clair */
+  --card-background: #ffffff; /* White for cards */
+  --text-color: #2e2e2e; /* Dark text */
+  --border-color: #dddddd; /* Light border */
+  --on-accent-color: #ffffff; /* Text on primary/accent surfaces */
+  --primary-color-rgb: 128, 0, 32; /* RGB for primary color in light mode */
+  --card-background-rgb: 255, 255, 255; /* RGB for card background in light mode */
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --primary-color: #ffb142; /* Amber (warm, XSLT-aligned) */
+  --secondary-color: #f3890b; /* Orange accent */
+  --third-color: #ffb347; /* Amber-orange */
+  --body-color: #ede0c8; /* Cream body text */
+  --muted-color: #b89a82; /* Warm muted (XSLT-aligned --muted) */
+  --emphasis-color: #f5ead8; /* Bright cream for emphasis */
+  --background-color: #1f0e0e; /* Dark bordeaux-brown */
+  --card-background: #2e1818; /* Raised bordeaux-brown surface */
+  --text-color: #f5ead8; /* Cream text */
+  --border-color: #4a2828; /* Bordeaux-brown rule */
+  --on-accent-color: #1f0e0e; /* Dark text on light amber surfaces */
+  --primary-color-rgb: 255, 177, 66; /* RGB for primary color in dark mode */
+  --card-background-rgb: 46, 24, 24; /* RGB for card background in dark mode */
+}
+
+/* System preference for dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary-color: #ffb142;
+    --secondary-color: #f3890b;
+    --third-color: #ffb347;
+    --body-color: #ede0c8;
+    --muted-color: #b89a82;
+    --emphasis-color: #f5ead8;
+    --background-color: #1f0e0e;
+    --card-background: #2e1818;
+    --text-color: #f5ead8;
+    --border-color: #4a2828;
+    --on-accent-color: #1f0e0e;
+  }
+}
+
+/* base.css */
+/* Base elements + page container. */
+
+svg.icon {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  vertical-align: -0.05em;
+  fill: currentColor;
+  margin-right: 0.4em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  color: var(--third-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5.625rem clamp(0.5rem, 2.5vw, 1.5rem) 1.25rem;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: var(--muted-color);
+  margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.875rem;
+  }
+
+  .container {
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding-top: 5rem;
+  }
+}
+
+/* nav.css */
+/* Top navigation bar + language switcher. */
+
+nav {
+  background-color: rgba(var(--card-background-rgb), 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 6px 4vw;
+  position: fixed;
+  /* Below the views bar (views-bar.css), which sits above every display. */
+  top: var(--views-bar-h, 0);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  min-height: 70px;
+  box-sizing: border-box;
+  /* Allow the bar to wrap onto a second row when the section links + six
+   * language codes + the full-label theme toggle can't share one line —
+   * the toggle stays on the first row anchored right so it never falls
+   * off the viewport. */
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: clamp(0.4rem, 1.6vw, 2rem);
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+nav li {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: clamp(0.85rem, 1.35vw, 1.1rem);
+  padding: 0.5rem 0.6rem;
+  transition: all 0.3s ease;
+  position: relative;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover {
+  color: var(--primary-color);
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 80%;
+}
+
+nav a.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  background-color: var(--third-color);
+  color: var(--on-accent-color);
+  text-decoration: none !important;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 2px;
+  margin: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  /* Allow the switcher to shrink first when the row is tight so the
+   * theme toggle at the far right always has room. */
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.lang-switcher a {
+  color: var(--emphasis-color);
+  text-decoration: none;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: clamp(0.7rem, 1.1vw, 0.85rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.lang-switcher a:hover {
+  background-color: var(--third-color);
+  color: var(--on-accent-color);
+  text-decoration: none;
+}
+
+.lang-switcher a.active {
+  background-color: var(--primary-color);
+  color: var(--on-accent-color);
+}
+
+/* Between hamburger (<=768) and full desktop, tighten the language row
+ * so 6 codes + theme toggle can share the bar with the section links
+ * without wrapping onto a second line. */
+@media (max-width: 1024px) {
+  .lang-switcher {
+    gap: 1px;
+  }
+  .lang-switcher a {
+    padding: 2px 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0 10px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    position: fixed;
+    top: calc(70px + var(--views-bar-h, 0px));
+    left: 0;
+    right: 0;
+    background-color: var(--card-background);
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 999;
+  }
+
+  nav ul.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Only the dropdown section links go full-width block; scope this to
+   * `nav ul a` so the language codes in `.lang-switcher` keep their inline
+   * pill layout instead of stacking vertically at full width. */
+  nav ul a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav a::after {
+    display: none;
+  }
+
+  .lang-switcher {
+    margin: 6px 0;
+  }
+}
+
+/* views-bar.css */
+/* The views bar — one stylesheet for every display of the CV (classic site,
+ * interactive /app/, both XSLT themes), so the buttons look the same
+ * everywhere. Colours come from variables.css (the DSL palette), which each
+ * display loads; the theme follows [data-theme] on <html> like the rest.
+ *
+ * The bar is fixed at the very top and every display makes room for it with
+ * --views-bar-h. Selectors are `nav.views-bar …` on purpose: the classic site
+ * styles the bare `nav` element (fixed, flex, a dropdown `nav ul` on mobile),
+ * and those rules must not reach this bar. */
+
+:root {
+  --views-bar-h: 2.25rem;
+}
+
+body {
+  padding-top: var(--views-bar-h);
+}
+
+nav.views-bar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1100;
+  height: var(--views-bar-h);
+  min-height: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 0 clamp(0.75rem, 3vw, 2rem);
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: var(--card-background);
+  border-bottom: 0.0625rem solid var(--border-color);
+  box-shadow: none;
+  backdrop-filter: none;
+  /* The system font: every display has it, so the bar looks the same in all. */
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+nav.views-bar .views-bar-title {
+  color: var(--muted-color);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+nav.views-bar ul {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: none;
+  box-shadow: none;
+  transform: none;
+  opacity: 1;
+}
+
+nav.views-bar li {
+  position: static;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+
+nav.views-bar a.views-bar-link {
+  display: inline-block;
+  width: auto;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 0.3rem 0.75rem;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 999rem;
+  background: none;
+  color: var(--text-color);
+  font-size: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+}
+
+nav.views-bar a.views-bar-link::after {
+  content: none;
+}
+
+nav.views-bar a.views-bar-link:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+nav.views-bar a.views-bar-link[aria-current="page"] {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--on-accent-color);
+}
+
+@media print {
+  nav.views-bar {
+    display: none;
+  }
+
+  body {
+    padding-top: 0;
+  }
+}
+
+/* theme-toggle.css */
+/* Theme toggle (dark/light) + mobile hamburger button. */
+
+#theme-toggle {
+  background: rgba(var(--primary-color-rgb), 0.1);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1.15vw, 1rem);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: clamp(0.35rem, 0.7vw, 0.5rem) clamp(0.55rem, 1.2vw, 1rem);
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  /* Anchor to the right of the nav row at every viewport size and never
+   * let the other flex children push it off the edge. */
+  margin-left: auto;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+#theme-toggle:hover {
+  background: var(--primary-color);
+  color: var(--on-accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#theme-toggle svg.icon {
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover i {
+  transform: rotate(30deg);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Match .lang-switcher's <=1024 shrinking so the pill scales down at
+ * the same breakpoint as the language codes next to it. */
+@media (max-width: 1024px) {
+  #theme-toggle {
+    padding: 2px 8px;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Collapse the toggle to an icon-only circle so the row (hamburger + six
+   * language codes + toggle) fits the phone width instead of pushing the
+   * toggle off the right edge. The text stays available to screen readers
+   * via the button's aria-label. */
+  #theme-toggle {
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    gap: 0;
+  }
+
+  #theme-toggle span {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+}
+
+/* sidebar.css */
+/* Sidebar card: profile picture, contact info, degrees, languages. */
+
+.sidebar {
+  width: 25%;
+  box-sizing: border-box;
+  background-color: var(--card-background);
+  padding: clamp(0.75rem, 2.5vw, 1.25rem);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar h1 {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.sidebar h2 {
+  font-size: 1.2em;
+  color: var(--third-color);
+}
+
+.sidebar p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.sidebar svg.icon {
+  margin-right: 8px;
+}
+
+#profile-picture {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  display: block;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+#profile-picture:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+.contact-info svg.icon {
+  margin-right: 10px;
+  min-width: 20px;
+}
+
+/* Printed only — the PDF header's "Updated <date>" line. js/print-layout.js
+   fills the date in at print time. */
+.print-updated {
+  display: none;
+}
+
+.contact-info .degree {
+  font-size: 0.9em;
+  color: var(--emphasis-color);
+  font-style: italic;
+  margin-top: -4px;
+  margin-bottom: 12px;
+}
+
+.contact-info .degree svg.icon {
+  color: var(--third-color);
+}
+
+.degree-status {
+  font-style: normal;
+  opacity: 0.7;
+  font-size: 0.85em;
+}
+
+.degree-in-progress {
+  margin-bottom: 2px;
+}
+.degree-obtained {
+  margin-top: 2px;
+}
+
+.languages h2,
+.projects h2 {
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+
+.languages p,
+.projects p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+  .sidebar h1 {
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .sidebar h2 {
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  #profile-picture {
+    max-width: 150px;
+  }
+
+  .contact-info p {
+    font-size: 0.9em;
+    margin: 8px 0;
+  }
+
+  .contact-info a {
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 30%;
+  }
+}
+
+/* skills.css */
+/* Skill tags + skill bars (sidebar block and inline experience-item variants). */
+
+.skills,
+.skills .skill {
+  margin-bottom: 15px;
+}
+
+.skills h2 {
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill h3 {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.skill-tag {
+  background-color: var(--third-color);
+  color: var(--on-accent-color);
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.skill-bar {
+  background-color: var(--border-color);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.skill-level {
+  background-color: var(--third-color);
+  height: 100%;
+  width: 0;
+}
+
+.skill-level[data-level]::after {
+  content: "";
+  display: block;
+  width: attr(data-level "%");
+  height: 100%;
+  background-color: var(--third-color);
+}
+
+@media (max-width: 480px) {
+  .skill-tags {
+    justify-content: center;
+  }
+
+  .skill-tag {
+    font-size: 0.8em;
+    padding: 4px 8px;
+    margin: 3px;
+  }
+}
+
+/* main.css */
+/* Main content card: about, experience, education, projects, references, contact. */
+
+.main-content {
+  width: 70%;
+  padding: clamp(0.75rem, 2.5vw, 1.25rem);
+  box-sizing: border-box;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-content section {
+  margin-bottom: 40px;
+}
+
+.main-content h2 {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.main-content h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--third-color);
+  margin-top: 5px;
+}
+
+.main-content ul li::before {
+  content: "•";
+  color: var(--third-color);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.experience-item,
+.education-item,
+.project-item,
+.reference-item {
+  margin-bottom: 20px;
+}
+
+.experience-item h3,
+.education-item h3,
+.project-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+/* Company name in a distinct accent orange so it never blurs into the
+ * position, which is the h3 primary colour (both are amber in dark mode). */
+.experience-item h3 .company,
+.experience-item h3 .company a {
+  color: var(--secondary-color);
+}
+
+/* Carried for the printed sheet only — the PDF sets a calendar and a map
+   marker before these, the page never has. See css/print-entry.css. */
+.print-icon,
+.print-org {
+  display: none;
+}
+
+.date,
+.location {
+  font-size: 0.9em;
+  color: var(--muted-color);
+}
+
+.experience-item .date,
+.education-item .date {
+  font-style: italic;
+}
+
+.education-item .institution {
+  font-weight: bold;
+}
+
+.project-item p {
+  margin: 5px 0;
+}
+
+.reference-item blockquote {
+  margin: 10px 0;
+  padding-left: 15px;
+  border-left: 3px solid var(--third-color);
+  color: var(--muted-color);
+  font-style: italic;
+}
+
+.section-icon {
+  margin-right: 10px;
+  color: var(--third-color);
+}
+
+.inline-skills {
+  margin: 6px 0 4px 0;
+}
+
+.inline-skills .skill-tag {
+  font-size: 0.8em;
+  padding: 2px 8px;
+}
+
+.embedded-projects {
+  margin: 8px 0 4px 0;
+}
+
+.embedded-label {
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  font-size: 0.95em;
+  color: var(--emphasis-color);
+}
+
+.embedded-projects ul {
+  margin: 0 0 0 18px;
+  padding: 0;
+}
+
+.embedded-projects li {
+  font-size: 0.9em;
+  margin: 2px 0;
+}
+
+.embedded-projects li::before {
+  content: none;
+}
+
+.muted-inline {
+  font-size: 0.85em;
+  color: var(--body-color);
+  opacity: 0.6;
+}
+
+@media (max-width: 480px) {
+  .main-content h2 {
+    font-size: 1.4em;
+  }
+
+  .main-content p {
+    line-height: 1.6;
+  }
+
+  .experience-item p,
+  .education-item p,
+  .project-item p {
+    font-size: 0.9em;
+  }
+
+  .experience-item h3,
+  .education-item h3,
+  .project-item h3 {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    width: 100%;
+  }
+
+  .experience-item,
+  .education-item,
+  .project-item {
+    margin-bottom: 25px;
+  }
+
+  .reference-item blockquote {
+    font-size: 0.9em;
+    padding-left: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-content {
+    width: 65%;
+  }
+}
+
+/* timeline.css */
+/* The timeline on the classic page (scripts/lib/sections/timeline.js): one
+ * lane per kind of entry, bars placed in percent of the career. js/timeline.js
+ * adds the zoom, the arrow keys and the preview; without it the bars are plain
+ * links to their entries and the whole career fits the frame. */
+
+.tl-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/* The heading takes the line: the zoom sits under it, on the left, clear of the
+ * CV actions floating at the top right of the page. */
+.tl-head h2 {
+  flex: 1 1 100%;
+  margin-bottom: 0.25rem;
+}
+
+.tl-zoom {
+  display: inline-flex;
+  padding: 0.2rem;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 999rem;
+}
+
+.tl-zoom[hidden] {
+  display: none;
+}
+
+.tl-zoom button {
+  font: inherit;
+  font-size: 0.85em;
+  padding: 0.3rem 0.8rem;
+  border: 0;
+  border-radius: 999rem;
+  background: none;
+  color: var(--muted-color);
+  cursor: pointer;
+}
+
+.tl-zoom button[aria-pressed="true"] {
+  background: var(--primary-color);
+  color: var(--on-accent-color);
+}
+
+.tl-scroll {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.tl-grid {
+  --lane-label: 7rem;
+  --row-height: 1.9rem;
+  position: relative;
+  min-width: 100%;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.tl-years {
+  position: relative;
+  height: 1.5rem;
+  margin-left: var(--lane-label);
+  font-size: 0.75em;
+  color: var(--muted-color);
+}
+
+.tl-years span {
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.tl-lane {
+  display: grid;
+  grid-template-columns: var(--lane-label) 1fr;
+  align-items: start;
+}
+
+.tl-lane-label {
+  /* Stays in view while a zoomed-in timeline scrolls sideways. */
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  align-self: stretch;
+  padding: 0.3rem 0.5rem 0 0;
+  background: linear-gradient(to right, var(--card-background) 85%, transparent);
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--muted-color);
+}
+
+.tl-track {
+  position: relative;
+  height: calc(var(--rows) * var(--row-height));
+}
+
+.tl-bar {
+  --hue: var(--primary-color);
+  position: absolute;
+  top: calc(var(--row) * var(--row-height));
+  height: calc(var(--row-height) - 0.35rem);
+  min-width: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--on-accent-color);
+  background: var(--hue);
+  border-radius: 0.4rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.tl-bar span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tl-lane[data-kind="education"] .tl-bar {
+  --hue: var(--third-color);
+}
+
+.tl-lane[data-kind="projects"] .tl-bar {
+  --hue: color-mix(in srgb, var(--primary-color) 55%, var(--third-color));
+}
+
+.tl-lane[data-kind="volunteer"] .tl-bar {
+  --hue: color-mix(in srgb, var(--primary-color) 35%, var(--muted-color));
+}
+
+.tl-bar:hover,
+.tl-bar:focus-visible {
+  z-index: 1;
+  transform: scaleY(1.12);
+  filter: brightness(1.1);
+  color: var(--on-accent-color);
+  text-decoration: none;
+}
+
+/* The bar of the entry the page is showing. */
+.tl-bar[aria-current="true"] {
+  z-index: 2;
+  outline: 0.15rem solid var(--text-color);
+  outline-offset: 0.1rem;
+}
+
+.tl-preview {
+  position: absolute;
+  z-index: 4;
+  display: grid;
+  gap: 0.15rem;
+  width: max-content;
+  max-width: min(20rem, 70vw);
+  padding: 0.5rem 0.7rem;
+  font-size: 0.8em;
+  background: var(--card-background);
+  color: var(--text-color);
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.tl-preview span {
+  color: var(--muted-color);
+}
+
+/* An embedded row's anchor: an empty span at its end, pinned to its top so a
+ * bar's link lands on the row and not on its last line. */
+.main-content li:has(> .tl-anchor) {
+  position: relative;
+}
+
+.tl-anchor {
+  position: absolute;
+  top: 0;
+}
+
+/* The entry a bar led to (js/timeline.js marks it). */
+.main-content .tl-shown {
+  outline: 0.15rem solid var(--third-color);
+  outline-offset: 0.35rem;
+  border-radius: 0.3rem;
+}
+
+@media (max-width: 48rem) {
+  .tl-grid {
+    --lane-label: 5.5rem;
+  }
+}
+
+/* widgets.css */
+/* Floating CV actions (download the LaTeX PDF / the timeline PDF / print this
+ * page) + daily-life
+ * doughnut chart.
+ *
+ * The cluster owns the fixed positioning; the buttons are ordinary flow
+ * children of it and share one look, so they stack instead of overlapping. */
+
+.cv-actions {
+  position: fixed;
+  /* Under the site nav, itself under the views bar (views-bar.css). */
+  top: calc(5rem + var(--views-bar-h, 0rem));
+  right: 1.25rem;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.cv-download-button,
+.cv-print-button {
+  background-color: var(--primary-color);
+  color: var(--on-accent-color);
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.625rem 0.9rem;
+  font: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 0.125rem 0.3rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cv-download-button:hover,
+.cv-print-button:hover {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  color: var(--on-accent-color);
+}
+
+.daily-life {
+  text-align: center;
+}
+
+.daily-life h2 {
+  font-size: 1.5em;
+  margin: 30px 0 20px 0;
+  text-align: left;
+}
+
+.daily-life-chart {
+  display: block;
+  margin: 0 auto;
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+}
+
+.daily-life-legend {
+  list-style: none;
+  padding: 0;
+  margin: 16px auto 0;
+  max-width: 260px;
+  text-align: left;
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+.daily-life-legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+}
+
+.daily-life-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* Three actions stacked would reach down into the first section's text. On a
+ * wide screen they line up, in the empty band right of its heading; below
+ * that, the CV keeps its line and the other two share the one under it — the
+ * footprint the two original actions had. Phones keep the column at the bottom. */
+@media (min-width: 80rem) {
+  .cv-actions {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 48.0625rem) and (max-width: 79.9375rem) {
+  .cv-actions {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: end;
+  }
+
+  .cv-actions > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-actions {
+    right: 0.625rem;
+    bottom: 0.625rem;
+  }
+
+  .cv-download-button,
+  .cv-print-button {
+    font-size: 0.9em;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-actions {
+    top: auto;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    left: auto;
+  }
+
+  .cv-download-button,
+  .cv-print-button {
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+  }
+
+  .daily-life {
+    margin-top: 25px;
+  }
+
+  .daily-life-chart {
+    max-width: 220px;
+  }
+}

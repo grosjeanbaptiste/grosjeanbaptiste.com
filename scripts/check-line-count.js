@@ -20,12 +20,18 @@ const IGNORED_DIRS = new Set([
   'app', // the React view's build output, minified
 ]);
 
+// Generated from the modules css/style.css lists (scripts/lib/css-bundle.js):
+// the modules are the code and stay under the limit, these are their output.
+const GENERATED = new Set(['css/bundle.css', 'css/bundle-print.css']);
+
 function walk(dir, out) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (IGNORED_DIRS.has(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       walk(full, out);
+    } else if (GENERATED.has(path.relative(ROOT, full))) {
+      // not source: see GENERATED
     } else if (entry.isFile() && CODE_EXTS.has(path.extname(entry.name))) {
       out.push(full);
     }

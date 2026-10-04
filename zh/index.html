@@ -132,7 +132,12 @@
   <!-- LLM-HEAD:END -->
 
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-latin.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- The text font, asked for with the HTML rather than once the CSS has named it. -->
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-latin.woff2" crossorigin>
+  <!-- css/style.css lists the sheets; scripts/lib/css-bundle.js writes them out as
+       these two, so the browser fetches one file before painting, not twenty. -->
+  <link rel="stylesheet" href="/css/bundle.css">
+  <link rel="stylesheet" href="/css/bundle-print.css" media="print">
 
   <script src="/js/theme.js" defer></script>
   <script src="/js/nav.js" defer></script>
