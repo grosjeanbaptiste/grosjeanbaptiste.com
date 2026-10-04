@@ -1,0 +1,274 @@
+{
+  "files": {
+    "cv_grosjean_baptiste_de.pdf": {
+      "sha256": "567ea5b6f77f09816e6170ccf2ed1261cd1d15c053836594fac07fe68c9abd75",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_de-1.webp",
+          "width": 1000,
+          "height": 1415
+        },
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_de-2.webp",
+          "width": 1000,
+          "height": 1415
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_en.pdf": {
+      "sha256": "94ad7d00fed16b7e763f8714aee52a5d14433ae3f818eee2d45351e87a467457",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_en-1.webp",
+          "width": 1000,
+          "height": 1415
+        },
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_en-2.webp",
+          "width": 1000,
+          "height": 1415
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_es.pdf": {
+      "sha256": "5d588758e59b1b3a6a5d1afeaf53ebabb1ceec2628ad2f09569a60adc18ed1c9",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_es-1.webp",
+          "width": 1000,
+          "height": 1415
+        },
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_es-2.webp",
+          "width": 1000,
+          "height": 1415
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_fr.pdf": {
+      "sha256": "768d2884b817530121f4eb4515006ea7a43630fe44f5f0c2dfc169fac0019cd7",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_fr-1.webp",
+          "width": 1000,
+          "height": 1415
+        },
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_fr-2.webp",
+          "width": 1000,
+          "height": 1415
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_nl.pdf": {
+      "sha256": "0b1bcdcde872f62052fa2dc166e88fff468439d28322f2d35c2f724f0234eb9d",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_nl-1.webp",
+          "width": 1000,
+          "height": 1415
+        },
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_nl-2.webp",
+          "width": 1000,
+          "height": 1415
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_2y_de.pdf": {
+      "sha256": "914aad80a2c24e1a8b3df3c0bd3e68241fe0f7588ed501b6afb2cc8a254c90e2",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_2y_de-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_2y_en.pdf": {
+      "sha256": "2496e5c9eae52dc1d337c909b0da7287ae61a8cf903f898ae0bd43deeba6bd35",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_2y_en-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_2y_es.pdf": {
+      "sha256": "1d9445622d6c3be7b68f5de2beb09c56b045f933058e65a46cf5b4d2e6bc1119",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_2y_es-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_2y_fr.pdf": {
+      "sha256": "113e6815126b6f9ed4dd92d3226c457dec38bd2237f0f9469e48f2e5d18e0ac8",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_2y_fr-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_2y_nl.pdf": {
+      "sha256": "33f9249c4c049a3fb05cb8d56baecee8d51a3bb31503c08a026cfc38c0593f67",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_2y_nl-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_2y_zh.pdf": {
+      "sha256": "a57b37a969b3a1402f63773a8033e0e715da168754ccedda9cb103e71990e6a6",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_2y_zh-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_5y_de.pdf": {
+      "sha256": "c7eb28e7f2ee56976e197e13a8819cc9bbc32485667fdb2655d6b20c4650553a",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_5y_de-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_5y_en.pdf": {
+      "sha256": "d202c8f8ba84c9c28fc9b83e9525be8e00b60c180c3b6c127f04d3343267e09f",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_5y_en-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_5y_es.pdf": {
+      "sha256": "b440d34d8deaf0a4298885b8d2bfc242f26ce66deeb8dcb24c96bdeab1363b3d",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_5y_es-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_5y_fr.pdf": {
+      "sha256": "ba6d977f25638ebdbc182706780c2234c384b5484ce6e799fdc740fe8fa05951",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_5y_fr-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_5y_nl.pdf": {
+      "sha256": "ee79d70f21309651c75ee911af653f107f7ebd3e1c207de32bb329c59eb4dc0f",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_5y_nl-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_5y_zh.pdf": {
+      "sha256": "215389b3ed5c2c6bcd7cd22109a3f253a45d94ba82e78ee84287fb8bbacc1c26",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_5y_zh-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_de.pdf": {
+      "sha256": "c4012e15b3db3ea47a5cba2b6127bd0caf05ad54240026359d732a036eb6c1c8",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_de-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_en.pdf": {
+      "sha256": "fbed0e759f9d9c5d4fa926689000ba52a8b2485b857f160b2c7eede29e86b0ee",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_en-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_es.pdf": {
+      "sha256": "cfc4d43b644a3510d5472c9409fcae195c25d4a75e01838c7259c9c42b3cd32a",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_es-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_fr.pdf": {
+      "sha256": "a4e8dd566f0e6b199b5b31fd8fec6ff81201d10b09d65894da72beca91020b63",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_fr-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_nl.pdf": {
+      "sha256": "fb15864d327801c22b9b0bef25ab8bd6549a89df790934e0caea55ba9551d794",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_nl-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_timeline_zh.pdf": {
+      "sha256": "9a7718c84ced9c6a8b90f0f138ab48bd05c7a3e728b7f95a9735d97040fb22ae",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_timeline_zh-1.webp",
+          "width": 1000,
+          "height": 708
+        }
+      ]
+    },
+    "cv_grosjean_baptiste_zh.pdf": {
+      "sha256": "0ab76c07c466febb48f185879149b2f52f81086d6488f3741d0fc2b748fefda4",
+      "pages": [
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_zh-1.webp",
+          "width": 1000,
+          "height": 1415
+        },
+        {
+          "src": "assets/cv/previews/cv_grosjean_baptiste_zh-2.webp",
+          "width": 1000,
+          "height": 1415
+        }
+      ]
+    }
+  }
+}

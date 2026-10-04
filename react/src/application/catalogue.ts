@@ -3,7 +3,7 @@
 import { entriesOf } from '../domain/entries';
 import type { Entry, EntryKind } from '../domain/entry';
 import { Period } from '../domain/period';
-import type { Basics, Resume, ResumeDocument, ViewLink } from '../domain/resume';
+import type { Basics, PagePicture, Resume, ResumeDocument, ViewLink } from '../domain/resume';
 
 const newestFirst = (a: Entry, b: Entry) =>
   a.period && b.period ? Period.newestFirst(a.period, b.period) : 0;
@@ -18,13 +18,22 @@ export class Catalogue {
     readonly entries: readonly Entry[],
     readonly viewsTitle: string,
     readonly views: readonly ViewLink[],
+    private readonly pictures: ResumeDocument['pictures'],
   ) {
     this.byId = new Map(entries.map((e) => [e.id, e]));
   }
 
   static from(document: ResumeDocument): Catalogue {
-    const { lang, ui, resume, viewsTitle, views } = document;
-    return new Catalogue(lang, ui, resume, entriesOf(resume), viewsTitle, views);
+    const { lang, ui, resume, viewsTitle, views, pictures } = document;
+    return new Catalogue(lang, ui, resume, entriesOf(resume), viewsTitle, views, pictures);
+  }
+
+  // The pictures of a PDF's pages; none — said out loud — when the export has none.
+  picturesOf(pdf: string): readonly PagePicture[] {
+    const pictures = this.pictures[pdf];
+    if (!pictures)
+      console.warn(`No page pictures exported for ${pdf}: the reader waits for PDF.js`);
+    return pictures ?? [];
   }
 
   get basics(): Basics {

@@ -81,3 +81,27 @@
   border: 0;
   box-shadow: var(--shadow);
 }
+
+/* The page pictures shown while PDF.js draws: over the document, the same
+ * column of pages at the same width as PDF.js's 'page-width' scale. */
+.pdf-pictures {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: auto;
+  background: inherit;
+}
+
+.pdf-pictures img {
+  display: block;
+  width: calc(100% - 2.5rem);
+  height: auto;
+  margin: 1rem auto;
+  box-shadow: var(--shadow);
+}
+
+/* PDF.js sets its first page flush with the top: so does the picture of it,
+ * or the page would jump up by a margin when the drawing takes over. */
+.pdf-pictures img:first-child {
+  margin-top: 0;
+}

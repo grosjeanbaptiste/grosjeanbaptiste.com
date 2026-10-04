@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { identify } from './export-lib.mjs';
+import { identify, picturesFor } from './export-lib.mjs';
 
 const canonical = {
   work: [{ company: 'Acteble', position: 'Founder' }],
@@ -55,5 +55,33 @@ describe('identify', () => {
   it('fails loudly when the overlay is not index-aligned with the canonical data', () => {
     const short = { ...localized, projects: localized.projects.slice(0, 1) };
     expect(() => identify(canonical, short)).toThrow(/projects.*2.*1/);
+  });
+});
+
+describe('picturesFor', () => {
+  const manifest = {
+    files: {
+      'cv_grosjean_baptiste_fr.pdf': {
+        sha256: 'x',
+        pages: [
+          { src: 'assets/cv/previews/cv_grosjean_baptiste_fr-1.webp', width: 1000, height: 1414 },
+        ],
+      },
+      'cv_grosjean_baptiste_en.pdf': { sha256: 'y', pages: [] },
+    },
+  };
+
+  it('lists the page pictures of a language’s PDFs, under the paths the site serves', () => {
+    expect(picturesFor(manifest, 'fr')).toEqual({
+      '/assets/cv/cv_grosjean_baptiste_fr.pdf': [
+        { src: '/assets/cv/previews/cv_grosjean_baptiste_fr-1.webp', width: 1000, height: 1414 },
+      ],
+    });
+  });
+
+  it('leaves out the other languages’ PDFs', () => {
+    expect(Object.keys(picturesFor(manifest, 'en'))).toEqual([
+      '/assets/cv/cv_grosjean_baptiste_en.pdf',
+    ]);
   });
 });

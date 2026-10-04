@@ -44,3 +44,17 @@ export function identify(canonical, localized) {
   }
   return out;
 }
+
+// The page pictures of one language's PDFs (assets/cv/previews/manifest.json,
+// written by scripts/generate-pdf-previews.js), keyed by the path the site
+// serves each PDF at, so the reader shows them before PDF.js has drawn.
+export function picturesFor(manifest, lang) {
+  return Object.fromEntries(
+    Object.entries(manifest.files)
+      .filter(([name]) => name.endsWith(`_${lang}.pdf`))
+      .map(([name, { pages }]) => [
+        `/assets/cv/${name}`,
+        pages.map(({ src, width, height }) => ({ src: `/${src}`, width, height })),
+      ]),
+  );
+}

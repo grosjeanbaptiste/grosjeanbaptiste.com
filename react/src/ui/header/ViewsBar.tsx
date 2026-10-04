@@ -3,11 +3,23 @@
 // with the same markup the shared /css/views-bar.css styles. The displays this
 // app serves are routes of it: a <Link> switches between them without reloading
 // the app. The others are other documents, plain <a>. A PDF display's file is
-// fetched as soon as the pointer or a finger reaches its link.
+// fetched as soon as the pointer or a finger reaches its link, with the
+// picture of its first page.
 import { Link } from 'react-router';
 import { useReading } from '../context';
 import { APP_BASE, pdfPath, timelinePdfPath } from '../paths';
 import type { PdfRenderer } from '../pdf/pdf-renderer';
+
+// The picture of a PDF's first page, which the reader shows at once.
+function preloadImage(src: string) {
+  if (document.head.querySelector(`link[rel="preload"][href="${src}"]`)) return;
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.setAttribute('as', 'image');
+  link.href = src;
+  link.addEventListener('error', () => console.warn(`Fetching ${src} ahead failed`));
+  document.head.append(link);
+}
 
 const insideApp = (href: string) => href.startsWith(`${APP_BASE}/`);
 
@@ -26,6 +38,8 @@ export function ViewsBar({ current, pdf }: Props) {
   const ahead = (id: string) => {
     const file = files[id];
     if (!file) return;
+    const first = catalogue.picturesOf(file)[0];
+    if (first) preloadImage(first.src);
     pdf.prefetch(file).catch((error: unknown) => {
       console.warn(`Fetching ${file} ahead failed; the reader will fetch it when opened:`, error);
     });

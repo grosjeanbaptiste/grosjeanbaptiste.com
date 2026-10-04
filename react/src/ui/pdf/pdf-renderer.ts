@@ -4,6 +4,8 @@
 
 export interface PdfView {
   readonly pages: number;
+  // Settles once the first page is on screen.
+  readonly drawn: Promise<void>;
   zoomIn(): void;
   zoomOut(): void;
   fitWidth(): void;

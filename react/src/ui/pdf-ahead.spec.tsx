@@ -13,6 +13,7 @@ const bar = async () => screen.findByRole('navigation', { name: 'Views' });
 
 afterEach(() => {
   vi.unstubAllGlobals();
+  for (const link of document.head.querySelectorAll('link[rel="preload"]')) link.remove();
 });
 
 describe('getting the PDF displays ready ahead', () => {
@@ -52,6 +53,15 @@ describe('getting the PDF displays ready ahead', () => {
     renderApp('/en', undefined, pdf);
     fireEvent.touchStart(within(await bar()).getByRole('link', { name: 'Timeline (PDF)' }));
     expect(pdf.prefetched).toEqual(['/assets/cv/cv_grosjean_baptiste_timeline_en.pdf']);
+  });
+
+  it('fetches the picture of the first page ahead too, once', async () => {
+    renderApp('/en', undefined, new FakePdfRenderer());
+    const link = within(await bar()).getByRole('link', { name: 'PDF' });
+    fireEvent.pointerEnter(link);
+    fireEvent.pointerEnter(link);
+    const preloads = [...document.head.querySelectorAll('link[rel="preload"][as="image"]')];
+    expect(preloads.map((l) => l.getAttribute('href'))).toEqual(['/cv_en-1.webp']);
   });
 
   it('fetches nothing ahead for a display that is not a PDF', async () => {
