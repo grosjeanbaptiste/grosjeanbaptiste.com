@@ -19,6 +19,11 @@
         console.warn('Theme preference unreadable, following the system:', error);
       }
     </script>
+    <!-- Chrome and Edge prepare the classic page on the way to its link in the views
+         bar. Not this app's own displays: those are routes, switched without a load. -->
+    <script type="speculationrules">
+    {"prerender":[{"where":{"and":[{"selector_matches":".views-bar-link"},{"not":{"href_matches":"/app/*"}},{"not":{"href_matches":"/*.xml"}}]},"eagerness":"moderate"}]}
+    </script>
   </head>
   <body>
     <div id="root"></div>

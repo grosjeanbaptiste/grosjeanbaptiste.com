@@ -1,0 +1,55 @@
+{
+  "index.html": {
+    "file": "assets/index-B5UDVB7i.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/pdfjs-dist/build/pdf.mjs",
+      "node_modules/pdfjs-dist/web/pdf_viewer.mjs",
+      "node_modules/pdfjs-dist/build/pdf.worker.min.mjs?url"
+    ],
+    "css": [
+      "assets/index-BmdiV9pO.css"
+    ]
+  },
+  "node_modules/pdfjs-dist/build/pdf.mjs": {
+    "file": "assets/pdf-rih5nd3l.js",
+    "name": "pdf",
+    "src": "node_modules/pdfjs-dist/build/pdf.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "node_modules/pdfjs-dist/build/pdf.worker.min.mjs": {
+    "file": "assets/pdf.worker.min-Dswkl-cV.mjs",
+    "src": "node_modules/pdfjs-dist/build/pdf.worker.min.mjs"
+  },
+  "node_modules/pdfjs-dist/build/pdf.worker.min.mjs?url": {
+    "file": "assets/pdf.worker.min-D1qXUDPE.js",
+    "name": "pdf.worker.min",
+    "src": "node_modules/pdfjs-dist/build/pdf.worker.min.mjs?url",
+    "isDynamicEntry": true,
+    "assets": [
+      "assets/pdf.worker.min-Dswkl-cV.mjs"
+    ]
+  },
+  "node_modules/pdfjs-dist/web/images/cursor-editorTextHighlight.svg": {
+    "file": "assets/cursor-editorTextHighlight-kG3uUOwL.svg",
+    "src": "node_modules/pdfjs-dist/web/images/cursor-editorTextHighlight.svg"
+  },
+  "node_modules/pdfjs-dist/web/pdf_viewer.css": {
+    "file": "assets/pdf_viewer-8-iGZKfo.css",
+    "src": "node_modules/pdfjs-dist/web/pdf_viewer.css"
+  },
+  "node_modules/pdfjs-dist/web/pdf_viewer.mjs": {
+    "file": "assets/pdf_viewer--hdXEGK3.js",
+    "name": "pdf_viewer",
+    "src": "node_modules/pdfjs-dist/web/pdf_viewer.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  }
+}

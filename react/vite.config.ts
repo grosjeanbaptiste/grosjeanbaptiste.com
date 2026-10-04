@@ -5,9 +5,10 @@ import type { Plugin } from 'vite';
 import { defineConfig } from 'vitest/config';
 
 const SITE_ROOT = resolve(import.meta.dirname, '..');
-const SHARED = ['/css/', '/assets/', '/favicon.ico', '/manifest.webmanifest'];
+const SHARED = ['/css/', '/js/', '/assets/', '/favicon.ico', '/manifest.webmanifest'];
 const TYPES: Record<string, string> = {
   '.css': 'text/css',
+  '.js': 'text/javascript',
   '.woff2': 'font/woff2',
   '.svg': 'image/svg+xml',
   '.png': 'image/png',
@@ -26,6 +27,8 @@ function siteAssets(): Plugin {
       { tag: 'link', attrs: { rel: 'stylesheet', href: '/css/fonts.css' }, injectTo: 'head' },
       { tag: 'link', attrs: { rel: 'stylesheet', href: '/css/variables.css' }, injectTo: 'head' },
       { tag: 'link', attrs: { rel: 'stylesheet', href: '/css/views-bar.css' }, injectTo: 'head' },
+      // The site's own warm-up of the other displays (js/views-ahead.js).
+      { tag: 'script', attrs: { src: '/js/views-ahead.js', defer: true }, injectTo: 'head' },
       { tag: 'link', attrs: { rel: 'icon', href: '/favicon.ico', sizes: 'any' }, injectTo: 'head' },
       {
         tag: 'link',
@@ -54,7 +57,9 @@ function siteAssets(): Plugin {
 export default defineConfig({
   base: '/app/',
   plugins: [react(), siteAssets()],
-  build: { outDir: '../app', emptyOutDir: true },
+  // The manifest names the hashed chunks: scripts/route-pages.mjs reads it to
+  // have the reader pages start loading the PDF engine with their own HTML.
+  build: { outDir: '../app', emptyOutDir: true, manifest: true },
   test: {
     environment: 'jsdom',
     setupFiles: ['./spec-support/setup.ts'],

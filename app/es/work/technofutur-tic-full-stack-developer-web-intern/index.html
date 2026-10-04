@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#1F0E0E" media="(prefers-color-scheme: dark)" />
     <!-- ROUTE-HEAD -->
     <title>Desarrollador Web Full Stack en prácticas — Technofutur TIC · Baptiste Grosjean</title>
+    <link rel="preload" as="fetch" href="/app/data/es.json" crossorigin="anonymous" />
     <meta name="description" content="Formación cualificante destinada a reforzar las competencias técnicas adquiridas en mi bachelor en EPHEC.
 La extensión incluyó una introducción al Business Intelligence y a los procesos ETL (Data Warehousing) con herramientas Microsoft (SSIS, …).
 Formación que abarcó SQL Server, Node.js, Express.js, React y Angular, desde el desarrollo de bases de datos hasta la interfaz de usuario y el backend." />
@@ -25,11 +26,17 @@ Formación que abarcó SQL Server, Node.js, Express.js, React y Angular, desde e
         console.warn('Theme preference unreadable, following the system:', error);
       }
     </script>
+    <!-- Chrome and Edge prepare the classic page on the way to its link in the views
+         bar. Not this app's own displays: those are routes, switched without a load. -->
+    <script type="speculationrules">
+    {"prerender":[{"where":{"and":[{"selector_matches":".views-bar-link"},{"not":{"href_matches":"/app/*"}},{"not":{"href_matches":"/*.xml"}}]},"eagerness":"moderate"}]}
+    </script>
     <script type="module" crossorigin src="/app/assets/index-B5UDVB7i.js"></script>
     <link rel="stylesheet" crossorigin href="/app/assets/index-BmdiV9pO.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="/css/views-bar.css">
+    <script src="/js/views-ahead.js" defer></script>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
   </head>
