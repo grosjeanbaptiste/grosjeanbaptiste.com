@@ -94,6 +94,13 @@ for (const v of xmlOutputs) {
 }
 console.log(`xml: assets/data/resume{,-minimal,-<lang>{,-minimal}}.xml × ${xmlOutputs.length}`);
 
+// The classic page's stylesheets, written out from css/style.css's list.
+const { bundlesOf } = require('./lib/css-bundle');
+const bundles = bundlesOf(path.join(ROOT, 'css'));
+if (writeIfChanged(path.join(ROOT, 'css/bundle.css'), bundles.screen)) wrote += 1;
+if (writeIfChanged(path.join(ROOT, 'css/bundle-print.css'), bundles.print)) wrote += 1;
+console.log('css: css/bundle.css, css/bundle-print.css');
+
 if (writeIfChanged(path.join(ROOT, 'sitemap.xml'), generateSitemap())) wrote += 1;
 console.log('sitemap: sitemap.xml');
 

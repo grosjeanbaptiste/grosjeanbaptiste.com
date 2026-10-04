@@ -32,6 +32,9 @@ The website uses JSON and XML files for data:
 
 The HTML content is currently hardcoded in `index.html` rather than dynamically generated from the JSON data.
 
+### Stylesheets
+`css/style.css` is the ordered list of the classic page's sheets (one module per component, each under 200 lines). The page does not load it: as `@import`s it made the browser fetch one file to discover nineteen, all render-blocking, seven of them print-only (measured cold on a slow phone: first paint 1.26 s, 0.72 s without the chain). `scripts/lib/css-bundle.js`, run by `scripts/generate-from-resume.js`, writes the list out as `css/bundle.css` (screen) and `css/bundle-print.css` (linked with `media="print"`, which does not block the paint); both are generated and committed, and `scripts/lib/css-bundle.test.js` fails when they are stale — **after editing a CSS module, rerun the generator**. The page also preloads its text font.
+
 ### Theming System
 - CSS custom properties in `variables.css` define color schemes
 - Theme switching handled by `theme.js` with localStorage persistence

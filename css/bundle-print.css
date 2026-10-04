@@ -1,0 +1,787 @@
+/* print.css */
+/* Print stylesheet — makes the browser-printed page follow the LaTeX CV.
+ *
+ * Source of truth is the LaTeX build (scripts/lib/pdf/): the palette comes from
+ * preamble.js, the page geometry from its \geometry{...}, the column split from
+ * document.js's \columnratio, and the content reductions from the fit plan in
+ * config.js. scripts/lib/print-parity.test.js pins those constants so a change
+ * on the LaTeX side cannot silently drift from this file.
+ *
+ * Everything CSS can carry across is carried across: the palette, the page
+ * geometry, the column split, the type scale, the banner, the photo and the
+ * shape of a work entry. What moves a node between containers — the banner
+ * itself, Education into the narrow column, the volunteering onto the verso —
+ * is js/print-layout.js, since CSS cannot.
+ *
+ * What this CANNOT reproduce, by construction:
+ *   - TeX's line breaking, hyphenation and page-breaking algorithms, so line
+ *     endings and page boundaries will differ from the PDF. That is the whole
+ *     of the remaining difference, and no stylesheet closes it.
+ *
+ * Two divergences are deliberate rather than technical: the sheet prints on
+ * white instead of altacv's grey \pagecolor (a full-bleed wash costs ink and
+ * buys no legibility), and consecutive roles at one employer are not collapsed
+ * into the PDF's continuation form.
+ */
+
+@media print {
+  /* LaTeX palette (preamble.js), forced over whichever theme is active so a
+     dark-mode reader gets the same sheet as a light-mode one. */
+  :root,
+  :root[data-theme="dark"],
+  :root[data-theme="light"] {
+    --primary-color: #001f5a; /* PrimaryColor   — name, section headings */
+    --secondary-color: #ff0000; /* SecondaryColor — tagline, subheadings */
+    --accent-color: #f3890b; /* ThirdColor     — heading rules */
+    --body-color: #666666; /* BodyColor      — running text */
+    --emphasis-color: #2e2e2e; /* EmphasisColor  — emphasised runs */
+    /* Deliberately NOT altacv's \pagecolor{BackgroundColor} (#e2e2e2):
+       a full-bleed grey wash costs ink on every sheet and buys no
+       legibility on paper. The rest of the palette still tracks the
+       LaTeX preamble — see scripts/lib/print-page-colour.test.js. */
+    --page-color: #ffffff;
+  }
+
+  /* \geometry{left=0.9cm,right=0.9cm,top=0.8cm,bottom=0.8cm} */
+  @page {
+    size: A4;
+    margin: 0.8cm 0.9cm;
+  }
+
+  /* The page colour is laid down by a fixed layer, not by body: a background
+     on body paints only body's box, which on the verso ends with the columns
+     and leaves the references standing on bare white. A fixed element is
+     painted onto every sheet. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--page-color);
+    z-index: -1;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* THE one size on the sheet. Everything else is a ratio of it — altacv's own
+     magsteps, measured out of a shipped PDF's content stream: \Huge 2.161,
+     \LARGE 1.501, \Large 1.369, \large 1.250, \small 0.874, \footnotesize
+     0.750. So the PROPORTIONS are the PDF's exactly, whatever this is set to,
+     and there is a single knob for the one thing a browser cannot match.
+     \documentclass[8pt] means 7.97pt here. That is what the sheet ran at, and
+     it left 39pt of slack on the recto in Firefox on macOS — enough there, not
+     enough for the same engine on Linux, which printed the recto on its own
+     sheet. TeX packs more words per line than any browser, so the sheet needs
+     to be a little smaller than the PDF to hold the same content in the same
+     two pages. This is the largest value that does, with room to spare. */
+  :root {
+    --print-base: 7.4pt;
+  }
+
+  html {
+    font-size: var(--print-base);
+  }
+
+  /* body only, never html: `font-size: 1rem` on the ROOT is a self-reference,
+     which the spec resolves to the initial 16px — it silently overrode
+     --print-base and printed the sheet half again too large. */
+  body {
+    font-size: 1rem;
+  }
+
+  html,
+  body {
+    background: none;
+    color: var(--body-color);
+    /* altacv sets \pagecolor; keep it and the accent rules rather than
+       letting the browser drop every background to save ink. */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    /* TeX hyphenates — ragged2e turns justification off, not hyphenation — and
+       a browser does not unless asked. That difference is lines, not
+       millimetres, on a sheet whose main column runs to the last one. Every
+       page carries its own lang, so the right dictionary is used. */
+    hyphens: auto;
+    font-family: "Lato", "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Browser chrome and on-screen-only controls never reach the sheet — nor the
+     timeline: the LaTeX CV this sheet follows has none. */
+  #timeline,
+  nav,
+  .lang-switcher,
+  #theme-toggle,
+  .cv-actions,
+  .cv-download-button,
+  .cv-print-button {
+    display: none !important;
+  }
+
+  /* \columnratio{0.30} with \geometry{columnsep=0.6cm} */
+  .container {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 0.6cm;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    /* base.css gives the container min-height: 100vh so the screen layout fills
+       the viewport. On paper a vh resolves against the page box, so the
+       container is never shorter than a full sheet however little it holds —
+       which pushed it off the banner's page entirely and made the sheet count
+       deaf to any density work. */
+    min-height: 0;
+  }
+
+  .sidebar,
+  .main-content {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+/* print-type.css */
+/* Print typography and content — the second half of the print sheet.
+ *
+ * css/print.css sets the page up (palette, geometry, columns, the banner);
+ * this file styles what sits on it and applies the LaTeX fit plan's content
+ * reductions. Same source of truth, same caveats — see that file's header.
+ */
+
+@media print {
+  /* \renewcommand{\namefont}{\Huge\rmfamily\bfseries} + \colorlet{name}.
+     \Huge in an 8pt class measures 17.22pt in the shipped PDF, not the 20pt
+     this used to guess — every size in this file is the one the PDF's own
+     content stream carries. \makecvheader upper-cases the name. */
+  .contact-info h1 {
+    font-family: "Roboto Slab", "Roboto", serif;
+    font-weight: 700;
+    font-size: 2.161rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin: 0 0 3pt;
+  }
+
+  /* \taglinefont is \large\bfseries (9.96pt), \colorlet{tagline}{SecondaryColor} */
+  .contact-info h2 {
+    font-size: 1.250rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0 0 5pt;
+    border: none;
+  }
+
+  /* Two heading scales, as in the PDF: \cvsectionfont (\LARGE, 11.96pt) over
+     a \rule{\linewidth}{2pt} in the main column, and the narrower
+     \cvsectionsidebar (\Large, 10.91pt) over a 1.5pt rule in the left one.
+     Both uppercase, both in headingrule (ThirdColor). */
+  /* #print-verso is included because js/print-layout.js lifts the volunteering
+     and the references out of the two columns into the verso block, which took
+     them out of reach of these selectors and printed both headings as plain
+     body text. */
+  .main-content h2,
+  .sidebar h2:not(.contact-info h2),
+  .sidebar h3,
+  #print-verso h2 {
+    font-family: "Roboto Slab", "Roboto", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    padding-bottom: 1pt;
+    margin: 7pt 0 3pt;
+    /* A heading alone at the foot of a column reads as a mistake. */
+    break-after: avoid;
+  }
+
+  /* \cvsection{References} on the verso's wide column. */
+  .main-content h2,
+  #print-verso #references h2 {
+    font-size: 1.501rem;
+    border-bottom: 2pt solid var(--accent-color);
+  }
+
+  /* \cvsectionsidebar{Volunteer} on the verso's narrow one. */
+  .sidebar h2:not(.contact-info h2),
+  .sidebar h3,
+  #print-verso #print-volunteer h2 {
+    font-size: 1.369rem;
+    border-bottom: 1.5pt solid var(--accent-color);
+  }
+
+  /* \cvsubsectionfont is \large\bfseries — the same 9.96pt \large the
+     tagline uses. Colour is split between .position and .company by
+     css/print-entry.css, as \cvevent splits it. */
+  .experience-item h3,
+  .experience-item h4 {
+    font-size: 1.250rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0;
+  }
+
+  /* \renewenvironment{quote}{\color{accent}\itshape\large} — sections/about.js
+     wraps the summary in `quote`, so the PDF sets it red, italic and one step
+     up. The page sets it as ordinary body text. */
+  #about p {
+    font-size: 1.250rem;
+    font-style: italic;
+    color: var(--secondary-color);
+  }
+
+  .experience-item {
+    margin-bottom: 6pt;
+    break-inside: avoid;
+  }
+
+  strong,
+  b {
+    color: var(--emphasis-color);
+  }
+
+  /* Printed links are dead links: keep the text, drop the decoration. */
+  a {
+    color: var(--body-color);
+    text-decoration: none;
+  }
+
+  /* Fit plan (config.js): the winning plan sets show_skills=false and caps the
+     recto at 8 work entries. Mirror both so the sheet carries the same content
+     as the PDF.
+     show_skills governs the PER-ENTRY tags only — the sidebar's own skills
+     block (buildSkillsBlock) is always rendered in the PDF, so hiding every
+     .skill-tags would leave two headings standing over nothing. */
+  /* .project-skills sits inside .embedded-projects, which DOES print — unlike
+     .inline-skills. The LaTeX fit plan sets show_skills: false, and letting
+     the per-project tags through would add a line to almost every entry,
+     straight into a third sheet. */
+  #experience .skill-tags,
+  .inline-skills,
+  .project-skills {
+    display: none;
+  }
+
+  /* The LaTeX sidebar carries degrees, languages, skills and the day block.
+     There is no projects list there; projects appear under the work entries
+     that reference them, which .embedded-projects already provides. */
+  .sidebar .projects {
+    display: none;
+  }
+
+  /* scripts/lib/print-selection.js marks every work entry the PDF's fit plan
+     leaves out. Hiding by position instead would only work while resume.json
+     happens to be stored in recency order. */
+  .print-hidden {
+    display: none;
+  }
+}
+
+/* print-density.css */
+/* Density and the sidebar's own blocks — the second half of the print sheet.
+ *
+ * css/print-type.css owns the type scale; this file owns how tightly the
+ * result is packed and the widgets that only the narrow column carries. Split
+ * out of that file when it reached the 200-line gate. Same source of truth,
+ * same caveats — see the header of css/print.css.
+ */
+
+@media print {
+  /* altacv sets the whole document at 8pt with TeX's tight leading; the
+     screen styles are built for reading at arm's length and are far airier.
+     1.2 is \baselineskip over \normalsize in an 8pt class. */
+  body {
+    /* \baselineskip over \normalsize in an 8pt class is 9.5/8 — 1.1875, not
+       the 1.2 this rounded to. */
+    line-height: 1.19;
+  }
+
+  p,
+  ul,
+  ol {
+    margin: 0 0 2pt;
+  }
+
+  .experience-item .date,
+  .experience-item .location,
+  .education-item .institution {
+    margin: 0;
+  }
+
+  .experience-item {
+    margin-bottom: 4pt;
+  }
+
+  /* renderProjectList in pdf/sections/_trailer.js wraps the whole block —
+     label and items — in {\footnotesize …}. The page runs it at 0.9em of the
+     body, so every entry's project list printed a point and a half larger than
+     the PDF's, on a column that runs to its last line. */
+  .embedded-projects,
+  .embedded-projects li,
+  .embedded-label {
+    font-size: 0.750rem;
+  }
+
+  .embedded-projects {
+    margin: 1pt 0 0;
+  }
+
+  .embedded-projects ul {
+    margin: 0;
+    padding-left: 9pt;
+  }
+
+  .embedded-label {
+    margin: 0;
+  }
+
+  /* \footnotesize \cvtag: a thin outlined chip, not a padded pill. */
+  .skill-tags {
+    gap: 1pt;
+  }
+
+  /* \footnotesize in an 8pt class — 5.98pt in the shipped PDF.
+     \cvtag draws `draw=body, rounded corners` — an outlined chip with no fill.
+     The screen paints these solid in ThirdColor, which on the sheet came out as
+     a block of orange where the PDF has thin grey outlines. */
+  .skill-tag {
+    font-size: 0.750rem;
+    /* \cvtag's node is drawn with inner xsep=1ex, inner ysep=0.75ex — at this
+       size roughly 3pt and 2.2pt. At 0 1.5pt the chips came out visibly
+       tighter than the PDF's. */
+    padding: 2.2pt 3pt;
+    border: 0.4pt solid var(--body-color);
+    border-radius: 1.5pt;
+    background: none;
+    color: var(--body-color);
+    margin: 0;
+  }
+
+  /* \renewcommand{\itemmarker}{{\small\textbullet}} — the marker takes the
+     running colour. The page draws it with a ::before in ThirdColor, so the
+     sheet had orange bullets where the PDF has grey ones. ::marker is no use
+     here: base.css sets list-style-type: none. */
+  .main-content ul li::before {
+    color: var(--body-color);
+  }
+
+  /* The PDF sets each summary as \begin{itemize}\item; the page renders it as
+     a bare paragraph, so the sheet lost the bullet that lines every entry up. */
+  .experience-item p[data-print-text]::before {
+    content: "• ";
+  }
+
+  /* education_in_body: false — the PDF drops the Education entries and keeps
+     only the sidebar's degrees summary, which print-layout.js moves under this
+     section's heading. */
+  #education .education-item {
+    display: none;
+  }
+
+  /* The day chart stays: altacv draws the same donut with \wheelchart, and the
+     page renders it as inline SVG, which prints faithfully. */
+
+  /* The photo's printed size is set by css/print-banner.css, where the banner
+     puts it at the PDF's \photoL{4cm}. This is the fallback for a reader with
+     JavaScript off: no banner is built, the photo stays in the narrow column,
+     and 3cm is as wide as that column can carry. Two rules used to sit here,
+     1.8cm and 3cm, with the later one silently winning. */
+  .sidebar img#profile-picture {
+    max-width: 3cm;
+    height: auto;
+  }
+}
+
+/* print-daychart.css */
+/* The day chart — altacv's \wheelchart, in the narrow column.
+ *
+ * Split out of css/print-density.css at the 200-line gate. The seam is the
+ * widget: that file owns how tightly the sheet is packed, this one owns the
+ * donut, its tints and its legend.
+ *
+ * The PDF places each slice's label around the ring on a leader line; the page
+ * lists them under it. That difference is NOT closed here — it would mean
+ * rebuilding the SVG, not restyling it — so what this file matches is the
+ * palette and the size.
+ */
+
+@media print {
+  /* \wheelchart draws every slice in a tint of `accent`: WHEEL_STYLES in
+     scripts/lib/pdf/sections/sidebar.js reads accent!30, !40, !60, accent,
+     accent, !20, in the order the items are declared. The page gives each item
+     its own colour from resume.json, which printed as a blue/orange/green
+     donut next to the PDF's red one. xcolor's accent!N is N% of #FF0000 over
+     white, so the tints below are that arithmetic, in that order.
+     print-visual-parity.test.js ties the count of these to WHEEL_STYLES. */
+  .daily-life-chart path:nth-of-type(1) {
+    fill: #ffb3b3;
+  }
+
+  .daily-life-chart path:nth-of-type(2) {
+    fill: #ff9999;
+  }
+
+  .daily-life-chart path:nth-of-type(3) {
+    fill: #ff6666;
+  }
+
+  .daily-life-chart path:nth-of-type(4),
+  .daily-life-chart path:nth-of-type(5) {
+    fill: var(--secondary-color);
+  }
+
+  .daily-life-chart path:nth-of-type(6) {
+    fill: #ffcccc;
+  }
+
+  /* The legend dots repeat the slice colours, so they follow the same tints.
+     They carry theirs in a style attribute, which only !important outranks —
+     the alternative is a class per item in the generator, which buys the sheet
+     nothing it can see. */
+  .daily-life-legend li:nth-of-type(1) .daily-life-dot {
+    background: #ffb3b3 !important;
+  }
+
+  .daily-life-legend li:nth-of-type(2) .daily-life-dot {
+    background: #ff9999 !important;
+  }
+
+  .daily-life-legend li:nth-of-type(3) .daily-life-dot {
+    background: #ff6666 !important;
+  }
+
+  .daily-life-legend li:nth-of-type(4) .daily-life-dot,
+  .daily-life-legend li:nth-of-type(5) .daily-life-dot {
+    background: var(--secondary-color) !important;
+  }
+
+  .daily-life-legend li:nth-of-type(6) .daily-life-dot {
+    background: #ffcccc !important;
+  }
+
+  /* buildDegreesSummary and buildLanguagesBlock both set \footnotesize; the
+     sheet ran them at the sidebar's own size, which pushed the degree line
+     onto a third row. */
+  .sidebar #education,
+  .languages p {
+    font-size: 0.750rem;
+  }
+
+  .language-name {
+    font-weight: 700;
+    color: var(--emphasis-color);
+  }
+
+  /* "— fluency" in accent, against the page's "Language: fluency". */
+  .language-sep {
+    display: none;
+  }
+
+  .language-name::after {
+    content: " — ";
+    font-weight: 400;
+    color: var(--body-color);
+  }
+
+  .language-level {
+    color: var(--secondary-color);
+  }
+
+  /* The day block is the last thing in the left column, so it is what spills
+     when the recto is a hair too tall — and a spilled sidebar costs a whole
+     sheet, since the two-column block cannot be split. Give it real headroom
+     rather than a margin measured in millimetres. */
+  .daily-life-chart {
+    max-width: 2.2cm;
+  }
+
+  .daily-life-legend {
+    margin: 1pt 0 0;
+    font-size: 0.72em;
+    line-height: 1.15;
+    /* Two short columns instead of one tall list. */
+    column-count: 2;
+    column-gap: 4pt;
+  }
+
+  .daily-life-legend li {
+    padding: 0;
+    break-inside: avoid;
+  }
+
+  .daily-life-dot {
+    width: 4pt;
+    height: 4pt;
+  }
+}
+
+/* print-banner.css */
+/* The full-width header — altacv's \makecvheader.
+ *
+ * js/print-layout.js lifts the photo and the identity block out of the narrow
+ * column into #print-banner, because CSS cannot move a node between
+ * containers. This file lays them out the way the PDF does: photo left at its
+ * \photoL diameter, then name, tagline and two rows of contact details, closed
+ * by the centred "Updated <date>" line.
+ *
+ * The banner is also what makes the rest of the sheet affordable. Nine stacked
+ * contact rows and a two-line name cost the 30% column far more height than
+ * the same details cost spread across the full width, so the narrow column
+ * ends up shorter than it was without a banner at all.
+ */
+
+@media print {
+  #print-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4cm;
+    margin: 0 0 0.3cm;
+  }
+
+  /* \photoL{4cm}{profil}. altacv strokes the circle in headingrule
+     (ThirdColor); the screen rings it in the primary navy. */
+  #print-banner #profile-picture {
+    flex: 0 0 4cm;
+    width: 4cm;
+    max-width: 4cm;
+    height: 4cm;
+    margin: 0;
+    border: 1.5pt solid var(--accent-color);
+    box-shadow: none;
+  }
+
+  #print-banner .contact-info {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+  }
+
+  /* \personalinfofont is \small\bfseries, and \printinfo separates entries with
+     \hspace{2em} and colours the icon in accent. */
+  .contact-primary,
+  .contact-profiles,
+  .print-updated {
+    font-size: 0.874rem;
+    font-weight: 700;
+    color: var(--body-color);
+  }
+
+  .contact-primary,
+  .contact-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2em;
+  }
+
+  .contact-primary p,
+  .contact-profiles p,
+  .print-updated {
+    margin: 0;
+  }
+
+  #print-banner .contact-info svg.icon {
+    width: 1em;
+    height: 1em;
+    min-width: 0;
+    margin-right: 0.4em;
+    color: var(--secondary-color);
+  }
+
+  /* \begin{center}\printinfo{\faRedo}{...}\end{center} */
+  .print-updated {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.12cm;
+  }
+
+  /* The PDF's \personalinfo has no equivalent of these two views. Qualified
+     by .contact-info because the screen's own `.contact-info p { display: flex }`
+     outranks a lone class and the links printed anyway. */
+  .contact-info .contact-machine {
+    display: none;
+  }
+}
+
+/* print-entry.css */
+/* The shape of one work entry — scripts/lib/pdf/sections/work.js.
+ *
+ * The PDF sets the position in a 0.62\linewidth box and the employer
+ * right-aligned in a 0.35 one on the SAME line, then dates and location side
+ * by side underneath. The page stacks all three, one per line, which is both
+ * three lines where the PDF uses two and a different silhouette entirely.
+ */
+
+@media print {
+  .experience-item h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.3cm;
+  }
+
+  /* \parbox[t]{0.62\linewidth}{\raggedright\large\color{emphasis}...} */
+  .experience-item h3 .position {
+    flex: 0 1 62%;
+    color: var(--emphasis-color);
+  }
+
+  /* \hfill\parbox[t]{0.35\linewidth}{\raggedleft\large\color{accent}...} */
+  .experience-item h3 .company {
+    flex: 0 0 35%;
+    text-align: right;
+    color: var(--secondary-color);
+  }
+
+  /* The pipe is the page's own separator; the PDF divides the two by the
+     width of the column instead. */
+  .experience-item h3 .h3-sep {
+    display: none;
+  }
+
+  /* {\small ...\faCalendar~dates}\hfill{\small ...\faMapMarker~location} —
+     one pushed to each edge by the glue between them. Two 50% floats would be
+     the obvious reading of that, and they wrapped: 50% + 50% leaves no room
+     for the rounding, so the second dropped to its own line. Content width
+     either side is what \hfill actually does anyway. */
+  .experience-item .date,
+  .experience-item .location {
+    font-size: 0.874rem;
+    font-style: normal;
+    color: var(--emphasis-color);
+  }
+
+  .experience-item .print-icon {
+    display: inline-block;
+    color: var(--secondary-color);
+  }
+
+  .experience-item .print-icon svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.35em;
+    vertical-align: -0.1em;
+  }
+
+  .experience-item .date {
+    float: left;
+  }
+
+  .experience-item .location {
+    float: right;
+  }
+
+  /* Anything after the pair has to drop below both halves; without this the
+     summary wraps into the gap beside the dates. */
+  .experience-item .date ~ :not(.date):not(.location) {
+    clear: both;
+  }
+
+  /* An open-ended range reads "aujourd'hui" mid-sentence in the PDF and
+     "Aujourd'hui" standalone on the page. The undated <time> is exactly the
+     open end, so this touches nothing else. */
+  .experience-item .date time:not([datetime]) {
+    text-transform: lowercase;
+  }
+
+  /* \divider — \hdashrule in body!30, between employers only. Consecutive
+     entries at the SAME employer are separated by a \smallskip in the PDF. */
+  .experience-item + .experience-item:not(.continuation) {
+    border-top: 0.6pt dashed rgb(102 102 102 / 30%);
+    padding-top: 3pt;
+  }
+
+  /* sections/work.js renders the summary and the trailer; `highlights` is not
+     part of the PDF at all. On this CV that is a technology list under almost
+     every entry. */
+  .entry-highlight {
+    display: none;
+  }
+}
+
+/* print-verso.css */
+/* The verso — what the print sheet puts on its second page.
+ *
+ * Split out of css/print-type.css, which had reached the 200-line gate. The
+ * seam is the sheet itself: this file owns page two, that one owns the type
+ * scale and the recto's density. Both are @import-ed by css/style.css and both
+ * are read by scripts/lib/print-parity.test.js, which globs css/print*.css.
+ */
+
+@media print {
+  /* The recto of the PDF carries no per-entry reference back-links; the
+     references live on the verso, which #references already becomes. */
+  .ref-links {
+    display: none;
+  }
+
+  /* \clearpage\begin{paracol}{2} … \end{paracol} — the verso is a SECOND
+     two-column block, and js/print-layout.js now builds it as one. It used to
+     be faked with break-before on #references and #print-volunteer while both
+     still sat inside the recto's grid; Firefox will not fragment a grid and
+     answered with a page for each, printing four sheets. One block that
+     breaks before itself has no such ambiguity. */
+  #print-verso {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 0.6cm;
+    break-before: page;
+  }
+
+  #print-volunteer {
+    margin: 0;
+  }
+
+  #print-volunteer ul {
+    margin: 0;
+    padding-left: 9pt;
+  }
+
+  /* buildVolunteer sets the whole block \footnotesize and names the
+     organization: \textbf{position} — organization, period. */
+  #print-volunteer,
+  #print-volunteer li {
+    font-size: 0.750rem;
+  }
+
+  #print-volunteer .print-org {
+    display: inline;
+  }
+
+  /* buildVolunteer sets an itemize, so every row carries \itemmarker. The
+     sidebar has no equivalent of .main-content's bullet rule and base.css
+     removes the list marker, so the rows printed flush. */
+  #print-volunteer li::before {
+    content: "•";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  /* buildReferences: \textbf{name} then \begin{quote}\small\itshape — the
+     quote environment is red (accent) and \small overrides its \large. The
+     screen rules add a thick orange rule down the left and grey the text,
+     neither of which the PDF has. */
+  .reference-item blockquote {
+    margin: 2pt 0 0;
+    padding-left: 0;
+    border-left: none;
+    font-size: 0.874rem;
+    font-style: italic;
+    color: var(--secondary-color);
+  }
+
+  .reference-item p {
+    margin: 4pt 0 0;
+  }
+
+  /* scripts/lib/pdf/tex.js strips pictographs on the way into LaTeX, which
+     cannot set them. Same glyphs, same absence. */
+  .print-drop {
+    display: none;
+  }
+}
