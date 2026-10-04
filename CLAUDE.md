@@ -67,6 +67,8 @@ Each variant has six marker blocks replaced from data:
 - `CV-DOWNLOAD` — the floating CV action cluster: download the pre-built LaTeX PDF, or print the page itself through `css/print.css`.
 - `DAILY-LIFE` — the hand-built SVG donut chart of a typical day, from `site-extras.json`.
 
+`BODY-MAIN` also carries the **timeline** of the interactive view, right after About (`scripts/lib/sections/timeline.js`, model in `scripts/lib/timeline-model.js`): one lane per kind of entry, bars placed in percent of the career, each a link to its entry further down the page — work and education articles and the embedded project / volunteer rows carry ids from `scripts/lib/anchors.js` (only an entry's first appearance keeps its id; a bar whose entry is not on the page is drawn but is not a link). It works without JavaScript; `js/timeline.js` adds the zoom (2 years / 5 years / all, hidden until the script runs), the arrow keys, the hover preview and the mark on the bar of the entry in the URL. `css/timeline.css` styles it and `css/print.css` leaves it out of the printed sheet, since the LaTeX CV has none. `scripts/lib/sections/timeline.test.js` holds the markup, `scripts/lib/timeline-interaction.test.js` the behaviour in a real Chrome. Its "today" is the day the page was generated.
+
 `<html lang="…">` is patched per language.
 
 `.github/workflows/regenerate-from-resume.yml` runs the script on every push that touches `resume.json`, any overlay under `assets/data/i18n/`, or the script itself, then commits the regenerated files. Manual trigger via `workflow_dispatch` is also enabled.

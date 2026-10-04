@@ -51,7 +51,8 @@ test('a project shows its own keywords beside it', () => {
 test('an experience with projects no longer aggregates them into one cluster', () => {
   for (const lang of LANGS) {
     const page = fs.readFileSync(langOutFile(lang), 'utf8');
-    const articles = page.match(/<article class="experience-item[^"]*">[\s\S]*?<\/article>/g) || [];
+    const articles =
+      page.match(/<article class="experience-item[^"]*"[^>]*>[\s\S]*?<\/article>/g) || [];
     assert.ok(articles.length >= 10, `${lang}: found ${articles.length} experiences`);
     for (const article of articles) {
       const aggregated = article.includes('class="skill-tags inline-skills"');

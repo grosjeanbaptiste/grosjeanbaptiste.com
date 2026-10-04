@@ -105,7 +105,9 @@
     padding: 0;
   }
 
-  /* Browser chrome and on-screen-only controls never reach the sheet. */
+  /* Browser chrome and on-screen-only controls never reach the sheet — nor the
+     timeline: the LaTeX CV this sheet follows has none. */
+  #timeline,
   nav,
   .lang-switcher,
   #theme-toggle,

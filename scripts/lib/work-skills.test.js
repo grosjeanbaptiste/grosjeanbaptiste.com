@@ -83,7 +83,8 @@ test('an experience shows the keywords of the projects it references', () => {
   const resume = JSON.parse(fs.readFileSync(path.join(ROOT, 'assets/data/resume.json'), 'utf8'));
   const keywordsOf = (name) => resume.projects.find((p) => p.name === name)?.keywords || [];
 
-  const articles = html.match(/<article class="experience-item[^"]*">[\s\S]*?<\/article>/g) || [];
+  const articles =
+    html.match(/<article class="experience-item[^"]*"[^>]*>[\s\S]*?<\/article>/g) || [];
   assert.ok(articles.length >= 10, `found ${articles.length} experience articles`);
 
   let checked = 0;

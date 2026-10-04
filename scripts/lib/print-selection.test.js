@@ -32,7 +32,9 @@ const printCss = fs
 // entries are identified by position + company on both sides.
 function articles() {
   const out = [];
-  for (const m of html.matchAll(/<article class="experience-item([^"]*)">([\s\S]*?)<\/article>/g)) {
+  for (const m of html.matchAll(
+    /<article class="experience-item([^"]*)"[^>]*>([\s\S]*?)<\/article>/g,
+  )) {
     const h3 = /<h3[^>]*>([\s\S]*?)<\/h3>/.exec(m[2]);
     const raw = h3 ? h3[1] : '';
     const companyMatch = /<span class="company">([\s\S]*?)<\/span>/.exec(raw);

@@ -134,7 +134,10 @@ const PUBLISHED = [
 
 test('the TandeMons programme is spelled the same way everywhere', () => {
   for (const file of PUBLISHED) {
-    const spellings = new Set(read(file).match(/[Tt]ande[mM]+ons/g) || []);
+    // Anchors are lowercase slugs by construction (scripts/lib/anchors.js):
+    // "#volunteer-umons-buddy-tandemons" is an id, not a spelling.
+    const prose = read(file).replace(/\s(?:id|href)="#?[a-z0-9-]*"/g, '');
+    const spellings = new Set(prose.match(/[Tt]ande[mM]+ons/g) || []);
     for (const spelling of spellings) {
       assert.equal(spelling, 'TandeMons', `${file} spells it "${spelling}"`);
     }
