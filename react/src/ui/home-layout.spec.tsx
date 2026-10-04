@@ -31,3 +31,13 @@ describe('the interactive CV, centred on its timeline', () => {
     expect(precedes(panel, screen.getByRole('region', { name: 'Filter by skill' }))).toBe(true);
   });
 });
+
+describe('the photo in the interactive view', () => {
+  it('is offered in the sizes it is shown at, the JPEG as fallback', async () => {
+    renderApp('/en');
+    await screen.findByRole('heading', { level: 1 });
+    const img = document.querySelector('.hero-photo');
+    expect(img).toHaveAttribute('src', '/assets/images/profil.jpeg');
+    expect(img?.getAttribute('srcset')).toContain('/assets/images/profil-160.webp 160w');
+  });
+});

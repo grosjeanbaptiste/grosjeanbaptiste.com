@@ -13,4 +13,8 @@ export interface PdfView {
 export interface PdfRenderer {
   // Rejects when the file cannot be fetched or parsed — never resolves empty.
   open(url: string, container: HTMLDivElement): Promise<PdfView>;
+  // Loads the engine ahead of any PDF, so the reader opens without the wait.
+  prepare(): Promise<void>;
+  // Fetches a file ahead of its reader; open() then finds it already there.
+  prefetch(url: string): Promise<void>;
 }

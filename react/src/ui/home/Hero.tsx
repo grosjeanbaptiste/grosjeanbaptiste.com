@@ -2,13 +2,29 @@
 import { useReading } from '../context';
 import { pdfPath } from '../paths';
 
+// The sized WebP copies next to the photo (assets/images/profil-160.webp …):
+// it is shown at 5rem at most, the original is 837px.
+const WIDTHS = [160, 320, 500];
+const photoSrcSet = (image: string) =>
+  WIDTHS.map((w) => `/${image.replace(/\.[a-z]+$/i, '')}-${w}.webp ${w}w`).join(', ');
+
 export function Hero() {
   const { lang, catalogue } = useReading();
   const { name, label, image, email, location, profiles } = catalogue.basics;
 
   return (
     <section className="hero" aria-labelledby="hero-name">
-      {image && <img className="hero-photo" src={`/${image}`} alt="" width={96} height={96} />}
+      {image && (
+        <img
+          className="hero-photo"
+          src={`/${image}`}
+          srcSet={photoSrcSet(image)}
+          sizes="5rem"
+          alt=""
+          width={96}
+          height={96}
+        />
+      )}
       <div className="hero-text">
         <h1 id="hero-name">{name}</h1>
         <p className="hero-label">{label}</p>

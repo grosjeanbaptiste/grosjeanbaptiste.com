@@ -6,6 +6,7 @@ export function aResume(): Resume {
     basics: {
       name: 'Baptiste Grosjean',
       label: 'Computer Scientist',
+      image: 'assets/images/profil.jpeg',
       summary: 'Builds software with care.',
     },
     work: [

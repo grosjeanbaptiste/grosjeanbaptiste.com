@@ -131,6 +131,16 @@ describe('the timeline reader’s spans', () => {
     expect(console.warn).toHaveBeenCalledWith(expect.stringContaining('"7"'));
   });
 
+  it('shows only the chosen span, not the one before it underneath', async () => {
+    const { user } = renderApp('/en/pdf/timeline');
+    await user.click(within(await spans()).getByRole('button', { name: '5 years' }));
+    await waitFor(() =>
+      expect([...document.querySelectorAll('.fake-page')].map((p) => p.textContent)).toEqual([
+        '/assets/cv/cv_grosjean_baptiste_timeline_5y_en.pdf',
+      ]),
+    );
+  });
+
   it('offers no span on the vertical CV', async () => {
     renderApp('/en/pdf');
     await screen.findByText('2 pages');

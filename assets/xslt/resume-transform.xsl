@@ -627,7 +627,7 @@
           <!-- ============== SIDEBAR ============== -->
           <aside class="sidebar">
 
-            <img src="/assets/images/profil.jpeg" id="profile-picture">
+            <img src="/assets/images/profil.jpeg" srcset="/assets/images/profil-160.webp 160w, /assets/images/profil-320.webp 320w, /assets/images/profil-500.webp 500w" sizes="220px" id="profile-picture">
               <xsl:attribute name="alt"><xsl:value-of select="basics/name"/></xsl:attribute>
             </img>
 

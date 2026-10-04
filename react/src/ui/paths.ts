@@ -1,6 +1,9 @@
 import type { Lang } from '../application/lang';
 import type { Entry } from '../domain/entry';
 
+// Where the app is served: the router's basename (vite.config.ts `base`).
+export const APP_BASE = '/app';
+
 export const homePath = (lang: Lang) => `/${lang}`;
 
 export const entryPath = (lang: Lang, entry: Entry) => `/${lang}/${entry.kind}/${entry.id}`;

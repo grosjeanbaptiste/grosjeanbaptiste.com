@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router';
 import { HttpResumeSource } from './infrastructure/http-resume-source';
 import { PdfJsRenderer } from './infrastructure/pdfjs-renderer';
 import { App } from './ui/App';
+import { APP_BASE } from './ui/paths';
 import './ui/styles/index.css';
 
 const container = document.getElementById('root');
@@ -12,7 +13,7 @@ if (!container) throw new Error('index.html has no #root element to mount the ap
 
 createRoot(container).render(
   <StrictMode>
-    <BrowserRouter basename="/app">
+    <BrowserRouter basename={APP_BASE}>
       <App
         source={new HttpResumeSource(import.meta.env.BASE_URL)}
         pdf={new PdfJsRenderer()}
