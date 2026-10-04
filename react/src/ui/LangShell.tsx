@@ -16,6 +16,7 @@ import type { PdfRenderer } from './pdf/pdf-renderer';
 import { STRINGS } from './strings';
 import { useTheme } from './theme';
 import { useCatalogue } from './use-catalogue';
+import { usePdfEngineAhead } from './use-pdf-engine-ahead';
 
 interface ShellProps {
   readonly source: ResumeSource;
@@ -62,7 +63,7 @@ function LoadedShell({ source, pdf, today, lang }: ShellProps & { lang: Lang }) 
           path="pdf/timeline"
           element={
             <>
-              <ViewsBar current="timeline" />
+              <ViewsBar current="timeline" pdf={pdf} />
               <PdfReader renderer={pdf} document="timeline" />
             </>
           }
@@ -71,23 +72,24 @@ function LoadedShell({ source, pdf, today, lang }: ShellProps & { lang: Lang }) 
           path="pdf"
           element={
             <>
-              <ViewsBar current="pdf" />
+              <ViewsBar current="pdf" pdf={pdf} />
               <PdfReader renderer={pdf} />
             </>
           }
         />
-        <Route path="*" element={<InteractiveCv />} />
+        <Route path="*" element={<InteractiveCv pdf={pdf} />} />
       </Routes>
     </ReadingProvider>
   );
 }
 
-function InteractiveCv() {
+function InteractiveCv({ pdf }: { pdf: PdfRenderer }) {
   const { strings } = useReading();
   const [paletteOpen, setPaletteOpen] = useState(false);
+  usePdfEngineAhead(pdf);
   return (
     <>
-      <ViewsBar current="interactive" />
+      <ViewsBar current="interactive" pdf={pdf} />
       <Header onSearch={() => setPaletteOpen(true)} />
       <main className="page">
         <Routes>

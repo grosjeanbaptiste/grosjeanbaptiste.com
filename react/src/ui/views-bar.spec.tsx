@@ -49,4 +49,16 @@ describe('the views bar', () => {
     expect(await screen.findByRole('navigation', { name: 'Affichages' })).toBeVisible();
     expect(currentLocation()).toBe('/fr');
   });
+
+  it('opens the PDF reader without leaving the app', async () => {
+    const { user } = renderApp('/en');
+    await user.click(within(await bar()).getByRole('link', { name: 'PDF' }));
+    expect(currentLocation()).toBe('/en/pdf/');
+  });
+
+  it('goes from one PDF to the other without leaving the app', async () => {
+    const { user } = renderApp('/en/pdf');
+    await user.click(within(await bar()).getByRole('link', { name: 'Timeline (PDF)' }));
+    expect(currentLocation()).toBe('/en/pdf/timeline/');
+  });
 });

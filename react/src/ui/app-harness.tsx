@@ -7,6 +7,7 @@ import { aResume } from '../domain/fixtures';
 import type { ResumeDocument } from '../domain/resume';
 import type { ResumeSource } from '../domain/resume-source';
 import { App } from './App';
+import { APP_BASE } from './paths';
 import type { PdfRenderer, PdfView } from './pdf/pdf-renderer';
 
 export const aUi = (): Record<string, string> => ({
@@ -37,10 +38,30 @@ export class InMemorySource implements ResumeSource {
 export class FakePdfRenderer implements PdfRenderer {
   readonly opened: string[] = [];
   readonly calls: string[] = [];
-  constructor(private readonly failing = false) {}
+  readonly prefetched: string[] = [];
+  prepared = 0;
+  constructor(
+    private readonly failing = false,
+    private readonly failingAhead = false,
+  ) {}
 
-  async open(url: string): Promise<PdfView> {
+  async prepare(): Promise<void> {
+    this.prepared += 1;
+    if (this.failingAhead) throw new Error('engine unavailable');
+  }
+
+  async prefetch(url: string): Promise<void> {
+    this.prefetched.push(url);
+    if (this.failingAhead) throw new Error('offline');
+  }
+
+  // Draws one marker per document, as a real engine draws its pages.
+  async open(url: string, container: HTMLDivElement): Promise<PdfView> {
     this.opened.push(url);
+    const page = document.createElement('div');
+    page.className = 'fake-page';
+    page.textContent = url;
+    container.append(page);
     if (this.failing) throw new Error('corrupt PDF');
     const calls = this.calls;
     return {
@@ -68,7 +89,7 @@ export function renderApp(
 ) {
   const user = userEvent.setup();
   const view = render(
-    <MemoryRouter initialEntries={[path]}>
+    <MemoryRouter basename={APP_BASE} initialEntries={[`${APP_BASE}${path}`]}>
       <App
         source={source}
         pdf={pdf}

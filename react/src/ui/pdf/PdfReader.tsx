@@ -122,7 +122,9 @@ export function PdfReader({ renderer, document: shown = 'cv' }: Props) {
         </p>
       )}
       <div className="pdf-frame">
-        <div ref={container} className="pdf-container">
+        {/* One container per file: the engine draws into it and never clears it,
+            so the next file — another span, the other PDF — gets a fresh one. */}
+        <div ref={container} key={file} className="pdf-container">
           <div className="pdfViewer" />
         </div>
       </div>
