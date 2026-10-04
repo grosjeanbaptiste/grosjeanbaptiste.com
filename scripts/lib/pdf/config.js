@@ -102,7 +102,8 @@ module.exports = {
   ROOT,
   PRINT_PLAN_INDEX,
   CLS_PATH: path.join(ROOT, 'latex/altacv.cls'),
-  PROFILE_IMG: path.join(ROOT, 'assets/images/profil.jpeg'),
+  // Sized for print by scripts/make-photo-sizes.sh, not the site's 837 px original.
+  PROFILE_IMG: path.join(ROOT, 'assets/images/profil-print.jpeg'),
   OUTPUT_DIR: path.join(ROOT, 'assets/cv'),
   LANGS,
   BABEL,
