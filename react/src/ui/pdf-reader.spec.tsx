@@ -147,3 +147,35 @@ describe('the timeline reader’s spans', () => {
     expect(screen.queryByRole('group', { name: 'Timeline' })).not.toBeInTheDocument();
   });
 });
+
+describe('the reader’s page pictures', () => {
+  const pictures = () =>
+    [...document.querySelectorAll('.pdf-pictures img')].map((i) => i.getAttribute('src'));
+
+  it('shows the pages as pictures while the PDF loads', async () => {
+    renderApp('/en/pdf', undefined, new FakePdfRenderer(false, false, true));
+    await screen.findByText('2 pages');
+    expect(pictures()).toEqual(['/cv_en-1.webp', '/cv_en-2.webp']);
+  });
+
+  it('drops the pictures once the first page is drawn', async () => {
+    const pdf = new FakePdfRenderer(false, false, true);
+    renderApp('/en/pdf', undefined, pdf);
+    await screen.findByText('2 pages');
+    pdf.finishDrawing();
+    await waitFor(() => expect(pictures()).toEqual([]));
+  });
+
+  it('keeps the pictures when the PDF cannot be shown', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    renderApp('/en/pdf', undefined, new FakePdfRenderer(true));
+    await screen.findByRole('alert');
+    expect(pictures()).toEqual(['/cv_en-1.webp', '/cv_en-2.webp']);
+  });
+
+  it('shows the pictures of the span on screen', async () => {
+    renderApp('/en/pdf/timeline?span=5', undefined, new FakePdfRenderer(false, false, true));
+    await screen.findByText('2 pages');
+    expect(pictures()).toEqual(['/timeline_5y_en-1.webp']);
+  });
+});

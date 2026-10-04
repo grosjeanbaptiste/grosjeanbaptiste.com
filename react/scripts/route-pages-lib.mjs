@@ -24,10 +24,15 @@ const escapeHtml = (text) =>
 
 const HEAD = /<!-- ROUTE-HEAD -->[\s\S]*?<!-- \/ROUTE-HEAD -->/;
 
-function render(template, lang, title, description) {
+// `picture`: a reader page's first-page picture, fetched with the page itself
+// instead of once the app has booted and read its data.
+function render(template, lang, title, description, picture) {
   const head = [
     '<!-- ROUTE-HEAD -->',
     `<title>${escapeHtml(title)}</title>`,
+    ...(picture
+      ? [`<link rel="preload" as="image" href="${escapeHtml(picture)}" fetchpriority="high" />`]
+      : []),
     `<meta name="description" content="${escapeHtml(description)}" />`,
     `<meta property="og:title" content="${escapeHtml(title)}" />`,
     `<meta property="og:description" content="${escapeHtml(description)}" />`,
@@ -38,7 +43,12 @@ function render(template, lang, title, description) {
 
 export function routePages(template, documents) {
   if (!HEAD.test(template)) throw new Error('index.html has lost its ROUTE-HEAD markers');
-  return documents.flatMap(({ lang, resume, views }) => {
+  return documents.flatMap(({ lang, resume, views, pictures }) => {
+    const firstPicture = (pdf) => {
+      const src = pictures?.[`/assets/cv/${pdf}`]?.[0]?.src;
+      if (!src) throw new Error(`The ${lang} export has no page picture of ${pdf}`);
+      return src;
+    };
     const { name, label } = resume.basics;
     const home = {
       path: `${lang}/index.html`,
@@ -55,13 +65,25 @@ export function routePages(template, documents) {
     );
     const reader = {
       path: `${lang}/pdf/index.html`,
-      html: render(template, lang, `CV (PDF) · ${name}`, `${name} — ${label} (PDF)`),
+      html: render(
+        template,
+        lang,
+        `CV (PDF) · ${name}`,
+        `${name} — ${label} (PDF)`,
+        firstPicture(`cv_grosjean_baptiste_${lang}.pdf`),
+      ),
     };
     const timeline = (views ?? []).find((view) => view.id === 'timeline');
     if (!timeline) throw new Error(`The ${lang} export lists no timeline display`);
     const timelineReader = {
       path: `${lang}/pdf/timeline/index.html`,
-      html: render(template, lang, `${timeline.label} · ${name}`, `${name} — ${timeline.label}`),
+      html: render(
+        template,
+        lang,
+        `${timeline.label} · ${name}`,
+        `${name} — ${timeline.label}`,
+        firstPicture(`cv_grosjean_baptiste_timeline_${lang}.pdf`),
+      ),
     };
     return [home, reader, timelineReader, ...entries];
   });

@@ -30,7 +30,21 @@ export class InMemorySource implements ResumeSource {
   async load(lang: string): Promise<ResumeDocument> {
     this.requested.push(lang);
     if (this.failing) throw new Error('offline');
-    return { lang, ui: aUi(), resume: aResume(), ...aViews(lang) };
+    const page = (file: string, n: number) => ({
+      src: `/${file}-${n}.webp`,
+      width: 1000,
+      height: 1414,
+    });
+    const pictures = {
+      [`/assets/cv/cv_grosjean_baptiste_${lang}.pdf`]: [
+        page(`cv_${lang}`, 1),
+        page(`cv_${lang}`, 2),
+      ],
+      [`/assets/cv/cv_grosjean_baptiste_timeline_${lang}.pdf`]: [page(`timeline_${lang}`, 1)],
+      [`/assets/cv/cv_grosjean_baptiste_timeline_5y_${lang}.pdf`]: [page(`timeline_5y_${lang}`, 1)],
+      [`/assets/cv/cv_grosjean_baptiste_timeline_2y_${lang}.pdf`]: [page(`timeline_2y_${lang}`, 1)],
+    };
+    return { lang, ui: aUi(), resume: aResume(), ...aViews(lang), pictures };
   }
 }
 
@@ -40,10 +54,24 @@ export class FakePdfRenderer implements PdfRenderer {
   readonly calls: string[] = [];
   readonly prefetched: string[] = [];
   prepared = 0;
+  private finish: () => void = () => {};
+  private readonly drawing: Promise<void>;
+
+  // `holding`: the first page stays undrawn until finishDrawing().
   constructor(
     private readonly failing = false,
     private readonly failingAhead = false,
-  ) {}
+    holding = false,
+  ) {
+    this.drawing = new Promise((resolve) => {
+      this.finish = resolve;
+    });
+    if (!holding) this.finish();
+  }
+
+  finishDrawing() {
+    this.finish();
+  }
 
   async prepare(): Promise<void> {
     this.prepared += 1;
@@ -66,6 +94,7 @@ export class FakePdfRenderer implements PdfRenderer {
     const calls = this.calls;
     return {
       pages: 2,
+      drawn: this.drawing,
       zoomIn: () => calls.push('zoomIn'),
       zoomOut: () => calls.push('zoomOut'),
       fitWidth: () => calls.push('fitWidth'),

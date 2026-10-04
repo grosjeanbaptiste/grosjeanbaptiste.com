@@ -8,6 +8,7 @@ import type { Lang } from '../../application/lang';
 import { useReading } from '../context';
 import { LangMenu } from '../header/LangMenu';
 import { type TimelineSpan, pdfPath, timelinePdfPath } from '../paths';
+import { PagePictures } from './PagePictures';
 import { TimelineSpans, spanOf } from './TimelineSpans';
 import type { PdfRenderer, PdfView } from './pdf-renderer';
 import { PDF_STRINGS, type PdfStrings } from './pdf-strings';
@@ -41,6 +42,7 @@ export function PdfReader({ renderer, document: shown = 'cv' }: Props) {
   const strings = PDF_STRINGS[lang];
   const container = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<State>({ status: 'loading' });
+  const [drawn, setDrawn] = useState(false);
   const [params] = useSearchParams();
   const spec = DOCUMENTS[shown];
   const file = spec.file(lang, shown === 'timeline' ? spanOf(params) : null);
@@ -53,12 +55,17 @@ export function PdfReader({ renderer, document: shown = 'cv' }: Props) {
     let opened: PdfView | undefined;
     let current = true;
     setState({ status: 'loading' });
+    setDrawn(false);
     renderer
       .open(file, target)
       .then((view) => {
         opened = view;
-        if (current) setState({ status: 'ready', view });
-        else view.destroy();
+        if (!current) return view.destroy();
+        setState({ status: 'ready', view });
+        view.drawn.then(
+          () => current && setDrawn(true),
+          (error: unknown) => console.error(`Drawing ${file} failed:`, error),
+        );
       })
       .catch((error: unknown) => {
         console.error(`Displaying ${file} failed:`, error);
@@ -122,6 +129,7 @@ export function PdfReader({ renderer, document: shown = 'cv' }: Props) {
         </p>
       )}
       <div className="pdf-frame">
+        {!drawn && <PagePictures pictures={catalogue.picturesOf(file)} />}
         {/* One container per file: the engine draws into it and never clears it,
             so the next file — another span, the other PDF — gets a fresh one. */}
         <div ref={container} key={file} className="pdf-container">

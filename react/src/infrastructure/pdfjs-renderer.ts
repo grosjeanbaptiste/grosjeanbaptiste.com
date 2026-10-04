@@ -67,6 +67,14 @@ export class PdfJsRenderer implements PdfRenderer {
     eventBus.on('pagesinit', () => {
       pdfViewer.currentScaleValue = 'page-width';
     });
+    // The reader shows a picture of each page until the first one is drawn.
+    const drawn = new Promise<void>((resolve) => {
+      eventBus.on('pagerendered', (event: { pageNumber: number; error?: unknown }) => {
+        if (event.pageNumber !== 1) return;
+        if (event.error) console.error(`Drawing page 1 of ${url} failed:`, event.error);
+        resolve();
+      });
+    });
 
     const task = pdfjs.getDocument({ data, worker: pdfWorker });
     const document = await task.promise;
@@ -75,6 +83,7 @@ export class PdfJsRenderer implements PdfRenderer {
 
     return {
       pages: document.numPages,
+      drawn,
       zoomIn: () => pdfViewer.increaseScale({ steps: STEPS }),
       zoomOut: () => pdfViewer.decreaseScale({ steps: STEPS }),
       fitWidth: () => {

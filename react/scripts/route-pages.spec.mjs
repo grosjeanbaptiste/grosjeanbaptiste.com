@@ -10,6 +10,14 @@ const template = `<html lang="en"><head>
 const doc = (lang, position) => ({
   lang,
   views: [{ id: 'timeline', href: `/app/${lang}/pdf/timeline/`, label: 'Timeline (PDF)' }],
+  pictures: {
+    [`/assets/cv/cv_grosjean_baptiste_${lang}.pdf`]: [
+      { src: `/p/cv_${lang}-1.webp`, width: 1000, height: 1414 },
+    ],
+    [`/assets/cv/cv_grosjean_baptiste_timeline_${lang}.pdf`]: [
+      { src: `/p/tl_${lang}-1.webp`, width: 1000, height: 707 },
+    ],
+  },
   resume: {
     basics: { name: 'Baptiste Grosjean', label: 'Computer Scientist' },
     work: [{ id: 'acteble-founder', company: 'Acteble', position, summary: 'Rust & <Flutter>' }],
@@ -48,6 +56,28 @@ describe('routePages', () => {
   it('fails when the export has lost the timeline display', () => {
     expect(() => routePages(template, [{ ...doc('en', 'Founder'), views: [] }])).toThrow(
       /timeline/,
+    );
+  });
+
+  it("starts fetching the picture of the CV's first page with the reader page", () => {
+    expect(page('fr/pdf/index.html').html).toContain(
+      '<link rel="preload" as="image" href="/p/cv_fr-1.webp" fetchpriority="high" />',
+    );
+  });
+
+  it('starts fetching the picture of the timeline with its reader page', () => {
+    expect(page('fr/pdf/timeline/index.html').html).toContain(
+      '<link rel="preload" as="image" href="/p/tl_fr-1.webp" fetchpriority="high" />',
+    );
+  });
+
+  it('fetches no picture ahead on the interactive pages', () => {
+    expect(page('fr/index.html').html).not.toContain('rel="preload"');
+  });
+
+  it('fails when the export has no picture of a reader’s PDF', () => {
+    expect(() => routePages(template, [{ ...doc('en', 'Founder'), pictures: {} }])).toThrow(
+      /no page picture of cv_grosjean_baptiste_en\.pdf/,
     );
   });
 

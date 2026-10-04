@@ -6,7 +6,7 @@
   "description": "Personal portfolio/resume — static site generated from resume.json.",
   "scripts": {
     "generate": "node scripts/generate-from-resume.js",
-    "pdf": "node scripts/generate-pdf.js && node scripts/generate-timeline-pdf.js",
+    "pdf": "node scripts/generate-pdf.js && node scripts/generate-timeline-pdf.js && node scripts/generate-pdf-previews.js",
     "lint": "biome check --error-on-warnings .",
     "lint:fix": "biome check --write .",
     "format": "biome format --write .",

@@ -78,10 +78,19 @@ export interface ViewLink {
   readonly note?: string;
 }
 
+// A picture of one page of a shipped PDF, shown while PDF.js draws the page.
+export interface PagePicture {
+  readonly src: string;
+  readonly width: number;
+  readonly height: number;
+}
+
 export interface ResumeDocument {
   readonly lang: string;
   readonly ui: Readonly<Record<string, unknown>>;
   readonly resume: Resume;
   readonly viewsTitle: string;
   readonly views: readonly ViewLink[];
+  // Keyed by the path the site serves each PDF at.
+  readonly pictures: Readonly<Record<string, readonly PagePicture[]>>;
 }
