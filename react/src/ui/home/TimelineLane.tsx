@@ -1,5 +1,6 @@
 // One lane of the timeline: its label, then a link per entry, placed in
-// percent of the whole career. The open entry is aria-current; with a skill
+// percent of the whole career — an entry's projects and volunteering drawn
+// under it, inside its outline. The open entry is aria-current; with a skill
 // filter on, the entries that do not use it fade back.
 import type { CSSProperties } from 'react';
 import { Link, useLocation } from 'react-router';
@@ -15,40 +16,60 @@ interface Props {
   readonly lane: Lane;
   readonly months: number;
   readonly selectedId: string | undefined;
-  readonly previewId: string | undefined;
+  // The key of the bar being previewed (an entry may have two bars).
+  readonly previewKey: string | undefined;
   readonly highlight: ReadonlySet<string> | null;
   readonly onPreview: (id: string | undefined) => void;
   readonly last: boolean;
 }
 
 export function TimelineLane(props: Props) {
-  const { lane, months, selectedId, previewId, highlight, onPreview, last } = props;
+  const { lane, months, selectedId, previewKey, highlight, onPreview, last } = props;
   const { lang, strings } = useReading();
   const label = useKindLabel();
   const { search } = useLocation();
-  const previewed = lane.bars.find((b) => b.entry.id === previewId);
+  const previewed = lane.bars.find((b) => b.key === previewKey);
 
   return (
     <div className="timeline-lane" data-kind={lane.kind}>
       <span className="timeline-lane-label">{label(lane.kind)}</span>
       <div className="timeline-track" style={{ '--rows': lane.rows } as CSSProperties}>
-        {lane.bars.map(({ entry, offset, length, row }) => {
+        {/* Behind the bars: the outline of each entry that carried something. */}
+        {lane.groups.map((group) => (
+          <span
+            key={`${group.row}:${group.offset}`}
+            className="timeline-group"
+            aria-hidden="true"
+            style={
+              {
+                left: percent(group.offset, months),
+                width: percent(group.length, months),
+                '--row': group.row,
+                '--group-rows': group.rows,
+              } as CSSProperties
+            }
+          />
+        ))}
+        {lane.bars.map(({ key, entry, offset, length, row, depth }) => {
           const period = formatPeriod(entry.period, lang, strings.ongoing);
           const name = [entry.title, entry.organisation, period].filter(Boolean).join(' — ');
           return (
             <Link
-              key={entry.id}
+              key={key}
               to={`${entryPath(lang, entry)}${search}`}
               preventScrollReset
               className="timeline-bar"
+              data-bar-key={key}
               data-entry-id={entry.id}
+              data-kind={entry.kind}
+              data-depth={depth}
               aria-label={name}
               aria-current={entry.id === selectedId ? 'page' : undefined}
-              aria-describedby={entry.id === previewId ? 'timeline-preview' : undefined}
+              aria-describedby={key === previewKey ? 'timeline-preview' : undefined}
               data-dimmed={highlight ? !highlight.has(entry.id) : undefined}
-              onMouseEnter={() => onPreview(entry.id)}
+              onMouseEnter={() => onPreview(key)}
               onMouseLeave={() => onPreview(undefined)}
-              onFocus={() => onPreview(entry.id)}
+              onFocus={() => onPreview(key)}
               onBlur={() => onPreview(undefined)}
               style={
                 {
@@ -58,7 +79,8 @@ export function TimelineLane(props: Props) {
                 } as CSSProperties
               }
             >
-              <span>{entry.organisation ?? entry.title}</span>
+              {/* Under its host a bar is named by what it is; the host says where. */}
+              <span>{depth === 1 ? entry.title : (entry.organisation ?? entry.title)}</span>
             </Link>
           );
         })}

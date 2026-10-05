@@ -5,7 +5,15 @@ const { layOut, TRACK } = require('./page');
 
 const at = (year, month) => year * 12 + month - 1;
 const bar = (id, start, end) => ({ id, start, end, ongoing: false, strong: id, rest: '' });
-const timeline = (lanes) => ({ from: at(2020, 3), to: at(2023, 6), lanes });
+// Each bar an entry of its own; `under` puts bars under the first one.
+const timeline = (lanes) => ({
+  from: at(2020, 3),
+  to: at(2023, 6),
+  lanes: lanes.map(({ kind, bars, under = [] }) => ({
+    kind,
+    groups: bars.map((head, i) => ({ head, children: i === 0 ? under : [] })),
+  })),
+});
 const crowd = (n) => Array.from({ length: n }, (_, i) => bar(`e${i}`, at(2020, 3), at(2023, 6)));
 
 test('the career fills the width of the track', () => {
@@ -39,7 +47,9 @@ test('a lane starts below the one before it', () => {
 
 test('a short timeline is set in a larger type than a crowded one', () => {
   const short = layOut(timeline([{ kind: 'work', bars: crowd(5) }]));
-  const crowded = layOut(timeline([{ kind: 'work', bars: crowd(30) }]));
+  // 40 rows: more than the largest type can stack on the page (34), fewer than
+  // the smallest can (46).
+  const crowded = layOut(timeline([{ kind: 'work', bars: crowd(40) }]));
   assert.ok(short.font > crowded.font);
 });
 
@@ -53,4 +63,55 @@ test('a timeline taller than the page is refused rather than cut off', () => {
     () => layOut(timeline([{ kind: 'work', bars: crowd(60) }])),
     /does not fit on one page/,
   );
+});
+
+test('what an entry carried is laid out under it, inside its outline', () => {
+  const sheet = layOut(
+    timeline([
+      {
+        kind: 'work',
+        bars: [bar('host', at(2020, 3), at(2023, 6))],
+        under: [bar('child', at(2021, 1), at(2021, 6))],
+      },
+    ]),
+  );
+  const [lane] = sheet.lanes;
+  assert.deepEqual(
+    lane.bars.map((b) => [b.id, b.row, b.depth]),
+    [
+      ['host', 0, 0],
+      ['child', 1, 1],
+    ],
+  );
+  assert.equal(lane.outlines.length, 1);
+});
+
+test('a narrower sheet lays the same timeline out in its own width', () => {
+  const sheet = layOut(timeline([{ kind: 'work', bars: [bar('a', at(2020, 3), at(2023, 6))] }]), {
+    track: 150,
+  });
+  assert.equal(Math.round(sheet.lanes[0].bars[0].x1), 150);
+});
+
+// Labels say "name · role". When no type fits them on the page, the roles go:
+// shorter labels need fewer rows — and the sheet says which labels it carries.
+const busy = Array.from({ length: 50 }, (_, i) => ({
+  ...bar(`e${i}`, at(2020, 3) + (i % 40), at(2020, 3) + (i % 40)),
+  rest: 'a role',
+}));
+const wideWithRole = (b) => (b.rest ? 300 : 1);
+
+test('a sheet that fits says its labels are in full', () => {
+  const sheet = layOut(timeline([{ kind: 'work', bars: [bar('a', at(2020, 3), at(2023, 6))] }]));
+  assert.equal(sheet.labels, 'full');
+});
+
+test('a timeline too crowded for its roles keeps the names alone, and says so', () => {
+  const sheet = layOut(timeline([{ kind: 'work', bars: busy }]), { measure: wideWithRole });
+  assert.equal(sheet.labels, 'names');
+});
+
+test('with the names alone, no bar carries a role any more', () => {
+  const sheet = layOut(timeline([{ kind: 'work', bars: busy }]), { measure: wideWithRole });
+  assert.deepEqual([...new Set(sheet.lanes[0].bars.map((b) => b.rest))], ['']);
 });

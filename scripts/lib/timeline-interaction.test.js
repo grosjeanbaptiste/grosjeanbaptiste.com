@@ -25,13 +25,25 @@ addEventListener('load', () => setTimeout(() => {
   const $ = (s, root = document) => root.querySelector(s);
   const grid = $('.tl-grid'), scroller = $('.tl-scroll'), zoom = $('.tl-zoom');
   const seen = { zoomShown: !zoom.hidden, pressed: $('[aria-pressed="true"]', zoom)?.dataset.years };
+  // The years the frame shows at a zoom: the part of the time axis in view,
+  // the lane titles' column apart.
+  const label = $('.tl-lane-label').getBoundingClientRect().width;
+  const shownAt = (years) => {
+    $('button[data-years="' + years + '"]', zoom).click();
+    const track = grid.getBoundingClientRect().width - label;
+    return ((scroller.clientWidth - label) / track) * Number(grid.dataset.months) / 12;
+  };
+  seen.twoYears = shownAt('2');
+  seen.fiveYears = shownAt('5');
   seen.widerThanFrame = grid.scrollWidth > scroller.clientWidth;
   seen.scrolledToToday = Math.abs(scroller.scrollLeft + scroller.clientWidth - scroller.scrollWidth) < 2;
-  $('#timeline').scrollIntoView({ block: 'center' });
+  // The zoom itself: the timeline is taller than the window can centre.
+  zoom.scrollIntoView({ block: 'center' });
   const button = $('button[data-years="all"]', zoom).getBoundingClientRect();
   seen.zoomReachable = zoom.contains(document.elementFromPoint(button.left + button.width / 2, button.top + button.height / 2));
   $('button[data-years="all"]', zoom).click();
-  seen.allWidth = grid.style.width;
+  seen.allStretch = grid.style.getPropertyValue('--stretch');
+  seen.allFits = Math.abs(grid.getBoundingClientRect().width - scroller.clientWidth) < 2;
   const lane = [...document.querySelectorAll('.tl-lane[data-kind="work"] .tl-bar')].sort((a, b) => a.offsetLeft - b.offsetLeft);
   lane[0].focus();
   seen.preview = $('#tl-preview')?.textContent.includes(lane[0].dataset.name);
@@ -93,12 +105,22 @@ const check = (name, fn) =>
 
 check('the script reveals the zoom', () => assert.equal(seen.zoomShown, true));
 check('the timeline opens on five years', () => assert.equal(seen.pressed, '5'));
+// They showed 1.75 and 4.5: the zoom sized the whole grid, lane titles included,
+// to the frame, so the titles' column ate into the years on show.
+check('"2 years" shows the last two years, not less', () =>
+  assert.ok(Math.abs(seen.twoYears - 2) < 0.03, `it shows ${seen.twoYears.toFixed(2)} years`),
+);
+check('"5 years" shows the last five years, not less', () =>
+  assert.ok(Math.abs(seen.fiveYears - 5) < 0.05, `it shows ${seen.fiveYears.toFixed(2)} years`),
+);
 check('five years draw the career wider than its frame', () =>
   assert.equal(seen.widerThanFrame, true),
 );
 check('a zoomed timeline opens on today', () => assert.equal(seen.scrolledToToday, true));
 check('nothing covers the zoom', () => assert.equal(seen.zoomReachable, true));
-check('"all" fits the whole career in the frame', () => assert.equal(seen.allWidth, '100%'));
+check('"all" fits the whole career in the frame', () =>
+  assert.deepEqual([seen.allStretch, seen.allFits], ['1', true]),
+);
 check('focusing a bar shows what it stands for', () => assert.equal(seen.preview, true));
 check('the right arrow goes to the next bar of the lane', () =>
   assert.equal(seen.arrowMoved, true),

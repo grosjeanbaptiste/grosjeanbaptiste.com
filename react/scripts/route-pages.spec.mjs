@@ -27,6 +27,7 @@ const doc = (lang, position) => ({
     education: [],
     projects: [{ id: 'algo', name: 'Algo', courseUnit: true }],
     volunteer: [],
+    competitions: [{ id: 'hackathon-2024', title: 'Hackathon 2024', summary: 'EduCraft' }],
   },
 });
 

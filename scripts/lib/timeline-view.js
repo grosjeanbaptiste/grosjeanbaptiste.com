@@ -11,6 +11,7 @@ const labelOf = (bar, period) => [bar.name, bar.title, period].filter(Boolean).j
 const LANE_LABEL = {
   work: 'experience',
   education: 'education',
+  competitions: 'competitions',
   projects: 'projects',
   volunteer: 'volunteer',
 };

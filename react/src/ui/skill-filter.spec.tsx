@@ -6,7 +6,11 @@ import { currentLocation, renderApp } from './app-harness';
 const litWork = () =>
   within(screen.getByRole('region', { name: 'Timeline' }))
     .getAllByRole('link')
-    .filter((a) => a.closest('[data-kind="work"]') && a.getAttribute('data-dimmed') !== 'true')
+    // The experiences themselves (depth 0), not the projects drawn under them.
+    .filter(
+      (a) => a.closest('.timeline-lane[data-kind="work"]') && a.getAttribute('data-depth') === '0',
+    )
+    .filter((a) => a.getAttribute('data-dimmed') !== 'true')
     .map((a) => a.getAttribute('aria-label')?.split(' — ')[0]);
 
 describe('filtering the CV by skill', () => {

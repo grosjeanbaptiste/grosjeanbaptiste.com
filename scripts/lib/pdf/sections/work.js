@@ -29,7 +29,7 @@ function renderWorkEntry(w, lang, resume, t, limits, { continuation } = {}) {
   if (w.summary) {
     parts.push(`\\begin{itemize}\\item ${tex(truncate(w.summary, limits.summary))}\\end{itemize}`);
   }
-  appendItemTrailer(parts, w, resume, t, limits);
+  appendItemTrailer(parts, w, resume, t, limits, { lang });
   return parts;
 }
 

@@ -1,11 +1,12 @@
-// Education block — rendered in the wide main column (right of the paracol
-// split), right below Work. Each entry uses the altacv \cvevent layout:
-// title (studyType in area) / institution / date range / gpa. Optional
-// summary paragraph follows underneath. Skill tags and embedded projects
-// from resume.json are intentionally skipped to stay inside the 2-page
-// budget; they remain available in resume.json for the HTML site.
+// Education block — on the verso under the timeline (or in the main column
+// below Work, for a fit plan with education_in_body). Each entry: title
+// (studyType in area) / institution / date range / gpa, an optional summary,
+// then what the degree carried: its projects and, in a column to their right,
+// the volunteering done at the school (./_trailer.js). Skill tags and course
+// units are left to the site.
 const { tex, nohyphen, formatDate, truncate } = require('../tex');
-const { topN } = require('../data');
+const { topN, findProject } = require('../data');
+const { appendItemTrailer } = require('./_trailer');
 
 function renderSummary(text, max) {
   if (!text) return null;
@@ -14,7 +15,14 @@ function renderSummary(text, max) {
   return `\\noindent\\raggedright{\\footnotesize ${tex(clean)}}\\par`;
 }
 
-function renderEducationEntry(e, lang, t, limits) {
+// The projects a degree carried. Its course units are named in the same list
+// of the CV's data — told apart as the site tells them — and the PDF leaves
+// them to the site.
+const isUnit = (project) => project?.type === 'Course unit';
+const carriedProjects = (e, resume) =>
+  (e.projects || []).filter((name) => !isUnit(findProject(resume, name)));
+
+function renderEducationEntry(e, lang, t, limits, resume) {
   const start = formatDate(e.startDate, lang);
   const end = formatDate(e.endDate, lang);
   const title = e.area ? `${tex(e.studyType)} ${tex(t.degreeIn)} ${tex(e.area)}` : tex(e.studyType);
@@ -30,6 +38,17 @@ function renderEducationEntry(e, lang, t, limits) {
   ];
   const summary = renderSummary(e.summary, limits.summary);
   if (summary) parts.push(summary);
+  appendItemTrailer(
+    parts,
+    e,
+    resume,
+    t,
+    { ...limits, show_skills: false },
+    {
+      lang,
+      projects: carriedProjects(e, resume),
+    },
+  );
   return parts;
 }
 
@@ -38,7 +57,7 @@ function buildEducation(resume, t, lang, limits) {
   if (!selected.length) return '';
   const parts = [`\\cvsection{${nohyphen(t.education)}}`];
   selected.forEach((e, i, arr) => {
-    parts.push(...renderEducationEntry(e, lang, t, limits));
+    parts.push(...renderEducationEntry(e, lang, t, limits, resume));
     if (i < arr.length - 1) parts.push('\\divider');
   });
   return parts.join('\n');

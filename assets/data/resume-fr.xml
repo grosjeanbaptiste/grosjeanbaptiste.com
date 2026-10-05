@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=f2d30391"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=11c0c11d"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -218,10 +218,68 @@
         <lane>
           <kind>work</kind>
           <label>Expérience professionnelle</label>
-          <rows>3</rows>
+          <rows>5</rows>
+          <groups>
+            <group>
+              <left>70.87%</left>
+              <width>2.43%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>77.18%</left>
+              <width>3.4%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>81.55%</left>
+              <width>1.94%</width>
+              <row>1</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>83.5%</left>
+              <width>3.88%</width>
+              <row>1</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>84.47%</left>
+              <width>3.4%</width>
+              <row>3</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>87.86%</left>
+              <width>4.37%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>88.83%</left>
+              <width>3.4%</width>
+              <row>2</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>2</row>
+              <rows>3</rows>
+            </group>
+          </groups>
           <bars>
             <bar>
               <target>work-quick-restaurant-job-etudiant</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Quick Restaurant</name>
               <title>Job étudiant</title>
               <period>sept. 2017 – sept. 2017</period>
@@ -232,6 +290,8 @@
             </bar>
             <bar>
               <target>work-restomax-stagiaire-developpeur-full-stack-web</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>RESTOMAX</name>
               <title>Stagiaire développeur Full Stack Web</title>
               <period>nov. 2021 – mars 2022</period>
@@ -241,17 +301,32 @@
               <row>0</row>
             </bar>
             <bar>
+              <target>work-restomax-stagiaire-developpeur-full-stack-web</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>WebMenu</name>
+              <period>nov. 2021 – mars 2022</period>
+              <label>WebMenu — nov. 2021 – mars 2022</label>
+              <left>70.87%</left>
+              <width>2.43%</width>
+              <row>1</row>
+            </bar>
+            <bar>
               <target>work-les-auberges-de-jeunesse-wallonie-bruxelles-job-etudiant</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</name>
               <title>Job étudiant</title>
               <period>mars 2022 – mars 2022</period>
               <label>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles — Job étudiant — mars 2022 – mars 2022</label>
               <left>72.82%</left>
               <width>0.49%</width>
-              <row>1</row>
+              <row>2</row>
             </bar>
             <bar>
               <target>work-editx-it-challenges-it-jobs-education-in-it-for-x-stagiaire-developpeur-full-stack-web</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>EDITx: IT Challenges, IT Jobs, Education in IT for X</name>
               <title>Stagiaire développeur Full Stack Web</title>
               <period>avr. 2022 – avr. 2022</period>
@@ -262,6 +337,8 @@
             </bar>
             <bar>
               <target>work-technofutur-tic-stagiaire-developpeur-full-stack-web</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Technofutur TIC</name>
               <title>Stagiaire développeur Full Stack Web</title>
               <period>déc. 2022 – juin 2023</period>
@@ -271,7 +348,21 @@
               <row>0</row>
             </bar>
             <bar>
+              <target>work-technofutur-tic-stagiaire-developpeur-full-stack-web</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>MyWay</name>
+              <title>Freelance</title>
+              <period>janv. 2023 – juin 2023</period>
+              <label>MyWay — Freelance — janv. 2023 – juin 2023</label>
+              <left>77.67%</left>
+              <width>2.91%</width>
+              <row>1</row>
+            </bar>
+            <bar>
               <target>work-xtrada-software-crafter</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Xtrada</name>
               <title>Software Crafter</title>
               <period>août 2023 – sept. 2024</period>
@@ -282,6 +373,8 @@
             </bar>
             <bar>
               <target>work-xtrada-software-crafter-net-blazor</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Xtrada</name>
               <title>Software Crafter .NET / Blazor</title>
               <period>sept. 2023 – déc. 2023</period>
@@ -291,7 +384,20 @@
               <row>1</row>
             </bar>
             <bar>
+              <target>work-xtrada-software-crafter-net-blazor</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Kwalitijd</name>
+              <period>sept. 2023 – déc. 2023</period>
+              <label>Kwalitijd — sept. 2023 – déc. 2023</label>
+              <left>81.55%</left>
+              <width>1.94%</width>
+              <row>2</row>
+            </bar>
+            <bar>
               <target>work-xtrada-software-crafter-net-react</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Xtrada</name>
               <title>Software Crafter .NET / React</title>
               <period>janv. 2024 – août 2024</period>
@@ -301,17 +407,43 @@
               <row>1</row>
             </bar>
             <bar>
+              <target>work-xtrada-software-crafter-net-react</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>VhAuctions</name>
+              <period>janv. 2024 – févr. 2024</period>
+              <label>VhAuctions — janv. 2024 – févr. 2024</label>
+              <left>83.5%</left>
+              <width>0.97%</width>
+              <row>2</row>
+            </bar>
+            <bar>
               <target>work-xtrada-data-scientist</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Xtrada</name>
               <title>Data Scientist</title>
               <period>mars 2024 – sept. 2024</period>
               <label>Xtrada — Data Scientist — mars 2024 – sept. 2024</label>
               <left>84.47%</left>
               <width>3.4%</width>
-              <row>2</row>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>work-xtrada-data-scientist</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>VhAuctions NER Inventory Model</name>
+              <period>mars 2024 – août 2024</period>
+              <label>VhAuctions NER Inventory Model — mars 2024 – août 2024</label>
+              <left>84.47%</left>
+              <width>2.91%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Emvi.ai</name>
               <title>AI Software Crafter</title>
               <period>oct. 2024 – juin 2025</period>
@@ -321,17 +453,43 @@
               <row>0</row>
             </bar>
             <bar>
+              <target>work-emvi-ai-ai-software-crafter</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Remi</name>
+              <period>oct. 2024 – juin 2025</period>
+              <label>Remi — oct. 2024 – juin 2025</label>
+              <left>87.86%</left>
+              <width>4.37%</width>
+              <row>1</row>
+            </bar>
+            <bar>
               <target>work-emvi-ai-ai-software-crafter-lead</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Emvi.ai</name>
               <title>AI Software Crafter Lead</title>
               <period>déc. 2024 – juin 2025</period>
               <label>Emvi.ai — AI Software Crafter Lead — déc. 2024 – juin 2025</label>
               <left>88.83%</left>
               <width>3.4%</width>
-              <row>1</row>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>work-emvi-ai-ai-software-crafter-lead</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Emvi App</name>
+              <period>déc. 2024 – juin 2025</period>
+              <label>Emvi App — déc. 2024 – juin 2025</label>
+              <left>88.83%</left>
+              <width>3.4%</width>
+              <row>3</row>
             </bar>
             <bar>
               <target>work-acteble-fondateur</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Acteble</name>
               <title>Fondateur</title>
               <period>juil. 2025 – Aujourd’hui</period>
@@ -341,24 +499,75 @@
               <row>0</row>
             </bar>
             <bar>
+              <target>work-acteble-fondateur</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Acteble</name>
+              <period>juil. 2025 – Aujourd’hui</period>
+              <label>Acteble — juil. 2025 – Aujourd’hui</label>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>1</row>
+            </bar>
+            <bar>
               <target>work-senat-belge-chercheur-en-ia</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Sénat belge</name>
               <title>Chercheur en IA</title>
               <period>nov. 2025 – juin 2026</period>
               <label>Sénat belge — Chercheur en IA — nov. 2025 – juin 2026</label>
               <left>94.17%</left>
               <width>3.88%</width>
-              <row>1</row>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>work-senat-belge-chercheur-en-ia</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Synergy</name>
+              <period>nov. 2025 – juin 2026</period>
+              <label>Synergy — nov. 2025 – juin 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>work-senat-belge-chercheur-en-ia</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>fedrag-be</name>
+              <period>nov. 2025 – juin 2026</period>
+              <label>fedrag-be — nov. 2025 – juin 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>4</row>
             </bar>
           </bars>
         </lane>
         <lane>
           <kind>education</kind>
           <label>Éducation</label>
-          <rows>2</rows>
+          <rows>10</rows>
+          <groups>
+            <group>
+              <left>52.43%</left>
+              <width>24.27%</width>
+              <row>0</row>
+              <rows>4</rows>
+            </group>
+            <group>
+              <left>76.21%</left>
+              <width>23.79%</width>
+              <row>4</row>
+              <rows>6</rows>
+            </group>
+          </groups>
           <bars>
             <bar>
               <target>education-lycee-mater-dei</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>Lycée Mater Dei</name>
               <period>sept. 2009 – juin 2012</period>
               <label>Lycée Mater Dei — sept. 2009 – juin 2012</label>
@@ -368,6 +577,8 @@
             </bar>
             <bar>
               <target>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
               <title>C.E.S.S.</title>
               <period>sept. 2012 – juin 2015</period>
@@ -378,6 +589,8 @@
             </bar>
             <bar>
               <target>education-uclouvain-universite-catholique-de-louvain-cours-preparatoires</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
               <title>Cours préparatoires</title>
               <period>sept. 2014 – juin 2015</period>
@@ -388,6 +601,8 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelier-en-arts-ba</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
               <title>Bachelier en Arts (BA)</title>
               <period>sept. 2016 – juin 2017</period>
@@ -398,6 +613,8 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
               <title>Bachelier professionnalisant</title>
               <period>sept. 2018 – oct. 2022</period>
@@ -407,23 +624,188 @@
               <row>0</row>
             </bar>
             <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</target>
+              <kind>volunteer</kind>
+              <depth>1</depth>
+              <name>Délégué étudiant</name>
+              <title>EPHEC École Supérieure de Promotion Sociale</title>
+              <period>sept. 2019 – oct. 2022</period>
+              <label>Délégué étudiant — EPHEC École Supérieure de Promotion Sociale — sept. 2019 – oct. 2022</label>
+              <left>58.25%</left>
+              <width>18.45%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</target>
+              <kind>volunteer</kind>
+              <depth>1</depth>
+              <name>Tuteur</name>
+              <title>EPHEC École Supérieure de Promotion Sociale</title>
+              <period>sept. 2019 – oct. 2022</period>
+              <label>Tuteur — EPHEC École Supérieure de Promotion Sociale — sept. 2019 – oct. 2022</label>
+              <left>58.25%</left>
+              <width>18.45%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>WebMenu</name>
+              <period>nov. 2021 – mars 2022</period>
+              <label>WebMenu — nov. 2021 – mars 2022</label>
+              <left>70.87%</left>
+              <width>2.43%</width>
+              <row>3</row>
+            </bar>
+            <bar>
               <target>education-institut-saint-louis-bruxelles-attestation</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
               <title>Attestation</title>
               <period>sept. 2019 – juin 2020</period>
               <label>Institut Saint-Louis Bruxelles — Attestation — sept. 2019 – juin 2020</label>
               <left>58.25%</left>
               <width>4.85%</width>
-              <row>1</row>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-master-en-sciences</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>UMons</name>
               <title>Master en Sciences</title>
               <period>oct. 2022 – sept. 2026</period>
               <label>UMons — Master en Sciences — oct. 2022 – sept. 2026</label>
               <left>76.21%</left>
               <width>23.3%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-en-sciences</target>
+              <kind>volunteer</kind>
+              <depth>1</depth>
+              <name>Délégué étudiant</name>
+              <title>UMons</title>
+              <period>nov. 2023 – sept. 2026</period>
+              <label>Délégué étudiant — UMons — nov. 2023 – sept. 2026</label>
+              <left>82.52%</left>
+              <width>16.99%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-en-sciences</target>
+              <kind>volunteer</kind>
+              <depth>1</depth>
+              <name>Buddy TandeMons</name>
+              <title>UMons</title>
+              <period>nov. 2023 – sept. 2026</period>
+              <label>Buddy TandeMons — UMons — nov. 2023 – sept. 2026</label>
+              <left>82.52%</left>
+              <width>16.99%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-en-sciences</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Remi</name>
+              <period>oct. 2024 – juin 2025</period>
+              <label>Remi — oct. 2024 – juin 2025</label>
+              <left>87.86%</left>
+              <width>4.37%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-en-sciences</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Emvi App</name>
+              <period>déc. 2024 – juin 2025</period>
+              <label>Emvi App — déc. 2024 – juin 2025</label>
+              <left>88.83%</left>
+              <width>3.4%</width>
+              <row>8</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-en-sciences</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Acteble</name>
+              <period>juil. 2025 – Aujourd’hui</period>
+              <label>Acteble — juil. 2025 – Aujourd’hui</label>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-en-sciences</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Synergy</name>
+              <period>nov. 2025 – juin 2026</period>
+              <label>Synergy — nov. 2025 – juin 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>8</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-en-sciences</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>fedrag-be</name>
+              <period>nov. 2025 – juin 2026</period>
+              <label>fedrag-be — nov. 2025 – juin 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>9</row>
+            </bar>
+          </bars>
+        </lane>
+        <lane>
+          <kind>competitions</kind>
+          <label>Compétitions</label>
+          <rows>2</rows>
+          <groups>
+            <group>
+              <left>84.47%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
+          </groups>
+          <bars>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>Hackathon Citizens of Wallonia 2023</name>
+              <title>Citizens of Wallonia</title>
+              <period>mars 2023 – mars 2023</period>
+              <label>Hackathon Citizens of Wallonia 2023 — Citizens of Wallonia — mars 2023 – mars 2023</label>
+              <left>78.64%</left>
+              <width>0.49%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>Hackathon Citizens of Wallonia 2024</name>
+              <title>Citizens of Wallonia</title>
+              <period>mars 2024 – mars 2024</period>
+              <label>Hackathon Citizens of Wallonia 2024 — Citizens of Wallonia — mars 2024 – mars 2024</label>
+              <left>84.47%</left>
+              <width>0.49%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>EduCraft</name>
+              <period>mars 2024 – mars 2024</period>
+              <label>EduCraft — mars 2024 – mars 2024</label>
+              <left>84.47%</left>
+              <width>0.49%</width>
               <row>1</row>
             </bar>
           </bars>
@@ -431,168 +813,26 @@
         <lane>
           <kind>projects</kind>
           <label>Projets</label>
-          <rows>3</rows>
+          <rows>2</rows>
           <bars>
             <bar>
-              <target>work-restomax-stagiaire-developpeur-full-stack-web</target>
-              <name>WebMenu</name>
-              <period>nov. 2021 – mars 2022</period>
-              <label>WebMenu — nov. 2021 – mars 2022</label>
-              <left>70.87%</left>
-              <width>2.43%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-technofutur-tic-stagiaire-developpeur-full-stack-web</target>
-              <name>MyWay</name>
-              <title>Freelance</title>
-              <period>janv. 2023 – juin 2023</period>
-              <label>MyWay — Freelance — janv. 2023 – juin 2023</label>
-              <left>77.67%</left>
-              <width>2.91%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-xtrada-software-crafter-net-blazor</target>
-              <name>Kwalitijd</name>
-              <period>sept. 2023 – déc. 2023</period>
-              <label>Kwalitijd — sept. 2023 – déc. 2023</label>
-              <left>81.55%</left>
-              <width>1.94%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-xtrada-software-crafter-net-react</target>
-              <name>VhAuctions</name>
-              <period>janv. 2024 – févr. 2024</period>
-              <label>VhAuctions — janv. 2024 – févr. 2024</label>
-              <left>83.5%</left>
-              <width>0.97%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <name>EduCraft</name>
-              <period>mars 2024 – mars 2024</period>
-              <label>EduCraft — mars 2024 – mars 2024</label>
-              <left>84.47%</left>
-              <width>0.49%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-xtrada-data-scientist</target>
-              <name>VhAuctions NER Inventory Model</name>
-              <period>mars 2024 – août 2024</period>
-              <label>VhAuctions NER Inventory Model — mars 2024 – août 2024</label>
-              <left>84.47%</left>
-              <width>2.91%</width>
-              <row>1</row>
-            </bar>
-            <bar>
-              <target>work-emvi-ai-ai-software-crafter</target>
-              <name>Remi</name>
-              <period>oct. 2024 – juin 2025</period>
-              <label>Remi — oct. 2024 – juin 2025</label>
-              <left>87.86%</left>
-              <width>4.37%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-emvi-ai-ai-software-crafter-lead</target>
-              <name>Emvi App</name>
-              <period>déc. 2024 – juin 2025</period>
-              <label>Emvi App — déc. 2024 – juin 2025</label>
-              <left>88.83%</left>
-              <width>3.4%</width>
-              <row>1</row>
-            </bar>
-            <bar>
-              <target>work-acteble-fondateur</target>
-              <name>Acteble</name>
-              <period>juil. 2025 – Aujourd’hui</period>
-              <label>Acteble — juil. 2025 – Aujourd’hui</label>
-              <left>92.23%</left>
-              <width>7.77%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-senat-belge-chercheur-en-ia</target>
-              <name>Synergy</name>
-              <period>nov. 2025 – juin 2026</period>
-              <label>Synergy — nov. 2025 – juin 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
-              <row>1</row>
-            </bar>
-            <bar>
-              <target>work-senat-belge-chercheur-en-ia</target>
-              <name>fedrag-be</name>
-              <period>nov. 2025 – juin 2026</period>
-              <label>fedrag-be — nov. 2025 – juin 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
-              <row>2</row>
-            </bar>
-            <bar>
+              <kind>project</kind>
+              <depth>0</depth>
               <name>Baba</name>
               <period>juil. 2026 – Aujourd’hui</period>
               <label>Baba — juil. 2026 – Aujourd’hui</label>
               <left>98.06%</left>
               <width>1.94%</width>
-              <row>1</row>
+              <row>0</row>
             </bar>
             <bar>
+              <kind>project</kind>
+              <depth>0</depth>
               <name>KAG</name>
               <period>juil. 2026 – Aujourd’hui</period>
               <label>KAG — juil. 2026 – Aujourd’hui</label>
               <left>98.06%</left>
               <width>1.94%</width>
-              <row>2</row>
-            </bar>
-          </bars>
-        </lane>
-        <lane>
-          <kind>volunteer</kind>
-          <label>Bénévolat</label>
-          <rows>2</rows>
-          <bars>
-            <bar>
-              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</target>
-              <name>EPHEC École Supérieure de Promotion Sociale</name>
-              <title>Délégué étudiant</title>
-              <period>sept. 2019 – oct. 2022</period>
-              <label>EPHEC École Supérieure de Promotion Sociale — Délégué étudiant — sept. 2019 – oct. 2022</label>
-              <left>58.25%</left>
-              <width>18.45%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</target>
-              <name>EPHEC École Supérieure de Promotion Sociale</name>
-              <title>Tuteur</title>
-              <period>sept. 2019 – oct. 2022</period>
-              <label>EPHEC École Supérieure de Promotion Sociale — Tuteur — sept. 2019 – oct. 2022</label>
-              <left>58.25%</left>
-              <width>18.45%</width>
-              <row>1</row>
-            </bar>
-            <bar>
-              <target>education-umons-master-en-sciences</target>
-              <name>UMons</name>
-              <title>Délégué étudiant</title>
-              <period>nov. 2023 – sept. 2026</period>
-              <label>UMons — Délégué étudiant — nov. 2023 – sept. 2026</label>
-              <left>82.52%</left>
-              <width>16.99%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>education-umons-master-en-sciences</target>
-              <name>UMons</name>
-              <title>Buddy TandeMons</title>
-              <period>nov. 2023 – sept. 2026</period>
-              <label>UMons — Buddy TandeMons — nov. 2023 – sept. 2026</label>
-              <left>82.52%</left>
-              <width>16.99%</width>
               <row>1</row>
             </bar>
           </bars>
@@ -1258,6 +1498,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>Complexity</keyword>
         <keyword>Trees</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-900-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Algorithmique</summary>
@@ -1267,6 +1508,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>English</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-901-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Anglais I</summary>
@@ -1281,6 +1523,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>NoSQL</keyword>
         <keyword>BigData</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-902-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Bases de données I</summary>
@@ -1291,6 +1534,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>ScientificWriting</keyword>
         <keyword>LiteratureReview</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-903-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Lecture et rédaction scientifique</summary>
@@ -1304,6 +1548,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>PropositionalLogic</keyword>
         <keyword>PredicateLogic</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-904-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Mathématique</summary>
@@ -1318,6 +1563,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>MockTesting</keyword>
         <keyword>BDD</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-905-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Modélisation logicielle</summary>
@@ -1332,6 +1578,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>BGP</keyword>
         <keyword>Ethernet</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-906-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Réseaux</summary>
@@ -1341,6 +1588,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>HRM</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-907-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Stratégie et politiques en ressources humaines</summary>
@@ -1354,6 +1602,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>Paging</keyword>
         <keyword>Virtualization</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-908-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Systèmes d'exploitation</summary>
@@ -1363,6 +1612,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>English</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-001-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Anglais II</summary>
@@ -1378,6 +1628,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>DataMining</keyword>
         <keyword>Weka</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-101-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Bases de données II</summary>
@@ -1389,6 +1640,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>Scrum</keyword>
         <keyword>SoftwareEngineering</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-008-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Ingénierie de logiciels et gestion de projets</summary>
@@ -1401,6 +1653,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>FirstOrderLogic</keyword>
         <keyword>SupervisedLearning</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-102-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Intelligence artificielle</summary>
@@ -1413,6 +1666,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>IntegerProgramming</keyword>
         <keyword>Duality</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-103-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Recherche opérationnelle et applications</summary>
@@ -1426,6 +1680,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>Sorting</keyword>
         <keyword>Complexity</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-104-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Structures de données</summary>
@@ -1435,6 +1690,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>TechWatch</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Séminaires d'informatique en veille technologique</summary>
@@ -1447,6 +1703,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>NetworkSecurity</keyword>
         <keyword>ApplicationSecurity</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Cryptographie et sécurité des systèmes informatiques</summary>
@@ -1458,6 +1715,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>DataProtection</keyword>
         <keyword>GDPR</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Éthique et droit de l'informatique</summary>
@@ -1470,6 +1728,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>Hexadecimal</keyword>
         <keyword>Hardware</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=43</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Structure des ordinateurs</summary>
@@ -1481,6 +1740,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>ShellScripting</keyword>
         <keyword>SystemAdministration</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=47</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Informatique - Système d'exploitation</summary>
@@ -1495,6 +1755,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>MathematicalLogic</keyword>
         <keyword>Cryptography</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=20</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Mathématique appliquée à l'informatique</summary>
@@ -1507,6 +1768,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>ControlFlow</keyword>
         <keyword>Programming</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=87</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Principes algorithmiques et programmation</summary>
@@ -1518,6 +1780,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>EntityRelationship</keyword>
         <keyword>SystemsAnalysis</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=116</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Principes d'analyse informatique</summary>
@@ -1527,6 +1790,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>ProfessionalCommunication</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=39</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Information et communication professionnelles</summary>
@@ -1540,6 +1804,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>DNS</keyword>
         <keyword>WebHosting</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=95</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Web : principes de base</summary>
@@ -1552,6 +1817,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>Joins</keyword>
         <keyword>Indexing</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=79</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Initiation aux bases de données</summary>
@@ -1564,6 +1830,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>DataWarehouse</keyword>
         <keyword>QueryOptimization</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=83</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Gestion et exploitation de bases de données</summary>
@@ -1577,6 +1844,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>Encapsulation</keyword>
         <keyword>Overloading</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=91</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Programmation orientée objet</summary>
@@ -1588,6 +1856,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>SoftwareDesign</keyword>
         <keyword>Modelling</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=120</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Projet d'analyse et de conception</summary>
@@ -1597,6 +1866,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>ProjectManagement</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=113</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Techniques de gestion de projet</summary>
@@ -1606,6 +1876,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>Statistics</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=35</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Éléments de statistique</summary>
@@ -1619,6 +1890,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>XML</keyword>
         <keyword>ClientSideScripting</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=99</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Projet de développement web</summary>
@@ -1628,6 +1900,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>Ebusiness</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=56</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Notions de e-business</summary>
@@ -1640,6 +1913,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>DatabaseProgramming</keyword>
         <keyword>Debugging</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=104</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Projet de développement SGBD</summary>
@@ -1652,6 +1926,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>TCP/IP</keyword>
         <keyword>Networking</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=69</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Bases des réseaux</summary>
@@ -1661,6 +1936,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>Management</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=52</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Organisation des entreprises et éléments de management</summary>
@@ -1670,6 +1946,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>ERP</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=61</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Produits logiciels de gestion intégrés</summary>
@@ -1685,6 +1962,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>Caching</keyword>
         <keyword>URLRewriting</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=108</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Projet d'intégration de développement</summary>
@@ -1694,6 +1972,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>TechWatch</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=65</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Veille technologique</summary>
@@ -1705,6 +1984,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         <keyword>NetworkSecurity</keyword>
         <keyword>ApplicationServer</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=74</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Administration, gestion et sécurisation des réseaux</summary>
@@ -1723,6 +2003,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <keywords>
         <keyword>ProfessionalCommunication</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Langue en situation appliquée à l'enseignement supérieur UE2</summary>

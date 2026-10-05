@@ -59,12 +59,24 @@ export interface Basics {
   readonly profiles?: readonly Profile[];
 }
 
+// A competition (a hackathon): held on a day, and naming the projects built there.
+export interface CompetitionRecord {
+  readonly id: string;
+  readonly title: string;
+  readonly date: string;
+  readonly organizer?: string;
+  readonly summary?: string;
+  readonly url?: string;
+  readonly projects?: readonly string[];
+}
+
 export interface Resume {
   readonly basics: Basics;
   readonly work: readonly WorkRecord[];
   readonly education: readonly EducationRecord[];
   readonly projects: readonly ProjectRecord[];
   readonly volunteer: readonly VolunteerRecord[];
+  readonly competitions?: readonly CompetitionRecord[];
   readonly skills: readonly { readonly name: string; readonly keywords: readonly string[] }[];
   readonly languages: readonly { readonly language: string; readonly fluency: string }[];
   readonly references?: readonly { readonly name: string; readonly reference: string }[];

@@ -34,7 +34,9 @@ test('the script restores the page after printing', () => {
 });
 
 test('it relocates exactly the nodes CSS cannot move', () => {
-  for (const hook of ['contact-info', 'education', 'embedded-volunteer']) {
+  // The volunteering is no longer one of them: the PDF's verso has no section
+  // for it any more, the roles show in the timeline.
+  for (const hook of ['contact-info', 'education', 'timeline', 'references']) {
     assert.ok(script.includes(hook), `no handling for the ${hook} node`);
   }
 });
@@ -98,28 +100,30 @@ test('the page colour is laid down by a fixed layer, not by body', () => {
 // beforeprint/afterprint in headless Chrome and diffing the DOM. This is the
 // cheap standing check, not that proof.
 test('the verso block it builds is torn down again', () => {
-  assert.match(script, /createElement\(['"]section['"]\)/, 'nothing builds the verso block');
-  assert.match(script, /versoVolunteer\?\.remove\(\)/, 'the built block is never removed');
   assert.match(script, /verso\?\.remove\(\)/, 'the verso container is never removed');
   assert.match(script, /banner\?\.remove\(\)/, 'the banner is never removed');
 });
 
-test('the verso is a second two-column block, not a break inside the first', () => {
-  // \clearpage\begin{paracol}{2} in document.js. Faking it with break-before on
-  // nodes still inside the recto's grid cost Firefox — which will not fragment
-  // a grid — a page for the volunteering and another for the references: four
-  // sheets where the PDF has two. print-fit-firefox.test.js is what caught it,
-  // and is what keeps it caught; this is the cheap standing check.
+test('the verso is a block of its own, not a break inside the recto', () => {
+  // \\clearpage, then the timeline and the references across the
+  // full width (document.js). Faking the verso with break-before on nodes still
+  // inside the recto's grid cost Firefox — which will not fragment a grid — a
+  // sheet for each: four where the PDF has two. print-fit-firefox.test.js is
+  // what caught it, and is what keeps it caught; this is the cheap standing
+  // check.
   assert.match(script, /print-verso/, 'nothing builds the verso container');
   const css = fs.readFileSync(path.resolve(__dirname, '../../css/print-verso.css'), 'utf8');
-  assert.match(
-    css,
-    /#print-verso[^}]*grid-template-columns/,
-    'the verso container is not laid out in two columns',
-  );
+  assert.match(css, /#print-verso\s*\{[^}]*break-before:\s*page/, 'the verso starts no new sheet');
   assert.doesNotMatch(
     css,
     /#references\s*\{[^}]*break-before/,
     'the references still carry their own page break, inside the recto grid',
   );
+});
+
+test('the references are set in three columns under a heading that spans them', () => {
+  // \\begin{multicols}{3} in pdf/sections/extras.js.
+  const css = fs.readFileSync(path.resolve(__dirname, '../../css/print-verso.css'), 'utf8');
+  assert.match(css, /#print-verso #references\s*\{[^}]*columns:\s*3/);
+  assert.match(css, /#print-verso #references h2\s*\{[^}]*column-span:\s*all/);
 });

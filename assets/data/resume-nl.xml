@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=f2d30391"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=11c0c11d"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -218,10 +218,68 @@
         <lane>
           <kind>work</kind>
           <label>Werkervaring</label>
-          <rows>3</rows>
+          <rows>5</rows>
+          <groups>
+            <group>
+              <left>70.87%</left>
+              <width>2.43%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>77.18%</left>
+              <width>3.4%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>81.55%</left>
+              <width>1.94%</width>
+              <row>1</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>83.5%</left>
+              <width>3.88%</width>
+              <row>1</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>84.47%</left>
+              <width>3.4%</width>
+              <row>3</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>87.86%</left>
+              <width>4.37%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>88.83%</left>
+              <width>3.4%</width>
+              <row>2</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
+            <group>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>2</row>
+              <rows>3</rows>
+            </group>
+          </groups>
           <bars>
             <bar>
               <target>work-quick-restaurant-studentenjob</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Quick Restaurant</name>
               <title>Studentenjob</title>
               <period>sep 2017 – sep 2017</period>
@@ -232,6 +290,8 @@
             </bar>
             <bar>
               <target>work-restomax-full-stack-webontwikkelaar-stagiair</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>RESTOMAX</name>
               <title>Full Stack Webontwikkelaar Stagiair</title>
               <period>nov 2021 – mrt 2022</period>
@@ -241,17 +301,32 @@
               <row>0</row>
             </bar>
             <bar>
+              <target>work-restomax-full-stack-webontwikkelaar-stagiair</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>WebMenu</name>
+              <period>nov 2021 – mrt 2022</period>
+              <label>WebMenu — nov 2021 – mrt 2022</label>
+              <left>70.87%</left>
+              <width>2.43%</width>
+              <row>1</row>
+            </bar>
+            <bar>
               <target>work-les-auberges-de-jeunesse-wallonie-bruxelles-studentenjob</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</name>
               <title>Studentenjob</title>
               <period>mrt 2022 – mrt 2022</period>
               <label>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles — Studentenjob — mrt 2022 – mrt 2022</label>
               <left>72.82%</left>
               <width>0.49%</width>
-              <row>1</row>
+              <row>2</row>
             </bar>
             <bar>
               <target>work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-webontwikkelaar-stagiair</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>EDITx: IT Challenges, IT Jobs, Education in IT for X</name>
               <title>Full Stack Webontwikkelaar Stagiair</title>
               <period>apr 2022 – apr 2022</period>
@@ -262,6 +337,8 @@
             </bar>
             <bar>
               <target>work-technofutur-tic-full-stack-webontwikkelaar-stagiair</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Technofutur TIC</name>
               <title>Full Stack Webontwikkelaar Stagiair</title>
               <period>dec 2022 – jun 2023</period>
@@ -271,7 +348,21 @@
               <row>0</row>
             </bar>
             <bar>
+              <target>work-technofutur-tic-full-stack-webontwikkelaar-stagiair</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>MyWay</name>
+              <title>Freelance</title>
+              <period>jan 2023 – jun 2023</period>
+              <label>MyWay — Freelance — jan 2023 – jun 2023</label>
+              <left>77.67%</left>
+              <width>2.91%</width>
+              <row>1</row>
+            </bar>
+            <bar>
               <target>work-xtrada-software-crafter</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Xtrada</name>
               <title>Software Crafter</title>
               <period>aug 2023 – sep 2024</period>
@@ -282,6 +373,8 @@
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-software-crafter</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Xtrada</name>
               <title>.NET / Blazor Software Crafter</title>
               <period>sep 2023 – dec 2023</period>
@@ -291,7 +384,20 @@
               <row>1</row>
             </bar>
             <bar>
+              <target>work-xtrada-net-blazor-software-crafter</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Kwalitijd</name>
+              <period>sep 2023 – dec 2023</period>
+              <label>Kwalitijd — sep 2023 – dec 2023</label>
+              <left>81.55%</left>
+              <width>1.94%</width>
+              <row>2</row>
+            </bar>
+            <bar>
               <target>work-xtrada-net-react-software-crafter</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Xtrada</name>
               <title>.NET / React Software Crafter</title>
               <period>jan 2024 – aug 2024</period>
@@ -301,17 +407,43 @@
               <row>1</row>
             </bar>
             <bar>
+              <target>work-xtrada-net-react-software-crafter</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>VhAuctions</name>
+              <period>jan 2024 – feb 2024</period>
+              <label>VhAuctions — jan 2024 – feb 2024</label>
+              <left>83.5%</left>
+              <width>0.97%</width>
+              <row>2</row>
+            </bar>
+            <bar>
               <target>work-xtrada-data-scientist</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Xtrada</name>
               <title>Data Scientist</title>
               <period>mrt 2024 – sep 2024</period>
               <label>Xtrada — Data Scientist — mrt 2024 – sep 2024</label>
               <left>84.47%</left>
               <width>3.4%</width>
-              <row>2</row>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>work-xtrada-data-scientist</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>VhAuctions NER Inventory Model</name>
+              <period>mrt 2024 – aug 2024</period>
+              <label>VhAuctions NER Inventory Model — mrt 2024 – aug 2024</label>
+              <left>84.47%</left>
+              <width>2.91%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Emvi.ai</name>
               <title>AI Software Crafter</title>
               <period>okt 2024 – jun 2025</period>
@@ -321,17 +453,43 @@
               <row>0</row>
             </bar>
             <bar>
+              <target>work-emvi-ai-ai-software-crafter</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Remi</name>
+              <period>okt 2024 – jun 2025</period>
+              <label>Remi — okt 2024 – jun 2025</label>
+              <left>87.86%</left>
+              <width>4.37%</width>
+              <row>1</row>
+            </bar>
+            <bar>
               <target>work-emvi-ai-ai-software-crafter-lead</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Emvi.ai</name>
               <title>AI Software Crafter Lead</title>
               <period>dec 2024 – jun 2025</period>
               <label>Emvi.ai — AI Software Crafter Lead — dec 2024 – jun 2025</label>
               <left>88.83%</left>
               <width>3.4%</width>
-              <row>1</row>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>work-emvi-ai-ai-software-crafter-lead</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Emvi App</name>
+              <period>dec 2024 – jun 2025</period>
+              <label>Emvi App — dec 2024 – jun 2025</label>
+              <left>88.83%</left>
+              <width>3.4%</width>
+              <row>3</row>
             </bar>
             <bar>
               <target>work-acteble-oprichter</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Acteble</name>
               <title>Oprichter</title>
               <period>jul 2025 – Heden</period>
@@ -341,24 +499,75 @@
               <row>0</row>
             </bar>
             <bar>
+              <target>work-acteble-oprichter</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Acteble</name>
+              <period>jul 2025 – Heden</period>
+              <label>Acteble — jul 2025 – Heden</label>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>1</row>
+            </bar>
+            <bar>
               <target>work-belgische-senaat-ai-onderzoeker</target>
+              <kind>work</kind>
+              <depth>0</depth>
               <name>Belgische Senaat</name>
               <title>AI-onderzoeker</title>
               <period>nov 2025 – jun 2026</period>
               <label>Belgische Senaat — AI-onderzoeker — nov 2025 – jun 2026</label>
               <left>94.17%</left>
               <width>3.88%</width>
-              <row>1</row>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>work-belgische-senaat-ai-onderzoeker</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Synergy</name>
+              <period>nov 2025 – jun 2026</period>
+              <label>Synergy — nov 2025 – jun 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>work-belgische-senaat-ai-onderzoeker</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>fedrag-be</name>
+              <period>nov 2025 – jun 2026</period>
+              <label>fedrag-be — nov 2025 – jun 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>4</row>
             </bar>
           </bars>
         </lane>
         <lane>
           <kind>education</kind>
           <label>Opleiding</label>
-          <rows>2</rows>
+          <rows>10</rows>
+          <groups>
+            <group>
+              <left>52.43%</left>
+              <width>24.27%</width>
+              <row>0</row>
+              <rows>4</rows>
+            </group>
+            <group>
+              <left>76.21%</left>
+              <width>23.79%</width>
+              <row>4</row>
+              <rows>6</rows>
+            </group>
+          </groups>
           <bars>
             <bar>
               <target>education-lycee-mater-dei</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>Lycée Mater Dei</name>
               <period>sep 2009 – jun 2012</period>
               <label>Lycée Mater Dei — sep 2009 – jun 2012</label>
@@ -368,6 +577,8 @@
             </bar>
             <bar>
               <target>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
               <title>C.E.S.S.</title>
               <period>sep 2012 – jun 2015</period>
@@ -378,6 +589,8 @@
             </bar>
             <bar>
               <target>education-uclouvain-universite-catholique-de-louvain-voorbereidende-cursussen</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
               <title>Voorbereidende cursussen</title>
               <period>sep 2014 – jun 2015</period>
@@ -388,6 +601,8 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-of-arts-ba</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
               <title>Bachelor of Arts (BA)</title>
               <period>sep 2016 – jun 2017</period>
@@ -398,6 +613,8 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professionele-bachelor</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
               <title>Professionele bachelor</title>
               <period>sep 2018 – okt 2022</period>
@@ -407,23 +624,188 @@
               <row>0</row>
             </bar>
             <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professionele-bachelor</target>
+              <kind>volunteer</kind>
+              <depth>1</depth>
+              <name>Studentenvertegenwoordiger</name>
+              <title>EPHEC École Supérieure de Promotion Sociale</title>
+              <period>sep 2019 – okt 2022</period>
+              <label>Studentenvertegenwoordiger — EPHEC École Supérieure de Promotion Sociale — sep 2019 – okt 2022</label>
+              <left>58.25%</left>
+              <width>18.45%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professionele-bachelor</target>
+              <kind>volunteer</kind>
+              <depth>1</depth>
+              <name>Tutor</name>
+              <title>EPHEC École Supérieure de Promotion Sociale</title>
+              <period>sep 2019 – okt 2022</period>
+              <label>Tutor — EPHEC École Supérieure de Promotion Sociale — sep 2019 – okt 2022</label>
+              <left>58.25%</left>
+              <width>18.45%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professionele-bachelor</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>WebMenu</name>
+              <period>nov 2021 – mrt 2022</period>
+              <label>WebMenu — nov 2021 – mrt 2022</label>
+              <left>70.87%</left>
+              <width>2.43%</width>
+              <row>3</row>
+            </bar>
+            <bar>
               <target>education-institut-saint-louis-bruxelles-attestation</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
               <title>Attestation</title>
               <period>sep 2019 – jun 2020</period>
               <label>Institut Saint-Louis Bruxelles — Attestation — sep 2019 – jun 2020</label>
               <left>58.25%</left>
               <width>4.85%</width>
-              <row>1</row>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
+              <kind>education</kind>
+              <depth>0</depth>
               <name>UMons</name>
               <title>Master of Science</title>
               <period>okt 2022 – sep 2026</period>
               <label>UMons — Master of Science — okt 2022 – sep 2026</label>
               <left>76.21%</left>
               <width>23.3%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science</target>
+              <kind>volunteer</kind>
+              <depth>1</depth>
+              <name>Studentenvertegenwoordiger</name>
+              <title>UMons</title>
+              <period>nov 2023 – sep 2026</period>
+              <label>Studentenvertegenwoordiger — UMons — nov 2023 – sep 2026</label>
+              <left>82.52%</left>
+              <width>16.99%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science</target>
+              <kind>volunteer</kind>
+              <depth>1</depth>
+              <name>Buddy TandeMons</name>
+              <title>UMons</title>
+              <period>nov 2023 – sep 2026</period>
+              <label>Buddy TandeMons — UMons — nov 2023 – sep 2026</label>
+              <left>82.52%</left>
+              <width>16.99%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Remi</name>
+              <period>okt 2024 – jun 2025</period>
+              <label>Remi — okt 2024 – jun 2025</label>
+              <left>87.86%</left>
+              <width>4.37%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Emvi App</name>
+              <period>dec 2024 – jun 2025</period>
+              <label>Emvi App — dec 2024 – jun 2025</label>
+              <left>88.83%</left>
+              <width>3.4%</width>
+              <row>8</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Acteble</name>
+              <period>jul 2025 – Heden</period>
+              <label>Acteble — jul 2025 – Heden</label>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Synergy</name>
+              <period>nov 2025 – jun 2026</period>
+              <label>Synergy — nov 2025 – jun 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>8</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>fedrag-be</name>
+              <period>nov 2025 – jun 2026</period>
+              <label>fedrag-be — nov 2025 – jun 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>9</row>
+            </bar>
+          </bars>
+        </lane>
+        <lane>
+          <kind>competitions</kind>
+          <label>Wedstrijden</label>
+          <rows>2</rows>
+          <groups>
+            <group>
+              <left>84.47%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
+          </groups>
+          <bars>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>Hackathon Citizens of Wallonia 2023</name>
+              <title>Citizens of Wallonia</title>
+              <period>mrt 2023 – mrt 2023</period>
+              <label>Hackathon Citizens of Wallonia 2023 — Citizens of Wallonia — mrt 2023 – mrt 2023</label>
+              <left>78.64%</left>
+              <width>0.49%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>Hackathon Citizens of Wallonia 2024</name>
+              <title>Citizens of Wallonia</title>
+              <period>mrt 2024 – mrt 2024</period>
+              <label>Hackathon Citizens of Wallonia 2024 — Citizens of Wallonia — mrt 2024 – mrt 2024</label>
+              <left>84.47%</left>
+              <width>0.49%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>EduCraft</name>
+              <period>mrt 2024 – mrt 2024</period>
+              <label>EduCraft — mrt 2024 – mrt 2024</label>
+              <left>84.47%</left>
+              <width>0.49%</width>
               <row>1</row>
             </bar>
           </bars>
@@ -431,168 +813,26 @@
         <lane>
           <kind>projects</kind>
           <label>Projecten</label>
-          <rows>3</rows>
+          <rows>2</rows>
           <bars>
             <bar>
-              <target>work-restomax-full-stack-webontwikkelaar-stagiair</target>
-              <name>WebMenu</name>
-              <period>nov 2021 – mrt 2022</period>
-              <label>WebMenu — nov 2021 – mrt 2022</label>
-              <left>70.87%</left>
-              <width>2.43%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-technofutur-tic-full-stack-webontwikkelaar-stagiair</target>
-              <name>MyWay</name>
-              <title>Freelance</title>
-              <period>jan 2023 – jun 2023</period>
-              <label>MyWay — Freelance — jan 2023 – jun 2023</label>
-              <left>77.67%</left>
-              <width>2.91%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-xtrada-net-blazor-software-crafter</target>
-              <name>Kwalitijd</name>
-              <period>sep 2023 – dec 2023</period>
-              <label>Kwalitijd — sep 2023 – dec 2023</label>
-              <left>81.55%</left>
-              <width>1.94%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-xtrada-net-react-software-crafter</target>
-              <name>VhAuctions</name>
-              <period>jan 2024 – feb 2024</period>
-              <label>VhAuctions — jan 2024 – feb 2024</label>
-              <left>83.5%</left>
-              <width>0.97%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <name>EduCraft</name>
-              <period>mrt 2024 – mrt 2024</period>
-              <label>EduCraft — mrt 2024 – mrt 2024</label>
-              <left>84.47%</left>
-              <width>0.49%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-xtrada-data-scientist</target>
-              <name>VhAuctions NER Inventory Model</name>
-              <period>mrt 2024 – aug 2024</period>
-              <label>VhAuctions NER Inventory Model — mrt 2024 – aug 2024</label>
-              <left>84.47%</left>
-              <width>2.91%</width>
-              <row>1</row>
-            </bar>
-            <bar>
-              <target>work-emvi-ai-ai-software-crafter</target>
-              <name>Remi</name>
-              <period>okt 2024 – jun 2025</period>
-              <label>Remi — okt 2024 – jun 2025</label>
-              <left>87.86%</left>
-              <width>4.37%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-emvi-ai-ai-software-crafter-lead</target>
-              <name>Emvi App</name>
-              <period>dec 2024 – jun 2025</period>
-              <label>Emvi App — dec 2024 – jun 2025</label>
-              <left>88.83%</left>
-              <width>3.4%</width>
-              <row>1</row>
-            </bar>
-            <bar>
-              <target>work-acteble-oprichter</target>
-              <name>Acteble</name>
-              <period>jul 2025 – Heden</period>
-              <label>Acteble — jul 2025 – Heden</label>
-              <left>92.23%</left>
-              <width>7.77%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>work-belgische-senaat-ai-onderzoeker</target>
-              <name>Synergy</name>
-              <period>nov 2025 – jun 2026</period>
-              <label>Synergy — nov 2025 – jun 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
-              <row>1</row>
-            </bar>
-            <bar>
-              <target>work-belgische-senaat-ai-onderzoeker</target>
-              <name>fedrag-be</name>
-              <period>nov 2025 – jun 2026</period>
-              <label>fedrag-be — nov 2025 – jun 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
-              <row>2</row>
-            </bar>
-            <bar>
+              <kind>project</kind>
+              <depth>0</depth>
               <name>Baba</name>
               <period>jul 2026 – Heden</period>
               <label>Baba — jul 2026 – Heden</label>
               <left>98.06%</left>
               <width>1.94%</width>
-              <row>1</row>
+              <row>0</row>
             </bar>
             <bar>
+              <kind>project</kind>
+              <depth>0</depth>
               <name>KAG</name>
               <period>jul 2026 – Heden</period>
               <label>KAG — jul 2026 – Heden</label>
               <left>98.06%</left>
               <width>1.94%</width>
-              <row>2</row>
-            </bar>
-          </bars>
-        </lane>
-        <lane>
-          <kind>volunteer</kind>
-          <label>Vrijwilligerswerk</label>
-          <rows>2</rows>
-          <bars>
-            <bar>
-              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professionele-bachelor</target>
-              <name>EPHEC École Supérieure de Promotion Sociale</name>
-              <title>Studentenvertegenwoordiger</title>
-              <period>sep 2019 – okt 2022</period>
-              <label>EPHEC École Supérieure de Promotion Sociale — Studentenvertegenwoordiger — sep 2019 – okt 2022</label>
-              <left>58.25%</left>
-              <width>18.45%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professionele-bachelor</target>
-              <name>EPHEC École Supérieure de Promotion Sociale</name>
-              <title>Tutor</title>
-              <period>sep 2019 – okt 2022</period>
-              <label>EPHEC École Supérieure de Promotion Sociale — Tutor — sep 2019 – okt 2022</label>
-              <left>58.25%</left>
-              <width>18.45%</width>
-              <row>1</row>
-            </bar>
-            <bar>
-              <target>education-umons-master-of-science</target>
-              <name>UMons</name>
-              <title>Studentenvertegenwoordiger</title>
-              <period>nov 2023 – sep 2026</period>
-              <label>UMons — Studentenvertegenwoordiger — nov 2023 – sep 2026</label>
-              <left>82.52%</left>
-              <width>16.99%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <target>education-umons-master-of-science</target>
-              <name>UMons</name>
-              <title>Buddy TandeMons</title>
-              <period>nov 2023 – sep 2026</period>
-              <label>UMons — Buddy TandeMons — nov 2023 – sep 2026</label>
-              <left>82.52%</left>
-              <width>16.99%</width>
               <row>1</row>
             </bar>
           </bars>
@@ -1258,6 +1498,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Complexity</keyword>
         <keyword>Trees</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-900-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Algoritmiek</summary>
@@ -1267,6 +1508,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>English</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-901-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Engels I</summary>
@@ -1281,6 +1523,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>NoSQL</keyword>
         <keyword>BigData</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-902-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Databanken I</summary>
@@ -1291,6 +1534,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>ScientificWriting</keyword>
         <keyword>LiteratureReview</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-903-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Wetenschappelijk lezen en schrijven</summary>
@@ -1304,6 +1548,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>PropositionalLogic</keyword>
         <keyword>PredicateLogic</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-904-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Wiskunde</summary>
@@ -1318,6 +1563,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>MockTesting</keyword>
         <keyword>BDD</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-905-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Softwaremodellering</summary>
@@ -1332,6 +1578,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>BGP</keyword>
         <keyword>Ethernet</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-906-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Netwerken</summary>
@@ -1341,6 +1588,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>HRM</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-907-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>HR-strategie en -beleid</summary>
@@ -1354,6 +1602,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Paging</keyword>
         <keyword>Virtualization</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-908-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Besturingssystemen</summary>
@@ -1363,6 +1612,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>English</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-001-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Engels II</summary>
@@ -1378,6 +1628,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>DataMining</keyword>
         <keyword>Weka</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-101-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Databanken II</summary>
@@ -1389,6 +1640,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Scrum</keyword>
         <keyword>SoftwareEngineering</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-008-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Software engineering en projectbeheer</summary>
@@ -1401,6 +1653,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>FirstOrderLogic</keyword>
         <keyword>SupervisedLearning</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-102-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Artificiële intelligentie</summary>
@@ -1413,6 +1666,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>IntegerProgramming</keyword>
         <keyword>Duality</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-103-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Operationeel onderzoek en toepassingen</summary>
@@ -1426,6 +1680,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Sorting</keyword>
         <keyword>Complexity</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-104-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Datastructuren</summary>
@@ -1435,6 +1690,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>TechWatch</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Informaticaseminaries in technologiewatch</summary>
@@ -1447,6 +1703,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>NetworkSecurity</keyword>
         <keyword>ApplicationSecurity</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Cryptografie en systeembeveiliging</summary>
@@ -1458,6 +1715,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>DataProtection</keyword>
         <keyword>GDPR</keyword>
       </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Ethiek en informaticarecht</summary>
@@ -1470,6 +1728,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Hexadecimal</keyword>
         <keyword>Hardware</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=43</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Computerstructuur</summary>
@@ -1481,6 +1740,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>ShellScripting</keyword>
         <keyword>SystemAdministration</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=47</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Besturingssystemen</summary>
@@ -1495,6 +1755,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>MathematicalLogic</keyword>
         <keyword>Cryptography</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=20</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Wiskunde toegepast op informatica</summary>
@@ -1507,6 +1768,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>ControlFlow</keyword>
         <keyword>Programming</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=87</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Algoritmische principes en programmeren</summary>
@@ -1518,6 +1780,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>EntityRelationship</keyword>
         <keyword>SystemsAnalysis</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=116</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Principes van informatica-analyse</summary>
@@ -1527,6 +1790,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>ProfessionalCommunication</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=39</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Professionele informatie en communicatie</summary>
@@ -1540,6 +1804,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>DNS</keyword>
         <keyword>WebHosting</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=95</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Web: basisprincipes</summary>
@@ -1552,6 +1817,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Joins</keyword>
         <keyword>Indexing</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=79</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Inleiding tot databanken</summary>
@@ -1564,6 +1830,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>DataWarehouse</keyword>
         <keyword>QueryOptimization</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=83</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Beheer en exploitatie van databanken</summary>
@@ -1577,6 +1844,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Encapsulation</keyword>
         <keyword>Overloading</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=91</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Objectgeoriënteerd programmeren</summary>
@@ -1588,6 +1856,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>SoftwareDesign</keyword>
         <keyword>Modelling</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=120</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Analyse- en ontwerpproject</summary>
@@ -1597,6 +1866,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>ProjectManagement</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=113</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Projectbeheertechnieken</summary>
@@ -1606,6 +1876,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>Statistics</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=35</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Elementen van statistiek</summary>
@@ -1619,6 +1890,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>XML</keyword>
         <keyword>ClientSideScripting</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=99</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Webontwikkelingsproject</summary>
@@ -1628,6 +1900,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>Ebusiness</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=56</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Beginselen van e-business</summary>
@@ -1640,6 +1913,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>DatabaseProgramming</keyword>
         <keyword>Debugging</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=104</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>DBMS-ontwikkelingsproject</summary>
@@ -1652,6 +1926,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>TCP/IP</keyword>
         <keyword>Networking</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=69</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Netwerkbasis</summary>
@@ -1661,6 +1936,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>Management</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=52</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Bedrijfsorganisatie en management</summary>
@@ -1670,6 +1946,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>ERP</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=61</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Geïntegreerde beheersoftware</summary>
@@ -1685,6 +1962,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>Caching</keyword>
         <keyword>URLRewriting</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=108</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Ontwikkelingsintegratieproject</summary>
@@ -1694,6 +1972,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>TechWatch</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=65</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Technologiewatch</summary>
@@ -1705,6 +1984,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <keyword>NetworkSecurity</keyword>
         <keyword>ApplicationServer</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=74</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Netwerkbeheer en -beveiliging</summary>
@@ -1723,6 +2003,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <keywords>
         <keyword>ProfessionalCommunication</keyword>
       </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24</url>
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Toegepaste taal hoger onderwijs UE2</summary>

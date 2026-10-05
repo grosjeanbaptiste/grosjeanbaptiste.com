@@ -33,10 +33,10 @@
      a \rule{\linewidth}{2pt} in the main column, and the narrower
      \cvsectionsidebar (\Large, 10.91pt) over a 1.5pt rule in the left one.
      Both uppercase, both in headingrule (ThirdColor). */
-  /* #print-verso is included because js/print-layout.js lifts the volunteering
-     and the references out of the two columns into the verso block, which took
-     them out of reach of these selectors and printed both headings as plain
-     body text. */
+  /* #print-verso is included because js/print-layout.js lifts the timeline
+     and the references out of the two columns into the verso
+     block, which took them out of reach of these selectors and printed their
+     headings as plain body text. */
   .main-content h2,
   .sidebar h2:not(.contact-info h2),
   .sidebar h3,
@@ -51,17 +51,17 @@
     break-after: avoid;
   }
 
-  /* \cvsection{References} on the verso's wide column. */
+  /* \cvsection on the verso, as in the main column: both of its sections
+     span the sheet. */
   .main-content h2,
-  #print-verso #references h2 {
+  #print-verso h2 {
     font-size: 1.501rem;
     border-bottom: 2pt solid var(--accent-color);
   }
 
-  /* \cvsectionsidebar{Volunteer} on the verso's narrow one. */
+  /* \cvsectionsidebar in the narrow column of the recto. */
   .sidebar h2:not(.contact-info h2),
-  .sidebar h3,
-  #print-verso #print-volunteer h2 {
+  .sidebar h3 {
     font-size: 1.369rem;
     border-bottom: 1.5pt solid var(--accent-color);
   }

@@ -55,6 +55,17 @@ const SIDEBAR_HEADING_MACRO = [
   '}',
 ];
 
+const VERSO_HEADING_MACRO = [
+  // \\cvsection for the verso, where three sections share the page with the
+  // timeline: one \\bigskip above instead of two, a \\smallskip below.
+  '\\newcommand{\\cvsectiontight}[1]{%',
+  '  \\bigskip%',
+  '  {\\color{heading}\\cvsectionfont\\MakeUppercase{#1}}\\\\[-1ex]%',
+  '  {\\color{headingrule}\\rule{\\linewidth}{2pt}\\par}%',
+  '  \\smallskip%',
+  '}',
+];
+
 function buildPreamble(lang) {
   return [
     '\\PassOptionsToPackage{dvipsnames}{xcolor}',
@@ -63,6 +74,8 @@ function buildPreamble(lang) {
     '\\usepackage[utf8]{inputenc}',
     '\\usepackage[english,french,dutch,spanish,german]{babel}',
     '\\usepackage{paracol}',
+    // The verso sets the references in three columns.
+    '\\usepackage{multicol}',
     '\\usepackage{fontawesome5}',
     '\\usepackage{needspace}',
     '\\usepackage{varwidth}',
@@ -89,6 +102,7 @@ function buildPreamble(lang) {
     '\\renewcommand{\\ratingmarker}{\\faCircle}',
     ...CVTAG_WRAP_MACRO,
     ...SIDEBAR_HEADING_MACRO,
+    ...VERSO_HEADING_MACRO,
   ].join('\n');
 }
 

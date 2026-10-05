@@ -3,11 +3,12 @@
 // from bar to bar; hovering previews. Zooming changes the scale, never what is
 // shown: the whole career is always there, scrolled to today.
 import { type KeyboardEvent, useEffect, useRef, useState } from 'react';
+import type { CSSProperties } from 'react';
 import { timelineOf } from '../../domain/timeline';
 import { type Direction, neighbour } from '../../domain/timeline-navigation';
 import { useReading } from '../context';
 import { TimelineLane } from './TimelineLane';
-import { DEFAULT_ZOOM, TimelineZoom, type Zoom, widthOf } from './TimelineZoom';
+import { DEFAULT_ZOOM, TimelineZoom, type Zoom, stretchOf } from './TimelineZoom';
 
 const KEYS: Readonly<Record<string, Direction>> = {
   ArrowRight: 'next',
@@ -16,8 +17,11 @@ const KEYS: Readonly<Record<string, Direction>> = {
   ArrowDown: 'down',
 };
 
-// Entry ids are slugs ([a-z0-9-]), safe inside an attribute selector as is.
-const barIn = (frame: HTMLElement | null, id: string) =>
+// Bar keys are slugs, or two joined by ">": safe in a quoted attribute selector.
+const barIn = (frame: HTMLElement | null, key: string) =>
+  frame?.querySelector<HTMLElement>(`[data-bar-key="${key}"]`);
+// The open entry's bar — its first, when it is drawn under two hosts.
+const barOf = (frame: HTMLElement | null, id: string) =>
   frame?.querySelector<HTMLElement>(`[data-entry-id="${id}"]`);
 
 interface Props {
@@ -28,7 +32,7 @@ interface Props {
 export function TimelineView({ highlight, selectedId }: Props) {
   const { catalogue, strings, today } = useReading();
   const [zoom, setZoom] = useState<Zoom>(DEFAULT_ZOOM);
-  const [previewId, setPreviewId] = useState<string>();
+  const [previewKey, setPreviewKey] = useState<string>();
   const frame = useRef<HTMLDivElement>(null);
   const timeline = timelineOf(catalogue.entries, today);
 
@@ -37,14 +41,14 @@ export function TimelineView({ highlight, selectedId }: Props) {
   useEffect(() => {
     const scroller = frame.current;
     if (!scroller) return;
-    const selected = selectedId ? barIn(scroller, selectedId) : undefined;
+    const selected = selectedId ? barOf(scroller, selectedId) : undefined;
     if (selected) selected.scrollIntoView?.({ block: 'nearest', inline: 'center' });
     else scroller.scrollLeft = scroller.scrollWidth;
   }, [zoom, selectedId]);
 
   const walk = (event: KeyboardEvent<HTMLDivElement>) => {
     const direction = KEYS[event.key];
-    const from = (event.target as HTMLElement).dataset.entryId;
+    const from = (event.target as HTMLElement).dataset.barKey;
     if (!direction || !from) return;
     event.preventDefault();
     const to = neighbour(timeline, from, direction);
@@ -61,7 +65,7 @@ export function TimelineView({ highlight, selectedId }: Props) {
         {/* The arrow keys move between the bars, which are the links: the grid only listens. */}
         <div
           className="timeline-grid"
-          style={{ width: `${widthOf(zoom, timeline.months)}%` }}
+          style={{ '--stretch': stretchOf(zoom, timeline.months) } as CSSProperties}
           onKeyDown={walk}
         >
           <div className="timeline-years" aria-hidden="true">
@@ -77,9 +81,9 @@ export function TimelineView({ highlight, selectedId }: Props) {
               lane={lane}
               months={timeline.months}
               selectedId={selectedId}
-              previewId={previewId}
+              previewKey={previewKey}
               highlight={highlight}
-              onPreview={setPreviewId}
+              onPreview={setPreviewKey}
               last={index === timeline.lanes.length - 1}
             />
           ))}

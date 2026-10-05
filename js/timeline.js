@@ -17,8 +17,11 @@
 
   // Zoom: the scale only — the whole career stays drawn, scrolled to today.
   const setZoom = (years) => {
-    grid.style.width =
-      years === 'all' ? '100%' : `${Math.max(100, (months / (Number(years) * 12)) * 100)}%`;
+    // How far the time axis is stretched: 1 fits the whole career in the frame,
+    // more shows exactly that many years (css/timeline.css keeps the lane
+    // titles' column out of the sum).
+    const stretch = years === 'all' ? 1 : Math.max(1, months / (Number(years) * 12));
+    grid.style.setProperty('--stretch', String(stretch));
     for (const b of zoom.querySelectorAll('button'))
       b.setAttribute('aria-pressed', String(b.dataset.years === years));
     const current = section.querySelector('.tl-bar[aria-current="true"]');

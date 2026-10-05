@@ -1,83 +1,69 @@
-// Query: the read model behind the landscape timeline PDF — the interactive
-// view's timeline, on paper. One lane per kind of entry, one bar per dated
-// entry, measured in months (year * 12 + month - 1), up to the current month —
-// over the whole career, or over the last `years` only (the 2- and 5-year PDFs),
-// where an entry begun earlier is cut at the start of the span.
-
+// Query: the read model behind the timeline PDFs — the site's timeline, on
+// paper (lib/timeline-groups.js: each experience, degree or competition with
+// the projects and the volunteering it carried). Over the whole career, or
+// over the last `years` only (the 2- and 5-year PDFs), where what began earlier
+// is cut at the start of the span. Each bar carries the text paper needs: a
+// name in bold, then the rest.
 const { truncate } = require('../tex');
+const { entryGroups, monthOf, monthNow } = require('../../timeline-groups');
 
 // Long names ("EDITx: IT Challenges, IT Jobs, Education in IT for X") would
 // push their row's neighbours far along; the bar's place says the rest.
 const STRONG_MAX = 30;
 const REST_MAX = 34;
 
-const ISO = /^(\d{4})(?:-(\d{2}))?(?:-\d{2})?$/;
+// Under its host a bar is told apart by its name alone; the host says where.
+const worded = (bar, nested) => ({
+  kind: bar.kind,
+  start: bar.start,
+  end: bar.end,
+  ongoing: bar.ongoing,
+  clipped: false,
+  strong: truncate(bar.name, STRONG_MAX),
+  rest: nested ? '' : truncate(bar.title, REST_MAX),
+});
 
-function monthOf(text) {
-  const match = ISO.exec(String(text));
-  if (!match) throw new Error(`Unreadable date "${text}" (expected YYYY, YYYY-MM or YYYY-MM-DD)`);
-  return Number(match[1]) * 12 + (match[2] ? Number(match[2]) : 1) - 1;
-}
+const reaches = (bar, from) => bar.end >= from;
+const cut = (bar, from) => (bar.start < from ? { ...bar, start: from, clipped: true } : bar);
 
-const isOngoing = (endDate) => !endDate || endDate === 'Present';
+// The lane of what stands alone, by the kind of the bar left on its own.
+const ALONE = { project: 'projects', volunteer: 'volunteer' };
 
-// What each lane reads from its records: the name in bold, then the rest.
-const LANES = [
-  { kind: 'work', records: (r) => r.work, strong: (w) => w.company, rest: (w) => w.position },
-  {
-    kind: 'education',
-    records: (r) => r.education,
-    strong: (e) => e.institution,
-    rest: (e) => e.studyType,
-  },
-  {
-    kind: 'projects',
-    records: (r) => (r.projects || []).filter((p) => !p.courseUnit),
-    strong: (p) => p.name,
-    rest: (p) => p.entity,
-  },
-  {
-    kind: 'volunteer',
-    records: (r) => r.volunteer,
-    strong: (v) => v.organization,
-    rest: (v) => v.position,
-  },
-];
-
-function barOf(lane, record, now) {
-  const start = monthOf(record.startDate);
-  const ongoing = isOngoing(record.endDate);
-  const end = ongoing ? now : monthOf(record.endDate);
-  if (end < start) {
-    throw new Error(`${record.id} ends (${record.endDate}) before it starts (${record.startDate})`);
+// Cuts every group to the span. A host that ended before it takes its group
+// away — but what it carried and still runs is kept, standing alone.
+function within(lanes, from) {
+  const orphans = [];
+  const kept = lanes.map((lane) => ({
+    kind: lane.kind,
+    groups: lane.groups.flatMap(({ head, children }) => {
+      const inSpan = children.filter((c) => reaches(c, from)).map((c) => cut(c, from));
+      if (reaches(head, from)) return [{ head: cut(head, from), children: inSpan }];
+      orphans.push(...inSpan);
+      return [];
+    }),
+  }));
+  for (const orphan of orphans) {
+    const kind = ALONE[orphan.kind];
+    if (!kept.some((l) => l.kind === kind)) kept.push({ kind, groups: [] });
+    kept.find((l) => l.kind === kind).groups.push({ head: orphan, children: [] });
   }
-  return {
-    id: record.id,
-    start,
-    end,
-    ongoing,
-    clipped: false,
-    strong: truncate(lane.strong(record), STRONG_MAX),
-    rest: truncate(lane.rest(record), REST_MAX),
-  };
+  return kept.filter((lane) => lane.groups.length > 0);
 }
-
-// Keeps what reaches into the span, cutting what began before it.
-const within = (bars, from) =>
-  bars
-    .filter((bar) => bar.end >= from)
-    .map((bar) => (bar.start < from ? { ...bar, start: from, clipped: true } : bar));
 
 function timelineBars(resume, today, years = null) {
-  const now = today.getUTCFullYear() * 12 + today.getUTCMonth();
+  const now = monthNow(today);
+  const all = entryGroups(resume, now).map((lane) => ({
+    kind: lane.kind,
+    groups: lane.groups.map(({ head, children }) => ({
+      head: worded(head, false),
+      children: children.map((c) => worded(c, true)),
+    })),
+  }));
   const spanStart = years === null ? null : now - years * 12 + 1;
-  const lanes = LANES.flatMap((lane) => {
-    const dated = (lane.records(resume) || []).filter((record) => record.startDate);
-    const all = dated.map((record) => barOf(lane, record, now));
-    const bars = spanStart === null ? all : within(all, spanStart);
-    return bars.length ? [{ kind: lane.kind, bars }] : [];
-  });
-  const starts = lanes.flatMap((lane) => lane.bars.map((bar) => bar.start));
+  const lanes = spanStart === null ? all : within(all, spanStart);
+  const starts = lanes.flatMap((l) =>
+    l.groups.flatMap((g) => [g.head, ...g.children].map((b) => b.start)),
+  );
   return { from: spanStart ?? Math.min(now, ...starts), to: now, lanes };
 }
 

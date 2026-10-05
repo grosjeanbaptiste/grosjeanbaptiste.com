@@ -2,8 +2,8 @@
 // time from the same entries (lanes, bars placed in percent of the career), a
 // link from each bar to its entry further down the page, and js/timeline.js
 // adding the zoom, the arrow keys and the hover preview on top. Without the
-// script the bars are still links; on paper the timeline is left out — the
-// LaTeX CV the print follows has none.
+// script the bars are still links; on paper it goes to the verso
+// (js/print-layout.js).
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -41,11 +41,22 @@ const bars = (kind) =>
     ),
   ].flatMap((m) => [...m[0].matchAll(/<(a|span) class="tl-bar"[^>]*>/g)].map((b) => b[0]));
 
-test('one bar per dated entry, in the lane of its kind', () => {
+// Acteble's project is drawn under Acteble, in the experiences; only Baba,
+// which no entry references, is left in a lane of projects.
+test('a bar per entry, a project under the experience that carried it', () => {
   assert.deepEqual(
     [bars('work').length, bars('education').length, bars('projects').length],
-    [2, 1, 2],
+    [3, 1, 1],
   );
+});
+
+test('what an entry carried is marked as nested, with its own kind', () => {
+  const nested = bars('work').find((b) => b.includes('data-depth="1"'));
+  assert.match(nested, /data-kind="project"/);
+});
+
+test('an entry that carried something is outlined as a group', () => {
+  assert.equal((html.match(/class="tl-group"/g) || []).length, 1);
 });
 
 test('course units are not drawn', () => {
@@ -117,7 +128,9 @@ test('the page loads the timeline script and its styles', () => {
   );
 });
 
-test('the timeline is left out of print', () => {
+// It used to be left out of print altogether; it now prints, on the verso —
+// see scripts/lib/print-timeline.test.js.
+test('the timeline is no longer dropped from the printed sheet', () => {
   const print = fs.readFileSync(path.join(ROOT, 'css/print.css'), 'utf8');
-  assert.match(print, /#timeline[^{]*\{[^}]*display:\s*none/);
+  assert.doesNotMatch(print, /#timeline/);
 });

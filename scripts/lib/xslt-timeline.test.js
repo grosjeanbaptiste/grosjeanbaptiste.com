@@ -50,16 +50,17 @@ test('a work bar targets its own entry', () => {
   assert.equal(barNamed('work', 'Acteble').target, 'work-acteble-founder');
 });
 
-test('a project bar targets the entry that hosts it', () => {
-  assert.equal(barNamed('projects', 'Acteble').target, 'work-acteble-founder');
+test('a project under an experience targets that experience', () => {
+  const project = laid.lanes.find((l) => l.kind === 'work').bars.find((b) => b.depth === 1);
+  assert.deepEqual([project.name, project.target], ['Acteble', 'work-acteble-founder']);
 });
 
 test('a project no entry hosts has no target', () => {
   assert.equal(barNamed('projects', 'Baba').target, undefined);
 });
 
-test('a volunteer bar targets the entry of its organisation', () => {
-  assert.equal(barNamed('volunteer', 'UMons').target, 'education-umons-master');
+test('a volunteering role targets the degree of its organisation', () => {
+  assert.equal(barNamed('education', 'Buddy').target, 'education-umons-master');
 });
 
 test('a bar is placed in percent of the career', () => {
@@ -67,6 +68,11 @@ test('a bar is placed in percent of the career', () => {
     [barNamed('education', 'UMons').left, barNamed('education', 'UMons').width],
     ['0%', '97.96%'],
   );
+});
+
+test('an entry that carried something has its outline laid out', () => {
+  const [group] = laid.lanes.find((l) => l.kind === 'education').groups;
+  assert.deepEqual([group.row, group.rows], [0, 2]);
 });
 
 for (const lang of LANGS) {

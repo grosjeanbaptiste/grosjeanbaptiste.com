@@ -8,6 +8,10 @@
   --lane-label: 8rem;
   --row-height: 2rem;
   position: relative;
+  /* The lane titles' column, then the time axis stretched by the zoom
+     (--stretch): "2 years" shows two years of axis. Sizing the whole grid
+     instead let the titles eat into the years on show. */
+  width: calc(var(--lane-label) + (100% - var(--lane-label)) * var(--stretch, 1));
   min-width: 48rem;
   display: grid;
   gap: 0.75rem;
@@ -64,7 +68,7 @@
 }
 
 .timeline-bar {
-  --hue: var(--app-accent);
+  --hue: var(--lane-hue);
   position: absolute;
   top: calc(var(--row) * var(--row-height));
   height: calc(var(--row-height) - 0.35rem);
@@ -88,16 +92,26 @@
   text-overflow: ellipsis;
 }
 
-.timeline-lane[data-kind="education"] .timeline-bar {
-  --hue: var(--app-accent-2);
+/* A lane's colour; what an entry carried is told apart inside its group
+   (timeline-interaction.css). */
+.timeline-lane {
+  --lane-hue: var(--app-accent);
 }
 
-.timeline-lane[data-kind="project"] .timeline-bar {
-  --hue: color-mix(in srgb, var(--app-accent) 55%, var(--app-accent-2));
+.timeline-lane[data-kind="education"] {
+  --lane-hue: var(--app-accent-2);
 }
 
-.timeline-lane[data-kind="volunteer"] .timeline-bar {
-  --hue: color-mix(in srgb, var(--app-accent) 35%, var(--app-muted));
+.timeline-lane[data-kind="competition"] {
+  --lane-hue: color-mix(in srgb, var(--app-accent-2) 60%, var(--app-muted));
+}
+
+.timeline-lane[data-kind="project"] {
+  --lane-hue: color-mix(in srgb, var(--app-accent) 55%, var(--app-accent-2));
+}
+
+.timeline-lane[data-kind="volunteer"] {
+  --lane-hue: color-mix(in srgb, var(--app-accent) 35%, var(--app-muted));
 }
 
 .timeline-bar:hover,

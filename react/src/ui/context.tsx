@@ -29,6 +29,7 @@ export function useReading(): Reading {
 const KIND_LABEL_KEYS: Readonly<Record<EntryKind, string>> = {
   work: 'experience',
   education: 'education',
+  competition: 'competitions',
   project: 'projects',
   course: 'courseUnits',
   volunteer: 'volunteer',

@@ -4,10 +4,11 @@ export const ZOOMS = [2, 5, null] as const; // years per screen; null = the whol
 export type Zoom = (typeof ZOOMS)[number];
 export const DEFAULT_ZOOM: Zoom = 5;
 
-// Width of the drawn career, in percent of its frame: wider than the frame
-// when zoomed in (the frame scrolls), never narrower.
-export const widthOf = (zoom: Zoom, months: number) =>
-  zoom === null ? 100 : Math.max(100, (months / (zoom * 12)) * 100);
+// How far the time axis is stretched: 1 fits the whole career in the frame,
+// more shows exactly `zoom` years of it (the frame scrolls), never less than 1.
+// styles/timeline.css keeps the lane titles' column out of the sum.
+export const stretchOf = (zoom: Zoom, months: number) =>
+  zoom === null ? 1 : Math.max(1, months / (zoom * 12));
 
 export function TimelineZoom({ zoom, onZoom }: { zoom: Zoom; onZoom: (zoom: Zoom) => void }) {
   const { strings } = useReading();

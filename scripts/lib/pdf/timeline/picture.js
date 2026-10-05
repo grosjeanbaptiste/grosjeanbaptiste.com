@@ -6,20 +6,31 @@ const { restOf } = require('./measure');
 const LANE_TITLE = {
   work: 'experience',
   education: 'education',
+  competitions: 'competitions',
   projects: 'projects',
   volunteer: 'volunteer',
 };
 
-// The interactive view's lane colours, in the PDF's palette.
+// An entry's colour by its kind, in the PDF's palette. What an entry carried is
+// drawn under it in a lighter tint of its own colour, with dark text.
 const FILL = {
   work: 'ThirdColor',
   education: 'PrimaryColor',
-  projects: 'SecondaryColor!75!ThirdColor',
+  competition: 'PrimaryColor!55!ThirdColor',
+  project: 'SecondaryColor!75!ThirdColor',
   volunteer: 'BodyColor',
+};
+const fillOf = (bar) => (bar.depth === 1 ? `${FILL[bar.kind]}!30!BackgroundColor` : FILL[bar.kind]);
+// The outline of an entry that carried something, in its lane's colour.
+const OUTLINE = {
+  work: 'ThirdColor',
+  education: 'PrimaryColor',
+  competitions: 'PrimaryColor!55!ThirdColor',
 };
 
 const mm = (n) => n.toFixed(2);
-const TITLE_X = -27;
+// Where the lane titles go, left of the axis (mm), unless the sheet says.
+const TITLES = { x: -27, width: 24, size: 8 };
 
 function yearLines(sheet) {
   return sheet.years.flatMap(({ year, x }) => [
@@ -32,26 +43,46 @@ function barLines(lane, sheet) {
   return lane.bars.flatMap((bar) => {
     const y = lane.top - bar.row * sheet.pitch;
     const inside = bar.label.place === 'inside';
+    // White on a full colour; dark on the light tint of what an entry carried.
+    const ink = inside && bar.depth === 0 ? 'white' : 'EmphasisColor';
     const anchor = bar.label.place === 'left' ? 'east' : 'west';
     const text = `\\textbf{${tex(bar.strong)}}${tex(restOf(bar))}`;
     // A bar the span cut short points left, into the gap before the axis.
     const cut = bar.clipped
       ? [
-          `\\fill[${FILL[lane.kind]}] (-0.20,${mm(y)}) -- (-1.60,${mm(y - sheet.bar / 2)}) -- (-0.20,${mm(y - sheet.bar)}) -- cycle;`,
+          `\\fill[${fillOf(bar)}] (-0.20,${mm(y)}) -- (-1.60,${mm(y - sheet.bar / 2)}) -- (-0.20,${mm(y - sheet.bar)}) -- cycle;`,
+        ]
+      : [];
+    // A bar with no room for even a cut name carries none.
+    const label = bar.strong
+      ? [
+          `\\node[anchor=${anchor},text=${ink}] at (${mm(bar.label.x)},${mm(y - sheet.bar / 2)}) {${text}};`,
         ]
       : [];
     return [
       ...cut,
-      `\\fill[${FILL[lane.kind]},rounded corners=0.5mm] (${mm(bar.x0)},${mm(y)}) rectangle (${mm(bar.x1)},${mm(y - sheet.bar)});`,
-      `\\node[anchor=${anchor},text=${inside ? 'white' : 'EmphasisColor'}] at (${mm(bar.label.x)},${mm(y - sheet.bar / 2)}) {${text}};`,
+      `\\fill[${fillOf(bar)},rounded corners=0.5mm] (${mm(bar.x0)},${mm(y)}) rectangle (${mm(bar.x1)},${mm(y - sheet.bar)});`,
+      ...label,
     ];
   });
 }
 
+// Behind the bars: each entry that carried something, with what it carried.
+function outlineLines(lane, sheet) {
+  const colour = OUTLINE[lane.kind] ?? 'BodyColor';
+  return lane.outlines.map((o) => {
+    const top = lane.top - o.row * sheet.pitch + 0.5;
+    const bottom = lane.top - (o.row + o.rows) * sheet.pitch + (sheet.pitch - sheet.bar) - 0.5;
+    return `\\filldraw[draw=${colour}!55,fill=${colour}!10,line width=0.3pt,rounded corners=0.8mm] (${mm(o.x0 - 0.6)},${mm(top)}) rectangle (${mm(o.x1 + 0.6)},${mm(bottom)});`;
+  });
+}
+
 function laneLines(lane, sheet, t) {
+  const { x, width, size } = sheet.titles ?? TITLES;
   return [
-    `\\draw[headingrule,line width=0.5pt] (${TITLE_X},${mm(lane.top + 1)}) -- (${mm(TITLE_X + 24)},${mm(lane.top + 1)});`,
-    `\\node[anchor=north west,text width=24mm,align=left,text=heading,font=\\fontsize{8}{9}\\selectfont\\bfseries] at (${TITLE_X},${mm(lane.top)}) {${tex(t[LANE_TITLE[lane.kind]])}};`,
+    `\\draw[headingrule,line width=0.5pt] (${x},${mm(lane.top + 1)}) -- (${mm(x + width)},${mm(lane.top + 1)});`,
+    `\\node[anchor=north west,text width=${width}mm,align=left,text=heading,font=\\fontsize{${size}}{${size + 1}}\\selectfont\\bfseries] at (${x},${mm(lane.top)}) {${tex(t[LANE_TITLE[lane.kind]])}};`,
+    ...outlineLines(lane, sheet),
     ...barLines(lane, sheet),
   ];
 }

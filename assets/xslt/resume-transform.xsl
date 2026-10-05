@@ -508,6 +508,26 @@
             .clipped-text + .full-text { display: none; }
             /* The references get the verso, as they do in the PDF. */
             .refs { break-before: page; }
+            /* The timeline is part of the page, so it is printed: the script
+               below sets it at the top of the verso, above the references, the
+               whole career across the column, no controls. /css/timeline.css
+               keeps it off the print wherever the script has not moved it —
+               `html` outweighs that rule. */
+            html .refs #timeline { display: block; margin: 0 0 6pt; break-inside: avoid; }
+            html .refs .tl-zoom, html .refs .tl-preview { display: none !important; }
+            html .refs .tl-scroll { overflow: visible; padding: 0; }
+            html .refs .tl-grid {
+              --row-height: 10pt; --lane-label: 2.2cm;
+              width: 100% !important; min-width: 0; gap: 3pt;
+            }
+            html .refs .tl-years { height: 8pt; font-size: 6pt; }
+            html .refs .tl-lane-label {
+              position: static; padding: 0 4pt 0 0; background: none; font-size: 6.5pt;
+            }
+            html .refs .tl-bar {
+              height: calc(var(--row-height) - 2pt); padding-inline: 2pt;
+              font-size: 6pt; outline: none; transform: none;
+            }
             h2 { font-size: 9pt; margin: 6pt 0 3pt; break-after: avoid; }
             h3 { font-size: 7.5pt; margin: 0; }
             p, ul, ol { margin: 0 0 2pt; }
@@ -544,8 +564,19 @@
         <script>
           (function () {
             var edu, parent, next;
+            // The timeline goes to the top of the verso, above the references.
+            var timeline, timelineParent, timelineNext;
+            function moveTimeline() {
+              timeline = document.querySelector('#timeline');
+              var refs = document.querySelector('.refs');
+              if (!timeline || !refs) { timeline = null; return; }
+              timelineParent = timeline.parentNode;
+              timelineNext = timeline.nextSibling;
+              refs.insertBefore(timeline, refs.firstChild);
+            }
             function prepare() {
               if (parent) return;
+              if (!timeline) moveTimeline();
               edu = document.querySelector('.edu-block');
               var side = document.querySelector('.sidebar');
               if (!edu || !side) return;
@@ -554,6 +585,10 @@
               side.insertBefore(edu, side.querySelector('h2'));
             }
             function restore() {
+              if (timeline) {
+                timelineParent.insertBefore(timeline, timelineNext);
+                timeline = null;
+              }
               if (!parent) return;
               parent.insertBefore(edu, next);
               parent = null;
