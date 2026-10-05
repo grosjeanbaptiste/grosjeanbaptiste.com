@@ -27,6 +27,16 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // A page drawn at build time shows the timeline zoomed in: open it on
+      // today, as the app does, before the first paint.
+      for (const frame of document.querySelectorAll('.timeline-scroll')) {
+        frame.scrollLeft = frame.scrollWidth;
+      }
+    </script>
+    <!-- Without JavaScript the drawn page is all there is: show the whole career
+         rather than a zoomed timeline that cannot be scrolled to today. -->
+    <noscript><style>.timeline-grid { width: 100% !important; }</style></noscript>
     <noscript>This view needs JavaScript — the <a href="/">classic CV</a> does not.</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -128,3 +128,21 @@
   content: "⌕";
   margin-right: 0.5rem;
 }
+
+/* The theme toggle's icon, chosen by the page's theme rather than by the app's
+ * state: a page drawn at build time cannot know the visitor's theme, and the
+ * icon must not flip when the app takes over. Same conditions as the palette
+ * in /css/variables.css. */
+.theme-icon::before {
+  content: "☀";
+}
+
+:root[data-theme="dark"] .theme-icon::before {
+  content: "☾";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-icon::before {
+    content: "☾";
+  }
+}

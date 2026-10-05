@@ -22,13 +22,18 @@ const CHROME_CANDIDATES = [
 const chrome = process.env.CHROME_PATH || CHROME_CANDIDATES.find((c) => fs.existsSync(c));
 
 const PROBE = `<script>
+const warned = [];
+const warn = console.warn;
+console.warn = (...args) => { warned.push(args.map(String).join(' ')); warn(...args); };
 addEventListener('load', () => setTimeout(() => {
   const fetched = performance.getEntriesByType('resource').map((e) => new URL(e.name).pathname);
+  document.documentElement.setAttribute('data-warned', JSON.stringify(warned));
   document.documentElement.setAttribute('data-fetched', JSON.stringify(fetched));
 }, 14000));
 </script>`;
 
 let fetched;
+let warned;
 test.before(async () => {
   if (!chrome) {
     if (process.env.CI) throw new Error('no Chrome on this runner, so the warm-up went unchecked');
@@ -54,6 +59,8 @@ test.before(async () => {
     const raw = (stdout.match(/data-fetched="([^"]*)"/) || [])[1];
     assert.ok(raw, 'the probe never ran');
     fetched = JSON.parse(raw.replaceAll('&quot;', '"').replaceAll('&amp;', '&'));
+    const rawWarned = (stdout.match(/data-warned="([^"]*)"/) || [])[1] ?? '[]';
+    warned = JSON.parse(rawWarned.replaceAll('&quot;', '"').replaceAll('&amp;', '&'));
   } finally {
     server.close();
     fs.rmSync(out, { recursive: true, force: true, maxRetries: 10, retryDelay: 300 });
@@ -79,6 +86,12 @@ check('it warms the PDF engine', () => assert.ok(some(/^\/app\/assets\/pdf-[\w-]
 check('it warms the PDF itself', () =>
   assert.ok(some(/^\/assets\/cv\/cv_grosjean_baptiste_fr\.pdf$/)),
 );
+// A page drawn at build time carries <link rel="preload" imagesrcset> with no
+// href (React writes it for the photo): that is not a file to fetch.
+check('it asks for nothing that is not a file', () =>
+  assert.ok(!some(/\/null$/), 'fetched …/null'),
+);
+check('it warms the other displays without a single failure', () => assert.deepEqual(warned, []));
 check('it leaves the XSLT displays alone', () => assert.ok(!some(/resume-fr.*\.xml$/)));
 
 for (const lang of LANGS) {

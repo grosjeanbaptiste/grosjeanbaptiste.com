@@ -4,6 +4,7 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useParams } from 'react-router';
 import { type Lang, isLang } from '../application/lang';
+import type { ResumeDocument } from '../domain/resume';
 import type { ResumeSource } from '../domain/resume-source';
 import { NotFound } from './NotFound';
 import { ReadingProvider, useReading } from './context';
@@ -22,6 +23,8 @@ interface ShellProps {
   readonly source: ResumeSource;
   readonly pdf: PdfRenderer;
   readonly today: Date;
+  // One language's data already in hand: see useCatalogue.
+  readonly initial?: ResumeDocument;
 }
 
 export function LangShell(props: ShellProps) {
@@ -30,8 +33,8 @@ export function LangShell(props: ShellProps) {
   return <LoadedShell {...props} lang={lang} />;
 }
 
-function LoadedShell({ source, pdf, today, lang }: ShellProps & { lang: Lang }) {
-  const loading = useCatalogue(source, lang);
+function LoadedShell({ source, pdf, today, lang, initial }: ShellProps & { lang: Lang }) {
+  const loading = useCatalogue(source, lang, initial);
   const { theme, toggle } = useTheme();
   const strings = STRINGS[lang];
 

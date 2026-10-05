@@ -5,7 +5,13 @@ import { useCallback, useEffect, useState } from 'react';
 export type Theme = 'light' | 'dark';
 const KEY = 'theme';
 
+// A page drawn at build time (src/prerender.tsx) has no browser to ask: it is
+// drawn light, and the page's inline script sets the visitor's theme on <html>
+// before anything paints.
+const inBrowser = typeof window !== 'undefined';
+
 function stored(): Theme | null {
+  if (!inBrowser) return null;
   try {
     const value = localStorage.getItem(KEY);
     return value === 'light' || value === 'dark' ? value : null;
@@ -16,6 +22,7 @@ function stored(): Theme | null {
 }
 
 function systemTheme(): Theme {
+  if (!inBrowser) return 'light';
   return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Catalogue } from '../application/catalogue';
 import type { Lang } from '../application/lang';
+import type { ResumeDocument } from '../domain/resume';
 import type { ResumeSource } from '../domain/resume-source';
 
 export type Loading =
@@ -10,10 +11,20 @@ export type Loading =
 
 // Loads one language's CV. A failure is logged and surfaced as a state the
 // shell renders as an alert — never swallowed into an empty page.
-export function useCatalogue(source: ResumeSource, lang: Lang): Loading {
-  const [state, setState] = useState<Loading>({ status: 'loading' });
+// `initial`: that language's data, already in hand (a page drawn at build
+// time, or the live app taking over from it) — the CV then shows in the very
+// first render and nothing is fetched. It only counts for its own language.
+export function useCatalogue(source: ResumeSource, lang: Lang, initial?: ResumeDocument): Loading {
+  const handed = initial?.lang === lang ? initial : undefined;
+  const [state, setState] = useState<Loading>(() =>
+    handed ? { status: 'ready', catalogue: Catalogue.from(handed) } : { status: 'loading' },
+  );
 
   useEffect(() => {
+    if (handed) {
+      setState({ status: 'ready', catalogue: Catalogue.from(handed) });
+      return;
+    }
     let current = true;
     setState({ status: 'loading' });
     source
@@ -30,7 +41,7 @@ export function useCatalogue(source: ResumeSource, lang: Lang): Loading {
     return () => {
       current = false;
     };
-  }, [source, lang]);
+  }, [source, lang, handed]);
 
   return state;
 }

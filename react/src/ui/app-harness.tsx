@@ -115,6 +115,7 @@ export function renderApp(
   path: string,
   source: ResumeSource = new InMemorySource(),
   pdf: PdfRenderer = new FakePdfRenderer(),
+  initial?: ResumeDocument,
 ) {
   const user = userEvent.setup();
   const view = render(
@@ -122,6 +123,7 @@ export function renderApp(
       <App
         source={source}
         pdf={pdf}
+        initial={initial}
         browserLanguages={['nl-BE', 'en']}
         today={new Date('2026-10-01')}
       />

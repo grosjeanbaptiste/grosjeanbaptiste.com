@@ -23,10 +23,17 @@ const escapeHtml = (text) =>
     .replaceAll('"', '&quot;');
 
 const HEAD = /<!-- ROUTE-HEAD -->[\s\S]*?<!-- \/ROUTE-HEAD -->/;
+const ROOT = '<div id="root"></div>';
+// A reader page is left to the app: drawn at build time, its toolbar painted
+// sooner but its page picture later (the early text starts the fonts, which
+// then take the picture's bandwidth) — measured, 0.4 s on a slow connection.
+const UNDRAWN = '';
 
 // `ahead`: what the page starts fetching with its own HTML, instead of once
 // the app has booted — <link> tags, already written.
-function render(template, lang, title, description, ahead = []) {
+// `drawn`: the page's own HTML (src/prerender.tsx), put inside #root for the
+// visitor to see before the app's JavaScript has arrived.
+function render(template, lang, title, description, drawn, ahead = []) {
   const head = [
     '<!-- ROUTE-HEAD -->',
     `<title>${escapeHtml(title)}</title>`,
@@ -36,7 +43,10 @@ function render(template, lang, title, description, ahead = []) {
     `<meta property="og:description" content="${escapeHtml(description)}" />`,
     '<!-- /ROUTE-HEAD -->',
   ].join('\n    ');
-  return template.replace(HEAD, head).replace(/<html lang="[^"]*"/, `<html lang="${lang}"`);
+  return template
+    .replace(HEAD, head)
+    .replace(ROOT, () => `<div id="root">${drawn}</div>`)
+    .replace(/<html lang="[^"]*"/, `<html lang="${lang}"`);
 }
 
 // A fetch() the app will make, started early. crossorigin="anonymous" is what
@@ -55,9 +65,13 @@ const listAhead = (urls) =>
 // build (Vite's manifest).
 const engineFiles = ({ modules, styles, worker }) => [...modules, ...styles, worker];
 
-export function routePages(template, documents, engine) {
+// `draw(path, document)`: the page at that route of the app, as HTML.
+export function routePages(template, documents, engine, draw) {
   if (!HEAD.test(template)) throw new Error('index.html has lost its ROUTE-HEAD markers');
-  return documents.flatMap(({ lang, resume, views, pictures }) => {
+  if (!template.includes(ROOT)) throw new Error('index.html has lost its empty #root element');
+  return documents.flatMap((document) => {
+    const { lang, resume, views, pictures } = document;
+    const drawn = (path) => draw(path, document);
     const data = fetchAhead(`/app/data/${lang}.json`);
     // A reader page: its first page's picture and the data, fetched with it; the
     // PDF and the engine, listed for the other displays to warm.
@@ -73,14 +87,17 @@ export function routePages(template, documents, engine) {
     const { name, label } = resume.basics;
     const home = {
       path: `${lang}/index.html`,
-      html: render(template, lang, `${name} — ${label}`, label, [data]),
+      html: render(template, lang, `${name} — ${label}`, label, drawn(`/${lang}`), [data]),
     };
     const entries = SECTIONS.flatMap(([section, describe]) =>
       (resume[section] ?? []).map((entry) => {
         const { title, text } = describe(entry);
+        const route = `${lang}/${kindOf(section, entry)}/${entry.id}`;
         return {
-          path: `${lang}/${kindOf(section, entry)}/${entry.id}/index.html`,
-          html: render(template, lang, `${title} · ${name}`, text ?? title, [data]),
+          path: `${route}/index.html`,
+          html: render(template, lang, `${title} · ${name}`, text ?? title, drawn(`/${route}`), [
+            data,
+          ]),
         };
       }),
     );
@@ -91,6 +108,7 @@ export function routePages(template, documents, engine) {
         lang,
         `CV (PDF) · ${name}`,
         `${name} — ${label} (PDF)`,
+        UNDRAWN,
         readerAhead(`cv_grosjean_baptiste_${lang}.pdf`),
       ),
     };
@@ -103,6 +121,7 @@ export function routePages(template, documents, engine) {
         lang,
         `${timeline.label} · ${name}`,
         `${name} — ${timeline.label}`,
+        UNDRAWN,
         readerAhead(`cv_grosjean_baptiste_timeline_${lang}.pdf`),
       ),
     };
