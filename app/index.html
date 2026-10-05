@@ -24,8 +24,8 @@
     <script type="speculationrules">
     {"prerender":[{"where":{"and":[{"selector_matches":".views-bar-link"},{"not":{"href_matches":"/app/*"}},{"not":{"href_matches":"/*.xml"}}]},"eagerness":"moderate"}]}
     </script>
-    <script type="module" crossorigin src="/app/assets/index-B5UDVB7i.js"></script>
-    <link rel="stylesheet" crossorigin href="/app/assets/index-BmdiV9pO.css">
+    <script type="module" crossorigin src="/app/assets/index-BbqRPJmo.js"></script>
+    <link rel="stylesheet" crossorigin href="/app/assets/index-8YcqWzCi.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="/css/views-bar.css">
@@ -35,6 +35,16 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // A page drawn at build time shows the timeline zoomed in: open it on
+      // today, as the app does, before the first paint.
+      for (const frame of document.querySelectorAll('.timeline-scroll')) {
+        frame.scrollLeft = frame.scrollWidth;
+      }
+    </script>
+    <!-- Without JavaScript the drawn page is all there is: show the whole career
+         rather than a zoomed timeline that cannot be scrolled to today. -->
+    <noscript><style>.timeline-grid{width:100%!important}</style></noscript>
     <noscript>This view needs JavaScript — the <a href="/">classic CV</a> does not.</noscript>
   </body>
 </html>

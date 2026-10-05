@@ -13,10 +13,16 @@ const DATA = join(APP, 'data');
 const langs = JSON.parse(readFileSync(join(DATA, 'languages.json'), 'utf8'));
 const documents = langs.map((lang) => JSON.parse(readFileSync(join(DATA, `${lang}.json`), 'utf8')));
 const manifest = JSON.parse(readFileSync(join(APP, '.vite', 'manifest.json'), 'utf8'));
+// The app's own rendering, built for Node by `vite build --ssr` just before:
+// each page is drawn into its HTML, for the visitor to see before the app's
+// JavaScript has arrived.
+const { prerender } = await import(join(HERE, '..', '.prerender', 'prerender.js'));
+const today = new Date();
 const pages = routePages(
   readFileSync(join(APP, 'index.html'), 'utf8'),
   documents,
   engineOf(manifest),
+  (path, document) => prerender(path, document, today),
 );
 
 for (const { path, html } of pages) {

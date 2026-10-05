@@ -18,6 +18,7 @@ const IGNORED_DIRS = new Set([
   'dist',
   'build',
   'app', // the React view's build output, minified
+  '.prerender', // the React view built for Node, to draw its pages at build time
 ]);
 
 // Generated from the modules css/style.css lists (scripts/lib/css-bundle.js):

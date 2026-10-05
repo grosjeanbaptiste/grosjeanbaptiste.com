@@ -54,12 +54,14 @@ function siteAssets(): Plugin {
 
 // Served from https://www.grosjeanbaptiste.com/app/ — built into ../app,
 // which GitHub Pages serves as-is next to the static and XSLT views.
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   base: '/app/',
   plugins: [react(), siteAssets()],
   // The manifest names the hashed chunks: scripts/route-pages.mjs reads it to
   // have the reader pages start loading the PDF engine with their own HTML.
-  build: { outDir: '../app', emptyOutDir: true, manifest: true },
+  // The Node build (src/prerender.tsx → .prerender/) is code only: it must not
+  // take a copy of public/ with it.
+  build: { outDir: '../app', emptyOutDir: true, manifest: true, copyPublicDir: !isSsrBuild },
   test: {
     environment: 'jsdom',
     setupFiles: ['./spec-support/setup.ts'],
@@ -68,4 +70,4 @@ export default defineConfig({
     testTimeout: 30_000,
     include: ['src/**/*.spec.{ts,tsx}', 'scripts/**/*.spec.mjs'],
   },
-});
+}));

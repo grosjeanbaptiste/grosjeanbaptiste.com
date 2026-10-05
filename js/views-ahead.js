@@ -26,9 +26,11 @@
     const response = await warm(page);
     if (!response) return;
     const html = new DOMParser().parseFromString(await response.text(), 'text/html');
-    const announced = [...html.querySelectorAll(ANNOUNCED)].map(
-      (element) => element.getAttribute('src') ?? element.getAttribute('href'),
-    );
+    // Not every announcement names a file: a preload may carry only an
+    // imagesrcset, for the browser to choose from.
+    const announced = [...html.querySelectorAll(ANNOUNCED)]
+      .map((element) => element.getAttribute('src') ?? element.getAttribute('href'))
+      .filter(Boolean);
     // A reader page lists its heavy files (the PDF, the PDF engine) apart, in
     // JSON, so that it does not fetch them ahead itself — only we do.
     const listed = JSON.parse(html.querySelector('script.views-ahead')?.textContent ?? '[]');

@@ -23,6 +23,7 @@
       "assets/data/i18n/**",
       "package-lock.json",
       "app/**",
+      "react/.prerender/**",
       "css/bundle.css",
       "css/bundle-print.css",
       "react/public/data/**"

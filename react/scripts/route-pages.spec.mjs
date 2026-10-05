@@ -5,7 +5,10 @@ const template = `<html lang="en"><head>
 <!-- ROUTE-HEAD -->
 <title>default</title>
 <!-- /ROUTE-HEAD -->
-</head></html>`;
+</head><body><div id="root"></div></body></html>`;
+
+// Stands for src/prerender.tsx: says which page of which language it drew.
+const draw = (path, document) => `<main data-drawn="${path}" data-lang="${document.lang}"></main>`;
 
 const doc = (lang, position) => ({
   lang,
@@ -33,7 +36,7 @@ const engine = {
   styles: ['/app/assets/pdf_viewer-ghi.css'],
   worker: '/app/assets/pdf.worker.min-jkl.mjs',
 };
-const pages = routePages(template, [doc('en', 'Founder'), doc('fr', 'Fondateur')], engine);
+const pages = routePages(template, [doc('en', 'Founder'), doc('fr', 'Fondateur')], engine, draw);
 const page = (path) => pages.find((p) => p.path === path);
 
 describe('routePages', () => {
@@ -60,9 +63,9 @@ describe('routePages', () => {
   });
 
   it('fails when the export has lost the timeline display', () => {
-    expect(() => routePages(template, [{ ...doc('en', 'Founder'), views: [] }], engine)).toThrow(
-      /timeline/,
-    );
+    expect(() =>
+      routePages(template, [{ ...doc('en', 'Founder'), views: [] }], engine, draw),
+    ).toThrow(/timeline/);
   });
 
   it("starts fetching the picture of the CV's first page with the reader page", () => {
@@ -82,9 +85,9 @@ describe('routePages', () => {
   });
 
   it('fails when the export has no picture of a reader’s PDF', () => {
-    expect(() => routePages(template, [{ ...doc('en', 'Founder'), pictures: {} }], engine)).toThrow(
-      /no page picture of cv_grosjean_baptiste_en\.pdf/,
-    );
+    expect(() =>
+      routePages(template, [{ ...doc('en', 'Founder'), pictures: {} }], engine, draw),
+    ).toThrow(/no page picture of cv_grosjean_baptiste_en\.pdf/);
   });
 
   it('starts fetching the language’s data with every page, for the app to find it there', () => {
@@ -144,6 +147,32 @@ describe('routePages', () => {
     expect(page('fr/index.html').html).not.toContain('pdf-abc.js');
   });
 
+  it('draws each page into its root, for the visitor to see before the app starts', () => {
+    expect(page('fr/index.html').html).toContain(
+      '<div id="root"><main data-drawn="/fr" data-lang="fr"></main></div>',
+    );
+  });
+
+  it('draws an entry’s page on its own route', () => {
+    expect(page('fr/work/acteble-founder/index.html').html).toContain(
+      'data-drawn="/fr/work/acteble-founder"',
+    );
+  });
+
+  // Measured: drawn at build time, a reader page painted its toolbar 0.6 s
+  // sooner and its page picture — the content — 0.4 s later: the early text
+  // starts the fonts, which then compete with the picture. Left to the app.
+  it('leaves the reader pages undrawn, so nothing competes with the page picture', () => {
+    for (const path of ['fr/pdf/index.html', 'fr/pdf/timeline/index.html']) {
+      expect(page(path).html).toContain('<div id="root"></div>');
+    }
+  });
+
+  it('fails when the template has lost its root', () => {
+    const rootless = template.replace('<div id="root"></div>', '');
+    expect(() => routePages(rootless, [doc('en', 'Founder')], engine, draw)).toThrow(/#root/);
+  });
+
   it('files course units under the course kind', () => {
     expect(page('en/course/algo/index.html')).toBeDefined();
   });
@@ -159,6 +188,8 @@ describe('routePages', () => {
   });
 
   it('fails when the template has lost its head markers', () => {
-    expect(() => routePages('<head></head>', [doc('en', 'Founder')], engine)).toThrow(/ROUTE-HEAD/);
+    expect(() => routePages('<head></head>', [doc('en', 'Founder')], engine, draw)).toThrow(
+      /ROUTE-HEAD/,
+    );
   });
 });

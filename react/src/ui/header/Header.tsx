@@ -25,7 +25,7 @@ export function Header({ onSearch }: { onSearch: () => void }) {
           aria-label={catalogue.text('themeLabel')}
           aria-pressed={theme === 'dark'}
         >
-          <span aria-hidden="true">{theme === 'dark' ? '☾' : '☀'}</span>
+          <span aria-hidden="true" className="theme-icon" />
         </button>
       </nav>
     </header>
