@@ -26,6 +26,7 @@ const XML_ITEM_NAMES = {
   ticks: 'tick',
   lanes: 'lane',
   bars: 'bar',
+  groups: 'group',
 };
 
 const xmlEsc = (s) =>

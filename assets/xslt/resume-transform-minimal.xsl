@@ -362,7 +362,19 @@
             .meta-bar span { display: block; margin-right: 0; margin-bottom: 3px; }
             blockquote { font-size: 0.9em; padding-left: 12px; }
           }
-          @media print { .toolbar { display: none; } }
+          @media print {
+            .toolbar { display: none; }
+            /* The timeline is part of the page, so it is printed: in place, the
+               whole career in the frame. /css/timeline.css keeps it off the
+               print by default (the classic page moves it) — `html` outweighs
+               that rule. Bars are backgrounds, which a print leaves out. */
+            html #timeline { display: block; break-inside: avoid; }
+            html #timeline .tl-scroll { overflow: visible; }
+            html #timeline .tl-grid { width: 100% !important; min-width: 0; }
+            html #timeline .tl-bar {
+              -webkit-print-color-adjust: exact; print-color-adjust: exact;
+            }
+          }
         </style>
         <script>
           (function() {

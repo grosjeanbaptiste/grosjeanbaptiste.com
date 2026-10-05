@@ -1087,7 +1087,10 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   --lane-label: 7rem;
   --row-height: 1.9rem;
   position: relative;
-  min-width: 100%;
+  /* The lane titles' column, then the time axis stretched by the zoom
+     (js/timeline.js sets --stretch): "2 years" shows two years of axis. Sizing
+     the whole grid instead let the titles eat into the years on show. */
+  width: calc(var(--lane-label) + (100% - var(--lane-label)) * var(--stretch, 1));
   display: grid;
   gap: 0.75rem;
 }
@@ -1132,7 +1135,7 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
 }
 
 .tl-bar {
-  --hue: var(--primary-color);
+  --hue: var(--lane-hue, var(--primary-color));
   position: absolute;
   top: calc(var(--row) * var(--row-height));
   height: calc(var(--row-height) - 0.35rem);
@@ -1157,16 +1160,45 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   text-overflow: ellipsis;
 }
 
-.tl-lane[data-kind="education"] .tl-bar {
-  --hue: var(--third-color);
+/* A lane's colour; what an entry carried is told apart inside its group. */
+.tl-lane[data-kind="education"] {
+  --lane-hue: var(--third-color);
 }
 
-.tl-lane[data-kind="projects"] .tl-bar {
-  --hue: color-mix(in srgb, var(--primary-color) 55%, var(--third-color));
+.tl-lane[data-kind="projects"] {
+  --lane-hue: color-mix(in srgb, var(--primary-color) 55%, var(--third-color));
 }
 
-.tl-lane[data-kind="volunteer"] .tl-bar {
-  --hue: color-mix(in srgb, var(--primary-color) 35%, var(--muted-color));
+.tl-lane[data-kind="volunteer"] {
+  --lane-hue: color-mix(in srgb, var(--primary-color) 35%, var(--muted-color));
+}
+
+/* An entry and what it carried — its projects, its volunteering — read as one:
+   an outline around the entry's row and the rows under it. */
+.tl-group {
+  position: absolute;
+  top: calc(var(--row) * var(--row-height) - 0.2rem);
+  height: calc(var(--group-rows) * var(--row-height) + 0.05rem);
+  box-sizing: border-box;
+  border: 0.0625rem solid color-mix(in srgb, var(--lane-hue, var(--primary-color)) 45%, transparent);
+  border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--lane-hue, var(--primary-color)) 12%, transparent);
+  pointer-events: none;
+}
+
+/* Carried by an entry: lighter than the entry, and narrower in the row. */
+.tl-bar[data-depth="1"] {
+  height: calc(var(--row-height) - 0.6rem);
+  margin-top: 0.1rem;
+  color: var(--text-color);
+  background: color-mix(in srgb, var(--hue) 32%, var(--tl-surface, var(--card-background)));
+  border-left: 0.2rem solid var(--hue);
+  font-weight: 400;
+}
+
+.tl-bar[data-depth="1"][data-kind="volunteer"] {
+  --hue: var(--muted-color);
+  font-style: italic;
 }
 
 .tl-bar:hover,
@@ -1184,8 +1216,10 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   }
 }
 
-/* On paper there is no timeline: the LaTeX CV the sheet follows has none. The
- * classic page says so in css/print.css; this holds for the XSLT themes. */
+/* On paper the timeline is hidden where it sits on screen: left in the page's
+ * flow it would push the CV onto a third sheet. Each display then prints it
+ * from a place of its own — the classic page on its verso
+ * (css/print-verso.css). */
 @media print {
   #timeline {
     display: none;

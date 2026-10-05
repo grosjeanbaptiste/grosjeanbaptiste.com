@@ -1,9 +1,16 @@
 // Factory: normalises the five CV sections into entries and resolves the
 // cross-references between them. A dangling reference is a data bug — it throws.
 import type { Entry } from './entry';
-import { type Period, periodOf } from './period';
+import { Period, periodOf } from './period';
 import { degreePeriods, links } from './relations';
-import type { EducationRecord, ProjectRecord, Resume, VolunteerRecord, WorkRecord } from './resume';
+import type {
+  CompetitionRecord,
+  EducationRecord,
+  ProjectRecord,
+  Resume,
+  VolunteerRecord,
+  WorkRecord,
+} from './resume';
 
 const fromWork = (w: WorkRecord): Entry => ({
   kind: 'work',
@@ -60,12 +67,27 @@ const fromVolunteer = (v: VolunteerRecord): Entry => ({
   related: [],
 });
 
+// Held on a day: its period is that day's month.
+const fromCompetition = (c: CompetitionRecord): Entry => ({
+  kind: 'competition',
+  id: c.id,
+  title: c.title,
+  organisation: c.organizer,
+  period: Period.of(c.date, c.date),
+  summary: c.summary,
+  details: [],
+  skills: [],
+  url: c.url,
+  related: [],
+});
+
 export function entriesOf(resume: Resume): Entry[] {
   const graph = links(resume);
   const inherited = degreePeriods(resume);
   const entries = [
     ...resume.work.map(fromWork),
     ...resume.education.map(fromEducation),
+    ...(resume.competitions ?? []).map(fromCompetition),
     ...resume.projects.map((p) => fromProject(p, inherited.get(p.name))),
     ...resume.volunteer.map(fromVolunteer),
   ];

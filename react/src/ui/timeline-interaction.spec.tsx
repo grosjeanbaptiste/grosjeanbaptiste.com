@@ -59,11 +59,47 @@ describe('browsing the CV through the timeline', () => {
     expect(await bar(/Founder/)).toHaveFocus();
   });
 
-  it('walks to the lane below with the down arrow', async () => {
+  it('walks down from an entry to the project it carried', async () => {
     const { user } = renderApp('/en');
     (await bar(/Founder/)).focus();
     await user.keyboard('{ArrowDown}');
+    expect(await bar(/^Acteble —/)).toHaveFocus();
+  });
+
+  it('walks on down to the lane below', async () => {
+    const { user } = renderApp('/en');
+    (await bar(/^Acteble —/)).focus();
+    await user.keyboard('{ArrowDown}');
     expect(await bar(/Master/)).toHaveFocus();
+  });
+
+  // Projects and volunteering are not lanes: they sit inside what carried them.
+  it('draws a project inside the experience that carried it', async () => {
+    renderApp('/en');
+    const project = await bar(/^Acteble —/);
+    expect(project.closest('.timeline-lane')).toHaveAttribute('data-kind', 'work');
+    expect(project).toHaveAttribute('data-depth', '1');
+  });
+
+  it('draws volunteering inside the degree of its organisation', async () => {
+    renderApp('/en');
+    const role = await bar(/Student representative/);
+    expect(role.closest('.timeline-lane')).toHaveAttribute('data-kind', 'education');
+  });
+
+  it('outlines an entry and what it carried as one group', async () => {
+    renderApp('/en');
+    const region = await timeline();
+    expect(region.querySelectorAll('.timeline-group')).toHaveLength(2);
+  });
+
+  it('has no lane left for volunteering', async () => {
+    renderApp('/en');
+    const region = await timeline();
+    const lanes = [...region.querySelectorAll('.timeline-lane')].map((l) =>
+      l.getAttribute('data-kind'),
+    );
+    expect(lanes).toEqual(['work', 'education', 'project']);
   });
 
   it('previews an entry while its bar is hovered', async () => {

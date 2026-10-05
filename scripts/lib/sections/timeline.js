@@ -1,6 +1,8 @@
-// The classic page's timeline section: lanes of bars placed in percent of the
-// career, each bar a link to its entry further down the page when the entry is
-// there. js/timeline.js adds the zoom (hidden until it runs), the arrow keys
+// The classic page's timeline section: a lane for the experiences and one for
+// the degrees, bars placed in percent of the career. A project or a
+// volunteering role is drawn under the entry that carried it, inside that
+// entry's outline. Each bar is a link to its entry further down the page when
+// the entry is there. js/timeline.js adds the zoom (hidden until it runs), the arrow keys
 // and the hover preview; css/timeline.css lays it out.
 const I18N = require('../i18n');
 const { escapeHtml } = require('../format');
@@ -13,7 +15,9 @@ function renderBar(bar, timeline, lang, onPage) {
   const label = labelOf(bar, period);
   const style = `left:${pct(bar.start - timeline.from, timeline.months)};width:${pct(bar.end + 1 - bar.start, timeline.months)};--row:${bar.row}`;
   const data = `data-name="${escapeHtml(bar.name)}" data-title="${escapeHtml(bar.title)}" data-period="${escapeHtml(period)}"`;
-  const common = `class="tl-bar" style="${style}" aria-label="${escapeHtml(label)}" ${data}`;
+  // data-depth 1: a project or a role, drawn under the entry that carried it.
+  const nesting = `data-kind="${bar.kind}" data-depth="${bar.depth}"`;
+  const common = `class="tl-bar" style="${style}" aria-label="${escapeHtml(label)}" ${nesting} ${data}`;
   const text = `<span>${escapeHtml(bar.name || bar.title)}</span>`;
   return onPage.has(bar.anchor)
     ? `<a ${common} href="#${bar.anchor}">${text}</a>`
@@ -35,6 +39,11 @@ function generateTimeline(resume, lang, today, onPage) {
       `<div class="tl-lane" data-kind="${lane.kind}">`,
       `  <span class="tl-lane-label">${escapeHtml(t[LANE_LABEL[lane.kind]])}</span>`,
       `  <div class="tl-track" style="--rows:${lane.rows}">`,
+      // Behind the bars: the outline of each entry that carried something.
+      ...lane.groups.map(
+        (g) =>
+          `    <span class="tl-group" aria-hidden="true" style="left:${pct(g.start - timeline.from, timeline.months)};width:${pct(g.end + 1 - g.start, timeline.months)};--row:${g.row};--group-rows:${g.rows}"></span>`,
+      ),
       ...lane.bars.map((bar) => `    ${renderBar(bar, timeline, lang, onPage)}`),
       '  </div>',
       '</div>',

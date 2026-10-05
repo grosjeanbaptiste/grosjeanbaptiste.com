@@ -4,16 +4,24 @@
 const I18N = require('../i18n');
 const { compileOnce } = require('../compile');
 const { buildXmpData } = require('../metadata');
-const { generateTimelineLatex } = require('./document');
+const { buildTimelineDocument } = require('./document');
 
-function compileTimeline(resume, lang, outPath, today = new Date(), years = null) {
+// Ports: the document, TeX and where a warning goes — replaced in tests.
+const PORTS = { document: buildTimelineDocument, compile: compileOnce, warn: console.warn };
+
+function compileTimeline(resume, lang, outPath, today = new Date(), years = null, ports = {}) {
+  const { document, compile, warn } = { ...PORTS, ...ports };
   const t = I18N[lang];
   // Titled "<name> — <timeline>" in a reader's tab, not "— Curriculum vitæ";
   // the 2- and 5-year PDFs add their span.
   const title = years === null ? t.timeline : `${t.timeline} (${t.timelineSpan(years)})`;
   const xmp = buildXmpData(resume, { ...t, curriculumVitae: title }, lang);
-  const tex = generateTimelineLatex(resume, lang, today, years);
-  const { ok, pages } = compileOnce(tex, xmp, outPath, lang);
+  const { tex, labels } = document(resume, lang, today, years);
+  // Degraded, not failed: the page is whole, its labels are shorter. Said aloud.
+  if (labels === 'names') {
+    warn(`  ${lang}: ${title} — too crowded for "name · role": drawn with names only.`);
+  }
+  const { ok, pages } = compile(tex, xmp, outPath, lang);
   if (!ok) return { ok: false };
   if (pages !== 1) {
     console.error(

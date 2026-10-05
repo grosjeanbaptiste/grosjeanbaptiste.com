@@ -168,18 +168,15 @@ test('the day chart is tinted from the same wheel as the PDF', () => {
 });
 
 test('the verso keeps its section headings once it is lifted out of the columns', () => {
-  // js/print-layout.js moves the volunteering and the references into a verso
-  // block of their own, which took both headings out of reach of the
+  // js/print-layout.js moves the timeline and the references into
+  // a verso block of their own, which took their headings out of reach of the
   // .sidebar / .main-content selectors: they printed as plain body text while
   // every other heading on the sheet kept its rule. Caught by eye on a render,
-  // which is the only place it showed — hence this standing check.
-  for (const [selector, what] of [
-    ['#print-verso #references h2', 'the references heading'],
-    ['#print-verso #print-volunteer h2', 'the volunteering heading'],
-  ]) {
-    assert.ok(
-      css.includes(selector),
-      `${what} takes no heading scale on the verso — it prints as body text`,
-    );
-  }
+  // which is the only place it showed — hence this standing check. Both
+  // are \\cvsection in the PDF: the scale of the main column.
+  assert.match(
+    css,
+    /\.main-content h2,\s*#print-verso h2\s*\{[^}]*font-size:\s*1\.501rem/,
+    'the headings of the verso take no heading scale — they print as body text',
+  );
 });

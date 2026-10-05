@@ -71,7 +71,9 @@ function checkTimelinePdf(lang, span) {
   test(`${name} carries every entry of its span`, () => {
     const page = squeeze(run('pdftotext', ['-raw', file, '-']));
     const resume = applyPdfOverrides(loadResume(lang));
-    const bars = timelineBars(resume, new Date(), span.years).lanes.flatMap((l) => l.bars);
+    const bars = timelineBars(resume, new Date(), span.years).lanes.flatMap((l) =>
+      l.groups.flatMap((g) => [g.head, ...g.children]),
+    );
     const missing = bars
       .filter((b) => b.strong && !page.includes(squeeze(b.strong)))
       .map((b) => b.strong);

@@ -18,6 +18,7 @@ module.exports = {
     inProgress: 'in progress',
     curriculumVitae: 'Curriculum Vitae',
     timeline: 'Timeline',
+    competitions: 'Competitions',
     timelineSpan: (n) => `last ${n} years`,
   },
   fr: {
@@ -29,6 +30,7 @@ module.exports = {
     inProgress: 'en cours',
     curriculumVitae: 'Curriculum vitæ',
     timeline: 'Chronologie',
+    competitions: 'Compétitions',
     timelineSpan: (n) => `${n} dernières années`,
   },
   nl: {
@@ -40,6 +42,7 @@ module.exports = {
     inProgress: 'in uitvoering',
     curriculumVitae: 'Curriculum vitae',
     timeline: 'Tijdlijn',
+    competitions: 'Wedstrijden',
     timelineSpan: (n) => `laatste ${n} jaar`,
   },
   es: {
@@ -51,6 +54,7 @@ module.exports = {
     inProgress: 'en curso',
     curriculumVitae: 'Currículum vítae',
     timeline: 'Cronología',
+    competitions: 'Competiciones',
     timelineSpan: (n) => `últimos ${n} años`,
   },
   de: {
@@ -62,6 +66,7 @@ module.exports = {
     inProgress: 'läuft',
     curriculumVitae: 'Lebenslauf',
     timeline: 'Zeitleiste',
+    competitions: 'Wettbewerbe',
     timelineSpan: (n) => `letzte ${n} Jahre`,
   },
   zh: {
@@ -73,6 +78,7 @@ module.exports = {
     inProgress: '进行中',
     curriculumVitae: '简历',
     timeline: '时间线',
+    competitions: '竞赛',
     timelineSpan: (n) => `最近 ${n} 年`,
   },
 };

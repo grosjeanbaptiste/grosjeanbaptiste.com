@@ -9,6 +9,7 @@ const NAMERS = {
   education: (e) => `${e.institution} ${e.studyType ?? ''}`,
   projects: (e) => e.name,
   volunteer: (e) => `${e.organization} ${e.position}`,
+  competitions: (e) => e.title,
 };
 
 function uniqueIds(names) {

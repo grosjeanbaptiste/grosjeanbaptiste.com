@@ -47,4 +47,34 @@ describe('entriesOf', () => {
     const work = broken.work.map((w) => ({ ...w, projects: ['Ghost'] }));
     expect(() => entriesOf({ ...broken, work })).toThrow(/Ghost/);
   });
+
+  // The page embeds a volunteering role under the entry of its organisation;
+  // the model said nothing of it, so the timeline could not nest it.
+  it('links a volunteering role to the degree of its organisation', () => {
+    expect(byId('umons-rep')?.related).toEqual(['umons-master']);
+  });
+
+  it('makes an entry of a competition, on the day it was held', () => {
+    const entries = entriesOf({
+      ...aResume(),
+      competitions: [
+        { id: 'hackathon-2024', title: 'Hackathon 2024', organizer: 'COW', date: '2024-03-17' },
+      ],
+    });
+    expect(entries.find((e) => e.id === 'hackathon-2024')).toMatchObject({
+      kind: 'competition',
+      title: 'Hackathon 2024',
+      organisation: 'COW',
+    });
+  });
+
+  it('links a competition to the project built there', () => {
+    const entries = entriesOf({
+      ...aResume(),
+      competitions: [
+        { id: 'hackathon', title: 'Hackathon', date: '2025-07-05', projects: ['Acteble'] },
+      ],
+    });
+    expect(entries.find((e) => e.id === 'hackathon')?.related).toEqual(['acteble']);
+  });
 });

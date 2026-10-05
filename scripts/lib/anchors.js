@@ -13,6 +13,7 @@ const slug = (text) =>
 const PARTS = {
   work: (r) => [r.company, r.position],
   education: (r) => [r.institution, r.studyType],
+  competition: (r) => [r.title],
   project: (r) => [r.name],
   volunteer: (r) => [r.organization, r.position],
 };

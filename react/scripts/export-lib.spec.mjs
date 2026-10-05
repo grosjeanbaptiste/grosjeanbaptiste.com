@@ -58,6 +58,21 @@ describe('identify', () => {
   });
 });
 
+describe('identify, on competitions', () => {
+  const hackathons = {
+    competitions: [{ title: 'Hackathon Citizens of Wallonia 2024', date: '2024-03-17' }],
+  };
+
+  it('gives each competition an id, from its canonical title', () => {
+    const out = identify({ ...canonical, ...hackathons }, { ...localized, ...hackathons });
+    expect(out.competitions.map((c) => c.id)).toEqual(['hackathon-citizens-of-wallonia-2024']);
+  });
+
+  it('leaves a CV without competitions as it is', () => {
+    expect(identify(canonical, localized).competitions).toEqual([]);
+  });
+});
+
 describe('picturesFor', () => {
   const manifest = {
     files: {

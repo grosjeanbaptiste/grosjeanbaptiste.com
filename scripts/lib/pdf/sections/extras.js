@@ -5,16 +5,21 @@ const { tex } = require('../tex');
 // FIT_PLANS levers were never wired into document.js, so they were removed as
 // dead code — volunteer/projects/awards/interests already surface on the HTML
 // site, not the space-constrained PDF.
+//
+// They sit on the verso under the timeline, in three columns across the page:
+// one long column left two thirds of the sheet's width unused.
 function buildReferences(resume, t) {
   if (!resume.references?.length) return '';
-  const parts = [`\\cvsection{${tex(t.references)}}`];
+  const parts = [`\\cvsection{${tex(t.references)}}`, '\\begin{multicols}{3}'];
   resume.references.forEach((r, i, arr) => {
-    parts.push(`\\textbf{${tex(r.name)}}\\\\`);
+    // \nobreak: a name is never left alone at the foot of a column.
+    parts.push(`\\noindent\\textbf{${tex(r.name)}}\\par\\nobreak`);
     if (r.reference) {
-      parts.push(`\\begin{quote}\\small\\itshape ${tex(r.reference)}\\end{quote}`);
+      parts.push(`{\\color{accent}\\small\\itshape ${tex(r.reference)}\\par}`);
     }
     if (i < arr.length - 1) parts.push('\\medskip');
   });
+  parts.push('\\end{multicols}');
   return parts.join('\n');
 }
 

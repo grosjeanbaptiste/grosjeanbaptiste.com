@@ -13,7 +13,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const { spawn } = require('node:child_process');
+const { spawn, execFileSync } = require('node:child_process');
 const { serve, countPages, pageHeads, EXPECTED_PAGES } = require('./print-fit-harness');
 const { printedWithRetry } = require('./print-fit-retry');
 
@@ -124,15 +124,25 @@ test('the XSLT theme prints on two pages too', async (t) => {
       `the XSLT view prints on ${pages} pages, not ${EXPECTED_PAGES} — ${pageHeads(pdf, pages)}`,
     );
     // Two pages is not enough on its own: the left column used to run past the
-    // first sheet and sit beside the references, where the PDF gives the verso
-    // to the references alone.
+    // first sheet and sit on the verso. The verso opens with the timeline —
+    // it is part of the page, so it is printed — then gives the references.
     assert.match(
       pageHeads(pdf, pages),
-      /p2: References/,
-      `the verso does not open on the references — the left column has spilled onto it: ${pageHeads(pdf, pages)}`,
+      /p2: Timeline/i,
+      `the verso does not open on the timeline — the left column has spilled onto it: ${pageHeads(pdf, pages)}`,
     );
+    const verso = execFileSync('pdftotext', ['-f', '2', '-l', '2', pdf, '-'], { encoding: 'utf8' });
+    assert.match(verso, /References/, 'the references are not on the verso, under the timeline');
   } finally {
     fs.rmSync(out, { recursive: true, force: true });
     server.close();
   }
+});
+
+test('the minimal theme prints the timeline too, where the page has it', () => {
+  const minimal = fs.readFileSync(
+    path.resolve(__dirname, '../../assets/xslt/resume-transform-minimal.xsl'),
+    'utf8',
+  );
+  assert.match(minimal, /@media print \{[\s\S]*html #timeline \{ display: block/);
 });

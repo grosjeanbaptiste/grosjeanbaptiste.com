@@ -1,11 +1,14 @@
 import { screen, within } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { renderApp } from './app-harness';
+import { stretchOf } from './home/TimelineZoom';
 
 const timeline = async () => screen.findByRole('region', { name: 'Timeline' });
-// The timeline's drawn width, in percent of its frame.
-const width = (region: HTMLElement) =>
-  Number.parseFloat((region.querySelector('.timeline-grid') as HTMLElement).style.width);
+// How far the zoom stretches the time axis (1: the whole career in the frame).
+const stretch = (region: HTMLElement) =>
+  Number(
+    (region.querySelector('.timeline-grid') as HTMLElement).style.getPropertyValue('--stretch'),
+  );
 const bars = (region: HTMLElement) => within(region).getAllByRole('link').length;
 
 describe('zooming the timeline', () => {
@@ -29,7 +32,7 @@ describe('zooming the timeline', () => {
     const { user } = renderApp('/en');
     const region = await timeline();
     await user.click(within(region).getByRole('button', { name: '2 years' }));
-    expect(width(region)).toBeGreaterThan(100);
+    expect(stretch(region)).toBeGreaterThan(1);
   });
 
   it('keeps every entry on the timeline whatever the zoom', async () => {
@@ -44,6 +47,22 @@ describe('zooming the timeline', () => {
     const { user } = renderApp('/en');
     const region = await timeline();
     await user.click(within(region).getByRole('button', { name: 'All' }));
-    expect(width(region)).toBe(100);
+    expect(stretch(region)).toBe(1);
+  });
+});
+
+// The buttons used to show less than they say (1.8 years for "2 years"): the
+// zoom sized the whole grid, lane titles included.
+describe('how far a zoom stretches the time axis', () => {
+  it('shows exactly the years asked for: the career over those years', () => {
+    expect(stretchOf(2, 48)).toBe(2);
+  });
+
+  it('never shrinks a career shorter than the zoom', () => {
+    expect(stretchOf(5, 30)).toBe(1);
+  });
+
+  it('leaves the whole career as it is', () => {
+    expect(stretchOf(null, 200)).toBe(1);
   });
 });

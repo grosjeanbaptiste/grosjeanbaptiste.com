@@ -1,0 +1,464 @@
+{
+  "retrieved": "2026-10-05",
+  "units": {
+    "Algorithmique": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-900-C.htm",
+      "code": "US-MC-INFOSP-900-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-048.htm"],
+      "evidence": {
+        "Algorithms": "Algorithmique",
+        "DataStructures": "structures de données",
+        "Complexity": "Complexité",
+        "Trees": "arbres"
+      }
+    },
+    "Anglais I": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-901-C.htm",
+      "code": "US-MC-INFOSP-901-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/V-LANG-662.htm"],
+      "evidence": {
+        "English": "Anglais"
+      }
+    },
+    "Bases de données I": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-902-C.htm",
+      "code": "US-MC-INFOSP-902-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-049.htm"],
+      "evidence": {
+        "SQL": "SQL",
+        "RelationalAlgebra": "algèbre relationnelle",
+        "Normalization": "normalisation",
+        "Indexing": "indexation",
+        "NoSQL": "NoSQL",
+        "BigData": "Big Data"
+      }
+    },
+    "Lecture et rédaction scientifique": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-903-C.htm",
+      "code": "US-MC-INFOSP-903-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-050.htm"],
+      "evidence": {
+        "ScientificWriting": "article scientifique",
+        "LiteratureReview": "recherche bibliographique"
+      }
+    },
+    "Mathématique": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-904-C.htm",
+      "code": "US-MC-INFOSP-904-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-051.htm"],
+      "evidence": {
+        "GraphTheory": "Théorie des Graphes",
+        "Combinatorics": "Combinatoire",
+        "Complexity": "Complexité",
+        "PropositionalLogic": "logique propositionnelle",
+        "PredicateLogic": "logique des prédicats"
+      }
+    },
+    "Modélisation logicielle": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-905-C.htm",
+      "code": "US-MC-INFOSP-905-C",
+      "activities": [
+        "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-852.htm",
+        "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-892.htm"
+      ],
+      "evidence": {
+        "Java": "Java",
+        "UML": "UML",
+        "DesignPatterns": "design patterns",
+        "UnitTesting": "tests unitaires",
+        "MockTesting": "mock testing",
+        "BDD": "behaviour-driven testing"
+      }
+    },
+    "Réseaux": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-906-C.htm",
+      "code": "US-MC-INFOSP-906-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-053.htm"],
+      "evidence": {
+        "TCP/IP": "TCP",
+        "HTTP": "HTTP",
+        "DNS": "DNS",
+        "OSPF": "OSPF",
+        "BGP": "BGP",
+        "Ethernet": "Ethernet"
+      }
+    },
+    "Stratégie et politiques en ressources humaines": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-907-C.htm",
+      "code": "US-MC-INFOSP-907-C",
+      "activities": [
+        "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/W-AETR-018.htm",
+        "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/W-AETR-078.htm"
+      ],
+      "evidence": {
+        "HRM": "GRH"
+      }
+    },
+    "Systèmes d'exploitation": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-908-C.htm",
+      "code": "US-MC-INFOSP-908-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-054.htm"],
+      "evidence": {
+        "Concurrency": "Concurrence",
+        "Threads": "thread",
+        "Scheduling": "ordonnancement",
+        "Paging": "pagination",
+        "Virtualization": "Virtualisation"
+      }
+    },
+    "Anglais II": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-001-C.htm",
+      "code": "US-M1-INFOSP-001-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/V-LANG-661.htm"],
+      "evidence": {
+        "English": "Anglais"
+      }
+    },
+    "Bases de données II": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-101-C.htm",
+      "code": "US-M1-INFOSP-101-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-055.htm"],
+      "evidence": {
+        "XML": "XML",
+        "XSLT": "XSLT",
+        "XQuery": "XQuery",
+        "XPath": null,
+        "BaseX": null,
+        "DataMining": "Data Mining",
+        "Weka": "Weka"
+      }
+    },
+    "Ingénierie de logiciels et gestion de projets": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-008-C.htm",
+      "code": "US-M1-INFOSP-008-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-058.htm"],
+      "evidence": {
+        "Agile": "Agile",
+        "Scrum": "scrum",
+        "SoftwareEngineering": "ingénierie logicielle"
+      }
+    },
+    "Intelligence artificielle": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-102-C.htm",
+      "code": "US-M1-INFOSP-102-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-061.htm"],
+      "evidence": {
+        "SearchAlgorithms": "recherche locale",
+        "Metaheuristics": "métaheuristiques",
+        "FirstOrderLogic": "logique du premier ordre",
+        "SupervisedLearning": "apprentissage supervisé"
+      }
+    },
+    "Recherche opérationnelle et applications": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-103-C.htm",
+      "code": "US-M1-INFOSP-103-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-059.htm"],
+      "evidence": {
+        "OperationsResearch": "Recherche opérationnelle",
+        "LinearProgramming": "programmation linéaire",
+        "IntegerProgramming": "Programmation en nombres entiers",
+        "Duality": "Dualité"
+      }
+    },
+    "Structures de données": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-104-C.htm",
+      "code": "US-M1-INFOSP-104-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-105.htm"],
+      "evidence": {
+        "AVLTrees": "arbres AVL",
+        "BTrees": "B-arbres",
+        "HashTables": "tables de hachage",
+        "Sorting": "tri",
+        "Complexity": "complexité"
+      }
+    },
+    "Séminaires d'informatique en veille technologique": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm",
+      "code": "US-M2-INFOSP-005-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-017.htm"],
+      "evidence": {
+        "TechWatch": "veille technologique"
+      }
+    },
+    "Cryptographie et sécurité des systèmes informatiques": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm",
+      "code": "US-M2-INFOSP-107-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-056.htm"],
+      "evidence": {
+        "Cryptography": "Cryptographie",
+        "Unix": "Unix",
+        "NetworkSecurity": "sécurité liés aux réseaux",
+        "ApplicationSecurity": "Sécurité des applications"
+      }
+    },
+    "Éthique et droit de l'informatique": {
+      "school": "UMONS",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm",
+      "code": "US-M2-INFOSP-108-C",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-057.htm"],
+      "evidence": {
+        "IntellectualProperty": "propriété intellectuelle",
+        "DataProtection": "protection des données",
+        "GDPR": "RGPD"
+      }
+    },
+    "Structure des ordinateurs": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=43",
+      "code": "7551 01 U32 D3",
+      "evidence": {
+        "ComputerArchitecture": "architecture matérielle",
+        "Binary": "binaire",
+        "Hexadecimal": "hexadécimal",
+        "Hardware": "processeur"
+      }
+    },
+    "Informatique - Système d'exploitation": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=47",
+      "code": "7552 03 U32 D3",
+      "evidence": {
+        "OperatingSystems": "SYSTEME D’EXPLOITATION",
+        "ShellScripting": "interprétations de commandes",
+        "SystemAdministration": "outils d’administration du système"
+      }
+    },
+    "Mathématique appliquée à l'informatique": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=20",
+      "code": "0121 02 U32 D3",
+      "evidence": {
+        "LinearAlgebra": "algèbre linéaire",
+        "GraphTheory": "étude des graphes",
+        "SetTheory": "théorie des ensembles",
+        "RelationalAlgebra": "algèbre relationnelle",
+        "MathematicalLogic": "logique mathématique",
+        "Cryptography": "cryptage"
+      }
+    },
+    "Principes algorithmiques et programmation": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=87",
+      "code": "7521 05 U32 D2",
+      "evidence": {
+        "Algorithms": "ALGORITHMIQUES",
+        "DataTypes": "types de données",
+        "ControlFlow": "séquence, alternative et répétitive",
+        "Programming": "PROGRAMMATION"
+      }
+    },
+    "Principes d'analyse informatique": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=116",
+      "code": "7512 10 U32 D1",
+      "evidence": {
+        "UML": " UM",
+        "EntityRelationship": "Entités/Relations",
+        "SystemsAnalysis": " démarche d’analys"
+      }
+    },
+    "Information et communication professionnelles": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=39",
+      "code": "03 50 22 U 32 D1",
+      "evidence": {
+        "ProfessionalCommunication": "vie professionnelle"
+      }
+    },
+    "Web : principes de base": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=95",
+      "code": "7534 29 U32 D1",
+      "evidence": {
+        "HTML": "HTML",
+        "CSS": "CSS",
+        "URL": "URL",
+        "DNS": "noms de domaine",
+        "WebHosting": "publication"
+      }
+    },
+    "Initiation aux bases de données": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=79",
+      "code": "2982 21 U31 D1",
+      "evidence": {
+        "SQL": "SQL",
+        "RelationalModel": "bases de données relationnelles",
+        "Joins": "jointure",
+        "Indexing": "index"
+      }
+    },
+    "Gestion et exploitation de bases de données": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=83",
+      "code": "7544 21 U32 D2",
+      "evidence": {
+        "Triggers": "déclencheurs",
+        "StoredProcedures": "procédures stockées",
+        "DataWarehouse": "data warehouse",
+        "QueryOptimization": "gains de performance"
+      }
+    },
+    "Programmation orientée objet": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=91",
+      "code": "7525 21 U32 D2",
+      "evidence": {
+        "OOP": "PROGRAMMATION ORIENTEE OBJET",
+        "Inheritance": "héritage",
+        "Polymorphism": "polymorphisme",
+        "Encapsulation": "encapsulation",
+        "Overloading": "surcharge"
+      }
+    },
+    "Projet d'analyse et de conception": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=120",
+      "code": "7512 11 U32 D1",
+      "evidence": {
+        "SystemsAnalysis": "outils d’analyse",
+        "SoftwareDesign": "CONCEPTION",
+        "Modelling": "modélisation"
+      }
+    },
+    "Techniques de gestion de projet": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=113",
+      "code": "7502 05 U32 D1",
+      "evidence": {
+        "ProjectManagement": "GESTION DE PROJET"
+      }
+    },
+    "Éléments de statistique": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=35",
+      "code": "013203U32D1",
+      "evidence": {
+        "Statistics": "STATISTIQUE"
+      }
+    },
+    "Projet de développement web": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=99",
+      "code": "7534 30 U32 D1",
+      "evidence": {
+        "JavaScript": "JavaScript",
+        "AJAX": "AJAX",
+        "JSON": "JSON",
+        "XML": "XML",
+        "ClientSideScripting": "Programmation côté client"
+      }
+    },
+    "Notions de e-business": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=56",
+      "code": "7145 06 U32 D1",
+      "evidence": {
+        "Ebusiness": "E-BUSINESS"
+      }
+    },
+    "Projet de développement SGBD": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=104",
+      "code": "7544 03 U32 D1",
+      "evidence": {
+        "DataAccessLayer": "Data Access Layer",
+        "Transactions": "transactions",
+        "DatabaseProgramming": "programmation",
+        "Debugging": "débugger"
+      }
+    },
+    "Bases des réseaux": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=69",
+      "code": "2983 10 U31 D1",
+      "evidence": {
+        "Ethernet": "Ethernet",
+        "MAC": "adresse MAC",
+        "TCP/IP": "TCP/IP",
+        "Networking": "réseaux informatiques"
+      }
+    },
+    "Organisation des entreprises et éléments de management": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=52",
+      "code": "718211U32D1",
+      "evidence": {
+        "Management": "MANAGEMENT"
+      }
+    },
+    "Produits logiciels de gestion intégrés": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=61",
+      "code": "7111 06 U32 D2",
+      "evidence": {
+        "ERP": "LOGICIELS DE GESTION INTEGRES"
+      }
+    },
+    "Projet d'intégration de développement": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=108",
+      "code": "7534 35 U32 D1",
+      "evidence": {
+        "AJAX": "AJAX",
+        "JSON": "JSON",
+        "XML": "XML",
+        "SQLInjection": "injections SQL",
+        "XSS": "attaques XSS",
+        "Caching": "cache",
+        "URLRewriting": "réécriture d’url"
+      }
+    },
+    "Veille technologique": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=65",
+      "code": "7534 14 U32 D1",
+      "evidence": {
+        "TechWatch": "VEILLE TECHNOLOGIQUE"
+      }
+    },
+    "Administration, gestion et sécurisation des réseaux": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=74",
+      "code": "7532 47 U32 D2",
+      "evidence": {
+        "NetworkAdministration": "Administration et gestion des réseaux",
+        "NetworkSecurity": "SECURISATION DES RESEAUX",
+        "ApplicationServer": "moteur d'application"
+      }
+    },
+    "Langue en situation appliquée à l'enseignement supérieur UE1": {
+      "school": "EPHEC",
+      "url": null,
+      "code": null,
+      "evidence": {
+        "ProfessionalCommunication": null
+      }
+    },
+    "Langue en situation appliquée à l'enseignement supérieur UE2": {
+      "school": "EPHEC",
+      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24",
+      "code": "73XX92U32D1",
+      "evidence": {
+        "ProfessionalCommunication": "situations professionnelles"
+      }
+    }
+  }
+}

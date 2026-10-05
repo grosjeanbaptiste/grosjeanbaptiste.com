@@ -1,86 +1,48 @@
-// Query: the classic page's timeline — the interactive view's, built at
-// generation time. One lane per kind of entry, a bar per dated entry measured
-// in months (year * 12 + month - 1), overlaps stacked in rows, the axis running
-// from the earliest start to the current month.
-const { monthOf } = require('./pdf/timeline/bars');
-const { anchorOf } = require('./anchors');
+// Query: the timeline of the classic page and the XSLT themes, built at
+// generation time. A lane for the experiences, one for the degrees, one for
+// the competitions; each entry is a group — the entry on its first row, and
+// under it the projects and the volunteering it carried (timeline-groups.js),
+// which are not lanes of their own. Only a project or a role that nothing
+// hosts keeps a lane. Rows are packed by time: on screen a label is clipped to
+// its bar.
+const { entryGroups, monthNow } = require('./timeline-groups');
+const { packRows, packGroups } = require('./timeline-packing');
 
-const LANES = [
-  {
-    kind: 'work',
-    anchor: 'work',
-    records: (r) => r.work,
-    name: (w) => w.company,
-    title: (w) => w.position,
-  },
-  {
-    kind: 'education',
-    anchor: 'education',
-    records: (r) => r.education,
-    name: (e) => e.institution,
-    title: (e) => e.studyType,
-  },
-  {
-    kind: 'projects',
-    anchor: 'project',
-    records: (r) => (r.projects || []).filter((p) => !p.courseUnit),
-    name: (p) => p.name,
-    title: (p) => p.entity,
-  },
-  {
-    kind: 'volunteer',
-    anchor: 'volunteer',
-    records: (r) => r.volunteer,
-    name: (v) => v.organization,
-    title: (v) => v.position,
-  },
-];
-
-const ongoing = (end) => !end || end === 'Present';
-
-// Greedy interval packing: each bar takes the first row free when it starts.
-function packRows(bars) {
-  const rowEnds = [];
-  return [...bars]
-    .sort((a, b) => a.start - b.start)
-    .map((bar) => {
-      let row = rowEnds.findIndex((end) => end < bar.start);
-      if (row === -1) row = rowEnds.length;
-      rowEnds[row] = bar.end;
-      return { ...bar, row };
-    });
-}
-
-function barOf(lane, record, now) {
-  const start = monthOf(record.startDate);
-  const end = ongoing(record.endDate) ? now : monthOf(record.endDate);
-  if (end < start)
-    throw new Error(
-      `${lane.name(record)} ends (${record.endDate}) before it starts (${record.startDate})`,
-    );
+// A group as the packer wants it: its span, and the rows it needs.
+function measured({ head, children }) {
+  const packed = packRows(children);
+  const all = [head, ...packed];
   return {
-    anchor: anchorOf(lane.anchor, record),
-    record,
-    start,
-    end,
-    name: lane.name(record) || '',
-    title: lane.title(record) || '',
+    head,
+    children: packed,
+    start: Math.min(...all.map((b) => b.start)),
+    end: Math.max(...all.map((b) => b.end)),
+    height: 1 + (packed.length ? Math.max(...packed.map((c) => c.row)) + 1 : 0),
   };
 }
 
+// A lane: its groups packed into rows, then flattened into bars (depth 0 for
+// the entry, 1 for what sits under it) and the outlines of the real groups.
+function laneOf({ kind, groups }) {
+  const packed = packGroups(groups.map(measured));
+  // `group`: what ties a bar to the outline of its own group.
+  const bars = packed.groups.flatMap((g, group) => [
+    { ...g.head, depth: 0, row: g.row, group },
+    ...g.children.map((c) => ({ ...c, depth: 1, row: g.row + 1 + c.row, host: g.head, group })),
+  ]);
+  const outlines = packed.groups
+    .map((g, group) => ({ start: g.start, end: g.end, row: g.row, rows: g.height, group, g }))
+    .filter(({ g }) => g.children.length)
+    .map(({ g, ...outline }) => outline);
+  return { kind, rows: packed.rows, bars, groups: outlines };
+}
+
 function timelineOf(resume, today) {
-  const now = today.getUTCFullYear() * 12 + today.getUTCMonth();
-  const lanes = LANES.flatMap((lane) => {
-    const bars = (lane.records(resume) || [])
-      .filter((r) => r.startDate)
-      .map((r) => barOf(lane, r, now));
-    if (!bars.length) return [];
-    const placed = packRows(bars);
-    return [{ kind: lane.kind, rows: Math.max(...placed.map((b) => b.row)) + 1, bars: placed }];
-  });
+  const now = monthNow(today);
+  const lanes = entryGroups(resume, now).map(laneOf);
   const from = Math.min(now, ...lanes.flatMap((l) => l.bars.map((b) => b.start)));
   const years = [];
-  for (let year = Math.floor(from / 12) + 1; year <= Math.floor(now / 12); year++)
+  for (let year = Math.floor(from / 12) + 1; year <= Math.floor(now / 12); year += 1)
     years.push({ year, month: year * 12 });
   return { from, months: now + 1 - from, years, lanes };
 }

@@ -1,7 +1,7 @@
 // Rearranges the page into the LaTeX CV's structure just before printing, and
 // puts it back afterwards.
 //
-// Three differences cannot be expressed in the print stylesheet, because CSS
+// These differences cannot be expressed in the print stylesheet, because CSS
 // cannot move a node between containers:
 //
 //   - the PDF's \makecvheader puts photo, name, tagline and contact details in
@@ -9,9 +9,11 @@
 //     narrow one;
 //
 //   - it renders Education in the narrow left column, and as a two-line degrees
-//     summary rather than a list of entries (the fit plan drops the entries);
-//     the page renders a full Education section in the main column and files the
-//     degree lines under the contact details.
+//     summary rather than a list of entries; the page renders a full Education
+//     section in the main column and files the degree lines under the contact
+//     details;
+//
+//   - its verso is a block of its own: the timeline, then the references.
 //
 // So we move those nodes for the duration of the print and restore them after.
 // With JavaScript disabled nothing moves and the sheet still prints correctly —
@@ -21,8 +23,6 @@
   let undo = [];
   /** @type {{el: Element, html: string}[]} */
   let clipped = [];
-  /** @type {Element|null} */
-  let versoVolunteer = null;
   /** @type {Element|null} */
   let banner = null;
   /** @type {Element|null} */
@@ -71,54 +71,23 @@
     }).format(new Date());
   }
 
-  // The LaTeX CV prints a Volunteer section on the verso. The page keeps the
-  // same roles embedded under the education entry that hosts them, and
-  // print-type.css hides those entries wholesale to mirror the fit plan's
-  // education_in_body: false — so without this the printed sheet drops the
-  // volunteering the PDF shows.
-  //
-  // The rows are gathered into one list, because the page splits them per host
-  // (UMons, EPHEC) while the PDF prints a single section. It is nested INSIDE
-  // #references on purpose: that section already carries break-before: page,
-  // so the block rides its break instead of needing one of its own — a second
-  // break here would start a third sheet.
-  function gatherVolunteering() {
-    const blocks = document.querySelectorAll('.embedded-volunteer');
-    if (!blocks.length) return;
-
-    const section = document.createElement('section');
-    section.id = 'print-volunteer';
-    const heading = document.createElement('h2');
-    // Take the label off the page rather than hardcoding a string: it is
-    // already localized in all six languages.
-    const label = blocks[0].querySelector('.embedded-label');
-    heading.textContent = (label ? label.textContent : '').replace(/\s*:\s*$/, '');
-    section.appendChild(heading);
-
-    const list = document.createElement('ul');
-    for (const block of blocks) {
-      for (const row of block.querySelectorAll('li')) move(row, list);
-    }
-    section.appendChild(list);
-
-    versoVolunteer = section;
-  }
-
-  // \clearpage\begin{paracol}{2} volunteer \switchcolumn references — the PDF's
-  // verso is a SECOND two-column block, not a page break inside the first. The
-  // page faked it with break-before on nodes sitting inside the recto's grid,
-  // and Firefox, which will not fragment a grid, answered with a page for the
-  // volunteering and another for the references: four sheets instead of two.
+  // \clearpage, then the timeline and the references, each across the full
+  // width — the PDF's verso is a block of its own, not a page break
+  // inside the recto's two columns. The page once faked it with break-before
+  // on nodes sitting inside the recto's grid, and Firefox, which will not
+  // fragment a grid, answered with a sheet for each: four instead of two.
   function buildVerso() {
     const container = document.querySelector('.container');
     const references = document.getElementById('references');
-    if (!container?.parentNode || (!versoVolunteer && !references)) return;
+    const timeline = document.getElementById('timeline');
+    if (!container?.parentNode || (!references && !timeline)) return;
     const block = document.createElement('div');
     block.id = 'print-verso';
     container.parentNode.insertBefore(block, container.nextSibling);
     verso = block;
-    // Volunteer first: it is the left column, as \switchcolumn puts it.
-    if (versoVolunteer) block.appendChild(versoVolunteer);
+    // The timeline opens the verso, as in the PDF (css/print-verso.css), and
+    // is put back with everything else.
+    move(timeline, block);
     move(references, block);
   }
 
@@ -142,7 +111,6 @@
 
     buildBanner();
     stampUpdated();
-    gatherVolunteering();
     buildVerso();
 
     // The generator carries the PDF's clipped wording in data-print-text,
@@ -165,10 +133,6 @@
       el.innerHTML = html;
     }
     clipped = [];
-    // Drop the built section first; the loop below puts its rows back where
-    // they came from, and removing it afterwards would take them with it.
-    versoVolunteer?.remove();
-    versoVolunteer = null;
     banner?.remove();
     banner = null;
     verso?.remove();

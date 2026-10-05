@@ -21,6 +21,7 @@ module.exports = {
   downloadCV: '下载简历',
   downloadTimeline: '下载时间线',
   timelineTitle: '时间线',
+  competitions: '竞赛',
   lastYears: (n) => `近 ${n} 年`,
   wholeCareer: '全部',
   printPdf: '打印 / PDF',

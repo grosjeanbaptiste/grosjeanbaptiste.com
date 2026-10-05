@@ -65,23 +65,11 @@ test('nothing is emitted when there is no volunteering', () => {
   assert.equal(buildVolunteer({ volunteer: [] }, I18N.en, 'en'), '');
 });
 
-// The point of the placement, not just of the markup: the verso's left column
-// was blank because buildReferences is emitted after \switchcolumn. Filling it
-// is what makes the section free. If it ever moves after the switch it lands
-// under the references and the page count is at risk again.
-test('the section occupies the verso left column, before the switch', () => {
-  const { generateLatex } = require('../document');
-  const { loadResume } = require('../data');
-  const { FIT_PLANS } = require('../config');
-  const latex = generateLatex(loadResume('en'), 'en', FIT_PLANS[4]);
-  // The heading text goes through nohyphen(), so match the macro, not a literal.
-  const heading = latex.search(/\\cvsectionsidebar\{[^}]*Volunteer/);
-  const switchAt = latex.lastIndexOf('\\switchcolumn');
-  assert.ok(heading > 0, 'the volunteering section is not in the document');
-  assert.ok(heading < switchAt, 'the volunteering section is not in the left column');
-});
+// Where the roles go is no longer this section's business: the CV shows each
+// role inside the experience or the degree that hosts it, in a column to the
+// right of its projects (education.test.js), and in the timeline of the verso.
 
-// The verso's left column is 30% of the page. In Dutch and Spanish the
+// The column a role is written in is narrow. In Dutch and Spanish the
 // translated position is long enough to push the period past the column edge,
 // and TeX broke it at the last space — leaving the year alone on the next
 // line, "… nov 2023 – sep" / "2026". English, French, German and Chinese all

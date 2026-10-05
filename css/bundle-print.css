@@ -106,9 +106,7 @@
     padding: 0;
   }
 
-  /* Browser chrome and on-screen-only controls never reach the sheet — nor the
-     timeline: the LaTeX CV this sheet follows has none. */
-  #timeline,
+  /* Browser chrome and on-screen-only controls never reach the sheet. */
   nav,
   .lang-switcher,
   #theme-toggle,
@@ -182,10 +180,10 @@
      a \rule{\linewidth}{2pt} in the main column, and the narrower
      \cvsectionsidebar (\Large, 10.91pt) over a 1.5pt rule in the left one.
      Both uppercase, both in headingrule (ThirdColor). */
-  /* #print-verso is included because js/print-layout.js lifts the volunteering
-     and the references out of the two columns into the verso block, which took
-     them out of reach of these selectors and printed both headings as plain
-     body text. */
+  /* #print-verso is included because js/print-layout.js lifts the timeline
+     and the references out of the two columns into the verso
+     block, which took them out of reach of these selectors and printed their
+     headings as plain body text. */
   .main-content h2,
   .sidebar h2:not(.contact-info h2),
   .sidebar h3,
@@ -200,17 +198,17 @@
     break-after: avoid;
   }
 
-  /* \cvsection{References} on the verso's wide column. */
+  /* \cvsection on the verso, as in the main column: both of its sections
+     span the sheet. */
   .main-content h2,
-  #print-verso #references h2 {
+  #print-verso h2 {
     font-size: 1.501rem;
     border-bottom: 2pt solid var(--accent-color);
   }
 
-  /* \cvsectionsidebar{Volunteer} on the verso's narrow one. */
+  /* \cvsectionsidebar in the narrow column of the recto. */
   .sidebar h2:not(.contact-info h2),
-  .sidebar h3,
-  #print-verso #print-volunteer h2 {
+  .sidebar h3 {
     font-size: 1.369rem;
     border-bottom: 1.5pt solid var(--accent-color);
   }
@@ -719,52 +717,36 @@
     display: none;
   }
 
-  /* \clearpage\begin{paracol}{2} … \end{paracol} — the verso is a SECOND
-     two-column block, and js/print-layout.js now builds it as one. It used to
-     be faked with break-before on #references and #print-volunteer while both
-     still sat inside the recto's grid; Firefox will not fragment a grid and
-     answered with a page for each, printing four sheets. One block that
-     breaks before itself has no such ambiguity. */
+  /* \clearpage, then the timeline and the references, each across the full
+     width — js/print-layout.js builds the verso as one block
+     of its own. It used to be faked with break-before on nodes still inside
+     the recto's grid; Firefox will not fragment a grid and answered with a
+     sheet for each, printing four. One block that breaks before itself has no
+     such ambiguity. */
   #print-verso {
-    display: grid;
-    grid-template-columns: 30% 1fr;
-    gap: 0.6cm;
     break-before: page;
   }
 
-  #print-volunteer {
+  /* \begin{multicols}{3} under \cvsection{References}: the heading spans the
+     sheet, the references flow through three columns and break where they
+     must, as TeX breaks them. */
+  #print-verso #references {
+    columns: 3;
+    column-gap: 0.6cm;
     margin: 0;
   }
 
-  #print-volunteer ul {
-    margin: 0;
-    padding-left: 9pt;
+  #print-verso #references h2 {
+    column-span: all;
   }
 
-  /* buildVolunteer sets the whole block \footnotesize and names the
-     organization: \textbf{position} — organization, period. */
-  #print-volunteer,
-  #print-volunteer li {
-    font-size: 0.750rem;
+  #print-verso .reference-item {
+    margin: 0 0 4pt;
+    break-inside: auto;
   }
 
-  #print-volunteer .print-org {
-    display: inline;
-  }
-
-  /* buildVolunteer sets an itemize, so every row carries \itemmarker. The
-     sidebar has no equivalent of .main-content's bullet rule and base.css
-     removes the list marker, so the rows printed flush. */
-  #print-volunteer li::before {
-    content: "•";
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-  }
-
-  /* buildReferences: \textbf{name} then \begin{quote}\small\itshape — the
-     quote environment is red (accent) and \small overrides its \large. The
-     screen rules add a thick orange rule down the left and grey the text,
+  /* buildReferences: \textbf{name}, then the text in accent, \small and
+     italic. The screen rules add a thick orange rule down the left and grey the text,
      neither of which the PDF has. */
   .reference-item blockquote {
     margin: 2pt 0 0;
@@ -783,5 +765,73 @@
      cannot set them. Same glyphs, same absence. */
   .print-drop {
     display: none;
+  }
+
+  /* The timeline, moved to the top of the verso by js/print-layout.js: full
+     width, the whole career, no controls. Sizes are the
+     PDF's own steps (\footnotesize, \small), as everywhere on the sheet. Printed only from here — where
+     it sits on screen (the recto's column, or anywhere when no script moved
+     it) it stays hidden by css/timeline.css, or the CV would run onto a third
+     sheet. The LaTeX CV opens its verso with the same timeline. */
+  #print-verso #timeline {
+    display: block;
+    margin: 0 0 0.2cm;
+    break-inside: avoid;
+  }
+
+  #print-verso .tl-zoom,
+  #print-verso .tl-preview {
+    display: none !important;
+  }
+
+  #print-verso .tl-scroll {
+    overflow: visible;
+    padding: 0;
+  }
+
+  /* !important: the zoom writes the grid's width inline. */
+  #print-verso .tl-grid {
+    --row-height: 11pt;
+    --lane-label: 2.6cm;
+    width: 100% !important;
+    min-width: 0;
+    gap: 4pt;
+  }
+
+  #print-verso .tl-years {
+    height: 9pt;
+    font-size: 0.750rem;
+  }
+
+  #print-verso .tl-lane-label {
+    position: static;
+    padding: 0 4pt 0 0;
+    background: none;
+    font-size: 0.874rem;
+  }
+
+  /* The lanes in the PDF's colours (pdf/timeline/picture.js): experiences in
+     ThirdColor, degrees in PrimaryColor, competitions between the two. */
+  #print-verso .tl-lane[data-kind="work"] {
+    --lane-hue: var(--accent-color);
+  }
+
+  #print-verso .tl-lane[data-kind="education"] {
+    --lane-hue: var(--primary-color);
+  }
+
+  #print-verso .tl-lane[data-kind="competitions"] {
+    --lane-hue: color-mix(in srgb, var(--primary-color) 55%, var(--accent-color));
+  }
+
+  /* Bars are backgrounds, which a browser leaves out of a print by default. */
+  #print-verso .tl-bar {
+    height: calc(var(--row-height) - 2pt);
+    padding-inline: 2pt;
+    font-size: 0.750rem;
+    outline: none;
+    transform: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 }

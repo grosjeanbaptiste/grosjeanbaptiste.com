@@ -10,10 +10,12 @@ const SECTIONS = [
   ],
   ['projects', (e) => ({ title: e.name, text: e.description ?? e.summary })],
   ['volunteer', (e) => ({ title: `${e.position} — ${e.organization}`, text: e.summary })],
+  ['competitions', (e) => ({ title: e.title, text: e.summary })],
 ];
 
+const KIND = { competitions: 'competition' };
 const kindOf = (section, entry) =>
-  section === 'projects' ? (entry.courseUnit ? 'course' : 'project') : section;
+  section === 'projects' ? (entry.courseUnit ? 'course' : 'project') : (KIND[section] ?? section);
 
 const escapeHtml = (text) =>
   String(text)

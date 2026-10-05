@@ -26,4 +26,7 @@ function labelWidth(bar, sizePt = 6) {
   return em * sizePt * MM_PER_PT * MARGIN;
 }
 
-module.exports = { labelWidth, restOf, MM_PER_PT };
+// A text's width in mm, same estimate.
+const textWidth = (text, bold, sizePt = 6) => widthOf(text, bold) * sizePt * MM_PER_PT * MARGIN;
+
+module.exports = { labelWidth, textWidth, restOf, MM_PER_PT };

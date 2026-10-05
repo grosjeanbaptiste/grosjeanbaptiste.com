@@ -21,6 +21,7 @@ module.exports = {
   downloadCV: 'Lebenslauf herunterladen',
   downloadTimeline: 'Zeitleiste herunterladen',
   timelineTitle: 'Zeitleiste',
+  competitions: 'Wettbewerbe',
   lastYears: (n) => `${n} Jahre`,
   wholeCareer: 'Alles',
   printPdf: 'Drucken / PDF',

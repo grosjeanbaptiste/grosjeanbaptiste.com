@@ -12,19 +12,28 @@ const { buildAbout } = require('./sections/about');
 const { buildWork } = require('./sections/work');
 const { buildEducation } = require('./sections/education');
 const { buildReferences } = require('./sections/extras');
-const { buildVolunteer } = require('./sections/volunteer');
+const { buildTimeline } = require('./sections/timeline');
 
-function generateLatex(resume, lang, limits) {
+// The verso, full width: the timeline at the top, the references under it in
+// columns. Volunteering used to fill a sidebar here; a role now shows inside
+// the entry that hosts it — in the timeline, and beside the projects of an
+// entry the recto prints (sections/_trailer.js).
+function buildVerso(resume, t, today) {
+  const parts = [buildTimeline(resume, t, today), buildReferences(resume, t)].filter(Boolean);
+  if (!parts.length) return '';
+  // The headings sit closer here than on the recto (\\cvsectiontight), in a
+  // group so that nothing after it inherits the change.
+  return [
+    '\\clearpage',
+    '\\begingroup\\let\\cvsection\\cvsectiontight',
+    ...parts,
+    '\\endgroup',
+  ].join('\n');
+}
+
+function generateLatex(resume, lang, limits, today = new Date()) {
   const t = I18N[lang];
-  // The verso's left column was blank — references are emitted after
-  // \switchcolumn, so they only ever filled the right one. Volunteering goes
-  // there: it costs no page, and it is the only section the sheet was missing.
-  const volunteer = buildVolunteer(resume, t, lang);
-  const references = resume.references?.length ? buildReferences(resume, t) : '';
-  const verso =
-    volunteer || references
-      ? `\\clearpage\n\\begin{paracol}{2}\n${volunteer}\n\\switchcolumn\n${references}\n\\end{paracol}`
-      : '';
+  const verso = buildVerso(resume, t, today);
   return [
     buildPreamble(lang),
     '\\begin{document}',

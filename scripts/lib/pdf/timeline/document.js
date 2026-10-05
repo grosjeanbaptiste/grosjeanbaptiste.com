@@ -21,10 +21,11 @@ function buildHeader(resume, t, lang, today, years) {
 }
 
 // `years`: null for the whole career, or the span of the 2- and 5-year PDFs.
-function generateTimelineLatex(resume, lang, today, years = null) {
+// Gives the source and which labels the sheet could carry ('full' or 'names').
+function buildTimelineDocument(resume, lang, today, years = null) {
   const t = I18N[lang];
   const sheet = layOut(timelineBars(resume, today, years));
-  return [
+  const tex = [
     buildPreamble(lang),
     '\\geometry{landscape,left=10mm,right=10mm,top=10mm,bottom=8mm}',
     '\\pagestyle{empty}',
@@ -35,6 +36,10 @@ function generateTimelineLatex(resume, lang, today, years = null) {
     '\\end{document}',
     '',
   ].join('\n');
+  return { tex, labels: sheet.labels };
 }
 
-module.exports = { generateTimelineLatex };
+const generateTimelineLatex = (resume, lang, today, years = null) =>
+  buildTimelineDocument(resume, lang, today, years).tex;
+
+module.exports = { buildTimelineDocument, generateTimelineLatex };
