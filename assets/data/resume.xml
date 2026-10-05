@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=c2061fa4"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=f2d30391"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -127,6 +127,478 @@
         <label>Timeline (PDF)</label>
       </view>
     </views>
+    <timeline>
+      <title>Timeline</title>
+      <months>206</months>
+      <zooms>
+        <zoom>
+          <years>2</years>
+          <label>2 years</label>
+        </zoom>
+        <zoom>
+          <years>5</years>
+          <label>5 years</label>
+        </zoom>
+        <zoom>
+          <years>all</years>
+          <label>All</label>
+        </zoom>
+      </zooms>
+      <ticks>
+        <tick>
+          <label>2010</label>
+          <left>1.94%</left>
+        </tick>
+        <tick>
+          <label>2011</label>
+          <left>7.77%</left>
+        </tick>
+        <tick>
+          <label>2012</label>
+          <left>13.59%</left>
+        </tick>
+        <tick>
+          <label>2013</label>
+          <left>19.42%</left>
+        </tick>
+        <tick>
+          <label>2014</label>
+          <left>25.24%</left>
+        </tick>
+        <tick>
+          <label>2015</label>
+          <left>31.07%</left>
+        </tick>
+        <tick>
+          <label>2016</label>
+          <left>36.89%</left>
+        </tick>
+        <tick>
+          <label>2017</label>
+          <left>42.72%</left>
+        </tick>
+        <tick>
+          <label>2018</label>
+          <left>48.54%</left>
+        </tick>
+        <tick>
+          <label>2019</label>
+          <left>54.37%</left>
+        </tick>
+        <tick>
+          <label>2020</label>
+          <left>60.19%</left>
+        </tick>
+        <tick>
+          <label>2021</label>
+          <left>66.02%</left>
+        </tick>
+        <tick>
+          <label>2022</label>
+          <left>71.84%</left>
+        </tick>
+        <tick>
+          <label>2023</label>
+          <left>77.67%</left>
+        </tick>
+        <tick>
+          <label>2024</label>
+          <left>83.5%</left>
+        </tick>
+        <tick>
+          <label>2025</label>
+          <left>89.32%</left>
+        </tick>
+        <tick>
+          <label>2026</label>
+          <left>95.15%</left>
+        </tick>
+      </ticks>
+      <lanes>
+        <lane>
+          <kind>work</kind>
+          <label>Work Experience</label>
+          <rows>3</rows>
+          <bars>
+            <bar>
+              <target>work-quick-restaurant-student-job</target>
+              <name>Quick Restaurant</name>
+              <title>Student Job</title>
+              <period>Sep 2017 – Sep 2017</period>
+              <label>Quick Restaurant — Student Job — Sep 2017 – Sep 2017</label>
+              <left>46.6%</left>
+              <width>0.49%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-restomax-full-stack-developer-web-intern</target>
+              <name>RESTOMAX</name>
+              <title>Full Stack Developer Web Intern</title>
+              <period>Nov 2021 – Mar 2022</period>
+              <label>RESTOMAX — Full Stack Developer Web Intern — Nov 2021 – Mar 2022</label>
+              <left>70.87%</left>
+              <width>2.43%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-les-auberges-de-jeunesse-wallonie-bruxelles-student-job</target>
+              <name>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</name>
+              <title>Student Job</title>
+              <period>Mar 2022 – Mar 2022</period>
+              <label>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles — Student Job — Mar 2022 – Mar 2022</label>
+              <left>72.82%</left>
+              <width>0.49%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-developer-web-intern</target>
+              <name>EDITx: IT Challenges, IT Jobs, Education in IT for X</name>
+              <title>Full Stack Developer Web Intern</title>
+              <period>Apr 2022 – Apr 2022</period>
+              <label>EDITx: IT Challenges, IT Jobs, Education in IT for X — Full Stack Developer Web Intern — Apr 2022 – Apr 2022</label>
+              <left>73.3%</left>
+              <width>0.49%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-technofutur-tic-full-stack-developer-web-intern</target>
+              <name>Technofutur TIC</name>
+              <title>Full Stack Developer Web Intern</title>
+              <period>Dec 2022 – Jun 2023</period>
+              <label>Technofutur TIC — Full Stack Developer Web Intern — Dec 2022 – Jun 2023</label>
+              <left>77.18%</left>
+              <width>3.4%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-xtrada-software-crafter</target>
+              <name>Xtrada</name>
+              <title>Software Crafter</title>
+              <period>Aug 2023 – Sep 2024</period>
+              <label>Xtrada — Software Crafter — Aug 2023 – Sep 2024</label>
+              <left>81.07%</left>
+              <width>6.8%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-xtrada-net-blazor-software-crafter</target>
+              <name>Xtrada</name>
+              <title>.NET/Blazor Software Crafter</title>
+              <period>Sep 2023 – Dec 2023</period>
+              <label>Xtrada — .NET/Blazor Software Crafter — Sep 2023 – Dec 2023</label>
+              <left>81.55%</left>
+              <width>1.94%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>work-xtrada-net-react-software-crafter</target>
+              <name>Xtrada</name>
+              <title>.NET/React Software Crafter</title>
+              <period>Jan 2024 – Aug 2024</period>
+              <label>Xtrada — .NET/React Software Crafter — Jan 2024 – Aug 2024</label>
+              <left>83.5%</left>
+              <width>3.88%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>work-xtrada-data-scientist</target>
+              <name>Xtrada</name>
+              <title>Data Scientist</title>
+              <period>Mar 2024 – Sep 2024</period>
+              <label>Xtrada — Data Scientist — Mar 2024 – Sep 2024</label>
+              <left>84.47%</left>
+              <width>3.4%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>work-emvi-ai-ai-software-crafter</target>
+              <name>Emvi.ai</name>
+              <title>AI Software Crafter</title>
+              <period>Oct 2024 – Jun 2025</period>
+              <label>Emvi.ai — AI Software Crafter — Oct 2024 – Jun 2025</label>
+              <left>87.86%</left>
+              <width>4.37%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-emvi-ai-ai-software-crafter-lead</target>
+              <name>Emvi.ai</name>
+              <title>AI Software Crafter Lead</title>
+              <period>Dec 2024 – Jun 2025</period>
+              <label>Emvi.ai — AI Software Crafter Lead — Dec 2024 – Jun 2025</label>
+              <left>88.83%</left>
+              <width>3.4%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>work-acteble-founder</target>
+              <name>Acteble</name>
+              <title>Founder</title>
+              <period>Jul 2025 – Present</period>
+              <label>Acteble — Founder — Jul 2025 – Present</label>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-belgian-senate-ai-research-scientist</target>
+              <name>Belgian Senate</name>
+              <title>AI Research Scientist</title>
+              <period>Nov 2025 – Jun 2026</period>
+              <label>Belgian Senate — AI Research Scientist — Nov 2025 – Jun 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>1</row>
+            </bar>
+          </bars>
+        </lane>
+        <lane>
+          <kind>education</kind>
+          <label>Education</label>
+          <rows>2</rows>
+          <bars>
+            <bar>
+              <target>education-lycee-mater-dei</target>
+              <name>Lycée Mater Dei</name>
+              <period>Sep 2009 – Jun 2012</period>
+              <label>Lycée Mater Dei — Sep 2009 – Jun 2012</label>
+              <left>0%</left>
+              <width>16.5%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</target>
+              <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
+              <title>C.E.S.S.</title>
+              <period>Sep 2012 – Jun 2015</period>
+              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — Sep 2012 – Jun 2015</label>
+              <left>17.48%</left>
+              <width>16.5%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>education-uclouvain-universite-catholique-de-louvain-cours-preparatoires</target>
+              <name>UCLouvain - Université catholique de Louvain</name>
+              <title>Cours préparatoires</title>
+              <period>Sep 2014 – Jun 2015</period>
+              <label>UCLouvain - Université catholique de Louvain — Cours préparatoires — Sep 2014 – Jun 2015</label>
+              <left>29.13%</left>
+              <width>4.85%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-bachelor-of-arts-ba</target>
+              <name>Université Saint-Louis - Bruxelles</name>
+              <title>Bachelor of Arts - BA</title>
+              <period>Sep 2016 – Jun 2017</period>
+              <label>Université Saint-Louis - Bruxelles — Bachelor of Arts - BA — Sep 2016 – Jun 2017</label>
+              <left>40.78%</left>
+              <width>4.85%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
+              <title>Professional Bachelor's degree</title>
+              <period>Sep 2018 – Oct 2022</period>
+              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Professional Bachelor's degree — Sep 2018 – Oct 2022</label>
+              <left>52.43%</left>
+              <width>24.27%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>education-institut-saint-louis-bruxelles-attestation</target>
+              <name>Institut Saint-Louis Bruxelles</name>
+              <title>Attestation</title>
+              <period>Sep 2019 – Jun 2020</period>
+              <label>Institut Saint-Louis Bruxelles — Attestation — Sep 2019 – Jun 2020</label>
+              <left>58.25%</left>
+              <width>4.85%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <name>UMons</name>
+              <title>Master of Science - MS</title>
+              <period>Oct 2022 – Sep 2026</period>
+              <label>UMons — Master of Science - MS — Oct 2022 – Sep 2026</label>
+              <left>76.21%</left>
+              <width>23.3%</width>
+              <row>1</row>
+            </bar>
+          </bars>
+        </lane>
+        <lane>
+          <kind>projects</kind>
+          <label>Projects</label>
+          <rows>3</rows>
+          <bars>
+            <bar>
+              <target>work-restomax-full-stack-developer-web-intern</target>
+              <name>WebMenu</name>
+              <period>Nov 2021 – Mar 2022</period>
+              <label>WebMenu — Nov 2021 – Mar 2022</label>
+              <left>70.87%</left>
+              <width>2.43%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-technofutur-tic-full-stack-developer-web-intern</target>
+              <name>MyWay</name>
+              <title>Freelance</title>
+              <period>Jan 2023 – Jun 2023</period>
+              <label>MyWay — Freelance — Jan 2023 – Jun 2023</label>
+              <left>77.67%</left>
+              <width>2.91%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-xtrada-net-blazor-software-crafter</target>
+              <name>Kwalitijd</name>
+              <period>Sep 2023 – Dec 2023</period>
+              <label>Kwalitijd — Sep 2023 – Dec 2023</label>
+              <left>81.55%</left>
+              <width>1.94%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-xtrada-net-react-software-crafter</target>
+              <name>VhAuctions</name>
+              <period>Jan 2024 – Feb 2024</period>
+              <label>VhAuctions — Jan 2024 – Feb 2024</label>
+              <left>83.5%</left>
+              <width>0.97%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <name>EduCraft</name>
+              <period>Mar 2024 – Mar 2024</period>
+              <label>EduCraft — Mar 2024 – Mar 2024</label>
+              <left>84.47%</left>
+              <width>0.49%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-xtrada-data-scientist</target>
+              <name>VhAuctions NER Inventory Model</name>
+              <period>Mar 2024 – Aug 2024</period>
+              <label>VhAuctions NER Inventory Model — Mar 2024 – Aug 2024</label>
+              <left>84.47%</left>
+              <width>2.91%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>work-emvi-ai-ai-software-crafter</target>
+              <name>Remi</name>
+              <period>Oct 2024 – Jun 2025</period>
+              <label>Remi — Oct 2024 – Jun 2025</label>
+              <left>87.86%</left>
+              <width>4.37%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-emvi-ai-ai-software-crafter-lead</target>
+              <name>Emvi App</name>
+              <period>Dec 2024 – Jun 2025</period>
+              <label>Emvi App — Dec 2024 – Jun 2025</label>
+              <left>88.83%</left>
+              <width>3.4%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>work-acteble-founder</target>
+              <name>Acteble</name>
+              <period>Jul 2025 – Present</period>
+              <label>Acteble — Jul 2025 – Present</label>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>work-belgian-senate-ai-research-scientist</target>
+              <name>Synergy</name>
+              <period>Nov 2025 – Jun 2026</period>
+              <label>Synergy — Nov 2025 – Jun 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>work-belgian-senate-ai-research-scientist</target>
+              <name>fedrag-be</name>
+              <period>Nov 2025 – Jun 2026</period>
+              <label>fedrag-be — Nov 2025 – Jun 2026</label>
+              <left>94.17%</left>
+              <width>3.88%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <name>Baba</name>
+              <period>Jul 2026 – Present</period>
+              <label>Baba — Jul 2026 – Present</label>
+              <left>98.06%</left>
+              <width>1.94%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <name>KAG</name>
+              <period>Jul 2026 – Present</period>
+              <label>KAG — Jul 2026 – Present</label>
+              <left>98.06%</left>
+              <width>1.94%</width>
+              <row>2</row>
+            </bar>
+          </bars>
+        </lane>
+        <lane>
+          <kind>volunteer</kind>
+          <label>Volunteer</label>
+          <rows>2</rows>
+          <bars>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <name>EPHEC École Supérieure de Promotion Sociale</name>
+              <title>Student Representative</title>
+              <period>Sep 2019 – Oct 2022</period>
+              <label>EPHEC École Supérieure de Promotion Sociale — Student Representative — Sep 2019 – Oct 2022</label>
+              <left>58.25%</left>
+              <width>18.45%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <name>EPHEC École Supérieure de Promotion Sociale</name>
+              <title>Tutor</title>
+              <period>Sep 2019 – Oct 2022</period>
+              <label>EPHEC École Supérieure de Promotion Sociale — Tutor — Sep 2019 – Oct 2022</label>
+              <left>58.25%</left>
+              <width>18.45%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <name>UMons</name>
+              <title>Student Representative</title>
+              <period>Nov 2023 – Sep 2026</period>
+              <label>UMons — Student Representative — Nov 2023 – Sep 2026</label>
+              <left>82.52%</left>
+              <width>16.99%</width>
+              <row>0</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <name>UMons</name>
+              <title>Buddy TandeMons</title>
+              <period>Nov 2023 – Sep 2026</period>
+              <label>UMons — Buddy TandeMons — Nov 2023 – Sep 2026</label>
+              <left>82.52%</left>
+              <width>16.99%</width>
+              <row>1</row>
+            </bar>
+          </bars>
+        </lane>
+      </lanes>
+    </timeline>
     <degrees>
       <obtained>Master of Science - MS in Computer Science (work-study program) — specialised professional focus (120 ECTS)</obtained>
     </degrees>
@@ -187,6 +659,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
       <projects>
         <project>Acteble</project>
       </projects>
+      <anchor>work-acteble-founder</anchor>
     </job>
     <job>
       <company>Belgian Senate</company>
@@ -209,6 +682,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
         <project>Synergy</project>
         <project>fedrag-be</project>
       </projects>
+      <anchor>work-belgian-senate-ai-research-scientist</anchor>
     </job>
     <job>
       <company>Emvi.ai</company>
@@ -231,6 +705,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
       <projects>
         <project>Emvi App</project>
       </projects>
+      <anchor>work-emvi-ai-ai-software-crafter-lead</anchor>
     </job>
     <job>
       <company>Emvi.ai</company>
@@ -255,6 +730,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
       <projects>
         <project>Remi</project>
       </projects>
+      <anchor>work-emvi-ai-ai-software-crafter</anchor>
     </job>
     <job>
       <company>Xtrada</company>
@@ -274,6 +750,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
       <projects>
         <project>VhAuctions NER Inventory Model</project>
       </projects>
+      <anchor>work-xtrada-data-scientist</anchor>
     </job>
     <job>
       <company>Xtrada</company>
@@ -289,6 +766,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
         <skill>CleanCode</skill>
         <skill>CleanArchitecture</skill>
       </skills>
+      <anchor>work-xtrada-software-crafter</anchor>
     </job>
     <job>
       <company>Xtrada</company>
@@ -311,6 +789,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
         <project>VhAuctions</project>
       </projects>
       <client>VhAuctions</client>
+      <anchor>work-xtrada-net-react-software-crafter</anchor>
     </job>
     <job>
       <company>Xtrada</company>
@@ -332,6 +811,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
         <project>Kwalitijd</project>
       </projects>
       <client>aXinco</client>
+      <anchor>work-xtrada-net-blazor-software-crafter</anchor>
     </job>
     <job>
       <company>Technofutur TIC</company>
@@ -356,6 +836,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <projects>
         <project>MyWay</project>
       </projects>
+      <anchor>work-technofutur-tic-full-stack-developer-web-intern</anchor>
     </job>
     <job>
       <company>EDITx: IT Challenges, IT Jobs, Education in IT for X</company>
@@ -364,6 +845,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <location>Région de Bruxelles-Capitale, Belgique</location>
       <startDate>2022-04-01</startDate>
       <endDate>2022-04-30</endDate>
+      <anchor>work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-developer-web-intern</anchor>
     </job>
     <job>
       <company>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</company>
@@ -372,6 +854,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <location>Région de Bruxelles-Capitale, Belgique</location>
       <startDate>2022-03-30</startDate>
       <endDate>2022-03-31</endDate>
+      <anchor>work-les-auberges-de-jeunesse-wallonie-bruxelles-student-job</anchor>
     </job>
     <job>
       <company>RESTOMAX</company>
@@ -388,6 +871,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <projects>
         <project>WebMenu</project>
       </projects>
+      <anchor>work-restomax-full-stack-developer-web-intern</anchor>
     </job>
     <job>
       <company>Quick Restaurant</company>
@@ -396,6 +880,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <location>Kraainem, Flemish Region, Belgium</location>
       <startDate>2017-09-01</startDate>
       <endDate>2017-09-30</endDate>
+      <anchor>work-quick-restaurant-student-job</anchor>
     </job>
   </work>
   <education>
@@ -438,6 +923,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
         <project>Cryptographie et sécurité des systèmes informatiques</project>
         <project>Éthique et droit de l'informatique</project>
       </projects>
+      <anchor>education-umons-master-of-science-ms</anchor>
     </school>
     <school>
       <institution>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</institution>
@@ -488,6 +974,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <project>Langue en situation appliquée à l'enseignement supérieur UE1</project>
         <project>Langue en situation appliquée à l'enseignement supérieur UE2</project>
       </projects>
+      <anchor>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchor>
     </school>
     <school>
       <institution>Institut Saint-Louis Bruxelles</institution>
@@ -496,6 +983,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <startDate>2019-09-30</startDate>
       <endDate>2020-06-30</endDate>
       <gpa>Attestation</gpa>
+      <anchor>education-institut-saint-louis-bruxelles-attestation</anchor>
     </school>
     <school>
       <institution>Université Saint-Louis - Bruxelles</institution>
@@ -504,6 +992,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <startDate>2016-09-30</startDate>
       <endDate>2017-06-30</endDate>
       <gpa>29 credits earned in 2016-2017, contact me for more information.</gpa>
+      <anchor>education-universite-saint-louis-bruxelles-bachelor-of-arts-ba</anchor>
     </school>
     <school>
       <institution>UCLouvain - Université catholique de Louvain</institution>
@@ -512,6 +1001,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <startDate>2014-09-30</startDate>
       <endDate>2015-06-30</endDate>
       <gpa>Attestation </gpa>
+      <anchor>education-uclouvain-universite-catholique-de-louvain-cours-preparatoires</anchor>
     </school>
     <school>
       <institution>Centre Scolaire Saint-Adrien - Val Duchesse</institution>
@@ -520,12 +1010,14 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <startDate>2012-09-30</startDate>
       <endDate>2015-06-30</endDate>
       <gpa>Satis bene</gpa>
+      <anchor>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</anchor>
     </school>
     <school>
       <institution>Lycée Mater Dei</institution>
       <area>General studies Latin &amp; Greek</area>
       <startDate>2009-09-30</startDate>
       <endDate>2012-06-30</endDate>
+      <anchor>education-lycee-mater-dei</anchor>
     </school>
   </education>
   <projects>

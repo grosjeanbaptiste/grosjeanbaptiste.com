@@ -34,8 +34,19 @@
   // The entry a bar leads to: its bar marked, the entry set apart, the URL
   // naming it. Done here, not with :target — nav.js takes the click over to
   // scroll smoothly and leaves the URL alone.
+  // An id may hold non-Latin letters (a role's title in Chinese). The browser
+  // percent-encodes them in location.hash, an XSLT processor in href: ids are
+  // compared and looked up decoded.
+  const idOf = (fragment) => {
+    const raw = fragment.replace(/^#/, '');
+    try {
+      return decodeURIComponent(raw);
+    } catch {
+      return raw; // not percent-encoding at all (a stray "%"): the id is as written
+    }
+  };
   const reveal = (bar) => {
-    const entry = document.getElementById(bar.getAttribute('href').slice(1));
+    const entry = document.getElementById(idOf(bar.getAttribute('href')));
     if (!entry) return;
     for (const other of bars) other.setAttribute('aria-current', String(other === bar));
     document.querySelector('.tl-shown')?.classList.remove('tl-shown');
@@ -47,7 +58,10 @@
     if (bar) reveal(bar);
   });
   const named = bars.find(
-    (bar) => location.hash !== '' && bar.getAttribute('href') === location.hash,
+    (bar) =>
+      location.hash !== '' &&
+      bar.hasAttribute('href') &&
+      idOf(bar.getAttribute('href')) === idOf(location.hash),
   );
   if (named) reveal(named);
   setZoom('5');
