@@ -5,7 +5,9 @@ const slug = (text) =>
     .normalize('NFD')
     .replace(/\p{Diacritic}/gu, '')
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
+    // Every letter and digit of every script: Latin-only made two roles at one
+    // employer, written in Chinese, share an id.
+    .replace(/[^\p{L}\p{N}]+/gu, '-')
     .replace(/^-|-$/g, '');
 
 const PARTS = {

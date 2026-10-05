@@ -1,4 +1,6 @@
 const { viewsOf } = require('./views');
+const { anchorOf } = require('./anchors');
+const { timelineForXml } = require('./xml-timeline');
 const I18N = require('./i18n');
 const { highestObtainedDegree, highestInProgressDegree, formatDegreeLine } = require('./degrees');
 
@@ -20,6 +22,10 @@ const XML_ITEM_NAMES = {
   sectionOrder: 'section',
   sidebarOrder: 'section',
   views: 'view',
+  zooms: 'zoom',
+  ticks: 'tick',
+  lanes: 'lane',
+  bars: 'bar',
 };
 
 const xmlEsc = (s) =>
@@ -52,7 +58,12 @@ function emitXml(name, value, depth) {
   return `${pad}<${name}>${xmlEsc(value)}</${name}>`;
 }
 
-function generateXml(resume, themePath = '../xslt/resume-transform.xsl', lang = 'en') {
+function generateXml(
+  resume,
+  themePath = '../xslt/resume-transform.xsl',
+  lang = 'en',
+  today = new Date(),
+) {
   // Inject <meta><lang> and <meta><degrees>{inProgress,obtained} so the XSLT
   // can render the "highest degree" summary lines that the HTML site shows —
   // XSLT 1.0 has no reliable current-date primitive, so we pre-compute here.
@@ -67,9 +78,20 @@ function generateXml(resume, themePath = '../xslt/resume-transform.xsl', lang = 
     lang,
     viewsTitle: I18N[lang].views.title,
     views: viewsOf(lang),
+    // Laid out here: XSLT 1.0 cannot compute it (see xml-timeline.js).
+    timeline: timelineForXml(resume, lang, today),
   };
   if (Object.keys(degrees).length) meta.degrees = degrees;
-  const tagged = { ...resume, meta };
+  // Each job and degree carries the id the themes give it, for the timeline's
+  // bars to link to.
+  const anchored = (kind, entries) =>
+    (entries || []).map((e) => ({ ...e, anchor: anchorOf(kind, e) }));
+  const tagged = {
+    ...resume,
+    work: anchored('work', resume.work),
+    education: anchored('education', resume.education),
+    meta,
+  };
   const body = emitXml('resume', tagged, 0);
   return `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="${themePath}"?>\n${body}\n`;
 }

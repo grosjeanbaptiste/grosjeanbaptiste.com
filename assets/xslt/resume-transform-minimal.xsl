@@ -231,6 +231,8 @@
             --block:   <xsl:value-of select="meta/brand/xsltBlockMinDark"/>;
             --tb-bg:   <xsl:value-of select="meta/brand/xsltSidebarDark"/>;
           }
+          /* The shared timeline sheet draws on this theme's page colour. */
+          #timeline { --tl-surface: var(--bg); }
           body {
             font-family: <xsl:value-of select="meta/brand/fontXslt"/>;
             max-width: 880px;
@@ -378,6 +380,10 @@
              (and re-paginate) the page wherever -apple-system is missing. -->
         <link rel="stylesheet" href="/css/variables.css"/>
         <link rel="stylesheet" href="/css/views-bar.css"/>
+        <!-- The timeline's styles. No script here: this theme stays static, the
+             whole career in the frame, bars as plain links. -->
+        <link rel="stylesheet" href="/css/timeline.css"/>
+        <link rel="stylesheet" href="/css/timeline-entries.css"/>
       </head>
       <body>
         <xsl:call-template name="views-bar"><xsl:with-param name="current" select="'xsltMinimal'"/></xsl:call-template>
@@ -442,7 +448,7 @@
         <xsl:for-each select="meta/sectionOrder/section">
           <xsl:variable name="name" select="."/>
           <xsl:choose>
-            <xsl:when test="$name='about'"><xsl:call-template name="section-about"/></xsl:when>
+            <xsl:when test="$name='about'"><xsl:call-template name="section-about"/><xsl:call-template name="timeline"/></xsl:when>
             <xsl:when test="$name='work'"><xsl:call-template name="section-work"/></xsl:when>
             <xsl:when test="$name='education'"><xsl:call-template name="section-education"/></xsl:when>
             <xsl:when test="$name='skills'"><xsl:call-template name="section-skills"/></xsl:when>
@@ -492,6 +498,81 @@
     </html>
   </xsl:template>
 
+
+  <!-- The timeline, laid out by the generator (meta/timeline — see
+       scripts/lib/xml-timeline.js): XSLT 1.0 only draws it, with the classic
+       page's markup, which /css/timeline.css styles (no script in
+       this theme: it stays static). -->
+  <xsl:template name="timeline">
+    <xsl:variable name="tl" select="/resume/meta/timeline"/>
+    <xsl:if test="$tl/lanes/lane">
+      <section id="timeline" aria-labelledby="timeline-title">
+        <div class="tl-head">
+          <h2 id="timeline-title"><xsl:value-of select="$tl/title"/></h2>
+          <div class="tl-zoom" role="group" hidden="hidden">
+            <xsl:attribute name="aria-label"><xsl:value-of select="$tl/title"/></xsl:attribute>
+            <xsl:for-each select="$tl/zooms/zoom">
+              <button type="button">
+                <xsl:attribute name="data-years"><xsl:value-of select="years"/></xsl:attribute>
+                <xsl:value-of select="label"/>
+              </button>
+            </xsl:for-each>
+          </div>
+        </div>
+        <div class="tl-scroll">
+          <div class="tl-grid">
+            <xsl:attribute name="data-months"><xsl:value-of select="$tl/months"/></xsl:attribute>
+            <div class="tl-years" aria-hidden="true">
+              <xsl:for-each select="$tl/ticks/tick">
+                <span>
+                  <xsl:attribute name="style">left:<xsl:value-of select="left"/></xsl:attribute>
+                  <xsl:value-of select="label"/>
+                </span>
+              </xsl:for-each>
+            </div>
+            <xsl:for-each select="$tl/lanes/lane">
+              <div class="tl-lane">
+                <xsl:attribute name="data-kind"><xsl:value-of select="kind"/></xsl:attribute>
+                <span class="tl-lane-label"><xsl:value-of select="label"/></span>
+                <div class="tl-track">
+                  <xsl:attribute name="style">--rows:<xsl:value-of select="rows"/></xsl:attribute>
+                  <xsl:for-each select="bars/bar">
+                    <xsl:choose>
+                      <!-- A bar leads to the entry that carries it on this page. -->
+                      <xsl:when test="target">
+                        <a class="tl-bar">
+                          <xsl:call-template name="timeline-bar"/>
+                          <xsl:attribute name="href">#<xsl:value-of select="target"/></xsl:attribute>
+                          <span><xsl:value-of select="name"/></span>
+                        </a>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <span class="tl-bar" tabindex="0">
+                          <xsl:call-template name="timeline-bar"/>
+                          <span><xsl:value-of select="name"/></span>
+                        </span>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </xsl:for-each>
+                </div>
+              </div>
+            </xsl:for-each>
+          </div>
+        </div>
+      </section>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- What every bar carries, linked or not: its place, its name for assistive
+       technology, and what the preview shows. -->
+  <xsl:template name="timeline-bar">
+    <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/></xsl:attribute>
+    <xsl:attribute name="aria-label"><xsl:value-of select="label"/></xsl:attribute>
+    <xsl:attribute name="data-name"><xsl:value-of select="name"/></xsl:attribute>
+    <xsl:attribute name="data-title"><xsl:value-of select="title"/></xsl:attribute>
+    <xsl:attribute name="data-period"><xsl:value-of select="period"/></xsl:attribute>
+  </xsl:template>
+
   <xsl:template name="section-about">
     <xsl:if test="/resume/basics/summary">
       <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
@@ -504,6 +585,7 @@
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'experience'"/></xsl:call-template></h2>
           <xsl:for-each select="/resume/work/job">
             <div class="row">
+              <xsl:if test="anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></xsl:if>
               <h3>
                 <xsl:value-of select="position"/>
                 <xsl:if test="client"> · <xsl:value-of select="client"/></xsl:if>
@@ -584,6 +666,7 @@
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'education'"/></xsl:call-template></h2>
           <xsl:for-each select="/resume/education/school">
             <div class="row">
+              <xsl:if test="anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></xsl:if>
               <h3>
                 <xsl:value-of select="studyType"/>
                 <xsl:if test="area"> — <xsl:value-of select="area"/></xsl:if>

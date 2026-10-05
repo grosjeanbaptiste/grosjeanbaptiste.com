@@ -86,7 +86,9 @@
   z-index: 3;
   align-self: stretch;
   padding: 0.3rem 0.5rem 0 0;
-  background: linear-gradient(to right, var(--card-background) 85%, transparent);
+  /* --tl-surface: what the timeline sits on, where it is not the classic
+     page's card (the XSLT themes set it to their own page colour). */
+  background: linear-gradient(to right, var(--tl-surface, var(--card-background)) 85%, transparent);
   font-size: 0.8em;
   font-weight: 600;
   color: var(--muted-color);
@@ -144,54 +146,16 @@
   text-decoration: none;
 }
 
-/* The bar of the entry the page is showing. */
-.tl-bar[aria-current="true"] {
-  z-index: 2;
-  outline: 0.15rem solid var(--text-color);
-  outline-offset: 0.1rem;
-}
-
-.tl-preview {
-  position: absolute;
-  z-index: 4;
-  display: grid;
-  gap: 0.15rem;
-  width: max-content;
-  max-width: min(20rem, 70vw);
-  padding: 0.5rem 0.7rem;
-  font-size: 0.8em;
-  background: var(--card-background);
-  color: var(--text-color);
-  border: 0.0625rem solid var(--border-color);
-  border-radius: 0.5rem;
-  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
-  pointer-events: none;
-}
-
-.tl-preview span {
-  color: var(--muted-color);
-}
-
-/* An embedded row's anchor: an empty span at its end, pinned to its top so a
- * bar's link lands on the row and not on its last line. */
-.main-content li:has(> .tl-anchor) {
-  position: relative;
-}
-
-.tl-anchor {
-  position: absolute;
-  top: 0;
-}
-
-/* The entry a bar led to (js/timeline.js marks it). */
-.main-content .tl-shown {
-  outline: 0.15rem solid var(--third-color);
-  outline-offset: 0.35rem;
-  border-radius: 0.3rem;
-}
-
 @media (max-width: 48rem) {
   .tl-grid {
     --lane-label: 5.5rem;
+  }
+}
+
+/* On paper there is no timeline: the LaTeX CV the sheet follows has none. The
+ * classic page says so in css/print.css; this holds for the XSLT themes. */
+@media print {
+  #timeline {
+    display: none;
   }
 }

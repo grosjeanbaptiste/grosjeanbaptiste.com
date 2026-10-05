@@ -256,6 +256,8 @@
             --rule:       <xsl:value-of select="meta/brand/xsltRuleDark"/>;
           }
           * { box-sizing: border-box; }
+          /* The shared timeline sheet draws on this theme's page colour. */
+          #timeline { --tl-surface: var(--bg-page); }
           body {
             margin: 0;
             font-family: <xsl:value-of select="meta/brand/fontXslt"/>;
@@ -582,6 +584,11 @@
              (and re-paginate) the page wherever -apple-system is missing. -->
         <link rel="stylesheet" href="/css/variables.css"/>
         <link rel="stylesheet" href="/css/views-bar.css"/>
+        <!-- The classic page's timeline, as is: its styles and its script (zoom,
+             arrow keys, preview). -->
+        <link rel="stylesheet" href="/css/timeline.css"/>
+        <link rel="stylesheet" href="/css/timeline-entries.css"/>
+        <script src="/js/timeline.js" defer="defer"></script>
       </head>
       <body>
         <xsl:call-template name="views-bar"><xsl:with-param name="current" select="'xsltRich'"/></xsl:call-template>
@@ -689,7 +696,7 @@
             <xsl:for-each select="meta/sectionOrder/section">
               <xsl:variable name="name" select="."/>
               <xsl:choose>
-                <xsl:when test="$name='about'"><xsl:call-template name="main-about"/></xsl:when>
+                <xsl:when test="$name='about'"><xsl:call-template name="main-about"/><xsl:call-template name="timeline"/></xsl:when>
                 <xsl:when test="$name='work'"><xsl:call-template name="main-work"/></xsl:when>
                 <xsl:when test="$name='education'"><xsl:call-template name="main-education"/></xsl:when>
                 <xsl:when test="$name='awards'"><xsl:call-template name="main-awards"/></xsl:when>
@@ -857,6 +864,81 @@
 
   <!-- ============== MAIN TEMPLATES ============== -->
 
+
+  <!-- The timeline, laid out by the generator (meta/timeline — see
+       scripts/lib/xml-timeline.js): XSLT 1.0 only draws it, with the classic
+       page's markup, which /css/timeline.css styles and /js/timeline.js
+       makes interactive. -->
+  <xsl:template name="timeline">
+    <xsl:variable name="tl" select="/resume/meta/timeline"/>
+    <xsl:if test="$tl/lanes/lane">
+      <section id="timeline" aria-labelledby="timeline-title">
+        <div class="tl-head">
+          <h2 id="timeline-title"><xsl:value-of select="$tl/title"/></h2>
+          <div class="tl-zoom" role="group" hidden="hidden">
+            <xsl:attribute name="aria-label"><xsl:value-of select="$tl/title"/></xsl:attribute>
+            <xsl:for-each select="$tl/zooms/zoom">
+              <button type="button">
+                <xsl:attribute name="data-years"><xsl:value-of select="years"/></xsl:attribute>
+                <xsl:value-of select="label"/>
+              </button>
+            </xsl:for-each>
+          </div>
+        </div>
+        <div class="tl-scroll">
+          <div class="tl-grid">
+            <xsl:attribute name="data-months"><xsl:value-of select="$tl/months"/></xsl:attribute>
+            <div class="tl-years" aria-hidden="true">
+              <xsl:for-each select="$tl/ticks/tick">
+                <span>
+                  <xsl:attribute name="style">left:<xsl:value-of select="left"/></xsl:attribute>
+                  <xsl:value-of select="label"/>
+                </span>
+              </xsl:for-each>
+            </div>
+            <xsl:for-each select="$tl/lanes/lane">
+              <div class="tl-lane">
+                <xsl:attribute name="data-kind"><xsl:value-of select="kind"/></xsl:attribute>
+                <span class="tl-lane-label"><xsl:value-of select="label"/></span>
+                <div class="tl-track">
+                  <xsl:attribute name="style">--rows:<xsl:value-of select="rows"/></xsl:attribute>
+                  <xsl:for-each select="bars/bar">
+                    <xsl:choose>
+                      <!-- A bar leads to the entry that carries it on this page. -->
+                      <xsl:when test="target">
+                        <a class="tl-bar">
+                          <xsl:call-template name="timeline-bar"/>
+                          <xsl:attribute name="href">#<xsl:value-of select="target"/></xsl:attribute>
+                          <span><xsl:value-of select="name"/></span>
+                        </a>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <span class="tl-bar" tabindex="0">
+                          <xsl:call-template name="timeline-bar"/>
+                          <span><xsl:value-of select="name"/></span>
+                        </span>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </xsl:for-each>
+                </div>
+              </div>
+            </xsl:for-each>
+          </div>
+        </div>
+      </section>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- What every bar carries, linked or not: its place, its name for assistive
+       technology, and what the preview shows. -->
+  <xsl:template name="timeline-bar">
+    <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/></xsl:attribute>
+    <xsl:attribute name="aria-label"><xsl:value-of select="label"/></xsl:attribute>
+    <xsl:attribute name="data-name"><xsl:value-of select="name"/></xsl:attribute>
+    <xsl:attribute name="data-title"><xsl:value-of select="title"/></xsl:attribute>
+    <xsl:attribute name="data-period"><xsl:value-of select="period"/></xsl:attribute>
+  </xsl:template>
+
   <xsl:template name="main-about">
     <xsl:if test="/resume/basics/summary">
       <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
@@ -873,6 +955,7 @@
                        marked rather than dropped: the screen keeps the whole
                        history, only the sheet is trimmed. -->
                   <xsl:attribute name="class">item<xsl:if test="position() &gt; 8"> print-hidden</xsl:if></xsl:attribute>
+                  <xsl:if test="anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></xsl:if>
                   <h3>
                     <xsl:value-of select="position"/>
                     <xsl:if test="client"> · <xsl:value-of select="client"/></xsl:if>
@@ -977,6 +1060,7 @@
                   <!-- The PDF drops the Education entries and keeps a two-line
                        degrees summary, so the sheet shows the top two only. -->
                   <xsl:attribute name="class">item<xsl:if test="position() &gt; 2"> print-hidden</xsl:if></xsl:attribute>
+                  <xsl:if test="anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></xsl:if>
                   <h3>
                     <xsl:value-of select="studyType"/>
                     <xsl:if test="area"> — <xsl:value-of select="area"/></xsl:if>

@@ -1118,7 +1118,9 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   z-index: 3;
   align-self: stretch;
   padding: 0.3rem 0.5rem 0 0;
-  background: linear-gradient(to right, var(--card-background) 85%, transparent);
+  /* --tl-surface: what the timeline sits on, where it is not the classic
+     page's card (the XSLT themes set it to their own page colour). */
+  background: linear-gradient(to right, var(--tl-surface, var(--card-background)) 85%, transparent);
   font-size: 0.8em;
   font-weight: 600;
   color: var(--muted-color);
@@ -1176,6 +1178,26 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   text-decoration: none;
 }
 
+@media (max-width: 48rem) {
+  .tl-grid {
+    --lane-label: 5.5rem;
+  }
+}
+
+/* On paper there is no timeline: the LaTeX CV the sheet follows has none. The
+ * classic page says so in css/print.css; this holds for the XSLT themes. */
+@media print {
+  #timeline {
+    display: none;
+  }
+}
+
+/* timeline-entries.css */
+/* What ties a bar of the timeline to its entry on the page: the bar marked as
+ * the one on screen, the preview on hover or focus, the anchor a bar's link
+ * lands on, and the entry set apart once reached. Split from css/timeline.css,
+ * which lays the timeline out; js/timeline.js drives both. */
+
 /* The bar of the entry the page is showing. */
 .tl-bar[aria-current="true"] {
   z-index: 2;
@@ -1216,16 +1238,17 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
 }
 
 /* The entry a bar led to (js/timeline.js marks it). */
-.main-content .tl-shown {
+.tl-shown {
   outline: 0.15rem solid var(--third-color);
   outline-offset: 0.35rem;
   border-radius: 0.3rem;
 }
 
-@media (max-width: 48rem) {
-  .tl-grid {
-    --lane-label: 5.5rem;
-  }
+/* In the XSLT themes a bar's link is a plain anchor jump: keep the entry clear
+ * of the bars fixed at the top of the page. */
+.item[id],
+.row[id] {
+  scroll-margin-top: calc(var(--views-bar-h, 0rem) + 4.5rem);
 }
 
 /* widgets.css */

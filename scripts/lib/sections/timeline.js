@@ -3,22 +3,14 @@
 // there. js/timeline.js adds the zoom (hidden until it runs), the arrow keys
 // and the hover preview; css/timeline.css lays it out.
 const I18N = require('../i18n');
-const { escapeHtml, formatDate } = require('../format');
+const { escapeHtml } = require('../format');
 const { timelineOf } = require('../timeline-model');
-
-const pct = (part, whole) => `${Number(((part / whole) * 100).toFixed(2))}%`;
-const LANE_LABEL = {
-  work: 'experience',
-  education: 'education',
-  projects: 'projects',
-  volunteer: 'volunteer',
-};
-const ZOOMS = [2, 5, null];
+const { pct, periodOf, labelOf, LANE_LABEL, zoomsOf } = require('../timeline-view');
 
 function renderBar(bar, timeline, lang, onPage) {
   const { record } = bar;
-  const period = `${formatDate(record.startDate, lang)} – ${formatDate(record.endDate, lang)}`;
-  const label = [bar.name, bar.title, period].filter(Boolean).join(' — ');
+  const period = periodOf(record, lang);
+  const label = labelOf(bar, period);
   const style = `left:${pct(bar.start - timeline.from, timeline.months)};width:${pct(bar.end + 1 - bar.start, timeline.months)};--row:${bar.row}`;
   const data = `data-name="${escapeHtml(bar.name)}" data-title="${escapeHtml(bar.title)}" data-period="${escapeHtml(period)}"`;
   const common = `class="tl-bar" style="${style}" aria-label="${escapeHtml(label)}" ${data}`;
@@ -31,9 +23,9 @@ function renderBar(bar, timeline, lang, onPage) {
 function generateTimeline(resume, lang, today, onPage) {
   const t = I18N[lang];
   const timeline = timelineOf(resume, today);
-  const zoom = ZOOMS.map(
-    (y) =>
-      `<button type="button" data-years="${y ?? 'all'}">${escapeHtml(y === null ? t.wholeCareer : t.lastYears(y))}</button>`,
+  const zoom = zoomsOf(t).map(
+    ({ years, label }) =>
+      `<button type="button" data-years="${years}">${escapeHtml(label)}</button>`,
   );
   const years = timeline.years.map(
     (y) => `<span style="left:${pct(y.month - timeline.from, timeline.months)}">${y.year}</span>`,
