@@ -4,7 +4,7 @@
 // what each carried under it, and the outline of each such group.
 const I18N = require('./i18n');
 const { timelineOf } = require('./timeline-model');
-const { pct, periodOf, labelOf, LANE_LABEL, zoomsOf } = require('./timeline-view');
+const { pct, periodOf, labelOf, legendOf, LANE_LABEL, zoomsOf } = require('./timeline-view');
 
 // The XSLT themes give an id to each job and each degree, nothing else: a bar
 // leads to its own entry, or to the entry that carried it.
@@ -20,6 +20,8 @@ function timelineForXml(resume, lang, today) {
   return {
     title: t.timelineTitle,
     months: timeline.months,
+    // What the hatching means; absent when nothing is hatched.
+    legend: legendOf(timeline, t),
     zooms: zoomsOf(t),
     ticks: timeline.years.map((y) => ({
       label: y.year,
@@ -46,7 +48,9 @@ function timelineForXml(resume, lang, today) {
           title: bar.title,
           caption: bar.caption,
           period,
-          label: labelOf(bar, period),
+          label: labelOf(bar, period, t),
+          // 'evening' for a degree followed on an evening schedule.
+          schedule: bar.schedule,
           left: pct(bar.start - timeline.from, timeline.months),
           width: pct(bar.end + 1 - bar.start, timeline.months),
           row: bar.row,

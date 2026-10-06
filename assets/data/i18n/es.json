@@ -149,7 +149,15 @@
     },
     {
       "description": "Aplicación móvil que conecta a los viajeros durante sus trayectos.",
-      "summary": "Desarrollo de una aplicación móvil que conecta a los viajeros durante sus trayectos. Flutter para la app móvil y Rust para el backend."
+      "summary": "Aplicación móvil que conecta a los viajeros durante sus trayectos, desarrollada con Flutter."
+    },
+    {
+      "description": "API en Rust detrás de la aplicación móvil Acteble.",
+      "summary": "API backend de Acteble, escrita en Rust, al servicio de la aplicación móvil."
+    },
+    {
+      "description": "Trabajo de fin de máster en la UMONS — la capa de I+D de Acteble.",
+      "summary": "Trabajo de fin de máster: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — realizado en el Service d'Algorithmique de la UMONS, como capa de I+D de Acteble."
     },
     {
       "description": "Asistente visual con IA para personas con discapacidad visual.",

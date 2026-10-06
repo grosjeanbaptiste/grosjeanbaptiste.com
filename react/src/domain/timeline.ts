@@ -26,6 +26,8 @@ export interface TimelineBar {
   // Set on a segment of a degree's blocks: the academic year it stands for.
   // Its `entry` is the degree, which it leads to.
   readonly block?: Block;
+  // 'evening' on a degree followed on an evening schedule, and on its blocks.
+  readonly schedule?: 'evening';
 }
 
 // The outline of an entry that carried something: its rows and its months.
@@ -59,6 +61,15 @@ const isDated = (e: Entry): e is Dated => e.period !== undefined;
 
 type Placed = { readonly entry: Dated; readonly offset: number; readonly length: number };
 
+// What an entry carried is drawn for as long as the entry carried it: a
+// project that outlives its degree stops under it when the degree was
+// obtained. A bar the host names but never overlapped keeps its own dates.
+function during(head: Placed, bar: Placed): Placed {
+  const offset = Math.max(bar.offset, head.offset);
+  const end = Math.min(bar.offset + bar.length, head.offset + head.length);
+  return end <= offset ? bar : { ...bar, offset, length: end - offset };
+}
+
 // "2022-2023" reads "22-23" on a segment.
 const shortYear = (year: string) => year.replace(/\b\d\d(\d\d)\b/g, '$1');
 
@@ -72,7 +83,7 @@ function laneOf(
 ) {
   if (heads.length === 0) return [];
   const groups = heads.map((head) => {
-    const children = packRows(carriedBy(head.entry));
+    const children = packRows(carriedBy(head.entry).map((bar) => during(head, bar)));
     // A degree's academic years take one row of their own, under its bar.
     const bands = (head.entry.blocks ?? []).map((block) => ({ block, ...banded(block) }));
     const band = bands.length ? 1 : 0;
@@ -94,6 +105,7 @@ function laneOf(
       row: g.row,
       depth: 0 as const,
       caption: captionOf(g.head.entry),
+      schedule: g.head.entry.schedule,
     },
     ...g.bands.map(({ block, offset, length }) => ({
       entry: g.head.entry,
@@ -104,6 +116,7 @@ function laneOf(
       depth: 1 as const,
       caption: [shortYear(block.year), block.label].filter(Boolean).join(' · '),
       block,
+      schedule: g.head.entry.schedule,
     })),
     ...g.children.map((c) => ({
       entry: c.entry,

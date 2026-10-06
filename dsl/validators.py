@@ -127,6 +127,14 @@ def validate(resume: Resume) -> list[ValidationError]:
                     message=f"period start {e.period.start.text} > end {getattr(e.period.end, 'text', 'present')}",
                 )
             )
+        if e.schedule is not None and e.schedule not in ("day", "evening"):
+            errors.append(
+                ValidationError(
+                    section="education",
+                    entry=e.key,
+                    message=f"schedule: unknown value {e.schedule!r} (day or evening)",
+                )
+            )
         # A block files units the degree lists, each under one block only.
         listed = {ref.target for ref in e.projects if isinstance(ref, Ref)}
         filed: dict[str, str] = {}

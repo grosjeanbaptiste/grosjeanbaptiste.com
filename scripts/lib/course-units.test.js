@@ -11,7 +11,7 @@
 // fiche could say is what the dissertation actually used: MiniZinc,
 // ConstraintProgramming, CombinatorialOptimization and Pareto were wrongly
 // inferred from the Operations Research sheet, which names no tool at all.
-// They belong to the thesis, hence to Acteble.
+// They belong to the thesis: the "Mémoire de master" project.
 //
 // Retro-fit: written after the DSL edit, not before it.
 
@@ -38,7 +38,8 @@ const FROM_THE_SHEETS = {
 
 test('the MSc references its course units', () => {
   assert.ok(msc, 'the MSc entry is gone');
-  const units = resume.projects.filter((p) => p.entity === 'UMONS');
+  // By type, not by school alone: the dissertation is a UMONS project too.
+  const units = resume.projects.filter((p) => p.entity === 'UMONS' && p.type === 'Course unit');
   assert.equal(units.length, 18, `found ${units.length} course units`);
   const unreferenced = units.filter((u) => !(msc.projects || []).includes(u.name));
   assert.deepEqual(unreferenced, [], 'course units the MSc does not reference');
@@ -53,10 +54,12 @@ test('each sampled unit carries what its official sheet names', () => {
   }
 });
 
-test('the dissertation stack sits on Acteble, not on Operations Research', () => {
-  const acteble = project('Acteble');
+// Acteble is an experience with several projects; the dissertation is one of
+// them, a project of its own, and its stack sits on it.
+test('the dissertation stack sits on the dissertation, not on Operations Research', () => {
+  const dissertation = project('Mémoire de master');
   for (const k of ['MiniZinc', 'ConstraintProgramming', 'CombinatorialOptimization', 'Pareto']) {
-    assert.ok(acteble.keywords.includes(k), `Acteble does not claim ${k}`);
+    assert.ok(dissertation.keywords.includes(k), `the dissertation does not claim ${k}`);
   }
   const or = project('Recherche opérationnelle et applications');
   assert.ok(!or.keywords.includes('MiniZinc'), 'the OR unit names a tool its sheet does not');

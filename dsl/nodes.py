@@ -167,6 +167,9 @@ class EducationEntry(Node):
     # Display-only override — patched on HTML/XSLT, canonical data preserved.
     display_period: DateRange | None = None
     blocks: tuple[BlockEntry, ...] = ()
+    # "evening" for a degree followed on an evening schedule ("horaire
+    # décalé"); absent for a degree followed by day.
+    schedule: str | None = None
 
 
 @dataclass(frozen=True, kw_only=True)

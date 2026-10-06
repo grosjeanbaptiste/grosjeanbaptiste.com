@@ -149,7 +149,15 @@
     },
     {
       "description": "在旅途中连接旅行者的移动应用。",
-      "summary": "开发一款在旅途中连接旅行者的移动应用。Flutter 用于移动应用，Rust 用于后端。"
+      "summary": "在旅途中连接旅行者的移动应用，使用 Flutter 开发。"
+    },
+    {
+      "description": "Acteble 移动应用背后的 Rust API。",
+      "summary": "Acteble 的后端 API，使用 Rust 编写，为移动应用提供服务。"
+    },
+    {
+      "description": "UMONS 硕士论文——Acteble 的研发层。",
+      "summary": "硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成，作为 Acteble 的研发层。"
     },
     {
       "description": "为视障人士提供的 AI 驱动视觉助手。",

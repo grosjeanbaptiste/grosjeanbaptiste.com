@@ -78,3 +78,34 @@ test('a block of a degree is drawn in a light tint of the degrees’ colour', ()
   const block = { ...bar('22-23'), kind: 'block', depth: 1, row: 1 };
   assert.match(buildPicture(sheet([block]), I18N.en), /\\fill\[PrimaryColor!30!BackgroundColor/);
 });
+
+// A degree followed on an evening schedule ("horaire décalé") is hatched; a
+// legend under the lane's title says what the hatching means.
+const hatches = (tex) => tex.split('\n').filter((line) => line.includes('% hatch'));
+const evening = (strong) => ({ ...bar(strong), kind: 'education', schedule: 'evening' });
+const day = (strong) => ({ ...bar(strong), kind: 'education', schedule: 'day' });
+
+test('an evening degree is hatched over its bar', () => {
+  assert.ok(hatches(buildPicture(sheet([evening('UMons')]), I18N.fr)).length > 0);
+});
+
+test('a day degree is left plain', () => {
+  assert.deepEqual(hatches(buildPicture(sheet([day('Saint-Louis')]), I18N.fr)), []);
+});
+
+test('the hatching stays inside the bar', () => {
+  const tex = buildPicture(sheet([evening('UMons')]), I18N.fr);
+  assert.match(
+    tex,
+    /\\begin\{scope\}\\clip\[rounded corners=0\.5mm\] \(0\.00,[^)]*\) rectangle \(10\.00,/,
+  );
+});
+
+test('a lane with an evening degree says what the hatching means', () => {
+  assert.match(buildPicture(sheet([evening('UMons')]), I18N.fr), /horaire décalé/);
+  assert.match(buildPicture(sheet([evening('UMons')]), I18N.en), /evening schedule/);
+});
+
+test('a lane without one carries no legend', () => {
+  assert.doesNotMatch(buildPicture(sheet([day('Saint-Louis')]), I18N.fr), /horaire décalé/);
+});

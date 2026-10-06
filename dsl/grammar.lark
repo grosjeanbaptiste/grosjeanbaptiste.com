@@ -94,6 +94,7 @@ education_field: "institution" value         -> edu_institution
                | "projects" array            -> edu_projects
                | "display" display_override  -> edu_display
                | "blocks" "{" block_entry+ "}" -> edu_blocks
+               | "schedule" value            -> edu_schedule
 
 // One academic year of a degree: the programme's own name for it when it has
 // one, when it ran, and the course units taken that year.

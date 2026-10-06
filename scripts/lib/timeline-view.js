@@ -6,8 +6,17 @@ const { formatDate } = require('./format');
 const pct = (part, whole) => `${Number(((part / whole) * 100).toFixed(2))}%`;
 const periodOf = (record, lang) =>
   `${formatDate(record.startDate, lang)} – ${formatDate(record.endDate, lang)}`;
-// A bar's accessible name: what it is, and when.
-const labelOf = (bar, period) => [bar.name, bar.title, period].filter(Boolean).join(' — ');
+// A bar's accessible name: what it is, when, and — for a degree followed on
+// an evening schedule — that it was.
+const labelOf = (bar, period, t) =>
+  [bar.name, bar.title, period, bar.schedule === 'evening' ? t.scheduleEvening : null]
+    .filter(Boolean)
+    .join(' — ');
+// The legend of the hatching, when the career has an evening degree.
+const legendOf = (timeline, t) =>
+  timeline.lanes.some((lane) => lane.bars.some((bar) => bar.schedule === 'evening'))
+    ? { day: t.scheduleDay, evening: t.scheduleEvening }
+    : undefined;
 const LANE_LABEL = {
   work: 'experience',
   education: 'education',
@@ -22,4 +31,4 @@ const zoomsOf = (t) =>
     label: years === null ? t.wholeCareer : t.lastYears(years),
   }));
 
-module.exports = { pct, periodOf, labelOf, LANE_LABEL, zoomsOf };
+module.exports = { pct, periodOf, labelOf, legendOf, LANE_LABEL, zoomsOf };

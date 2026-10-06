@@ -288,6 +288,9 @@ class _Builder(Transformer):
     def edu_projects(self, meta, children):
         return ("projects", tuple(children[0]))
 
+    def edu_schedule(self, meta, children):
+        return ("schedule", children[0])
+
     def edu_blocks(self, meta, children):
         return ("blocks", tuple(children))
 

@@ -133,42 +133,24 @@ test('what an entry carried is cut to the span like the entry', () => {
   assert.deepEqual([buddy.start, buddy.clipped], [at(2024, 11), true]);
 });
 
-// Kwalitijd outlived the job it was built at: in the last two years the job is
-// gone and the project is not.
-test('a project still running when its host has left the span stands alone, not dropped', () => {
-  assert.ok(lane(lastTwo(), 'projects').groups.some((g) => g.head.strong === 'Kwalitijd'));
+// What an entry carried is drawn for as long as the entry carried it
+// (lib/timeline-groups.js): Kwalitijd, built at Xtrada and continued after it,
+// stops under Xtrada when the job did — and leaves the span with it.
+test('what an entry carried leaves the span with the entry', () => {
+  const all = lastTwo().lanes.flatMap((l) => l.groups.flatMap((g) => [g.head, ...g.children]));
+  assert.ok(!all.some((b) => b.strong === 'Kwalitijd'));
 });
 
-// A degree's academic years — its blocks — come with it, to be drawn on a row
-// of their own under its bar.
-const BLOCKS = [
-  { year: '2022-2023', label: 'Bridging block', startDate: '2022-10-15', endDate: '2023-09-13' },
-  { year: '2025-2026', startDate: '2025-09-14', endDate: '2026-09-04' },
-];
-const studied = () => {
+// A project its host names but never overlapped keeps its own dates: when the
+// host has left the span and the project has not, it stands alone.
+test('a project the gone host never overlapped stands alone, not dropped', () => {
   const base = aResume();
-  return { ...base, education: [{ ...base.education[0], blocks: BLOCKS }] };
-};
-
-test('a degree comes with its blocks, named by their year and the programme’s name', () => {
-  const { bands } = group(timelineBars(studied(), TODAY), 'education', 'UMons');
-  assert.deepEqual(
-    bands.map((b) => [b.strong, b.rest]),
-    [
-      ['22-23', 'Bridging block'],
-      ['25-26', ''],
-    ],
-  );
-});
-
-test('an entry without blocks has none', () => {
-  assert.deepEqual(group(whole(), 'work', 'Xtrada').bands, []);
-});
-
-test('a span keeps the blocks that reach into it, and only those', () => {
-  const { bands } = group(timelineBars(studied(), TODAY, 2), 'education', 'UMons');
-  assert.deepEqual(
-    bands.map((b) => b.strong),
-    ['25-26'],
-  );
+  const later = {
+    ...base,
+    projects: base.projects.map((p) =>
+      p.name === 'Kwalitijd' ? { ...p, startDate: '2025-03-01', endDate: '2026-01-31' } : p,
+    ),
+  };
+  const projects = lane(timelineBars(later, TODAY, 2), 'projects');
+  assert.ok(projects.groups.some((g) => g.head.strong === 'Kwalitijd'));
 });

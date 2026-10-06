@@ -292,23 +292,15 @@
       ]
     },
     {
-      "name": "Acteble",
+      "name": "Acteble App",
       "description": "Mobile application connecting travelers during their journeys.",
       "keywords": [
         "Flutter",
-        "Rust",
+        "Dart",
         "Mobile",
         "Travel",
-        "Tokio",
-        "PostgreSQL",
-        "Docker",
-        "Dart",
         "DDD",
-        "CleanArchitecture",
-        "MiniZinc",
-        "ConstraintProgramming",
-        "CombinatorialOptimization",
-        "Pareto"
+        "CleanArchitecture"
       ],
       "startDate": "2025-07-01",
       "url": "https://www.acteble.com",
@@ -316,6 +308,40 @@
       "roles": [
         "Founder"
       ]
+    },
+    {
+      "name": "Acteble API",
+      "description": "Rust API behind the Acteble mobile app.",
+      "keywords": [
+        "Rust",
+        "Tokio",
+        "PostgreSQL",
+        "Docker",
+        "DDD",
+        "CleanArchitecture"
+      ],
+      "startDate": "2025-07-01",
+      "type": "API",
+      "roles": [
+        "Founder"
+      ]
+    },
+    {
+      "name": "Mémoire de master",
+      "description": "MSc dissertation at UMONS — the R&D layer of Acteble.",
+      "keywords": [
+        "MiniZinc",
+        "ConstraintProgramming",
+        "CombinatorialOptimization",
+        "Pareto"
+      ],
+      "startDate": "2025-07-01",
+      "endDate": "2026-09-04",
+      "type": "Dissertation",
+      "roles": [
+        "Author"
+      ],
+      "entity": "UMONS"
     },
     {
       "name": "Emvi App",

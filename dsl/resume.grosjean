@@ -55,7 +55,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             period 2025-07-01..present
             summary t{ en: "Sole founder, architect and developer. Rust backend + Flutter mobile. The R&D layer also served as the dissertation for my MSc in Computer Science at UMons.", fr: "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.", nl: "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.", es: "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirvió como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.", de: "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.", zh: "唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。" }
             uses [Rust, Flutter, Dart, Tokio, Docker, DDD, CleanArchitecture, PostgreSQL]
-            projects [ref Acteble]
+            projects [ref ActebleApp, ref ActebleApi, ref MemoireMaster]
         }
         AIResearchScientist {
             position t{ en: "AI Research Scientist", fr: "Chercheur en IA", nl: "AI-onderzoeker", es: "Investigador en IA", de: "KI-Forschungswissenschaftler", zh: "AI 研究员" }
@@ -199,6 +199,8 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
     education {
         UMons {
             institution "UMons"
+            // Charleroi, "horaire décalé" on every transcript of the master.
+            schedule "evening"
             studyType t{ en: "Master of Science - MS", fr: "Master en Sciences", nl: "Master of Science", es: "Máster en Ciencias", de: "Master of Science", zh: "理学硕士" }
             area t{ en: "Computer Science (work-study program) — specialised professional focus (120 ECTS)", fr: "Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)", nl: "Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)", es: "Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)", de: "Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)", zh: "计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS 学分)" }
             period 2022-10-15..2026-09-04
@@ -208,7 +210,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             //   fr: encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS
             note t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons. Core coursework: software engineering & project management, artificial intelligence, databases, data structures, operational research, cryptography & IT security, and ethics & computer law, with two paid company internships.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons. Cours principaux : génie logiciel et gestion de projet, intelligence artificielle, bases de données, structures de données, recherche opérationnelle, cryptographie et sécurité informatique, éthique et droit de l'informatique, avec deux stages en entreprise rémunérés.", nl: "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.", es: "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons. Cursos principales: ingeniería del software y gestión de proyectos, inteligencia artificial, bases de datos, estructuras de datos, investigación operativa, criptografía y seguridad informática, ética y derecho informático, con dos prácticas remuneradas en empresa.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons. Kernfächer: Software-Engineering und Projektmanagement, künstliche Intelligenz, Datenbanken, Datenstrukturen, Operations Research, Kryptografie und IT-Sicherheit, Ethik und Informatikrecht, mit zwei bezahlten Unternehmenspraktika.", zh: "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。" }
             uses [Python, LaTeX, DDD, CleanArchitecture]
-            projects [ref Acteble, ref Synergy, ref FedRAGBE, ref EmviApp, ref Remi, ref UeAlgorithmique, ref UeAnglais1, ref UeBasesDeDonneesI, ref UeLectureRedactionScientifique, ref UeMathematique, ref UeModelisationLogicielle, ref UeReseaux, ref UeStrategieRH, ref UeSystemesExploitation, ref UeAnglais2, ref UeBasesDeDonneesII, ref UeIngenierieLogicielle, ref UeIntelligenceArtificielle, ref UeRechercheOperationnelle, ref UeStructuresDeDonnees, ref UeSeminairesVeille, ref UeCryptographieSecurite, ref UeEthiqueDroit]
+            projects [ref MemoireMaster, ref Synergy, ref FedRAGBE, ref EmviApp, ref Remi, ref UeAlgorithmique, ref UeAnglais1, ref UeBasesDeDonneesI, ref UeLectureRedactionScientifique, ref UeMathematique, ref UeModelisationLogicielle, ref UeReseaux, ref UeStrategieRH, ref UeSystemesExploitation, ref UeAnglais2, ref UeBasesDeDonneesII, ref UeIngenierieLogicielle, ref UeIntelligenceArtificielle, ref UeRechercheOperationnelle, ref UeStructuresDeDonnees, ref UeSeminairesVeille, ref UeCryptographieSecurite, ref UeEthiqueDroit]
             // The academic years of the master, from the author's own transcripts
             // (2022-2023 to 2025-2026): which units were taken when, and the
             // programme's name for the block. The bridging block took two years.
@@ -243,6 +245,8 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
         }
         EcolePratiqueHautesEtudesCommercialesEPHECEPS {
             institution "Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)"
+            // A school of "promotion sociale": evening classes.
+            schedule "evening"
             studyType t{ en: "Professional Bachelor's degree", fr: "Bachelier professionnalisant", nl: "Professionele bachelor", es: "Bachelor profesional", de: "Professioneller Bachelor", zh: "职业学士" }
             area t{ en: "Information Systems Management", fr: "Informatique de gestion", nl: "Bedrijfsinformatica", es: "Informática de gestión", de: "Wirtschaftsinformatik", zh: "管理信息学" }
             period 2018-09-30..2022-10-15
@@ -418,15 +422,40 @@ TFE: WebMenu 2.0
             type "Research"
             roles [Author]
         }
-        Acteble {
-            name "Acteble"
+        // Acteble is the experience; these are its projects: the mobile app, the
+        // API behind it, and the MSc dissertation (below).
+        ActebleApp {
+            name "Acteble App"
             description t{ en: "Mobile application connecting travelers during their journeys.", fr: "Application mobile connectant les voyageurs pendant leurs trajets.", nl: "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.", es: "Aplicación móvil que conecta a los viajeros durante sus trayectos.", de: "Mobile App, die Reisende während ihrer Reisen verbindet.", zh: "在旅途中连接旅行者的移动应用。" }
-            summary t{ en: "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend.", fr: "Développement d'une application mobile qui connecte les voyageurs pendant leurs trajets. Flutter pour l'app mobile, Rust pour le backend.", nl: "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend.", es: "Desarrollo de una aplicación móvil que conecta a los viajeros durante sus trayectos. Flutter para la app móvil y Rust para el backend.", de: "Entwicklung einer mobilen Anwendung, die Reisende während ihrer Reisen verbindet. Flutter für die mobile App, Rust für das Backend.", zh: "开发一款在旅途中连接旅行者的移动应用。Flutter 用于移动应用，Rust 用于后端。" }
+            summary t{ en: "Mobile application that connects travelers during their journeys, built with Flutter.", fr: "Application mobile qui connecte les voyageurs pendant leurs trajets, développée en Flutter.", nl: "Mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt, gebouwd met Flutter.", es: "Aplicación móvil que conecta a los viajeros durante sus trayectos, desarrollada con Flutter.", de: "Mobile Anwendung, die Reisende während ihrer Reisen verbindet, entwickelt mit Flutter.", zh: "在旅途中连接旅行者的移动应用，使用 Flutter 开发。" }
             url "https://www.acteble.com"
-            keywords [Flutter, Rust, Mobile, Travel, Tokio, PostgreSQL, Docker, Dart, DDD, CleanArchitecture, MiniZinc, ConstraintProgramming, CombinatorialOptimization, Pareto]
+            keywords [Flutter, Dart, Mobile, Travel, DDD, CleanArchitecture]
             startDate 2025-07-01
             type "Mobile Application"
             roles [Founder]
+        }
+        ActebleApi {
+            name "Acteble API"
+            description t{ en: "Rust API behind the Acteble mobile app.", fr: "API Rust derrière l'application mobile Acteble.", nl: "Rust-API achter de mobiele app van Acteble.", es: "API en Rust detrás de la aplicación móvil Acteble.", de: "Rust-API hinter der mobilen App von Acteble.", zh: "Acteble 移动应用背后的 Rust API。" }
+            summary t{ en: "Backend API of Acteble, written in Rust, serving the mobile app.", fr: "API backend d'Acteble, écrite en Rust, au service de l'application mobile.", nl: "Backend-API van Acteble, geschreven in Rust, ten dienste van de mobiele app.", es: "API backend de Acteble, escrita en Rust, al servicio de la aplicación móvil.", de: "Backend-API von Acteble, in Rust geschrieben, für die mobile App.", zh: "Acteble 的后端 API，使用 Rust 编写，为移动应用提供服务。" }
+            keywords [Rust, Tokio, PostgreSQL, Docker, DDD, CleanArchitecture]
+            startDate 2025-07-01
+            type "API"
+            roles [Founder]
+        }
+        // The MSc dissertation: one of the projects of Acteble (its R&D layer), and
+        // what the master carried of it. It ended the day the degree was obtained.
+        // Its start is taken as Acteble's own; the CV gives no other date for it.
+        MemoireMaster {
+            name "Mémoire de master"
+            description t{ en: "MSc dissertation at UMONS — the R&D layer of Acteble.", fr: "Mémoire de master à l'UMONS — la couche R&D d'Acteble.", nl: "Masterproef aan de UMONS — de R&D-laag van Acteble.", es: "Trabajo de fin de máster en la UMONS — la capa de I+D de Acteble.", de: "Masterarbeit an der UMONS — die F&E-Schicht von Acteble.", zh: "UMONS 硕士论文——Acteble 的研发层。" }
+            summary t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique, as the R&D layer of Acteble.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS, comme couche R&D d'Acteble.", nl: "Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS, als R&D-laag van Acteble.", es: "Trabajo de fin de máster: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — realizado en el Service d'Algorithmique de la UMONS, como capa de I+D de Acteble.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS, als F&E-Schicht von Acteble.", zh: "硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成，作为 Acteble 的研发层。" }
+            keywords [MiniZinc, ConstraintProgramming, CombinatorialOptimization, Pareto]
+            startDate 2025-07-01
+            endDate 2026-09-04
+            type "Dissertation"
+            roles [Author]
+            entity "UMONS"
         }
         EmviApp {
             name "Emvi App"

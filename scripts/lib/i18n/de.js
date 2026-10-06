@@ -21,6 +21,9 @@ module.exports = {
   downloadCV: 'Lebenslauf herunterladen',
   downloadTimeline: 'Zeitleiste herunterladen',
   timelineTitle: 'Zeitleiste',
+  // A degree followed by day, or on an evening schedule ("horaire décalé").
+  scheduleDay: 'Tagesstudium',
+  scheduleEvening: 'Abendstudium',
   competitions: 'Wettbewerbe',
   lastYears: (n) => `${n} Jahre`,
   wholeCareer: 'Alles',

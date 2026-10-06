@@ -13,7 +13,9 @@
         "PostgreSQL"
       ],
       "projects": [
-        "Acteble"
+        "Acteble App",
+        "Acteble API",
+        "Mémoire de master"
       ]
     },
     {
@@ -146,7 +148,7 @@
         "CleanArchitecture"
       ],
       "projects": [
-        "Acteble",
+        "Mémoire de master",
         "Synergy",
         "fedrag-be",
         "Emvi App",
@@ -170,6 +172,7 @@
         "Cryptographie et sécurité des systèmes informatiques",
         "Éthique et droit de l'informatique"
       ],
+      "schedule": "evening",
       "blocks": [
         {
           "year": "2022-2023",
@@ -264,6 +267,7 @@
         "Langue en situation appliquée à l'enseignement supérieur UE1",
         "Langue en situation appliquée à l'enseignement supérieur UE2"
       ],
+      "schedule": "evening",
       "blocks": [
         {
           "year": "2018-2019",
@@ -320,6 +324,7 @@
     },
     {
       "gpa": "Attestation",
+      "schedule": "day",
       "courses": []
     },
     {
@@ -334,6 +339,7 @@
         "Anglais I (Saint-Louis)",
         "Néerlandais I"
       ],
+      "schedule": "day",
       "blocks": [
         {
           "year": "2016-2017",
@@ -355,21 +361,26 @@
     },
     {
       "gpa": "Contact me for more information.",
+      "schedule": "day",
       "courses": []
     },
     {
       "gpa": "Contact me for more information.",
+      "schedule": "day",
       "courses": []
     },
     {
       "gpa": "Attestation ",
+      "schedule": "day",
       "courses": []
     },
     {
       "gpa": "Satis bene",
+      "schedule": "day",
       "courses": []
     },
     {
+      "schedule": "day",
       "courses": []
     }
   ],
@@ -387,7 +398,13 @@
       "summary": "Open, reproducible protocol that benchmarks retrieval strategies on the bilingual Senate corpus, measuring FR/NL robustness across the retrieval pipeline."
     },
     {
-      "summary": "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend."
+      "summary": "Mobile application that connects travelers during their journeys, built with Flutter."
+    },
+    {
+      "summary": "Backend API of Acteble, written in Rust, serving the mobile app."
+    },
+    {
+      "summary": "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique, as the R&D layer of Acteble."
     },
     {
       "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired."

@@ -462,7 +462,7 @@
                  densely than TeX, and neither engine will split the two-column
                  block across sheets, so the recto has to fit one page on its
                  own. scripts/lib/print-fit-xslt.test.js holds it to that. */
-              font-size: 6.5pt; line-height: 1.2; margin: 0; padding: 0;
+              font-size: 6.5pt; line-height: 1.16; margin: 0; padding: 0;
             }
             .container {
               /* A printed page is about 726px wide, which trips this sheet's
@@ -531,8 +531,18 @@
             }
             h2 { font-size: 9pt; margin: 6pt 0 3pt; break-after: avoid; }
             h3 { font-size: 7.5pt; margin: 0; }
-            p, ul, ol { margin: 0 0 2pt; }
-            .item { margin-bottom: 4pt; break-inside: avoid; }
+            /* Tight on purpose: the recto is a full sheet. An experience that
+               lists three projects instead of one (Acteble: app, API,
+               dissertation) ran it onto a third page in Firefox on Linux at
+               2pt / 4pt; the space comes from between the lines, not from the
+               content or the type. */
+            p, ul, ol { margin: 0 0 1pt; }
+            .item { margin-bottom: 2.5pt; break-inside: avoid; }
+            /* One line per project, as the PDF sets them: a row that wrapped
+               cost the recto a line each. */
+            .main .embedded-projects li {
+              white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            }
             .date, .location, .label { margin: 0; }
             blockquote { margin: 1pt 0 3pt; padding: 0 0 0 4pt; font-size: 0.95em; }
             /* The left column has to end on the first sheet — what spills from
@@ -997,6 +1007,15 @@
             </xsl:for-each>
           </div>
         </div>
+        <!-- What the hatching means: a degree followed by day, or on an evening
+             schedule. Present only when the career has one. -->
+        <xsl:if test="$tl/legend">
+          <p class="tl-legend">
+            <span class="tl-swatch"></span><xsl:value-of select="$tl/legend/day"/>
+            <xsl:text> </xsl:text>
+            <span class="tl-swatch" data-schedule="evening"></span><xsl:value-of select="$tl/legend/evening"/>
+          </p>
+        </xsl:if>
       </section>
     </xsl:if>
   </xsl:template>
@@ -1006,6 +1025,7 @@
   <xsl:template name="timeline-bar">
     <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/></xsl:attribute>
     <xsl:attribute name="aria-label"><xsl:value-of select="label"/></xsl:attribute>
+    <xsl:if test="schedule = 'evening'"><xsl:attribute name="data-schedule">evening</xsl:attribute></xsl:if>
     <xsl:attribute name="data-name"><xsl:value-of select="name"/></xsl:attribute>
     <xsl:attribute name="data-title"><xsl:value-of select="title"/></xsl:attribute>
     <xsl:attribute name="data-period"><xsl:value-of select="period"/></xsl:attribute>

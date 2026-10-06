@@ -21,6 +21,8 @@ const worded = (bar, nested) => ({
   clipped: false,
   strong: truncate(bar.name, STRONG_MAX),
   rest: nested ? '' : truncate(bar.title, REST_MAX),
+  // 'evening' for a degree followed on an evening schedule, and its blocks.
+  ...(bar.schedule ? { schedule: bar.schedule } : {}),
 });
 
 const reaches = (bar, from) => bar.end >= from;

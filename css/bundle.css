@@ -1304,6 +1304,37 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   color: var(--muted-color);
 }
 
+/* A degree followed on an evening schedule ("horaire décalé"): hatched, where
+ * a degree followed by day is plain. The legend under the timeline says so. */
+.tl-bar[data-schedule="evening"],
+.tl-swatch[data-schedule="evening"] {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 0.32rem,
+    color-mix(in srgb, var(--tl-surface, var(--card-background)) 32%, transparent) 0.32rem 0.42rem
+  );
+}
+
+.tl-legend {
+  margin: 0.6rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted-color);
+}
+
+.tl-swatch {
+  display: inline-block;
+  width: 1.6rem;
+  height: 0.7rem;
+  margin: 0 0.35rem 0 0.9rem;
+  border-radius: 0.2rem;
+  vertical-align: -0.05rem;
+  background-color: var(--third-color);
+}
+
+.tl-swatch:first-child {
+  margin-left: 0;
+}
+
 /* widgets.css */
 /* Floating CV actions (download the LaTeX PDF / the timeline PDF / print this
  * page) + daily-life
