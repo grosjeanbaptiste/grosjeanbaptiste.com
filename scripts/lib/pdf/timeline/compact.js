@@ -5,6 +5,7 @@
 // fitted where there is room: inside the bar, else after it, else before it,
 // else cut short in the widest of the three. Lengths in mm, y downwards from
 // the axis as in page.js; the result is drawn by picture.js like any sheet.
+const { cut } = require('./cut');
 const { textWidth } = require('./measure');
 const { timeScale } = require('./scale');
 
@@ -12,18 +13,6 @@ const AXIS = 5;
 const LANE_GAP = 2;
 const GAP = 1; // kept clear between a label and its neighbour
 const PAD = 1; // between a label and the edge of its bar
-const SHORTEST = 3; // characters, the ellipsis included: under that, no label
-
-// The longest beginning of `text` that fits `room`, marked as cut; '' if none.
-function cut(text, room, measure) {
-  if (measure(text) <= room) return text;
-  const chars = [...text];
-  for (let n = chars.length - 1; n >= SHORTEST - 1; n -= 1) {
-    const candidate = `${chars.slice(0, n).join('').trimEnd()}…`;
-    if (measure(candidate) <= room) return candidate;
-  }
-  return '';
-}
 
 // Where a label of `width` goes in a slot, and what it then occupies.
 const PLACED = {

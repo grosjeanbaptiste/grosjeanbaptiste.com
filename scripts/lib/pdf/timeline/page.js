@@ -7,6 +7,7 @@
 const { packGroupsOnPaper } = require('./rows');
 const { labelWidth, MM_PER_PT } = require('./measure');
 const { timeScale } = require('./scale');
+const { readable, isUnit } = require('./units');
 
 const TRACK = 248; // the time axis, right of the lane titles
 const HEIGHT = 170; // what the page leaves under the header
@@ -19,8 +20,8 @@ const SIZES = [8, 7.5, 7, 6.5, 6]; // pt, largest first
 const PITCH_PER_PT = MM_PER_PT * 1.65;
 const MAX_SPREAD = 1.4; // how far rows may be spaced out to fill the page
 
-function lanesAt(timeline, x, size, measure, track) {
-  const scale = { x, labelWidth: (bar) => measure(bar, size), trackEnd: track };
+function lanesAt(timeline, x, size, measure, track, units) {
+  const scale = { x, labelWidth: (bar) => measure(bar, size), trackEnd: track, units };
   return timeline.lanes.map((lane) => ({
     kind: lane.kind,
     ...packGroupsOnPaper(lane.groups, scale),
@@ -40,23 +41,34 @@ function stack(lanes, pitch) {
 // What the labels say, fullest first: "name · role", then — when no type fits
 // that on the page — the names alone, which need fewer rows.
 // Two entries of one name keep their role even then: it tells them apart.
-const namesOnly = (timeline) => ({
+// `degrees`: a degree keeps its title too — the school alone does not say
+// what was studied.
+const namesOnly = (degrees) => (timeline) => ({
   ...timeline,
   lanes: timeline.lanes.map((lane) => {
     const met = (name) => lane.groups.filter((g) => g.head.strong === name).length;
+    const keeps = (head) => (degrees && head.kind === 'education') || met(head.strong) > 1;
     return {
       ...lane,
       groups: lane.groups.map((group) => ({
         ...group,
-        head: met(group.head.strong) > 1 ? group.head : { ...group.head, rest: '' },
+        head: keeps(group.head) ? group.head : { ...group.head, rest: '' },
       })),
     };
   }),
 });
+// A degree's course units are kept as long as anything fits with them: the
+// roles go first. Without them the sheet is the one it always was.
 const PLANS = [
-  { labels: 'full', of: (timeline) => timeline },
-  { labels: 'names', of: namesOnly },
+  { labels: 'full', of: (timeline) => timeline, units: true },
+  { labels: 'names', of: namesOnly(true), units: true },
+  { labels: 'full', of: (timeline) => timeline, units: false },
+  { labels: 'names', of: namesOnly(true), units: false },
+  // Last, the degrees by their school alone.
+  { labels: 'names', of: namesOnly(false), units: false },
 ];
+const hasUnits = (timeline) =>
+  timeline.lanes.some((l) => l.groups.some((g) => (g.bands ?? []).some((b) => b.units?.length)));
 
 const yearsOf = (timeline, x) => {
   const years = [];
@@ -65,9 +77,33 @@ const yearsOf = (timeline, x) => {
   return years;
 };
 
+// 'drawn', 'dropped' (the caller says so) or 'none' (the CV has none).
+function unitsOn(lanes, timeline) {
+  if (lanes.some((l) => l.bars.some(isUnit))) return 'drawn';
+  return hasUnits(timeline) ? 'dropped' : 'none';
+}
+
+// One plan in the largest type that fits `room`; undefined when none does.
+function fitted(plan, timeline, { x, measure, track, room }) {
+  const worded = plan.of(timeline);
+  for (const size of SIZES) {
+    const lanes = lanesAt(worded, x, size, measure, track, plan.units);
+    // Units in a year too narrow to read them are not worth their rows.
+    if (plan.units && !readable(lanes)) return undefined;
+    const rows = lanes.reduce((sum, lane) => sum + lane.rows, 0);
+    const tightest = size * PITCH_PER_PT;
+    if (rows * tightest > room) continue;
+    const pitch = Math.min(room / rows, tightest * MAX_SPREAD);
+    const drawn = { pitch, bar: pitch * 0.78, font: size, axis: AXIS, labels: plan.labels };
+    return { ...stack(lanes, pitch), ...drawn, units: unitsOn(lanes, timeline) };
+  }
+  return undefined;
+}
+
 // `track` and `height` (mm): the room the sheet gives the picture — a landscape
 // page of its own by default, less on the verso of the vertical CV. The sheet
-// says which labels it carries (`labels`), for the caller to report a reduction.
+// says which labels it carries (`labels`) and whether it drew the course units
+// (`units`), for the caller to report a reduction.
 // `density`: the share of the width given to the years by what they hold
 // rather than by time (./scale.js); 0 draws time to scale.
 function layOut(
@@ -80,16 +116,8 @@ function layOut(
   const x = timeScale({ from: timeline.from, to: timeline.to, track, spans, density });
   const room = height - AXIS - LANE_GAP * timeline.lanes.length;
   for (const plan of PLANS) {
-    const worded = plan.of(timeline);
-    for (const size of SIZES) {
-      const lanes = lanesAt(worded, x, size, measure, track);
-      const rows = lanes.reduce((sum, lane) => sum + lane.rows, 0);
-      const tightest = size * PITCH_PER_PT;
-      if (rows * tightest > room) continue;
-      const pitch = Math.min(room / rows, tightest * MAX_SPREAD);
-      const drawn = { pitch, bar: pitch * 0.78, font: size, axis: AXIS, labels: plan.labels };
-      return { ...stack(lanes, pitch), years: yearsOf(timeline, x), ...drawn };
-    }
+    const sheet = fitted(plan, timeline, { x, measure, track, room });
+    if (sheet) return { ...sheet, years: yearsOf(timeline, x) };
   }
   throw new Error(
     `The timeline does not fit on one page (${height} mm), even with names alone in ${SIZES.at(-1)} pt type`,

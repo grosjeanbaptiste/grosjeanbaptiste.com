@@ -19,7 +19,9 @@ const FONT = 6.5;
 const DENSITY = 0.6;
 
 function buildTimeline(resume, t, today) {
-  const model = timelineOf(resume, today);
+  // No course units here: a year is some 13 mm wide, too narrow to name them,
+  // and the references need the rest of the page. The degree lists them.
+  const model = timelineOf(resume, today, { units: false });
   if (!model.lanes.length) return '';
   const sheet = {
     ...layOutCompact(model, { track: TRACK, pitch: PITCH, font: FONT, density: DENSITY }),

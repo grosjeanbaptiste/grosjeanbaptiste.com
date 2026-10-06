@@ -81,6 +81,14 @@
   letter-spacing: 0.02em;
 }
 
+/* A degree's course units: one thin bar each under the academic year it was
+ * taken in, lighter than what the degree carried otherwise. */
+.timeline-bar[data-depth="1"][data-kind="unit"] {
+  border-left-width: 0.1rem;
+  background: color-mix(in srgb, var(--hue) 14%, var(--app-bg));
+  font-size: 0.7rem;
+}
+
 /* A degree followed on an evening schedule ("horaire décalé"): a crescent moon
  * before its name. The bar itself stays plain, so the name stays easy to read;
  * the legend under the timeline says what the moon means. */

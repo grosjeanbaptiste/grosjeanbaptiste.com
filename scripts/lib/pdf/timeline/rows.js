@@ -2,6 +2,8 @@
 // its label together. A label is written inside its bar when it fits, after it
 // otherwise — or before it, when after would run past the end of the track.
 
+const { unitsOnPaper } = require('./units');
+
 const GAP = 1; // mm kept clear between two neighbours on a row
 const PAD = 1.2; // mm between a label and the edge of its bar
 
@@ -60,10 +62,15 @@ function packGroupsOnPaper(groups, scale) {
   const blocks = groups.map(({ head, children, bands = [] }) => {
     const [top] = packLane([head], scale);
     const band = bandsOnPaper(bands, scale);
-    // What the entry carried goes below its blocks.
+    // The course units of each block, stacked under it, where the sheet has
+    // room for them (`scale.units`).
+    const units = scale.units ? unitsOnPaper(band, scale) : [];
+    const below = (band.length ? 1 : 0) + Math.max(0, ...units.map((u) => u.row + 1));
+    // What the entry carried goes below its blocks and their units.
     const under = [
-      ...band,
-      ...packLane(children, scale).map((b) => ({ ...b, row: b.row + (band.length ? 1 : 0) })),
+      ...band.map(({ units: _taken, ...b }) => b),
+      ...units.map((u) => ({ ...u, row: u.row + 1 })),
+      ...packLane(children, scale).map((b) => ({ ...b, row: b.row + below })),
     ];
     const all = [top, ...under];
     return {
