@@ -27,6 +27,9 @@ export interface Strings {
   readonly showCourses: (count: number) => string;
   readonly lastYears: (count: number) => string;
   readonly wholeCareer: string;
+  // A degree followed by day, or on an evening schedule ("horaire décalé").
+  readonly scheduleDay: string;
+  readonly scheduleEvening: string;
 }
 
 export const STRINGS: Readonly<Record<Lang, Strings>> = {
@@ -54,6 +57,8 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     showCourses: (n) => `Show the ${n} course units`,
     lastYears: (n) => `${n} years`,
     wholeCareer: 'All',
+    scheduleDay: 'daytime',
+    scheduleEvening: 'evening schedule',
   },
   fr: {
     search: 'Rechercher',
@@ -79,6 +84,8 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     showCourses: (n) => `Afficher les ${n} unités d’enseignement`,
     lastYears: (n) => `${n} ans`,
     wholeCareer: 'Tout',
+    scheduleDay: 'de jour',
+    scheduleEvening: 'horaire décalé',
   },
   nl: {
     search: 'Zoeken',
@@ -104,6 +111,8 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     showCourses: (n) => `Toon de ${n} opleidingsonderdelen`,
     lastYears: (n) => `${n} jaar`,
     wholeCareer: 'Alles',
+    scheduleDay: 'dagonderwijs',
+    scheduleEvening: 'avondonderwijs',
   },
   es: {
     search: 'Buscar',
@@ -129,6 +138,8 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     showCourses: (n) => `Mostrar las ${n} asignaturas`,
     lastYears: (n) => `${n} años`,
     wholeCareer: 'Todo',
+    scheduleDay: 'diurno',
+    scheduleEvening: 'horario vespertino',
   },
   de: {
     search: 'Suchen',
@@ -154,6 +165,8 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     showCourses: (n) => `Die ${n} Lehreinheiten anzeigen`,
     lastYears: (n) => `${n} Jahre`,
     wholeCareer: 'Alles',
+    scheduleDay: 'Tagesstudium',
+    scheduleEvening: 'Abendstudium',
   },
   zh: {
     search: '搜索',
@@ -179,5 +192,7 @@ export const STRINGS: Readonly<Record<Lang, Strings>> = {
     showCourses: (n) => `显示 ${n} 门课程`,
     lastYears: (n) => `近 ${n} 年`,
     wholeCareer: '全部',
+    scheduleDay: '日间',
+    scheduleEvening: '夜间课程',
   },
 };

@@ -68,6 +68,8 @@ function barOf(kind, record, now) {
     end,
     name,
     title: SHAPES[kind].title(record) || '',
+    // A degree is followed by day or on an evening schedule; nothing else has one.
+    ...(kind === 'education' ? { schedule: record.schedule || 'day' } : {}),
   };
 }
 
@@ -108,12 +110,27 @@ function blockBar(block, now) {
     title: block.label || '',
   };
 }
+// A block is followed as its degree is.
 const blocksOf = (record, now) =>
-  (record.blocks || []).filter((b) => b.startDate).map((b) => blockBar(b, now));
+  (record.blocks || [])
+    .filter((b) => b.startDate)
+    .map((b) => ({ ...blockBar(b, now), schedule: record.schedule || 'day' }));
 
 // One host with what it carried, unpacked: each display packs rows its own way.
 // `blocks`: the academic years of a degree, to be drawn on one row of their own.
+// What an entry carried is drawn for as long as the entry carried it: a
+// project that outlives its degree (a dissertation that became a company) stops
+// under the degree when the degree was obtained. A bar the host names but never
+// overlapped is left on its own dates rather than dropped.
+function during(head, bar) {
+  const start = Math.max(bar.start, head.start);
+  const end = Math.min(bar.end, head.end);
+  if (end + 1 <= start) return bar;
+  return { ...bar, start, end, ongoing: bar.ongoing && end === bar.end };
+}
+
 function groupOf(host, resume, now) {
+  const head = barOf(host.kind, host.record, now);
   const carried = [
     ...datedProjects(resume)
       .filter((p) => hostsProject(host, p))
@@ -123,8 +140,8 @@ function groupOf(host, resume, now) {
       .map((v) => barOf('volunteer', v, now)),
   ];
   return {
-    head: barOf(host.kind, host.record, now),
-    children: carried,
+    head,
+    children: carried.map((bar) => during(head, bar)),
     blocks: blocksOf(host.record, now),
   };
 }

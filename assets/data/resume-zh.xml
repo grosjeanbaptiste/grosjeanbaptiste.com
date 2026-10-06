@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=9d751efd"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=8bf664b4"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -130,6 +130,10 @@
     <timeline>
       <title>时间线</title>
       <months>206</months>
+      <legend>
+        <day>日间</day>
+        <evening>夜间课程</evening>
+      </legend>
       <zooms>
         <zoom>
           <years>2</years>
@@ -218,7 +222,7 @@
         <lane>
           <kind>work</kind>
           <label>工作经验</label>
-          <rows>5</rows>
+          <rows>7</rows>
           <groups>
             <group>
               <left>70.87%</left>
@@ -266,12 +270,12 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
-              <rows>2</rows>
+              <rows>4</rows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>2</row>
+              <row>4</row>
               <rows>3</rows>
             </group>
           </groups>
@@ -521,13 +525,38 @@
               <target>work-acteble-创始人</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble</name>
-              <caption>Acteble</caption>
+              <name>Acteble App</name>
+              <caption>Acteble App</caption>
               <period>7月 2025 – 至今</period>
-              <label>Acteble — 7月 2025 – 至今</label>
+              <label>Acteble App — 7月 2025 – 至今</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>1</row>
+            </bar>
+            <bar>
+              <target>work-acteble-创始人</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Acteble API</name>
+              <caption>Acteble API</caption>
+              <period>7月 2025 – 至今</period>
+              <label>Acteble API — 7月 2025 – 至今</label>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>work-acteble-创始人</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Mémoire de master</name>
+              <title>UMONS</title>
+              <caption>Mémoire de master</caption>
+              <period>7月 2025 – 9月 2026</period>
+              <label>Mémoire de master — UMONS — 7月 2025 – 9月 2026</label>
+              <left>92.23%</left>
+              <width>6.84%</width>
+              <row>3</row>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -540,7 +569,7 @@
               <label>比利时参议院 — AI 研究员 — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>2</row>
+              <row>4</row>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -552,7 +581,7 @@
               <label>Synergy — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>3</row>
+              <row>5</row>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -564,7 +593,7 @@
               <label>fedrag-be — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>4</row>
+              <row>6</row>
             </bar>
           </bars>
         </lane>
@@ -587,7 +616,7 @@
             </group>
             <group>
               <left>76.43%</left>
-              <width>23.57%</width>
+              <width>22.64%</width>
               <row>0</row>
               <rows>7</rows>
             </group>
@@ -601,6 +630,7 @@
               <caption>Lycée Mater Dei</caption>
               <period>9月 2009 – 6月 2012</period>
               <label>Lycée Mater Dei — 9月 2009 – 6月 2012</label>
+              <schedule>day</schedule>
               <left>0.47%</left>
               <width>16.02%</width>
               <row>0</row>
@@ -614,6 +644,7 @@
               <caption>Centre Scolaire Saint-Adrien - Val Duchesse</caption>
               <period>9月 2012 – 6月 2015</period>
               <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — 9月 2012 – 6月 2015</label>
+              <schedule>day</schedule>
               <left>17.94%</left>
               <width>16.02%</width>
               <row>0</row>
@@ -627,6 +658,7 @@
               <caption>UCLouvain - Université catholique de Louvain</caption>
               <period>9月 2014 – 6月 2015</period>
               <label>UCLouvain - Université catholique de Louvain — 预科课程 — 9月 2014 – 6月 2015</label>
+              <schedule>day</schedule>
               <left>29.6%</left>
               <width>4.37%</width>
               <row>1</row>
@@ -640,6 +672,7 @@
               <caption>Université Saint-Louis - Bruxelles</caption>
               <period>9月 2016 – 6月 2017</period>
               <label>Université Saint-Louis - Bruxelles — 政治学学士 — 9月 2016 – 6月 2017</label>
+              <schedule>day</schedule>
               <left>41.25%</left>
               <width>4.37%</width>
               <row>0</row>
@@ -652,6 +685,7 @@
               <caption>16-17</caption>
               <period>9月 2016 – 6月 2017</period>
               <label>16-17 — 9月 2016 – 6月 2017</label>
+              <schedule>day</schedule>
               <left>41.25%</left>
               <width>4.37%</width>
               <row>1</row>
@@ -664,7 +698,8 @@
               <title>职业学士</title>
               <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</caption>
               <period>9月 2018 – 10月 2022</period>
-              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — 职业学士 — 9月 2018 – 10月 2022</label>
+              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — 职业学士 — 9月 2018 – 10月 2022 — 夜间课程</label>
+              <schedule>evening</schedule>
               <left>52.9%</left>
               <width>23.54%</width>
               <row>0</row>
@@ -676,7 +711,8 @@
               <name>18-19</name>
               <caption>18-19</caption>
               <period>9月 2018 – 9月 2019</period>
-              <label>18-19 — 9月 2018 – 9月 2019</label>
+              <label>18-19 — 9月 2018 – 9月 2019 — 夜间课程</label>
+              <schedule>evening</schedule>
               <left>52.9%</left>
               <width>5.55%</width>
               <row>1</row>
@@ -688,7 +724,8 @@
               <name>19-20</name>
               <caption>19-20</caption>
               <period>9月 2019 – 9月 2020</period>
-              <label>19-20 — 9月 2019 – 9月 2020</label>
+              <label>19-20 — 9月 2019 – 9月 2020 — 夜间课程</label>
+              <schedule>evening</schedule>
               <left>58.46%</left>
               <width>5.81%</width>
               <row>1</row>
@@ -700,7 +737,8 @@
               <name>20-21</name>
               <caption>20-21</caption>
               <period>9月 2020 – 9月 2021</period>
-              <label>20-21 — 9月 2020 – 9月 2021</label>
+              <label>20-21 — 9月 2020 – 9月 2021 — 夜间课程</label>
+              <schedule>evening</schedule>
               <left>64.29%</left>
               <width>5.81%</width>
               <row>1</row>
@@ -712,7 +750,8 @@
               <name>21-22</name>
               <caption>21-22</caption>
               <period>9月 2021 – 10月 2022</period>
-              <label>21-22 — 9月 2021 – 10月 2022</label>
+              <label>21-22 — 9月 2021 – 10月 2022 — 夜间课程</label>
+              <schedule>evening</schedule>
               <left>70.11%</left>
               <width>6.32%</width>
               <row>1</row>
@@ -764,6 +803,7 @@
               <caption>Institut Saint-Louis Bruxelles</caption>
               <period>9月 2019 – 6月 2020</period>
               <label>Institut Saint-Louis Bruxelles — 证书 — 9月 2019 – 6月 2020</label>
+              <schedule>day</schedule>
               <left>58.72%</left>
               <width>4.37%</width>
               <row>5</row>
@@ -776,7 +816,8 @@
               <title>理学硕士</title>
               <caption>UMons</caption>
               <period>10月 2022 – 9月 2026</period>
-              <label>UMons — 理学硕士 — 10月 2022 – 9月 2026</label>
+              <label>UMons — 理学硕士 — 10月 2022 – 9月 2026 — 夜间课程</label>
+              <schedule>evening</schedule>
               <left>76.43%</left>
               <width>22.64%</width>
               <row>0</row>
@@ -789,7 +830,8 @@
               <title>补修课程</title>
               <caption>22-23 · 补修课程</caption>
               <period>10月 2022 – 9月 2023</period>
-              <label>22-23 — 补修课程 — 10月 2022 – 9月 2023</label>
+              <label>22-23 — 补修课程 — 10月 2022 – 9月 2023 — 夜间课程</label>
+              <schedule>evening</schedule>
               <left>76.43%</left>
               <width>5.31%</width>
               <row>1</row>
@@ -802,7 +844,8 @@
               <title>补修课程</title>
               <caption>23-24 · 补修课程</caption>
               <period>9月 2023 – 9月 2024</period>
-              <label>23-24 — 补修课程 — 9月 2023 – 9月 2024</label>
+              <label>23-24 — 补修课程 — 9月 2023 – 9月 2024 — 夜间课程</label>
+              <schedule>evening</schedule>
               <left>81.76%</left>
               <width>5.81%</width>
               <row>1</row>
@@ -815,7 +858,8 @@
               <title>硕士一年级</title>
               <caption>24-25 · 硕士一年级</caption>
               <period>9月 2024 – 9月 2025</period>
-              <label>24-25 — 硕士一年级 — 9月 2024 – 9月 2025</label>
+              <label>24-25 — 硕士一年级 — 9月 2024 – 9月 2025 — 夜间课程</label>
+              <schedule>evening</schedule>
               <left>87.59%</left>
               <width>5.81%</width>
               <row>1</row>
@@ -828,7 +872,8 @@
               <title>硕士二年级</title>
               <caption>25-26 · 硕士二年级</caption>
               <period>9月 2025 – 9月 2026</period>
-              <label>25-26 — 硕士二年级 — 9月 2025 – 9月 2026</label>
+              <label>25-26 — 硕士二年级 — 9月 2025 – 9月 2026 — 夜间课程</label>
+              <schedule>evening</schedule>
               <left>93.41%</left>
               <width>5.66%</width>
               <row>1</row>
@@ -887,12 +932,13 @@
               <target>education-umons-理学硕士</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble</name>
-              <caption>Acteble</caption>
-              <period>7月 2025 – 至今</period>
-              <label>Acteble — 7月 2025 – 至今</label>
+              <name>Mémoire de master</name>
+              <title>UMONS</title>
+              <caption>Mémoire de master</caption>
+              <period>7月 2025 – 9月 2026</period>
+              <label>Mémoire de master — UMONS — 7月 2025 – 9月 2026</label>
               <left>92.23%</left>
-              <width>7.77%</width>
+              <width>6.84%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -1031,7 +1077,9 @@
         <skill>PostgreSQL</skill>
       </skills>
       <projects>
-        <project>Acteble</project>
+        <project>Acteble App</project>
+        <project>Acteble API</project>
+        <project>Mémoire de master</project>
       </projects>
       <anchor>work-acteble-创始人</anchor>
     </job>
@@ -1273,7 +1321,7 @@
         <skill>CleanArchitecture</skill>
       </skills>
       <projects>
-        <project>Acteble</project>
+        <project>Mémoire de master</project>
         <project>Synergy</project>
         <project>fedrag-be</project>
         <project>Emvi App</project>
@@ -1297,6 +1345,7 @@
         <project>Cryptographie et sécurité des systèmes informatiques</project>
         <project>Éthique et droit de l'informatique</project>
       </projects>
+      <schedule>evening</schedule>
       <blocks>
         <block>
           <year>2022-2023</year>
@@ -1400,6 +1449,7 @@ TFE: WebMenu 2.0
         <project>Langue en situation appliquée à l'enseignement supérieur UE1</project>
         <project>Langue en situation appliquée à l'enseignement supérieur UE2</project>
       </projects>
+      <schedule>evening</schedule>
       <blocks>
         <block>
           <year>2018-2019</year>
@@ -1461,6 +1511,7 @@ TFE: WebMenu 2.0
       <startDate>2019-09-30</startDate>
       <endDate>2020-06-30</endDate>
       <gpa>证书</gpa>
+      <schedule>day</schedule>
       <anchor>education-institut-saint-louis-bruxelles-证书</anchor>
     </school>
     <school>
@@ -1480,6 +1531,7 @@ TFE: WebMenu 2.0
         <project>Anglais I (Saint-Louis)</project>
         <project>Néerlandais I</project>
       </projects>
+      <schedule>day</schedule>
       <blocks>
         <block>
           <year>2016-2017</year>
@@ -1506,6 +1558,7 @@ TFE: WebMenu 2.0
       <startDate>2014-09-30</startDate>
       <endDate>2015-06-30</endDate>
       <gpa>证书</gpa>
+      <schedule>day</schedule>
       <anchor>education-uclouvain-universite-catholique-de-louvain-预科课程</anchor>
     </school>
     <school>
@@ -1515,6 +1568,7 @@ TFE: WebMenu 2.0
       <startDate>2012-09-30</startDate>
       <endDate>2015-06-30</endDate>
       <gpa>Satis bene</gpa>
+      <schedule>day</schedule>
       <anchor>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</anchor>
     </school>
     <school>
@@ -1522,6 +1576,7 @@ TFE: WebMenu 2.0
       <area>通识学习 — 拉丁语和希腊语</area>
       <startDate>2009-09-30</startDate>
       <endDate>2012-06-30</endDate>
+      <schedule>day</schedule>
       <anchor>education-lycee-mater-dei</anchor>
     </school>
   </education>
@@ -1565,23 +1620,15 @@ TFE: WebMenu 2.0
       <summary>开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。</summary>
     </project>
     <project>
-      <name>Acteble</name>
+      <name>Acteble App</name>
       <description>在旅途中连接旅行者的移动应用。</description>
       <keywords>
         <keyword>Flutter</keyword>
-        <keyword>Rust</keyword>
+        <keyword>Dart</keyword>
         <keyword>Mobile</keyword>
         <keyword>Travel</keyword>
-        <keyword>Tokio</keyword>
-        <keyword>PostgreSQL</keyword>
-        <keyword>Docker</keyword>
-        <keyword>Dart</keyword>
         <keyword>DDD</keyword>
         <keyword>CleanArchitecture</keyword>
-        <keyword>MiniZinc</keyword>
-        <keyword>ConstraintProgramming</keyword>
-        <keyword>CombinatorialOptimization</keyword>
-        <keyword>Pareto</keyword>
       </keywords>
       <startDate>2025-07-01</startDate>
       <url>https://www.acteble.com</url>
@@ -1589,7 +1636,43 @@ TFE: WebMenu 2.0
       <roles>
         <role>Founder</role>
       </roles>
-      <summary>开发一款在旅途中连接旅行者的移动应用。Flutter 用于移动应用，Rust 用于后端。</summary>
+      <summary>在旅途中连接旅行者的移动应用，使用 Flutter 开发。</summary>
+    </project>
+    <project>
+      <name>Acteble API</name>
+      <description>Acteble 移动应用背后的 Rust API。</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Tokio</keyword>
+        <keyword>PostgreSQL</keyword>
+        <keyword>Docker</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CleanArchitecture</keyword>
+      </keywords>
+      <startDate>2025-07-01</startDate>
+      <type>API</type>
+      <roles>
+        <role>Founder</role>
+      </roles>
+      <summary>Acteble 的后端 API，使用 Rust 编写，为移动应用提供服务。</summary>
+    </project>
+    <project>
+      <name>Mémoire de master</name>
+      <description>UMONS 硕士论文——Acteble 的研发层。</description>
+      <keywords>
+        <keyword>MiniZinc</keyword>
+        <keyword>ConstraintProgramming</keyword>
+        <keyword>CombinatorialOptimization</keyword>
+        <keyword>Pareto</keyword>
+      </keywords>
+      <startDate>2025-07-01</startDate>
+      <endDate>2026-09-04</endDate>
+      <type>Dissertation</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <entity>UMONS</entity>
+      <summary>硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成，作为 Acteble 的研发层。</summary>
     </project>
     <project>
       <name>Emvi App</name>

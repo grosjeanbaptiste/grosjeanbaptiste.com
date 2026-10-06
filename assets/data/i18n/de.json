@@ -149,7 +149,15 @@
     },
     {
       "description": "Mobile App, die Reisende während ihrer Reisen verbindet.",
-      "summary": "Entwicklung einer mobilen Anwendung, die Reisende während ihrer Reisen verbindet. Flutter für die mobile App, Rust für das Backend."
+      "summary": "Mobile Anwendung, die Reisende während ihrer Reisen verbindet, entwickelt mit Flutter."
+    },
+    {
+      "description": "Rust-API hinter der mobilen App von Acteble.",
+      "summary": "Backend-API von Acteble, in Rust geschrieben, für die mobile App."
+    },
+    {
+      "description": "Masterarbeit an der UMONS — die F&E-Schicht von Acteble.",
+      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS, als F&E-Schicht von Acteble."
     },
     {
       "description": "KI-gestützter visueller Assistent für sehbehinderte Menschen.",

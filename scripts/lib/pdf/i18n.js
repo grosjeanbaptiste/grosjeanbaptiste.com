@@ -19,6 +19,7 @@ module.exports = {
     curriculumVitae: 'Curriculum Vitae',
     timeline: 'Timeline',
     competitions: 'Competitions',
+    eveningSchedule: 'evening schedule',
     timelineSpan: (n) => `last ${n} years`,
   },
   fr: {
@@ -31,6 +32,7 @@ module.exports = {
     curriculumVitae: 'Curriculum vitæ',
     timeline: 'Chronologie',
     competitions: 'Compétitions',
+    eveningSchedule: 'horaire décalé',
     timelineSpan: (n) => `${n} dernières années`,
   },
   nl: {
@@ -43,6 +45,7 @@ module.exports = {
     curriculumVitae: 'Curriculum vitae',
     timeline: 'Tijdlijn',
     competitions: 'Wedstrijden',
+    eveningSchedule: 'avondonderwijs',
     timelineSpan: (n) => `laatste ${n} jaar`,
   },
   es: {
@@ -55,6 +58,7 @@ module.exports = {
     curriculumVitae: 'Currículum vítae',
     timeline: 'Cronología',
     competitions: 'Competiciones',
+    eveningSchedule: 'horario vespertino',
     timelineSpan: (n) => `últimos ${n} años`,
   },
   de: {
@@ -67,6 +71,7 @@ module.exports = {
     curriculumVitae: 'Lebenslauf',
     timeline: 'Zeitleiste',
     competitions: 'Wettbewerbe',
+    eveningSchedule: 'Abendstudium',
     timelineSpan: (n) => `letzte ${n} Jahre`,
   },
   zh: {
@@ -79,6 +84,7 @@ module.exports = {
     curriculumVitae: '简历',
     timeline: '时间线',
     competitions: '竞赛',
+    eveningSchedule: '夜间课程',
     timelineSpan: (n) => `最近 ${n} 年`,
   },
 };

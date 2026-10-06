@@ -48,6 +48,7 @@ const fromEducation = (e: EducationRecord, idOf: (name: string) => string): Entr
   url: e.url,
   related: [],
   blocks: blocksOf(e, idOf),
+  schedule: e.schedule === 'evening' ? 'evening' : undefined,
 });
 
 const fromProject = (p: ProjectRecord, inherited?: Period): Entry => ({

@@ -129,3 +129,65 @@ describe('the blocks of a degree', () => {
     expect(timeline.lanes.flatMap((l) => l.bars).some((b) => b.block)).toBe(false);
   });
 });
+
+// A degree is followed by day or on an evening schedule ("horaire décalé"):
+// the timeline marks the evening ones, and their blocks, to tell them apart.
+describe('the schedule of a degree', () => {
+  const base = aResume();
+  const evening = {
+    ...base,
+    education: base.education.map((e) => ({
+      ...e,
+      schedule: 'evening' as const,
+      blocks: [{ year: '2022-2023', startDate: '2022-10-15', endDate: '2026-09-04', units: [] }],
+    })),
+  };
+  const barsOf = (resume: typeof base) =>
+    timelineOf(entriesOf(resume), today).lanes.flatMap((l) => l.bars);
+
+  it('marks a degree followed in the evening', () => {
+    expect(barsOf(evening).find((b) => b.key === 'umons-master')?.schedule).toBe('evening');
+  });
+
+  it('marks its blocks with it', () => {
+    expect(barsOf(evening).find((b) => b.block)?.schedule).toBe('evening');
+  });
+
+  it('leaves a degree followed by day unmarked', () => {
+    expect(barsOf(base).find((b) => b.key === 'umons-master')?.schedule).toBeUndefined();
+  });
+
+  it('gives what the degree carried no schedule of its own', () => {
+    const carried = barsOf(evening).filter((b) => b.depth === 1 && !b.block);
+    expect(carried.every((b) => b.schedule === undefined)).toBe(true);
+  });
+});
+
+// What an entry carried is drawn for as long as the entry carried it: a
+// project that outlives its degree (a dissertation that became a company)
+// stops under the degree when the degree was obtained.
+describe('what an entry carried, within its dates', () => {
+  const base = aResume();
+  const lasting = {
+    ...base,
+    education: base.education.map((e) => ({ ...e, projects: ['Algorithmique', 'Acteble'] })),
+  };
+  const lanes = timelineOf(entriesOf(lasting), today).lanes;
+  const end = (key: string) => {
+    const bar = lanes.flatMap((l) => l.bars).find((b) => b.key === key);
+    return (bar?.offset ?? 0) + (bar?.length ?? 0);
+  };
+
+  it('stops, under a degree, when the degree was obtained', () => {
+    expect(end('umons-master>acteble')).toBeCloseTo(end('umons-master'), 9);
+  });
+
+  it('runs on under the experience that goes on with it', () => {
+    expect(end('acteble-founder>acteble')).toBeGreaterThan(end('umons-master'));
+  });
+
+  it('keeps the outline of the degree to the degree', () => {
+    const outline = lanes.find((l) => l.kind === 'education')?.groups[0];
+    expect((outline?.offset ?? 0) + (outline?.length ?? 0)).toBeCloseTo(end('umons-master'), 9);
+  });
+});

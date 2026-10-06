@@ -7,16 +7,26 @@
 const I18N = require('../i18n');
 const { escapeHtml } = require('../format');
 const { timelineOf } = require('../timeline-model');
-const { pct, periodOf, labelOf, LANE_LABEL, zoomsOf } = require('../timeline-view');
+const { pct, periodOf, labelOf, legendOf, LANE_LABEL, zoomsOf } = require('../timeline-view');
 
-function renderBar(bar, timeline, lang, onPage) {
+// What the hatching means: shown only when a degree is hatched.
+const legendHtml = (legend) =>
+  legend
+    ? [
+        `  <p class="tl-legend"><span class="tl-swatch"></span>${escapeHtml(legend.day)} <span class="tl-swatch" data-schedule="evening"></span>${escapeHtml(legend.evening)}</p>`,
+      ]
+    : [];
+
+function renderBar(bar, timeline, lang, onPage, t) {
   const { record } = bar;
   const period = periodOf(record, lang);
-  const label = labelOf(bar, period);
+  const label = labelOf(bar, period, t);
   const style = `left:${pct(bar.start - timeline.from, timeline.months)};width:${pct(bar.end + 1 - bar.start, timeline.months)};--row:${bar.row}`;
   const data = `data-name="${escapeHtml(bar.name)}" data-title="${escapeHtml(bar.title)}" data-period="${escapeHtml(period)}"`;
   // data-depth 1: a project or a role, drawn under the entry that carried it.
-  const nesting = `data-kind="${bar.kind}" data-depth="${bar.depth}"`;
+  // data-schedule: a degree followed on an evening schedule, hatched by the sheet.
+  const evening = bar.schedule === 'evening' ? ' data-schedule="evening"' : '';
+  const nesting = `data-kind="${bar.kind}" data-depth="${bar.depth}"${evening}`;
   const common = `class="tl-bar" style="${style}" aria-label="${escapeHtml(label)}" ${nesting} ${data}`;
   const text = `<span>${escapeHtml(bar.caption)}</span>`;
   return onPage.has(bar.anchor)
@@ -44,7 +54,7 @@ function generateTimeline(resume, lang, today, onPage) {
         (g) =>
           `    <span class="tl-group" aria-hidden="true" style="left:${pct(g.start - timeline.from, timeline.months)};width:${pct(g.end + 1 - g.start, timeline.months)};--row:${g.row};--group-rows:${g.rows}"></span>`,
       ),
-      ...lane.bars.map((bar) => `    ${renderBar(bar, timeline, lang, onPage)}`),
+      ...lane.bars.map((bar) => `    ${renderBar(bar, timeline, lang, onPage, t)}`),
       '  </div>',
       '</div>',
     ].join('\n'),
@@ -61,6 +71,7 @@ function generateTimeline(resume, lang, today, onPage) {
     ...lanes.map((l) => l.replace(/^/gm, '      ')),
     '    </div>',
     '  </div>',
+    ...legendHtml(legendOf(timeline, t)),
     '</section>',
   ].join('\n');
 }

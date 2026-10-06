@@ -37,6 +37,8 @@ export interface EducationRecord extends Identified {
   readonly skills?: readonly string[];
   readonly projects?: readonly string[];
   readonly blocks?: readonly BlockRecord[];
+  // 'evening' for a degree followed on an evening schedule ("horaire décalé").
+  readonly schedule?: 'day' | 'evening';
 }
 
 export interface ProjectRecord extends Identified {

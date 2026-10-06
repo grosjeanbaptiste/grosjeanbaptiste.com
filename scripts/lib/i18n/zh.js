@@ -21,6 +21,9 @@ module.exports = {
   downloadCV: '下载简历',
   downloadTimeline: '下载时间线',
   timelineTitle: '时间线',
+  // A degree followed by day, or on an evening schedule ("horaire décalé").
+  scheduleDay: '日间',
+  scheduleEvening: '夜间课程',
   competitions: '竞赛',
   lastYears: (n) => `近 ${n} 年`,
   wholeCareer: '全部',

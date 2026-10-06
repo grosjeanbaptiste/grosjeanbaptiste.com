@@ -47,7 +47,7 @@ test('the XSLT sidebar lists no course unit', () => {
 
 test('the XSLT sidebar still lists the real projects', () => {
   const aside = sidebar(render('en'));
-  assert.match(aside, /<strong>Acteble<\/strong>/);
+  assert.match(aside, /<strong>Acteble App<\/strong>/);
   assert.match(aside, /<strong>Kwalitijd<\/strong>/);
 });
 

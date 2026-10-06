@@ -50,13 +50,15 @@ export function TimelineLane(props: Props) {
             }
           />
         ))}
-        {lane.bars.map(({ key, entry, offset, length, row, depth, caption, block }) => {
+        {lane.bars.map(({ key, entry, offset, length, row, depth, caption, block, schedule }) => {
           // A segment of a degree's blocks is named by its academic year; it
           // leads to the degree.
           const period = formatPeriod(block?.period ?? entry.period, lang, strings.ongoing);
-          const name = block
-            ? [caption, entry.organisation, period].filter(Boolean).join(' — ')
-            : [entry.title, entry.organisation, period].filter(Boolean).join(' — ');
+          // Said aloud too: a degree followed on an evening schedule.
+          const evening = schedule === 'evening' ? strings.scheduleEvening : undefined;
+          const name = [block ? caption : entry.title, entry.organisation, period, evening]
+            .filter(Boolean)
+            .join(' — ');
           return (
             <Link
               key={key}
@@ -67,6 +69,7 @@ export function TimelineLane(props: Props) {
               data-entry-id={entry.id}
               data-kind={block ? 'block' : entry.kind}
               data-depth={depth}
+              data-schedule={schedule}
               aria-label={name}
               aria-current={entry.id === selectedId && !block ? 'page' : undefined}
               aria-describedby={key === previewKey ? 'timeline-preview' : undefined}

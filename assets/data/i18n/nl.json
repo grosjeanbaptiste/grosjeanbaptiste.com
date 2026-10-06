@@ -149,7 +149,15 @@
     },
     {
       "description": "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.",
-      "summary": "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend."
+      "summary": "Mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt, gebouwd met Flutter."
+    },
+    {
+      "description": "Rust-API achter de mobiele app van Acteble.",
+      "summary": "Backend-API van Acteble, geschreven in Rust, ten dienste van de mobiele app."
+    },
+    {
+      "description": "Masterproef aan de UMONS — de R&D-laag van Acteble.",
+      "summary": "Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS, als R&D-laag van Acteble."
     },
     {
       "description": "AI-aangedreven visuele assistent voor slechtzienden.",

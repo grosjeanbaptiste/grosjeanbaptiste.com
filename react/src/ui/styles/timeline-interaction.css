@@ -80,3 +80,34 @@
   font-size: 0.72rem;
   letter-spacing: 0.02em;
 }
+
+/* A degree followed on an evening schedule ("horaire décalé"): hatched, where
+ * a degree followed by day is plain. The legend under the timeline says so. */
+.timeline-bar[data-schedule="evening"],
+.timeline-swatch[data-schedule="evening"] {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 0.32rem,
+    color-mix(in srgb, var(--app-bg) 32%, transparent) 0.32rem 0.42rem
+  );
+}
+
+.timeline-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.6rem 0 0;
+  font-size: 0.8rem;
+  color: var(--app-muted);
+}
+
+.timeline-swatch {
+  width: 1.6rem;
+  height: 0.7rem;
+  border-radius: 0.2rem;
+  background-color: var(--app-accent-2);
+}
+
+.timeline-swatch[data-schedule="evening"] {
+  margin-left: 0.6rem;
+}

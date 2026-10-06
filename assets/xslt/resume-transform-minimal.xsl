@@ -571,6 +571,15 @@
             </xsl:for-each>
           </div>
         </div>
+        <!-- What the hatching means: a degree followed by day, or on an evening
+             schedule. Present only when the career has one. -->
+        <xsl:if test="$tl/legend">
+          <p class="tl-legend">
+            <span class="tl-swatch"></span><xsl:value-of select="$tl/legend/day"/>
+            <xsl:text> </xsl:text>
+            <span class="tl-swatch" data-schedule="evening"></span><xsl:value-of select="$tl/legend/evening"/>
+          </p>
+        </xsl:if>
       </section>
     </xsl:if>
   </xsl:template>
@@ -580,6 +589,7 @@
   <xsl:template name="timeline-bar">
     <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/></xsl:attribute>
     <xsl:attribute name="aria-label"><xsl:value-of select="label"/></xsl:attribute>
+    <xsl:if test="schedule = 'evening'"><xsl:attribute name="data-schedule">evening</xsl:attribute></xsl:if>
     <xsl:attribute name="data-name"><xsl:value-of select="name"/></xsl:attribute>
     <xsl:attribute name="data-title"><xsl:value-of select="title"/></xsl:attribute>
     <xsl:attribute name="data-period"><xsl:value-of select="period"/></xsl:attribute>

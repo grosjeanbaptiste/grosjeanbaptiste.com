@@ -8,6 +8,7 @@ import { timelineOf } from '../../domain/timeline';
 import { type Direction, neighbour } from '../../domain/timeline-navigation';
 import { useReading } from '../context';
 import { TimelineLane } from './TimelineLane';
+import { TimelineLegend } from './TimelineLegend';
 import { DEFAULT_ZOOM, TimelineZoom, type Zoom, stretchOf } from './TimelineZoom';
 
 const KEYS: Readonly<Record<string, Direction>> = {
@@ -89,6 +90,11 @@ export function TimelineView({ highlight, selectedId }: Props) {
           ))}
         </div>
       </div>
+      <TimelineLegend
+        timeline={timeline}
+        day={strings.scheduleDay}
+        evening={strings.scheduleEvening}
+      />
     </section>
   );
 }

@@ -96,6 +96,8 @@ def _education_extras(resume: Resume) -> list[dict[str, Any] | None]:
             extras["projects"] = [
                 _resolve_project_name(resume, ref.target) for ref in e.projects
             ]
+        # By day unless the CV says otherwise.
+        extras["schedule"] = e.schedule or "day"
         if e.blocks:
             extras["blocks"] = [_block(resume, b, _en) for b in e.blocks]
         extras["courses"] = list(e.courses) if e.courses else []
