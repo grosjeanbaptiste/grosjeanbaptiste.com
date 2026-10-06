@@ -127,6 +127,28 @@ def validate(resume: Resume) -> list[ValidationError]:
                     message=f"period start {e.period.start.text} > end {getattr(e.period.end, 'text', 'present')}",
                 )
             )
+        # A block files units the degree lists, each under one block only.
+        listed = {ref.target for ref in e.projects if isinstance(ref, Ref)}
+        filed: dict[str, str] = {}
+        for block in e.blocks:
+            for ref in block.units:
+                if ref.target not in listed:
+                    errors.append(
+                        ValidationError(
+                            section="education",
+                            entry=e.key,
+                            message=f"block {block.key}: unit {ref.target!r} is not among the degree's projects",
+                        )
+                    )
+                elif ref.target in filed:
+                    errors.append(
+                        ValidationError(
+                            section="education",
+                            entry=e.key,
+                            message=f"unit {ref.target!r} is filed under two blocks ({filed[ref.target]}, {block.key})",
+                        )
+                    )
+                filed.setdefault(ref.target, block.key)
         if e.display_period and not _range_ok(e.display_period):
             errors.append(
                 ValidationError(

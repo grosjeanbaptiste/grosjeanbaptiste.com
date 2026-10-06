@@ -209,6 +209,37 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             note t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons. Core coursework: software engineering & project management, artificial intelligence, databases, data structures, operational research, cryptography & IT security, and ethics & computer law, with two paid company internships.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons. Cours principaux : génie logiciel et gestion de projet, intelligence artificielle, bases de données, structures de données, recherche opérationnelle, cryptographie et sécurité informatique, éthique et droit de l'informatique, avec deux stages en entreprise rémunérés.", nl: "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.", es: "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons. Cursos principales: ingeniería del software y gestión de proyectos, inteligencia artificial, bases de datos, estructuras de datos, investigación operativa, criptografía y seguridad informática, ética y derecho informático, con dos prácticas remuneradas en empresa.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons. Kernfächer: Software-Engineering und Projektmanagement, künstliche Intelligenz, Datenbanken, Datenstrukturen, Operations Research, Kryptografie und IT-Sicherheit, Ethik und Informatikrecht, mit zwei bezahlten Unternehmenspraktika.", zh: "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。" }
             uses [Python, LaTeX, DDD, CleanArchitecture]
             projects [ref Acteble, ref Synergy, ref FedRAGBE, ref EmviApp, ref Remi, ref UeAlgorithmique, ref UeAnglais1, ref UeBasesDeDonneesI, ref UeLectureRedactionScientifique, ref UeMathematique, ref UeModelisationLogicielle, ref UeReseaux, ref UeStrategieRH, ref UeSystemesExploitation, ref UeAnglais2, ref UeBasesDeDonneesII, ref UeIngenierieLogicielle, ref UeIntelligenceArtificielle, ref UeRechercheOperationnelle, ref UeStructuresDeDonnees, ref UeSeminairesVeille, ref UeCryptographieSecurite, ref UeEthiqueDroit]
+            // The academic years of the master, from the author's own transcripts
+            // (2022-2023 to 2025-2026): which units were taken when, and the
+            // programme's name for the block. The bridging block took two years.
+            // A year runs from mid-September; the first starts with the degree,
+            // the last ends with it.
+            blocks {
+                Y2022 {
+                    year "2022-2023"
+                    label t{ en: "Bridging block", fr: "Bloc complémentaire", nl: "Schakelblok", es: "Bloque complementario", de: "Brückenblock", zh: "补修课程" }
+                    period 2022-10-15..2023-09-13
+                    units [ref UeBasesDeDonneesI, ref UeAlgorithmique, ref UeModelisationLogicielle, ref UeMathematique]
+                }
+                Y2023 {
+                    year "2023-2024"
+                    label t{ en: "Bridging block", fr: "Bloc complémentaire", nl: "Schakelblok", es: "Bloque complementario", de: "Brückenblock", zh: "补修课程" }
+                    period 2023-09-14..2024-09-13
+                    units [ref UeAnglais1, ref UeLectureRedactionScientifique, ref UeStrategieRH, ref UeReseaux, ref UeSystemesExploitation]
+                }
+                Y2024 {
+                    year "2024-2025"
+                    label t{ en: "Master 1", fr: "Master 1", nl: "Master 1", es: "Máster 1", de: "Master 1", zh: "硕士一年级" }
+                    period 2024-09-14..2025-09-13
+                    units [ref UeAnglais2, ref UeBasesDeDonneesII, ref UeIngenierieLogicielle, ref UeIntelligenceArtificielle, ref UeRechercheOperationnelle, ref UeStructuresDeDonnees]
+                }
+                Y2025 {
+                    year "2025-2026"
+                    label t{ en: "Master 2", fr: "Master 2", nl: "Master 2", es: "Máster 2", de: "Master 2", zh: "硕士二年级" }
+                    period 2025-09-14..2026-09-04
+                    units [ref UeSeminairesVeille, ref UeCryptographieSecurite, ref UeEthiqueDroit]
+                }
+            }
         }
         EcolePratiqueHautesEtudesCommercialesEPHECEPS {
             institution "Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)"
@@ -255,6 +286,32 @@ TFE: WebMenu 2.0
 """ }
             uses [SQL, "C#", ".NET", Java, Python, JS, HTML, CSS]
             projects [ref WebMenu, ref EpStructureOrdinateurs, ref EpSystemeExploitation, ref EpMathematiqueInformatique, ref EpPrincipesAlgorithmiques, ref EpPrincipesAnalyse, ref EpInformationCommunication, ref EpWebPrincipesBase, ref EpInitiationBasesDonnees, ref EpGestionBasesDonnees, ref EpProgrammationOrienteeObjet, ref EpProjetAnalyseConception, ref EpTechniquesGestionProjet, ref EpElementsStatistique, ref EpProjetDeveloppementWeb, ref EpNotionsEbusiness, ref EpProjetDeveloppementSGBD, ref EpBasesReseaux, ref EpOrganisationEntreprises, ref EpProduitsLogicielsIntegres, ref EpProjetIntegrationDeveloppement, ref EpVeilleTechnologique, ref EpAdministrationReseaux, ref EpLangueAppliquee1, ref EpLangueAppliquee2]
+            // The academic years of the bachelor, from the school's yearly
+            // transcripts (2018-2019 to 2021-2022). A unit taken twice is filed
+            // under the year it was first taken. The two language units are on
+            // no transcript and stay outside the blocks.
+            blocks {
+                Y2018 {
+                    year "2018-2019"
+                    period 2018-09-30..2019-09-13
+                    units [ref EpStructureOrdinateurs, ref EpSystemeExploitation, ref EpMathematiqueInformatique, ref EpPrincipesAlgorithmiques, ref EpPrincipesAnalyse]
+                }
+                Y2019 {
+                    year "2019-2020"
+                    period 2019-09-14..2020-09-13
+                    units [ref EpBasesReseaux, ref EpGestionBasesDonnees, ref EpInformationCommunication, ref EpInitiationBasesDonnees, ref EpNotionsEbusiness, ref EpProjetAnalyseConception, ref EpTechniquesGestionProjet, ref EpWebPrincipesBase]
+                }
+                Y2020 {
+                    year "2020-2021"
+                    period 2020-09-14..2021-09-13
+                    units [ref EpElementsStatistique, ref EpOrganisationEntreprises, ref EpProduitsLogicielsIntegres, ref EpProgrammationOrienteeObjet, ref EpProjetDeveloppementSGBD, ref EpProjetDeveloppementWeb]
+                }
+                Y2021 {
+                    year "2021-2022"
+                    period 2021-09-14..2022-10-15
+                    units [ref EpAdministrationReseaux, ref EpProjetIntegrationDeveloppement, ref EpVeilleTechnologique]
+                }
+            }
         }
         InstitutSaintLouisBruxelles {
             institution "Institut Saint-Louis Bruxelles"
@@ -265,11 +322,21 @@ TFE: WebMenu 2.0
         }
         UniversiteSaintLouisBruxelles {
             institution "Université Saint-Louis - Bruxelles"
-            studyType t{ en: "Bachelor of Arts - BA", fr: "Bachelier en Arts (BA)", nl: "Bachelor of Arts (BA)", es: "Bachelor de Artes (BA)", de: "Bachelor of Arts (BA)", zh: "文学学士 (BA)" }
-            area t{ en: "Political sciences", fr: "Sciences politiques", nl: "Politieke wetenschappen", es: "Ciencias políticas", de: "Politikwissenschaften", zh: "政治学" }
+            // As the transcripts name it: "Bachelier en sciences politiques,
+            // orientation générale". It read "Bachelor of Arts" until 2026-10-06.
+            studyType t{ en: "Bachelor in Political Sciences", fr: "Bachelier en sciences politiques", nl: "Bachelor in de politieke wetenschappen", es: "Grado en Ciencias Políticas", de: "Bachelor in Politikwissenschaften", zh: "政治学学士" }
+            area t{ en: "General orientation", fr: "Orientation générale", nl: "Algemene oriëntatie", es: "Orientación general", de: "Allgemeine Ausrichtung", zh: "综合方向" }
             period 2016-09-30..2019-06-30
             display period: 2016-09-30..2017-06-30
             score t{ en: "29 credits earned in 2016-2017, contact me for more information.", fr: "29 crédits obtenus en 2016-2017, me contacter pour plus d'informations.", nl: "29 credits behaald in 2016-2017, contacteer mij voor meer info.", es: "29 créditos obtenidos en 2016-2017, contáctame para más información.", de: "29 Credits 2016-2017, kontaktiert mich für mehr Infos.", zh: "2016-2017 获得 29 学分，请联系我了解更多信息。" }
+            projects [ref SlEconomie1, ref SlEconomie2, ref SlSciencePolitique, ref SlPenserLeSocial, ref SlPrincipesMethodes, ref SlSocioEconomieMedias, ref SlAnglais1, ref SlNeerlandais1]
+            blocks {
+                Y2016 {
+                    year "2016-2017"
+                    period 2016-09-30..2017-06-30
+                    units [ref SlEconomie1, ref SlEconomie2, ref SlSciencePolitique, ref SlPenserLeSocial, ref SlPrincipesMethodes, ref SlSocioEconomieMedias, ref SlAnglais1, ref SlNeerlandais1]
+                }
+            }
         }
         SolvayBrusselsSchoolOfEconomicsAndManagement hide on: html {
             institution "Solvay Brussels School of Economics and Management"
@@ -431,7 +498,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Algorithmics", fr: "Algorithmique", nl: "Algoritmiek", es: "Algorítmica", de: "Algorithmik", zh: "算法" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-900-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-011-C.htm"
             keywords [Algorithms, DataStructures, Complexity, Trees]
         }
         UeAnglais1 {
@@ -439,7 +506,7 @@ TFE: WebMenu 2.0
             summary t{ en: "English I", fr: "Anglais I", nl: "Engels I", es: "Inglés I", de: "Englisch I", zh: "英语 I" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-901-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-012-C.htm"
             keywords [English]
         }
         UeBasesDeDonneesI {
@@ -447,7 +514,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Databases I", fr: "Bases de données I", nl: "Databanken I", es: "Bases de datos I", de: "Datenbanken I", zh: "数据库 I" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-902-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-013-C.htm"
             keywords [SQL, RelationalAlgebra, Normalization, Indexing, NoSQL, BigData]
         }
         UeLectureRedactionScientifique {
@@ -455,7 +522,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Scientific reading and writing", fr: "Lecture et rédaction scientifique", nl: "Wetenschappelijk lezen en schrijven", es: "Lectura y redacción científica", de: "Wissenschaftliches Lesen und Schreiben", zh: "科学阅读与写作" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-903-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-014-C.htm"
             keywords [ScientificWriting, LiteratureReview]
         }
         UeMathematique {
@@ -463,7 +530,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Mathematics", fr: "Mathématique", nl: "Wiskunde", es: "Matemáticas", de: "Mathematik", zh: "数学" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-904-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-015-C.htm"
             keywords [GraphTheory, Combinatorics, Complexity, PropositionalLogic, PredicateLogic]
         }
         UeModelisationLogicielle {
@@ -471,7 +538,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Software modelling", fr: "Modélisation logicielle", nl: "Softwaremodellering", es: "Modelado de software", de: "Softwaremodellierung", zh: "软件建模" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-905-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-016-C.htm"
             keywords [Java, UML, DesignPatterns, UnitTesting, MockTesting, BDD]
         }
         UeReseaux {
@@ -479,7 +546,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Networks", fr: "Réseaux", nl: "Netwerken", es: "Redes", de: "Netzwerke", zh: "计算机网络" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-906-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-017-C.htm"
             keywords ["TCP/IP", HTTP, DNS, OSPF, BGP, Ethernet]
         }
         UeStrategieRH {
@@ -487,7 +554,7 @@ TFE: WebMenu 2.0
             summary t{ en: "HR strategy and policy", fr: "Stratégie et politiques en ressources humaines", nl: "HR-strategie en -beleid", es: "Estrategia y políticas de recursos humanos", de: "HR-Strategie und -Politik", zh: "人力资源战略与政策" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-907-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-018-C.htm"
             keywords [HRM]
         }
         UeSystemesExploitation {
@@ -495,15 +562,16 @@ TFE: WebMenu 2.0
             summary t{ en: "Operating systems", fr: "Systèmes d'exploitation", nl: "Besturingssystemen", es: "Sistemas operativos", de: "Betriebssysteme", zh: "操作系统" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-908-C.htm"
-            keywords [Concurrency, Threads, Scheduling, Paging, Virtualization]
+            url "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-019-C.htm"
+            // From the sheet of 2023-2024, the year the unit was taken.
+            keywords [Processes, Semaphores, Synchronization, MemoryManagement, FileSystems, Scheduling]
         }
         UeAnglais2 {
             name "Anglais II"
             summary t{ en: "English II", fr: "Anglais II", nl: "Engels II", es: "Inglés II", de: "Englisch II", zh: "英语 II" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-001-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-001-C.htm"
             keywords [English]
         }
         UeBasesDeDonneesII {
@@ -511,7 +579,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Databases II", fr: "Bases de données II", nl: "Databanken II", es: "Bases de datos II", de: "Datenbanken II", zh: "数据库 II" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-101-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-101-C.htm"
             keywords [XML, XSLT, XQuery, XPath, BaseX, DataMining, Weka]
         }
         UeIngenierieLogicielle {
@@ -519,7 +587,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Software engineering and project management", fr: "Ingénierie de logiciels et gestion de projets", nl: "Software engineering en projectbeheer", es: "Ingeniería del software y gestión de proyectos", de: "Software-Engineering und Projektmanagement", zh: "软件工程与项目管理" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-008-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-008-C.htm"
             keywords [Agile, Scrum, SoftwareEngineering]
         }
         UeIntelligenceArtificielle {
@@ -527,7 +595,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Artificial intelligence", fr: "Intelligence artificielle", nl: "Artificiële intelligentie", es: "Inteligencia artificial", de: "Künstliche Intelligenz", zh: "人工智能" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-102-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-102-C.htm"
             keywords [SearchAlgorithms, Metaheuristics, FirstOrderLogic, SupervisedLearning]
         }
         UeRechercheOperationnelle {
@@ -535,7 +603,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Operations research and applications", fr: "Recherche opérationnelle et applications", nl: "Operationeel onderzoek en toepassingen", es: "Investigación operativa y aplicaciones", de: "Operations Research und Anwendungen", zh: "运筹学及其应用" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-103-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-103-C.htm"
             keywords [OperationsResearch, LinearProgramming, IntegerProgramming, Duality]
         }
         UeStructuresDeDonnees {
@@ -543,7 +611,7 @@ TFE: WebMenu 2.0
             summary t{ en: "Data structures", fr: "Structures de données", nl: "Datastructuren", es: "Estructuras de datos", de: "Datenstrukturen", zh: "数据结构" }
             entity "UMONS"
             type "Course unit"
-            url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-104-C.htm"
+            url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-104-C.htm"
             keywords [AVLTrees, BTrees, HashTables, Sorting, Complexity]
         }
         UeSeminairesVeille {
@@ -760,6 +828,66 @@ TFE: WebMenu 2.0
             type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24"
             keywords [ProfessionalCommunication]
+        }
+        // The units passed at Saint-Louis in 2016-2017 (29 credits), from the
+        // author's transcript. Their sheets are the author's own copies of the
+        // university's, saved on 2022-09-01 and archived in dsl/_sources/usl-b:
+        // later descriptions than the year taken, and no page to link to.
+        SlEconomie1 {
+            name "Économie I"
+            summary t{ en: "Economics I", fr: "Économie I", nl: "Economie I", es: "Economía I", de: "Volkswirtschaftslehre I", zh: "经济学 I" }
+            entity "USL-B"
+            type "Course unit"
+            keywords [Microeconomics, CompetitiveMarkets, FirmBehaviour, MarketFailure]
+        }
+        SlEconomie2 {
+            name "Économie II"
+            summary t{ en: "Economics II", fr: "Économie II", nl: "Economie II", es: "Economía II", de: "Volkswirtschaftslehre II", zh: "经济学 II" }
+            entity "USL-B"
+            type "Course unit"
+            keywords [ImperfectCompetition, Macroeconomics, NationalIncome, MonetaryMarket]
+        }
+        SlSciencePolitique {
+            name "Science politique"
+            summary t{ en: "Political science", fr: "Science politique", nl: "Politieke wetenschap", es: "Ciencia política", de: "Politikwissenschaft", zh: "政治学" }
+            entity "USL-B"
+            type "Course unit"
+            keywords [PoliticalScience, Power, State, Democracy]
+        }
+        SlPenserLeSocial {
+            name "Séminaire : penser le social"
+            summary t{ en: "Seminar: thinking the social", fr: "Séminaire : penser le social", nl: "Seminarie: het sociale denken", es: "Seminario: pensar lo social", de: "Seminar: das Soziale denken", zh: "研讨课：思考社会" }
+            entity "USL-B"
+            type "Course unit"
+            keywords [Epistemology, Durkheim, Weber, Marx]
+        }
+        SlPrincipesMethodes {
+            name "Séminaire : principes et méthodes en sciences sociales"
+            summary t{ en: "Seminar: principles and methods in the social sciences", fr: "Séminaire : principes et méthodes en sciences sociales", nl: "Seminarie: principes en methoden in de sociale wetenschappen", es: "Seminario: principios y métodos en ciencias sociales", de: "Seminar: Prinzipien und Methoden der Sozialwissenschaften", zh: "研讨课：社会科学的原则与方法" }
+            entity "USL-B"
+            type "Course unit"
+            keywords [AcademicWriting, Citation, Epistemology]
+        }
+        SlSocioEconomieMedias {
+            name "Socio-économie des médias"
+            summary t{ en: "Socio-economics of the media", fr: "Socio-économie des médias", nl: "Socio-economie van de media", es: "Socioeconomía de los medios", de: "Sozioökonomie der Medien", zh: "媒体社会经济学" }
+            entity "USL-B"
+            type "Course unit"
+            keywords [MediaEconomics, Advertising, MediaRegulation, WebEconomy]
+        }
+        SlAnglais1 {
+            name "Anglais I (Saint-Louis)"
+            summary t{ en: "English I", fr: "Anglais I", nl: "Engels I", es: "Inglés I", de: "Englisch I", zh: "英语 I" }
+            entity "USL-B"
+            type "Course unit"
+            keywords [English]
+        }
+        SlNeerlandais1 {
+            name "Néerlandais I"
+            summary t{ en: "Dutch I", fr: "Néerlandais I", nl: "Nederlands I", es: "Neerlandés I", de: "Niederländisch I", zh: "荷兰语 I" }
+            entity "USL-B"
+            type "Course unit"
+            keywords [Dutch]
         }
     }
 

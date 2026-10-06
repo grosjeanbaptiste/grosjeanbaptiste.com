@@ -1285,6 +1285,25 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   scroll-margin-top: calc(var(--views-bar-h, 0rem) + 4.5rem);
 }
 
+/* A degree's academic years: one row of segments under its bar. Outlined
+ * rather than filled — a scale for what the degree carried, drawn below it. */
+.tl-bar[data-depth="1"][data-kind="block"] {
+  justify-content: center;
+  border: 0.0625rem solid color-mix(in srgb, var(--hue) 70%, transparent);
+  background: color-mix(in srgb, var(--hue) 8%, var(--tl-surface, var(--card-background)));
+  color: var(--muted-color);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
+/* A degree's course units, year by year: the heading of one academic year. */
+.embedded-block {
+  margin: 0.5rem 0 0.15rem;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--muted-color);
+}
+
 /* widgets.css */
 /* Floating CV actions (download the LaTeX PDF / the timeline PDF / print this
  * page) + daily-life

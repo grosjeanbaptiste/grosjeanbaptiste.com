@@ -6,6 +6,7 @@
 // else cut short in the widest of the three. Lengths in mm, y downwards from
 // the axis as in page.js; the result is drawn by picture.js like any sheet.
 const { textWidth } = require('./measure');
+const { timeScale } = require('./scale');
 
 const AXIS = 5;
 const LANE_GAP = 2;
@@ -41,7 +42,22 @@ function slotsOf(bar, before, after) {
   ];
 }
 
+// A block of a degree is one segment in a row of segments: its label stays
+// inside it — with the programme's name when it fits, the year alone otherwise.
+function blockLabelled(bar, inside, measure) {
+  const strong =
+    [bar.caption ?? bar.name, bar.name].find((text) => measure(text) <= inside.room) ?? '';
+  return {
+    ...bar,
+    strong,
+    rest: '',
+    clipped: false,
+    label: { place: 'inside', ...PLACED.inside(bar) },
+  };
+}
+
 function labelled(bar, slots, measure) {
+  if (bar.kind === 'block') return blockLabelled(bar, slots[0], measure);
   // What the bar reads: its name, with its title when a namesake shares the lane.
   const text = bar.caption ?? bar.name;
   const width = measure(text);
@@ -87,9 +103,17 @@ function laneOf(lane, x, track, measure) {
 }
 
 // `track`: the width of the time axis. `pitch`: the height of a row.
-function layOutCompact(model, { track, pitch = 3.2, font = 6, measure } = {}) {
+// `density`: the share of the width given to the years by what they hold
+// rather than by time (./scale.js); 0 draws time to scale.
+function layOutCompact(model, { track, pitch = 3.2, font = 6, measure, density = 0 } = {}) {
   const width = measure ?? ((text) => textWidth(text, true, font));
-  const x = (month) => ((month - model.from) / model.months) * track;
+  const x = timeScale({
+    from: model.from,
+    to: model.from + model.months - 1,
+    track,
+    spans: model.lanes.flatMap((lane) => lane.bars),
+    density,
+  });
   let top = -AXIS;
   const lanes = model.lanes.map((lane) => {
     const at = { ...laneOf(lane, x, track, width), top };

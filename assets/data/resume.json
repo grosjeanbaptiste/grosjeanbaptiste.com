@@ -181,8 +181,8 @@
     },
     {
       "institution": "Université Saint-Louis - Bruxelles",
-      "studyType": "Bachelor of Arts - BA",
-      "area": "Political sciences",
+      "studyType": "Bachelor in Political Sciences",
+      "area": "General orientation",
       "startDate": "2016-09-30",
       "endDate": "2019-06-30"
     },
@@ -448,7 +448,7 @@
         "Complexity",
         "Trees"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-900-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-011-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -457,7 +457,7 @@
       "keywords": [
         "English"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-901-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-012-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -471,7 +471,7 @@
         "NoSQL",
         "BigData"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-902-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-013-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -481,7 +481,7 @@
         "ScientificWriting",
         "LiteratureReview"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-903-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-014-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -494,7 +494,7 @@
         "PropositionalLogic",
         "PredicateLogic"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-904-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-015-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -508,7 +508,7 @@
         "MockTesting",
         "BDD"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-905-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-016-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -522,7 +522,7 @@
         "BGP",
         "Ethernet"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-906-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-017-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -531,20 +531,21 @@
       "keywords": [
         "HRM"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-907-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-018-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
     {
       "name": "Systèmes d'exploitation",
       "keywords": [
-        "Concurrency",
-        "Threads",
-        "Scheduling",
-        "Paging",
-        "Virtualization"
+        "Processes",
+        "Semaphores",
+        "Synchronization",
+        "MemoryManagement",
+        "FileSystems",
+        "Scheduling"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-908-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-019-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -553,7 +554,7 @@
       "keywords": [
         "English"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-001-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-001-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -568,7 +569,7 @@
         "DataMining",
         "Weka"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-101-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-101-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -579,7 +580,7 @@
         "Scrum",
         "SoftwareEngineering"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-008-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-008-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -591,7 +592,7 @@
         "FirstOrderLogic",
         "SupervisedLearning"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-102-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-102-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -603,7 +604,7 @@
         "IntegerProgramming",
         "Duality"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-103-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-103-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -616,7 +617,7 @@
         "Sorting",
         "Complexity"
       ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-104-C.htm",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-104-C.htm",
       "type": "Course unit",
       "entity": "UMONS"
     },
@@ -915,6 +916,87 @@
       "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24",
       "type": "Course unit",
       "entity": "EPHEC"
+    },
+    {
+      "name": "Économie I",
+      "keywords": [
+        "Microeconomics",
+        "CompetitiveMarkets",
+        "FirmBehaviour",
+        "MarketFailure"
+      ],
+      "type": "Course unit",
+      "entity": "USL-B"
+    },
+    {
+      "name": "Économie II",
+      "keywords": [
+        "ImperfectCompetition",
+        "Macroeconomics",
+        "NationalIncome",
+        "MonetaryMarket"
+      ],
+      "type": "Course unit",
+      "entity": "USL-B"
+    },
+    {
+      "name": "Science politique",
+      "keywords": [
+        "PoliticalScience",
+        "Power",
+        "State",
+        "Democracy"
+      ],
+      "type": "Course unit",
+      "entity": "USL-B"
+    },
+    {
+      "name": "Séminaire : penser le social",
+      "keywords": [
+        "Epistemology",
+        "Durkheim",
+        "Weber",
+        "Marx"
+      ],
+      "type": "Course unit",
+      "entity": "USL-B"
+    },
+    {
+      "name": "Séminaire : principes et méthodes en sciences sociales",
+      "keywords": [
+        "AcademicWriting",
+        "Citation",
+        "Epistemology"
+      ],
+      "type": "Course unit",
+      "entity": "USL-B"
+    },
+    {
+      "name": "Socio-économie des médias",
+      "keywords": [
+        "MediaEconomics",
+        "Advertising",
+        "MediaRegulation",
+        "WebEconomy"
+      ],
+      "type": "Course unit",
+      "entity": "USL-B"
+    },
+    {
+      "name": "Anglais I (Saint-Louis)",
+      "keywords": [
+        "English"
+      ],
+      "type": "Course unit",
+      "entity": "USL-B"
+    },
+    {
+      "name": "Néerlandais I",
+      "keywords": [
+        "Dutch"
+      ],
+      "type": "Course unit",
+      "entity": "USL-B"
     }
   ],
   "references": [

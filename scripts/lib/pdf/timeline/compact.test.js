@@ -122,3 +122,33 @@ test('a bar told apart by its title is written with it', () => {
   const lane = laid([bar('Xtrada', 0, 20, { caption: 'Xtrada · Crafter' })]);
   assert.equal(named(lane, 'Xtrada').strong, 'Xtrada · Crafter');
 });
+
+test('with density, a busy year is drawn wider than a quiet one', () => {
+  const busy = Array.from({ length: 5 }, (_, i) => bar(`b${i}`, 36, 12, { row: i + 1 }));
+  const sheet = layOutCompact(model([bar('long', 0, 48), ...busy]), { ...OPTIONS, density: 0.6 });
+  const b0 = sheet.lanes[0].bars.find((b) => b.name === 'b0');
+  // The last of four years, to scale, would be 24 mm of 96.
+  assert.ok(b0.x1 - b0.x0 > 36, `the busy year is ${b0.x1 - b0.x0} mm wide`);
+});
+
+// A block of a degree is a segment of a row of segments: its label stays
+// inside it, shortened to the year when its name does not fit.
+const block = (name, start, months, caption) =>
+  bar(name, start, months, { kind: 'block', depth: 1, row: 1, caption });
+
+test('a block whose name does not fit keeps its year, inside its segment', () => {
+  const lane = laid([bar('host', 0, 48), block('22-23', 0, 4, '22-23 · a long name')]);
+  const b = named(lane, '22-23');
+  assert.deepEqual([b.label.place, b.strong], ['inside', '22-23']);
+});
+
+test('a block with room for its name carries it', () => {
+  const lane = laid([bar('host', 0, 48), block('22-23', 0, 24, '22-23 · a long name')]);
+  assert.equal(named(lane, '22-23').strong, '22-23 · a long name');
+});
+
+test('a block too narrow for its year carries no label rather than one beside it', () => {
+  const lane = laid([bar('host', 0, 48), block('22-23', 0, 2, '22-23 · a long name')]);
+  const b = named(lane, '22-23');
+  assert.deepEqual([b.label.place, b.strong], ['inside', '']);
+});

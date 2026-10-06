@@ -140,6 +140,17 @@ class WorkEntry(Node):
 
 
 @dataclass(frozen=True, kw_only=True)
+class BlockEntry(Node):
+    """One academic year of a degree, with the course units taken that year."""
+
+    key: str
+    year: Value | None = None
+    label: Value | None = None
+    period: DateRange | None = None
+    units: tuple[Ref, ...] = ()
+
+
+@dataclass(frozen=True, kw_only=True)
 class EducationEntry(Node):
     key: str
     institution: Value | None = None
@@ -155,6 +166,7 @@ class EducationEntry(Node):
     hide_on: HideTarget | None = None
     # Display-only override — patched on HTML/XSLT, canonical data preserved.
     display_period: DateRange | None = None
+    blocks: tuple[BlockEntry, ...] = ()
 
 
 @dataclass(frozen=True, kw_only=True)

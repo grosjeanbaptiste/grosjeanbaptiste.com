@@ -49,3 +49,20 @@ test('a sheet that cannot be read fails the check, naming the unit', async () =>
   };
   await assert.rejects(driftOf(units, down), /Réseaux.*HTTP 404/);
 });
+
+// A unit whose own sheet published no content the year it was taken leans on
+// a later year's sheet of the same unit: that one is re-read too.
+test('the wordings a later sheet backs are looked for on that sheet', async () => {
+  const leaning = {
+    Maths: {
+      url: 'https://school/2022/maths',
+      evidence: { GraphTheory: null },
+      later: { url: 'https://school/2025/maths', evidence: { GraphTheory: 'Théorie des Graphes' } },
+    },
+  };
+  const read = async (_name, sheet) =>
+    sheet.url.includes('2025') ? 'Analyse numérique' : 'rien de publié';
+  assert.deepEqual(await driftOf(leaning, read), [
+    { unit: 'Maths', keyword: 'GraphTheory', wording: 'Théorie des Graphes' },
+  ]);
+});

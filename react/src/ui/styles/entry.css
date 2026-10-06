@@ -122,3 +122,11 @@
   font-size: 0.8em;
   color: var(--app-muted);
 }
+
+/* A degree's course units, year by year. */
+.entry-block h4 {
+  margin: 0.9rem 0 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--app-muted);
+}

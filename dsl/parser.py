@@ -19,6 +19,7 @@ from lark import Lark, Token, Transformer, v_args
 
 from nodes import (
     AwardEntry,
+    BlockEntry,
     CompetitionEntry,
     Basics,
     DailyItem,
@@ -286,6 +287,24 @@ class _Builder(Transformer):
 
     def edu_projects(self, meta, children):
         return ("projects", tuple(children[0]))
+
+    def edu_blocks(self, meta, children):
+        return ("blocks", tuple(children))
+
+    def block_entry(self, meta, children):
+        return BlockEntry(src=_pos(meta), key=str(children[0]), **dict(children[1:]))
+
+    def block_year(self, meta, children):
+        return ("year", children[0])
+
+    def block_label(self, meta, children):
+        return ("label", children[0])
+
+    def block_period(self, meta, children):
+        return ("period", children[0])
+
+    def block_units(self, meta, children):
+        return ("units", tuple(children[0]))
 
     def edu_display(self, meta, children):
         # children[0] is a dict of override fields

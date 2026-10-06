@@ -74,7 +74,21 @@
       "studyType": "理学硕士",
       "area": "计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS 学分)",
       "gpa": "13.04/20 — 以满意成绩获得",
-      "summary": "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。"
+      "summary": "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。",
+      "blocks": [
+        {
+          "label": "补修课程"
+        },
+        {
+          "label": "补修课程"
+        },
+        {
+          "label": "硕士一年级"
+        },
+        {
+          "label": "硕士二年级"
+        }
+      ]
     },
     {
       "studyType": "职业学士",
@@ -88,8 +102,8 @@
       "gpa": "证书"
     },
     {
-      "studyType": "文学学士 (BA)",
-      "area": "政治学",
+      "studyType": "政治学学士",
+      "area": "综合方向",
       "gpa": "2016-2017 获得 29 学分，请联系我了解更多信息。"
     },
     {
@@ -288,6 +302,30 @@
     },
     {
       "summary": "高等教育应用语言 UE2"
+    },
+    {
+      "summary": "经济学 I"
+    },
+    {
+      "summary": "经济学 II"
+    },
+    {
+      "summary": "政治学"
+    },
+    {
+      "summary": "研讨课：思考社会"
+    },
+    {
+      "summary": "研讨课：社会科学的原则与方法"
+    },
+    {
+      "summary": "媒体社会经济学"
+    },
+    {
+      "summary": "英语 I"
+    },
+    {
+      "summary": "荷兰语 I"
     }
   ],
   "references": [

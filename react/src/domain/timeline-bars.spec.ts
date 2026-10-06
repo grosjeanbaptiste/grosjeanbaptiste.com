@@ -79,3 +79,53 @@ describe('entries that hand over on one day', () => {
     expect(bar('ephec')?.offset).toBeCloseTo(29 / 30, 9);
   });
 });
+
+// A degree is followed year by year: its academic years — its blocks — are one
+// row of segments right under its bar.
+describe('the blocks of a degree', () => {
+  const base = aResume();
+  const studied = {
+    ...base,
+    education: base.education.map((e) => ({
+      ...e,
+      blocks: [
+        {
+          year: '2022-2023',
+          label: 'Bridging block',
+          startDate: '2022-10-15',
+          endDate: '2023-09-13',
+          units: ['Algorithmique'],
+        },
+        { year: '2023-2024', startDate: '2023-09-14', endDate: '2026-09-04', units: [] },
+      ],
+    })),
+  };
+  const lane = timelineOf(entriesOf(studied), today).lanes.find((l) => l.kind === 'education');
+  const bands = lane?.bars.filter((b) => b.block) ?? [];
+  const degree = lane?.bars.find((b) => b.depth === 0);
+
+  it('are drawn one segment each', () => {
+    expect(bands.map((b) => b.caption)).toEqual(['22-23 · Bridging block', '23-24']);
+  });
+
+  it('share the row right under the degree', () => {
+    expect(bands.map((b) => b.row)).toEqual([(degree?.row ?? 0) + 1, (degree?.row ?? 0) + 1]);
+  });
+
+  it('push what the degree carried below them', () => {
+    const carried = lane?.bars.filter((b) => b.depth === 1 && !b.block) ?? [];
+    expect(carried.length).toBeGreaterThan(0);
+    expect(carried.every((b) => b.row > (degree?.row ?? 0) + 1)).toBe(true);
+  });
+
+  it('lead to their degree, each with a key of its own', () => {
+    expect(bands.map((b) => [b.entry.id, b.key])).toEqual([
+      ['umons-master', 'umons-master#2022-2023'],
+      ['umons-master', 'umons-master#2023-2024'],
+    ]);
+  });
+
+  it('are none for a degree the CV does not divide', () => {
+    expect(timeline.lanes.flatMap((l) => l.bars).some((b) => b.block)).toBe(false);
+  });
+});

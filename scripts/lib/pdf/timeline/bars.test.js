@@ -138,3 +138,37 @@ test('what an entry carried is cut to the span like the entry', () => {
 test('a project still running when its host has left the span stands alone, not dropped', () => {
   assert.ok(lane(lastTwo(), 'projects').groups.some((g) => g.head.strong === 'Kwalitijd'));
 });
+
+// A degree's academic years — its blocks — come with it, to be drawn on a row
+// of their own under its bar.
+const BLOCKS = [
+  { year: '2022-2023', label: 'Bridging block', startDate: '2022-10-15', endDate: '2023-09-13' },
+  { year: '2025-2026', startDate: '2025-09-14', endDate: '2026-09-04' },
+];
+const studied = () => {
+  const base = aResume();
+  return { ...base, education: [{ ...base.education[0], blocks: BLOCKS }] };
+};
+
+test('a degree comes with its blocks, named by their year and the programme’s name', () => {
+  const { bands } = group(timelineBars(studied(), TODAY), 'education', 'UMons');
+  assert.deepEqual(
+    bands.map((b) => [b.strong, b.rest]),
+    [
+      ['22-23', 'Bridging block'],
+      ['25-26', ''],
+    ],
+  );
+});
+
+test('an entry without blocks has none', () => {
+  assert.deepEqual(group(whole(), 'work', 'Xtrada').bands, []);
+});
+
+test('a span keeps the blocks that reach into it, and only those', () => {
+  const { bands } = group(timelineBars(studied(), TODAY, 2), 'education', 'UMons');
+  assert.deepEqual(
+    bands.map((b) => b.strong),
+    ['25-26'],
+  );
+});

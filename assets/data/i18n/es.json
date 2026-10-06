@@ -74,7 +74,21 @@
       "studyType": "Máster en Ciencias",
       "area": "Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)",
       "gpa": "13,04/20 — obtenido con satisfacción",
-      "summary": "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons. Cursos principales: ingeniería del software y gestión de proyectos, inteligencia artificial, bases de datos, estructuras de datos, investigación operativa, criptografía y seguridad informática, ética y derecho informático, con dos prácticas remuneradas en empresa."
+      "summary": "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons. Cursos principales: ingeniería del software y gestión de proyectos, inteligencia artificial, bases de datos, estructuras de datos, investigación operativa, criptografía y seguridad informática, ética y derecho informático, con dos prácticas remuneradas en empresa.",
+      "blocks": [
+        {
+          "label": "Bloque complementario"
+        },
+        {
+          "label": "Bloque complementario"
+        },
+        {
+          "label": "Máster 1"
+        },
+        {
+          "label": "Máster 2"
+        }
+      ]
     },
     {
       "studyType": "Bachelor profesional",
@@ -88,8 +102,8 @@
       "gpa": "Acreditación"
     },
     {
-      "studyType": "Bachelor de Artes (BA)",
-      "area": "Ciencias políticas",
+      "studyType": "Grado en Ciencias Políticas",
+      "area": "Orientación general",
       "gpa": "29 créditos obtenidos en 2016-2017, contáctame para más información."
     },
     {
@@ -288,6 +302,30 @@
     },
     {
       "summary": "Lengua aplicada a la enseñanza superior UE2"
+    },
+    {
+      "summary": "Economía I"
+    },
+    {
+      "summary": "Economía II"
+    },
+    {
+      "summary": "Ciencia política"
+    },
+    {
+      "summary": "Seminario: pensar lo social"
+    },
+    {
+      "summary": "Seminario: principios y métodos en ciencias sociales"
+    },
+    {
+      "summary": "Socioeconomía de los medios"
+    },
+    {
+      "summary": "Inglés I"
+    },
+    {
+      "summary": "Neerlandés I"
     }
   ],
   "references": [

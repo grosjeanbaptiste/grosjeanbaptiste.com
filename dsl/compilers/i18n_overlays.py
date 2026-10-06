@@ -73,6 +73,10 @@ def _education_overlay(e, lang: str) -> dict[str, Any] | None:
         entry["gpa"] = val
     if (val := _tr(e.note, lang)) is not None:
         entry["summary"] = val
+    # Index-aligned with the degree's blocks: only the names are translated.
+    labels = [_tr(b.label, lang) for b in e.blocks]
+    if any(label is not None for label in labels):
+        entry["blocks"] = [{"label": label} if label is not None else {} for label in labels]
     return entry or None
 
 

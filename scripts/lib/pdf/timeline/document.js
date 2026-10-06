@@ -9,6 +9,9 @@ const { timelineBars } = require('./bars');
 const { layOut } = require('./page');
 const { buildPicture } = require('./picture');
 
+// The busy years of the career get the width the quiet ones can spare.
+const DENSITY = 0.6;
+
 function buildHeader(resume, t, lang, today, years) {
   const b = resume.basics || {};
   // The 2- and 5-year PDFs say so beside the date; the whole career needs no note.
@@ -24,7 +27,7 @@ function buildHeader(resume, t, lang, today, years) {
 // Gives the source and which labels the sheet could carry ('full' or 'names').
 function buildTimelineDocument(resume, lang, today, years = null) {
   const t = I18N[lang];
-  const sheet = layOut(timelineBars(resume, today, years));
+  const sheet = layOut(timelineBars(resume, today, years), { density: DENSITY });
   const tex = [
     buildPreamble(lang),
     '\\geometry{landscape,left=10mm,right=10mm,top=10mm,bottom=8mm}',

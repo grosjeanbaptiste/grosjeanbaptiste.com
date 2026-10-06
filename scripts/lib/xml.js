@@ -27,6 +27,8 @@ const XML_ITEM_NAMES = {
   lanes: 'lane',
   bars: 'bar',
   groups: 'group',
+  blocks: 'block',
+  units: 'unit',
 };
 
 const xmlEsc = (s) =>

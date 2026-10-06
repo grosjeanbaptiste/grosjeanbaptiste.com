@@ -73,3 +73,8 @@ test('the outlines of two groups stacked one under the other do not overlap', ()
   ]);
   assert.ok(upperEnd[1] > lowerStart[1], 'the upper outline runs into the lower one');
 });
+
+test('a block of a degree is drawn in a light tint of the degrees’ colour', () => {
+  const block = { ...bar('22-23'), kind: 'block', depth: 1, row: 1 };
+  assert.match(buildPicture(sheet([block]), I18N.en), /\\fill\[PrimaryColor!30!BackgroundColor/);
+});

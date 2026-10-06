@@ -93,6 +93,16 @@ education_field: "institution" value         -> edu_institution
                | "uses" array                -> edu_uses
                | "projects" array            -> edu_projects
                | "display" display_override  -> edu_display
+               | "blocks" "{" block_entry+ "}" -> edu_blocks
+
+// One academic year of a degree: the programme's own name for it when it has
+// one, when it ran, and the course units taken that year.
+block_entry: NAME "{" block_field+ "}"
+
+block_field: "year" value          -> block_year
+           | "label" value         -> block_label
+           | "period" date_range   -> block_period
+           | "units" array         -> block_units
 
 display_override: "period:" date_range   -> display_period
 

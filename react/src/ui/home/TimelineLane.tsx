@@ -50,9 +50,13 @@ export function TimelineLane(props: Props) {
             }
           />
         ))}
-        {lane.bars.map(({ key, entry, offset, length, row, depth, caption }) => {
-          const period = formatPeriod(entry.period, lang, strings.ongoing);
-          const name = [entry.title, entry.organisation, period].filter(Boolean).join(' — ');
+        {lane.bars.map(({ key, entry, offset, length, row, depth, caption, block }) => {
+          // A segment of a degree's blocks is named by its academic year; it
+          // leads to the degree.
+          const period = formatPeriod(block?.period ?? entry.period, lang, strings.ongoing);
+          const name = block
+            ? [caption, entry.organisation, period].filter(Boolean).join(' — ')
+            : [entry.title, entry.organisation, period].filter(Boolean).join(' — ');
           return (
             <Link
               key={key}
@@ -61,10 +65,10 @@ export function TimelineLane(props: Props) {
               className="timeline-bar"
               data-bar-key={key}
               data-entry-id={entry.id}
-              data-kind={entry.kind}
+              data-kind={block ? 'block' : entry.kind}
               data-depth={depth}
               aria-label={name}
-              aria-current={entry.id === selectedId ? 'page' : undefined}
+              aria-current={entry.id === selectedId && !block ? 'page' : undefined}
               aria-describedby={key === previewKey ? 'timeline-preview' : undefined}
               data-dimmed={highlight ? !highlight.has(entry.id) : undefined}
               onMouseEnter={() => onPreview(key)}

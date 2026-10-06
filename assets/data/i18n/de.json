@@ -74,7 +74,21 @@
       "studyType": "Master of Science",
       "area": "Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)",
       "gpa": "13,04/20 — mit Befriedigung bestanden",
-      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons. Kernfächer: Software-Engineering und Projektmanagement, künstliche Intelligenz, Datenbanken, Datenstrukturen, Operations Research, Kryptografie und IT-Sicherheit, Ethik und Informatikrecht, mit zwei bezahlten Unternehmenspraktika."
+      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons. Kernfächer: Software-Engineering und Projektmanagement, künstliche Intelligenz, Datenbanken, Datenstrukturen, Operations Research, Kryptografie und IT-Sicherheit, Ethik und Informatikrecht, mit zwei bezahlten Unternehmenspraktika.",
+      "blocks": [
+        {
+          "label": "Brückenblock"
+        },
+        {
+          "label": "Brückenblock"
+        },
+        {
+          "label": "Master 1"
+        },
+        {
+          "label": "Master 2"
+        }
+      ]
     },
     {
       "studyType": "Professioneller Bachelor",
@@ -88,8 +102,8 @@
       "gpa": "Attestation"
     },
     {
-      "studyType": "Bachelor of Arts (BA)",
-      "area": "Politikwissenschaften",
+      "studyType": "Bachelor in Politikwissenschaften",
+      "area": "Allgemeine Ausrichtung",
       "gpa": "29 Credits 2016-2017, kontaktiert mich für mehr Infos."
     },
     {
@@ -288,6 +302,30 @@
     },
     {
       "summary": "Angewandte Sprache Hochschulbildung UE2"
+    },
+    {
+      "summary": "Volkswirtschaftslehre I"
+    },
+    {
+      "summary": "Volkswirtschaftslehre II"
+    },
+    {
+      "summary": "Politikwissenschaft"
+    },
+    {
+      "summary": "Seminar: das Soziale denken"
+    },
+    {
+      "summary": "Seminar: Prinzipien und Methoden der Sozialwissenschaften"
+    },
+    {
+      "summary": "Sozioökonomie der Medien"
+    },
+    {
+      "summary": "Englisch I"
+    },
+    {
+      "summary": "Niederländisch I"
     }
   ],
   "references": [
