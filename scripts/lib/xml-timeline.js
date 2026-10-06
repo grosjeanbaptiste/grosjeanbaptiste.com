@@ -3,7 +3,7 @@
 // rows, so the themes are handed positions and only draw them — the entries,
 // what each carried under it, and the outline of each such group.
 const I18N = require('./i18n');
-const { timelineOf } = require('./timeline-model');
+const { withPrintRows } = require('./timeline-print');
 const { pct, periodOf, labelOf, legendOf, LANE_LABEL, zoomsOf } = require('./timeline-view');
 
 // The XSLT themes give an id to each job and each degree, nothing else: a bar
@@ -16,7 +16,7 @@ function targetOf(bar) {
 
 function timelineForXml(resume, lang, today) {
   const t = I18N[lang];
-  const timeline = timelineOf(resume, today);
+  const timeline = withPrintRows(resume, today);
   return {
     title: t.timelineTitle,
     months: timeline.months,
@@ -31,12 +31,16 @@ function timelineForXml(resume, lang, today) {
       kind: lane.kind,
       label: t[LANE_LABEL[lane.kind]],
       rows: lane.rows,
+      // On paper the course units are left out and the rows close up.
+      printRows: lane.printRows,
       // The outline of each entry that carried something, behind its bars.
       groups: lane.groups.map((g) => ({
         left: pct(g.start - timeline.from, timeline.months),
         width: pct(g.end + 1 - g.start, timeline.months),
         row: g.row,
         rows: g.rows,
+        printRow: g.printRow,
+        printRows: g.printRows,
       })),
       bars: lane.bars.map((bar) => {
         const period = periodOf(bar.record, lang);
@@ -54,6 +58,7 @@ function timelineForXml(resume, lang, today) {
           left: pct(bar.start - timeline.from, timeline.months),
           width: pct(bar.end + 1 - bar.start, timeline.months),
           row: bar.row,
+          printRow: bar.printRow,
         };
       }),
     })),

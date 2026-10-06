@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=fef8fda5"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=e60ac5d7"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -222,60 +222,79 @@
           <kind>work</kind>
           <label>工作经验</label>
           <rows>8</rows>
+          <printRows>8</printRows>
           <groups>
             <group>
               <left>70.87%</left>
               <width>2.41%</width>
               <row>0</row>
               <rows>2</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>77.18%</left>
               <width>3.38%</width>
               <row>0</row>
               <rows>2</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>81.55%</left>
               <width>1.93%</width>
               <row>1</row>
               <rows>2</rows>
+              <printRow>1</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>83.5%</left>
               <width>3.49%</width>
               <row>1</row>
               <rows>2</rows>
+              <printRow>1</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>84.47%</left>
               <width>3.25%</width>
               <row>3</row>
               <rows>2</rows>
+              <printRow>3</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>87.86%</left>
               <width>4.35%</width>
               <row>0</row>
               <rows>2</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>88.83%</left>
               <width>3.38%</width>
               <row>2</row>
               <rows>2</rows>
+              <printRow>2</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
               <rows>5</rows>
+              <printRow>0</printRow>
+              <printRows>5</printRows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
               <row>5</row>
               <rows>3</rows>
+              <printRow>5</printRow>
+              <printRows>3</printRows>
             </group>
           </groups>
           <bars>
@@ -291,6 +310,7 @@
               <left>46.6%</left>
               <width>0.47%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-restomax-全栈-web-开发实习生</target>
@@ -304,6 +324,7 @@
               <left>70.87%</left>
               <width>2.41%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-restomax-全栈-web-开发实习生</target>
@@ -316,6 +337,7 @@
               <left>70.87%</left>
               <width>2.41%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-les-auberges-de-jeunesse-wallonie-bruxelles-学生工</target>
@@ -329,6 +351,7 @@
               <left>73.27%</left>
               <width>0.02%</width>
               <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>work-editx-it-challenges-it-jobs-education-in-it-for-x-全栈-web-开发实习生</target>
@@ -342,6 +365,7 @@
               <left>73.3%</left>
               <width>0.47%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-technofutur-tic-全栈-web-开发实习生</target>
@@ -355,6 +379,7 @@
               <left>77.18%</left>
               <width>3.38%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-technofutur-tic-全栈-web-开发实习生</target>
@@ -368,6 +393,7 @@
               <left>77.67%</left>
               <width>2.9%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-xtrada-软件工艺师</target>
@@ -381,6 +407,7 @@
               <left>81.38%</left>
               <width>6.34%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-软件工艺师</target>
@@ -394,6 +421,7 @@
               <left>81.55%</left>
               <width>1.93%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-软件工艺师</target>
@@ -406,6 +434,7 @@
               <left>81.55%</left>
               <width>1.93%</width>
               <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>work-xtrada-net-react-软件工艺师</target>
@@ -419,6 +448,7 @@
               <left>83.5%</left>
               <width>3.49%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-xtrada-net-react-软件工艺师</target>
@@ -431,6 +461,7 @@
               <left>83.5%</left>
               <width>0.94%</width>
               <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>work-xtrada-数据科学家</target>
@@ -444,6 +475,7 @@
               <left>84.47%</left>
               <width>3.25%</width>
               <row>3</row>
+              <printRow>3</printRow>
             </bar>
             <bar>
               <target>work-xtrada-数据科学家</target>
@@ -456,6 +488,7 @@
               <left>84.47%</left>
               <width>2.52%</width>
               <row>4</row>
+              <printRow>4</printRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺师</target>
@@ -469,6 +502,7 @@
               <left>87.86%</left>
               <width>4.35%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺师</target>
@@ -481,6 +515,7 @@
               <left>87.86%</left>
               <width>4.35%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺负责人</target>
@@ -494,6 +529,7 @@
               <left>88.83%</left>
               <width>3.38%</width>
               <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺负责人</target>
@@ -506,6 +542,7 @@
               <left>88.83%</left>
               <width>3.38%</width>
               <row>3</row>
+              <printRow>3</printRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -519,6 +556,7 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -531,6 +569,7 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -543,6 +582,7 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -555,6 +595,7 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>3</row>
+              <printRow>3</printRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -568,6 +609,7 @@
               <left>94.37%</left>
               <width>4.71%</width>
               <row>4</row>
+              <printRow>4</printRow>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -581,6 +623,7 @@
               <left>94.21%</left>
               <width>3.83%</width>
               <row>5</row>
+              <printRow>5</printRow>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -593,6 +636,7 @@
               <left>94.21%</left>
               <width>3.83%</width>
               <row>6</row>
+              <printRow>6</printRow>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -605,31 +649,39 @@
               <left>94.21%</left>
               <width>3.83%</width>
               <row>7</row>
+              <printRow>7</printRow>
             </bar>
           </bars>
         </lane>
         <lane>
           <kind>education</kind>
           <label>教育</label>
-          <rows>7</rows>
+          <rows>14</rows>
+          <printRows>7</printRows>
           <groups>
             <group>
               <left>41.25%</left>
               <width>4.37%</width>
               <row>0</row>
-              <rows>2</rows>
+              <rows>10</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>52.9%</left>
               <width>23.54%</width>
               <row>0</row>
-              <rows>5</rows>
+              <rows>13</rows>
+              <printRow>0</printRow>
+              <printRows>5</printRows>
             </group>
             <group>
               <left>76.43%</left>
               <width>22.64%</width>
               <row>0</row>
-              <rows>7</rows>
+              <rows>13</rows>
+              <printRow>0</printRow>
+              <printRows>7</printRows>
             </group>
           </groups>
           <bars>
@@ -645,6 +697,7 @@
               <left>0.47%</left>
               <width>16.02%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</target>
@@ -652,13 +705,14 @@
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
               <title>C.E.S.S.</title>
-              <caption>Centre Scolaire Saint-Adrien - Val Duchesse</caption>
+              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S.</caption>
               <period>9月 2012 – 6月 2015</period>
               <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — 9月 2012 – 6月 2015</label>
               <schedule>day</schedule>
               <left>17.94%</left>
               <width>16.02%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>education-uclouvain-universite-catholique-de-louvain-预科课程</target>
@@ -666,13 +720,14 @@
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
               <title>预科课程</title>
-              <caption>UCLouvain - Université catholique de Louvain</caption>
+              <caption>UCLouvain - Université catholique de Louvain · 预科课程</caption>
               <period>9月 2014 – 6月 2015</period>
               <label>UCLouvain - Université catholique de Louvain — 预科课程 — 9月 2014 – 6月 2015</label>
               <schedule>day</schedule>
               <left>29.6%</left>
               <width>4.37%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -680,13 +735,14 @@
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
               <title>政治学学士</title>
-              <caption>Université Saint-Louis - Bruxelles</caption>
+              <caption>Université Saint-Louis - Bruxelles · 政治学学士</caption>
               <period>9月 2016 – 6月 2017</period>
               <label>Université Saint-Louis - Bruxelles — 政治学学士 — 9月 2016 – 6月 2017</label>
               <schedule>day</schedule>
               <left>41.25%</left>
               <width>4.37%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -700,6 +756,103 @@
               <left>41.25%</left>
               <width>4.37%</width>
               <row>1</row>
+              <printRow>1</printRow>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Économie I</name>
+              <caption>Économie I</caption>
+              <period>9月 2016 – 6月 2017</period>
+              <label>Économie I — 9月 2016 – 6月 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Économie II</name>
+              <caption>Économie II</caption>
+              <period>9月 2016 – 6月 2017</period>
+              <label>Économie II — 9月 2016 – 6月 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Science politique</name>
+              <caption>Science politique</caption>
+              <period>9月 2016 – 6月 2017</period>
+              <label>Science politique — 9月 2016 – 6月 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Séminaire : penser le social</name>
+              <caption>Séminaire : penser le social</caption>
+              <period>9月 2016 – 6月 2017</period>
+              <label>Séminaire : penser le social — 9月 2016 – 6月 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Séminaire : principes et méthodes en sciences sociales</name>
+              <caption>Séminaire : principes et méthodes en sciences sociales</caption>
+              <period>9月 2016 – 6月 2017</period>
+              <label>Séminaire : principes et méthodes en sciences sociales — 9月 2016 – 6月 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Socio-économie des médias</name>
+              <caption>Socio-économie des médias</caption>
+              <period>9月 2016 – 6月 2017</period>
+              <label>Socio-économie des médias — 9月 2016 – 6月 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Anglais I (Saint-Louis)</name>
+              <caption>Anglais I (Saint-Louis)</caption>
+              <period>9月 2016 – 6月 2017</period>
+              <label>Anglais I (Saint-Louis) — 9月 2016 – 6月 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>8</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Néerlandais I</name>
+              <caption>Néerlandais I</caption>
+              <period>9月 2016 – 6月 2017</period>
+              <label>Néerlandais I — 9月 2016 – 6月 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>9</row>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -707,13 +860,14 @@
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
               <title>职业学士</title>
-              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</caption>
+              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · 职业学士</caption>
               <period>9月 2018 – 10月 2022</period>
               <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — 职业学士 — 9月 2018 – 10月 2022 — 夜间课程</label>
               <schedule>evening</schedule>
               <left>52.9%</left>
               <width>23.54%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -727,6 +881,7 @@
               <left>52.9%</left>
               <width>5.55%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -740,6 +895,7 @@
               <left>58.46%</left>
               <width>5.81%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -753,6 +909,7 @@
               <left>64.29%</left>
               <width>5.81%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -766,6 +923,271 @@
               <left>70.11%</left>
               <width>6.32%</width>
               <row>1</row>
+              <printRow>1</printRow>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Structure des ordinateurs</name>
+              <caption>Structure des ordinateurs</caption>
+              <period>9月 2018 – 9月 2019</period>
+              <label>Structure des ordinateurs — 9月 2018 – 9月 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Informatique - Système d'exploitation</name>
+              <caption>Informatique - Système d'exploitation</caption>
+              <period>9月 2018 – 9月 2019</period>
+              <label>Informatique - Système d'exploitation — 9月 2018 – 9月 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Mathématique appliquée à l'informatique</name>
+              <caption>Mathématique appliquée à l'informatique</caption>
+              <period>9月 2018 – 9月 2019</period>
+              <label>Mathématique appliquée à l'informatique — 9月 2018 – 9月 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Principes algorithmiques et programmation</name>
+              <caption>Principes algorithmiques et programmation</caption>
+              <period>9月 2018 – 9月 2019</period>
+              <label>Principes algorithmiques et programmation — 9月 2018 – 9月 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Principes d'analyse informatique</name>
+              <caption>Principes d'analyse informatique</caption>
+              <period>9月 2018 – 9月 2019</period>
+              <label>Principes d'analyse informatique — 9月 2018 – 9月 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Bases des réseaux</name>
+              <caption>Bases des réseaux</caption>
+              <period>9月 2019 – 9月 2020</period>
+              <label>Bases des réseaux — 9月 2019 – 9月 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Gestion et exploitation de bases de données</name>
+              <caption>Gestion et exploitation de bases de données</caption>
+              <period>9月 2019 – 9月 2020</period>
+              <label>Gestion et exploitation de bases de données — 9月 2019 – 9月 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Information et communication professionnelles</name>
+              <caption>Information et communication professionnelles</caption>
+              <period>9月 2019 – 9月 2020</period>
+              <label>Information et communication professionnelles — 9月 2019 – 9月 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Initiation aux bases de données</name>
+              <caption>Initiation aux bases de données</caption>
+              <period>9月 2019 – 9月 2020</period>
+              <label>Initiation aux bases de données — 9月 2019 – 9月 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Notions de e-business</name>
+              <caption>Notions de e-business</caption>
+              <period>9月 2019 – 9月 2020</period>
+              <label>Notions de e-business — 9月 2019 – 9月 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Projet d'analyse et de conception</name>
+              <caption>Projet d'analyse et de conception</caption>
+              <period>9月 2019 – 9月 2020</period>
+              <label>Projet d'analyse et de conception — 9月 2019 – 9月 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Techniques de gestion de projet</name>
+              <caption>Techniques de gestion de projet</caption>
+              <period>9月 2019 – 9月 2020</period>
+              <label>Techniques de gestion de projet — 9月 2019 – 9月 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>8</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Web : principes de base</name>
+              <caption>Web : principes de base</caption>
+              <period>9月 2019 – 9月 2020</period>
+              <label>Web : principes de base — 9月 2019 – 9月 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>9</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Éléments de statistique</name>
+              <caption>Éléments de statistique</caption>
+              <period>9月 2020 – 9月 2021</period>
+              <label>Éléments de statistique — 9月 2020 – 9月 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Organisation des entreprises et éléments de management</name>
+              <caption>Organisation des entreprises et éléments de management</caption>
+              <period>9月 2020 – 9月 2021</period>
+              <label>Organisation des entreprises et éléments de management — 9月 2020 – 9月 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Produits logiciels de gestion intégrés</name>
+              <caption>Produits logiciels de gestion intégrés</caption>
+              <period>9月 2020 – 9月 2021</period>
+              <label>Produits logiciels de gestion intégrés — 9月 2020 – 9月 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Programmation orientée objet</name>
+              <caption>Programmation orientée objet</caption>
+              <period>9月 2020 – 9月 2021</period>
+              <label>Programmation orientée objet — 9月 2020 – 9月 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Projet de développement SGBD</name>
+              <caption>Projet de développement SGBD</caption>
+              <period>9月 2020 – 9月 2021</period>
+              <label>Projet de développement SGBD — 9月 2020 – 9月 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Projet de développement web</name>
+              <caption>Projet de développement web</caption>
+              <period>9月 2020 – 9月 2021</period>
+              <label>Projet de développement web — 9月 2020 – 9月 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Administration, gestion et sécurisation des réseaux</name>
+              <caption>Administration, gestion et sécurisation des réseaux</caption>
+              <period>9月 2021 – 10月 2022</period>
+              <label>Administration, gestion et sécurisation des réseaux — 9月 2021 – 10月 2022</label>
+              <left>70.11%</left>
+              <width>6.32%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Projet d'intégration de développement</name>
+              <caption>Projet d'intégration de développement</caption>
+              <period>9月 2021 – 10月 2022</period>
+              <label>Projet d'intégration de développement — 9月 2021 – 10月 2022</label>
+              <left>70.11%</left>
+              <width>6.32%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Veille technologique</name>
+              <caption>Veille technologique</caption>
+              <period>9月 2021 – 10月 2022</period>
+              <label>Veille technologique — 9月 2021 – 10月 2022</label>
+              <left>70.11%</left>
+              <width>6.32%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -778,7 +1200,8 @@
               <label>学生代表 — EPHEC École Supérieure de Promotion Sociale — 9月 2019 – 10月 2022</label>
               <left>58.72%</left>
               <width>17.71%</width>
-              <row>2</row>
+              <row>10</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -791,7 +1214,8 @@
               <label>辅导员 — EPHEC École Supérieure de Promotion Sociale — 9月 2019 – 10月 2022</label>
               <left>58.72%</left>
               <width>17.71%</width>
-              <row>3</row>
+              <row>11</row>
+              <printRow>3</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -803,7 +1227,8 @@
               <label>WebMenu — 11月 2021 – 3月 2022</label>
               <left>70.87%</left>
               <width>2.41%</width>
-              <row>4</row>
+              <row>12</row>
+              <printRow>4</printRow>
             </bar>
             <bar>
               <target>education-institut-saint-louis-bruxelles-证书</target>
@@ -811,13 +1236,14 @@
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
               <title>证书</title>
-              <caption>Institut Saint-Louis Bruxelles</caption>
+              <caption>Institut Saint-Louis Bruxelles · 证书</caption>
               <period>9月 2019 – 6月 2020</period>
               <label>Institut Saint-Louis Bruxelles — 证书 — 9月 2019 – 6月 2020</label>
               <schedule>day</schedule>
               <left>58.72%</left>
               <width>4.37%</width>
-              <row>5</row>
+              <row>13</row>
+              <printRow>5</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -825,13 +1251,14 @@
               <depth>0</depth>
               <name>UMons</name>
               <title>理学硕士</title>
-              <caption>UMons</caption>
+              <caption>UMons · 理学硕士</caption>
               <period>10月 2022 – 9月 2026</period>
               <label>UMons — 理学硕士 — 10月 2022 – 9月 2026 — 夜间课程</label>
               <schedule>evening</schedule>
               <left>76.43%</left>
               <width>22.64%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -846,6 +1273,7 @@
               <left>76.43%</left>
               <width>5.31%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -860,6 +1288,7 @@
               <left>81.76%</left>
               <width>5.81%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -874,6 +1303,7 @@
               <left>87.59%</left>
               <width>5.81%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -888,6 +1318,223 @@
               <left>93.41%</left>
               <width>5.66%</width>
               <row>1</row>
+              <printRow>1</printRow>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Bases de données I</name>
+              <caption>Bases de données I</caption>
+              <period>10月 2022 – 9月 2023</period>
+              <label>Bases de données I — 10月 2022 – 9月 2023</label>
+              <left>76.43%</left>
+              <width>5.31%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Algorithmique</name>
+              <caption>Algorithmique</caption>
+              <period>10月 2022 – 9月 2023</period>
+              <label>Algorithmique — 10月 2022 – 9月 2023</label>
+              <left>76.43%</left>
+              <width>5.31%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Modélisation logicielle</name>
+              <caption>Modélisation logicielle</caption>
+              <period>10月 2022 – 9月 2023</period>
+              <label>Modélisation logicielle — 10月 2022 – 9月 2023</label>
+              <left>76.43%</left>
+              <width>5.31%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Mathématique</name>
+              <caption>Mathématique</caption>
+              <period>10月 2022 – 9月 2023</period>
+              <label>Mathématique — 10月 2022 – 9月 2023</label>
+              <left>76.43%</left>
+              <width>5.31%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Anglais I</name>
+              <caption>Anglais I</caption>
+              <period>9月 2023 – 9月 2024</period>
+              <label>Anglais I — 9月 2023 – 9月 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Lecture et rédaction scientifique</name>
+              <caption>Lecture et rédaction scientifique</caption>
+              <period>9月 2023 – 9月 2024</period>
+              <label>Lecture et rédaction scientifique — 9月 2023 – 9月 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Stratégie et politiques en ressources humaines</name>
+              <caption>Stratégie et politiques en ressources humaines</caption>
+              <period>9月 2023 – 9月 2024</period>
+              <label>Stratégie et politiques en ressources humaines — 9月 2023 – 9月 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Réseaux</name>
+              <caption>Réseaux</caption>
+              <period>9月 2023 – 9月 2024</period>
+              <label>Réseaux — 9月 2023 – 9月 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Systèmes d'exploitation</name>
+              <caption>Systèmes d'exploitation</caption>
+              <period>9月 2023 – 9月 2024</period>
+              <label>Systèmes d'exploitation — 9月 2023 – 9月 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Anglais II</name>
+              <caption>Anglais II</caption>
+              <period>9月 2024 – 9月 2025</period>
+              <label>Anglais II — 9月 2024 – 9月 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Bases de données II</name>
+              <caption>Bases de données II</caption>
+              <period>9月 2024 – 9月 2025</period>
+              <label>Bases de données II — 9月 2024 – 9月 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Ingénierie de logiciels et gestion de projets</name>
+              <caption>Ingénierie de logiciels et gestion de projets</caption>
+              <period>9月 2024 – 9月 2025</period>
+              <label>Ingénierie de logiciels et gestion de projets — 9月 2024 – 9月 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Intelligence artificielle</name>
+              <caption>Intelligence artificielle</caption>
+              <period>9月 2024 – 9月 2025</period>
+              <label>Intelligence artificielle — 9月 2024 – 9月 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Recherche opérationnelle et applications</name>
+              <caption>Recherche opérationnelle et applications</caption>
+              <period>9月 2024 – 9月 2025</period>
+              <label>Recherche opérationnelle et applications — 9月 2024 – 9月 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Structures de données</name>
+              <caption>Structures de données</caption>
+              <period>9月 2024 – 9月 2025</period>
+              <label>Structures de données — 9月 2024 – 9月 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Séminaires d'informatique en veille technologique</name>
+              <caption>Séminaires d'informatique en veille technologique</caption>
+              <period>9月 2025 – 9月 2026</period>
+              <label>Séminaires d'informatique en veille technologique — 9月 2025 – 9月 2026</label>
+              <left>93.41%</left>
+              <width>5.66%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Cryptographie et sécurité des systèmes informatiques</name>
+              <caption>Cryptographie et sécurité des systèmes informatiques</caption>
+              <period>9月 2025 – 9月 2026</period>
+              <label>Cryptographie et sécurité des systèmes informatiques — 9月 2025 – 9月 2026</label>
+              <left>93.41%</left>
+              <width>5.66%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Éthique et droit de l'informatique</name>
+              <caption>Éthique et droit de l'informatique</caption>
+              <period>9月 2025 – 9月 2026</period>
+              <label>Éthique et droit de l'informatique — 9月 2025 – 9月 2026</label>
+              <left>93.41%</left>
+              <width>5.66%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -900,7 +1547,8 @@
               <label>学生代表 — UMons — 11月 2023 – 9月 2026</label>
               <left>82.99%</left>
               <width>16.08%</width>
-              <row>2</row>
+              <row>8</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -913,7 +1561,8 @@
               <label>Buddy TandeMons — UMons — 11月 2023 – 9月 2026</label>
               <left>82.99%</left>
               <width>16.08%</width>
-              <row>3</row>
+              <row>9</row>
+              <printRow>3</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -925,7 +1574,8 @@
               <label>Remi — 10月 2024 – 6月 2025</label>
               <left>87.86%</left>
               <width>4.35%</width>
-              <row>4</row>
+              <row>10</row>
+              <printRow>4</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -937,7 +1587,8 @@
               <label>Emvi App — 12月 2024 – 6月 2025</label>
               <left>88.83%</left>
               <width>3.38%</width>
-              <row>5</row>
+              <row>11</row>
+              <printRow>5</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -949,7 +1600,8 @@
               <label>Synergy — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>4</row>
+              <row>10</row>
+              <printRow>4</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -961,7 +1613,8 @@
               <label>fedrag-be — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>11</row>
+              <printRow>5</printRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -974,7 +1627,8 @@
               <label>Mémoire de master — UMONS — 11月 2025 – 9月 2026</label>
               <left>94.37%</left>
               <width>4.71%</width>
-              <row>6</row>
+              <row>12</row>
+              <printRow>6</printRow>
             </bar>
           </bars>
         </lane>
@@ -982,12 +1636,15 @@
           <kind>competitions</kind>
           <label>竞赛</label>
           <rows>2</rows>
+          <printRows>2</printRows>
           <groups>
             <group>
               <left>84.47%</left>
               <width>0.49%</width>
               <row>0</row>
               <rows>2</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
             </group>
           </groups>
           <bars>
@@ -1002,6 +1659,7 @@
               <left>78.64%</left>
               <width>0.49%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -1014,6 +1672,7 @@
               <left>84.47%</left>
               <width>0.49%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <kind>project</kind>
@@ -1025,6 +1684,7 @@
               <left>84.9%</left>
               <width>0.03%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
           </bars>
         </lane>

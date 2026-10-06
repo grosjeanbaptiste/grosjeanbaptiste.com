@@ -1326,6 +1326,37 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   color: var(--muted-color);
 }
 
+/* A degree's course units: one thin bar each under the academic year it was
+ * taken in, lighter than what the degree carried otherwise. */
+.tl-bar[data-depth="1"][data-kind="unit"] {
+  border-left-width: 0.1rem;
+  background: color-mix(in srgb, var(--hue) 14%, var(--tl-surface, var(--card-background)));
+  font-size: 0.7rem;
+}
+
+/* On paper there is no room for the course units, which the degree lists
+ * anyway: they are left out and the rows close up, each bar taking the row
+ * the generator worked out for the sheet. !important: the screen's rows are
+ * written inline. */
+@media print {
+  .tl-bar[data-kind="unit"] {
+    display: none;
+  }
+
+  .tl-track {
+    --rows: var(--print-rows) !important;
+  }
+
+  .tl-bar,
+  .tl-group {
+    --row: var(--print-row) !important;
+  }
+
+  .tl-group {
+    --group-rows: var(--print-group-rows) !important;
+  }
+}
+
 /* widgets.css */
 /* Floating CV actions (download the LaTeX PDF / the timeline PDF / print this
  * page) + daily-life

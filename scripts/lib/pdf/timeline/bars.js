@@ -62,8 +62,13 @@ function timelineBars(resume, today, years = null) {
     groups: lane.groups.map(({ head, children, blocks }) => ({
       head: worded(head, false),
       children: children.map((c) => worded(c, true)),
-      // A degree's academic years: the year, then the programme's name for it.
-      bands: blocks.map((b) => worded(b, false)),
+      // A degree's academic years: the year, then the programme's name for
+      // it — and the course units taken in it, each by its full name: it is
+      // cut to its bar on paper, not here.
+      bands: blocks.map((b) => ({
+        ...worded(b, false),
+        units: b.units.map((u) => ({ ...worded(u, true), strong: u.name })),
+      })),
     })),
   }));
   const spanStart = years === null ? null : now - years * 12 + 1;

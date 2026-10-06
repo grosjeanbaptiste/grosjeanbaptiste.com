@@ -101,7 +101,7 @@ describe('the blocks of a degree', () => {
     })),
   };
   const lane = timelineOf(entriesOf(studied), today).lanes.find((l) => l.kind === 'education');
-  const bands = lane?.bars.filter((b) => b.block) ?? [];
+  const bands = lane?.bars.filter((b) => b.block && !b.unit) ?? [];
   const degree = lane?.bars.find((b) => b.depth === 0);
 
   it('are drawn one segment each', () => {

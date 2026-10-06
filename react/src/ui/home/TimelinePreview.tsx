@@ -16,7 +16,9 @@ interface Props {
 
 export function TimelinePreview({ bar, months, above }: Props) {
   const { lang, strings } = useReading();
-  const { entry } = bar;
+  // A course unit's bar tells the unit, in the year it was taken.
+  const entry = bar.unit ?? bar.entry;
+  const period = bar.unit && bar.block ? bar.block.period : bar.entry.period;
   // Anchored on the bar's middle, kept inside the track at both ends.
   const middle = ((bar.offset + bar.length / 2) / months) * 100;
   const style = {
@@ -34,10 +36,8 @@ export function TimelinePreview({ bar, months, above }: Props) {
       style={style}
     >
       <strong>{entry.title}</strong>
-      {entry.organisation && <span>{entry.organisation}</span>}
-      <span className="timeline-preview-period">
-        {formatPeriod(entry.period, lang, strings.ongoing)}
-      </span>
+      {bar.entry.organisation && <span>{bar.entry.organisation}</span>}
+      <span className="timeline-preview-period">{formatPeriod(period, lang, strings.ongoing)}</span>
       {entry.skills.length > 0 && (
         <span className="timeline-preview-skills">
           {entry.skills.slice(0, MAX_SKILLS).join(' · ')}

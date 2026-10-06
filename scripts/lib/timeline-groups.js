@@ -110,11 +110,36 @@ function blockBar(block, now) {
     title: block.label || '',
   };
 }
+// The course units taken in a block: each as wide as the block, read by its
+// official designation, leading to its own line on the page. A block that names a unit
+// the CV does not have is refused rather than drawn short of it.
+function unitsOf(block, bar, resume) {
+  return (block.units || []).map((name, slot) => {
+    const project = (resume.projects || []).find((p) => p.name === name);
+    if (!project) throw new Error(`Block ${block.year} names an unknown course unit "${name}"`);
+    return {
+      kind: 'unit',
+      ongoing: false,
+      anchor: anchorOf('project', project),
+      record: block,
+      start: bar.start,
+      end: bar.end,
+      name,
+      title: '',
+      caption: name,
+      slot,
+    };
+  });
+}
+
 // A block is followed as its degree is.
-const blocksOf = (record, now) =>
+const blocksOf = (record, now, resume) =>
   (record.blocks || [])
     .filter((b) => b.startDate)
-    .map((b) => ({ ...blockBar(b, now), schedule: record.schedule || 'day' }));
+    .map((b) => {
+      const bar = blockBar(b, now);
+      return { ...bar, schedule: record.schedule || 'day', units: unitsOf(b, bar, resume) };
+    });
 
 // One host with what it carried, unpacked: each display packs rows its own way.
 // `blocks`: the academic years of a degree, to be drawn on one row of their own.
@@ -142,7 +167,7 @@ function groupOf(host, resume, now) {
   return {
     head,
     children: carried.map((bar) => during(head, bar)),
-    blocks: blocksOf(host.record, now),
+    blocks: blocksOf(host.record, now, resume),
   };
 }
 

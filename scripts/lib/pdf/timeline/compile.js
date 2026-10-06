@@ -16,10 +16,13 @@ function compileTimeline(resume, lang, outPath, today = new Date(), years = null
   // the 2- and 5-year PDFs add their span.
   const title = years === null ? t.timeline : `${t.timeline} (${t.timelineSpan(years)})`;
   const xmp = buildXmpData(resume, { ...t, curriculumVitae: title }, lang);
-  const { tex, labels } = document(resume, lang, today, years);
+  const { tex, labels, units } = document(resume, lang, today, years);
   // Degraded, not failed: the page is whole, its labels are shorter. Said aloud.
   if (labels === 'names') {
     warn(`  ${lang}: ${title} — too crowded for "name · role": drawn with names only.`);
+  }
+  if (units === 'dropped') {
+    warn(`  ${lang}: ${title} — a year is too narrow to read: drawn without the course units.`);
   }
   const { ok, pages } = compile(tex, xmp, outPath, lang);
   if (!ok) return { ok: false };

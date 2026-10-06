@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=956c5d20"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=8b7bb3ad"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -222,60 +222,79 @@
           <kind>work</kind>
           <label>Work Experience</label>
           <rows>8</rows>
+          <printRows>8</printRows>
           <groups>
             <group>
               <left>70.87%</left>
               <width>2.41%</width>
               <row>0</row>
               <rows>2</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>77.18%</left>
               <width>3.38%</width>
               <row>0</row>
               <rows>2</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>81.55%</left>
               <width>1.93%</width>
               <row>1</row>
               <rows>2</rows>
+              <printRow>1</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>83.5%</left>
               <width>3.49%</width>
               <row>1</row>
               <rows>2</rows>
+              <printRow>1</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>84.47%</left>
               <width>3.25%</width>
               <row>3</row>
               <rows>2</rows>
+              <printRow>3</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>87.86%</left>
               <width>4.35%</width>
               <row>0</row>
               <rows>2</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>88.83%</left>
               <width>3.38%</width>
               <row>2</row>
               <rows>2</rows>
+              <printRow>2</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
               <rows>5</rows>
+              <printRow>0</printRow>
+              <printRows>5</printRows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
               <row>5</row>
               <rows>3</rows>
+              <printRow>5</printRow>
+              <printRows>3</printRows>
             </group>
           </groups>
           <bars>
@@ -291,6 +310,7 @@
               <left>46.6%</left>
               <width>0.47%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-restomax-full-stack-developer-web-intern</target>
@@ -304,6 +324,7 @@
               <left>70.87%</left>
               <width>2.41%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-restomax-full-stack-developer-web-intern</target>
@@ -316,6 +337,7 @@
               <left>70.87%</left>
               <width>2.41%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-les-auberges-de-jeunesse-wallonie-bruxelles-student-job</target>
@@ -329,6 +351,7 @@
               <left>73.27%</left>
               <width>0.02%</width>
               <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-developer-web-intern</target>
@@ -342,6 +365,7 @@
               <left>73.3%</left>
               <width>0.47%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-technofutur-tic-full-stack-developer-web-intern</target>
@@ -355,6 +379,7 @@
               <left>77.18%</left>
               <width>3.38%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-technofutur-tic-full-stack-developer-web-intern</target>
@@ -368,6 +393,7 @@
               <left>77.67%</left>
               <width>2.9%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-xtrada-software-crafter</target>
@@ -381,6 +407,7 @@
               <left>81.38%</left>
               <width>6.34%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-software-crafter</target>
@@ -394,6 +421,7 @@
               <left>81.55%</left>
               <width>1.93%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-software-crafter</target>
@@ -406,6 +434,7 @@
               <left>81.55%</left>
               <width>1.93%</width>
               <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>work-xtrada-net-react-software-crafter</target>
@@ -419,6 +448,7 @@
               <left>83.5%</left>
               <width>3.49%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-xtrada-net-react-software-crafter</target>
@@ -431,6 +461,7 @@
               <left>83.5%</left>
               <width>0.94%</width>
               <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>work-xtrada-data-scientist</target>
@@ -444,6 +475,7 @@
               <left>84.47%</left>
               <width>3.25%</width>
               <row>3</row>
+              <printRow>3</printRow>
             </bar>
             <bar>
               <target>work-xtrada-data-scientist</target>
@@ -456,6 +488,7 @@
               <left>84.47%</left>
               <width>2.52%</width>
               <row>4</row>
+              <printRow>4</printRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter</target>
@@ -469,6 +502,7 @@
               <left>87.86%</left>
               <width>4.35%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter</target>
@@ -481,6 +515,7 @@
               <left>87.86%</left>
               <width>4.35%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter-lead</target>
@@ -494,6 +529,7 @@
               <left>88.83%</left>
               <width>3.38%</width>
               <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter-lead</target>
@@ -506,6 +542,7 @@
               <left>88.83%</left>
               <width>3.38%</width>
               <row>3</row>
+              <printRow>3</printRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -519,6 +556,7 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -531,6 +569,7 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -543,6 +582,7 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -555,6 +595,7 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>3</row>
+              <printRow>3</printRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -568,6 +609,7 @@
               <left>94.37%</left>
               <width>4.71%</width>
               <row>4</row>
+              <printRow>4</printRow>
             </bar>
             <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
@@ -581,6 +623,7 @@
               <left>94.21%</left>
               <width>3.83%</width>
               <row>5</row>
+              <printRow>5</printRow>
             </bar>
             <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
@@ -593,6 +636,7 @@
               <left>94.21%</left>
               <width>3.83%</width>
               <row>6</row>
+              <printRow>6</printRow>
             </bar>
             <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
@@ -605,31 +649,39 @@
               <left>94.21%</left>
               <width>3.83%</width>
               <row>7</row>
+              <printRow>7</printRow>
             </bar>
           </bars>
         </lane>
         <lane>
           <kind>education</kind>
           <label>Education</label>
-          <rows>7</rows>
+          <rows>14</rows>
+          <printRows>7</printRows>
           <groups>
             <group>
               <left>41.25%</left>
               <width>4.37%</width>
               <row>0</row>
-              <rows>2</rows>
+              <rows>10</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
             </group>
             <group>
               <left>52.9%</left>
               <width>23.54%</width>
               <row>0</row>
-              <rows>5</rows>
+              <rows>13</rows>
+              <printRow>0</printRow>
+              <printRows>5</printRows>
             </group>
             <group>
               <left>76.43%</left>
               <width>22.64%</width>
               <row>0</row>
-              <rows>7</rows>
+              <rows>13</rows>
+              <printRow>0</printRow>
+              <printRows>7</printRows>
             </group>
           </groups>
           <bars>
@@ -645,6 +697,7 @@
               <left>0.47%</left>
               <width>16.02%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</target>
@@ -652,13 +705,14 @@
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
               <title>C.E.S.S.</title>
-              <caption>Centre Scolaire Saint-Adrien - Val Duchesse</caption>
+              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S.</caption>
               <period>Sep 2012 – Jun 2015</period>
               <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — Sep 2012 – Jun 2015</label>
               <schedule>day</schedule>
               <left>17.94%</left>
               <width>16.02%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>education-uclouvain-universite-catholique-de-louvain-cours-preparatoires</target>
@@ -666,13 +720,14 @@
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
               <title>Cours préparatoires</title>
-              <caption>UCLouvain - Université catholique de Louvain</caption>
+              <caption>UCLouvain - Université catholique de Louvain · Cours préparatoires</caption>
               <period>Sep 2014 – Jun 2015</period>
               <label>UCLouvain - Université catholique de Louvain — Cours préparatoires — Sep 2014 – Jun 2015</label>
               <schedule>day</schedule>
               <left>29.6%</left>
               <width>4.37%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
@@ -680,13 +735,14 @@
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
               <title>Bachelor in Political Sciences</title>
-              <caption>Université Saint-Louis - Bruxelles</caption>
+              <caption>Université Saint-Louis - Bruxelles · Bachelor in Political Sciences</caption>
               <period>Sep 2016 – Jun 2017</period>
               <label>Université Saint-Louis - Bruxelles — Bachelor in Political Sciences — Sep 2016 – Jun 2017</label>
               <schedule>day</schedule>
               <left>41.25%</left>
               <width>4.37%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
@@ -700,6 +756,103 @@
               <left>41.25%</left>
               <width>4.37%</width>
               <row>1</row>
+              <printRow>1</printRow>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Économie I</name>
+              <caption>Économie I</caption>
+              <period>Sep 2016 – Jun 2017</period>
+              <label>Économie I — Sep 2016 – Jun 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Économie II</name>
+              <caption>Économie II</caption>
+              <period>Sep 2016 – Jun 2017</period>
+              <label>Économie II — Sep 2016 – Jun 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Science politique</name>
+              <caption>Science politique</caption>
+              <period>Sep 2016 – Jun 2017</period>
+              <label>Science politique — Sep 2016 – Jun 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Séminaire : penser le social</name>
+              <caption>Séminaire : penser le social</caption>
+              <period>Sep 2016 – Jun 2017</period>
+              <label>Séminaire : penser le social — Sep 2016 – Jun 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Séminaire : principes et méthodes en sciences sociales</name>
+              <caption>Séminaire : principes et méthodes en sciences sociales</caption>
+              <period>Sep 2016 – Jun 2017</period>
+              <label>Séminaire : principes et méthodes en sciences sociales — Sep 2016 – Jun 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Socio-économie des médias</name>
+              <caption>Socio-économie des médias</caption>
+              <period>Sep 2016 – Jun 2017</period>
+              <label>Socio-économie des médias — Sep 2016 – Jun 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Anglais I (Saint-Louis)</name>
+              <caption>Anglais I (Saint-Louis)</caption>
+              <period>Sep 2016 – Jun 2017</period>
+              <label>Anglais I (Saint-Louis) — Sep 2016 – Jun 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>8</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Néerlandais I</name>
+              <caption>Néerlandais I</caption>
+              <period>Sep 2016 – Jun 2017</period>
+              <label>Néerlandais I — Sep 2016 – Jun 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>9</row>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -707,13 +860,14 @@
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
               <title>Professional Bachelor's degree</title>
-              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</caption>
+              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Professional Bachelor's degree</caption>
               <period>Sep 2018 – Oct 2022</period>
               <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Professional Bachelor's degree — Sep 2018 – Oct 2022 — evening schedule</label>
               <schedule>evening</schedule>
               <left>52.9%</left>
               <width>23.54%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -727,6 +881,7 @@
               <left>52.9%</left>
               <width>5.55%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -740,6 +895,7 @@
               <left>58.46%</left>
               <width>5.81%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -753,6 +909,7 @@
               <left>64.29%</left>
               <width>5.81%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -766,6 +923,271 @@
               <left>70.11%</left>
               <width>6.32%</width>
               <row>1</row>
+              <printRow>1</printRow>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Structure des ordinateurs</name>
+              <caption>Structure des ordinateurs</caption>
+              <period>Sep 2018 – Sep 2019</period>
+              <label>Structure des ordinateurs — Sep 2018 – Sep 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Informatique - Système d'exploitation</name>
+              <caption>Informatique - Système d'exploitation</caption>
+              <period>Sep 2018 – Sep 2019</period>
+              <label>Informatique - Système d'exploitation — Sep 2018 – Sep 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Mathématique appliquée à l'informatique</name>
+              <caption>Mathématique appliquée à l'informatique</caption>
+              <period>Sep 2018 – Sep 2019</period>
+              <label>Mathématique appliquée à l'informatique — Sep 2018 – Sep 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Principes algorithmiques et programmation</name>
+              <caption>Principes algorithmiques et programmation</caption>
+              <period>Sep 2018 – Sep 2019</period>
+              <label>Principes algorithmiques et programmation — Sep 2018 – Sep 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Principes d'analyse informatique</name>
+              <caption>Principes d'analyse informatique</caption>
+              <period>Sep 2018 – Sep 2019</period>
+              <label>Principes d'analyse informatique — Sep 2018 – Sep 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Bases des réseaux</name>
+              <caption>Bases des réseaux</caption>
+              <period>Sep 2019 – Sep 2020</period>
+              <label>Bases des réseaux — Sep 2019 – Sep 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Gestion et exploitation de bases de données</name>
+              <caption>Gestion et exploitation de bases de données</caption>
+              <period>Sep 2019 – Sep 2020</period>
+              <label>Gestion et exploitation de bases de données — Sep 2019 – Sep 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Information et communication professionnelles</name>
+              <caption>Information et communication professionnelles</caption>
+              <period>Sep 2019 – Sep 2020</period>
+              <label>Information et communication professionnelles — Sep 2019 – Sep 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Initiation aux bases de données</name>
+              <caption>Initiation aux bases de données</caption>
+              <period>Sep 2019 – Sep 2020</period>
+              <label>Initiation aux bases de données — Sep 2019 – Sep 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Notions de e-business</name>
+              <caption>Notions de e-business</caption>
+              <period>Sep 2019 – Sep 2020</period>
+              <label>Notions de e-business — Sep 2019 – Sep 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Projet d'analyse et de conception</name>
+              <caption>Projet d'analyse et de conception</caption>
+              <period>Sep 2019 – Sep 2020</period>
+              <label>Projet d'analyse et de conception — Sep 2019 – Sep 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Techniques de gestion de projet</name>
+              <caption>Techniques de gestion de projet</caption>
+              <period>Sep 2019 – Sep 2020</period>
+              <label>Techniques de gestion de projet — Sep 2019 – Sep 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>8</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Web : principes de base</name>
+              <caption>Web : principes de base</caption>
+              <period>Sep 2019 – Sep 2020</period>
+              <label>Web : principes de base — Sep 2019 – Sep 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>9</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Éléments de statistique</name>
+              <caption>Éléments de statistique</caption>
+              <period>Sep 2020 – Sep 2021</period>
+              <label>Éléments de statistique — Sep 2020 – Sep 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Organisation des entreprises et éléments de management</name>
+              <caption>Organisation des entreprises et éléments de management</caption>
+              <period>Sep 2020 – Sep 2021</period>
+              <label>Organisation des entreprises et éléments de management — Sep 2020 – Sep 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Produits logiciels de gestion intégrés</name>
+              <caption>Produits logiciels de gestion intégrés</caption>
+              <period>Sep 2020 – Sep 2021</period>
+              <label>Produits logiciels de gestion intégrés — Sep 2020 – Sep 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Programmation orientée objet</name>
+              <caption>Programmation orientée objet</caption>
+              <period>Sep 2020 – Sep 2021</period>
+              <label>Programmation orientée objet — Sep 2020 – Sep 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Projet de développement SGBD</name>
+              <caption>Projet de développement SGBD</caption>
+              <period>Sep 2020 – Sep 2021</period>
+              <label>Projet de développement SGBD — Sep 2020 – Sep 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Projet de développement web</name>
+              <caption>Projet de développement web</caption>
+              <period>Sep 2020 – Sep 2021</period>
+              <label>Projet de développement web — Sep 2020 – Sep 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Administration, gestion et sécurisation des réseaux</name>
+              <caption>Administration, gestion et sécurisation des réseaux</caption>
+              <period>Sep 2021 – Oct 2022</period>
+              <label>Administration, gestion et sécurisation des réseaux — Sep 2021 – Oct 2022</label>
+              <left>70.11%</left>
+              <width>6.32%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Projet d'intégration de développement</name>
+              <caption>Projet d'intégration de développement</caption>
+              <period>Sep 2021 – Oct 2022</period>
+              <label>Projet d'intégration de développement — Sep 2021 – Oct 2022</label>
+              <left>70.11%</left>
+              <width>6.32%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Veille technologique</name>
+              <caption>Veille technologique</caption>
+              <period>Sep 2021 – Oct 2022</period>
+              <label>Veille technologique — Sep 2021 – Oct 2022</label>
+              <left>70.11%</left>
+              <width>6.32%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -778,7 +1200,8 @@
               <label>Student Representative — EPHEC École Supérieure de Promotion Sociale — Sep 2019 – Oct 2022</label>
               <left>58.72%</left>
               <width>17.71%</width>
-              <row>2</row>
+              <row>10</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -791,7 +1214,8 @@
               <label>Tutor — EPHEC École Supérieure de Promotion Sociale — Sep 2019 – Oct 2022</label>
               <left>58.72%</left>
               <width>17.71%</width>
-              <row>3</row>
+              <row>11</row>
+              <printRow>3</printRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -803,7 +1227,8 @@
               <label>WebMenu — Nov 2021 – Mar 2022</label>
               <left>70.87%</left>
               <width>2.41%</width>
-              <row>4</row>
+              <row>12</row>
+              <printRow>4</printRow>
             </bar>
             <bar>
               <target>education-institut-saint-louis-bruxelles-attestation</target>
@@ -811,13 +1236,14 @@
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
               <title>Attestation</title>
-              <caption>Institut Saint-Louis Bruxelles</caption>
+              <caption>Institut Saint-Louis Bruxelles · Attestation</caption>
               <period>Sep 2019 – Jun 2020</period>
               <label>Institut Saint-Louis Bruxelles — Attestation — Sep 2019 – Jun 2020</label>
               <schedule>day</schedule>
               <left>58.72%</left>
               <width>4.37%</width>
-              <row>5</row>
+              <row>13</row>
+              <printRow>5</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -825,13 +1251,14 @@
               <depth>0</depth>
               <name>UMons</name>
               <title>Master of Science - MS</title>
-              <caption>UMons</caption>
+              <caption>UMons · Master of Science - MS</caption>
               <period>Oct 2022 – Sep 2026</period>
               <label>UMons — Master of Science - MS — Oct 2022 – Sep 2026 — evening schedule</label>
               <schedule>evening</schedule>
               <left>76.43%</left>
               <width>22.64%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -846,6 +1273,7 @@
               <left>76.43%</left>
               <width>5.31%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -860,6 +1288,7 @@
               <left>81.76%</left>
               <width>5.81%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -874,6 +1303,7 @@
               <left>87.59%</left>
               <width>5.81%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -888,6 +1318,223 @@
               <left>93.41%</left>
               <width>5.66%</width>
               <row>1</row>
+              <printRow>1</printRow>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Bases de données I</name>
+              <caption>Bases de données I</caption>
+              <period>Oct 2022 – Sep 2023</period>
+              <label>Bases de données I — Oct 2022 – Sep 2023</label>
+              <left>76.43%</left>
+              <width>5.31%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Algorithmique</name>
+              <caption>Algorithmique</caption>
+              <period>Oct 2022 – Sep 2023</period>
+              <label>Algorithmique — Oct 2022 – Sep 2023</label>
+              <left>76.43%</left>
+              <width>5.31%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Modélisation logicielle</name>
+              <caption>Modélisation logicielle</caption>
+              <period>Oct 2022 – Sep 2023</period>
+              <label>Modélisation logicielle — Oct 2022 – Sep 2023</label>
+              <left>76.43%</left>
+              <width>5.31%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Mathématique</name>
+              <caption>Mathématique</caption>
+              <period>Oct 2022 – Sep 2023</period>
+              <label>Mathématique — Oct 2022 – Sep 2023</label>
+              <left>76.43%</left>
+              <width>5.31%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Anglais I</name>
+              <caption>Anglais I</caption>
+              <period>Sep 2023 – Sep 2024</period>
+              <label>Anglais I — Sep 2023 – Sep 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Lecture et rédaction scientifique</name>
+              <caption>Lecture et rédaction scientifique</caption>
+              <period>Sep 2023 – Sep 2024</period>
+              <label>Lecture et rédaction scientifique — Sep 2023 – Sep 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Stratégie et politiques en ressources humaines</name>
+              <caption>Stratégie et politiques en ressources humaines</caption>
+              <period>Sep 2023 – Sep 2024</period>
+              <label>Stratégie et politiques en ressources humaines — Sep 2023 – Sep 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Réseaux</name>
+              <caption>Réseaux</caption>
+              <period>Sep 2023 – Sep 2024</period>
+              <label>Réseaux — Sep 2023 – Sep 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Systèmes d'exploitation</name>
+              <caption>Systèmes d'exploitation</caption>
+              <period>Sep 2023 – Sep 2024</period>
+              <label>Systèmes d'exploitation — Sep 2023 – Sep 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Anglais II</name>
+              <caption>Anglais II</caption>
+              <period>Sep 2024 – Sep 2025</period>
+              <label>Anglais II — Sep 2024 – Sep 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Bases de données II</name>
+              <caption>Bases de données II</caption>
+              <period>Sep 2024 – Sep 2025</period>
+              <label>Bases de données II — Sep 2024 – Sep 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Ingénierie de logiciels et gestion de projets</name>
+              <caption>Ingénierie de logiciels et gestion de projets</caption>
+              <period>Sep 2024 – Sep 2025</period>
+              <label>Ingénierie de logiciels et gestion de projets — Sep 2024 – Sep 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>4</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Intelligence artificielle</name>
+              <caption>Intelligence artificielle</caption>
+              <period>Sep 2024 – Sep 2025</period>
+              <label>Intelligence artificielle — Sep 2024 – Sep 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Recherche opérationnelle et applications</name>
+              <caption>Recherche opérationnelle et applications</caption>
+              <period>Sep 2024 – Sep 2025</period>
+              <label>Recherche opérationnelle et applications — Sep 2024 – Sep 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>6</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Structures de données</name>
+              <caption>Structures de données</caption>
+              <period>Sep 2024 – Sep 2025</period>
+              <label>Structures de données — Sep 2024 – Sep 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>7</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Séminaires d'informatique en veille technologique</name>
+              <caption>Séminaires d'informatique en veille technologique</caption>
+              <period>Sep 2025 – Sep 2026</period>
+              <label>Séminaires d'informatique en veille technologique — Sep 2025 – Sep 2026</label>
+              <left>93.41%</left>
+              <width>5.66%</width>
+              <row>2</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Cryptographie et sécurité des systèmes informatiques</name>
+              <caption>Cryptographie et sécurité des systèmes informatiques</caption>
+              <period>Sep 2025 – Sep 2026</period>
+              <label>Cryptographie et sécurité des systèmes informatiques — Sep 2025 – Sep 2026</label>
+              <left>93.41%</left>
+              <width>5.66%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>unit</kind>
+              <depth>1</depth>
+              <name>Éthique et droit de l'informatique</name>
+              <caption>Éthique et droit de l'informatique</caption>
+              <period>Sep 2025 – Sep 2026</period>
+              <label>Éthique et droit de l'informatique — Sep 2025 – Sep 2026</label>
+              <left>93.41%</left>
+              <width>5.66%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -900,7 +1547,8 @@
               <label>Student Representative — UMons — Nov 2023 – Sep 2026</label>
               <left>82.99%</left>
               <width>16.08%</width>
-              <row>2</row>
+              <row>8</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -913,7 +1561,8 @@
               <label>Buddy TandeMons — UMons — Nov 2023 – Sep 2026</label>
               <left>82.99%</left>
               <width>16.08%</width>
-              <row>3</row>
+              <row>9</row>
+              <printRow>3</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -925,7 +1574,8 @@
               <label>Remi — Oct 2024 – Jun 2025</label>
               <left>87.86%</left>
               <width>4.35%</width>
-              <row>4</row>
+              <row>10</row>
+              <printRow>4</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -937,7 +1587,8 @@
               <label>Emvi App — Dec 2024 – Jun 2025</label>
               <left>88.83%</left>
               <width>3.38%</width>
-              <row>5</row>
+              <row>11</row>
+              <printRow>5</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -949,7 +1600,8 @@
               <label>Synergy — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>4</row>
+              <row>10</row>
+              <printRow>4</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -961,7 +1613,8 @@
               <label>fedrag-be — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>11</row>
+              <printRow>5</printRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -974,7 +1627,8 @@
               <label>Mémoire de master — UMONS — Nov 2025 – Sep 2026</label>
               <left>94.37%</left>
               <width>4.71%</width>
-              <row>6</row>
+              <row>12</row>
+              <printRow>6</printRow>
             </bar>
           </bars>
         </lane>
@@ -982,12 +1636,15 @@
           <kind>competitions</kind>
           <label>Competitions</label>
           <rows>2</rows>
+          <printRows>2</printRows>
           <groups>
             <group>
               <left>84.47%</left>
               <width>0.49%</width>
               <row>0</row>
               <rows>2</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
             </group>
           </groups>
           <bars>
@@ -1002,6 +1659,7 @@
               <left>78.64%</left>
               <width>0.49%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -1014,6 +1672,7 @@
               <left>84.47%</left>
               <width>0.49%</width>
               <row>0</row>
+              <printRow>0</printRow>
             </bar>
             <bar>
               <kind>project</kind>
@@ -1025,6 +1684,7 @@
               <left>84.9%</left>
               <width>0.03%</width>
               <row>1</row>
+              <printRow>1</printRow>
             </bar>
           </bars>
         </lane>

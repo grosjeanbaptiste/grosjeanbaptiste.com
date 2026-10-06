@@ -19,10 +19,14 @@ const FILL = {
   competition: 'PrimaryColor!55!ThirdColor',
   project: 'SecondaryColor!75!ThirdColor',
   volunteer: 'BodyColor',
-  // A degree's academic years, in the colour of the degrees.
+  // A degree's academic years and its course units, in the colour of the degrees.
   block: 'PrimaryColor',
+  unit: 'PrimaryColor',
 };
-const fillOf = (bar) => (bar.depth === 1 ? `${FILL[bar.kind]}!30!BackgroundColor` : FILL[bar.kind]);
+// A course unit is lighter still: there are many, under a block that names the year.
+const TINT = { unit: 14 };
+const fillOf = (bar) =>
+  bar.depth === 1 ? `${FILL[bar.kind]}!${TINT[bar.kind] ?? 30}!BackgroundColor` : FILL[bar.kind];
 // The outline of an entry that carried something, in its lane's colour.
 const OUTLINE = {
   work: 'ThirdColor',
@@ -53,7 +57,9 @@ function barLines(lane, sheet) {
     // White on a full colour; dark on the light tint of what an entry carried.
     const ink = inside && bar.depth === 0 ? 'white' : 'EmphasisColor';
     const anchor = bar.label.place === 'left' ? 'east' : 'west';
-    const text = `${isEvening(bar) ? MOON : ''}\\textbf{${tex(bar.strong)}}${tex(restOf(bar))}`;
+    // A name in bold, then the rest; a course unit in regular weight.
+    const name = bar.kind === 'unit' ? tex(bar.strong) : `\\textbf{${tex(bar.strong)}}`;
+    const text = `${isEvening(bar) ? MOON : ''}${name}${tex(restOf(bar))}`;
     // A bar the span cut short points left, into the gap before the axis.
     const cut = bar.clipped
       ? [

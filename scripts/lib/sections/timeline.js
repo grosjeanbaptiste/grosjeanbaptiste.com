@@ -6,7 +6,7 @@
 // and the hover preview; css/timeline.css lays it out.
 const I18N = require('../i18n');
 const { escapeHtml } = require('../format');
-const { timelineOf } = require('../timeline-model');
+const { withPrintRows } = require('../timeline-print');
 const { pct, periodOf, labelOf, legendOf, LANE_LABEL, zoomsOf } = require('../timeline-view');
 
 // What the moon means: shown only when a degree carries one.
@@ -21,7 +21,9 @@ function renderBar(bar, timeline, lang, onPage, t) {
   const { record } = bar;
   const period = periodOf(record, lang);
   const label = labelOf(bar, period, t);
-  const style = `left:${pct(bar.start - timeline.from, timeline.months)};width:${pct(bar.end + 1 - bar.start, timeline.months)};--row:${bar.row}`;
+  // --print-row: the row once the course units are left out, on paper.
+  const printed = bar.printRow === undefined ? '' : `;--print-row:${bar.printRow}`;
+  const style = `left:${pct(bar.start - timeline.from, timeline.months)};width:${pct(bar.end + 1 - bar.start, timeline.months)};--row:${bar.row}${printed}`;
   const data = `data-name="${escapeHtml(bar.name)}" data-title="${escapeHtml(bar.title)}" data-period="${escapeHtml(period)}"`;
   // data-depth 1: a project or a role, drawn under the entry that carried it.
   // data-schedule: a degree followed on an evening schedule; the sheet sets a
@@ -37,7 +39,7 @@ function renderBar(bar, timeline, lang, onPage, t) {
 
 function generateTimeline(resume, lang, today, onPage) {
   const t = I18N[lang];
-  const timeline = timelineOf(resume, today);
+  const timeline = withPrintRows(resume, today);
   const zoom = zoomsOf(t).map(
     ({ years, label }) =>
       `<button type="button" data-years="${years}">${escapeHtml(label)}</button>`,
@@ -49,11 +51,11 @@ function generateTimeline(resume, lang, today, onPage) {
     [
       `<div class="tl-lane" data-kind="${lane.kind}">`,
       `  <span class="tl-lane-label">${escapeHtml(t[LANE_LABEL[lane.kind]])}</span>`,
-      `  <div class="tl-track" style="--rows:${lane.rows}">`,
+      `  <div class="tl-track" style="--rows:${lane.rows};--print-rows:${lane.printRows}">`,
       // Behind the bars: the outline of each entry that carried something.
       ...lane.groups.map(
         (g) =>
-          `    <span class="tl-group" aria-hidden="true" style="left:${pct(g.start - timeline.from, timeline.months)};width:${pct(g.end + 1 - g.start, timeline.months)};--row:${g.row};--group-rows:${g.rows}"></span>`,
+          `    <span class="tl-group" aria-hidden="true" style="left:${pct(g.start - timeline.from, timeline.months)};width:${pct(g.end + 1 - g.start, timeline.months)};--row:${g.row};--group-rows:${g.rows};--print-row:${g.printRow};--print-group-rows:${g.printRows}"></span>`,
       ),
       ...lane.bars.map((bar) => `    ${renderBar(bar, timeline, lang, onPage, t)}`),
       '  </div>',

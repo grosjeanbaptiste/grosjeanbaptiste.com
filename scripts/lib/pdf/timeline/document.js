@@ -24,7 +24,8 @@ function buildHeader(resume, t, lang, today, years) {
 }
 
 // `years`: null for the whole career, or the span of the 2- and 5-year PDFs.
-// Gives the source and which labels the sheet could carry ('full' or 'names').
+// Gives the source, which labels the sheet could carry ('full' or 'names') and
+// whether it had room for the course units ('drawn', 'dropped' or 'none').
 function buildTimelineDocument(resume, lang, today, years = null) {
   const t = I18N[lang];
   const sheet = layOut(timelineBars(resume, today, years), { density: DENSITY });
@@ -39,7 +40,7 @@ function buildTimelineDocument(resume, lang, today, years = null) {
     '\\end{document}',
     '',
   ].join('\n');
-  return { tex, labels: sheet.labels };
+  return { tex, labels: sheet.labels, units: sheet.units };
 }
 
 const generateTimelineLatex = (resume, lang, today, years = null) =>

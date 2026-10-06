@@ -983,7 +983,7 @@
                 <xsl:attribute name="data-kind"><xsl:value-of select="kind"/></xsl:attribute>
                 <span class="tl-lane-label"><xsl:value-of select="label"/></span>
                 <div class="tl-track">
-                  <xsl:attribute name="style">--rows:<xsl:value-of select="rows"/></xsl:attribute>
+                  <xsl:attribute name="style">--rows:<xsl:value-of select="rows"/>;--print-rows:<xsl:value-of select="printRows"/></xsl:attribute>
                   <xsl:for-each select="bars/bar">
                     <xsl:choose>
                       <!-- A bar leads to the entry that carries it on this page. -->
@@ -1021,7 +1021,9 @@
   <!-- What every bar carries, linked or not: its place, its name for assistive
        technology, and what the preview shows. -->
   <xsl:template name="timeline-bar">
-    <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/></xsl:attribute>
+    <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/><xsl:if test="printRow">;--print-row:<xsl:value-of select="printRow"/></xsl:if></xsl:attribute>
+    <xsl:attribute name="data-kind"><xsl:value-of select="kind"/></xsl:attribute>
+    <xsl:attribute name="data-depth"><xsl:value-of select="depth"/></xsl:attribute>
     <xsl:attribute name="aria-label"><xsl:value-of select="label"/></xsl:attribute>
     <xsl:if test="schedule = 'evening'"><xsl:attribute name="data-schedule">evening</xsl:attribute></xsl:if>
     <xsl:attribute name="data-name"><xsl:value-of select="name"/></xsl:attribute>
