@@ -55,7 +55,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             period 2025-07-01..present
             summary t{ en: "Sole founder, architect and developer. Rust backend + Flutter mobile. The R&D layer also served as the dissertation for my MSc in Computer Science at UMons.", fr: "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.", nl: "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.", es: "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirvió como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.", de: "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.", zh: "唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。" }
             uses [Rust, Flutter, Dart, Tokio, Docker, DDD, CleanArchitecture, PostgreSQL]
-            projects [ref ActebleApp, ref ActebleApi, ref MemoireMaster]
+            projects [ref ActebleApi, ref ActebleApp, ref ActebleWebsite, ref MemoireMaster]
         }
         AIResearchScientist {
             position t{ en: "AI Research Scientist", fr: "Chercheur en IA", nl: "AI-onderzoeker", es: "Investigador en IA", de: "KI-Forschungswissenschaftler", zh: "AI 研究员" }
@@ -422,36 +422,49 @@ TFE: WebMenu 2.0
             type "Research"
             roles [Author]
         }
-        // Acteble is the experience; these are its projects: the mobile app, the
-        // API behind it, and the MSc dissertation (below).
-        ActebleApp {
-            name "Acteble App"
-            description t{ en: "Mobile application connecting travelers during their journeys.", fr: "Application mobile connectant les voyageurs pendant leurs trajets.", nl: "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.", es: "Aplicación móvil que conecta a los viajeros durante sus trayectos.", de: "Mobile App, die Reisende während ihrer Reisen verbindet.", zh: "在旅途中连接旅行者的移动应用。" }
-            summary t{ en: "Mobile application that connects travelers during their journeys, built with Flutter.", fr: "Application mobile qui connecte les voyageurs pendant leurs trajets, développée en Flutter.", nl: "Mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt, gebouwd met Flutter.", es: "Aplicación móvil que conecta a los viajeros durante sus trayectos, desarrollada con Flutter.", de: "Mobile Anwendung, die Reisende während ihrer Reisen verbindet, entwickelt mit Flutter.", zh: "在旅途中连接旅行者的移动应用，使用 Flutter 开发。" }
-            url "https://www.acteble.com"
-            keywords [Flutter, Dart, Mobile, Travel, DDD, CleanArchitecture]
-            startDate 2025-07-01
-            type "Mobile Application"
-            roles [Founder]
-        }
+        // Acteble is the experience; these are its applications, as the
+        // repositories of the platform define them (the portal's map and its
+        // architecture document). Dates are those of each repository's first
+        // commit. Only what is technical is said here: the applications, their
+        // technologies, the architecture.
         ActebleApi {
             name "Acteble API"
-            description t{ en: "Rust API behind the Acteble mobile app.", fr: "API Rust derrière l'application mobile Acteble.", nl: "Rust-API achter de mobiele app van Acteble.", es: "API en Rust detrás de la aplicación móvil Acteble.", de: "Rust-API hinter der mobilen App von Acteble.", zh: "Acteble 移动应用背后的 Rust API。" }
-            summary t{ en: "Backend API of Acteble, written in Rust, serving the mobile app.", fr: "API backend d'Acteble, écrite en Rust, au service de l'application mobile.", nl: "Backend-API van Acteble, geschreven in Rust, ten dienste van de mobiele app.", es: "API backend de Acteble, escrita en Rust, al servicio de la aplicación móvil.", de: "Backend-API von Acteble, in Rust geschrieben, für die mobile App.", zh: "Acteble 的后端 API，使用 Rust 编写，为移动应用提供服务。" }
-            keywords [Rust, Tokio, PostgreSQL, Docker, DDD, CleanArchitecture]
-            startDate 2025-07-01
+            description t{ en: "Backend of the Acteble platform: a modular monolith in Rust.", fr: "Backend de la plateforme Acteble : un monolithe modulaire en Rust.", nl: "Backend van het Acteble-platform: een modulaire monoliet in Rust.", es: "Backend de la plataforma Acteble: un monolito modular en Rust.", de: "Backend der Acteble-Plattform: ein modularer Monolith in Rust.", zh: "Acteble 平台的后端：用 Rust 编写的模块化单体。" }
+            summary t{ en: "Backend of the platform: a modular monolith in Rust, split into bounded contexts with a hexagonal architecture, CQRS and an event-driven core (event store, outbox/inbox), served over REST/JSON and gRPC streaming.", fr: "Backend de la plateforme : monolithe modulaire en Rust, découpé en contextes métier à architecture hexagonale, CQRS et cœur piloté par événements (event store, outbox/inbox), exposé en REST/JSON et en gRPC streaming.", nl: "Backend van het platform: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming.", es: "Backend de la plataforma: monolito modular en Rust, dividido en contextos delimitados con arquitectura hexagonal, CQRS y un núcleo dirigido por eventos (event store, outbox/inbox), expuesto mediante REST/JSON y gRPC streaming.", de: "Backend der Plattform: modularer Monolith in Rust, gegliedert in Bounded Contexts mit hexagonaler Architektur, CQRS und einem ereignisgesteuerten Kern (Event Store, Outbox/Inbox), bereitgestellt über REST/JSON und gRPC-Streaming.", zh: "平台后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务。" }
+            keywords [Rust, Tokio, Axum, Tonic, gRPC, SQLx, PostgreSQL, PostGIS, Redis, MinIO, LiveKit, OpenTelemetry, Docker, Caddy, DDD, HexagonalArchitecture, CQRS, EventDriven]
+            startDate 2025-06-13
             type "API"
             roles [Founder]
         }
-        // The MSc dissertation: one of the projects of Acteble (its R&D layer), and
-        // what the master carried of it. It ended the day the degree was obtained.
-        // Its start is taken as Acteble's own; the CV gives no other date for it.
+        ActebleApp {
+            name "Acteble App"
+            description t{ en: "Offline-first multi-platform client of Acteble, built with Flutter.", fr: "Client multi-plateforme offline-first d'Acteble, développé en Flutter.", nl: "Offline-first multiplatformclient van Acteble, gebouwd met Flutter.", es: "Cliente multiplataforma offline-first de Acteble, desarrollado con Flutter.", de: "Offline-first-Multiplattform-Client von Acteble, entwickelt mit Flutter.", zh: "Acteble 的离线优先多平台客户端，使用 Flutter 开发。" }
+            summary t{ en: "Offline-first client for iOS, Android, web and desktop: a Melos monorepo of Flutter apps and shared packages, with Riverpod state over a local Drift/SQLite store, talking to the API over REST and gRPC.", fr: "Client offline-first pour iOS, Android, web et desktop : monorepo Melos d'apps Flutter et de packages partagés, état Riverpod au-dessus d'un stockage local Drift/SQLite, relié à l'API en REST et en gRPC.", nl: "Offline-first client voor iOS, Android, web en desktop: een Melos-monorepo met Flutter-apps en gedeelde packages, Riverpod-state boven een lokale Drift/SQLite-opslag, verbonden met de API via REST en gRPC.", es: "Cliente offline-first para iOS, Android, web y escritorio: monorepo Melos de apps Flutter y paquetes compartidos, estado Riverpod sobre un almacenamiento local Drift/SQLite, conectado a la API por REST y gRPC.", de: "Offline-first-Client für iOS, Android, Web und Desktop: ein Melos-Monorepo aus Flutter-Apps und gemeinsamen Paketen, Riverpod-State über einem lokalen Drift/SQLite-Speicher, per REST und gRPC mit der API verbunden.", zh: "面向 iOS、Android、Web 和桌面的离线优先客户端：由 Flutter 应用和共享包组成的 Melos 单仓库，基于本地 Drift/SQLite 存储的 Riverpod 状态管理，通过 REST 和 gRPC 与 API 通信。" }
+            url "https://www.acteble.com"
+            keywords [Flutter, Dart, Melos, Riverpod, Drift, SQLite, Dio, gRPC, FlutterMap, Firebase, OfflineFirst, Mobile]
+            startDate 2025-04-12
+            type "Mobile Application"
+            roles [Founder]
+        }
+        ActebleWebsite {
+            name "Acteble Website"
+            description t{ en: "Public website of Acteble: a React single-page application.", fr: "Site vitrine d'Acteble : une application React monopage.", nl: "Publieke website van Acteble: een React single-page-applicatie.", es: "Sitio público de Acteble: una aplicación React de una sola página.", de: "Öffentliche Website von Acteble: eine React-Single-Page-Anwendung.", zh: "Acteble 的公开网站：一个 React 单页应用。" }
+            summary t{ en: "Public website of Acteble: a lightweight React single-page application built with Vite, internationalised with i18next.", fr: "Site vitrine d'Acteble : application React monopage légère, construite avec Vite et internationalisée avec i18next.", nl: "Publieke website van Acteble: lichte React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.", es: "Sitio público de Acteble: aplicación React ligera de una sola página, construida con Vite e internacionalizada con i18next.", de: "Öffentliche Website von Acteble: schlanke React-Single-Page-Anwendung, mit Vite gebaut und mit i18next internationalisiert.", zh: "Acteble 的公开网站：使用 Vite 构建、通过 i18next 实现国际化的轻量级 React 单页应用。" }
+            url "https://www.acteble.com"
+            keywords [React, Vite, JavaScript, i18next, ReactRouter]
+            startDate 2025-06-05
+            type "Website"
+            roles [Founder]
+        }
+        // The MSc dissertation: the R&D of the platform's planning engine, and what
+        // the master carried of Acteble. Begun with its repository's first commit,
+        // ended the day the degree was obtained.
         MemoireMaster {
             name "Mémoire de master"
-            description t{ en: "MSc dissertation at UMONS — the R&D layer of Acteble.", fr: "Mémoire de master à l'UMONS — la couche R&D d'Acteble.", nl: "Masterproef aan de UMONS — de R&D-laag van Acteble.", es: "Trabajo de fin de máster en la UMONS — la capa de I+D de Acteble.", de: "Masterarbeit an der UMONS — die F&E-Schicht von Acteble.", zh: "UMONS 硕士论文——Acteble 的研发层。" }
-            summary t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique, as the R&D layer of Acteble.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS, comme couche R&D d'Acteble.", nl: "Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS, als R&D-laag van Acteble.", es: "Trabajo de fin de máster: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — realizado en el Service d'Algorithmique de la UMONS, como capa de I+D de Acteble.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS, als F&E-Schicht von Acteble.", zh: "硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成，作为 Acteble 的研发层。" }
-            keywords [MiniZinc, ConstraintProgramming, CombinatorialOptimization, Pareto]
-            startDate 2025-07-01
+            description t{ en: "MSc dissertation at UMONS — the R&D of Acteble's planning engine.", fr: "Mémoire de master à l'UMONS — la R&D du moteur de planification d'Acteble.", nl: "Masterproef aan de UMONS — de R&D van de planningsengine van Acteble.", es: "Trabajo de fin de máster en la UMONS — la I+D del motor de planificación de Acteble.", de: "Masterarbeit an der UMONS — die F&E der Planungs-Engine von Acteble.", zh: "UMONS 硕士论文——Acteble 规划引擎的研发。" }
+            summary t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. The R&D of Acteble's planning engine, written in Python.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. La R&D du moteur de planification d'Acteble, écrite en Python.", nl: "Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS. De R&D van de planningsengine van Acteble, geschreven in Python.", es: "Trabajo de fin de máster: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — realizado en el Service d'Algorithmique de la UMONS. La I+D del motor de planificación de Acteble, escrita en Python.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Die F&E der Planungs-Engine von Acteble, in Python geschrieben.", zh: "硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成。Acteble 规划引擎的研发，使用 Python 编写。" }
+            keywords [Python, LaTeX, MiniZinc, ConstraintProgramming, CombinatorialOptimization, Pareto]
+            startDate 2025-11-13
             endDate 2026-09-04
             type "Dissertation"
             roles [Author]

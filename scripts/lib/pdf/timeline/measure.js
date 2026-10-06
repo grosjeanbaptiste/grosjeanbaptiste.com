@@ -21,8 +21,12 @@ const widthOf = (text, bold) => [...text].reduce((sum, c) => sum + ems(c), 0) * 
 // The text of a label: the name in bold, then " · " and the rest.
 const restOf = (bar) => (bar.rest ? ` · ${bar.rest}` : '');
 
+// The crescent moon set before the name of an evening degree, and its space.
+const MOON_EM = 1.15;
+const moonOf = (bar) => (bar.schedule === 'evening' && bar.kind === 'education' ? MOON_EM : 0);
+
 function labelWidth(bar, sizePt = 6) {
-  const em = widthOf(bar.strong, true) + widthOf(restOf(bar), false);
+  const em = moonOf(bar) + widthOf(bar.strong, true) + widthOf(restOf(bar), false);
   return em * sizePt * MM_PER_PT * MARGIN;
 }
 

@@ -1,5 +1,6 @@
-// The legend of the timeline: what the hatching of a bar means. Shown only
-// when a degree of the career was followed on an evening schedule.
+// The legend of the timeline: what the crescent moon before a degree's name
+// means. Shown only when a degree of the career was followed on an evening
+// schedule.
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { entriesOf } from '../domain/entries';
@@ -15,18 +16,14 @@ const evening = {
 };
 const legend = (resume: typeof base) =>
   render(
-    <TimelineLegend
-      timeline={timelineOf(entriesOf(resume), today)}
-      day="de jour"
-      evening="horaire décalé"
-    />,
+    <TimelineLegend timeline={timelineOf(entriesOf(resume), today)} evening="horaire décalé" />,
   );
 
 describe('the legend of the timeline', () => {
-  it('names both schedules when a degree was followed in the evening', () => {
-    legend(evening);
-    expect(screen.getByText('de jour')).toBeVisible();
+  it('says what the moon means when a degree was followed in the evening', () => {
+    const { container } = legend(evening);
     expect(screen.getByText('horaire décalé')).toBeVisible();
+    expect(container.querySelector('.timeline-moon')).not.toBeNull();
   });
 
   it('is absent when every degree was followed by day', () => {

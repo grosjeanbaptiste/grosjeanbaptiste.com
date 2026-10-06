@@ -79,31 +79,34 @@ test('a block of a degree is drawn in a light tint of the degrees’ colour', ()
   assert.match(buildPicture(sheet([block]), I18N.en), /\\fill\[PrimaryColor!30!BackgroundColor/);
 });
 
-// A degree followed on an evening schedule ("horaire décalé") is hatched; a
-// legend under the lane's title says what the hatching means.
-const hatches = (tex) => tex.split('\n').filter((line) => line.includes('% hatch'));
+// A degree followed on an evening schedule ("horaire décalé") carries a crescent
+// moon before its name — the bar itself stays plain, so the name stays easy to
+// read — and a legend under the lane's title says what the moon means.
 const evening = (strong) => ({ ...bar(strong), kind: 'education', schedule: 'evening' });
 const day = (strong) => ({ ...bar(strong), kind: 'education', schedule: 'day' });
+const labelOf = (tex, name) => tex.split('\n').find((line) => line.includes(`\\textbf{${name}}`));
 
-test('an evening degree is hatched over its bar', () => {
-  assert.ok(hatches(buildPicture(sheet([evening('UMons')]), I18N.fr)).length > 0);
+test('an evening degree is named with a moon before its name', () => {
+  assert.match(labelOf(buildPicture(sheet([evening('UMons')]), I18N.fr), 'UMons'), /\\faMoon/);
 });
 
-test('a day degree is left plain', () => {
-  assert.deepEqual(hatches(buildPicture(sheet([day('Saint-Louis')]), I18N.fr)), []);
+test('a day degree is named plainly', () => {
+  const label = labelOf(buildPicture(sheet([day('Saint-Louis')]), I18N.fr), 'Saint-Louis');
+  assert.doesNotMatch(label, /\\faMoon/);
 });
 
-test('the hatching stays inside the bar', () => {
-  const tex = buildPicture(sheet([evening('UMons')]), I18N.fr);
-  assert.match(
-    tex,
-    /\\begin\{scope\}\\clip\[rounded corners=0\.5mm\] \(0\.00,[^)]*\) rectangle \(10\.00,/,
-  );
+test('an evening degree is not hatched: its bar is plain', () => {
+  assert.doesNotMatch(buildPicture(sheet([evening('UMons')]), I18N.fr), /clip|hatch/);
 });
 
-test('a lane with an evening degree says what the hatching means', () => {
-  assert.match(buildPicture(sheet([evening('UMons')]), I18N.fr), /horaire décalé/);
-  assert.match(buildPicture(sheet([evening('UMons')]), I18N.en), /evening schedule/);
+test('the blocks of an evening degree carry no moon', () => {
+  const block = { ...bar('22-23'), kind: 'block', depth: 1, row: 1, schedule: 'evening' };
+  assert.doesNotMatch(labelOf(buildPicture(sheet([block]), I18N.fr), '22-23'), /\\faMoon/);
+});
+
+test('a lane with an evening degree says what the moon means', () => {
+  assert.match(buildPicture(sheet([evening('UMons')]), I18N.fr), /\\faMoon[^\n]*horaire décalé/);
+  assert.match(buildPicture(sheet([evening('UMons')]), I18N.en), /\\faMoon[^\n]*evening schedule/);
 });
 
 test('a lane without one carries no legend', () => {

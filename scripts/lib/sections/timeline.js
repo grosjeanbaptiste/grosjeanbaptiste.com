@@ -9,11 +9,11 @@ const { escapeHtml } = require('../format');
 const { timelineOf } = require('../timeline-model');
 const { pct, periodOf, labelOf, legendOf, LANE_LABEL, zoomsOf } = require('../timeline-view');
 
-// What the hatching means: shown only when a degree is hatched.
+// What the moon means: shown only when a degree carries one.
 const legendHtml = (legend) =>
   legend
     ? [
-        `  <p class="tl-legend"><span class="tl-swatch"></span>${escapeHtml(legend.day)} <span class="tl-swatch" data-schedule="evening"></span>${escapeHtml(legend.evening)}</p>`,
+        `  <p class="tl-legend"><span class="tl-moon" aria-hidden="true"></span>${escapeHtml(legend.evening)}</p>`,
       ]
     : [];
 
@@ -24,7 +24,8 @@ function renderBar(bar, timeline, lang, onPage, t) {
   const style = `left:${pct(bar.start - timeline.from, timeline.months)};width:${pct(bar.end + 1 - bar.start, timeline.months)};--row:${bar.row}`;
   const data = `data-name="${escapeHtml(bar.name)}" data-title="${escapeHtml(bar.title)}" data-period="${escapeHtml(period)}"`;
   // data-depth 1: a project or a role, drawn under the entry that carried it.
-  // data-schedule: a degree followed on an evening schedule, hatched by the sheet.
+  // data-schedule: a degree followed on an evening schedule; the sheet sets a
+  // crescent moon before its name.
   const evening = bar.schedule === 'evening' ? ' data-schedule="evening"' : '';
   const nesting = `data-kind="${bar.kind}" data-depth="${bar.depth}"${evening}`;
   const common = `class="tl-bar" style="${style}" aria-label="${escapeHtml(label)}" ${nesting} ${data}`;

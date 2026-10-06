@@ -90,11 +90,7 @@ export function TimelineView({ highlight, selectedId }: Props) {
           ))}
         </div>
       </div>
-      <TimelineLegend
-        timeline={timeline}
-        day={strings.scheduleDay}
-        evening={strings.scheduleEvening}
-      />
+      <TimelineLegend timeline={timeline} evening={strings.scheduleEvening} />
     </section>
   );
 }

@@ -148,16 +148,20 @@
       "summary": "Offenes, reproduzierbares Protokoll, das Retrieval-Strategien auf dem zweisprachigen Senatskorpus benchmarkt und die FR/NL-Robustheit über die gesamte Retrieval-Pipeline misst."
     },
     {
-      "description": "Mobile App, die Reisende während ihrer Reisen verbindet.",
-      "summary": "Mobile Anwendung, die Reisende während ihrer Reisen verbindet, entwickelt mit Flutter."
+      "description": "Backend der Acteble-Plattform: ein modularer Monolith in Rust.",
+      "summary": "Backend der Plattform: modularer Monolith in Rust, gegliedert in Bounded Contexts mit hexagonaler Architektur, CQRS und einem ereignisgesteuerten Kern (Event Store, Outbox/Inbox), bereitgestellt über REST/JSON und gRPC-Streaming."
     },
     {
-      "description": "Rust-API hinter der mobilen App von Acteble.",
-      "summary": "Backend-API von Acteble, in Rust geschrieben, für die mobile App."
+      "description": "Offline-first-Multiplattform-Client von Acteble, entwickelt mit Flutter.",
+      "summary": "Offline-first-Client für iOS, Android, Web und Desktop: ein Melos-Monorepo aus Flutter-Apps und gemeinsamen Paketen, Riverpod-State über einem lokalen Drift/SQLite-Speicher, per REST und gRPC mit der API verbunden."
     },
     {
-      "description": "Masterarbeit an der UMONS — die F&E-Schicht von Acteble.",
-      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS, als F&E-Schicht von Acteble."
+      "description": "Öffentliche Website von Acteble: eine React-Single-Page-Anwendung.",
+      "summary": "Öffentliche Website von Acteble: schlanke React-Single-Page-Anwendung, mit Vite gebaut und mit i18next internationalisiert."
+    },
+    {
+      "description": "Masterarbeit an der UMONS — die F&E der Planungs-Engine von Acteble.",
+      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Die F&E der Planungs-Engine von Acteble, in Python geschrieben."
     },
     {
       "description": "KI-gestützter visueller Assistent für sehbehinderte Menschen.",

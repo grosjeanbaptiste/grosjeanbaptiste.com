@@ -21,8 +21,7 @@ module.exports = {
   downloadCV: 'CV downloaden',
   downloadTimeline: 'Tijdlijn downloaden',
   timelineTitle: 'Tijdlijn',
-  // A degree followed by day, or on an evening schedule ("horaire décalé").
-  scheduleDay: 'dagonderwijs',
+  // A degree followed on an evening schedule ("horaire décalé").
   scheduleEvening: 'avondonderwijs',
   competitions: 'Wedstrijden',
   lastYears: (n) => `${n} jaar`,

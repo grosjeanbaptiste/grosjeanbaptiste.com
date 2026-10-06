@@ -32,3 +32,26 @@ test('falls back to a hard cut for a single over-long word', () => {
   assert.ok(out.endsWith('…'));
   assert.ok(out.length <= 10);
 });
+
+// The budget is one of width, not of characters: a Chinese character is as
+// wide as two Latin letters. Counted one for one, a Chinese description cut
+// "at 80" ran to two lines where the same budget gives one in French.
+test('a Chinese character counts double in the budget', () => {
+  const out = truncate('一二三四五六七八九十', 10);
+  // Four characters (8) and the ellipsis: the fifth would make 10 with no room for it.
+  assert.equal(out, '一二三四…');
+});
+
+test('a Chinese text within its width budget is left whole', () => {
+  assert.equal(truncate('一二三四五', 10), '一二三四五');
+});
+
+test('a Chinese text is cut anywhere: it has no word boundary to wait for', () => {
+  const out = truncate('使用 Rust 编写的模块化单体后端服务', 20);
+  assert.ok(out.endsWith('…'));
+  assert.ok(out.length > '使用 Rust…'.length, `cut back to the last space: ${out}`);
+});
+
+test('Latin text is budgeted as before', () => {
+  assert.equal(truncate('alpha beta gamma delta', 14), 'alpha beta…');
+});

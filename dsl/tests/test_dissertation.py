@@ -22,8 +22,8 @@ def test_the_master_carried_the_dissertation_not_the_venture():
     assert not {"ActebleApp", "ActebleApi"} & set(targets(MASTER))
 
 
-def test_the_acteble_experience_holds_the_app_the_api_and_the_dissertation():
-    assert targets(FOUNDER) == ["ActebleApp", "ActebleApi", "MemoireMaster"]
+def test_the_acteble_experience_holds_its_applications_and_the_dissertation():
+    assert targets(FOUNDER) == ["ActebleApi", "ActebleApp", "ActebleWebsite", "MemoireMaster"]
 
 
 def test_the_api_is_rust_and_the_app_is_flutter():
@@ -38,3 +38,15 @@ def test_the_dissertation_ended_the_day_the_degree_was_obtained():
 
 def test_the_dissertation_is_a_project_of_its_own_kind_at_umons():
     assert (DISSERTATION.type, DISSERTATION.entity) == ("Dissertation", "UMONS")
+
+
+def test_the_dissertation_began_with_its_repository():
+    assert DISSERTATION.start_date.text == "2025-11-13"
+
+
+def test_each_application_names_its_own_technologies():
+    by_key = {p.key: p for p in RESUME.projects}
+    assert {"Axum", "Tonic", "PostGIS", "HexagonalArchitecture", "CQRS"} <= set(by_key["ActebleApi"].keywords)
+    assert {"Melos", "Riverpod", "Drift"} <= set(by_key["ActebleApp"].keywords)
+    assert {"React", "Vite"} <= set(by_key["ActebleWebsite"].keywords)
+

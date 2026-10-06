@@ -20,7 +20,7 @@ function timelineForXml(resume, lang, today) {
   return {
     title: t.timelineTitle,
     months: timeline.months,
-    // What the hatching means; absent when nothing is hatched.
+    // What the moon on a bar means; absent when no bar carries one.
     legend: legendOf(timeline, t),
     zooms: zoomsOf(t),
     ticks: timeline.years.map((y) => ({

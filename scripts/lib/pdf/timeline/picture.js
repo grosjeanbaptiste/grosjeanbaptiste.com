@@ -41,23 +41,10 @@ function yearLines(sheet) {
   ]);
 }
 
-// A degree followed on an evening schedule: thin diagonal lines in the page's
-// colour, clipped to the bar. Drawn line by line — plain strokes, which PDF/A
-// takes, where a tiling pattern or transparency might not.
-const HATCH = 1.6; // mm between two lines
-function hatchLines(x0, x1, y, height) {
-  const lines = [];
-  for (let x = x0 - height; x < x1; x += HATCH) {
-    lines.push(
-      `\\draw[BackgroundColor,line width=0.18pt] (${mm(x)},${mm(y - height)}) -- (${mm(x + height)},${mm(y)}); % hatch`,
-    );
-  }
-  return [
-    `\\begin{scope}\\clip[rounded corners=0.5mm] (${mm(x0)},${mm(y)}) rectangle (${mm(x1)},${mm(y - height)});`,
-    ...lines,
-    '\\end{scope}',
-  ];
-}
+// A degree followed on an evening schedule ("horaire décalé") is named with a
+// crescent moon before its name; its bar stays plain. Its blocks carry none.
+const isEvening = (bar) => bar.schedule === 'evening' && bar.kind === 'education';
+const MOON = '{\\faMoon}\\,';
 
 function barLines(lane, sheet) {
   return lane.bars.flatMap((bar) => {
@@ -66,7 +53,7 @@ function barLines(lane, sheet) {
     // White on a full colour; dark on the light tint of what an entry carried.
     const ink = inside && bar.depth === 0 ? 'white' : 'EmphasisColor';
     const anchor = bar.label.place === 'left' ? 'east' : 'west';
-    const text = `\\textbf{${tex(bar.strong)}}${tex(restOf(bar))}`;
+    const text = `${isEvening(bar) ? MOON : ''}\\textbf{${tex(bar.strong)}}${tex(restOf(bar))}`;
     // A bar the span cut short points left, into the gap before the axis.
     const cut = bar.clipped
       ? [
@@ -79,11 +66,9 @@ function barLines(lane, sheet) {
           `\\node[anchor=${anchor},text=${ink}] at (${mm(bar.label.x)},${mm(y - sheet.bar / 2)}) {${text}};`,
         ]
       : [];
-    const hatch = bar.schedule === 'evening' ? hatchLines(bar.x0, bar.x1, y, sheet.bar) : [];
     return [
       ...cut,
       `\\fill[${fillOf(bar)},rounded corners=0.5mm] (${mm(bar.x0)},${mm(y)}) rectangle (${mm(bar.x1)},${mm(y - sheet.bar)});`,
-      ...hatch,
       ...label,
     ];
   });
@@ -103,17 +88,13 @@ function outlineLines(lane, sheet) {
   });
 }
 
-// Under the title of a lane with an evening degree: a hatched swatch and what
-// it means.
+// Under the title of a lane with an evening degree: the moon and what it means.
 function legendLines(lane, sheet, t) {
-  if (!lane.bars.some((bar) => bar.schedule === 'evening')) return [];
+  if (!lane.bars.some(isEvening)) return [];
   const { x, size } = sheet.titles ?? TITLES;
-  const top = lane.top - size * 0.3528 * 1.9;
-  const swatch = { x0: x, x1: x + 4, height: 1.5 };
+  const y = lane.top - size * 0.3528 * 2.3;
   return [
-    `\\fill[${FILL.education},rounded corners=0.5mm] (${mm(swatch.x0)},${mm(top)}) rectangle (${mm(swatch.x1)},${mm(top - swatch.height)});`,
-    ...hatchLines(swatch.x0, swatch.x1, top, swatch.height),
-    `\\node[anchor=west,text=BodyColor,font=\\fontsize{5.5}{6.5}\\selectfont] at (${mm(swatch.x1 + 0.8)},${mm(top - swatch.height / 2)}) {${tex(t.eveningSchedule)}};`,
+    `\\node[anchor=west,text=BodyColor,font=\\fontsize{5.5}{6.5}\\selectfont] at (${mm(x)},${mm(y)}) {${MOON}${tex(t.eveningSchedule)}};`,
   ];
 }
 

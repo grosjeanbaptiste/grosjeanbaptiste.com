@@ -13,8 +13,9 @@
         "PostgreSQL"
       ],
       "projects": [
-        "Acteble App",
         "Acteble API",
+        "Acteble App",
+        "Acteble Website",
         "Mémoire de master"
       ]
     },
@@ -398,13 +399,16 @@
       "summary": "Open, reproducible protocol that benchmarks retrieval strategies on the bilingual Senate corpus, measuring FR/NL robustness across the retrieval pipeline."
     },
     {
-      "summary": "Mobile application that connects travelers during their journeys, built with Flutter."
+      "summary": "Backend of the platform: a modular monolith in Rust, split into bounded contexts with a hexagonal architecture, CQRS and an event-driven core (event store, outbox/inbox), served over REST/JSON and gRPC streaming."
     },
     {
-      "summary": "Backend API of Acteble, written in Rust, serving the mobile app."
+      "summary": "Offline-first client for iOS, Android, web and desktop: a Melos monorepo of Flutter apps and shared packages, with Riverpod state over a local Drift/SQLite store, talking to the API over REST and gRPC."
     },
     {
-      "summary": "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique, as the R&D layer of Acteble."
+      "summary": "Public website of Acteble: a lightweight React single-page application built with Vite, internationalised with i18next."
+    },
+    {
+      "summary": "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. The R&D of Acteble's planning engine, written in Python."
     },
     {
       "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired."
