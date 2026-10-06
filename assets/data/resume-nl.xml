@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=d7304207"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=956c5d20"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -131,7 +131,6 @@
       <title>Tijdlijn</title>
       <months>206</months>
       <legend>
-        <day>dagonderwijs</day>
         <evening>avondonderwijs</evening>
       </legend>
       <zooms>
@@ -222,7 +221,7 @@
         <lane>
           <kind>work</kind>
           <label>Werkervaring</label>
-          <rows>7</rows>
+          <rows>8</rows>
           <groups>
             <group>
               <left>70.87%</left>
@@ -270,12 +269,12 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
-              <rows>4</rows>
+              <rows>5</rows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>4</row>
+              <row>5</row>
               <rows>3</rows>
             </group>
           </groups>
@@ -525,10 +524,10 @@
               <target>work-acteble-oprichter</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble App</name>
-              <caption>Acteble App</caption>
-              <period>jul 2025 – Heden</period>
-              <label>Acteble App — jul 2025 – Heden</label>
+              <name>Acteble API</name>
+              <caption>Acteble API</caption>
+              <period>jun 2025 – Heden</period>
+              <label>Acteble API — jun 2025 – Heden</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>1</row>
@@ -537,10 +536,10 @@
               <target>work-acteble-oprichter</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble API</name>
-              <caption>Acteble API</caption>
-              <period>jul 2025 – Heden</period>
-              <label>Acteble API — jul 2025 – Heden</label>
+              <name>Acteble App</name>
+              <caption>Acteble App</caption>
+              <period>apr 2025 – Heden</period>
+              <label>Acteble App — apr 2025 – Heden</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>2</row>
@@ -549,14 +548,26 @@
               <target>work-acteble-oprichter</target>
               <kind>project</kind>
               <depth>1</depth>
+              <name>Acteble Website</name>
+              <caption>Acteble Website</caption>
+              <period>jun 2025 – Heden</period>
+              <label>Acteble Website — jun 2025 – Heden</label>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>work-acteble-oprichter</target>
+              <kind>project</kind>
+              <depth>1</depth>
               <name>Mémoire de master</name>
               <title>UMONS</title>
               <caption>Mémoire de master</caption>
-              <period>jul 2025 – sep 2026</period>
-              <label>Mémoire de master — UMONS — jul 2025 – sep 2026</label>
-              <left>92.23%</left>
-              <width>6.84%</width>
-              <row>3</row>
+              <period>nov 2025 – sep 2026</period>
+              <label>Mémoire de master — UMONS — nov 2025 – sep 2026</label>
+              <left>94.37%</left>
+              <width>4.71%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>work-belgische-senaat-ai-onderzoeker</target>
@@ -569,7 +580,7 @@
               <label>Belgische Senaat — AI-onderzoeker — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>4</row>
+              <row>5</row>
             </bar>
             <bar>
               <target>work-belgische-senaat-ai-onderzoeker</target>
@@ -581,7 +592,7 @@
               <label>Synergy — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>6</row>
             </bar>
             <bar>
               <target>work-belgische-senaat-ai-onderzoeker</target>
@@ -593,7 +604,7 @@
               <label>fedrag-be — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>6</row>
+              <row>7</row>
             </bar>
           </bars>
         </lane>
@@ -932,26 +943,13 @@
               <target>education-umons-master-of-science</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Mémoire de master</name>
-              <title>UMONS</title>
-              <caption>Mémoire de master</caption>
-              <period>jul 2025 – sep 2026</period>
-              <label>Mémoire de master — UMONS — jul 2025 – sep 2026</label>
-              <left>92.23%</left>
-              <width>6.84%</width>
-              <row>4</row>
-            </bar>
-            <bar>
-              <target>education-umons-master-of-science</target>
-              <kind>project</kind>
-              <depth>1</depth>
               <name>Synergy</name>
               <caption>Synergy</caption>
               <period>nov 2025 – jun 2026</period>
               <label>Synergy — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -963,6 +961,19 @@
               <label>fedrag-be — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Mémoire de master</name>
+              <title>UMONS</title>
+              <caption>Mémoire de master</caption>
+              <period>nov 2025 – sep 2026</period>
+              <label>Mémoire de master — UMONS — nov 2025 – sep 2026</label>
+              <left>94.37%</left>
+              <width>4.71%</width>
               <row>6</row>
             </bar>
           </bars>
@@ -1077,8 +1088,9 @@ Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-wor
         <skill>PostgreSQL</skill>
       </skills>
       <projects>
-        <project>Acteble App</project>
         <project>Acteble API</project>
+        <project>Acteble App</project>
+        <project>Acteble Website</project>
         <project>Mémoire de master</project>
       </projects>
       <anchor>work-acteble-oprichter</anchor>
@@ -1620,59 +1632,97 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <summary>Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet.</summary>
     </project>
     <project>
+      <name>Acteble API</name>
+      <description>Backend van het Acteble-platform: een modulaire monoliet in Rust.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Tokio</keyword>
+        <keyword>Axum</keyword>
+        <keyword>Tonic</keyword>
+        <keyword>gRPC</keyword>
+        <keyword>SQLx</keyword>
+        <keyword>PostgreSQL</keyword>
+        <keyword>PostGIS</keyword>
+        <keyword>Redis</keyword>
+        <keyword>MinIO</keyword>
+        <keyword>LiveKit</keyword>
+        <keyword>OpenTelemetry</keyword>
+        <keyword>Docker</keyword>
+        <keyword>Caddy</keyword>
+        <keyword>DDD</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>CQRS</keyword>
+        <keyword>EventDriven</keyword>
+      </keywords>
+      <startDate>2025-06-13</startDate>
+      <type>API</type>
+      <roles>
+        <role>Founder</role>
+      </roles>
+      <summary>Backend van het platform: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming.</summary>
+    </project>
+    <project>
       <name>Acteble App</name>
-      <description>Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.</description>
+      <description>Offline-first multiplatformclient van Acteble, gebouwd met Flutter.</description>
       <keywords>
         <keyword>Flutter</keyword>
         <keyword>Dart</keyword>
+        <keyword>Melos</keyword>
+        <keyword>Riverpod</keyword>
+        <keyword>Drift</keyword>
+        <keyword>SQLite</keyword>
+        <keyword>Dio</keyword>
+        <keyword>gRPC</keyword>
+        <keyword>FlutterMap</keyword>
+        <keyword>Firebase</keyword>
+        <keyword>OfflineFirst</keyword>
         <keyword>Mobile</keyword>
-        <keyword>Travel</keyword>
-        <keyword>DDD</keyword>
-        <keyword>CleanArchitecture</keyword>
       </keywords>
-      <startDate>2025-07-01</startDate>
+      <startDate>2025-04-12</startDate>
       <url>https://www.acteble.com</url>
       <type>Mobile Application</type>
       <roles>
         <role>Founder</role>
       </roles>
-      <summary>Mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt, gebouwd met Flutter.</summary>
+      <summary>Offline-first client voor iOS, Android, web en desktop: een Melos-monorepo met Flutter-apps en gedeelde packages, Riverpod-state boven een lokale Drift/SQLite-opslag, verbonden met de API via REST en gRPC.</summary>
     </project>
     <project>
-      <name>Acteble API</name>
-      <description>Rust-API achter de mobiele app van Acteble.</description>
+      <name>Acteble Website</name>
+      <description>Publieke website van Acteble: een React single-page-applicatie.</description>
       <keywords>
-        <keyword>Rust</keyword>
-        <keyword>Tokio</keyword>
-        <keyword>PostgreSQL</keyword>
-        <keyword>Docker</keyword>
-        <keyword>DDD</keyword>
-        <keyword>CleanArchitecture</keyword>
+        <keyword>React</keyword>
+        <keyword>Vite</keyword>
+        <keyword>JavaScript</keyword>
+        <keyword>i18next</keyword>
+        <keyword>ReactRouter</keyword>
       </keywords>
-      <startDate>2025-07-01</startDate>
-      <type>API</type>
+      <startDate>2025-06-05</startDate>
+      <url>https://www.acteble.com</url>
+      <type>Website</type>
       <roles>
         <role>Founder</role>
       </roles>
-      <summary>Backend-API van Acteble, geschreven in Rust, ten dienste van de mobiele app.</summary>
+      <summary>Publieke website van Acteble: lichte React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.</summary>
     </project>
     <project>
       <name>Mémoire de master</name>
-      <description>Masterproef aan de UMONS — de R&amp;D-laag van Acteble.</description>
+      <description>Masterproef aan de UMONS — de R&amp;D van de planningsengine van Acteble.</description>
       <keywords>
+        <keyword>Python</keyword>
+        <keyword>LaTeX</keyword>
         <keyword>MiniZinc</keyword>
         <keyword>ConstraintProgramming</keyword>
         <keyword>CombinatorialOptimization</keyword>
         <keyword>Pareto</keyword>
       </keywords>
-      <startDate>2025-07-01</startDate>
+      <startDate>2025-11-13</startDate>
       <endDate>2026-09-04</endDate>
       <type>Dissertation</type>
       <roles>
         <role>Author</role>
       </roles>
       <entity>UMONS</entity>
-      <summary>Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS, als R&amp;D-laag van Acteble.</summary>
+      <summary>Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS. De R&amp;D van de planningsengine van Acteble, geschreven in Python.</summary>
     </project>
     <project>
       <name>Emvi App</name>

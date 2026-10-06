@@ -148,16 +148,20 @@
       "summary": "Protocole ouvert et reproductible qui évalue les stratégies de retrieval sur le corpus bilingue du Sénat, en mesurant la robustesse FR/NL tout au long du pipeline de retrieval."
     },
     {
-      "description": "Application mobile connectant les voyageurs pendant leurs trajets.",
-      "summary": "Application mobile qui connecte les voyageurs pendant leurs trajets, développée en Flutter."
+      "description": "Backend de la plateforme Acteble : un monolithe modulaire en Rust.",
+      "summary": "Backend de la plateforme : monolithe modulaire en Rust, découpé en contextes métier à architecture hexagonale, CQRS et cœur piloté par événements (event store, outbox/inbox), exposé en REST/JSON et en gRPC streaming."
     },
     {
-      "description": "API Rust derrière l'application mobile Acteble.",
-      "summary": "API backend d'Acteble, écrite en Rust, au service de l'application mobile."
+      "description": "Client multi-plateforme offline-first d'Acteble, développé en Flutter.",
+      "summary": "Client offline-first pour iOS, Android, web et desktop : monorepo Melos d'apps Flutter et de packages partagés, état Riverpod au-dessus d'un stockage local Drift/SQLite, relié à l'API en REST et en gRPC."
     },
     {
-      "description": "Mémoire de master à l'UMONS — la couche R&D d'Acteble.",
-      "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS, comme couche R&D d'Acteble."
+      "description": "Site vitrine d'Acteble : une application React monopage.",
+      "summary": "Site vitrine d'Acteble : application React monopage légère, construite avec Vite et internationalisée avec i18next."
+    },
+    {
+      "description": "Mémoire de master à l'UMONS — la R&D du moteur de planification d'Acteble.",
+      "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. La R&D du moteur de planification d'Acteble, écrite en Python."
     },
     {
       "description": "Assistant visuel IA pour personnes malvoyantes.",

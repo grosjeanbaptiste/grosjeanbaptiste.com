@@ -152,3 +152,12 @@ test('a block too narrow for its year carries no label rather than one beside it
   const b = named(lane, '22-23');
   assert.deepEqual([b.label.place, b.strong], ['inside', '']);
 });
+
+// An evening degree is named with a crescent moon before its name: the name
+// needs that much more room to stay inside the bar.
+test('the moon of an evening degree counts in the room its name needs', () => {
+  const degree = (extra) => bar('abcdef', 0, 4, { kind: 'education', ...extra });
+  // 8 mm wide, 1 mm of padding each side: six characters fit exactly — alone.
+  assert.equal(named(laid([degree({ schedule: 'day' })]), 'abcdef').label.place, 'inside');
+  assert.equal(named(laid([degree({ schedule: 'evening' })]), 'abcdef').label.place, 'right');
+});

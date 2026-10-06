@@ -56,8 +56,13 @@ function blockLabelled(bar, inside, measure) {
   };
 }
 
-function labelled(bar, slots, measure) {
-  if (bar.kind === 'block') return blockLabelled(bar, slots[0], measure);
+// The room a crescent moon takes before the name of an evening degree.
+const moonRoom = (bar, measure) =>
+  bar.schedule === 'evening' && bar.kind === 'education' ? measure('M ') : 0;
+
+function labelled(bar, allSlots, measure) {
+  if (bar.kind === 'block') return blockLabelled(bar, allSlots[0], measure);
+  const slots = allSlots.map((slot) => ({ ...slot, room: slot.room - moonRoom(bar, measure) }));
   // What the bar reads: its name, with its title when a namesake shares the lane.
   const text = bar.caption ?? bar.name;
   const width = measure(text);

@@ -292,17 +292,52 @@
       ]
     },
     {
+      "name": "Acteble API",
+      "description": "Backend of the Acteble platform: a modular monolith in Rust.",
+      "keywords": [
+        "Rust",
+        "Tokio",
+        "Axum",
+        "Tonic",
+        "gRPC",
+        "SQLx",
+        "PostgreSQL",
+        "PostGIS",
+        "Redis",
+        "MinIO",
+        "LiveKit",
+        "OpenTelemetry",
+        "Docker",
+        "Caddy",
+        "DDD",
+        "HexagonalArchitecture",
+        "CQRS",
+        "EventDriven"
+      ],
+      "startDate": "2025-06-13",
+      "type": "API",
+      "roles": [
+        "Founder"
+      ]
+    },
+    {
       "name": "Acteble App",
-      "description": "Mobile application connecting travelers during their journeys.",
+      "description": "Offline-first multi-platform client of Acteble, built with Flutter.",
       "keywords": [
         "Flutter",
         "Dart",
-        "Mobile",
-        "Travel",
-        "DDD",
-        "CleanArchitecture"
+        "Melos",
+        "Riverpod",
+        "Drift",
+        "SQLite",
+        "Dio",
+        "gRPC",
+        "FlutterMap",
+        "Firebase",
+        "OfflineFirst",
+        "Mobile"
       ],
-      "startDate": "2025-07-01",
+      "startDate": "2025-04-12",
       "url": "https://www.acteble.com",
       "type": "Mobile Application",
       "roles": [
@@ -310,32 +345,34 @@
       ]
     },
     {
-      "name": "Acteble API",
-      "description": "Rust API behind the Acteble mobile app.",
+      "name": "Acteble Website",
+      "description": "Public website of Acteble: a React single-page application.",
       "keywords": [
-        "Rust",
-        "Tokio",
-        "PostgreSQL",
-        "Docker",
-        "DDD",
-        "CleanArchitecture"
+        "React",
+        "Vite",
+        "JavaScript",
+        "i18next",
+        "ReactRouter"
       ],
-      "startDate": "2025-07-01",
-      "type": "API",
+      "startDate": "2025-06-05",
+      "url": "https://www.acteble.com",
+      "type": "Website",
       "roles": [
         "Founder"
       ]
     },
     {
       "name": "Mémoire de master",
-      "description": "MSc dissertation at UMONS — the R&D layer of Acteble.",
+      "description": "MSc dissertation at UMONS — the R&D of Acteble's planning engine.",
       "keywords": [
+        "Python",
+        "LaTeX",
         "MiniZinc",
         "ConstraintProgramming",
         "CombinatorialOptimization",
         "Pareto"
       ],
-      "startDate": "2025-07-01",
+      "startDate": "2025-11-13",
       "endDate": "2026-09-04",
       "type": "Dissertation",
       "roles": [

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=a4992e71"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=fef8fda5"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -131,7 +131,6 @@
       <title>时间线</title>
       <months>206</months>
       <legend>
-        <day>日间</day>
         <evening>夜间课程</evening>
       </legend>
       <zooms>
@@ -222,7 +221,7 @@
         <lane>
           <kind>work</kind>
           <label>工作经验</label>
-          <rows>7</rows>
+          <rows>8</rows>
           <groups>
             <group>
               <left>70.87%</left>
@@ -270,12 +269,12 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
-              <rows>4</rows>
+              <rows>5</rows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>4</row>
+              <row>5</row>
               <rows>3</rows>
             </group>
           </groups>
@@ -525,10 +524,10 @@
               <target>work-acteble-创始人</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble App</name>
-              <caption>Acteble App</caption>
-              <period>7月 2025 – 至今</period>
-              <label>Acteble App — 7月 2025 – 至今</label>
+              <name>Acteble API</name>
+              <caption>Acteble API</caption>
+              <period>6月 2025 – 至今</period>
+              <label>Acteble API — 6月 2025 – 至今</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>1</row>
@@ -537,10 +536,10 @@
               <target>work-acteble-创始人</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble API</name>
-              <caption>Acteble API</caption>
-              <period>7月 2025 – 至今</period>
-              <label>Acteble API — 7月 2025 – 至今</label>
+              <name>Acteble App</name>
+              <caption>Acteble App</caption>
+              <period>4月 2025 – 至今</period>
+              <label>Acteble App — 4月 2025 – 至今</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>2</row>
@@ -549,14 +548,26 @@
               <target>work-acteble-创始人</target>
               <kind>project</kind>
               <depth>1</depth>
+              <name>Acteble Website</name>
+              <caption>Acteble Website</caption>
+              <period>6月 2025 – 至今</period>
+              <label>Acteble Website — 6月 2025 – 至今</label>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>work-acteble-创始人</target>
+              <kind>project</kind>
+              <depth>1</depth>
               <name>Mémoire de master</name>
               <title>UMONS</title>
               <caption>Mémoire de master</caption>
-              <period>7月 2025 – 9月 2026</period>
-              <label>Mémoire de master — UMONS — 7月 2025 – 9月 2026</label>
-              <left>92.23%</left>
-              <width>6.84%</width>
-              <row>3</row>
+              <period>11月 2025 – 9月 2026</period>
+              <label>Mémoire de master — UMONS — 11月 2025 – 9月 2026</label>
+              <left>94.37%</left>
+              <width>4.71%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -569,7 +580,7 @@
               <label>比利时参议院 — AI 研究员 — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>4</row>
+              <row>5</row>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -581,7 +592,7 @@
               <label>Synergy — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>6</row>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -593,7 +604,7 @@
               <label>fedrag-be — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>6</row>
+              <row>7</row>
             </bar>
           </bars>
         </lane>
@@ -932,26 +943,13 @@
               <target>education-umons-理学硕士</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Mémoire de master</name>
-              <title>UMONS</title>
-              <caption>Mémoire de master</caption>
-              <period>7月 2025 – 9月 2026</period>
-              <label>Mémoire de master — UMONS — 7月 2025 – 9月 2026</label>
-              <left>92.23%</left>
-              <width>6.84%</width>
-              <row>4</row>
-            </bar>
-            <bar>
-              <target>education-umons-理学硕士</target>
-              <kind>project</kind>
-              <depth>1</depth>
               <name>Synergy</name>
               <caption>Synergy</caption>
               <period>11月 2025 – 6月 2026</period>
               <label>Synergy — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -963,6 +961,19 @@
               <label>fedrag-be — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-理学硕士</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Mémoire de master</name>
+              <title>UMONS</title>
+              <caption>Mémoire de master</caption>
+              <period>11月 2025 – 9月 2026</period>
+              <label>Mémoire de master — UMONS — 11月 2025 – 9月 2026</label>
+              <left>94.37%</left>
+              <width>4.71%</width>
               <row>6</row>
             </bar>
           </bars>
@@ -1077,8 +1088,9 @@
         <skill>PostgreSQL</skill>
       </skills>
       <projects>
-        <project>Acteble App</project>
         <project>Acteble API</project>
+        <project>Acteble App</project>
+        <project>Acteble Website</project>
         <project>Mémoire de master</project>
       </projects>
       <anchor>work-acteble-创始人</anchor>
@@ -1620,59 +1632,97 @@ TFE: WebMenu 2.0
       <summary>开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。</summary>
     </project>
     <project>
+      <name>Acteble API</name>
+      <description>Acteble 平台的后端：用 Rust 编写的模块化单体。</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Tokio</keyword>
+        <keyword>Axum</keyword>
+        <keyword>Tonic</keyword>
+        <keyword>gRPC</keyword>
+        <keyword>SQLx</keyword>
+        <keyword>PostgreSQL</keyword>
+        <keyword>PostGIS</keyword>
+        <keyword>Redis</keyword>
+        <keyword>MinIO</keyword>
+        <keyword>LiveKit</keyword>
+        <keyword>OpenTelemetry</keyword>
+        <keyword>Docker</keyword>
+        <keyword>Caddy</keyword>
+        <keyword>DDD</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>CQRS</keyword>
+        <keyword>EventDriven</keyword>
+      </keywords>
+      <startDate>2025-06-13</startDate>
+      <type>API</type>
+      <roles>
+        <role>Founder</role>
+      </roles>
+      <summary>平台后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务。</summary>
+    </project>
+    <project>
       <name>Acteble App</name>
-      <description>在旅途中连接旅行者的移动应用。</description>
+      <description>Acteble 的离线优先多平台客户端，使用 Flutter 开发。</description>
       <keywords>
         <keyword>Flutter</keyword>
         <keyword>Dart</keyword>
+        <keyword>Melos</keyword>
+        <keyword>Riverpod</keyword>
+        <keyword>Drift</keyword>
+        <keyword>SQLite</keyword>
+        <keyword>Dio</keyword>
+        <keyword>gRPC</keyword>
+        <keyword>FlutterMap</keyword>
+        <keyword>Firebase</keyword>
+        <keyword>OfflineFirst</keyword>
         <keyword>Mobile</keyword>
-        <keyword>Travel</keyword>
-        <keyword>DDD</keyword>
-        <keyword>CleanArchitecture</keyword>
       </keywords>
-      <startDate>2025-07-01</startDate>
+      <startDate>2025-04-12</startDate>
       <url>https://www.acteble.com</url>
       <type>Mobile Application</type>
       <roles>
         <role>Founder</role>
       </roles>
-      <summary>在旅途中连接旅行者的移动应用，使用 Flutter 开发。</summary>
+      <summary>面向 iOS、Android、Web 和桌面的离线优先客户端：由 Flutter 应用和共享包组成的 Melos 单仓库，基于本地 Drift/SQLite 存储的 Riverpod 状态管理，通过 REST 和 gRPC 与 API 通信。</summary>
     </project>
     <project>
-      <name>Acteble API</name>
-      <description>Acteble 移动应用背后的 Rust API。</description>
+      <name>Acteble Website</name>
+      <description>Acteble 的公开网站：一个 React 单页应用。</description>
       <keywords>
-        <keyword>Rust</keyword>
-        <keyword>Tokio</keyword>
-        <keyword>PostgreSQL</keyword>
-        <keyword>Docker</keyword>
-        <keyword>DDD</keyword>
-        <keyword>CleanArchitecture</keyword>
+        <keyword>React</keyword>
+        <keyword>Vite</keyword>
+        <keyword>JavaScript</keyword>
+        <keyword>i18next</keyword>
+        <keyword>ReactRouter</keyword>
       </keywords>
-      <startDate>2025-07-01</startDate>
-      <type>API</type>
+      <startDate>2025-06-05</startDate>
+      <url>https://www.acteble.com</url>
+      <type>Website</type>
       <roles>
         <role>Founder</role>
       </roles>
-      <summary>Acteble 的后端 API，使用 Rust 编写，为移动应用提供服务。</summary>
+      <summary>Acteble 的公开网站：使用 Vite 构建、通过 i18next 实现国际化的轻量级 React 单页应用。</summary>
     </project>
     <project>
       <name>Mémoire de master</name>
-      <description>UMONS 硕士论文——Acteble 的研发层。</description>
+      <description>UMONS 硕士论文——Acteble 规划引擎的研发。</description>
       <keywords>
+        <keyword>Python</keyword>
+        <keyword>LaTeX</keyword>
         <keyword>MiniZinc</keyword>
         <keyword>ConstraintProgramming</keyword>
         <keyword>CombinatorialOptimization</keyword>
         <keyword>Pareto</keyword>
       </keywords>
-      <startDate>2025-07-01</startDate>
+      <startDate>2025-11-13</startDate>
       <endDate>2026-09-04</endDate>
       <type>Dissertation</type>
       <roles>
         <role>Author</role>
       </roles>
       <entity>UMONS</entity>
-      <summary>硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成，作为 Acteble 的研发层。</summary>
+      <summary>硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成。Acteble 规划引擎的研发，使用 Python 编写。</summary>
     </project>
     <project>
       <name>Emvi App</name>

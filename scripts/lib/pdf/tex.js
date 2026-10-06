@@ -80,17 +80,37 @@ function tagText(value) {
   return tex(value).replace(/([a-z])([A-Z])/g, '$1\\allowbreak{}$2');
 }
 
+// A budget of width, in Latin letters: a CJK character is as wide as two.
+const WIDE = /[\u2E80-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF\uFF00-\uFFEF]/;
+const widthOfChar = (char) => (WIDE.test(char) ? 2 : 1);
+const widthOfText = (text) => [...text].reduce((sum, char) => sum + widthOfChar(char), 0);
+
+// The longest beginning of `chars` that is no wider than `budget`.
+function fitting(chars, budget) {
+  let width = 0;
+  let count = 0;
+  while (count < chars.length && width + widthOfChar(chars[count]) <= budget) {
+    width += widthOfChar(chars[count]);
+    count += 1;
+  }
+  return chars.slice(0, count);
+}
+
 function truncate(s, n) {
   if (!s) return '';
   const str = String(s).replace(/\s+/g, ' ').trim();
-  if (str.length <= n) return str;
+  if (widthOfText(str) <= n) return str;
   // Cut on the last word boundary that fits (reserving one slot for the
   // ellipsis) so we never slice a word in half; fall back to a hard cut when
   // a single token is longer than the budget. Drop any dangling separator so
-  // the ellipsis reads "word…", not "word,…".
-  const slice = str.slice(0, n - 1);
+  // the ellipsis reads "word…", not "word,…". Chinese has no word boundary to
+  // wait for: a cut that falls beside a CJK character stays where it is.
+  const chars = [...str];
+  const kept = fitting(chars, n - 1);
+  const slice = kept.join('');
+  const beside = [kept.at(-1), chars[kept.length]].some((char) => char && WIDE.test(char));
   const lastSpace = slice.lastIndexOf(' ');
-  const head = lastSpace > 0 ? slice.slice(0, lastSpace) : slice;
+  const head = !beside && lastSpace > 0 ? slice.slice(0, lastSpace) : slice;
   return `${head.replace(/[\s,;:.–—-]+$/, '')}…`;
 }
 

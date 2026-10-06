@@ -1,6 +1,7 @@
 // A degree is followed by day or on an evening schedule ("horaire décalé").
 // The timeline tells the two apart: an evening degree, and its blocks, are
-// marked — hatched on the page — and a legend says what the hatching means.
+// marked — a crescent moon before the name — and a legend says what the moon
+// means.
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { timelineOf } = require('./timeline-model');
@@ -49,7 +50,7 @@ test('what a degree carried takes no schedule of its own', () => {
   assert.ok(carried.every((b) => b.schedule === undefined));
 });
 
-test('on the page an evening degree carries the mark the stylesheet hatches', () => {
+test('on the page an evening degree carries the mark the stylesheet turns into a moon', () => {
   assert.match(
     html(studied('evening')),
     /class="tl-bar"[^>]*data-schedule="evening"[^>]*data-name="UMons"/,
@@ -67,12 +68,12 @@ test('assistive technology is told a degree is followed in the evening', () => {
   assert.match(html(studied('evening')), /aria-label="UMons[^"]*horaire décalé"/);
 });
 
-test('a legend says what the hatching means, in the language of the page', () => {
+test('a legend says what the moon means, in the language of the page', () => {
   const page = html(studied('evening'));
-  assert.match(page, /class="tl-legend"[\s\S]*de jour[\s\S]*horaire décalé/);
+  assert.match(page, /class="tl-legend"><span class="tl-moon"[^>]*><\/span>horaire décalé</);
   assert.match(
     html(studied('evening'), 'en'),
-    /class="tl-legend"[\s\S]*daytime[\s\S]*evening schedule/,
+    /class="tl-legend"><span class="tl-moon"[^>]*><\/span>evening schedule</,
   );
 });
 
@@ -84,7 +85,7 @@ test('the XSLT themes get the mark and the legend with their data', () => {
   const xml = timelineForXml(studied('evening'), 'fr', TODAY);
   const lane = xml.lanes.find((l) => l.kind === 'education');
   assert.equal(lane.bars.find((b) => b.name === 'UMons').schedule, 'evening');
-  assert.deepEqual(xml.legend, { day: 'de jour', evening: 'horaire décalé' });
+  assert.deepEqual(xml.legend, { evening: 'horaire décalé' });
 });
 
 test('the XSLT data carries no legend without an evening degree', () => {

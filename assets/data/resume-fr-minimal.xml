@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=a4992e71"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=fef8fda5"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -131,7 +131,6 @@
       <title>Chronologie</title>
       <months>206</months>
       <legend>
-        <day>de jour</day>
         <evening>horaire décalé</evening>
       </legend>
       <zooms>
@@ -222,7 +221,7 @@
         <lane>
           <kind>work</kind>
           <label>Expérience professionnelle</label>
-          <rows>7</rows>
+          <rows>8</rows>
           <groups>
             <group>
               <left>70.87%</left>
@@ -270,12 +269,12 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
-              <rows>4</rows>
+              <rows>5</rows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>4</row>
+              <row>5</row>
               <rows>3</rows>
             </group>
           </groups>
@@ -525,10 +524,10 @@
               <target>work-acteble-fondateur</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble App</name>
-              <caption>Acteble App</caption>
-              <period>juil. 2025 – Aujourd’hui</period>
-              <label>Acteble App — juil. 2025 – Aujourd’hui</label>
+              <name>Acteble API</name>
+              <caption>Acteble API</caption>
+              <period>juin 2025 – Aujourd’hui</period>
+              <label>Acteble API — juin 2025 – Aujourd’hui</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>1</row>
@@ -537,10 +536,10 @@
               <target>work-acteble-fondateur</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble API</name>
-              <caption>Acteble API</caption>
-              <period>juil. 2025 – Aujourd’hui</period>
-              <label>Acteble API — juil. 2025 – Aujourd’hui</label>
+              <name>Acteble App</name>
+              <caption>Acteble App</caption>
+              <period>avr. 2025 – Aujourd’hui</period>
+              <label>Acteble App — avr. 2025 – Aujourd’hui</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>2</row>
@@ -549,14 +548,26 @@
               <target>work-acteble-fondateur</target>
               <kind>project</kind>
               <depth>1</depth>
+              <name>Acteble Website</name>
+              <caption>Acteble Website</caption>
+              <period>juin 2025 – Aujourd’hui</period>
+              <label>Acteble Website — juin 2025 – Aujourd’hui</label>
+              <left>92.23%</left>
+              <width>7.77%</width>
+              <row>3</row>
+            </bar>
+            <bar>
+              <target>work-acteble-fondateur</target>
+              <kind>project</kind>
+              <depth>1</depth>
               <name>Mémoire de master</name>
               <title>UMONS</title>
               <caption>Mémoire de master</caption>
-              <period>juil. 2025 – sept. 2026</period>
-              <label>Mémoire de master — UMONS — juil. 2025 – sept. 2026</label>
-              <left>92.23%</left>
-              <width>6.84%</width>
-              <row>3</row>
+              <period>nov. 2025 – sept. 2026</period>
+              <label>Mémoire de master — UMONS — nov. 2025 – sept. 2026</label>
+              <left>94.37%</left>
+              <width>4.71%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>work-senat-belge-chercheur-en-ia</target>
@@ -569,7 +580,7 @@
               <label>Sénat belge — Chercheur en IA — nov. 2025 – juin 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>4</row>
+              <row>5</row>
             </bar>
             <bar>
               <target>work-senat-belge-chercheur-en-ia</target>
@@ -581,7 +592,7 @@
               <label>Synergy — nov. 2025 – juin 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>6</row>
             </bar>
             <bar>
               <target>work-senat-belge-chercheur-en-ia</target>
@@ -593,7 +604,7 @@
               <label>fedrag-be — nov. 2025 – juin 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>6</row>
+              <row>7</row>
             </bar>
           </bars>
         </lane>
@@ -932,26 +943,13 @@
               <target>education-umons-master-en-sciences</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Mémoire de master</name>
-              <title>UMONS</title>
-              <caption>Mémoire de master</caption>
-              <period>juil. 2025 – sept. 2026</period>
-              <label>Mémoire de master — UMONS — juil. 2025 – sept. 2026</label>
-              <left>92.23%</left>
-              <width>6.84%</width>
-              <row>4</row>
-            </bar>
-            <bar>
-              <target>education-umons-master-en-sciences</target>
-              <kind>project</kind>
-              <depth>1</depth>
               <name>Synergy</name>
               <caption>Synergy</caption>
               <period>nov. 2025 – juin 2026</period>
               <label>Synergy — nov. 2025 – juin 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-master-en-sciences</target>
@@ -963,6 +961,19 @@
               <label>fedrag-be — nov. 2025 – juin 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
+              <row>5</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-en-sciences</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Mémoire de master</name>
+              <title>UMONS</title>
+              <caption>Mémoire de master</caption>
+              <period>nov. 2025 – sept. 2026</period>
+              <label>Mémoire de master — UMONS — nov. 2025 – sept. 2026</label>
+              <left>94.37%</left>
+              <width>4.71%</width>
               <row>6</row>
             </bar>
           </bars>
@@ -1077,8 +1088,9 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
         <skill>PostgreSQL</skill>
       </skills>
       <projects>
-        <project>Acteble App</project>
         <project>Acteble API</project>
+        <project>Acteble App</project>
+        <project>Acteble Website</project>
         <project>Mémoire de master</project>
       </projects>
       <anchor>work-acteble-fondateur</anchor>
@@ -1620,59 +1632,97 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Protocole ouvert et reproductible qui évalue les stratégies de retrieval sur le corpus bilingue du Sénat, en mesurant la robustesse FR/NL tout au long du pipeline de retrieval.</summary>
     </project>
     <project>
+      <name>Acteble API</name>
+      <description>Backend de la plateforme Acteble : un monolithe modulaire en Rust.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Tokio</keyword>
+        <keyword>Axum</keyword>
+        <keyword>Tonic</keyword>
+        <keyword>gRPC</keyword>
+        <keyword>SQLx</keyword>
+        <keyword>PostgreSQL</keyword>
+        <keyword>PostGIS</keyword>
+        <keyword>Redis</keyword>
+        <keyword>MinIO</keyword>
+        <keyword>LiveKit</keyword>
+        <keyword>OpenTelemetry</keyword>
+        <keyword>Docker</keyword>
+        <keyword>Caddy</keyword>
+        <keyword>DDD</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>CQRS</keyword>
+        <keyword>EventDriven</keyword>
+      </keywords>
+      <startDate>2025-06-13</startDate>
+      <type>API</type>
+      <roles>
+        <role>Founder</role>
+      </roles>
+      <summary>Backend de la plateforme : monolithe modulaire en Rust, découpé en contextes métier à architecture hexagonale, CQRS et cœur piloté par événements (event store, outbox/inbox), exposé en REST/JSON et en gRPC streaming.</summary>
+    </project>
+    <project>
       <name>Acteble App</name>
-      <description>Application mobile connectant les voyageurs pendant leurs trajets.</description>
+      <description>Client multi-plateforme offline-first d'Acteble, développé en Flutter.</description>
       <keywords>
         <keyword>Flutter</keyword>
         <keyword>Dart</keyword>
+        <keyword>Melos</keyword>
+        <keyword>Riverpod</keyword>
+        <keyword>Drift</keyword>
+        <keyword>SQLite</keyword>
+        <keyword>Dio</keyword>
+        <keyword>gRPC</keyword>
+        <keyword>FlutterMap</keyword>
+        <keyword>Firebase</keyword>
+        <keyword>OfflineFirst</keyword>
         <keyword>Mobile</keyword>
-        <keyword>Travel</keyword>
-        <keyword>DDD</keyword>
-        <keyword>CleanArchitecture</keyword>
       </keywords>
-      <startDate>2025-07-01</startDate>
+      <startDate>2025-04-12</startDate>
       <url>https://www.acteble.com</url>
       <type>Mobile Application</type>
       <roles>
         <role>Founder</role>
       </roles>
-      <summary>Application mobile qui connecte les voyageurs pendant leurs trajets, développée en Flutter.</summary>
+      <summary>Client offline-first pour iOS, Android, web et desktop : monorepo Melos d'apps Flutter et de packages partagés, état Riverpod au-dessus d'un stockage local Drift/SQLite, relié à l'API en REST et en gRPC.</summary>
     </project>
     <project>
-      <name>Acteble API</name>
-      <description>API Rust derrière l'application mobile Acteble.</description>
+      <name>Acteble Website</name>
+      <description>Site vitrine d'Acteble : une application React monopage.</description>
       <keywords>
-        <keyword>Rust</keyword>
-        <keyword>Tokio</keyword>
-        <keyword>PostgreSQL</keyword>
-        <keyword>Docker</keyword>
-        <keyword>DDD</keyword>
-        <keyword>CleanArchitecture</keyword>
+        <keyword>React</keyword>
+        <keyword>Vite</keyword>
+        <keyword>JavaScript</keyword>
+        <keyword>i18next</keyword>
+        <keyword>ReactRouter</keyword>
       </keywords>
-      <startDate>2025-07-01</startDate>
-      <type>API</type>
+      <startDate>2025-06-05</startDate>
+      <url>https://www.acteble.com</url>
+      <type>Website</type>
       <roles>
         <role>Founder</role>
       </roles>
-      <summary>API backend d'Acteble, écrite en Rust, au service de l'application mobile.</summary>
+      <summary>Site vitrine d'Acteble : application React monopage légère, construite avec Vite et internationalisée avec i18next.</summary>
     </project>
     <project>
       <name>Mémoire de master</name>
-      <description>Mémoire de master à l'UMONS — la couche R&amp;D d'Acteble.</description>
+      <description>Mémoire de master à l'UMONS — la R&amp;D du moteur de planification d'Acteble.</description>
       <keywords>
+        <keyword>Python</keyword>
+        <keyword>LaTeX</keyword>
         <keyword>MiniZinc</keyword>
         <keyword>ConstraintProgramming</keyword>
         <keyword>CombinatorialOptimization</keyword>
         <keyword>Pareto</keyword>
       </keywords>
-      <startDate>2025-07-01</startDate>
+      <startDate>2025-11-13</startDate>
       <endDate>2026-09-04</endDate>
       <type>Dissertation</type>
       <roles>
         <role>Author</role>
       </roles>
       <entity>UMONS</entity>
-      <summary>Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS, comme couche R&amp;D d'Acteble.</summary>
+      <summary>Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. La R&amp;D du moteur de planification d'Acteble, écrite en Python.</summary>
     </project>
     <project>
       <name>Emvi App</name>

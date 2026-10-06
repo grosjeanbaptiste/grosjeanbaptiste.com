@@ -571,13 +571,11 @@
             </xsl:for-each>
           </div>
         </div>
-        <!-- What the hatching means: a degree followed by day, or on an evening
-             schedule. Present only when the career has one. -->
+        <!-- What the crescent moon before a degree's name means: followed on an
+             evening schedule. Present only when the career has one. -->
         <xsl:if test="$tl/legend">
           <p class="tl-legend">
-            <span class="tl-swatch"></span><xsl:value-of select="$tl/legend/day"/>
-            <xsl:text> </xsl:text>
-            <span class="tl-swatch" data-schedule="evening"></span><xsl:value-of select="$tl/legend/evening"/>
+            <span class="tl-moon" aria-hidden="true"></span><xsl:value-of select="$tl/legend/evening"/>
           </p>
         </xsl:if>
       </section>

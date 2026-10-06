@@ -148,16 +148,20 @@
       "summary": "Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet."
     },
     {
-      "description": "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.",
-      "summary": "Mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt, gebouwd met Flutter."
+      "description": "Backend van het Acteble-platform: een modulaire monoliet in Rust.",
+      "summary": "Backend van het platform: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming."
     },
     {
-      "description": "Rust-API achter de mobiele app van Acteble.",
-      "summary": "Backend-API van Acteble, geschreven in Rust, ten dienste van de mobiele app."
+      "description": "Offline-first multiplatformclient van Acteble, gebouwd met Flutter.",
+      "summary": "Offline-first client voor iOS, Android, web en desktop: een Melos-monorepo met Flutter-apps en gedeelde packages, Riverpod-state boven een lokale Drift/SQLite-opslag, verbonden met de API via REST en gRPC."
     },
     {
-      "description": "Masterproef aan de UMONS — de R&D-laag van Acteble.",
-      "summary": "Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS, als R&D-laag van Acteble."
+      "description": "Publieke website van Acteble: een React single-page-applicatie.",
+      "summary": "Publieke website van Acteble: lichte React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next."
+    },
+    {
+      "description": "Masterproef aan de UMONS — de R&D van de planningsengine van Acteble.",
+      "summary": "Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS. De R&D van de planningsengine van Acteble, geschreven in Python."
     },
     {
       "description": "AI-aangedreven visuele assistent voor slechtzienden.",

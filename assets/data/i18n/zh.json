@@ -148,16 +148,20 @@
       "summary": "开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。"
     },
     {
-      "description": "在旅途中连接旅行者的移动应用。",
-      "summary": "在旅途中连接旅行者的移动应用，使用 Flutter 开发。"
+      "description": "Acteble 平台的后端：用 Rust 编写的模块化单体。",
+      "summary": "平台后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务。"
     },
     {
-      "description": "Acteble 移动应用背后的 Rust API。",
-      "summary": "Acteble 的后端 API，使用 Rust 编写，为移动应用提供服务。"
+      "description": "Acteble 的离线优先多平台客户端，使用 Flutter 开发。",
+      "summary": "面向 iOS、Android、Web 和桌面的离线优先客户端：由 Flutter 应用和共享包组成的 Melos 单仓库，基于本地 Drift/SQLite 存储的 Riverpod 状态管理，通过 REST 和 gRPC 与 API 通信。"
     },
     {
-      "description": "UMONS 硕士论文——Acteble 的研发层。",
-      "summary": "硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成，作为 Acteble 的研发层。"
+      "description": "Acteble 的公开网站：一个 React 单页应用。",
+      "summary": "Acteble 的公开网站：使用 Vite 构建、通过 i18next 实现国际化的轻量级 React 单页应用。"
+    },
+    {
+      "description": "UMONS 硕士论文——Acteble 规划引擎的研发。",
+      "summary": "硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成。Acteble 规划引擎的研发，使用 Python 编写。"
     },
     {
       "description": "为视障人士提供的 AI 驱动视觉助手。",

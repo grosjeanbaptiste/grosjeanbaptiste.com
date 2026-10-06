@@ -12,10 +12,10 @@ const labelOf = (bar, period, t) =>
   [bar.name, bar.title, period, bar.schedule === 'evening' ? t.scheduleEvening : null]
     .filter(Boolean)
     .join(' — ');
-// The legend of the hatching, when the career has an evening degree.
+// The legend of the moon, when the career has an evening degree.
 const legendOf = (timeline, t) =>
   timeline.lanes.some((lane) => lane.bars.some((bar) => bar.schedule === 'evening'))
-    ? { day: t.scheduleDay, evening: t.scheduleEvening }
+    ? { evening: t.scheduleEvening }
     : undefined;
 const LANE_LABEL = {
   work: 'experience',
