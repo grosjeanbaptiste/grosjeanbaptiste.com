@@ -91,7 +91,28 @@ const hosts = (resume) => [
 const hostsProject = (host, project) => namesProject(host.record, project);
 const hostsRole = (host, role) => namesRole(host.name, role);
 
+// A degree is followed year by year: each academic year is a block, a part of
+// the degree rather than an entry — it links nowhere. "2022-2023" reads "22-23".
+const shortYear = (year) => String(year || '').replace(/\b\d\d(\d\d)\b/g, '$1');
+function blockBar(block, now) {
+  const name = shortYear(block.year);
+  const { start, end } = spanOf(block, name, now);
+  return {
+    kind: 'block',
+    ongoing: false,
+    anchor: null,
+    record: block,
+    start,
+    end,
+    name,
+    title: block.label || '',
+  };
+}
+const blocksOf = (record, now) =>
+  (record.blocks || []).filter((b) => b.startDate).map((b) => blockBar(b, now));
+
 // One host with what it carried, unpacked: each display packs rows its own way.
+// `blocks`: the academic years of a degree, to be drawn on one row of their own.
 function groupOf(host, resume, now) {
   const carried = [
     ...datedProjects(resume)
@@ -101,7 +122,11 @@ function groupOf(host, resume, now) {
       .filter((v) => hostsRole(host, v))
       .map((v) => barOf('volunteer', v, now)),
   ];
-  return { head: barOf(host.kind, host.record, now), children: carried };
+  return {
+    head: barOf(host.kind, host.record, now),
+    children: carried,
+    blocks: blocksOf(host.record, now),
+  };
 }
 
 // Every entry of the CV, by lane: hosts with what they carried, then whatever
@@ -110,7 +135,7 @@ function entryGroups(resume, now) {
   const all = hosts(resume);
   const groups = (kind) => all.filter((h) => h.kind === kind).map((h) => groupOf(h, resume, now));
   const alone = (kind, records) =>
-    records.map((r) => ({ head: barOf(kind, r, now), children: [] }));
+    records.map((r) => ({ head: barOf(kind, r, now), children: [], blocks: [] }));
   const unhostedProjects = datedProjects(resume).filter(
     (p) => !all.some((h) => hostsProject(h, p)),
   );

@@ -33,36 +33,50 @@ const renderProjectTags = (keywords) => {
   return ` <span class="skill-tags project-skills">${tags}</span>`;
 };
 
-function renderEmbeddedProjects(projectNames, projects, label) {
+// One referenced project or course unit as a list row.
+function rowHtml(p) {
+  // A course unit's name is its official French designation and its summary
+  // the localized title, so on the French page the two are the same string
+  // and the row would read "Algorithmique — Algorithmique". Say it once.
+  const blurb = p.summary || p.description || '';
+  const desc = blurb.trim() === (p.name || '').trim() ? '' : blurb;
+  const name = `<strong>${escapeHtml(p.name)}</strong>`;
+  const label = p.url
+    ? `<a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${name}</a>`
+    : name;
+  // Project blurbs are clipped harder than summaries in the PDF; the span
+  // gives print-layout.js something to swap without touching the link.
+  const clipped = desc ? printText(desc, PRINT_PLAN.proj_desc) : null;
+  const descAttr = clipped ? ` data-print-text="${escapeHtml(clipped)}"` : '';
+  const descHtml = desc ? ` — <span${descAttr}>${escapeHtml(desc)}</span>` : '';
+  return `<li>${label}${descHtml}${renderProjectTags(p.keywords)}${anchorHtml('project', p)}</li>`;
+}
+const listHtml = (projs) => [
+  '  <ul>',
+  `        ${projs.map(rowHtml).join('\n        ')}`,
+  '  </ul>',
+];
+
+// `blocks`: a degree's academic years. Its course units are then listed year by
+// year, each block headed by its year and the programme's name for it; a unit
+// on no block follows them.
+function renderEmbeddedProjects(projectNames, projects, label, blocks = []) {
   if (!projectNames?.length) return '';
   const projs = projectNames.map((n) => projects.find((p) => p.name === n)).filter(Boolean);
   if (!projs.length) return '';
-  const items = projs
-    .map((p) => {
-      // A course unit's name is its official French designation and its
-      // summary the localized title, so on the French page the two are the
-      // same string and the row would read "Algorithmique — Algorithmique".
-      // Say it once.
-      const blurb = p.summary || p.description || '';
-      const desc = blurb.trim() === (p.name || '').trim() ? '' : blurb;
-      const name = `<strong>${escapeHtml(p.name)}</strong>`;
-      const label = p.url
-        ? `<a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${name}</a>`
-        : name;
-      // Project blurbs are clipped harder than summaries in the PDF; the span
-      // gives print-layout.js something to swap without touching the link.
-      const clipped = desc ? printText(desc, PRINT_PLAN.proj_desc) : null;
-      const descAttr = clipped ? ` data-print-text="${escapeHtml(clipped)}"` : '';
-      const descHtml = desc ? ` — <span${descAttr}>${escapeHtml(desc)}</span>` : '';
-      return `<li>${label}${descHtml}${renderProjectTags(p.keywords)}${anchorHtml('project', p)}</li>`;
-    })
-    .join('\n        ');
+  const groups = blocks
+    .map((block) => ({ block, projs: projs.filter((p) => block.units.includes(p.name)) }))
+    .filter((group) => group.projs.length);
+  const filed = new Set(groups.flatMap((group) => group.projs));
+  const others = projs.filter((p) => !filed.has(p));
   return [
     '<div class="embedded-projects">',
     `  <p class="embedded-label">${escapeHtml(label)}:</p>`,
-    '  <ul>',
-    `        ${items}`,
-    '  </ul>',
+    ...groups.flatMap(({ block, projs: taken }) => [
+      `  <p class="embedded-block">${escapeHtml([block.year, block.label].filter(Boolean).join(' · '))}</p>`,
+      ...listHtml(taken),
+    ]),
+    ...(others.length ? listHtml(others) : []),
     '</div>',
   ].join('\n');
 }
@@ -146,6 +160,7 @@ function appendEmbeds(parts, entry, hostName, ctx, t, lang) {
     named.filter(isUnit).map((p) => p.name),
     ctx.projects,
     t.courseUnits,
+    entry.blocks,
   );
   if (unitsHtml) parts.push(indentLines(unitsHtml, 2));
   const volsHtml = renderEmbeddedVolunteer(ctx.volunteer, hostName, t, lang);

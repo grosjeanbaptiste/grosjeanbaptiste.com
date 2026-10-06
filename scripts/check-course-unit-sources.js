@@ -53,9 +53,10 @@ async function pdfPages(url, name) {
   });
 }
 
-async function read(name, unit) {
-  if (unit.url.includes('.pdf#page=')) return pdfPages(unit.url, name);
-  const pages = await Promise.all([unit.url, ...(unit.activities || [])].map(download));
+// `sheet`: a unit's own record, or its `later` one.
+async function read(name, sheet) {
+  if (sheet.url.includes('.pdf#page=')) return pdfPages(sheet.url, name);
+  const pages = await Promise.all([sheet.url, ...(sheet.activities || [])].map(download));
   return pages.map((bytes) => textOf(decode(bytes))).join(' ');
 }
 

@@ -1,11 +1,16 @@
 {
-  "retrieved": "2026-10-05",
+  "retrieved": "2026-10-06",
   "units": {
     "Algorithmique": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-900-C.htm",
-      "code": "US-MC-INFOSP-900-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-048.htm"],
+      "year": "2022-2023",
+      "code": "US-MC-INFO60-011-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-011-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2022-2023/aa/S-INFO-048.htm"],
+      "archive": [
+        "dsl/_sources/umons/2022-2023/ue/US-MC-INFO60-011-C.htm",
+        "dsl/_sources/umons/2022-2023/aa/S-INFO-048.htm"
+      ],
       "evidence": {
         "Algorithms": "Algorithmique",
         "DataStructures": "structures de données",
@@ -15,18 +20,28 @@
     },
     "Anglais I": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-901-C.htm",
-      "code": "US-MC-INFOSP-901-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/V-LANG-662.htm"],
+      "year": "2023-2024",
+      "code": "US-MC-INFO60-012-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-012-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2023-2024/aa/V-LANG-662.htm"],
+      "archive": [
+        "dsl/_sources/umons/2023-2024/ue/US-MC-INFO60-012-C.htm",
+        "dsl/_sources/umons/2023-2024/aa/V-LANG-662.htm"
+      ],
       "evidence": {
         "English": "Anglais"
       }
     },
     "Bases de données I": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-902-C.htm",
-      "code": "US-MC-INFOSP-902-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-049.htm"],
+      "year": "2022-2023",
+      "code": "US-MC-INFO60-013-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-013-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2022-2023/aa/S-INFO-049.htm"],
+      "archive": [
+        "dsl/_sources/umons/2022-2023/ue/US-MC-INFO60-013-C.htm",
+        "dsl/_sources/umons/2022-2023/aa/S-INFO-049.htm"
+      ],
       "evidence": {
         "SQL": "SQL",
         "RelationalAlgebra": "algèbre relationnelle",
@@ -38,9 +53,14 @@
     },
     "Lecture et rédaction scientifique": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-903-C.htm",
-      "code": "US-MC-INFOSP-903-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-050.htm"],
+      "year": "2023-2024",
+      "code": "US-MC-INFO60-014-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-014-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2023-2024/aa/S-INFO-050.htm"],
+      "archive": [
+        "dsl/_sources/umons/2023-2024/ue/US-MC-INFO60-014-C.htm",
+        "dsl/_sources/umons/2023-2024/aa/S-INFO-050.htm"
+      ],
       "evidence": {
         "ScientificWriting": "article scientifique",
         "LiteratureReview": "recherche bibliographique"
@@ -48,24 +68,51 @@
     },
     "Mathématique": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-904-C.htm",
-      "code": "US-MC-INFOSP-904-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-051.htm"],
+      "year": "2022-2023",
+      "code": "US-MC-INFO60-015-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-015-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2022-2023/aa/S-INFO-051.htm"],
+      "archive": [
+        "dsl/_sources/umons/2022-2023/ue/US-MC-INFO60-015-C.htm",
+        "dsl/_sources/umons/2022-2023/aa/S-INFO-051.htm"
+      ],
       "evidence": {
-        "GraphTheory": "Théorie des Graphes",
-        "Combinatorics": "Combinatoire",
-        "Complexity": "Complexité",
-        "PropositionalLogic": "logique propositionnelle",
-        "PredicateLogic": "logique des prédicats"
+        "GraphTheory": null,
+        "Combinatorics": null,
+        "Complexity": null,
+        "PropositionalLogic": null,
+        "PredicateLogic": null
+      },
+      "later": {
+        "year": "2025-2026",
+        "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-904-C.htm",
+        "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-051.htm"],
+        "archive": [
+          "dsl/_sources/umons/2025-2026/ue/US-MC-INFOSP-904-C.htm",
+          "dsl/_sources/umons/2025-2026/aa/S-INFO-051.htm"
+        ],
+        "evidence": {
+          "GraphTheory": "Théorie des Graphes",
+          "Combinatorics": "Combinatoire",
+          "Complexity": "Complexité",
+          "PropositionalLogic": "logique propositionnelle",
+          "PredicateLogic": "logique des prédicats"
+        }
       }
     },
     "Modélisation logicielle": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-905-C.htm",
-      "code": "US-MC-INFOSP-905-C",
+      "year": "2022-2023",
+      "code": "US-MC-INFO60-016-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-016-C.htm",
       "activities": [
-        "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-852.htm",
-        "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-892.htm"
+        "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/aa/S-INFO-852.htm",
+        "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/aa/S-INFO-892.htm"
+      ],
+      "archive": [
+        "dsl/_sources/umons/2022-2023/ue/US-MC-INFO60-016-C.htm",
+        "dsl/_sources/umons/2022-2023/aa/S-INFO-852.htm",
+        "dsl/_sources/umons/2022-2023/aa/S-INFO-892.htm"
       ],
       "evidence": {
         "Java": "Java",
@@ -78,9 +125,14 @@
     },
     "Réseaux": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-906-C.htm",
-      "code": "US-MC-INFOSP-906-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-053.htm"],
+      "year": "2023-2024",
+      "code": "US-MC-INFO60-017-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-017-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2023-2024/aa/S-INFO-053.htm"],
+      "archive": [
+        "dsl/_sources/umons/2023-2024/ue/US-MC-INFO60-017-C.htm",
+        "dsl/_sources/umons/2023-2024/aa/S-INFO-053.htm"
+      ],
       "evidence": {
         "TCP/IP": "TCP",
         "HTTP": "HTTP",
@@ -92,11 +144,17 @@
     },
     "Stratégie et politiques en ressources humaines": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-907-C.htm",
-      "code": "US-MC-INFOSP-907-C",
+      "year": "2023-2024",
+      "code": "US-MC-INFO60-018-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-018-C.htm",
       "activities": [
-        "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/W-AETR-018.htm",
-        "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/W-AETR-078.htm"
+        "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/aa/W-AETR-018.htm",
+        "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/aa/W-AETR-078.htm"
+      ],
+      "archive": [
+        "dsl/_sources/umons/2023-2024/ue/US-MC-INFO60-018-C.htm",
+        "dsl/_sources/umons/2023-2024/aa/W-AETR-018.htm",
+        "dsl/_sources/umons/2023-2024/aa/W-AETR-078.htm"
       ],
       "evidence": {
         "HRM": "GRH"
@@ -104,31 +162,47 @@
     },
     "Systèmes d'exploitation": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-908-C.htm",
-      "code": "US-MC-INFOSP-908-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-054.htm"],
+      "year": "2023-2024",
+      "code": "US-MC-INFO60-019-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-019-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2023-2024/aa/S-INFO-054.htm"],
+      "archive": [
+        "dsl/_sources/umons/2023-2024/ue/US-MC-INFO60-019-C.htm",
+        "dsl/_sources/umons/2023-2024/aa/S-INFO-054.htm"
+      ],
       "evidence": {
-        "Concurrency": "Concurrence",
-        "Threads": "thread",
-        "Scheduling": "ordonnancement",
-        "Paging": "pagination",
-        "Virtualization": "Virtualisation"
+        "Processes": "processus",
+        "Semaphores": "sémaphores",
+        "Synchronization": "synchronisation",
+        "MemoryManagement": "Gestion mémoire",
+        "FileSystems": "Systèmes de fichiers",
+        "Scheduling": "Scheduling"
       }
     },
     "Anglais II": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-001-C.htm",
+      "year": "2024-2025",
       "code": "US-M1-INFOSP-001-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/V-LANG-661.htm"],
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-001-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2024-2025/aa/V-LANG-661.htm"],
+      "archive": [
+        "dsl/_sources/umons/2024-2025/ue/US-M1-INFOSP-001-C.htm",
+        "dsl/_sources/umons/2024-2025/aa/V-LANG-661.htm"
+      ],
       "evidence": {
         "English": "Anglais"
       }
     },
     "Bases de données II": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-101-C.htm",
+      "year": "2024-2025",
       "code": "US-M1-INFOSP-101-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-055.htm"],
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-101-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2024-2025/aa/S-INFO-055.htm"],
+      "archive": [
+        "dsl/_sources/umons/2024-2025/ue/US-M1-INFOSP-101-C.htm",
+        "dsl/_sources/umons/2024-2025/aa/S-INFO-055.htm"
+      ],
       "evidence": {
         "XML": "XML",
         "XSLT": "XSLT",
@@ -141,9 +215,14 @@
     },
     "Ingénierie de logiciels et gestion de projets": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-008-C.htm",
+      "year": "2024-2025",
       "code": "US-M1-INFOSP-008-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-058.htm"],
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-008-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2024-2025/aa/S-INFO-058.htm"],
+      "archive": [
+        "dsl/_sources/umons/2024-2025/ue/US-M1-INFOSP-008-C.htm",
+        "dsl/_sources/umons/2024-2025/aa/S-INFO-058.htm"
+      ],
       "evidence": {
         "Agile": "Agile",
         "Scrum": "scrum",
@@ -152,9 +231,14 @@
     },
     "Intelligence artificielle": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-102-C.htm",
+      "year": "2024-2025",
       "code": "US-M1-INFOSP-102-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-061.htm"],
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-102-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2024-2025/aa/S-INFO-061.htm"],
+      "archive": [
+        "dsl/_sources/umons/2024-2025/ue/US-M1-INFOSP-102-C.htm",
+        "dsl/_sources/umons/2024-2025/aa/S-INFO-061.htm"
+      ],
       "evidence": {
         "SearchAlgorithms": "recherche locale",
         "Metaheuristics": "métaheuristiques",
@@ -164,9 +248,14 @@
     },
     "Recherche opérationnelle et applications": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-103-C.htm",
+      "year": "2024-2025",
       "code": "US-M1-INFOSP-103-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-059.htm"],
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-103-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2024-2025/aa/S-INFO-059.htm"],
+      "archive": [
+        "dsl/_sources/umons/2024-2025/ue/US-M1-INFOSP-103-C.htm",
+        "dsl/_sources/umons/2024-2025/aa/S-INFO-059.htm"
+      ],
       "evidence": {
         "OperationsResearch": "Recherche opérationnelle",
         "LinearProgramming": "programmation linéaire",
@@ -176,9 +265,14 @@
     },
     "Structures de données": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-104-C.htm",
+      "year": "2024-2025",
       "code": "US-M1-INFOSP-104-C",
-      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-105.htm"],
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-104-C.htm",
+      "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2024-2025/aa/S-INFO-105.htm"],
+      "archive": [
+        "dsl/_sources/umons/2024-2025/ue/US-M1-INFOSP-104-C.htm",
+        "dsl/_sources/umons/2024-2025/aa/S-INFO-105.htm"
+      ],
       "evidence": {
         "AVLTrees": "arbres AVL",
         "BTrees": "B-arbres",
@@ -189,18 +283,28 @@
     },
     "Séminaires d'informatique en veille technologique": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm",
+      "year": "2025-2026",
       "code": "US-M2-INFOSP-005-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm",
       "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-017.htm"],
+      "archive": [
+        "dsl/_sources/umons/2025-2026/ue/US-M2-INFOSP-005-C.htm",
+        "dsl/_sources/umons/2025-2026/aa/S-INFO-017.htm"
+      ],
       "evidence": {
         "TechWatch": "veille technologique"
       }
     },
     "Cryptographie et sécurité des systèmes informatiques": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm",
+      "year": "2025-2026",
       "code": "US-M2-INFOSP-107-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm",
       "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-056.htm"],
+      "archive": [
+        "dsl/_sources/umons/2025-2026/ue/US-M2-INFOSP-107-C.htm",
+        "dsl/_sources/umons/2025-2026/aa/S-INFO-056.htm"
+      ],
       "evidence": {
         "Cryptography": "Cryptographie",
         "Unix": "Unix",
@@ -210,9 +314,14 @@
     },
     "Éthique et droit de l'informatique": {
       "school": "UMONS",
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm",
+      "year": "2025-2026",
       "code": "US-M2-INFOSP-108-C",
+      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm",
       "activities": ["https://webcontent.umons.ac.be/web/fr/pde/2025-2026/aa/S-INFO-057.htm"],
+      "archive": [
+        "dsl/_sources/umons/2025-2026/ue/US-M2-INFOSP-108-C.htm",
+        "dsl/_sources/umons/2025-2026/aa/S-INFO-057.htm"
+      ],
       "evidence": {
         "IntellectualProperty": "propriété intellectuelle",
         "DataProtection": "protection des données",
@@ -228,7 +337,8 @@
         "Binary": "binaire",
         "Hexadecimal": "hexadécimal",
         "Hardware": "processeur"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Informatique - Système d'exploitation": {
       "school": "EPHEC",
@@ -238,7 +348,8 @@
         "OperatingSystems": "SYSTEME D’EXPLOITATION",
         "ShellScripting": "interprétations de commandes",
         "SystemAdministration": "outils d’administration du système"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Mathématique appliquée à l'informatique": {
       "school": "EPHEC",
@@ -251,7 +362,8 @@
         "RelationalAlgebra": "algèbre relationnelle",
         "MathematicalLogic": "logique mathématique",
         "Cryptography": "cryptage"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Principes algorithmiques et programmation": {
       "school": "EPHEC",
@@ -262,7 +374,8 @@
         "DataTypes": "types de données",
         "ControlFlow": "séquence, alternative et répétitive",
         "Programming": "PROGRAMMATION"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Principes d'analyse informatique": {
       "school": "EPHEC",
@@ -272,7 +385,8 @@
         "UML": " UM",
         "EntityRelationship": "Entités/Relations",
         "SystemsAnalysis": " démarche d’analys"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Information et communication professionnelles": {
       "school": "EPHEC",
@@ -280,7 +394,8 @@
       "code": "03 50 22 U 32 D1",
       "evidence": {
         "ProfessionalCommunication": "vie professionnelle"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Web : principes de base": {
       "school": "EPHEC",
@@ -292,7 +407,8 @@
         "URL": "URL",
         "DNS": "noms de domaine",
         "WebHosting": "publication"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Initiation aux bases de données": {
       "school": "EPHEC",
@@ -303,7 +419,8 @@
         "RelationalModel": "bases de données relationnelles",
         "Joins": "jointure",
         "Indexing": "index"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Gestion et exploitation de bases de données": {
       "school": "EPHEC",
@@ -314,7 +431,8 @@
         "StoredProcedures": "procédures stockées",
         "DataWarehouse": "data warehouse",
         "QueryOptimization": "gains de performance"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Programmation orientée objet": {
       "school": "EPHEC",
@@ -326,7 +444,8 @@
         "Polymorphism": "polymorphisme",
         "Encapsulation": "encapsulation",
         "Overloading": "surcharge"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Projet d'analyse et de conception": {
       "school": "EPHEC",
@@ -336,7 +455,8 @@
         "SystemsAnalysis": "outils d’analyse",
         "SoftwareDesign": "CONCEPTION",
         "Modelling": "modélisation"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Techniques de gestion de projet": {
       "school": "EPHEC",
@@ -344,7 +464,8 @@
       "code": "7502 05 U32 D1",
       "evidence": {
         "ProjectManagement": "GESTION DE PROJET"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Éléments de statistique": {
       "school": "EPHEC",
@@ -352,7 +473,8 @@
       "code": "013203U32D1",
       "evidence": {
         "Statistics": "STATISTIQUE"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Projet de développement web": {
       "school": "EPHEC",
@@ -364,7 +486,8 @@
         "JSON": "JSON",
         "XML": "XML",
         "ClientSideScripting": "Programmation côté client"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Notions de e-business": {
       "school": "EPHEC",
@@ -372,7 +495,8 @@
       "code": "7145 06 U32 D1",
       "evidence": {
         "Ebusiness": "E-BUSINESS"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Projet de développement SGBD": {
       "school": "EPHEC",
@@ -383,7 +507,8 @@
         "Transactions": "transactions",
         "DatabaseProgramming": "programmation",
         "Debugging": "débugger"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Bases des réseaux": {
       "school": "EPHEC",
@@ -394,7 +519,8 @@
         "MAC": "adresse MAC",
         "TCP/IP": "TCP/IP",
         "Networking": "réseaux informatiques"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Organisation des entreprises et éléments de management": {
       "school": "EPHEC",
@@ -402,7 +528,8 @@
       "code": "718211U32D1",
       "evidence": {
         "Management": "MANAGEMENT"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Produits logiciels de gestion intégrés": {
       "school": "EPHEC",
@@ -410,7 +537,8 @@
       "code": "7111 06 U32 D2",
       "evidence": {
         "ERP": "LOGICIELS DE GESTION INTEGRES"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Projet d'intégration de développement": {
       "school": "EPHEC",
@@ -424,7 +552,8 @@
         "XSS": "attaques XSS",
         "Caching": "cache",
         "URLRewriting": "réécriture d’url"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Veille technologique": {
       "school": "EPHEC",
@@ -432,7 +561,8 @@
       "code": "7534 14 U32 D1",
       "evidence": {
         "TechWatch": "VEILLE TECHNOLOGIQUE"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Administration, gestion et sécurisation des réseaux": {
       "school": "EPHEC",
@@ -442,7 +572,8 @@
         "NetworkAdministration": "Administration et gestion des réseaux",
         "NetworkSecurity": "SECURISATION DES RESEAUX",
         "ApplicationServer": "moteur d'application"
-      }
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
     },
     "Langue en situation appliquée à l'enseignement supérieur UE1": {
       "school": "EPHEC",
@@ -458,6 +589,104 @@
       "code": "73XX92U32D1",
       "evidence": {
         "ProfessionalCommunication": "situations professionnelles"
+      },
+      "archive": ["dsl/_sources/ephec/bachelier_en_informatique_version_2_dossier_complet.pdf"]
+    },
+    "Économie I": {
+      "school": "USL-B",
+      "code": "POLS1122",
+      "url": null,
+      "archive": ["dsl/_sources/usl-b/POLS1122_economie-1.pdf"],
+      "saved": "2022-09-01",
+      "evidence": {
+        "Microeconomics": "microéconomique",
+        "CompetitiveMarkets": "marchés concurrentiels",
+        "FirmBehaviour": "comportement de la firme",
+        "MarketFailure": "défaillance des marchés"
+      }
+    },
+    "Économie II": {
+      "school": "USL-B",
+      "code": "POLS1123",
+      "url": null,
+      "archive": ["dsl/_sources/usl-b/POLS1123_economie-2.pdf"],
+      "saved": "2022-09-01",
+      "evidence": {
+        "ImperfectCompetition": "concurrence imparfaite",
+        "Macroeconomics": "macroéconomie",
+        "NationalIncome": "revenu national",
+        "MonetaryMarket": "marché monétaire"
+      }
+    },
+    "Science politique": {
+      "school": "USL-B",
+      "code": "ESPO1162",
+      "url": null,
+      "archive": ["dsl/_sources/usl-b/ESPO1162_science-politique.pdf"],
+      "saved": "2022-09-01",
+      "evidence": {
+        "PoliticalScience": "Science politique",
+        "Power": "Pouvoir",
+        "State": "Etat",
+        "Democracy": "Démocratie"
+      }
+    },
+    "Séminaire : penser le social": {
+      "school": "USL-B",
+      "code": "POLS1151",
+      "url": null,
+      "archive": ["dsl/_sources/usl-b/POLS1151_seminaire-penser-le-social.pdf"],
+      "saved": "2022-09-01",
+      "evidence": {
+        "Epistemology": "épistémologique",
+        "Durkheim": "Durkheim",
+        "Weber": "Weber",
+        "Marx": "Marx"
+      }
+    },
+    "Séminaire : principes et méthodes en sciences sociales": {
+      "school": "USL-B",
+      "code": "POLS1150",
+      "url": null,
+      "archive": ["dsl/_sources/usl-b/POLS1150_seminaire-principes-et-methodes.pdf"],
+      "saved": "2022-09-01",
+      "evidence": {
+        "AcademicWriting": "techniques d'écriture",
+        "Citation": "citations",
+        "Epistemology": "épistémologique"
+      }
+    },
+    "Socio-économie des médias": {
+      "school": "USL-B",
+      "code": "POLS1113",
+      "url": null,
+      "archive": ["dsl/_sources/usl-b/POLS1113_socio-economie-des-medias.pdf"],
+      "saved": "2022-09-01",
+      "evidence": {
+        "MediaEconomics": "industrie médiatique",
+        "Advertising": "industrie publicitaire",
+        "MediaRegulation": "Régulation des médias",
+        "WebEconomy": "Économie du web"
+      }
+    },
+    "Anglais I (Saint-Louis)": {
+      "school": "USL-B",
+      "code": "ANGL1191",
+      "url": null,
+      "archive": ["dsl/_sources/usl-b/ANGL1191_anglais-1.pdf"],
+      "saved": "2022-09-01",
+      "evidence": {
+        "English": "Anglais"
+      }
+    },
+    "Néerlandais I": {
+      "school": "USL-B",
+      "code": "NEER1181",
+      "url": null,
+      "archive": ["dsl/_sources/usl-b/NEER1181_neerlandais-1.pdf"],
+      "saved": "2022-09-01",
+      "evidence": {
+        "Dutch": "Neerlandais"
       }
     }
   }

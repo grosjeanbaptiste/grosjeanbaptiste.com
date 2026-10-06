@@ -19,6 +19,16 @@ export interface WorkRecord extends Identified {
   readonly projects?: readonly string[];
 }
 
+// One academic year of a degree: the programme's name for it when it has one,
+// and the course units taken that year, by name.
+export interface BlockRecord {
+  readonly year: string;
+  readonly label?: string;
+  readonly startDate: string;
+  readonly endDate?: string;
+  readonly units: readonly string[];
+}
+
 export interface EducationRecord extends Identified {
   readonly institution: string;
   readonly studyType?: string;
@@ -26,6 +36,7 @@ export interface EducationRecord extends Identified {
   readonly gpa?: string;
   readonly skills?: readonly string[];
   readonly projects?: readonly string[];
+  readonly blocks?: readonly BlockRecord[];
 }
 
 export interface ProjectRecord extends Identified {

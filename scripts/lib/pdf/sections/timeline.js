@@ -15,12 +15,14 @@ const TRACK = 257;
 // references under it.
 const PITCH = 3.6;
 const FONT = 6.5;
+// The busy years of the career get the width the quiet ones can spare.
+const DENSITY = 0.6;
 
 function buildTimeline(resume, t, today) {
   const model = timelineOf(resume, today);
   if (!model.lanes.length) return '';
   const sheet = {
-    ...layOutCompact(model, { track: TRACK, pitch: PITCH, font: FONT }),
+    ...layOutCompact(model, { track: TRACK, pitch: PITCH, font: FONT, density: DENSITY }),
     titles: TITLES,
   };
   return [`\\cvsection{${tex(t.timeline)}}`, `\\noindent${buildPicture(sheet, t)}\\par`].join('\n');

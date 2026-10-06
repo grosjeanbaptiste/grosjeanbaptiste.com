@@ -8,18 +8,43 @@
 const { entryGroups, monthNow } = require('./timeline-groups');
 const { packRows, packGroups } = require('./timeline-packing');
 
-// A group as the packer wants it: its span, and the rows it needs.
-function measured({ head, children }) {
+// A group as the packer wants it: its span, and the rows it needs — the entry,
+// then its blocks on one row (a degree's academic years), then what it carried.
+function measured({ head, children, blocks = [] }) {
   const packed = packRows(children);
-  const all = [head, ...packed];
+  const all = [head, ...blocks, ...packed];
+  const band = blocks.length ? 1 : 0;
   return {
     head,
+    blocks,
+    band,
     children: packed,
     start: Math.min(...all.map((b) => b.start)),
     end: Math.max(...all.map((b) => b.end)),
-    height: 1 + (packed.length ? Math.max(...packed.map((c) => c.row)) + 1 : 0),
+    height: 1 + band + (packed.length ? Math.max(...packed.map((c) => c.row)) + 1 : 0),
   };
 }
+
+// What sits under an entry: `group` ties a bar to the outline of its own
+// group, `caption` is what the bar reads.
+const under = (g, group) => [
+  ...g.blocks.map((b) => ({
+    ...b,
+    caption: b.title ? `${b.name} · ${b.title}` : b.name,
+    depth: 1,
+    row: g.row + 1,
+    host: g.head,
+    group,
+  })),
+  ...g.children.map((c) => ({
+    ...c,
+    caption: c.name || c.title,
+    depth: 1,
+    row: g.row + 1 + g.band + c.row,
+    host: g.head,
+    group,
+  })),
+];
 
 // A lane: its groups packed into rows, then flattened into bars (depth 0 for
 // the entry, 1 for what sits under it) and the outlines of the real groups.
@@ -30,22 +55,13 @@ function laneOf({ kind, groups }) {
   const met = (name) => packed.groups.filter((g) => g.head.name === name).length;
   const captionOf = (head) =>
     met(head.name) > 1 && head.title ? `${head.name} · ${head.title}` : head.name || head.title;
-  // `group`: what ties a bar to the outline of its own group. `caption`: what
-  // the bar reads.
   const bars = packed.groups.flatMap((g, group) => [
     { ...g.head, caption: captionOf(g.head), depth: 0, row: g.row, group },
-    ...g.children.map((c) => ({
-      ...c,
-      caption: c.name || c.title,
-      depth: 1,
-      row: g.row + 1 + c.row,
-      host: g.head,
-      group,
-    })),
+    ...under(g, group),
   ]);
   const outlines = packed.groups
     .map((g, group) => ({ start: g.start, end: g.end, row: g.row, rows: g.height, group, g }))
-    .filter(({ g }) => g.children.length)
+    .filter(({ g }) => g.height > 1)
     .map(({ g, ...outline }) => outline);
   return { kind, rows: packed.rows, bars, groups: outlines };
 }

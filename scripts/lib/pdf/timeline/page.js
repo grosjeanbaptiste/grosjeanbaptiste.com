@@ -6,6 +6,7 @@
 // it off.
 const { packGroupsOnPaper } = require('./rows');
 const { labelWidth, MM_PER_PT } = require('./measure');
+const { timeScale } = require('./scale');
 
 const TRACK = 248; // the time axis, right of the lane titles
 const HEIGHT = 170; // what the page leaves under the header
@@ -45,9 +46,9 @@ const namesOnly = (timeline) => ({
     const met = (name) => lane.groups.filter((g) => g.head.strong === name).length;
     return {
       ...lane,
-      groups: lane.groups.map(({ head, children }) => ({
-        head: met(head.strong) > 1 ? head : { ...head, rest: '' },
-        children,
+      groups: lane.groups.map((group) => ({
+        ...group,
+        head: met(group.head.strong) > 1 ? group.head : { ...group.head, rest: '' },
       })),
     };
   }),
@@ -67,9 +68,16 @@ const yearsOf = (timeline, x) => {
 // `track` and `height` (mm): the room the sheet gives the picture — a landscape
 // page of its own by default, less on the verso of the vertical CV. The sheet
 // says which labels it carries (`labels`), for the caller to report a reduction.
-function layOut(timeline, { measure = labelWidth, track = TRACK, height = HEIGHT } = {}) {
-  const months = timeline.to + 1 - timeline.from;
-  const x = (month) => ((month - timeline.from) / months) * track;
+// `density`: the share of the width given to the years by what they hold
+// rather than by time (./scale.js); 0 draws time to scale.
+function layOut(
+  timeline,
+  { measure = labelWidth, track = TRACK, height = HEIGHT, density = 0 } = {},
+) {
+  const spans = timeline.lanes.flatMap((lane) =>
+    lane.groups.flatMap((g) => [g.head, ...(g.bands ?? []), ...g.children]),
+  );
+  const x = timeScale({ from: timeline.from, to: timeline.to, track, spans, density });
   const room = height - AXIS - LANE_GAP * timeline.lanes.length;
   for (const plan of PLANS) {
     const worded = plan.of(timeline);

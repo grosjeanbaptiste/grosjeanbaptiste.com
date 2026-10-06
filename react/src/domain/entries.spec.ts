@@ -77,4 +77,42 @@ describe('entriesOf', () => {
     });
     expect(entries.find((e) => e.id === 'hackathon')?.related).toEqual(['acteble']);
   });
+
+  // A degree's academic years, with the course units taken each year.
+  it('gives a degree its blocks, their units by entry id', () => {
+    const base = aResume();
+    const studied = {
+      ...base,
+      education: base.education.map((e) => ({
+        ...e,
+        blocks: [
+          {
+            year: '2022-2023',
+            label: 'Bridging block',
+            startDate: '2022-10-15',
+            endDate: '2023-09-13',
+            units: ['Algorithmique'],
+          },
+        ],
+      })),
+    };
+    const degree = entriesOf(studied).find((e) => e.id === 'umons-master');
+    expect(degree?.blocks).toMatchObject([
+      { year: '2022-2023', label: 'Bridging block', units: ['algorithmique'] },
+    ]);
+  });
+
+  it('refuses a block that names a unit the CV does not have', () => {
+    const base = aResume();
+    const broken = {
+      ...base,
+      education: base.education.map((e) => ({
+        ...e,
+        blocks: [
+          { year: '2022-2023', startDate: '2022-10-15', endDate: '2023-09-13', units: ['Ghost'] },
+        ],
+      })),
+    };
+    expect(() => entriesOf(broken)).toThrow(/Ghost/);
+  });
 });

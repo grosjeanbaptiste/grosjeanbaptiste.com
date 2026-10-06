@@ -383,6 +383,7 @@
           .embedded-projects li { margin: 2px 0; }
           /* Print-only copies of text the LaTeX fit plan clips. */
           .clipped-text { display: none; }
+          .embedded-block { margin: 0.5rem 0 0.15rem; font-size: 0.85em; font-weight: 600; color: var(--muted); }
           .ref-links { margin: 6px 0 0; font-size: 0.92em; color: var(--muted); }
           .ref-links a { color: var(--accent); text-decoration: none; }
           .ref-links a:hover { text-decoration: underline; }
@@ -858,6 +859,18 @@
     <xsl:if test="$refs">
       <div class="embedded-projects">
         <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="$k"/></xsl:call-template></p>
+        <xsl:call-template name="embedded-rows">
+          <xsl:with-param name="refs" select="$refs"/>
+          <xsl:with-param name="clip" select="$clip"/>
+        </xsl:call-template>
+      </div>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- The rows of such a list. -->
+  <xsl:template name="embedded-rows">
+    <xsl:param name="refs"/>
+    <xsl:param name="clip" select="0"/>
         <ul>
           <xsl:for-each select="$refs">
             <xsl:variable name="ref" select="."/>
@@ -876,8 +889,32 @@
             </li>
           </xsl:for-each>
         </ul>
-      </div>
-    </xsl:if>
+  </xsl:template>
+
+  <!-- A degree's course units, year by year: each block (an academic year, with
+       the programme's name for it) heads the units taken then; a unit on no
+       block follows them. -->
+  <xsl:template name="units-by-block">
+    <xsl:variable name="units" select="projects/project[key('project-by-name', .)/type='Course unit']"/>
+    <xsl:variable name="filed" select="blocks/block/units/unit"/>
+    <div class="embedded-projects">
+      <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="'courseUnits'"/></xsl:call-template></p>
+      <xsl:for-each select="blocks/block">
+        <xsl:variable name="taken" select="units/unit"/>
+        <p class="embedded-block">
+          <xsl:value-of select="year"/>
+          <xsl:if test="label"> · <xsl:value-of select="label"/></xsl:if>
+        </p>
+        <xsl:call-template name="embedded-rows">
+          <xsl:with-param name="refs" select="$units[. = $taken]"/>
+        </xsl:call-template>
+      </xsl:for-each>
+      <xsl:if test="$units[not(. = $filed)]">
+        <xsl:call-template name="embedded-rows">
+          <xsl:with-param name="refs" select="$units[not(. = $filed)]"/>
+        </xsl:call-template>
+      </xsl:if>
+    </div>
   </xsl:template>
 
   <xsl:template name="sidebar-dailyLife">
@@ -1121,11 +1158,16 @@
                     <xsl:with-param name="k" select="'projects'"/>
                     <xsl:with-param name="clip" select="0"/>
                   </xsl:call-template>
+                  <xsl:choose>
+                    <xsl:when test="blocks/block"><xsl:call-template name="units-by-block"/></xsl:when>
+                    <xsl:otherwise>
                   <xsl:call-template name="embedded-list">
                     <xsl:with-param name="refs" select="projects/project[key('project-by-name', .)/type='Course unit']"/>
                     <xsl:with-param name="k" select="'courseUnits'"/>
                     <xsl:with-param name="clip" select="0"/>
                   </xsl:call-template>
+                    </xsl:otherwise>
+                  </xsl:choose>
 
                   <xsl:variable name="eduInst" select="institution"/>
                   <xsl:variable name="eduVols" select="/resume/volunteer/volunteer-item[$eduInst and contains($eduInst, substring-before(concat(organization, ' '), ' '))]"/>

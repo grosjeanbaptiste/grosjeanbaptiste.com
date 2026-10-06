@@ -94,3 +94,46 @@ test('the next entry still keeps clear of a group’s labels', () => {
 test('an entry that carried nothing is not outlined', () => {
   assert.deepEqual(laid([groupOf(bar('alone', 0, 30))]).outlines, []);
 });
+
+// A degree's blocks: one row of segments under its bar, whatever their labels —
+// a name that does not fit is shortened, never moved onto another row.
+// Here a label is as wide as its year and its name together.
+const wide = { ...scale, labelWidth: (b) => b.strong.length + b.rest.length };
+const band = (id, start, end, rest = '') => ({ ...bar(id, start, end), kind: 'block', rest });
+const onPaper = (groups) => packGroupsOnPaper(groups, wide);
+const banded = () =>
+  onPaper([
+    {
+      head: bar('host', 0, 60),
+      bands: [band('22-23', 0, 30, 'a name'), band('23-24', 30, 60)],
+      children: [bar('child', 5, 20)],
+    },
+  ]);
+
+test('the blocks of a degree share the row under it', () => {
+  const b = byId(banded());
+  assert.deepEqual([b['22-23'].row, b['23-24'].row], [1, 1]);
+});
+
+test('what the degree carried goes below its blocks', () => {
+  assert.equal(byId(banded()).child.row, 2);
+});
+
+test('a block is labelled inside its segment', () => {
+  assert.equal(byId(banded())['22-23'].label.place, 'inside');
+});
+
+test('a block too narrow for the programme’s name keeps its year alone', () => {
+  const narrow = onPaper([
+    {
+      head: bar('host', 0, 60),
+      bands: [band('22-23', 0, 8, 'a very long name of a block')],
+      children: [],
+    },
+  ]);
+  assert.equal(byId(narrow)['22-23'].rest, '');
+});
+
+test('a group with blocks is as tall as its entry, its blocks and what it carried', () => {
+  assert.equal(banded().outlines[0].rows, 3);
+});

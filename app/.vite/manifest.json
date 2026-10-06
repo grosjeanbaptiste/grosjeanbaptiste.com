@@ -1,6 +1,6 @@
 {
   "index.html": {
-    "file": "assets/index-CEhC-YXn.js",
+    "file": "assets/index-CrkUMcS_.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -10,11 +10,11 @@
       "node_modules/pdfjs-dist/build/pdf.worker.min.mjs?url"
     ],
     "css": [
-      "assets/index-DfBgJXe6.css"
+      "assets/index-CHWuXvOR.css"
     ]
   },
   "node_modules/pdfjs-dist/build/pdf.mjs": {
-    "file": "assets/pdf-DyKoKVKm.js",
+    "file": "assets/pdf-Cdl9oxmo.js",
     "name": "pdf",
     "src": "node_modules/pdfjs-dist/build/pdf.mjs",
     "isDynamicEntry": true,
@@ -44,7 +44,7 @@
     "src": "node_modules/pdfjs-dist/web/pdf_viewer.css"
   },
   "node_modules/pdfjs-dist/web/pdf_viewer.mjs": {
-    "file": "assets/pdf_viewer-DfUZt2_R.js",
+    "file": "assets/pdf_viewer-DTCy_ZFd.js",
     "name": "pdf_viewer",
     "src": "node_modules/pdfjs-dist/web/pdf_viewer.mjs",
     "isDynamicEntry": true,

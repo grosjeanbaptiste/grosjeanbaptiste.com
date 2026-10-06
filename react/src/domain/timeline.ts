@@ -4,7 +4,7 @@
 // volunteering it carried, which are not lanes of their own. Only a project or
 // a role that nothing hosts keeps a lane. Bars are measured in months from the
 // start.
-import type { Entry, EntryKind } from './entry';
+import type { Block, Entry, EntryKind } from './entry';
 import { type Period, type YearMonth, monthOf } from './period';
 import { packGroups, packRows } from './timeline-packing';
 
@@ -23,6 +23,9 @@ export interface TimelineBar {
   // What the bar reads: the organisation, with the title when another entry
   // of the lane shares it; under its host, the title.
   readonly caption: string;
+  // Set on a segment of a degree's blocks: the academic year it stands for.
+  // Its `entry` is the degree, which it leads to.
+  readonly block?: Block;
 }
 
 // The outline of an entry that carried something: its rows and its months.
@@ -56,15 +59,28 @@ const isDated = (e: Entry): e is Dated => e.period !== undefined;
 
 type Placed = { readonly entry: Dated; readonly offset: number; readonly length: number };
 
-function laneOf(kind: EntryKind, heads: readonly Placed[], carriedBy: (head: Dated) => Placed[]) {
+// "2022-2023" reads "22-23" on a segment.
+const shortYear = (year: string) => year.replace(/\b\d\d(\d\d)\b/g, '$1');
+
+type Banded = (block: Block) => { readonly offset: number; readonly length: number };
+
+function laneOf(
+  kind: EntryKind,
+  heads: readonly Placed[],
+  carriedBy: (head: Dated) => Placed[],
+  banded: Banded,
+) {
   if (heads.length === 0) return [];
   const groups = heads.map((head) => {
     const children = packRows(carriedBy(head.entry));
-    const all = [head, ...children];
+    // A degree's academic years take one row of their own, under its bar.
+    const bands = (head.entry.blocks ?? []).map((block) => ({ block, ...banded(block) }));
+    const band = bands.length ? 1 : 0;
+    const all = [head, ...bands, ...children];
     const offset = Math.min(...all.map((b) => b.offset));
     const end = Math.max(...all.map((b) => b.offset + b.length));
-    const height = 1 + (children.length ? Math.max(...children.map((c) => c.row)) + 1 : 0);
-    return { head, children, offset, length: end - offset, height };
+    const height = 1 + band + (children.length ? Math.max(...children.map((c) => c.row)) + 1 : 0);
+    return { head, children, bands, band, offset, length: end - offset, height };
   });
   const packed = packGroups(groups);
   const met = (organisation: string | undefined) =>
@@ -79,18 +95,28 @@ function laneOf(kind: EntryKind, heads: readonly Placed[], carriedBy: (head: Dat
       depth: 0 as const,
       caption: captionOf(g.head.entry),
     },
+    ...g.bands.map(({ block, offset, length }) => ({
+      entry: g.head.entry,
+      offset,
+      length,
+      key: `${g.head.entry.id}#${block.year}`,
+      row: g.row + 1,
+      depth: 1 as const,
+      caption: [shortYear(block.year), block.label].filter(Boolean).join(' · '),
+      block,
+    })),
     ...g.children.map((c) => ({
       entry: c.entry,
       offset: c.offset,
       length: c.length,
       key: `${g.head.entry.id}>${c.entry.id}`,
-      row: g.row + 1 + c.row,
+      row: g.row + 1 + g.band + c.row,
       depth: 1 as const,
       caption: c.entry.title,
     })),
   ]);
   const outlines = packed.groups
-    .filter((g) => g.children.length > 0)
+    .filter((g) => g.height > 1)
     .map((g) => ({ offset: g.offset, length: g.length, row: g.row, rows: g.height }));
   return [{ kind, rows: packed.rows, bars, groups: outlines }];
 }
@@ -107,6 +133,11 @@ export function timelineOf(entries: readonly Entry[], today: Date): Timeline {
     length: entry.period.stopsAt(today) - entry.period.startsAt(),
   });
 
+  const banded: Banded = (block) => ({
+    offset: block.period.startsAt() - start,
+    length: block.period.stopsAt(today) - block.period.startsAt(),
+  });
+
   const hostIds = new Set(dated.filter((e) => HOSTS.includes(e.kind)).map((e) => e.id));
   const carried = dated.filter((e) => CARRIED.includes(e.kind));
   const carriedBy = (head: Dated) => carried.filter((e) => e.related.includes(head.id)).map(place);
@@ -114,12 +145,13 @@ export function timelineOf(entries: readonly Entry[], today: Date): Timeline {
   const heads = (kind: EntryKind) => dated.filter((e) => e.kind === kind).map(place);
 
   const lanes = [
-    ...HOSTS.flatMap((kind) => laneOf(kind, heads(kind), carriedBy)),
+    ...HOSTS.flatMap((kind) => laneOf(kind, heads(kind), carriedBy, banded)),
     ...CARRIED.flatMap((kind) =>
       laneOf(
         kind,
         heads(kind).filter((p) => !hosted(p.entry)),
         () => [],
+        banded,
       ),
     ),
   ];

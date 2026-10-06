@@ -69,3 +69,14 @@
   --hue: var(--app-muted);
   font-style: italic;
 }
+
+/* A degree's academic years: one row of segments under its bar. Outlined
+ * rather than filled — a scale for what the degree carried, drawn below it. */
+.timeline-bar[data-depth="1"][data-kind="block"] {
+  justify-content: center;
+  border: var(--hairline) solid color-mix(in srgb, var(--hue) 70%, transparent);
+  background: color-mix(in srgb, var(--hue) 8%, var(--app-bg));
+  color: var(--app-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}

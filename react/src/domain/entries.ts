@@ -26,7 +26,16 @@ const fromWork = (w: WorkRecord): Entry => ({
   related: [],
 });
 
-const fromEducation = (e: EducationRecord): Entry => ({
+// A block names its units as the CV names them; the entries go by id.
+const blocksOf = (e: EducationRecord, idOf: (name: string) => string) =>
+  e.blocks?.map((b) => ({
+    year: b.year,
+    label: b.label,
+    period: Period.of(b.startDate, b.endDate),
+    units: b.units.map(idOf),
+  }));
+
+const fromEducation = (e: EducationRecord, idOf: (name: string) => string): Entry => ({
   kind: 'education',
   id: e.id,
   title: e.studyType ?? e.institution,
@@ -38,6 +47,7 @@ const fromEducation = (e: EducationRecord): Entry => ({
   skills: e.skills ?? [],
   url: e.url,
   related: [],
+  blocks: blocksOf(e, idOf),
 });
 
 const fromProject = (p: ProjectRecord, inherited?: Period): Entry => ({
@@ -85,9 +95,15 @@ const fromCompetition = (c: CompetitionRecord): Entry => ({
 export function entriesOf(resume: Resume): Entry[] {
   const graph = links(resume);
   const inherited = degreePeriods(resume);
+  const ids = new Map(resume.projects.map((p) => [p.name, p.id]));
+  const idOf = (name: string) => {
+    const id = ids.get(name);
+    if (!id) throw new Error(`A block names an unknown course unit "${name}"`);
+    return id;
+  };
   const entries = [
     ...resume.work.map(fromWork),
-    ...resume.education.map(fromEducation),
+    ...resume.education.map((e) => fromEducation(e, idOf)),
     ...(resume.competitions ?? []).map(fromCompetition),
     ...resume.projects.map((p) => fromProject(p, inherited.get(p.name))),
     ...resume.volunteer.map(fromVolunteer),

@@ -1,8 +1,9 @@
 // The open entry, shown under the timeline: what the bar stands for, its
 // skills (each a filter) and the entries it is linked to (a degree lists its
-// course units here). Escape or the close button go back to the timeline.
+// course units here, year by year). Escape or the close button go back to the timeline.
 import { useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import { byBlock } from '../../domain/blocks';
 import type { Entry } from '../../domain/entry';
 import { useKindLabel, useReading } from '../context';
 import { formatPeriod } from '../format';
@@ -17,6 +18,15 @@ export function EntryPanel({ entry }: { entry: Entry }) {
   const panel = useRef<HTMLElement>(null);
   const close = () => navigate(`${homePath(lang)}${search}`, { preventScrollReset: true });
   const related = catalogue.relatedTo(entry.id);
+  const { groups, others } = byBlock(entry, related);
+  const relatedLink = (other: Entry) => (
+    <li key={other.id}>
+      <Link to={`${entryPath(lang, other)}${search}`} className="related-link" preventScrollReset>
+        <strong>{other.title}</strong>
+        <span>{label(other.kind)}</span>
+      </Link>
+    </li>
+  );
 
   useEffect(() => {
     document.title = `${entry.title} — ${catalogue.basics.name}`;
@@ -59,20 +69,14 @@ export function EntryPanel({ entry }: { entry: Entry }) {
       {related.length > 0 && (
         <div className="entry-related">
           <h3>{strings.related}</h3>
-          <ul className="related">
-            {related.map((other) => (
-              <li key={other.id}>
-                <Link
-                  to={`${entryPath(lang, other)}${search}`}
-                  className="related-link"
-                  preventScrollReset
-                >
-                  <strong>{other.title}</strong>
-                  <span>{label(other.kind)}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {/* A degree's course units, under the academic year they were taken in. */}
+          {groups.map(({ block, entries }) => (
+            <div key={block.year} className="entry-block">
+              <h4>{[block.year, block.label].filter(Boolean).join(' · ')}</h4>
+              <ul className="related">{entries.map(relatedLink)}</ul>
+            </div>
+          ))}
+          {others.length > 0 && <ul className="related">{others.map(relatedLink)}</ul>}
         </div>
       )}
     </section>

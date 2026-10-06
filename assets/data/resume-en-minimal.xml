@@ -571,19 +571,25 @@
         <lane>
           <kind>education</kind>
           <label>Education</label>
-          <rows>6</rows>
+          <rows>7</rows>
           <groups>
+            <group>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>0</row>
+              <rows>2</rows>
+            </group>
             <group>
               <left>52.9%</left>
               <width>23.54%</width>
               <row>0</row>
-              <rows>4</rows>
+              <rows>5</rows>
             </group>
             <group>
               <left>76.43%</left>
               <width>23.57%</width>
               <row>0</row>
-              <rows>6</rows>
+              <rows>7</rows>
             </group>
           </groups>
           <bars>
@@ -626,17 +632,29 @@
               <row>1</row>
             </bar>
             <bar>
-              <target>education-universite-saint-louis-bruxelles-bachelor-of-arts-ba</target>
+              <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
               <kind>education</kind>
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
-              <title>Bachelor of Arts - BA</title>
+              <title>Bachelor in Political Sciences</title>
               <caption>Université Saint-Louis - Bruxelles</caption>
               <period>Sep 2016 – Jun 2017</period>
-              <label>Université Saint-Louis - Bruxelles — Bachelor of Arts - BA — Sep 2016 – Jun 2017</label>
+              <label>Université Saint-Louis - Bruxelles — Bachelor in Political Sciences — Sep 2016 – Jun 2017</label>
               <left>41.25%</left>
               <width>4.37%</width>
               <row>0</row>
+            </bar>
+            <bar>
+              <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <kind>block</kind>
+              <depth>1</depth>
+              <name>16-17</name>
+              <caption>16-17</caption>
+              <period>Sep 2016 – Jun 2017</period>
+              <label>16-17 — Sep 2016 – Jun 2017</label>
+              <left>41.25%</left>
+              <width>4.37%</width>
+              <row>1</row>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -653,6 +671,54 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>block</kind>
+              <depth>1</depth>
+              <name>18-19</name>
+              <caption>18-19</caption>
+              <period>Sep 2018 – Sep 2019</period>
+              <label>18-19 — Sep 2018 – Sep 2019</label>
+              <left>52.9%</left>
+              <width>5.55%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>block</kind>
+              <depth>1</depth>
+              <name>19-20</name>
+              <caption>19-20</caption>
+              <period>Sep 2019 – Sep 2020</period>
+              <label>19-20 — Sep 2019 – Sep 2020</label>
+              <left>58.46%</left>
+              <width>5.81%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>block</kind>
+              <depth>1</depth>
+              <name>20-21</name>
+              <caption>20-21</caption>
+              <period>Sep 2020 – Sep 2021</period>
+              <label>20-21 — Sep 2020 – Sep 2021</label>
+              <left>64.29%</left>
+              <width>5.81%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <kind>block</kind>
+              <depth>1</depth>
+              <name>21-22</name>
+              <caption>21-22</caption>
+              <period>Sep 2021 – Oct 2022</period>
+              <label>21-22 — Sep 2021 – Oct 2022</label>
+              <left>70.11%</left>
+              <width>6.32%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>Student Representative</name>
@@ -662,7 +728,7 @@
               <label>Student Representative — EPHEC École Supérieure de Promotion Sociale — Sep 2019 – Oct 2022</label>
               <left>58.72%</left>
               <width>17.71%</width>
-              <row>1</row>
+              <row>2</row>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -675,7 +741,7 @@
               <label>Tutor — EPHEC École Supérieure de Promotion Sociale — Sep 2019 – Oct 2022</label>
               <left>58.72%</left>
               <width>17.71%</width>
-              <row>2</row>
+              <row>3</row>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
@@ -687,7 +753,7 @@
               <label>WebMenu — Nov 2021 – Mar 2022</label>
               <left>70.87%</left>
               <width>2.41%</width>
-              <row>3</row>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-institut-saint-louis-bruxelles-attestation</target>
@@ -700,7 +766,7 @@
               <label>Institut Saint-Louis Bruxelles — Attestation — Sep 2019 – Jun 2020</label>
               <left>58.72%</left>
               <width>4.37%</width>
-              <row>4</row>
+              <row>5</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -717,6 +783,58 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
+              <kind>block</kind>
+              <depth>1</depth>
+              <name>22-23</name>
+              <title>Bridging block</title>
+              <caption>22-23 · Bridging block</caption>
+              <period>Oct 2022 – Sep 2023</period>
+              <label>22-23 — Bridging block — Oct 2022 – Sep 2023</label>
+              <left>76.43%</left>
+              <width>5.31%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>block</kind>
+              <depth>1</depth>
+              <name>23-24</name>
+              <title>Bridging block</title>
+              <caption>23-24 · Bridging block</caption>
+              <period>Sep 2023 – Sep 2024</period>
+              <label>23-24 — Bridging block — Sep 2023 – Sep 2024</label>
+              <left>81.76%</left>
+              <width>5.81%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>block</kind>
+              <depth>1</depth>
+              <name>24-25</name>
+              <title>Master 1</title>
+              <caption>24-25 · Master 1</caption>
+              <period>Sep 2024 – Sep 2025</period>
+              <label>24-25 — Master 1 — Sep 2024 – Sep 2025</label>
+              <left>87.59%</left>
+              <width>5.81%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
+              <kind>block</kind>
+              <depth>1</depth>
+              <name>25-26</name>
+              <title>Master 2</title>
+              <caption>25-26 · Master 2</caption>
+              <period>Sep 2025 – Sep 2026</period>
+              <label>25-26 — Master 2 — Sep 2025 – Sep 2026</label>
+              <left>93.41%</left>
+              <width>5.66%</width>
+              <row>1</row>
+            </bar>
+            <bar>
+              <target>education-umons-master-of-science-ms</target>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>Student Representative</name>
@@ -726,7 +844,7 @@
               <label>Student Representative — UMons — Nov 2023 – Sep 2026</label>
               <left>82.99%</left>
               <width>16.08%</width>
-              <row>1</row>
+              <row>2</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -739,7 +857,7 @@
               <label>Buddy TandeMons — UMons — Nov 2023 – Sep 2026</label>
               <left>82.99%</left>
               <width>16.08%</width>
-              <row>2</row>
+              <row>3</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -751,7 +869,7 @@
               <label>Remi — Oct 2024 – Jun 2025</label>
               <left>87.86%</left>
               <width>4.35%</width>
-              <row>3</row>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -763,7 +881,7 @@
               <label>Emvi App — Dec 2024 – Jun 2025</label>
               <left>88.83%</left>
               <width>3.38%</width>
-              <row>4</row>
+              <row>5</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -775,7 +893,7 @@
               <label>Acteble — Jul 2025 – Present</label>
               <left>92.23%</left>
               <width>7.77%</width>
-              <row>3</row>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -787,7 +905,7 @@
               <label>Synergy — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>4</row>
+              <row>5</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science-ms</target>
@@ -799,7 +917,7 @@
               <label>fedrag-be — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>6</row>
             </bar>
           </bars>
         </lane>
@@ -1179,6 +1297,58 @@ This comprehensive training covered various areas including SQL Server, Node.js,
         <project>Cryptographie et sécurité des systèmes informatiques</project>
         <project>Éthique et droit de l'informatique</project>
       </projects>
+      <blocks>
+        <block>
+          <year>2022-2023</year>
+          <label>Bridging block</label>
+          <startDate>2022-10-15</startDate>
+          <endDate>2023-09-13</endDate>
+          <units>
+            <unit>Bases de données I</unit>
+            <unit>Algorithmique</unit>
+            <unit>Modélisation logicielle</unit>
+            <unit>Mathématique</unit>
+          </units>
+        </block>
+        <block>
+          <year>2023-2024</year>
+          <label>Bridging block</label>
+          <startDate>2023-09-14</startDate>
+          <endDate>2024-09-13</endDate>
+          <units>
+            <unit>Anglais I</unit>
+            <unit>Lecture et rédaction scientifique</unit>
+            <unit>Stratégie et politiques en ressources humaines</unit>
+            <unit>Réseaux</unit>
+            <unit>Systèmes d'exploitation</unit>
+          </units>
+        </block>
+        <block>
+          <year>2024-2025</year>
+          <label>Master 1</label>
+          <startDate>2024-09-14</startDate>
+          <endDate>2025-09-13</endDate>
+          <units>
+            <unit>Anglais II</unit>
+            <unit>Bases de données II</unit>
+            <unit>Ingénierie de logiciels et gestion de projets</unit>
+            <unit>Intelligence artificielle</unit>
+            <unit>Recherche opérationnelle et applications</unit>
+            <unit>Structures de données</unit>
+          </units>
+        </block>
+        <block>
+          <year>2025-2026</year>
+          <label>Master 2</label>
+          <startDate>2025-09-14</startDate>
+          <endDate>2026-09-04</endDate>
+          <units>
+            <unit>Séminaires d'informatique en veille technologique</unit>
+            <unit>Cryptographie et sécurité des systèmes informatiques</unit>
+            <unit>Éthique et droit de l'informatique</unit>
+          </units>
+        </block>
+      </blocks>
       <anchor>education-umons-master-of-science-ms</anchor>
     </school>
     <school>
@@ -1230,6 +1400,58 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <project>Langue en situation appliquée à l'enseignement supérieur UE1</project>
         <project>Langue en situation appliquée à l'enseignement supérieur UE2</project>
       </projects>
+      <blocks>
+        <block>
+          <year>2018-2019</year>
+          <startDate>2018-09-30</startDate>
+          <endDate>2019-09-13</endDate>
+          <units>
+            <unit>Structure des ordinateurs</unit>
+            <unit>Informatique - Système d'exploitation</unit>
+            <unit>Mathématique appliquée à l'informatique</unit>
+            <unit>Principes algorithmiques et programmation</unit>
+            <unit>Principes d'analyse informatique</unit>
+          </units>
+        </block>
+        <block>
+          <year>2019-2020</year>
+          <startDate>2019-09-14</startDate>
+          <endDate>2020-09-13</endDate>
+          <units>
+            <unit>Bases des réseaux</unit>
+            <unit>Gestion et exploitation de bases de données</unit>
+            <unit>Information et communication professionnelles</unit>
+            <unit>Initiation aux bases de données</unit>
+            <unit>Notions de e-business</unit>
+            <unit>Projet d'analyse et de conception</unit>
+            <unit>Techniques de gestion de projet</unit>
+            <unit>Web : principes de base</unit>
+          </units>
+        </block>
+        <block>
+          <year>2020-2021</year>
+          <startDate>2020-09-14</startDate>
+          <endDate>2021-09-13</endDate>
+          <units>
+            <unit>Éléments de statistique</unit>
+            <unit>Organisation des entreprises et éléments de management</unit>
+            <unit>Produits logiciels de gestion intégrés</unit>
+            <unit>Programmation orientée objet</unit>
+            <unit>Projet de développement SGBD</unit>
+            <unit>Projet de développement web</unit>
+          </units>
+        </block>
+        <block>
+          <year>2021-2022</year>
+          <startDate>2021-09-14</startDate>
+          <endDate>2022-10-15</endDate>
+          <units>
+            <unit>Administration, gestion et sécurisation des réseaux</unit>
+            <unit>Projet d'intégration de développement</unit>
+            <unit>Veille technologique</unit>
+          </units>
+        </block>
+      </blocks>
       <anchor>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchor>
     </school>
     <school>
@@ -1243,12 +1465,39 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
     </school>
     <school>
       <institution>Université Saint-Louis - Bruxelles</institution>
-      <studyType>Bachelor of Arts - BA</studyType>
-      <area>Political sciences</area>
+      <studyType>Bachelor in Political Sciences</studyType>
+      <area>General orientation</area>
       <startDate>2016-09-30</startDate>
       <endDate>2017-06-30</endDate>
       <gpa>29 credits earned in 2016-2017, contact me for more information.</gpa>
-      <anchor>education-universite-saint-louis-bruxelles-bachelor-of-arts-ba</anchor>
+      <projects>
+        <project>Économie I</project>
+        <project>Économie II</project>
+        <project>Science politique</project>
+        <project>Séminaire : penser le social</project>
+        <project>Séminaire : principes et méthodes en sciences sociales</project>
+        <project>Socio-économie des médias</project>
+        <project>Anglais I (Saint-Louis)</project>
+        <project>Néerlandais I</project>
+      </projects>
+      <blocks>
+        <block>
+          <year>2016-2017</year>
+          <startDate>2016-09-30</startDate>
+          <endDate>2017-06-30</endDate>
+          <units>
+            <unit>Économie I</unit>
+            <unit>Économie II</unit>
+            <unit>Science politique</unit>
+            <unit>Séminaire : penser le social</unit>
+            <unit>Séminaire : principes et méthodes en sciences sociales</unit>
+            <unit>Socio-économie des médias</unit>
+            <unit>Anglais I (Saint-Louis)</unit>
+            <unit>Néerlandais I</unit>
+          </units>
+        </block>
+      </blocks>
+      <anchor>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</anchor>
     </school>
     <school>
       <institution>UCLouvain - Université catholique de Louvain</institution>
@@ -1479,7 +1728,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>Complexity</keyword>
         <keyword>Trees</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-900-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-011-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Algorithmics</summary>
@@ -1489,7 +1738,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <keywords>
         <keyword>English</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-901-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-012-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>English I</summary>
@@ -1504,7 +1753,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>NoSQL</keyword>
         <keyword>BigData</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-902-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-013-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Databases I</summary>
@@ -1515,7 +1764,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>ScientificWriting</keyword>
         <keyword>LiteratureReview</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-903-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-014-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Scientific reading and writing</summary>
@@ -1529,7 +1778,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>PropositionalLogic</keyword>
         <keyword>PredicateLogic</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-904-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-015-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Mathematics</summary>
@@ -1544,7 +1793,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>MockTesting</keyword>
         <keyword>BDD</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-905-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-016-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Software modelling</summary>
@@ -1559,7 +1808,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>BGP</keyword>
         <keyword>Ethernet</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-906-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-017-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Networks</summary>
@@ -1569,7 +1818,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <keywords>
         <keyword>HRM</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-907-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-018-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>HR strategy and policy</summary>
@@ -1577,13 +1826,14 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
     <project>
       <name>Systèmes d'exploitation</name>
       <keywords>
-        <keyword>Concurrency</keyword>
-        <keyword>Threads</keyword>
+        <keyword>Processes</keyword>
+        <keyword>Semaphores</keyword>
+        <keyword>Synchronization</keyword>
+        <keyword>MemoryManagement</keyword>
+        <keyword>FileSystems</keyword>
         <keyword>Scheduling</keyword>
-        <keyword>Paging</keyword>
-        <keyword>Virtualization</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-MC-INFOSP-908-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-019-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Operating systems</summary>
@@ -1593,7 +1843,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <keywords>
         <keyword>English</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-001-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-001-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>English II</summary>
@@ -1609,7 +1859,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>DataMining</keyword>
         <keyword>Weka</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-101-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-101-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Databases II</summary>
@@ -1621,7 +1871,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>Scrum</keyword>
         <keyword>SoftwareEngineering</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-008-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-008-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Software engineering and project management</summary>
@@ -1634,7 +1884,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>FirstOrderLogic</keyword>
         <keyword>SupervisedLearning</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-102-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-102-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Artificial intelligence</summary>
@@ -1647,7 +1897,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>IntegerProgramming</keyword>
         <keyword>Duality</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-103-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-103-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Operations research and applications</summary>
@@ -1661,7 +1911,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <keyword>Sorting</keyword>
         <keyword>Complexity</keyword>
       </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M1-INFOSP-104-C.htm</url>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-104-C.htm</url>
       <type>Course unit</type>
       <entity>UMONS</entity>
       <summary>Data structures</summary>
@@ -1988,6 +2238,95 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <type>Course unit</type>
       <entity>EPHEC</entity>
       <summary>Applied language for higher education II</summary>
+    </project>
+    <project>
+      <name>Économie I</name>
+      <keywords>
+        <keyword>Microeconomics</keyword>
+        <keyword>CompetitiveMarkets</keyword>
+        <keyword>FirmBehaviour</keyword>
+        <keyword>MarketFailure</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>USL-B</entity>
+      <summary>Economics I</summary>
+    </project>
+    <project>
+      <name>Économie II</name>
+      <keywords>
+        <keyword>ImperfectCompetition</keyword>
+        <keyword>Macroeconomics</keyword>
+        <keyword>NationalIncome</keyword>
+        <keyword>MonetaryMarket</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>USL-B</entity>
+      <summary>Economics II</summary>
+    </project>
+    <project>
+      <name>Science politique</name>
+      <keywords>
+        <keyword>PoliticalScience</keyword>
+        <keyword>Power</keyword>
+        <keyword>State</keyword>
+        <keyword>Democracy</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>USL-B</entity>
+      <summary>Political science</summary>
+    </project>
+    <project>
+      <name>Séminaire : penser le social</name>
+      <keywords>
+        <keyword>Epistemology</keyword>
+        <keyword>Durkheim</keyword>
+        <keyword>Weber</keyword>
+        <keyword>Marx</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>USL-B</entity>
+      <summary>Seminar: thinking the social</summary>
+    </project>
+    <project>
+      <name>Séminaire : principes et méthodes en sciences sociales</name>
+      <keywords>
+        <keyword>AcademicWriting</keyword>
+        <keyword>Citation</keyword>
+        <keyword>Epistemology</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>USL-B</entity>
+      <summary>Seminar: principles and methods in the social sciences</summary>
+    </project>
+    <project>
+      <name>Socio-économie des médias</name>
+      <keywords>
+        <keyword>MediaEconomics</keyword>
+        <keyword>Advertising</keyword>
+        <keyword>MediaRegulation</keyword>
+        <keyword>WebEconomy</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>USL-B</entity>
+      <summary>Socio-economics of the media</summary>
+    </project>
+    <project>
+      <name>Anglais I (Saint-Louis)</name>
+      <keywords>
+        <keyword>English</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>USL-B</entity>
+      <summary>English I</summary>
+    </project>
+    <project>
+      <name>Néerlandais I</name>
+      <keywords>
+        <keyword>Dutch</keyword>
+      </keywords>
+      <type>Course unit</type>
+      <entity>USL-B</entity>
+      <summary>Dutch I</summary>
     </project>
   </projects>
   <references>

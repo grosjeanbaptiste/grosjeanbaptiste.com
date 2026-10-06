@@ -57,6 +57,20 @@ def _work_extras(resume: Resume) -> list[dict[str, Any]]:
     return _trim_trailing_nulls(out)
 
 
+def _block(resume: Resume, block, en) -> dict[str, Any]:
+    """One academic year of a degree: its units by their rendered name."""
+    out: dict[str, Any] = {"year": en(block.year)}
+    if block.label is not None:
+        out["label"] = en(block.label)
+    if block.period is not None:
+        out["startDate"] = block.period.start.iso()
+        end = block.period.end
+        if hasattr(end, "iso"):
+            out["endDate"] = end.iso()
+    out["units"] = [_resolve_project_name(resume, ref.target) for ref in block.units]
+    return out
+
+
 def _education_extras(resume: Resume) -> list[dict[str, Any] | None]:
     """Index-aligned with resume.education. Carries every field JSON
     Resume v1.0.0 does not define on education (``gpa`` from strict
@@ -82,6 +96,8 @@ def _education_extras(resume: Resume) -> list[dict[str, Any] | None]:
             extras["projects"] = [
                 _resolve_project_name(resume, ref.target) for ref in e.projects
             ]
+        if e.blocks:
+            extras["blocks"] = [_block(resume, b, _en) for b in e.blocks]
         extras["courses"] = list(e.courses) if e.courses else []
         out.append(extras)
     return _trim_trailing_nulls(out)

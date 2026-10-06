@@ -36,10 +36,35 @@ function packLane(bars, scale) {
 // group takes the first rows free over its whole width. Gives the bars with
 // their row and depth, the rows used, and an outline per group that carried
 // something.
+// A degree's blocks, on the one row under it: each labelled inside its
+// segment, with the programme's name when it fits and the year alone otherwise.
+function bandsOnPaper(bands, scale) {
+  return bands.map((band) => {
+    const x0 = scale.x(band.start);
+    const x1 = scale.x(band.end + 1);
+    const fits = (b) => scale.labelWidth(b) + 2 * PAD <= x1 - x0;
+    const worded = fits(band) ? band : { ...band, rest: '' };
+    const strong = fits(worded) ? worded.strong : '';
+    return {
+      ...worded,
+      strong,
+      x0,
+      x1,
+      row: 0,
+      label: { place: 'inside', x: x0 + PAD, from: x0, to: x1 },
+    };
+  });
+}
+
 function packGroupsOnPaper(groups, scale) {
-  const blocks = groups.map(({ head, children }) => {
+  const blocks = groups.map(({ head, children, bands = [] }) => {
     const [top] = packLane([head], scale);
-    const under = packLane(children, scale);
+    const band = bandsOnPaper(bands, scale);
+    // What the entry carried goes below its blocks.
+    const under = [
+      ...band,
+      ...packLane(children, scale).map((b) => ({ ...b, row: b.row + (band.length ? 1 : 0) })),
+    ];
     const all = [top, ...under];
     return {
       top,

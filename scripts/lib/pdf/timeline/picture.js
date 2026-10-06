@@ -19,6 +19,8 @@ const FILL = {
   competition: 'PrimaryColor!55!ThirdColor',
   project: 'SecondaryColor!75!ThirdColor',
   volunteer: 'BodyColor',
+  // A degree's academic years, in the colour of the degrees.
+  block: 'PrimaryColor',
 };
 const fillOf = (bar) => (bar.depth === 1 ? `${FILL[bar.kind]}!30!BackgroundColor` : FILL[bar.kind]);
 // The outline of an entry that carried something, in its lane's colour.

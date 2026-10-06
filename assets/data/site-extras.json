@@ -170,6 +170,58 @@
         "Cryptographie et sécurité des systèmes informatiques",
         "Éthique et droit de l'informatique"
       ],
+      "blocks": [
+        {
+          "year": "2022-2023",
+          "label": "Bridging block",
+          "startDate": "2022-10-15",
+          "endDate": "2023-09-13",
+          "units": [
+            "Bases de données I",
+            "Algorithmique",
+            "Modélisation logicielle",
+            "Mathématique"
+          ]
+        },
+        {
+          "year": "2023-2024",
+          "label": "Bridging block",
+          "startDate": "2023-09-14",
+          "endDate": "2024-09-13",
+          "units": [
+            "Anglais I",
+            "Lecture et rédaction scientifique",
+            "Stratégie et politiques en ressources humaines",
+            "Réseaux",
+            "Systèmes d'exploitation"
+          ]
+        },
+        {
+          "year": "2024-2025",
+          "label": "Master 1",
+          "startDate": "2024-09-14",
+          "endDate": "2025-09-13",
+          "units": [
+            "Anglais II",
+            "Bases de données II",
+            "Ingénierie de logiciels et gestion de projets",
+            "Intelligence artificielle",
+            "Recherche opérationnelle et applications",
+            "Structures de données"
+          ]
+        },
+        {
+          "year": "2025-2026",
+          "label": "Master 2",
+          "startDate": "2025-09-14",
+          "endDate": "2026-09-04",
+          "units": [
+            "Séminaires d'informatique en veille technologique",
+            "Cryptographie et sécurité des systèmes informatiques",
+            "Éthique et droit de l'informatique"
+          ]
+        }
+      ],
       "courses": []
     },
     {
@@ -212,6 +264,58 @@
         "Langue en situation appliquée à l'enseignement supérieur UE1",
         "Langue en situation appliquée à l'enseignement supérieur UE2"
       ],
+      "blocks": [
+        {
+          "year": "2018-2019",
+          "startDate": "2018-09-30",
+          "endDate": "2019-09-13",
+          "units": [
+            "Structure des ordinateurs",
+            "Informatique - Système d'exploitation",
+            "Mathématique appliquée à l'informatique",
+            "Principes algorithmiques et programmation",
+            "Principes d'analyse informatique"
+          ]
+        },
+        {
+          "year": "2019-2020",
+          "startDate": "2019-09-14",
+          "endDate": "2020-09-13",
+          "units": [
+            "Bases des réseaux",
+            "Gestion et exploitation de bases de données",
+            "Information et communication professionnelles",
+            "Initiation aux bases de données",
+            "Notions de e-business",
+            "Projet d'analyse et de conception",
+            "Techniques de gestion de projet",
+            "Web : principes de base"
+          ]
+        },
+        {
+          "year": "2020-2021",
+          "startDate": "2020-09-14",
+          "endDate": "2021-09-13",
+          "units": [
+            "Éléments de statistique",
+            "Organisation des entreprises et éléments de management",
+            "Produits logiciels de gestion intégrés",
+            "Programmation orientée objet",
+            "Projet de développement SGBD",
+            "Projet de développement web"
+          ]
+        },
+        {
+          "year": "2021-2022",
+          "startDate": "2021-09-14",
+          "endDate": "2022-10-15",
+          "units": [
+            "Administration, gestion et sécurisation des réseaux",
+            "Projet d'intégration de développement",
+            "Veille technologique"
+          ]
+        }
+      ],
       "courses": []
     },
     {
@@ -220,6 +324,33 @@
     },
     {
       "gpa": "29 credits earned in 2016-2017, contact me for more information.",
+      "projects": [
+        "Économie I",
+        "Économie II",
+        "Science politique",
+        "Séminaire : penser le social",
+        "Séminaire : principes et méthodes en sciences sociales",
+        "Socio-économie des médias",
+        "Anglais I (Saint-Louis)",
+        "Néerlandais I"
+      ],
+      "blocks": [
+        {
+          "year": "2016-2017",
+          "startDate": "2016-09-30",
+          "endDate": "2017-06-30",
+          "units": [
+            "Économie I",
+            "Économie II",
+            "Science politique",
+            "Séminaire : penser le social",
+            "Séminaire : principes et méthodes en sciences sociales",
+            "Socio-économie des médias",
+            "Anglais I (Saint-Louis)",
+            "Néerlandais I"
+          ]
+        }
+      ],
       "courses": []
     },
     {
@@ -403,6 +534,30 @@
     },
     {
       "summary": "Applied language for higher education II"
+    },
+    {
+      "summary": "Economics I"
+    },
+    {
+      "summary": "Economics II"
+    },
+    {
+      "summary": "Political science"
+    },
+    {
+      "summary": "Seminar: thinking the social"
+    },
+    {
+      "summary": "Seminar: principles and methods in the social sciences"
+    },
+    {
+      "summary": "Socio-economics of the media"
+    },
+    {
+      "summary": "English I"
+    },
+    {
+      "summary": "Dutch I"
     }
   ],
   "dailyLife": {

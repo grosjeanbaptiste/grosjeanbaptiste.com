@@ -74,7 +74,21 @@
       "studyType": "Master of Science",
       "area": "Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)",
       "gpa": "13,04/20 — behaald met voldoening",
-      "summary": "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages."
+      "summary": "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.",
+      "blocks": [
+        {
+          "label": "Schakelblok"
+        },
+        {
+          "label": "Schakelblok"
+        },
+        {
+          "label": "Master 1"
+        },
+        {
+          "label": "Master 2"
+        }
+      ]
     },
     {
       "studyType": "Professionele bachelor",
@@ -88,8 +102,8 @@
       "gpa": "Attestation"
     },
     {
-      "studyType": "Bachelor of Arts (BA)",
-      "area": "Politieke wetenschappen",
+      "studyType": "Bachelor in de politieke wetenschappen",
+      "area": "Algemene oriëntatie",
       "gpa": "29 credits behaald in 2016-2017, contacteer mij voor meer info."
     },
     {
@@ -288,6 +302,30 @@
     },
     {
       "summary": "Toegepaste taal hoger onderwijs UE2"
+    },
+    {
+      "summary": "Economie I"
+    },
+    {
+      "summary": "Economie II"
+    },
+    {
+      "summary": "Politieke wetenschap"
+    },
+    {
+      "summary": "Seminarie: het sociale denken"
+    },
+    {
+      "summary": "Seminarie: principes en methoden in de sociale wetenschappen"
+    },
+    {
+      "summary": "Socio-economie van de media"
+    },
+    {
+      "summary": "Engels I"
+    },
+    {
+      "summary": "Nederlands I"
     }
   ],
   "references": [

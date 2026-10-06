@@ -33,30 +33,35 @@ const ALONE = { project: 'projects', volunteer: 'volunteer' };
 // away — but what it carried and still runs is kept, standing alone.
 function within(lanes, from) {
   const orphans = [];
-  const kept = lanes.map((lane) => ({
+  const lanesKept = lanes.map((lane) => ({
     kind: lane.kind,
-    groups: lane.groups.flatMap(({ head, children }) => {
-      const inSpan = children.filter((c) => reaches(c, from)).map((c) => cut(c, from));
-      if (reaches(head, from)) return [{ head: cut(head, from), children: inSpan }];
+    groups: lane.groups.flatMap(({ head, children, bands }) => {
+      const kept = (bars) => bars.filter((c) => reaches(c, from)).map((c) => cut(c, from));
+      const inSpan = kept(children);
+      // A degree's blocks go with it: cut to the span, gone when it is.
+      if (reaches(head, from))
+        return [{ head: cut(head, from), children: inSpan, bands: kept(bands) }];
       orphans.push(...inSpan);
       return [];
     }),
   }));
   for (const orphan of orphans) {
     const kind = ALONE[orphan.kind];
-    if (!kept.some((l) => l.kind === kind)) kept.push({ kind, groups: [] });
-    kept.find((l) => l.kind === kind).groups.push({ head: orphan, children: [] });
+    if (!lanesKept.some((l) => l.kind === kind)) lanesKept.push({ kind, groups: [] });
+    lanesKept.find((l) => l.kind === kind).groups.push({ head: orphan, children: [], bands: [] });
   }
-  return kept.filter((lane) => lane.groups.length > 0);
+  return lanesKept.filter((lane) => lane.groups.length > 0);
 }
 
 function timelineBars(resume, today, years = null) {
   const now = monthNow(today);
   const all = entryGroups(resume, now).map((lane) => ({
     kind: lane.kind,
-    groups: lane.groups.map(({ head, children }) => ({
+    groups: lane.groups.map(({ head, children, blocks }) => ({
       head: worded(head, false),
       children: children.map((c) => worded(c, true)),
+      // A degree's academic years: the year, then the programme's name for it.
+      bands: blocks.map((b) => worded(b, false)),
     })),
   }));
   const spanStart = years === null ? null : now - years * 12 + 1;

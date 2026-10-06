@@ -130,3 +130,34 @@ test('with the names alone, entries that share a name keep their role', () => {
   const rests = sheet.lanes[0].bars.filter((b) => b.strong === 'Xtrada').map((b) => b.rest);
   assert.deepEqual(rests.sort(), ['Crafter', 'Data Scientist']);
 });
+
+test('with the names alone, a degree keeps its blocks', () => {
+  const host = { ...bar('UMons', at(2020, 3), at(2023, 6)), rest: 'a role' };
+  const band = { ...bar('20-21', at(2020, 3), at(2021, 3)), kind: 'block' };
+  const lanes = [
+    { kind: 'work', groups: busy.map((head) => ({ head, children: [] })) },
+    { kind: 'education', groups: [{ head: host, children: [], bands: [band] }] },
+  ];
+  const sheet = layOut(
+    { from: at(2020, 3), to: at(2023, 6), lanes },
+    { measure: (b) => (b.rest === 'a role' ? 300 : 1) },
+  );
+  assert.equal(sheet.labels, 'names');
+  assert.ok(sheet.lanes[1].bars.some((b) => b.kind === 'block'));
+});
+
+// The years of a career are not evenly filled: with `density`, a year is given
+// width by what it holds (./scale.js).
+test('with density, a busy year is drawn wider than a quiet one', () => {
+  const quiet = bar('quiet', at(2020, 3), at(2023, 6));
+  const crowd2022 = Array.from({ length: 6 }, (_, i) => bar(`b${i}`, at(2022, 1), at(2022, 12)));
+  const sheet = layOut(timeline([{ kind: 'work', bars: [quiet, ...crowd2022] }]), { density: 0.6 });
+  const x = Object.fromEntries(sheet.years.map((y) => [y.year, y.x]));
+  assert.ok(x[2023] - x[2022] > 1.5 * (x[2022] - x[2021]));
+});
+
+test('without density, the years are drawn to scale', () => {
+  const sheet = layOut(timeline([{ kind: 'work', bars: [bar('a', at(2020, 3), at(2023, 6))] }]));
+  const x = Object.fromEntries(sheet.years.map((y) => [y.year, y.x]));
+  assert.ok(Math.abs(x[2023] - x[2022] - (x[2022] - x[2021])) < 1e-9);
+});
