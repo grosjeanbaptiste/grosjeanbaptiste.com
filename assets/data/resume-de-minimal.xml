@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=7fe6698d"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=ffcf9ad8"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -222,43 +222,43 @@
           <groups>
             <group>
               <left>70.87%</left>
-              <width>2.43%</width>
+              <width>2.41%</width>
               <row>0</row>
               <rows>2</rows>
             </group>
             <group>
               <left>77.18%</left>
-              <width>3.4%</width>
+              <width>3.38%</width>
               <row>0</row>
               <rows>2</rows>
             </group>
             <group>
               <left>81.55%</left>
-              <width>1.94%</width>
+              <width>1.93%</width>
               <row>1</row>
               <rows>2</rows>
             </group>
             <group>
               <left>83.5%</left>
-              <width>3.88%</width>
+              <width>3.49%</width>
               <row>1</row>
               <rows>2</rows>
             </group>
             <group>
               <left>84.47%</left>
-              <width>3.4%</width>
+              <width>3.25%</width>
               <row>3</row>
               <rows>2</rows>
             </group>
             <group>
               <left>87.86%</left>
-              <width>4.37%</width>
+              <width>4.35%</width>
               <row>0</row>
               <rows>2</rows>
             </group>
             <group>
               <left>88.83%</left>
-              <width>3.4%</width>
+              <width>3.38%</width>
               <row>2</row>
               <rows>2</rows>
             </group>
@@ -269,8 +269,8 @@
               <rows>2</rows>
             </group>
             <group>
-              <left>94.17%</left>
-              <width>3.88%</width>
+              <left>94.21%</left>
+              <width>3.83%</width>
               <row>2</row>
               <rows>3</rows>
             </group>
@@ -282,10 +282,11 @@
               <depth>0</depth>
               <name>Quick Restaurant</name>
               <title>Studentenjob</title>
+              <caption>Quick Restaurant</caption>
               <period>Sep. 2017 – Sep. 2017</period>
               <label>Quick Restaurant — Studentenjob — Sep. 2017 – Sep. 2017</label>
               <left>46.6%</left>
-              <width>0.49%</width>
+              <width>0.47%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -294,10 +295,11 @@
               <depth>0</depth>
               <name>RESTOMAX</name>
               <title>Full-Stack-Webentwickler Praktikant</title>
+              <caption>RESTOMAX</caption>
               <period>Nov. 2021 – März 2022</period>
               <label>RESTOMAX — Full-Stack-Webentwickler Praktikant — Nov. 2021 – März 2022</label>
               <left>70.87%</left>
-              <width>2.43%</width>
+              <width>2.41%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -305,10 +307,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>WebMenu</name>
+              <caption>WebMenu</caption>
               <period>Nov. 2021 – März 2022</period>
               <label>WebMenu — Nov. 2021 – März 2022</label>
               <left>70.87%</left>
-              <width>2.43%</width>
+              <width>2.41%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -317,10 +320,11 @@
               <depth>0</depth>
               <name>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</name>
               <title>Studentenjob</title>
+              <caption>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</caption>
               <period>März 2022 – März 2022</period>
               <label>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles — Studentenjob — März 2022 – März 2022</label>
-              <left>72.82%</left>
-              <width>0.49%</width>
+              <left>73.27%</left>
+              <width>0.02%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -329,10 +333,11 @@
               <depth>0</depth>
               <name>EDITx: IT Challenges, IT Jobs, Education in IT for X</name>
               <title>Full-Stack-Webentwickler Praktikant</title>
+              <caption>EDITx: IT Challenges, IT Jobs, Education in IT for X</caption>
               <period>Apr. 2022 – Apr. 2022</period>
               <label>EDITx: IT Challenges, IT Jobs, Education in IT for X — Full-Stack-Webentwickler Praktikant — Apr. 2022 – Apr. 2022</label>
               <left>73.3%</left>
-              <width>0.49%</width>
+              <width>0.47%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -341,10 +346,11 @@
               <depth>0</depth>
               <name>Technofutur TIC</name>
               <title>Full-Stack-Webentwickler Praktikant</title>
+              <caption>Technofutur TIC</caption>
               <period>Dez. 2022 – Juni 2023</period>
               <label>Technofutur TIC — Full-Stack-Webentwickler Praktikant — Dez. 2022 – Juni 2023</label>
               <left>77.18%</left>
-              <width>3.4%</width>
+              <width>3.38%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -353,10 +359,11 @@
               <depth>1</depth>
               <name>MyWay</name>
               <title>Freelance</title>
+              <caption>MyWay</caption>
               <period>Jan. 2023 – Juni 2023</period>
               <label>MyWay — Freelance — Jan. 2023 – Juni 2023</label>
               <left>77.67%</left>
-              <width>2.91%</width>
+              <width>2.9%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -365,10 +372,11 @@
               <depth>0</depth>
               <name>Xtrada</name>
               <title>Software Crafter</title>
+              <caption>Xtrada · Software Crafter</caption>
               <period>Aug. 2023 – Sep. 2024</period>
               <label>Xtrada — Software Crafter — Aug. 2023 – Sep. 2024</label>
-              <left>81.07%</left>
-              <width>6.8%</width>
+              <left>81.38%</left>
+              <width>6.34%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -377,10 +385,11 @@
               <depth>0</depth>
               <name>Xtrada</name>
               <title>.NET/Blazor Software Crafter</title>
+              <caption>Xtrada · .NET/Blazor Software Crafter</caption>
               <period>Sep. 2023 – Dez. 2023</period>
               <label>Xtrada — .NET/Blazor Software Crafter — Sep. 2023 – Dez. 2023</label>
               <left>81.55%</left>
-              <width>1.94%</width>
+              <width>1.93%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -388,10 +397,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Kwalitijd</name>
+              <caption>Kwalitijd</caption>
               <period>Sep. 2023 – Dez. 2023</period>
               <label>Kwalitijd — Sep. 2023 – Dez. 2023</label>
               <left>81.55%</left>
-              <width>1.94%</width>
+              <width>1.93%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -400,10 +410,11 @@
               <depth>0</depth>
               <name>Xtrada</name>
               <title>.NET/React Software Crafter</title>
+              <caption>Xtrada · .NET/React Software Crafter</caption>
               <period>Jan. 2024 – Aug. 2024</period>
               <label>Xtrada — .NET/React Software Crafter — Jan. 2024 – Aug. 2024</label>
               <left>83.5%</left>
-              <width>3.88%</width>
+              <width>3.49%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -411,10 +422,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>VhAuctions</name>
+              <caption>VhAuctions</caption>
               <period>Jan. 2024 – Feb. 2024</period>
               <label>VhAuctions — Jan. 2024 – Feb. 2024</label>
               <left>83.5%</left>
-              <width>0.97%</width>
+              <width>0.94%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -423,10 +435,11 @@
               <depth>0</depth>
               <name>Xtrada</name>
               <title>Data Scientist</title>
+              <caption>Xtrada · Data Scientist</caption>
               <period>März 2024 – Sep. 2024</period>
               <label>Xtrada — Data Scientist — März 2024 – Sep. 2024</label>
               <left>84.47%</left>
-              <width>3.4%</width>
+              <width>3.25%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -434,10 +447,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>VhAuctions NER Inventory Model</name>
+              <caption>VhAuctions NER Inventory Model</caption>
               <period>März 2024 – Aug. 2024</period>
               <label>VhAuctions NER Inventory Model — März 2024 – Aug. 2024</label>
               <left>84.47%</left>
-              <width>2.91%</width>
+              <width>2.52%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -446,10 +460,11 @@
               <depth>0</depth>
               <name>Emvi.ai</name>
               <title>AI Software Crafter</title>
+              <caption>Emvi.ai · AI Software Crafter</caption>
               <period>Okt. 2024 – Juni 2025</period>
               <label>Emvi.ai — AI Software Crafter — Okt. 2024 – Juni 2025</label>
               <left>87.86%</left>
-              <width>4.37%</width>
+              <width>4.35%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -457,10 +472,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
+              <caption>Remi</caption>
               <period>Okt. 2024 – Juni 2025</period>
               <label>Remi — Okt. 2024 – Juni 2025</label>
               <left>87.86%</left>
-              <width>4.37%</width>
+              <width>4.35%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -469,10 +485,11 @@
               <depth>0</depth>
               <name>Emvi.ai</name>
               <title>AI Software Crafter Lead</title>
+              <caption>Emvi.ai · AI Software Crafter Lead</caption>
               <period>Dez. 2024 – Juni 2025</period>
               <label>Emvi.ai — AI Software Crafter Lead — Dez. 2024 – Juni 2025</label>
               <left>88.83%</left>
-              <width>3.4%</width>
+              <width>3.38%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -480,10 +497,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
+              <caption>Emvi App</caption>
               <period>Dez. 2024 – Juni 2025</period>
               <label>Emvi App — Dez. 2024 – Juni 2025</label>
               <left>88.83%</left>
-              <width>3.4%</width>
+              <width>3.38%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -492,6 +510,7 @@
               <depth>0</depth>
               <name>Acteble</name>
               <title>Gründer</title>
+              <caption>Acteble</caption>
               <period>Juli 2025 – Heute</period>
               <label>Acteble — Gründer — Juli 2025 – Heute</label>
               <left>92.23%</left>
@@ -503,6 +522,7 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble</name>
+              <caption>Acteble</caption>
               <period>Juli 2025 – Heute</period>
               <label>Acteble — Juli 2025 – Heute</label>
               <left>92.23%</left>
@@ -515,10 +535,11 @@
               <depth>0</depth>
               <name>Belgischer Senat</name>
               <title>KI-Forschungswissenschaftler</title>
+              <caption>Belgischer Senat</caption>
               <period>Nov. 2025 – Juni 2026</period>
               <label>Belgischer Senat — KI-Forschungswissenschaftler — Nov. 2025 – Juni 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
+              <left>94.21%</left>
+              <width>3.83%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -526,10 +547,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
+              <caption>Synergy</caption>
               <period>Nov. 2025 – Juni 2026</period>
               <label>Synergy — Nov. 2025 – Juni 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
+              <left>94.21%</left>
+              <width>3.83%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -537,10 +559,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
+              <caption>fedrag-be</caption>
               <period>Nov. 2025 – Juni 2026</period>
               <label>fedrag-be — Nov. 2025 – Juni 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
+              <left>94.21%</left>
+              <width>3.83%</width>
               <row>4</row>
             </bar>
           </bars>
@@ -548,18 +571,18 @@
         <lane>
           <kind>education</kind>
           <label>Ausbildung</label>
-          <rows>10</rows>
+          <rows>6</rows>
           <groups>
             <group>
-              <left>52.43%</left>
-              <width>24.27%</width>
+              <left>52.9%</left>
+              <width>23.54%</width>
               <row>0</row>
               <rows>4</rows>
             </group>
             <group>
-              <left>76.21%</left>
-              <width>23.79%</width>
-              <row>4</row>
+              <left>76.43%</left>
+              <width>23.57%</width>
+              <row>0</row>
               <rows>6</rows>
             </group>
           </groups>
@@ -569,10 +592,11 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Lycée Mater Dei</name>
+              <caption>Lycée Mater Dei</caption>
               <period>Sep. 2009 – Juni 2012</period>
               <label>Lycée Mater Dei — Sep. 2009 – Juni 2012</label>
-              <left>0%</left>
-              <width>16.5%</width>
+              <left>0.47%</left>
+              <width>16.02%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -581,10 +605,11 @@
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
               <title>C.E.S.S.</title>
+              <caption>Centre Scolaire Saint-Adrien - Val Duchesse</caption>
               <period>Sep. 2012 – Juni 2015</period>
               <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — Sep. 2012 – Juni 2015</label>
-              <left>17.48%</left>
-              <width>16.5%</width>
+              <left>17.94%</left>
+              <width>16.02%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -593,10 +618,11 @@
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
               <title>Vorbereitungskurse</title>
+              <caption>UCLouvain - Université catholique de Louvain</caption>
               <period>Sep. 2014 – Juni 2015</period>
               <label>UCLouvain - Université catholique de Louvain — Vorbereitungskurse — Sep. 2014 – Juni 2015</label>
-              <left>29.13%</left>
-              <width>4.85%</width>
+              <left>29.6%</left>
+              <width>4.37%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -605,10 +631,11 @@
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
               <title>Bachelor of Arts (BA)</title>
+              <caption>Université Saint-Louis - Bruxelles</caption>
               <period>Sep. 2016 – Juni 2017</period>
               <label>Université Saint-Louis - Bruxelles — Bachelor of Arts (BA) — Sep. 2016 – Juni 2017</label>
-              <left>40.78%</left>
-              <width>4.85%</width>
+              <left>41.25%</left>
+              <width>4.37%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -617,10 +644,11 @@
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
               <title>Professioneller Bachelor</title>
+              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</caption>
               <period>Sep. 2018 – Okt. 2022</period>
               <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Professioneller Bachelor — Sep. 2018 – Okt. 2022</label>
-              <left>52.43%</left>
-              <width>24.27%</width>
+              <left>52.9%</left>
+              <width>23.54%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -629,10 +657,11 @@
               <depth>1</depth>
               <name>Studierendenvertreter</name>
               <title>EPHEC École Supérieure de Promotion Sociale</title>
+              <caption>Studierendenvertreter</caption>
               <period>Sep. 2019 – Okt. 2022</period>
               <label>Studierendenvertreter — EPHEC École Supérieure de Promotion Sociale — Sep. 2019 – Okt. 2022</label>
-              <left>58.25%</left>
-              <width>18.45%</width>
+              <left>58.72%</left>
+              <width>17.71%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -641,10 +670,11 @@
               <depth>1</depth>
               <name>Tutor</name>
               <title>EPHEC École Supérieure de Promotion Sociale</title>
+              <caption>Tutor</caption>
               <period>Sep. 2019 – Okt. 2022</period>
               <label>Tutor — EPHEC École Supérieure de Promotion Sociale — Sep. 2019 – Okt. 2022</label>
-              <left>58.25%</left>
-              <width>18.45%</width>
+              <left>58.72%</left>
+              <width>17.71%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -652,10 +682,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>WebMenu</name>
+              <caption>WebMenu</caption>
               <period>Nov. 2021 – März 2022</period>
               <label>WebMenu — Nov. 2021 – März 2022</label>
               <left>70.87%</left>
-              <width>2.43%</width>
+              <width>2.41%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -664,10 +695,11 @@
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
               <title>Attestation</title>
+              <caption>Institut Saint-Louis Bruxelles</caption>
               <period>Sep. 2019 – Juni 2020</period>
               <label>Institut Saint-Louis Bruxelles — Attestation — Sep. 2019 – Juni 2020</label>
-              <left>58.25%</left>
-              <width>4.85%</width>
+              <left>58.72%</left>
+              <width>4.37%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -676,11 +708,12 @@
               <depth>0</depth>
               <name>UMons</name>
               <title>Master of Science</title>
+              <caption>UMons</caption>
               <period>Okt. 2022 – Sep. 2026</period>
               <label>UMons — Master of Science — Okt. 2022 – Sep. 2026</label>
-              <left>76.21%</left>
-              <width>23.3%</width>
-              <row>4</row>
+              <left>76.43%</left>
+              <width>22.64%</width>
+              <row>0</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -688,11 +721,12 @@
               <depth>1</depth>
               <name>Studierendenvertreter</name>
               <title>UMons</title>
+              <caption>Studierendenvertreter</caption>
               <period>Nov. 2023 – Sep. 2026</period>
               <label>Studierendenvertreter — UMons — Nov. 2023 – Sep. 2026</label>
-              <left>82.52%</left>
-              <width>16.99%</width>
-              <row>5</row>
+              <left>82.99%</left>
+              <width>16.08%</width>
+              <row>1</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -700,66 +734,72 @@
               <depth>1</depth>
               <name>Buddy TandeMons</name>
               <title>UMons</title>
+              <caption>Buddy TandeMons</caption>
               <period>Nov. 2023 – Sep. 2026</period>
               <label>Buddy TandeMons — UMons — Nov. 2023 – Sep. 2026</label>
-              <left>82.52%</left>
-              <width>16.99%</width>
-              <row>6</row>
+              <left>82.99%</left>
+              <width>16.08%</width>
+              <row>2</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
+              <caption>Remi</caption>
               <period>Okt. 2024 – Juni 2025</period>
               <label>Remi — Okt. 2024 – Juni 2025</label>
               <left>87.86%</left>
-              <width>4.37%</width>
-              <row>7</row>
+              <width>4.35%</width>
+              <row>3</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
+              <caption>Emvi App</caption>
               <period>Dez. 2024 – Juni 2025</period>
               <label>Emvi App — Dez. 2024 – Juni 2025</label>
               <left>88.83%</left>
-              <width>3.4%</width>
-              <row>8</row>
+              <width>3.38%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble</name>
+              <caption>Acteble</caption>
               <period>Juli 2025 – Heute</period>
               <label>Acteble — Juli 2025 – Heute</label>
               <left>92.23%</left>
               <width>7.77%</width>
-              <row>7</row>
+              <row>3</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
+              <caption>Synergy</caption>
               <period>Nov. 2025 – Juni 2026</period>
               <label>Synergy — Nov. 2025 – Juni 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
-              <row>8</row>
+              <left>94.21%</left>
+              <width>3.83%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
+              <caption>fedrag-be</caption>
               <period>Nov. 2025 – Juni 2026</period>
               <label>fedrag-be — Nov. 2025 – Juni 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
-              <row>9</row>
+              <left>94.21%</left>
+              <width>3.83%</width>
+              <row>5</row>
             </bar>
           </bars>
         </lane>
@@ -781,6 +821,7 @@
               <depth>0</depth>
               <name>Hackathon Citizens of Wallonia 2023</name>
               <title>Citizens of Wallonia</title>
+              <caption>Hackathon Citizens of Wallonia 2023</caption>
               <period>März 2023 – März 2023</period>
               <label>Hackathon Citizens of Wallonia 2023 — Citizens of Wallonia — März 2023 – März 2023</label>
               <left>78.64%</left>
@@ -792,6 +833,7 @@
               <depth>0</depth>
               <name>Hackathon Citizens of Wallonia 2024</name>
               <title>Citizens of Wallonia</title>
+              <caption>Hackathon Citizens of Wallonia 2024</caption>
               <period>März 2024 – März 2024</period>
               <label>Hackathon Citizens of Wallonia 2024 — Citizens of Wallonia — März 2024 – März 2024</label>
               <left>84.47%</left>
@@ -802,37 +844,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>EduCraft</name>
+              <caption>EduCraft</caption>
               <period>März 2024 – März 2024</period>
               <label>EduCraft — März 2024 – März 2024</label>
-              <left>84.47%</left>
-              <width>0.49%</width>
-              <row>1</row>
-            </bar>
-          </bars>
-        </lane>
-        <lane>
-          <kind>projects</kind>
-          <label>Projekte</label>
-          <rows>2</rows>
-          <bars>
-            <bar>
-              <kind>project</kind>
-              <depth>0</depth>
-              <name>Baba</name>
-              <period>Juli 2026 – Heute</period>
-              <label>Baba — Juli 2026 – Heute</label>
-              <left>98.06%</left>
-              <width>1.94%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <kind>project</kind>
-              <depth>0</depth>
-              <name>KAG</name>
-              <period>Juli 2026 – Heute</period>
-              <label>KAG — Juli 2026 – Heute</label>
-              <left>98.06%</left>
-              <width>1.94%</width>
+              <left>84.9%</left>
+              <width>0.03%</width>
               <row>1</row>
             </bar>
           </bars>
@@ -1261,41 +1277,6 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
     </school>
   </education>
   <projects>
-    <project>
-      <name>Baba</name>
-      <description>Shell-artige CLI, in kontrolliertem Englisch abgefragt über reine symbolische KI — ohne LLM im Ablauf.</description>
-      <keywords>
-        <keyword>Rust</keyword>
-        <keyword>Prolog</keyword>
-        <keyword>LinkGrammar</keyword>
-        <keyword>DDD</keyword>
-        <keyword>CleanArchitecture</keyword>
-        <keyword>TDD</keyword>
-      </keywords>
-      <startDate>2026-07-02</startDate>
-      <type>CLI</type>
-      <roles>
-        <role>Author</role>
-      </roles>
-      <summary>Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer.</summary>
-    </project>
-    <project>
-      <name>KAG</name>
-      <description>Domänenunabhängiges Rust-Framework zum Benchmarking von Retrieval-Augmented-Generation-Pipelines.</description>
-      <keywords>
-        <keyword>Rust</keyword>
-        <keyword>DDD</keyword>
-        <keyword>CleanArchitecture</keyword>
-        <keyword>TDD</keyword>
-        <keyword>RAG</keyword>
-      </keywords>
-      <startDate>2026-07-05</startDate>
-      <type>Framework</type>
-      <roles>
-        <role>Author</role>
-      </roles>
-      <summary>Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core.</summary>
-    </project>
     <project>
       <name>Synergy</name>
       <description>Interne Plattform des belgischen Bundesparlaments zum Durchsuchen, Erkunden und Befragen der parlamentarischen Archive.</description>

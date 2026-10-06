@@ -50,7 +50,7 @@ export function TimelineLane(props: Props) {
             }
           />
         ))}
-        {lane.bars.map(({ key, entry, offset, length, row, depth }) => {
+        {lane.bars.map(({ key, entry, offset, length, row, depth, caption }) => {
           const period = formatPeriod(entry.period, lang, strings.ongoing);
           const name = [entry.title, entry.organisation, period].filter(Boolean).join(' — ');
           return (
@@ -79,8 +79,7 @@ export function TimelineLane(props: Props) {
                 } as CSSProperties
               }
             >
-              {/* Under its host a bar is named by what it is; the host says where. */}
-              <span>{depth === 1 ? entry.title : (entry.organisation ?? entry.title)}</span>
+              <span>{caption}</span>
             </Link>
           );
         })}

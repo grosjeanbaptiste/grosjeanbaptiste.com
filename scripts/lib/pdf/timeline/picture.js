@@ -68,12 +68,16 @@ function barLines(lane, sheet) {
 }
 
 // Behind the bars: each entry that carried something, with what it carried.
+// Drawn from the start of its first bar to the end of its last, and inside the
+// gap between rows on both sides — so two outlines that meet, across the page
+// (an entry that begins the day another ends) or down it, never overlap.
 function outlineLines(lane, sheet) {
   const colour = OUTLINE[lane.kind] ?? 'BodyColor';
+  const gap = sheet.pitch - sheet.bar;
   return lane.outlines.map((o) => {
-    const top = lane.top - o.row * sheet.pitch + 0.5;
-    const bottom = lane.top - (o.row + o.rows) * sheet.pitch + (sheet.pitch - sheet.bar) - 0.5;
-    return `\\filldraw[draw=${colour}!55,fill=${colour}!10,line width=0.3pt,rounded corners=0.8mm] (${mm(o.x0 - 0.6)},${mm(top)}) rectangle (${mm(o.x1 + 0.6)},${mm(bottom)});`;
+    const top = lane.top - o.row * sheet.pitch + gap * 0.4;
+    const bottom = lane.top - (o.row + o.rows) * sheet.pitch + gap * 0.6;
+    return `\\filldraw[draw=${colour}!55,fill=${colour}!10,line width=0.3pt,rounded corners=0.6mm] (${mm(o.x0)},${mm(top)}) rectangle (${mm(o.x1)},${mm(bottom)});`;
   });
 }
 

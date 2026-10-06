@@ -117,3 +117,8 @@ test('each January is marked on the axis', () => {
   const sheet = layOutCompact(model([bar('abc', 0, 12)]), OPTIONS);
   assert.deepEqual(sheet.years, [{ year: 2021, x: 24 }]);
 });
+
+test('a bar told apart by its title is written with it', () => {
+  const lane = laid([bar('Xtrada', 0, 20, { caption: 'Xtrada · Crafter' })]);
+  assert.equal(named(lane, 'Xtrada').strong, 'Xtrada · Crafter');
+});

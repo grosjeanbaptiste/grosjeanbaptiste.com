@@ -23,7 +23,10 @@ test('the recto closes its two columns before the verso starts', () => {
 });
 
 test('the verso opens with the timeline', () => {
-  assert.match(verso(), /^[^{]*\\cvsection\{Timeline\}\s*\\noindent\\begin\{tikzpicture\}/);
+  assert.match(
+    verso(),
+    /\\cvsectiontight\s*\\cvsection\{Timeline\}\s*\\noindent\\begin\{tikzpicture\}/,
+  );
 });
 
 test('the timeline shows what each entry carried inside it', () => {
@@ -52,7 +55,7 @@ test('the verso is no longer split into a sidebar and a main column', () => {
 test('the verso tightens its section headings, for itself only', () => {
   assert.match(
     verso(),
-    /^\s*\\begingroup\\let\\cvsection\\cvsectiontight[\s\S]*\\endgroup\s*\\end\{document\}/,
+    /\\begingroup\\let\\cvsection\\cvsectiontight[\s\S]*\\endgroup\s*\\end\{landscape\}/,
   );
 });
 
@@ -69,7 +72,24 @@ test('the recto is what it was: sidebar, about, experience', () => {
   assert.doesNotMatch(recto, /tikzpicture|multicols/);
 });
 
-test('the timeline is no wider than the text block', () => {
-  // A4 less the two 9 mm margins; the outlines overhang the track by 0.6 mm.
-  assert.ok(-TITLES.x + TRACK + 0.6 <= 210 - 18);
+// The verso is a landscape page: the timeline needs the width, and the
+// references run in four columns under it. The recto stays upright.
+test('the verso is set in landscape, the recto is not', () => {
+  const tex = latex();
+  assert.match(verso(), /^\s*\\begin\{landscape\}[\s\S]*\\end\{landscape\}\s*\\end\{document\}/);
+  assert.doesNotMatch(tex.split('\\clearpage')[0], /\\begin\{landscape\}/);
+});
+
+test('the landscape verso is a page a reader sees turned, not text set sideways', () => {
+  // pdflscape rotates the page itself in the PDF, where lscape only turns the text.
+  assert.match(latex(), /\\usepackage\{pdflscape\}/);
+});
+
+test('the timeline is no wider than the landscape text block', () => {
+  // The long side of A4 less the two 8 mm margins it gets once turned.
+  assert.ok(-TITLES.x + TRACK <= 297 - 16);
+});
+
+test('the timeline uses the width the landscape page gives it', () => {
+  assert.ok(-TITLES.x + TRACK > 210, 'it is still sized for an upright page');
 });

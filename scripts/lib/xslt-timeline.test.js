@@ -66,7 +66,8 @@ test('a volunteering role targets the degree of its organisation', () => {
 test('a bar is placed in percent of the career', () => {
   assert.deepEqual(
     [barNamed('education', 'UMons').left, barNamed('education', 'UMons').width],
-    ['0%', '97.96%'],
+    // 15 Oct 2022 – 4 Sep 2026, to the day, on a 49-month axis.
+    ['0.92%', '95.2%'],
   );
 });
 

@@ -47,3 +47,29 @@ test('a narrower sheet gives its lane titles less room', () => {
     /text width=18mm[^\n]*\\fontsize\{7\}[^\n]*at \(-20,/,
   );
 });
+
+// Two entries that follow one another the same day have outlines that meet:
+// neither is drawn over the other, across or down the page.
+const outlined = (outlines) =>
+  buildPicture(
+    { ...sheet([bar('a')]), lanes: [{ kind: 'work', top: -5, rows: 4, bars: [], outlines }] },
+    I18N.en,
+  )
+    .split('\n')
+    .filter((line) => line.startsWith('\\filldraw'))
+    .map((line) =>
+      [...line.matchAll(/\(([-\d.]+),([-\d.]+)\)/g)].map((m) => [Number(m[1]), Number(m[2])]),
+    );
+
+test('an outline is drawn from the start of its first bar to the end of its last', () => {
+  const [[from, to]] = outlined([{ x0: 10, x1: 30, row: 0, rows: 2 }]);
+  assert.deepEqual([from[0], to[0]], [10, 30]);
+});
+
+test('the outlines of two groups stacked one under the other do not overlap', () => {
+  const [[, upperEnd], [lowerStart]] = outlined([
+    { x0: 0, x1: 30, row: 0, rows: 2 },
+    { x0: 0, x1: 30, row: 2, rows: 2 },
+  ]);
+  assert.ok(upperEnd[1] > lowerStart[1], 'the upper outline runs into the lower one');
+});

@@ -14,7 +14,7 @@ const { buildEducation } = require('./sections/education');
 const { buildReferences } = require('./sections/extras');
 const { buildTimeline } = require('./sections/timeline');
 
-// The verso, full width: the timeline at the top, the references under it in
+// The verso, a landscape page: the timeline at the top, the references under it in
 // columns. Volunteering used to fill a sidebar here; a role now shows inside
 // the entry that hosts it — in the timeline, and beside the projects of an
 // entry the recto prints (sections/_trailer.js).
@@ -25,9 +25,12 @@ function buildVerso(resume, t, today) {
   // group so that nothing after it inherits the change.
   return [
     '\\clearpage',
+    // A landscape page: the timeline needs the width.
+    '\\begin{landscape}',
     '\\begingroup\\let\\cvsection\\cvsectiontight',
     ...parts,
     '\\endgroup',
+    '\\end{landscape}',
   ].join('\n');
 }
 

@@ -18,11 +18,17 @@ const shipped = fs.readdirSync(OUTPUT_DIR).filter((f) => /^cv_grosjean_baptiste_
 const sha = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const pdfPages = (file) =>
   Number(/^Pages:\s+(\d+)/m.exec(execFileSync('pdfinfo', [file], { encoding: 'utf8' }))[1]);
-const pdfRatio = (file) => {
-  const m = /^Page size:\s+([\d.]+) x ([\d.]+)/m.exec(
-    execFileSync('pdfinfo', [file], { encoding: 'utf8' }),
-  );
-  return Number(m[1]) / Number(m[2]);
+// The shape of one page as a reader shows it: a page turned in the PDF (the
+// landscape verso of the vertical CV) is as wide as it is stored tall.
+const pdfRatio = (file, number) => {
+  const info = execFileSync('pdfinfo', ['-f', `${number}`, '-l', `${number}`, file], {
+    encoding: 'utf8',
+  });
+  const size = new RegExp(`^Page\\s+${number} size:\\s+([\\d.]+) x ([\\d.]+)`, 'm').exec(info);
+  const turned = new RegExp(`^Page\\s+${number} rot:\\s+(\\d+)`, 'm').exec(info);
+  if (!size || !turned) throw new Error(`pdfinfo says nothing of page ${number} of ${file}`);
+  const ratio = Number(size[1]) / Number(size[2]);
+  return Number(turned[1]) % 180 === 0 ? ratio : 1 / ratio;
 };
 
 test('the manifest lists exactly the shipped PDFs', () => {
@@ -41,12 +47,12 @@ for (const name of shipped) {
   });
 
   test(`${name}: each picture is the page's shape, at the size the manifest says, and light`, () => {
-    for (const page of manifest().files[name]?.pages ?? []) {
+    for (const [index, page] of (manifest().files[name]?.pages ?? []).entries()) {
       const file = path.join(OUTPUT_DIR, '..', '..', page.src);
       const { width, height } = webpSize(fs.readFileSync(file));
       assert.deepEqual([width, height], [page.width, page.height], page.src);
       assert.ok(
-        Math.abs(width / height - pdfRatio(pdf)) < 0.01,
+        Math.abs(width / height - pdfRatio(pdf, index + 1)) < 0.01,
         `${page.src} is not the page's shape`,
       );
       assert.ok(fs.statSync(file).size < 160 * 1024, `${page.src} is over 160 kB`);

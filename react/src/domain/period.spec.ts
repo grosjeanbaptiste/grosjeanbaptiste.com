@@ -4,8 +4,28 @@ import { Period } from './period';
 const today = new Date('2026-10-01');
 
 describe('Period', () => {
-  it('reads an ISO start date down to the month', () => {
-    expect(Period.of('2022-10-15', '2026-09-04').start).toEqual({ year: 2022, month: 10 });
+  it('reads an ISO start date, with its day when the CV gives one', () => {
+    expect(Period.of('2022-10-15', '2026-09-04').start).toEqual({ year: 2022, month: 10, day: 15 });
+  });
+
+  it('reads a date given to the month as that month', () => {
+    expect(Period.of('2022-10').start).toEqual({ year: 2022, month: 10 });
+  });
+
+  it('stops as its last day begins, so that a period starting that day follows it', () => {
+    const first = Period.of('2018-09-30', '2022-10-15');
+    const next = Period.of('2022-10-15', '2026-09-04');
+    expect(first.stopsAt(new Date('2026-10-01'))).toBe(next.startsAt());
+  });
+
+  it('covers its whole last month when dated to the month', () => {
+    const period = Period.of('2024-03', '2024-05');
+    expect(period.stopsAt(new Date('2026-10-01')) - period.startsAt()).toBe(3);
+  });
+
+  it('is never shorter than a day', () => {
+    const period = Period.of('2024-03-10', '2024-03-10');
+    expect(period.stopsAt(new Date('2026-10-01'))).toBeGreaterThan(period.startsAt());
   });
 
   it('is ongoing when it has no end date', () => {

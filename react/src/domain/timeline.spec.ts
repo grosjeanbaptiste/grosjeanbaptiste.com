@@ -103,12 +103,18 @@ describe('timelineOf', () => {
     ]);
   });
 
-  it('places a bar by its month offset from the start of the timeline', () => {
-    expect(bar('work', 'xtrada-data-scientist')).toMatchObject({ offset: 3, length: 18 });
+  // 1 January 2023 to 30 June 2024, to the day: it stops as its last day begins.
+  it('places a bar by its offset from the start of the timeline, in months', () => {
+    const xtrada = bar('work', 'xtrada-data-scientist');
+    expect(xtrada?.offset).toBe(3);
+    expect(xtrada?.length).toBeCloseTo(17 + 29 / 30, 9);
   });
 
-  it('runs an ongoing entry up to today', () => {
-    expect(bar('project', 'baba')).toMatchObject({ offset: 45, length: 4 });
+  // Begun on 2 July 2026: a day into the month, and through the current one.
+  it('runs an ongoing entry up to the end of the current month', () => {
+    const baba = bar('project', 'baba');
+    expect(baba?.offset).toBeCloseTo(45 + 1 / 31, 9);
+    expect((baba?.offset ?? 0) + (baba?.length ?? 0)).toBeCloseTo(49, 9);
   });
 
   it('stacks overlapping entries of one lane on separate rows', () => {
@@ -139,5 +145,78 @@ describe('timelineOf', () => {
 
   it('reports one year mark per January it spans', () => {
     expect(timeline.years.map((y) => y.year)).toEqual([2023, 2024, 2025, 2026]);
+  });
+});
+
+// What a bar reads. An employer met twice gives two bars of one name: the
+// position is then what tells them apart.
+describe('a bar’s caption', () => {
+  const work = aResume().work;
+  const second = {
+    id: 'xtrada-crafter',
+    company: 'Xtrada',
+    position: 'Crafter',
+    startDate: '2022-01-01',
+    endDate: '2022-12-31',
+  };
+  const twice = timelineOf(entriesOf({ ...aResume(), work: [...work, second] }), today);
+  const captionOf = (t: typeof twice, id: string) =>
+    t.lanes.flatMap((l) => l.bars).find((b) => b.key === id)?.caption;
+
+  it('is the organisation when no other entry of the lane shares it', () => {
+    expect(captionOf(timeline, 'xtrada-data-scientist')).toBe('Xtrada');
+  });
+
+  it('adds the title when two entries of the lane share an organisation', () => {
+    expect(captionOf(twice, 'xtrada-data-scientist')).toBe('Xtrada · Data Scientist');
+    expect(captionOf(twice, 'xtrada-crafter')).toBe('Xtrada · Crafter');
+  });
+
+  it('is the title of what an entry carried', () => {
+    expect(captionOf(timeline, 'acteble-founder>acteble')).toBe('Acteble');
+  });
+});
+
+// Bars are placed to the day. A degree that ends the day the next one begins
+// used to claim that whole month, as did the next: the two overlapped and the
+// second was pushed onto a row of its own.
+describe('entries that hand over on one day', () => {
+  const handover = {
+    ...aResume(),
+    work: [],
+    projects: [],
+    volunteer: [],
+    education: [
+      {
+        id: 'ephec',
+        institution: 'EPHEC',
+        studyType: 'Bachelor',
+        startDate: '2018-09-30',
+        endDate: '2022-10-15',
+      },
+      {
+        id: 'umons',
+        institution: 'UMons',
+        studyType: 'Master',
+        startDate: '2022-10-15',
+        endDate: '2026-09-04',
+      },
+    ],
+  };
+  const [lane] = timelineOf(entriesOf(handover), today).lanes;
+  const bar = (id: string) => lane?.bars.find((b) => b.key === id);
+
+  it('follow one another on the same row', () => {
+    expect([bar('ephec')?.row, bar('umons')?.row]).toEqual([0, 0]);
+  });
+
+  it('meet exactly: one stops where the next starts', () => {
+    const ephec = bar('ephec');
+    expect((ephec?.offset ?? 0) + (ephec?.length ?? 0)).toBeCloseTo(bar('umons')?.offset ?? -1, 9);
+  });
+
+  it('start on their day, not with their month', () => {
+    // 30 September: 29 of the month's 30 days in, on an axis that starts with September.
+    expect(bar('ephec')?.offset).toBeCloseTo(29 / 30, 9);
   });
 });

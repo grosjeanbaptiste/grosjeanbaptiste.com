@@ -18,7 +18,7 @@ function renderBar(bar, timeline, lang, onPage) {
   // data-depth 1: a project or a role, drawn under the entry that carried it.
   const nesting = `data-kind="${bar.kind}" data-depth="${bar.depth}"`;
   const common = `class="tl-bar" style="${style}" aria-label="${escapeHtml(label)}" ${nesting} ${data}`;
-  const text = `<span>${escapeHtml(bar.name || bar.title)}</span>`;
+  const text = `<span>${escapeHtml(bar.caption)}</span>`;
   return onPage.has(bar.anchor)
     ? `<a ${common} href="#${bar.anchor}">${text}</a>`
     : `<span ${common} tabindex="0">${text}</span>`;

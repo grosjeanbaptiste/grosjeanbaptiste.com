@@ -38,12 +38,19 @@ function stack(lanes, pitch) {
 
 // What the labels say, fullest first: "name · role", then — when no type fits
 // that on the page — the names alone, which need fewer rows.
+// Two entries of one name keep their role even then: it tells them apart.
 const namesOnly = (timeline) => ({
   ...timeline,
-  lanes: timeline.lanes.map((lane) => ({
-    ...lane,
-    groups: lane.groups.map(({ head, children }) => ({ head: { ...head, rest: '' }, children })),
-  })),
+  lanes: timeline.lanes.map((lane) => {
+    const met = (name) => lane.groups.filter((g) => g.head.strong === name).length;
+    return {
+      ...lane,
+      groups: lane.groups.map(({ head, children }) => ({
+        head: met(head.strong) > 1 ? head : { ...head, rest: '' },
+        children,
+      })),
+    };
+  }),
 });
 const PLANS = [
   { labels: 'full', of: (timeline) => timeline },

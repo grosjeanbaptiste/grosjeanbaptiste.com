@@ -6,11 +6,11 @@ const { tex } = require('../tex');
 // dead code — volunteer/projects/awards/interests already surface on the HTML
 // site, not the space-constrained PDF.
 //
-// They sit on the verso under the timeline, in three columns across the page:
-// one long column left two thirds of the sheet's width unused.
+// They sit on the landscape verso under the timeline, in four columns across
+// the page: one long column left most of the sheet's width unused.
 function buildReferences(resume, t) {
   if (!resume.references?.length) return '';
-  const parts = [`\\cvsection{${tex(t.references)}}`, '\\begin{multicols}{3}'];
+  const parts = [`\\cvsection{${tex(t.references)}}`, '\\begin{multicols}{4}'];
   resume.references.forEach((r, i, arr) => {
     // \nobreak: a name is never left alone at the foot of a column.
     parts.push(`\\noindent\\textbf{${tex(r.name)}}\\par\\nobreak`);

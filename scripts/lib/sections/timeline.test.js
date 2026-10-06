@@ -76,10 +76,11 @@ test('a bar whose entry is not on the page is not a link, and still reachable by
 });
 
 test('a bar sits at its place in the career, in percent', () => {
-  // UMons: Oct 2022 – Sep 2026, the axis Oct 2022 – Oct 2026 (49 months).
+  // UMons: 15 Oct 2022 – 4 Sep 2026, to the day, on an axis Oct 2022 – Oct 2026
+  // (49 months): it starts 14/31 of a month in and stops 3/30 into September.
   const umons = bars('education')[0];
-  assert.match(umons, /left:0%/);
-  assert.match(umons, /width:97\.96%/);
+  assert.match(umons, /left:0\.92%/);
+  assert.match(umons, /width:95\.2%/);
 });
 
 test('a bar names its entry and period for assistive technology', () => {
@@ -133,4 +134,22 @@ test('the page loads the timeline script and its styles', () => {
 test('the timeline is no longer dropped from the printed sheet', () => {
   const print = fs.readFileSync(path.join(ROOT, 'css/print.css'), 'utf8');
   assert.doesNotMatch(print, /#timeline/);
+});
+
+test('two roles at one employer are told apart on their bars', () => {
+  const twice = {
+    ...resume,
+    work: [
+      {
+        company: 'Xtrada',
+        position: 'Data Scientist',
+        startDate: '2024-03-01',
+        endDate: '2024-09-22',
+      },
+      { company: 'Xtrada', position: 'Crafter', startDate: '2023-08-21', endDate: '2024-02-28' },
+    ],
+  };
+  const html = generateTimeline(twice, 'en', TODAY, new Set());
+  assert.match(html, /<span>Xtrada · Data Scientist<\/span>/);
+  assert.match(html, /<span>Xtrada · Crafter<\/span>/);
 });

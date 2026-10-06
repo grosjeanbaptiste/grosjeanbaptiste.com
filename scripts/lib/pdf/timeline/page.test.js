@@ -115,3 +115,18 @@ test('with the names alone, no bar carries a role any more', () => {
   const sheet = layOut(timeline([{ kind: 'work', bars: busy }]), { measure: wideWithRole });
   assert.deepEqual([...new Set(sheet.lanes[0].bars.map((b) => b.rest))], ['']);
 });
+
+// Even with the names alone, two entries of one name keep their role: without
+// it the two bars would read the same.
+test('with the names alone, entries that share a name keep their role', () => {
+  const twins = [
+    { ...bar('Xtrada', at(2020, 3), at(2020, 3)), strong: 'Xtrada', rest: 'Crafter' },
+    { ...bar('Xtrada2', at(2021, 3), at(2021, 3)), strong: 'Xtrada', rest: 'Data Scientist' },
+  ];
+  const sheet = layOut(timeline([{ kind: 'work', bars: [...busy, ...twins] }]), {
+    measure: (b) => (b.rest === 'a role' ? 300 : 1),
+  });
+  assert.equal(sheet.labels, 'names');
+  const rests = sheet.lanes[0].bars.filter((b) => b.strong === 'Xtrada').map((b) => b.rest);
+  assert.deepEqual(rests.sort(), ['Crafter', 'Data Scientist']);
+});

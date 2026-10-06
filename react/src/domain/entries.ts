@@ -67,13 +67,14 @@ const fromVolunteer = (v: VolunteerRecord): Entry => ({
   related: [],
 });
 
-// Held on a day: its period is that day's month.
+// Held on a day; on a time axis it shows as its month — a day would be a
+// hairline.
 const fromCompetition = (c: CompetitionRecord): Entry => ({
   kind: 'competition',
   id: c.id,
   title: c.title,
   organisation: c.organizer,
-  period: Period.of(c.date, c.date),
+  period: Period.of(c.date.slice(0, 7), c.date.slice(0, 7)),
   summary: c.summary,
   details: [],
   skills: [],

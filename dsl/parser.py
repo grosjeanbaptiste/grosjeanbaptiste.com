@@ -303,8 +303,13 @@ class _Builder(Transformer):
 
     def project_entry(self, meta, children):
         key = str(children[0])
-        fields = dict(children[1:])
-        return ProjectEntry(src=_pos(meta), key=key, **fields)
+        hide_on = None
+        rest = children[1:]
+        if rest and isinstance(rest[0], tuple) and rest[0][0] == "__hide__":
+            hide_on = rest[0][1]
+            rest = rest[1:]
+        fields = dict(rest)
+        return ProjectEntry(src=_pos(meta), key=key, hide_on=hide_on, **fields)
 
     def proj_name(self, meta, children):
         return ("name", children[0])
