@@ -7,12 +7,13 @@ const { timelineOf } = require('../../timeline-model');
 const { layOutCompact } = require('../timeline/compact');
 const { buildPicture } = require('../timeline/picture');
 
-// The text block is 192 mm wide: the lane titles, then the time axis.
-const TITLES = { x: -21, width: 19, size: 7 };
-const TRACK = 170;
-// A row. The verso is the timeline's and the references': it has the height
-// to let the rows breathe.
-const PITCH = 4.2;
+// The verso is a landscape page: its text block is 281 mm wide — the lane
+// titles, then the time axis.
+const TITLES = { x: -23, width: 21, size: 7.5 };
+const TRACK = 257;
+// A row. The landscape page is 192 mm tall for the timeline and the
+// references under it.
+const PITCH = 3.6;
 const FONT = 6.5;
 
 function buildTimeline(resume, t, today) {

@@ -171,6 +171,8 @@ class ProjectEntry(Node):
     type: str | None = None  # noqa: A003 — schema name
     roles: tuple[str, ...] = ()
     entity: str | None = None
+    # A side project the author keeps out of some or all displays.
+    hide_on: HideTarget | None = None
 
 
 @dataclass(frozen=True, kw_only=True)

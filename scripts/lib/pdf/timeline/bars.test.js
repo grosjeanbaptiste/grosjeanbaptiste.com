@@ -39,9 +39,10 @@ const group = (timeline, kind, name) =>
   lane(timeline, kind).groups.find((g) => g.head.strong === name);
 const whole = () => timelineBars(aResume(), TODAY);
 
-test('a bar spans its entry from its first month to its last', () => {
+// 21 August 2023 to 22 September 2024, to the day: a bar runs to `end + 1`.
+test('a bar spans its entry from its first day to its last', () => {
   const { head } = group(whole(), 'work', 'Xtrada');
-  assert.deepEqual([head.start, head.end], [at(2023, 8), at(2024, 9)]);
+  assert.deepEqual([head.start, head.end + 1], [at(2023, 8) + 20 / 31, at(2024, 9) + 21 / 30]);
 });
 
 test('an ongoing entry runs up to the current month, and says so', () => {

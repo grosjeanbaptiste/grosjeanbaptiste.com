@@ -555,13 +555,13 @@
                         <a class="tl-bar">
                           <xsl:call-template name="timeline-bar"/>
                           <xsl:attribute name="href">#<xsl:value-of select="target"/></xsl:attribute>
-                          <span><xsl:value-of select="name"/></span>
+                          <span><xsl:value-of select="caption"/></span>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
                         <span class="tl-bar" tabindex="0">
                           <xsl:call-template name="timeline-bar"/>
-                          <span><xsl:value-of select="name"/></span>
+                          <span><xsl:value-of select="caption"/></span>
                         </span>
                       </xsl:otherwise>
                     </xsl:choose>

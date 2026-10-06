@@ -31,7 +31,7 @@ describe('entriesOf', () => {
   });
 
   it('dates a course unit with the degree that lists it', () => {
-    expect(byId('algorithmique')?.period?.start).toEqual({ year: 2022, month: 10 });
+    expect(byId('algorithmique')?.period?.start).toMatchObject({ year: 2022, month: 10 });
   });
 
   it('titles a degree by its type and keeps the field of study as subtitle', () => {

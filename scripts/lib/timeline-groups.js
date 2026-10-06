@@ -3,11 +3,12 @@
 // pdf/timeline/bars.js). An experience, a degree or a competition is a host; a
 // project belongs to the hosts that reference it by name, a volunteering role
 // to the host of its organisation. Bars are measured in months
-// (year * 12 + month - 1), an ongoing entry running to the current month.
+// (year * 12 + month - 1) and placed to the day, an ongoing entry running to
+// the end of the current month.
 const { anchorOf } = require('./anchors');
 const { hostsProject: namesProject, namesRole } = require('./hosting');
 
-const ISO = /^(\d{4})(?:-(\d{2}))?(?:-\d{2})?$/;
+const ISO = /^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?$/;
 
 function monthOf(text) {
   const match = ISO.exec(String(text));
@@ -30,12 +31,34 @@ const SHAPES = {
   volunteer: { name: (v) => v.position, title: (v) => v.organization },
 };
 
-function barOf(kind, record, now) {
-  const start = monthOf(record.startDate);
-  const end = ongoing(record.endDate) ? now : monthOf(record.endDate);
-  const name = SHAPES[kind].name(record) || '';
-  if (end < start)
+// Where a date falls, in months and to the day: the 15th of a 30-day month is
+// 14/30 of the way in. A date given to the month only is its first day.
+function dayOf(text) {
+  const month = monthOf(text);
+  const day = ISO.exec(String(text))[3];
+  if (!day) return month;
+  const days = new Date(Date.UTC(Math.floor(month / 12), (month % 12) + 1, 0)).getUTCDate();
+  return month + (Number(day) - 1) / days;
+}
+
+// A bar runs from `start` to `end + 1` (the convention of whole months, kept:
+// an entry dated to the month covers its last month). Dated to the day, it
+// stops as its last day begins — so an entry that begins the day another ends
+// follows it without overlapping — and is never shorter than a day.
+const A_DAY = 1 / 31;
+function spanOf(record, name, now) {
+  const start = dayOf(record.startDate);
+  if (ongoing(record.endDate)) return { start, end: now };
+  const toTheDay = ISO.exec(String(record.endDate))?.[3];
+  const until = toTheDay ? dayOf(record.endDate) : monthOf(record.endDate) + 1;
+  if (until < start)
     throw new Error(`${name} ends (${record.endDate}) before it starts (${record.startDate})`);
+  return { start, end: Math.max(until, start + A_DAY) - 1 };
+}
+
+function barOf(kind, record, now) {
+  const name = SHAPES[kind].name(record) || '';
+  const { start, end } = spanOf(record, name, now);
   return {
     kind,
     ongoing: ongoing(record.endDate),
@@ -51,7 +74,9 @@ function barOf(kind, record, now) {
 // A project belongs to the entries that reference it by name; a role, to the
 // entry of its organisation (lib/hosting.js).
 // A competition is held on a day: it is an entry of one month.
-const held = (c) => ({ ...c, startDate: c.date, endDate: c.date });
+// On the timeline it shows as its month: a day would be a hairline.
+const monthly = (date) => String(date).slice(0, 7);
+const held = (c) => ({ ...c, startDate: monthly(c.date), endDate: monthly(c.date) });
 const hosts = (resume) => [
   ...(resume.work || [])
     .filter((w) => w.startDate)

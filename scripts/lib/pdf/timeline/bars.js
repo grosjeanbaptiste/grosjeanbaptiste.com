@@ -64,7 +64,8 @@ function timelineBars(resume, today, years = null) {
   const starts = lanes.flatMap((l) =>
     l.groups.flatMap((g) => [g.head, ...g.children].map((b) => b.start)),
   );
-  return { from: spanStart ?? Math.min(now, ...starts), to: now, lanes };
+  // The axis starts with the month of the earliest bar, which may start mid-month.
+  return { from: spanStart ?? Math.floor(Math.min(now, ...starts)), to: now, lanes };
 }
 
 module.exports = { timelineBars, monthOf };

@@ -102,7 +102,7 @@ display_override: "period:" date_range   -> display_period
 
 projects_section: "projects" "{" project_entry+ "}"
 
-project_entry: NAME "{" project_field+ "}"
+project_entry: NAME hide_flag? "{" project_field+ "}"
 
 project_field: "name" value          -> proj_name
              | "description" value   -> proj_description

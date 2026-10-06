@@ -103,12 +103,18 @@ describe('timelineOf', () => {
     ]);
   });
 
-  it('places a bar by its month offset from the start of the timeline', () => {
-    expect(bar('work', 'xtrada-data-scientist')).toMatchObject({ offset: 3, length: 18 });
+  // 1 January 2023 to 30 June 2024, to the day: it stops as its last day begins.
+  it('places a bar by its offset from the start of the timeline, in months', () => {
+    const xtrada = bar('work', 'xtrada-data-scientist');
+    expect(xtrada?.offset).toBe(3);
+    expect(xtrada?.length).toBeCloseTo(17 + 29 / 30, 9);
   });
 
-  it('runs an ongoing entry up to today', () => {
-    expect(bar('project', 'baba')).toMatchObject({ offset: 45, length: 4 });
+  // Begun on 2 July 2026: a day into the month, and through the current one.
+  it('runs an ongoing entry up to the end of the current month', () => {
+    const baba = bar('project', 'baba');
+    expect(baba?.offset).toBeCloseTo(45 + 1 / 31, 9);
+    expect((baba?.offset ?? 0) + (baba?.length ?? 0)).toBeCloseTo(49, 9);
   });
 
   it('stacks overlapping entries of one lane on separate rows', () => {

@@ -74,7 +74,9 @@ function buildPreamble(lang) {
     '\\usepackage[utf8]{inputenc}',
     '\\usepackage[english,french,dutch,spanish,german]{babel}',
     '\\usepackage{paracol}',
-    // The verso sets the references in three columns.
+    // The verso is a landscape page (pdflscape turns the page itself, so a
+    // reader sees it upright) and sets the references in columns.
+    '\\usepackage{pdflscape}',
     '\\usepackage{multicol}',
     '\\usepackage{fontawesome5}',
     '\\usepackage{needspace}',

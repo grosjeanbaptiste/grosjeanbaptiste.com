@@ -1,5 +1,5 @@
-// The references, on the verso under the timeline: three columns across the
-// page rather than one long column.
+// The references, on the landscape verso under the timeline: four columns
+// across the page rather than one long column.
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { buildReferences } = require('./extras');
@@ -13,8 +13,8 @@ const resume = {
 };
 const references = () => buildReferences(resume, I18N.en);
 
-test('the references are set in three columns', () => {
-  assert.match(references(), /\\begin\{multicols\}\{3\}[\s\S]*\\end\{multicols\}/);
+test('the references are set in four columns, across the landscape verso', () => {
+  assert.match(references(), /\\begin\{multicols\}\{4\}[\s\S]*\\end\{multicols\}/);
 });
 
 test('the heading spans the page, above the columns', () => {

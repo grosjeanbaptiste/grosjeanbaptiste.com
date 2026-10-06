@@ -5,38 +5,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { timelineOf } = require('./timeline-model');
-
-const TODAY = new Date(Date.UTC(2026, 9, 3));
-const resume = (extra = {}) => ({
-  work: [
-    {
-      company: 'Senate',
-      position: 'Researcher',
-      startDate: '2025-11-03',
-      endDate: '2026-06-30',
-      projects: ['Synergy'],
-    },
-    { company: 'Xtrada', position: 'Crafter', startDate: '2023-08-21', endDate: '2024-09-22' },
-  ],
-  education: [
-    {
-      institution: 'UMons',
-      studyType: 'Master',
-      startDate: '2022-10-15',
-      endDate: '2026-09-04',
-      projects: ['Synergy'],
-    },
-  ],
-  projects: [
-    { name: 'Synergy', startDate: '2025-11-03', endDate: '2026-06-30' },
-    { name: 'Baba', startDate: '2026-07-02' },
-    { name: 'Algorithmique', courseUnit: true },
-  ],
-  volunteer: [
-    { organization: 'UMons', position: 'Buddy', startDate: '2023-11-30', endDate: '2026-09-04' },
-  ],
-  ...extra,
-});
+const { TODAY, resume } = require('./timeline-model.fixture');
 const lane = (timeline, kind) => timeline.lanes.find((l) => l.kind === kind);
 const barsOf = (timeline, kind) => lane(timeline, kind).bars;
 const named = (bars, name) => bars.find((b) => b.name === name);

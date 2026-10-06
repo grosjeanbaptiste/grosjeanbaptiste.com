@@ -20,6 +20,9 @@ export interface TimelineBar {
   readonly row: number;
   // 0: an entry of the lane; 1: what it carried, drawn under it.
   readonly depth: 0 | 1;
+  // What the bar reads: the organisation, with the title when another entry
+  // of the lane shares it; under its host, the title.
+  readonly caption: string;
 }
 
 // The outline of an entry that carried something: its rows and its months.
@@ -64,8 +67,18 @@ function laneOf(kind: EntryKind, heads: readonly Placed[], carriedBy: (head: Dat
     return { head, children, offset, length: end - offset, height };
   });
   const packed = packGroups(groups);
+  const met = (organisation: string | undefined) =>
+    heads.filter((h) => h.entry.organisation === organisation).length;
+  const captionOf = ({ organisation, title }: Dated) =>
+    organisation && met(organisation) > 1 ? `${organisation} · ${title}` : (organisation ?? title);
   const bars: TimelineBar[] = packed.groups.flatMap((g) => [
-    { ...g.head, key: g.head.entry.id, row: g.row, depth: 0 as const },
+    {
+      ...g.head,
+      key: g.head.entry.id,
+      row: g.row,
+      depth: 0 as const,
+      caption: captionOf(g.head.entry),
+    },
     ...g.children.map((c) => ({
       entry: c.entry,
       offset: c.offset,
@@ -73,6 +86,7 @@ function laneOf(kind: EntryKind, heads: readonly Placed[], carriedBy: (head: Dat
       key: `${g.head.entry.id}>${c.entry.id}`,
       row: g.row + 1 + c.row,
       depth: 1 as const,
+      caption: c.entry.title,
     })),
   ]);
   const outlines = packed.groups
@@ -88,8 +102,9 @@ export function timelineOf(entries: readonly Entry[], today: Date): Timeline {
   const from = { year: Math.floor(start / 12), month: (start % 12) + 1 };
   const place = (entry: Dated): Placed => ({
     entry,
-    offset: ordinal(entry.period.start) - start,
-    length: entry.period.months(today),
+    // To the day: see Period.startsAt / stopsAt.
+    offset: entry.period.startsAt() - start,
+    length: entry.period.stopsAt(today) - entry.period.startsAt(),
   });
 
   const hostIds = new Set(dated.filter((e) => HOSTS.includes(e.kind)).map((e) => e.id));

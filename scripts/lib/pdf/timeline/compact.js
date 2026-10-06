@@ -42,10 +42,12 @@ function slotsOf(bar, before, after) {
 }
 
 function labelled(bar, slots, measure) {
-  const width = measure(bar.name);
+  // What the bar reads: its name, with its title when a namesake shares the lane.
+  const text = bar.caption ?? bar.name;
+  const width = measure(text);
   const fits = slots.find((slot) => width <= slot.room);
   const slot = fits ?? [...slots].sort((a, b) => b.room - a.room)[0];
-  const strong = fits ? bar.name : cut(bar.name, slot.room, measure);
+  const strong = fits ? text : cut(text, slot.room, measure);
   const label = { place: slot.place, ...PLACED[slot.place](bar, strong ? measure(strong) : 0) };
   return { ...bar, strong, rest: '', clipped: false, label };
 }

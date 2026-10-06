@@ -44,6 +44,7 @@ function timelineForXml(resume, lang, today) {
           depth: bar.depth,
           name: bar.name,
           title: bar.title,
+          caption: bar.caption,
           period,
           label: labelOf(bar, period),
           left: pct(bar.start - timeline.from, timeline.months),

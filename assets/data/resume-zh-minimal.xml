@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=7fe6698d"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=ffcf9ad8"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -222,43 +222,43 @@
           <groups>
             <group>
               <left>70.87%</left>
-              <width>2.43%</width>
+              <width>2.41%</width>
               <row>0</row>
               <rows>2</rows>
             </group>
             <group>
               <left>77.18%</left>
-              <width>3.4%</width>
+              <width>3.38%</width>
               <row>0</row>
               <rows>2</rows>
             </group>
             <group>
               <left>81.55%</left>
-              <width>1.94%</width>
+              <width>1.93%</width>
               <row>1</row>
               <rows>2</rows>
             </group>
             <group>
               <left>83.5%</left>
-              <width>3.88%</width>
+              <width>3.49%</width>
               <row>1</row>
               <rows>2</rows>
             </group>
             <group>
               <left>84.47%</left>
-              <width>3.4%</width>
+              <width>3.25%</width>
               <row>3</row>
               <rows>2</rows>
             </group>
             <group>
               <left>87.86%</left>
-              <width>4.37%</width>
+              <width>4.35%</width>
               <row>0</row>
               <rows>2</rows>
             </group>
             <group>
               <left>88.83%</left>
-              <width>3.4%</width>
+              <width>3.38%</width>
               <row>2</row>
               <rows>2</rows>
             </group>
@@ -269,8 +269,8 @@
               <rows>2</rows>
             </group>
             <group>
-              <left>94.17%</left>
-              <width>3.88%</width>
+              <left>94.21%</left>
+              <width>3.83%</width>
               <row>2</row>
               <rows>3</rows>
             </group>
@@ -282,10 +282,11 @@
               <depth>0</depth>
               <name>Quick Restaurant</name>
               <title>学生工</title>
+              <caption>Quick Restaurant</caption>
               <period>9月 2017 – 9月 2017</period>
               <label>Quick Restaurant — 学生工 — 9月 2017 – 9月 2017</label>
               <left>46.6%</left>
-              <width>0.49%</width>
+              <width>0.47%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -294,10 +295,11 @@
               <depth>0</depth>
               <name>RESTOMAX</name>
               <title>全栈 Web 开发实习生</title>
+              <caption>RESTOMAX</caption>
               <period>11月 2021 – 3月 2022</period>
               <label>RESTOMAX — 全栈 Web 开发实习生 — 11月 2021 – 3月 2022</label>
               <left>70.87%</left>
-              <width>2.43%</width>
+              <width>2.41%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -305,10 +307,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>WebMenu</name>
+              <caption>WebMenu</caption>
               <period>11月 2021 – 3月 2022</period>
               <label>WebMenu — 11月 2021 – 3月 2022</label>
               <left>70.87%</left>
-              <width>2.43%</width>
+              <width>2.41%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -317,10 +320,11 @@
               <depth>0</depth>
               <name>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</name>
               <title>学生工</title>
+              <caption>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</caption>
               <period>3月 2022 – 3月 2022</period>
               <label>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles — 学生工 — 3月 2022 – 3月 2022</label>
-              <left>72.82%</left>
-              <width>0.49%</width>
+              <left>73.27%</left>
+              <width>0.02%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -329,10 +333,11 @@
               <depth>0</depth>
               <name>EDITx: IT Challenges, IT Jobs, Education in IT for X</name>
               <title>全栈 Web 开发实习生</title>
+              <caption>EDITx: IT Challenges, IT Jobs, Education in IT for X</caption>
               <period>4月 2022 – 4月 2022</period>
               <label>EDITx: IT Challenges, IT Jobs, Education in IT for X — 全栈 Web 开发实习生 — 4月 2022 – 4月 2022</label>
               <left>73.3%</left>
-              <width>0.49%</width>
+              <width>0.47%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -341,10 +346,11 @@
               <depth>0</depth>
               <name>Technofutur TIC</name>
               <title>全栈 Web 开发实习生</title>
+              <caption>Technofutur TIC</caption>
               <period>12月 2022 – 6月 2023</period>
               <label>Technofutur TIC — 全栈 Web 开发实习生 — 12月 2022 – 6月 2023</label>
               <left>77.18%</left>
-              <width>3.4%</width>
+              <width>3.38%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -353,10 +359,11 @@
               <depth>1</depth>
               <name>MyWay</name>
               <title>Freelance</title>
+              <caption>MyWay</caption>
               <period>1月 2023 – 6月 2023</period>
               <label>MyWay — Freelance — 1月 2023 – 6月 2023</label>
               <left>77.67%</left>
-              <width>2.91%</width>
+              <width>2.9%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -365,10 +372,11 @@
               <depth>0</depth>
               <name>Xtrada</name>
               <title>软件工艺师</title>
+              <caption>Xtrada · 软件工艺师</caption>
               <period>8月 2023 – 9月 2024</period>
               <label>Xtrada — 软件工艺师 — 8月 2023 – 9月 2024</label>
-              <left>81.07%</left>
-              <width>6.8%</width>
+              <left>81.38%</left>
+              <width>6.34%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -377,10 +385,11 @@
               <depth>0</depth>
               <name>Xtrada</name>
               <title>.NET/Blazor 软件工艺师</title>
+              <caption>Xtrada · .NET/Blazor 软件工艺师</caption>
               <period>9月 2023 – 12月 2023</period>
               <label>Xtrada — .NET/Blazor 软件工艺师 — 9月 2023 – 12月 2023</label>
               <left>81.55%</left>
-              <width>1.94%</width>
+              <width>1.93%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -388,10 +397,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Kwalitijd</name>
+              <caption>Kwalitijd</caption>
               <period>9月 2023 – 12月 2023</period>
               <label>Kwalitijd — 9月 2023 – 12月 2023</label>
               <left>81.55%</left>
-              <width>1.94%</width>
+              <width>1.93%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -400,10 +410,11 @@
               <depth>0</depth>
               <name>Xtrada</name>
               <title>.NET/React 软件工艺师</title>
+              <caption>Xtrada · .NET/React 软件工艺师</caption>
               <period>1月 2024 – 8月 2024</period>
               <label>Xtrada — .NET/React 软件工艺师 — 1月 2024 – 8月 2024</label>
               <left>83.5%</left>
-              <width>3.88%</width>
+              <width>3.49%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -411,10 +422,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>VhAuctions</name>
+              <caption>VhAuctions</caption>
               <period>1月 2024 – 2月 2024</period>
               <label>VhAuctions — 1月 2024 – 2月 2024</label>
               <left>83.5%</left>
-              <width>0.97%</width>
+              <width>0.94%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -423,10 +435,11 @@
               <depth>0</depth>
               <name>Xtrada</name>
               <title>数据科学家</title>
+              <caption>Xtrada · 数据科学家</caption>
               <period>3月 2024 – 9月 2024</period>
               <label>Xtrada — 数据科学家 — 3月 2024 – 9月 2024</label>
               <left>84.47%</left>
-              <width>3.4%</width>
+              <width>3.25%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -434,10 +447,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>VhAuctions NER Inventory Model</name>
+              <caption>VhAuctions NER Inventory Model</caption>
               <period>3月 2024 – 8月 2024</period>
               <label>VhAuctions NER Inventory Model — 3月 2024 – 8月 2024</label>
               <left>84.47%</left>
-              <width>2.91%</width>
+              <width>2.52%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -446,10 +460,11 @@
               <depth>0</depth>
               <name>Emvi.ai</name>
               <title>AI 软件工艺师</title>
+              <caption>Emvi.ai · AI 软件工艺师</caption>
               <period>10月 2024 – 6月 2025</period>
               <label>Emvi.ai — AI 软件工艺师 — 10月 2024 – 6月 2025</label>
               <left>87.86%</left>
-              <width>4.37%</width>
+              <width>4.35%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -457,10 +472,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
+              <caption>Remi</caption>
               <period>10月 2024 – 6月 2025</period>
               <label>Remi — 10月 2024 – 6月 2025</label>
               <left>87.86%</left>
-              <width>4.37%</width>
+              <width>4.35%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -469,10 +485,11 @@
               <depth>0</depth>
               <name>Emvi.ai</name>
               <title>AI 软件工艺负责人</title>
+              <caption>Emvi.ai · AI 软件工艺负责人</caption>
               <period>12月 2024 – 6月 2025</period>
               <label>Emvi.ai — AI 软件工艺负责人 — 12月 2024 – 6月 2025</label>
               <left>88.83%</left>
-              <width>3.4%</width>
+              <width>3.38%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -480,10 +497,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
+              <caption>Emvi App</caption>
               <period>12月 2024 – 6月 2025</period>
               <label>Emvi App — 12月 2024 – 6月 2025</label>
               <left>88.83%</left>
-              <width>3.4%</width>
+              <width>3.38%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -492,6 +510,7 @@
               <depth>0</depth>
               <name>Acteble</name>
               <title>创始人</title>
+              <caption>Acteble</caption>
               <period>7月 2025 – 至今</period>
               <label>Acteble — 创始人 — 7月 2025 – 至今</label>
               <left>92.23%</left>
@@ -503,6 +522,7 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble</name>
+              <caption>Acteble</caption>
               <period>7月 2025 – 至今</period>
               <label>Acteble — 7月 2025 – 至今</label>
               <left>92.23%</left>
@@ -515,10 +535,11 @@
               <depth>0</depth>
               <name>比利时参议院</name>
               <title>AI 研究员</title>
+              <caption>比利时参议院</caption>
               <period>11月 2025 – 6月 2026</period>
               <label>比利时参议院 — AI 研究员 — 11月 2025 – 6月 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
+              <left>94.21%</left>
+              <width>3.83%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -526,10 +547,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
+              <caption>Synergy</caption>
               <period>11月 2025 – 6月 2026</period>
               <label>Synergy — 11月 2025 – 6月 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
+              <left>94.21%</left>
+              <width>3.83%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -537,10 +559,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
+              <caption>fedrag-be</caption>
               <period>11月 2025 – 6月 2026</period>
               <label>fedrag-be — 11月 2025 – 6月 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
+              <left>94.21%</left>
+              <width>3.83%</width>
               <row>4</row>
             </bar>
           </bars>
@@ -548,18 +571,18 @@
         <lane>
           <kind>education</kind>
           <label>教育</label>
-          <rows>10</rows>
+          <rows>6</rows>
           <groups>
             <group>
-              <left>52.43%</left>
-              <width>24.27%</width>
+              <left>52.9%</left>
+              <width>23.54%</width>
               <row>0</row>
               <rows>4</rows>
             </group>
             <group>
-              <left>76.21%</left>
-              <width>23.79%</width>
-              <row>4</row>
+              <left>76.43%</left>
+              <width>23.57%</width>
+              <row>0</row>
               <rows>6</rows>
             </group>
           </groups>
@@ -569,10 +592,11 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Lycée Mater Dei</name>
+              <caption>Lycée Mater Dei</caption>
               <period>9月 2009 – 6月 2012</period>
               <label>Lycée Mater Dei — 9月 2009 – 6月 2012</label>
-              <left>0%</left>
-              <width>16.5%</width>
+              <left>0.47%</left>
+              <width>16.02%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -581,10 +605,11 @@
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
               <title>C.E.S.S.</title>
+              <caption>Centre Scolaire Saint-Adrien - Val Duchesse</caption>
               <period>9月 2012 – 6月 2015</period>
               <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — 9月 2012 – 6月 2015</label>
-              <left>17.48%</left>
-              <width>16.5%</width>
+              <left>17.94%</left>
+              <width>16.02%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -593,10 +618,11 @@
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
               <title>预科课程</title>
+              <caption>UCLouvain - Université catholique de Louvain</caption>
               <period>9月 2014 – 6月 2015</period>
               <label>UCLouvain - Université catholique de Louvain — 预科课程 — 9月 2014 – 6月 2015</label>
-              <left>29.13%</left>
-              <width>4.85%</width>
+              <left>29.6%</left>
+              <width>4.37%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -605,10 +631,11 @@
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
               <title>文学学士 (BA)</title>
+              <caption>Université Saint-Louis - Bruxelles</caption>
               <period>9月 2016 – 6月 2017</period>
               <label>Université Saint-Louis - Bruxelles — 文学学士 (BA) — 9月 2016 – 6月 2017</label>
-              <left>40.78%</left>
-              <width>4.85%</width>
+              <left>41.25%</left>
+              <width>4.37%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -617,10 +644,11 @@
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
               <title>职业学士</title>
+              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</caption>
               <period>9月 2018 – 10月 2022</period>
               <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — 职业学士 — 9月 2018 – 10月 2022</label>
-              <left>52.43%</left>
-              <width>24.27%</width>
+              <left>52.9%</left>
+              <width>23.54%</width>
               <row>0</row>
             </bar>
             <bar>
@@ -629,10 +657,11 @@
               <depth>1</depth>
               <name>学生代表</name>
               <title>EPHEC École Supérieure de Promotion Sociale</title>
+              <caption>学生代表</caption>
               <period>9月 2019 – 10月 2022</period>
               <label>学生代表 — EPHEC École Supérieure de Promotion Sociale — 9月 2019 – 10月 2022</label>
-              <left>58.25%</left>
-              <width>18.45%</width>
+              <left>58.72%</left>
+              <width>17.71%</width>
               <row>1</row>
             </bar>
             <bar>
@@ -641,10 +670,11 @@
               <depth>1</depth>
               <name>辅导员</name>
               <title>EPHEC École Supérieure de Promotion Sociale</title>
+              <caption>辅导员</caption>
               <period>9月 2019 – 10月 2022</period>
               <label>辅导员 — EPHEC École Supérieure de Promotion Sociale — 9月 2019 – 10月 2022</label>
-              <left>58.25%</left>
-              <width>18.45%</width>
+              <left>58.72%</left>
+              <width>17.71%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -652,10 +682,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>WebMenu</name>
+              <caption>WebMenu</caption>
               <period>11月 2021 – 3月 2022</period>
               <label>WebMenu — 11月 2021 – 3月 2022</label>
               <left>70.87%</left>
-              <width>2.43%</width>
+              <width>2.41%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -664,10 +695,11 @@
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
               <title>证书</title>
+              <caption>Institut Saint-Louis Bruxelles</caption>
               <period>9月 2019 – 6月 2020</period>
               <label>Institut Saint-Louis Bruxelles — 证书 — 9月 2019 – 6月 2020</label>
-              <left>58.25%</left>
-              <width>4.85%</width>
+              <left>58.72%</left>
+              <width>4.37%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -676,11 +708,12 @@
               <depth>0</depth>
               <name>UMons</name>
               <title>理学硕士</title>
+              <caption>UMons</caption>
               <period>10月 2022 – 9月 2026</period>
               <label>UMons — 理学硕士 — 10月 2022 – 9月 2026</label>
-              <left>76.21%</left>
-              <width>23.3%</width>
-              <row>4</row>
+              <left>76.43%</left>
+              <width>22.64%</width>
+              <row>0</row>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -688,11 +721,12 @@
               <depth>1</depth>
               <name>学生代表</name>
               <title>UMons</title>
+              <caption>学生代表</caption>
               <period>11月 2023 – 9月 2026</period>
               <label>学生代表 — UMons — 11月 2023 – 9月 2026</label>
-              <left>82.52%</left>
-              <width>16.99%</width>
-              <row>5</row>
+              <left>82.99%</left>
+              <width>16.08%</width>
+              <row>1</row>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -700,66 +734,72 @@
               <depth>1</depth>
               <name>Buddy TandeMons</name>
               <title>UMons</title>
+              <caption>Buddy TandeMons</caption>
               <period>11月 2023 – 9月 2026</period>
               <label>Buddy TandeMons — UMons — 11月 2023 – 9月 2026</label>
-              <left>82.52%</left>
-              <width>16.99%</width>
-              <row>6</row>
+              <left>82.99%</left>
+              <width>16.08%</width>
+              <row>2</row>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
+              <caption>Remi</caption>
               <period>10月 2024 – 6月 2025</period>
               <label>Remi — 10月 2024 – 6月 2025</label>
               <left>87.86%</left>
-              <width>4.37%</width>
-              <row>7</row>
+              <width>4.35%</width>
+              <row>3</row>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
+              <caption>Emvi App</caption>
               <period>12月 2024 – 6月 2025</period>
               <label>Emvi App — 12月 2024 – 6月 2025</label>
               <left>88.83%</left>
-              <width>3.4%</width>
-              <row>8</row>
+              <width>3.38%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble</name>
+              <caption>Acteble</caption>
               <period>7月 2025 – 至今</period>
               <label>Acteble — 7月 2025 – 至今</label>
               <left>92.23%</left>
               <width>7.77%</width>
-              <row>7</row>
+              <row>3</row>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
+              <caption>Synergy</caption>
               <period>11月 2025 – 6月 2026</period>
               <label>Synergy — 11月 2025 – 6月 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
-              <row>8</row>
+              <left>94.21%</left>
+              <width>3.83%</width>
+              <row>4</row>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
+              <caption>fedrag-be</caption>
               <period>11月 2025 – 6月 2026</period>
               <label>fedrag-be — 11月 2025 – 6月 2026</label>
-              <left>94.17%</left>
-              <width>3.88%</width>
-              <row>9</row>
+              <left>94.21%</left>
+              <width>3.83%</width>
+              <row>5</row>
             </bar>
           </bars>
         </lane>
@@ -781,6 +821,7 @@
               <depth>0</depth>
               <name>Hackathon Citizens of Wallonia 2023</name>
               <title>Citizens of Wallonia</title>
+              <caption>Hackathon Citizens of Wallonia 2023</caption>
               <period>3月 2023 – 3月 2023</period>
               <label>Hackathon Citizens of Wallonia 2023 — Citizens of Wallonia — 3月 2023 – 3月 2023</label>
               <left>78.64%</left>
@@ -792,6 +833,7 @@
               <depth>0</depth>
               <name>Hackathon Citizens of Wallonia 2024</name>
               <title>Citizens of Wallonia</title>
+              <caption>Hackathon Citizens of Wallonia 2024</caption>
               <period>3月 2024 – 3月 2024</period>
               <label>Hackathon Citizens of Wallonia 2024 — Citizens of Wallonia — 3月 2024 – 3月 2024</label>
               <left>84.47%</left>
@@ -802,37 +844,11 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>EduCraft</name>
+              <caption>EduCraft</caption>
               <period>3月 2024 – 3月 2024</period>
               <label>EduCraft — 3月 2024 – 3月 2024</label>
-              <left>84.47%</left>
-              <width>0.49%</width>
-              <row>1</row>
-            </bar>
-          </bars>
-        </lane>
-        <lane>
-          <kind>projects</kind>
-          <label>项目</label>
-          <rows>2</rows>
-          <bars>
-            <bar>
-              <kind>project</kind>
-              <depth>0</depth>
-              <name>Baba</name>
-              <period>7月 2026 – 至今</period>
-              <label>Baba — 7月 2026 – 至今</label>
-              <left>98.06%</left>
-              <width>1.94%</width>
-              <row>0</row>
-            </bar>
-            <bar>
-              <kind>project</kind>
-              <depth>0</depth>
-              <name>KAG</name>
-              <period>7月 2026 – 至今</period>
-              <label>KAG — 7月 2026 – 至今</label>
-              <left>98.06%</left>
-              <width>1.94%</width>
+              <left>84.9%</left>
+              <width>0.03%</width>
               <row>1</row>
             </bar>
           </bars>
@@ -1261,41 +1277,6 @@ TFE: WebMenu 2.0
     </school>
   </education>
   <projects>
-    <project>
-      <name>Baba</name>
-      <description>类 shell CLI，通过纯符号 AI（无 LLM）以受控英语查询。</description>
-      <keywords>
-        <keyword>Rust</keyword>
-        <keyword>Prolog</keyword>
-        <keyword>LinkGrammar</keyword>
-        <keyword>DDD</keyword>
-        <keyword>CleanArchitecture</keyword>
-        <keyword>TDD</keyword>
-      </keywords>
-      <startDate>2026-07-02</startDate>
-      <type>CLI</type>
-      <roles>
-        <role>Author</role>
-      </roles>
-      <summary>五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。</summary>
-    </project>
-    <project>
-      <name>KAG</name>
-      <description>领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。</description>
-      <keywords>
-        <keyword>Rust</keyword>
-        <keyword>DDD</keyword>
-        <keyword>CleanArchitecture</keyword>
-        <keyword>TDD</keyword>
-        <keyword>RAG</keyword>
-      </keywords>
-      <startDate>2026-07-05</startDate>
-      <type>Framework</type>
-      <roles>
-        <role>Author</role>
-      </roles>
-      <summary>采用六边形架构 + DDD + TDD，每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。</summary>
-    </project>
     <project>
       <name>Synergy</name>
       <description>比利时联邦议会的内部平台，用于搜索、探索并与议会档案对话。</description>

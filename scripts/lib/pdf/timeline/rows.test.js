@@ -73,10 +73,22 @@ test('a lane says how many rows its groups need', () => {
   assert.equal(laid([groupOf(bar('host', 0, 30), bar('child', 5, 20))]).rows, 2);
 });
 
-test('a group is outlined over its rows, its bars and their labels', () => {
+// The outline says how long the entry lasted: it covers the bars, never the
+// labels written beside them — or a degree labelled on its left would seem to
+// have begun years early, and to overlap what came before it.
+test('a group is outlined over its rows and its bars, not over their labels', () => {
   const [outline] = laid([groupOf(bar('host', 0, 30), bar('c', 28, 30, 'a long label'))]).outlines;
-  assert.deepEqual([outline.row, outline.rows, outline.x0], [0, 2, 0]);
-  assert.ok(outline.x1 > 30, 'the label after the short bar is left outside the outline');
+  assert.deepEqual(outline, { row: 0, rows: 2, x0: 0, x1: 30 });
+});
+
+test('the next entry still keeps clear of a group’s labels', () => {
+  const b = byId(
+    laid([
+      groupOf(bar('host', 0, 30), bar('c', 28, 30, 'a long label')),
+      groupOf(bar('next', 31, 40)),
+    ]),
+  );
+  assert.equal(b.next.row, 2);
 });
 
 test('an entry that carried nothing is not outlined', () => {

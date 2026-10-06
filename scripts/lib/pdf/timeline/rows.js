@@ -61,8 +61,17 @@ function packGroupsOnPaper(groups, scale) {
     for (let i = 0; i < block.height; i += 1) rowEnds[at + i] = block.to;
     bars.push({ ...block.top, row: at, depth: 0 });
     for (const b of block.under) bars.push({ ...b, row: at + 1 + b.row, depth: 1 });
-    if (block.under.length)
-      outlines.push({ x0: block.from, x1: block.to, row: at, rows: block.height });
+    // The outline covers the bars — how long the entry lasted — not the labels
+    // beside them, which the block still keeps clear of its neighbours.
+    if (block.under.length) {
+      const drawn = [block.top, ...block.under];
+      outlines.push({
+        x0: Math.min(...drawn.map((b) => b.x0)),
+        x1: Math.max(...drawn.map((b) => b.x1)),
+        row: at,
+        rows: block.height,
+      });
+    }
   }
   return { bars, outlines, rows: rowEnds.length };
 }
