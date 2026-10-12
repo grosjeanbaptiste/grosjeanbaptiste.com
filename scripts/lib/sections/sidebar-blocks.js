@@ -2,6 +2,7 @@
 // sidebar.js so the latter stays focused on the contact header and the
 // meta.sidebarOrder orchestration.
 const { escapeHtml } = require('../format');
+const { isCourseUnit } = require('../course-unit');
 
 function renderSkillsBlocks(resume, t) {
   // "Currently Learning" stays in resume.json (JSON Resume schema compliance +
@@ -54,7 +55,7 @@ function renderLanguagesBlock(resume, t) {
 // they belong to their degree, under their own heading, never in this list.
 function renderProjectsBlock(resume, t) {
   const items = (resume.projects || [])
-    .filter((p) => p.type !== 'Course unit')
+    .filter((p) => !isCourseUnit(p))
     .map((p) => {
       const name = `<strong>${escapeHtml(p.name)}</strong>`;
       const label = p.url

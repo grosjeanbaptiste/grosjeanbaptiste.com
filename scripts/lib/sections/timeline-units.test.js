@@ -36,7 +36,7 @@ const resume = {
   ],
   volunteer: [],
 };
-const html = generateTimeline(resume, 'en', TODAY, new Set(['project-algorithmique']));
+const html = generateTimeline(resume, 'en', TODAY, new Set(['course-algorithmique']));
 const bars = [...html.matchAll(/<(a|span) class="tl-bar"[^>]*>/g)].map((m) => m[0]);
 const named = (name) => bars.find((b) => b.includes(`data-name="${name}"`));
 const css = fs.readFileSync(path.join(ROOT, 'css/timeline-entries.css'), 'utf8');
@@ -47,7 +47,7 @@ test('a course unit of a block is a bar of its own kind', () => {
 });
 
 test('a unit bar leads to its line on the page', () => {
-  assert.match(named('Algorithmique'), /^<a [^>]*href="#project-algorithmique"/);
+  assert.match(named('Algorithmique'), /^<a [^>]*href="#course-algorithmique"/);
 });
 
 test('a unit whose line is not on the page is no link', () => {

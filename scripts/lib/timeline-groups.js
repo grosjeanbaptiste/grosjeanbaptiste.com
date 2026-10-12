@@ -6,12 +6,13 @@
 // (year * 12 + month - 1) and placed to the day, an ongoing entry running to
 // the end of the current month.
 const { anchorOf } = require('./anchors');
+const { isCourseUnit } = require('./course-unit');
 const { blocksOf } = require('./timeline-blocks');
 const { monthOf, monthNow, ongoing, spanOf } = require('./timeline-dates');
 const { hostsProject: namesProject, namesRole } = require('./hosting');
 
 const datedProjects = (resume) =>
-  (resume.projects || []).filter((p) => !p.courseUnit && p.startDate);
+  (resume.projects || []).filter((p) => !isCourseUnit(p) && p.startDate);
 const datedRoles = (resume) => (resume.volunteer || []).filter((v) => v.startDate);
 
 // What each kind of entry reads from its record: its bar's name, then the rest.
