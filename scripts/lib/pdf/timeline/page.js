@@ -43,6 +43,12 @@ function stack(lanes, pitch) {
 // Two entries of one name keep their role even then: it tells them apart.
 // `degrees`: a degree keeps its title too — the school alone does not say
 // what was studied.
+// A bar without its role, cut or in full.
+const unroled = (head) => ({
+  ...head,
+  rest: '',
+  ...(head.full ? { full: { ...head.full, rest: '' } } : {}),
+});
 const namesOnly = (degrees) => (timeline) => ({
   ...timeline,
   lanes: timeline.lanes.map((lane) => {
@@ -52,7 +58,7 @@ const namesOnly = (degrees) => (timeline) => ({
       ...lane,
       groups: lane.groups.map((group) => ({
         ...group,
-        head: keeps(group.head) ? group.head : { ...group.head, rest: '' },
+        head: keeps(group.head) ? group.head : unroled(group.head),
       })),
     };
   }),

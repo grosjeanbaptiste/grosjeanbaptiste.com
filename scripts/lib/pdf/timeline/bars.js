@@ -11,6 +11,9 @@ const { entryGroups, monthOf, monthNow } = require('../../timeline-groups');
 // push their row's neighbours far along; the bar's place says the rest.
 const STRONG_MAX = 30;
 const REST_MAX = 34;
+// A degree's title is its type and its speciality: it needs the room of both.
+const DEGREE_MAX = 60;
+const restMax = (bar) => (bar.kind === 'education' ? DEGREE_MAX : REST_MAX);
 
 // Under its host a bar is told apart by its name alone; the host says where.
 const worded = (bar, nested) => ({
@@ -20,7 +23,9 @@ const worded = (bar, nested) => ({
   ongoing: bar.ongoing,
   clipped: false,
   strong: truncate(bar.name, STRONG_MAX),
-  rest: nested ? '' : truncate(bar.title, REST_MAX),
+  rest: nested ? '' : truncate(bar.title, restMax(bar)),
+  // The label in full, for a bar wide enough to hold it (./rows.js).
+  full: { strong: bar.name, rest: nested ? '' : bar.title },
   // 'evening' for a degree followed on an evening schedule, and its blocks.
   ...(bar.schedule ? { schedule: bar.schedule } : {}),
 });

@@ -95,6 +95,9 @@ test('a narrower sheet lays the same timeline out in its own width', () => {
 
 // Labels say "name · role". When no type fits them on the page, the roles go:
 // shorter labels need fewer rows — and the sheet says which labels it carries.
+// A role is wide however it is cut: a label shortened to its track (./rows.js)
+// is still one that does not fit.
+const wideRole = (b) => (b.rest.startsWith('a') ? 300 : 1);
 const busy = Array.from({ length: 50 }, (_, i) => ({
   ...bar(`e${i}`, at(2020, 3) + (i % 40), at(2020, 3) + (i % 40)),
   rest: 'a role',
@@ -124,7 +127,7 @@ test('with the names alone, entries that share a name keep their role', () => {
     { ...bar('Xtrada2', at(2021, 3), at(2021, 3)), strong: 'Xtrada', rest: 'Data Scientist' },
   ];
   const sheet = layOut(timeline([{ kind: 'work', bars: [...busy, ...twins] }]), {
-    measure: (b) => (b.rest === 'a role' ? 300 : 1),
+    measure: wideRole,
   });
   assert.equal(sheet.labels, 'names');
   const rests = sheet.lanes[0].bars.filter((b) => b.strong === 'Xtrada').map((b) => b.rest);
@@ -138,10 +141,7 @@ test('with the names alone, a degree keeps its blocks', () => {
     { kind: 'work', groups: busy.map((head) => ({ head, children: [] })) },
     { kind: 'education', groups: [{ head: host, children: [], bands: [band] }] },
   ];
-  const sheet = layOut(
-    { from: at(2020, 3), to: at(2023, 6), lanes },
-    { measure: (b) => (b.rest === 'a role' ? 300 : 1) },
-  );
+  const sheet = layOut({ from: at(2020, 3), to: at(2023, 6), lanes }, { measure: wideRole });
   assert.equal(sheet.labels, 'names');
   assert.ok(sheet.lanes[1].bars.some((b) => b.kind === 'block'));
 });

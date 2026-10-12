@@ -74,8 +74,11 @@ function checkTimelinePdf(lang, span) {
     const bars = timelineBars(resume, new Date(), span.years).lanes.flatMap((l) =>
       l.groups.flatMap((g) => [g.head, ...g.children]),
     );
+    // A name is cut beside a short bar and whole inside a wide one: either way
+    // the page carries its beginning.
+    const beginning = (b) => squeeze(b.strong).replace(/…$/, '');
     const missing = bars
-      .filter((b) => b.strong && !page.includes(squeeze(b.strong)))
+      .filter((b) => b.strong && !page.includes(beginning(b)))
       .map((b) => b.strong);
     assert.deepEqual(missing, []);
   });

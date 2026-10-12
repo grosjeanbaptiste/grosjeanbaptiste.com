@@ -690,9 +690,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Lycée Mater Dei</name>
-              <caption>Lycée Mater Dei</caption>
+              <title>通识学习 — 拉丁语和希腊语</title>
+              <caption>Lycée Mater Dei · 通识学习 — 拉丁语和希腊语</caption>
               <period>9月 2009 – 6月 2012</period>
-              <label>Lycée Mater Dei — 9月 2009 – 6月 2012</label>
+              <label>Lycée Mater Dei — 通识学习 — 拉丁语和希腊语 — 9月 2009 – 6月 2012</label>
               <schedule>day</schedule>
               <left>0.47%</left>
               <width>16.02%</width>
@@ -704,10 +705,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
-              <title>C.E.S.S.</title>
-              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S.</caption>
+              <title>C.E.S.S. — 通识学习 — 数学和现代语言</title>
+              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S. — 通识学习 — 数学和现代语言</caption>
               <period>9月 2012 – 6月 2015</period>
-              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — 9月 2012 – 6月 2015</label>
+              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — 通识学习 — 数学和现代语言 — 9月 2012 – 6月 2015</label>
               <schedule>day</schedule>
               <left>17.94%</left>
               <width>16.02%</width>
@@ -719,10 +720,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
-              <title>预科课程</title>
-              <caption>UCLouvain - Université catholique de Louvain · 预科课程</caption>
+              <title>预科课程 — 医学和牙科</title>
+              <caption>UCLouvain - Université catholique de Louvain · 预科课程 — 医学和牙科</caption>
               <period>9月 2014 – 6月 2015</period>
-              <label>UCLouvain - Université catholique de Louvain — 预科课程 — 9月 2014 – 6月 2015</label>
+              <label>UCLouvain - Université catholique de Louvain — 预科课程 — 医学和牙科 — 9月 2014 – 6月 2015</label>
               <schedule>day</schedule>
               <left>29.6%</left>
               <width>4.37%</width>
@@ -734,10 +735,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
-              <title>政治学学士</title>
-              <caption>Université Saint-Louis - Bruxelles · 政治学学士</caption>
+              <title>政治学学士 — 综合方向</title>
+              <caption>Université Saint-Louis - Bruxelles · 政治学学士 — 综合方向</caption>
               <period>9月 2016 – 6月 2017</period>
-              <label>Université Saint-Louis - Bruxelles — 政治学学士 — 9月 2016 – 6月 2017</label>
+              <label>Université Saint-Louis - Bruxelles — 政治学学士 — 综合方向 — 9月 2016 – 6月 2017</label>
               <schedule>day</schedule>
               <left>41.25%</left>
               <width>4.37%</width>
@@ -859,10 +860,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
-              <title>职业学士</title>
-              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · 职业学士</caption>
+              <title>职业学士 — 管理信息学</title>
+              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · 职业学士 — 管理信息学</caption>
               <period>9月 2018 – 10月 2022</period>
-              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — 职业学士 — 9月 2018 – 10月 2022 — 夜间课程</label>
+              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — 职业学士 — 管理信息学 — 9月 2018 – 10月 2022 — 夜间课程</label>
               <schedule>evening</schedule>
               <left>52.9%</left>
               <width>23.54%</width>
@@ -1235,10 +1236,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
-              <title>证书</title>
-              <caption>Institut Saint-Louis Bruxelles · 证书</caption>
+              <title>证书 — 7e Spéciale Mathématiques</title>
+              <caption>Institut Saint-Louis Bruxelles · 证书 — 7e Spéciale Mathématiques</caption>
               <period>9月 2019 – 6月 2020</period>
-              <label>Institut Saint-Louis Bruxelles — 证书 — 9月 2019 – 6月 2020</label>
+              <label>Institut Saint-Louis Bruxelles — 证书 — 7e Spéciale Mathématiques — 9月 2019 – 6月 2020</label>
               <schedule>day</schedule>
               <left>58.72%</left>
               <width>4.37%</width>
@@ -1250,10 +1251,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>UMons</name>
-              <title>理学硕士</title>
-              <caption>UMons · 理学硕士</caption>
+              <title>理学硕士 — 计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS 学分)</title>
+              <caption>UMons · 理学硕士 — 计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS 学分)</caption>
               <period>10月 2022 – 9月 2026</period>
-              <label>UMons — 理学硕士 — 10月 2022 – 9月 2026 — 夜间课程</label>
+              <label>UMons — 理学硕士 — 计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS 学分) — 10月 2022 – 9月 2026 — 夜间课程</label>
               <schedule>evening</schedule>
               <left>76.43%</left>
               <width>22.64%</width>
