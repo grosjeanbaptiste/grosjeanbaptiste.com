@@ -37,8 +37,8 @@ function masterAndLaterBachelor(masterStudyType, bachelorStudyType) {
 }
 
 test('English master outranks a more recent bachelor', () => {
-  const edu = masterAndLaterBachelor('Master of Science - MS', "Professional Bachelor's degree");
-  assert.equal(highestObtainedDegree(edu).studyType, 'Master of Science - MS');
+  const edu = masterAndLaterBachelor('Master of Science - MSc', "Professional Bachelor's degree");
+  assert.equal(highestObtainedDegree(edu).studyType, 'Master of Science - MSc');
 });
 
 test('Spanish "Máster" (accented) outranks "Bachelor profesional"', () => {

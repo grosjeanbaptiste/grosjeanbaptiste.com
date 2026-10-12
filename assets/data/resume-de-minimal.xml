@@ -690,9 +690,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Lycée Mater Dei</name>
-              <caption>Lycée Mater Dei</caption>
+              <title>Allgemeine Studien — Latein und Griechisch</title>
+              <caption>Lycée Mater Dei · Allgemeine Studien — Latein und Griechisch</caption>
               <period>Sep. 2009 – Juni 2012</period>
-              <label>Lycée Mater Dei — Sep. 2009 – Juni 2012</label>
+              <label>Lycée Mater Dei — Allgemeine Studien — Latein und Griechisch — Sep. 2009 – Juni 2012</label>
               <schedule>day</schedule>
               <left>0.47%</left>
               <width>16.02%</width>
@@ -704,10 +705,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
-              <title>C.E.S.S.</title>
-              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S.</caption>
+              <title>C.E.S.S. — Allgemeine Studien — Mathematik und moderne Sprachen</title>
+              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S. — Allgemeine Studien — Mathematik und moderne Sprachen</caption>
               <period>Sep. 2012 – Juni 2015</period>
-              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — Sep. 2012 – Juni 2015</label>
+              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — Allgemeine Studien — Mathematik und moderne Sprachen — Sep. 2012 – Juni 2015</label>
               <schedule>day</schedule>
               <left>17.94%</left>
               <width>16.02%</width>
@@ -719,10 +720,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
-              <title>Vorbereitungskurse</title>
-              <caption>UCLouvain - Université catholique de Louvain · Vorbereitungskurse</caption>
+              <title>Vorbereitungskurse — Medizin und Zahnmedizin</title>
+              <caption>UCLouvain - Université catholique de Louvain · Vorbereitungskurse — Medizin und Zahnmedizin</caption>
               <period>Sep. 2014 – Juni 2015</period>
-              <label>UCLouvain - Université catholique de Louvain — Vorbereitungskurse — Sep. 2014 – Juni 2015</label>
+              <label>UCLouvain - Université catholique de Louvain — Vorbereitungskurse — Medizin und Zahnmedizin — Sep. 2014 – Juni 2015</label>
               <schedule>day</schedule>
               <left>29.6%</left>
               <width>4.37%</width>
@@ -734,10 +735,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
-              <title>Bachelor in Politikwissenschaften</title>
-              <caption>Université Saint-Louis - Bruxelles · Bachelor in Politikwissenschaften</caption>
+              <title>Bachelor in Politikwissenschaften — Allgemeine Ausrichtung</title>
+              <caption>Université Saint-Louis - Bruxelles · Bachelor in Politikwissenschaften — Allgemeine Ausrichtung</caption>
               <period>Sep. 2016 – Juni 2017</period>
-              <label>Université Saint-Louis - Bruxelles — Bachelor in Politikwissenschaften — Sep. 2016 – Juni 2017</label>
+              <label>Université Saint-Louis - Bruxelles — Bachelor in Politikwissenschaften — Allgemeine Ausrichtung — Sep. 2016 – Juni 2017</label>
               <schedule>day</schedule>
               <left>41.25%</left>
               <width>4.37%</width>
@@ -859,10 +860,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
-              <title>Professioneller Bachelor</title>
-              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Professioneller Bachelor</caption>
+              <title>Professioneller Bachelor — Wirtschaftsinformatik</title>
+              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Professioneller Bachelor — Wirtschaftsinformatik</caption>
               <period>Sep. 2018 – Okt. 2022</period>
-              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Professioneller Bachelor — Sep. 2018 – Okt. 2022 — Abendstudium</label>
+              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Professioneller Bachelor — Wirtschaftsinformatik — Sep. 2018 – Okt. 2022 — Abendstudium</label>
               <schedule>evening</schedule>
               <left>52.9%</left>
               <width>23.54%</width>
@@ -1235,10 +1236,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
-              <title>Attestation</title>
-              <caption>Institut Saint-Louis Bruxelles · Attestation</caption>
+              <title>Attestation — 7e Spéciale Mathématiques</title>
+              <caption>Institut Saint-Louis Bruxelles · Attestation — 7e Spéciale Mathématiques</caption>
               <period>Sep. 2019 – Juni 2020</period>
-              <label>Institut Saint-Louis Bruxelles — Attestation — Sep. 2019 – Juni 2020</label>
+              <label>Institut Saint-Louis Bruxelles — Attestation — 7e Spéciale Mathématiques — Sep. 2019 – Juni 2020</label>
               <schedule>day</schedule>
               <left>58.72%</left>
               <width>4.37%</width>
@@ -1250,10 +1251,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>UMons</name>
-              <title>Master of Science</title>
-              <caption>UMons · Master of Science</caption>
+              <title>Master of Science — Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)</title>
+              <caption>UMons · Master of Science — Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)</caption>
               <period>Okt. 2022 – Sep. 2026</period>
-              <label>UMons — Master of Science — Okt. 2022 – Sep. 2026 — Abendstudium</label>
+              <label>UMons — Master of Science — Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS) — Okt. 2022 – Sep. 2026 — Abendstudium</label>
               <schedule>evening</schedule>
               <left>76.43%</left>
               <width>22.64%</width>

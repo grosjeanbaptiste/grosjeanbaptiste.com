@@ -40,10 +40,10 @@ describe('identify', () => {
 
   it('identifies education by institution and degree, leaving the long field of study out', () => {
     const umons = [
-      { institution: 'UMons', studyType: 'Master of Science - MS', area: 'Computer Science' },
+      { institution: 'UMons', studyType: 'Master of Science - MSc', area: 'Computer Science' },
     ];
     const ids = identify({ ...canonical, education: umons }, { ...localized, education: umons });
-    expect(ids.education[0].id).toBe('umons-master-of-science-ms');
+    expect(ids.education[0].id).toBe('umons-master-of-science-msc');
   });
 
   it('suffixes repeated ids so every entry keeps its own page', () => {

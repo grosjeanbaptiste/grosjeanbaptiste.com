@@ -89,3 +89,16 @@ test('what an entry carried, and an experience, have no schedule', () => {
   const { head, children } = group(whole(), 'work', 'Acteble');
   assert.deepEqual([head.schedule, ...children.map((c) => c.schedule)], [undefined, undefined]);
 });
+
+// A degree's title is its type and its speciality: cut at a role's length, the
+// speciality would never be read.
+test('a degree keeps its speciality where a role of that length would be cut', () => {
+  const title = { studyType: 'Master of Science - MSc', area: 'Computer Science (work-study)' };
+  const studied = aResume({
+    education: [{ institution: 'UMons', ...title, startDate: '2022-10-15', endDate: '2026-09-04' }],
+  });
+  assert.equal(
+    group(timelineBars(studied, TODAY), 'education', 'UMons').head.rest,
+    'Master of Science - MSc — Computer Science (work-study)',
+  );
+});

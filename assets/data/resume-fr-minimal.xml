@@ -690,9 +690,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Lycée Mater Dei</name>
-              <caption>Lycée Mater Dei</caption>
+              <title>Études générales — Latin et grec</title>
+              <caption>Lycée Mater Dei · Études générales — Latin et grec</caption>
               <period>sept. 2009 – juin 2012</period>
-              <label>Lycée Mater Dei — sept. 2009 – juin 2012</label>
+              <label>Lycée Mater Dei — Études générales — Latin et grec — sept. 2009 – juin 2012</label>
               <schedule>day</schedule>
               <left>0.47%</left>
               <width>16.02%</width>
@@ -704,10 +705,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
-              <title>C.E.S.S.</title>
-              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S.</caption>
+              <title>C.E.S.S. — Études générales — Mathématiques et langues modernes</title>
+              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S. — Études générales — Mathématiques et langues modernes</caption>
               <period>sept. 2012 – juin 2015</period>
-              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — sept. 2012 – juin 2015</label>
+              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — Études générales — Mathématiques et langues modernes — sept. 2012 – juin 2015</label>
               <schedule>day</schedule>
               <left>17.94%</left>
               <width>16.02%</width>
@@ -719,10 +720,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
-              <title>Cours préparatoires</title>
-              <caption>UCLouvain - Université catholique de Louvain · Cours préparatoires</caption>
+              <title>Cours préparatoires — Médecine et dentisterie</title>
+              <caption>UCLouvain - Université catholique de Louvain · Cours préparatoires — Médecine et dentisterie</caption>
               <period>sept. 2014 – juin 2015</period>
-              <label>UCLouvain - Université catholique de Louvain — Cours préparatoires — sept. 2014 – juin 2015</label>
+              <label>UCLouvain - Université catholique de Louvain — Cours préparatoires — Médecine et dentisterie — sept. 2014 – juin 2015</label>
               <schedule>day</schedule>
               <left>29.6%</left>
               <width>4.37%</width>
@@ -734,10 +735,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
-              <title>Bachelier en sciences politiques</title>
-              <caption>Université Saint-Louis - Bruxelles · Bachelier en sciences politiques</caption>
+              <title>Bachelier en sciences politiques — Orientation générale</title>
+              <caption>Université Saint-Louis - Bruxelles · Bachelier en sciences politiques — Orientation générale</caption>
               <period>sept. 2016 – juin 2017</period>
-              <label>Université Saint-Louis - Bruxelles — Bachelier en sciences politiques — sept. 2016 – juin 2017</label>
+              <label>Université Saint-Louis - Bruxelles — Bachelier en sciences politiques — Orientation générale — sept. 2016 – juin 2017</label>
               <schedule>day</schedule>
               <left>41.25%</left>
               <width>4.37%</width>
@@ -859,10 +860,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
-              <title>Bachelier professionnalisant</title>
-              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Bachelier professionnalisant</caption>
+              <title>Bachelier professionnalisant — Informatique de gestion</title>
+              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Bachelier professionnalisant — Informatique de gestion</caption>
               <period>sept. 2018 – oct. 2022</period>
-              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Bachelier professionnalisant — sept. 2018 – oct. 2022 — horaire décalé</label>
+              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Bachelier professionnalisant — Informatique de gestion — sept. 2018 – oct. 2022 — horaire décalé</label>
               <schedule>evening</schedule>
               <left>52.9%</left>
               <width>23.54%</width>
@@ -1235,10 +1236,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
-              <title>Attestation</title>
-              <caption>Institut Saint-Louis Bruxelles · Attestation</caption>
+              <title>Attestation — 7e Spéciale Mathématiques</title>
+              <caption>Institut Saint-Louis Bruxelles · Attestation — 7e Spéciale Mathématiques</caption>
               <period>sept. 2019 – juin 2020</period>
-              <label>Institut Saint-Louis Bruxelles — Attestation — sept. 2019 – juin 2020</label>
+              <label>Institut Saint-Louis Bruxelles — Attestation — 7e Spéciale Mathématiques — sept. 2019 – juin 2020</label>
               <schedule>day</schedule>
               <left>58.72%</left>
               <width>4.37%</width>
@@ -1250,10 +1251,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>UMons</name>
-              <title>Master en Sciences</title>
-              <caption>UMons · Master en Sciences</caption>
+              <title>Master en Sciences — Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)</title>
+              <caption>UMons · Master en Sciences — Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)</caption>
               <period>oct. 2022 – sept. 2026</period>
-              <label>UMons — Master en Sciences — oct. 2022 – sept. 2026 — horaire décalé</label>
+              <label>UMons — Master en Sciences — Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS) — oct. 2022 – sept. 2026 — horaire décalé</label>
               <schedule>evening</schedule>
               <left>76.43%</left>
               <width>22.64%</width>

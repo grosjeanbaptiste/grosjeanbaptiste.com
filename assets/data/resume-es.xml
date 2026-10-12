@@ -690,9 +690,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Lycée Mater Dei</name>
-              <caption>Lycée Mater Dei</caption>
+              <title>Estudios generales — Latín y griego</title>
+              <caption>Lycée Mater Dei · Estudios generales — Latín y griego</caption>
               <period>sep 2009 – jun 2012</period>
-              <label>Lycée Mater Dei — sep 2009 – jun 2012</label>
+              <label>Lycée Mater Dei — Estudios generales — Latín y griego — sep 2009 – jun 2012</label>
               <schedule>day</schedule>
               <left>0.47%</left>
               <width>16.02%</width>
@@ -704,10 +705,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
-              <title>C.E.S.S.</title>
-              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S.</caption>
+              <title>C.E.S.S. — Estudios generales — Matemáticas y lenguas modernas</title>
+              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S. — Estudios generales — Matemáticas y lenguas modernas</caption>
               <period>sep 2012 – jun 2015</period>
-              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — sep 2012 – jun 2015</label>
+              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — Estudios generales — Matemáticas y lenguas modernas — sep 2012 – jun 2015</label>
               <schedule>day</schedule>
               <left>17.94%</left>
               <width>16.02%</width>
@@ -719,10 +720,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
-              <title>Cursos preparatorios</title>
-              <caption>UCLouvain - Université catholique de Louvain · Cursos preparatorios</caption>
+              <title>Cursos preparatorios — Medicina y odontología</title>
+              <caption>UCLouvain - Université catholique de Louvain · Cursos preparatorios — Medicina y odontología</caption>
               <period>sep 2014 – jun 2015</period>
-              <label>UCLouvain - Université catholique de Louvain — Cursos preparatorios — sep 2014 – jun 2015</label>
+              <label>UCLouvain - Université catholique de Louvain — Cursos preparatorios — Medicina y odontología — sep 2014 – jun 2015</label>
               <schedule>day</schedule>
               <left>29.6%</left>
               <width>4.37%</width>
@@ -734,10 +735,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
-              <title>Grado en Ciencias Políticas</title>
-              <caption>Université Saint-Louis - Bruxelles · Grado en Ciencias Políticas</caption>
+              <title>Grado en Ciencias Políticas — Orientación general</title>
+              <caption>Université Saint-Louis - Bruxelles · Grado en Ciencias Políticas — Orientación general</caption>
               <period>sep 2016 – jun 2017</period>
-              <label>Université Saint-Louis - Bruxelles — Grado en Ciencias Políticas — sep 2016 – jun 2017</label>
+              <label>Université Saint-Louis - Bruxelles — Grado en Ciencias Políticas — Orientación general — sep 2016 – jun 2017</label>
               <schedule>day</schedule>
               <left>41.25%</left>
               <width>4.37%</width>
@@ -859,10 +860,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
-              <title>Bachelor profesional</title>
-              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Bachelor profesional</caption>
+              <title>Bachelor profesional — Informática de gestión</title>
+              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Bachelor profesional — Informática de gestión</caption>
               <period>sep 2018 – oct 2022</period>
-              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Bachelor profesional — sep 2018 – oct 2022 — horario vespertino</label>
+              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Bachelor profesional — Informática de gestión — sep 2018 – oct 2022 — horario vespertino</label>
               <schedule>evening</schedule>
               <left>52.9%</left>
               <width>23.54%</width>
@@ -1235,10 +1236,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
-              <title>Acreditación</title>
-              <caption>Institut Saint-Louis Bruxelles · Acreditación</caption>
+              <title>Acreditación — 7e Spéciale Mathématiques</title>
+              <caption>Institut Saint-Louis Bruxelles · Acreditación — 7e Spéciale Mathématiques</caption>
               <period>sep 2019 – jun 2020</period>
-              <label>Institut Saint-Louis Bruxelles — Acreditación — sep 2019 – jun 2020</label>
+              <label>Institut Saint-Louis Bruxelles — Acreditación — 7e Spéciale Mathématiques — sep 2019 – jun 2020</label>
               <schedule>day</schedule>
               <left>58.72%</left>
               <width>4.37%</width>
@@ -1250,10 +1251,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>UMons</name>
-              <title>Máster en Ciencias</title>
-              <caption>UMons · Máster en Ciencias</caption>
+              <title>Máster en Ciencias — Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)</title>
+              <caption>UMons · Máster en Ciencias — Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)</caption>
               <period>oct 2022 – sep 2026</period>
-              <label>UMons — Máster en Ciencias — oct 2022 – sep 2026 — horario vespertino</label>
+              <label>UMons — Máster en Ciencias — Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS) — oct 2022 – sep 2026 — horario vespertino</label>
               <schedule>evening</schedule>
               <left>76.43%</left>
               <width>22.64%</width>

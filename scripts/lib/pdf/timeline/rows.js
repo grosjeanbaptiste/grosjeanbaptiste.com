@@ -2,6 +2,7 @@
 // its label together. A label is written inside its bar when it fits, after it
 // otherwise — or before it, when after would run past the end of the track.
 
+const { cut } = require('./cut');
 const { unitsOnPaper } = require('./units');
 
 const GAP = 1; // mm kept clear between two neighbours on a row
@@ -14,6 +15,26 @@ function labelOf(x0, x1, width, trackEnd) {
   return { place: 'left', x: x0 - PAD, from: x0 - PAD - width, to: x1 };
 }
 
+// The label in full, when the bar is wide enough to hold it: nothing is pushed
+// along by a label inside its bar, so it is not cut there.
+function whole(bar, x0, x1, scale) {
+  if (!bar.full) return undefined;
+  const written = { ...bar, ...bar.full };
+  return scale.labelWidth(written) + 2 * PAD <= x1 - x0 ? written : undefined;
+}
+
+// A label with room on neither side of its bar would run off the start of the
+// track, into the lane's title: its rest is cut to the wider side.
+function shortened(bar, x0, x1, scale) {
+  const { from } = labelOf(x0, x1, scale.labelWidth(bar), scale.trackEnd);
+  if (from >= 0 || !bar.rest) return bar;
+  const room = Math.max(x0 - PAD, scale.trackEnd - x1 - PAD);
+  const rest = cut(bar.rest, room, (text) => scale.labelWidth({ ...bar, rest: text }));
+  // A rest with no room for even its beginning is left whole: the sheet then
+  // sees a label that does not fit, and goes to its next plan (./page.js).
+  return rest ? { ...bar, rest } : bar;
+}
+
 // scale.x maps a month to mm; a bar covers its whole last month, hence end + 1.
 function packLane(bars, scale) {
   const rowEnds = [];
@@ -21,7 +42,9 @@ function packLane(bars, scale) {
     .map((bar) => {
       const x0 = scale.x(bar.start);
       const x1 = scale.x(bar.end + 1);
-      return { ...bar, x0, x1, label: labelOf(x0, x1, scale.labelWidth(bar), scale.trackEnd) };
+      const worded = whole(bar, x0, x1, scale) ?? shortened(bar, x0, x1, scale);
+      const label = labelOf(x0, x1, scale.labelWidth(worded), scale.trackEnd);
+      return { ...worded, x0, x1, label };
     })
     .sort((a, b) => a.label.from - b.label.from)
     .map((bar) => {
@@ -41,20 +64,24 @@ function packLane(bars, scale) {
 // A degree's blocks, on the one row under it: each labelled inside its
 // segment, with the programme's name when it fits and the year alone otherwise.
 function bandsOnPaper(bands, scale) {
-  return bands.map((band) => {
-    const x0 = scale.x(band.start);
-    const x1 = scale.x(band.end + 1);
+  const placed = bands.map((band) => ({
+    ...band,
+    x0: scale.x(band.start),
+    x1: scale.x(band.end + 1),
+  }));
+  return placed.map((band) => {
+    const { x0, x1 } = band;
     const fits = (b) => scale.labelWidth(b) + 2 * PAD <= x1 - x0;
     const worded = fits(band) ? band : { ...band, rest: '' };
-    const strong = fits(worded) ? worded.strong : '';
-    return {
-      ...worded,
-      strong,
-      x0,
-      x1,
-      row: 0,
-      label: { place: 'inside', x: x0 + PAD, from: x0, to: x1 },
-    };
+    const inside = { place: 'inside', x: x0 + PAD, from: x0, to: x1 };
+    if (fits(worded)) return { ...worded, row: 0, label: inside };
+    // Too narrow even for its year: written after it when the next segment,
+    // or the end of the track, leaves room — a bare stub says nothing.
+    const next = Math.min(scale.trackEnd, ...placed.filter((b) => b.x0 >= x1).map((b) => b.x0));
+    const to = x1 + PAD + scale.labelWidth(worded);
+    return to + GAP <= next
+      ? { ...worded, row: 0, label: { place: 'right', x: x1 + PAD, from: x0, to } }
+      : { ...worded, strong: '', row: 0, label: inside };
   });
 }
 

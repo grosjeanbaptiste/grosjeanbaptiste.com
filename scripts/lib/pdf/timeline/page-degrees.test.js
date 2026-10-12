@@ -14,6 +14,9 @@ const bar = (id, start, end, rest = 'a role') => ({
   strong: id,
   rest,
 });
+// A role is wide however it is cut: a label shortened to its track (./rows.js)
+// is still one that does not fit.
+const wideRole = (b) => (b.rest.startsWith('a') ? 300 : 1);
 const busy = Array.from({ length: 50 }, (_, i) =>
   bar(`e${i}`, at(2020, 3) + (i % 40), at(2020, 3) + (i % 40)),
 );
@@ -29,7 +32,7 @@ const timeline = {
 const degreeOn = (sheet) => sheet.lanes[1].bars[0];
 
 test('with the names alone, a degree keeps its title', () => {
-  const sheet = layOut(timeline, { measure: (b) => (b.rest === 'a role' ? 300 : 1) });
+  const sheet = layOut(timeline, { measure: wideRole });
   assert.deepEqual([sheet.labels, degreeOn(sheet).rest], ['names', 'Master']);
 });
 

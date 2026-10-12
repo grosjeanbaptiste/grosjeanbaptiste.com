@@ -690,9 +690,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Lycée Mater Dei</name>
-              <caption>Lycée Mater Dei</caption>
+              <title>General studies Latin &amp; Greek</title>
+              <caption>Lycée Mater Dei · General studies Latin &amp; Greek</caption>
               <period>Sep 2009 – Jun 2012</period>
-              <label>Lycée Mater Dei — Sep 2009 – Jun 2012</label>
+              <label>Lycée Mater Dei — General studies Latin &amp; Greek — Sep 2009 – Jun 2012</label>
               <schedule>day</schedule>
               <left>0.47%</left>
               <width>16.02%</width>
@@ -704,10 +705,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
-              <title>C.E.S.S.</title>
-              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S.</caption>
+              <title>C.E.S.S. — General Studies Maths &amp; Modern languages</title>
+              <caption>Centre Scolaire Saint-Adrien - Val Duchesse · C.E.S.S. — General Studies Maths &amp; Modern languages</caption>
               <period>Sep 2012 – Jun 2015</period>
-              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — Sep 2012 – Jun 2015</label>
+              <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — General Studies Maths &amp; Modern languages — Sep 2012 – Jun 2015</label>
               <schedule>day</schedule>
               <left>17.94%</left>
               <width>16.02%</width>
@@ -719,10 +720,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
-              <title>Cours préparatoires</title>
-              <caption>UCLouvain - Université catholique de Louvain · Cours préparatoires</caption>
+              <title>Cours préparatoires — Médecine et dentisterie</title>
+              <caption>UCLouvain - Université catholique de Louvain · Cours préparatoires — Médecine et dentisterie</caption>
               <period>Sep 2014 – Jun 2015</period>
-              <label>UCLouvain - Université catholique de Louvain — Cours préparatoires — Sep 2014 – Jun 2015</label>
+              <label>UCLouvain - Université catholique de Louvain — Cours préparatoires — Médecine et dentisterie — Sep 2014 – Jun 2015</label>
               <schedule>day</schedule>
               <left>29.6%</left>
               <width>4.37%</width>
@@ -734,10 +735,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
-              <title>Bachelor in Political Sciences</title>
-              <caption>Université Saint-Louis - Bruxelles · Bachelor in Political Sciences</caption>
+              <title>Bachelor in Political Sciences — General orientation</title>
+              <caption>Université Saint-Louis - Bruxelles · Bachelor in Political Sciences — General orientation</caption>
               <period>Sep 2016 – Jun 2017</period>
-              <label>Université Saint-Louis - Bruxelles — Bachelor in Political Sciences — Sep 2016 – Jun 2017</label>
+              <label>Université Saint-Louis - Bruxelles — Bachelor in Political Sciences — General orientation — Sep 2016 – Jun 2017</label>
               <schedule>day</schedule>
               <left>41.25%</left>
               <width>4.37%</width>
@@ -859,10 +860,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
-              <title>Professional Bachelor's degree</title>
-              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Professional Bachelor's degree</caption>
+              <title>Professional Bachelor's degree — Information Systems Management</title>
+              <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Professional Bachelor's degree — Information Systems Management</caption>
               <period>Sep 2018 – Oct 2022</period>
-              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Professional Bachelor's degree — Sep 2018 – Oct 2022 — evening schedule</label>
+              <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Professional Bachelor's degree — Information Systems Management — Sep 2018 – Oct 2022 — evening schedule</label>
               <schedule>evening</schedule>
               <left>52.9%</left>
               <width>23.54%</width>
@@ -1235,10 +1236,10 @@
               <kind>education</kind>
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
-              <title>Attestation</title>
-              <caption>Institut Saint-Louis Bruxelles · Attestation</caption>
+              <title>Attestation — 7e Spéciale Mathématiques</title>
+              <caption>Institut Saint-Louis Bruxelles · Attestation — 7e Spéciale Mathématiques</caption>
               <period>Sep 2019 – Jun 2020</period>
-              <label>Institut Saint-Louis Bruxelles — Attestation — Sep 2019 – Jun 2020</label>
+              <label>Institut Saint-Louis Bruxelles — Attestation — 7e Spéciale Mathématiques — Sep 2019 – Jun 2020</label>
               <schedule>day</schedule>
               <left>58.72%</left>
               <width>4.37%</width>
@@ -1246,14 +1247,14 @@
               <printRow>5</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>education</kind>
               <depth>0</depth>
               <name>UMons</name>
-              <title>Master of Science - MS</title>
-              <caption>UMons · Master of Science - MS</caption>
+              <title>Master of Science - MSc — Computer Science (work-study program) — specialised professional focus (120 ECTS)</title>
+              <caption>UMons · Master of Science - MSc — Computer Science (work-study program) — specialised professional focus (120 ECTS)</caption>
               <period>Oct 2022 – Sep 2026</period>
-              <label>UMons — Master of Science - MS — Oct 2022 – Sep 2026 — evening schedule</label>
+              <label>UMons — Master of Science - MSc — Computer Science (work-study program) — specialised professional focus (120 ECTS) — Oct 2022 – Sep 2026 — evening schedule</label>
               <schedule>evening</schedule>
               <left>76.43%</left>
               <width>22.64%</width>
@@ -1261,7 +1262,7 @@
               <printRow>0</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>block</kind>
               <depth>1</depth>
               <name>22-23</name>
@@ -1276,7 +1277,7 @@
               <printRow>1</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>block</kind>
               <depth>1</depth>
               <name>23-24</name>
@@ -1291,7 +1292,7 @@
               <printRow>1</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>block</kind>
               <depth>1</depth>
               <name>24-25</name>
@@ -1306,7 +1307,7 @@
               <printRow>1</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>block</kind>
               <depth>1</depth>
               <name>25-26</name>
@@ -1321,7 +1322,7 @@
               <printRow>1</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Bases de données I</name>
@@ -1333,7 +1334,7 @@
               <row>2</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Algorithmique</name>
@@ -1345,7 +1346,7 @@
               <row>3</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Modélisation logicielle</name>
@@ -1357,7 +1358,7 @@
               <row>4</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Mathématique</name>
@@ -1369,7 +1370,7 @@
               <row>5</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Anglais I</name>
@@ -1381,7 +1382,7 @@
               <row>2</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Lecture et rédaction scientifique</name>
@@ -1393,7 +1394,7 @@
               <row>3</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Stratégie et politiques en ressources humaines</name>
@@ -1405,7 +1406,7 @@
               <row>4</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Réseaux</name>
@@ -1417,7 +1418,7 @@
               <row>5</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Systèmes d'exploitation</name>
@@ -1429,7 +1430,7 @@
               <row>6</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Anglais II</name>
@@ -1441,7 +1442,7 @@
               <row>2</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Bases de données II</name>
@@ -1453,7 +1454,7 @@
               <row>3</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Ingénierie de logiciels et gestion de projets</name>
@@ -1465,7 +1466,7 @@
               <row>4</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Intelligence artificielle</name>
@@ -1477,7 +1478,7 @@
               <row>5</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Recherche opérationnelle et applications</name>
@@ -1489,7 +1490,7 @@
               <row>6</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Structures de données</name>
@@ -1501,7 +1502,7 @@
               <row>7</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Séminaires d'informatique en veille technologique</name>
@@ -1513,7 +1514,7 @@
               <row>2</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Cryptographie et sécurité des systèmes informatiques</name>
@@ -1525,7 +1526,7 @@
               <row>3</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Éthique et droit de l'informatique</name>
@@ -1537,7 +1538,7 @@
               <row>4</row>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>Student Representative</name>
@@ -1551,7 +1552,7 @@
               <printRow>2</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>Buddy TandeMons</name>
@@ -1565,7 +1566,7 @@
               <printRow>3</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
@@ -1578,7 +1579,7 @@
               <printRow>4</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
@@ -1591,7 +1592,7 @@
               <printRow>5</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
@@ -1604,7 +1605,7 @@
               <printRow>4</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
@@ -1617,7 +1618,7 @@
               <printRow>5</printRow>
             </bar>
             <bar>
-              <target>education-umons-master-of-science-ms</target>
+              <target>education-umons-master-of-science-msc</target>
               <kind>project</kind>
               <depth>1</depth>
               <name>Mémoire de master</name>
@@ -1691,7 +1692,7 @@
       </lanes>
     </timeline>
     <degrees>
-      <obtained>Master of Science - MS in Computer Science (work-study program) — specialised professional focus (120 ECTS)</obtained>
+      <obtained>Master of Science - MSc in Computer Science (work-study program) — specialised professional focus (120 ECTS)</obtained>
     </degrees>
   </meta>
   <basics>
@@ -1980,7 +1981,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
   <education>
     <school>
       <institution>UMons</institution>
-      <studyType>Master of Science - MS</studyType>
+      <studyType>Master of Science - MSc</studyType>
       <area>Computer Science (work-study program) — specialised professional focus (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
       <endDate>2026-09-04</endDate>
@@ -2070,7 +2071,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
           </units>
         </block>
       </blocks>
-      <anchor>education-umons-master-of-science-ms</anchor>
+      <anchor>education-umons-master-of-science-msc</anchor>
     </school>
     <school>
       <institution>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</institution>

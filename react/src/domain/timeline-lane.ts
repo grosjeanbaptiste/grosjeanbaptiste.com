@@ -94,12 +94,14 @@ export function laneOf(kind: EntryKind, heads: readonly Placed[], sources: Sourc
   const packed = packGroups(heads.map((head) => groupOf(head, sources)));
   const met = (organisation: string | undefined) =>
     heads.filter((h) => h.entry.organisation === organisation).length;
-  // A degree always reads with its title: the school alone does not say what
-  // was studied.
-  const captionOf = ({ organisation, title }: Dated) =>
-    organisation && title !== organisation && (kind === 'education' || met(organisation) > 1)
-      ? `${organisation} · ${title}`
-      : (organisation ?? title);
+  // A degree always reads with its title and its speciality: the school alone
+  // does not say what was studied.
+  const captionOf = ({ organisation, title, subtitle }: Dated) => {
+    if (!organisation || title === organisation) return organisation ?? title;
+    if (kind === 'education')
+      return `${organisation} · ${[title, subtitle].filter(Boolean).join(' — ')}`;
+    return met(organisation) > 1 ? `${organisation} · ${title}` : organisation;
+  };
   const bars: TimelineBar[] = packed.groups.flatMap((g) => [
     {
       ...g.head,

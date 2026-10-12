@@ -88,7 +88,13 @@ describe('a degree’s bar', () => {
     expect(bars.find((b) => b.key === 'lycee')?.caption).toBe('Lycée');
   });
 
-  it('reads the school and the degree', () => {
-    expect(degree?.caption).toBe(`${degree?.entry.organisation} · ${degree?.entry.title}`);
+  it('reads the school, the degree and its speciality', () => {
+    expect(degree?.caption).toBe('UMons · Master — Computer Science');
+  });
+
+  it('reads the school and the degree when the degree has no speciality', () => {
+    const plain = { ...base, education: base.education.map(({ area: _area, ...e }) => e) };
+    const bars = timelineOf(entriesOf(plain), today).lanes.flatMap((l) => l.bars);
+    expect(bars.find((b) => b.key === 'umons-master')?.caption).toBe('UMons · Master');
   });
 });
