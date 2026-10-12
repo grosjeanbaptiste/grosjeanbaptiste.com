@@ -30,7 +30,8 @@ function unitsOf(block, bar, resume) {
     return {
       kind: 'unit',
       ongoing: false,
-      anchor: anchorOf('project', project),
+      // What a block files is a course, whatever its record says.
+      anchor: anchorOf('course', project),
       record: block,
       start: bar.start,
       end: bar.end,

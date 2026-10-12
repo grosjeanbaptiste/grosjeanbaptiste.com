@@ -15,6 +15,8 @@ const PARTS = {
   education: (r) => [r.institution, r.studyType],
   competition: (r) => [r.title],
   project: (r) => [r.name],
+  // A course unit: a course of a degree, never a project.
+  course: (r) => [r.name],
   volunteer: (r) => [r.organization, r.position],
 };
 

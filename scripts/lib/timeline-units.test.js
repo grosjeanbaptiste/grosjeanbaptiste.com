@@ -68,7 +68,7 @@ test('a unit reads by its official designation', () => {
 });
 
 test('a unit leads to its own line on the page', () => {
-  assert.match(byName('Algorithmique').anchor, /^project-algorithmique/);
+  assert.match(byName('Algorithmique').anchor, /^course-algorithmique/);
 });
 
 test('the outline of the degree covers its units', () => {

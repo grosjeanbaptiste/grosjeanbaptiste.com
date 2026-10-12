@@ -26,7 +26,7 @@ const aResume = (extra = {}) => ({
     { name: 'Acteble', startDate: '2025-07-01' },
     { name: 'Kwalitijd', startDate: '2023-09-01', endDate: '2026-01-31' },
     { name: 'Baba', startDate: '2026-07-02' },
-    { name: 'Algorithmique', entity: 'UMONS', courseUnit: true },
+    { name: 'Algorithmique', entity: 'UMONS', type: 'Course unit' },
   ],
   volunteer: [
     { organization: 'UMons', position: 'Buddy', startDate: '2023-11-30', endDate: '2026-09-04' },

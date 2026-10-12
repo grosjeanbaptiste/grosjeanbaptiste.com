@@ -3,6 +3,7 @@
 // Kept separate from main.js so the section renderers there stay short.
 const { escapeHtml, dateRangeHtml } = require('../format');
 const { anchorOf } = require('../anchors');
+const { isCourseUnit, kindOf } = require('../course-unit');
 
 // What the timeline's bar for an embedded row links to: an empty span at the
 // end of the row, so the <li> markup — which a dozen tests and the print
@@ -49,7 +50,7 @@ function rowHtml(p) {
   const clipped = desc ? printText(desc, PRINT_PLAN.proj_desc) : null;
   const descAttr = clipped ? ` data-print-text="${escapeHtml(clipped)}"` : '';
   const descHtml = desc ? ` — <span${descAttr}>${escapeHtml(desc)}</span>` : '';
-  return `<li>${label}${descHtml}${renderProjectTags(p.keywords)}${anchorHtml('project', p)}</li>`;
+  return `<li>${label}${descHtml}${renderProjectTags(p.keywords)}${anchorHtml(kindOf(p), p)}</li>`;
 }
 const listHtml = (projs) => [
   '  <ul>',
@@ -149,15 +150,14 @@ function appendEmbeds(parts, entry, hostName, ctx, t, lang) {
   // Anglais I under "Projects" beside Acteble — telling the reader the
   // opposite of what they are.
   const named = (entry.projects || []).map((n) => ctx.projects.find((p) => p.name === n));
-  const isUnit = (p) => p?.type === 'Course unit';
   const projsHtml = renderEmbeddedProjects(
-    named.filter((p) => p && !isUnit(p)).map((p) => p.name),
+    named.filter((p) => p && !isCourseUnit(p)).map((p) => p.name),
     ctx.projects,
     t.projects,
   );
   if (projsHtml) parts.push(indentLines(projsHtml, 2));
   const unitsHtml = renderEmbeddedProjects(
-    named.filter(isUnit).map((p) => p.name),
+    named.filter(isCourseUnit).map((p) => p.name),
     ctx.projects,
     t.courseUnits,
     entry.blocks,

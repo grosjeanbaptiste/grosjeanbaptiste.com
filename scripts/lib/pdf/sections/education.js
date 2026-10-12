@@ -7,6 +7,7 @@
 const { tex, nohyphen, formatDate, truncate } = require('../tex');
 const { topN, findProject } = require('../data');
 const { appendItemTrailer } = require('./_trailer');
+const { isCourseUnit } = require('../../course-unit');
 
 function renderSummary(text, max) {
   if (!text) return null;
@@ -18,9 +19,8 @@ function renderSummary(text, max) {
 // The projects a degree carried. Its course units are named in the same list
 // of the CV's data — told apart as the site tells them — and the PDF leaves
 // them to the site.
-const isUnit = (project) => project?.type === 'Course unit';
 const carriedProjects = (e, resume) =>
-  (e.projects || []).filter((name) => !isUnit(findProject(resume, name)));
+  (e.projects || []).filter((name) => !isCourseUnit(findProject(resume, name)));
 
 function renderEducationEntry(e, lang, t, limits, resume) {
   const start = formatDate(e.startDate, lang);
