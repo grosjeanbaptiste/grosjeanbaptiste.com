@@ -188,7 +188,9 @@
     },
     {
       "summary": "Caja registradora basada en QR para establecimientos HoReCa (Hotel/Restaurante/Café)."
-    },
+    }
+  ],
+  "courses": [
     {
       "summary": "Algorítmica"
     },

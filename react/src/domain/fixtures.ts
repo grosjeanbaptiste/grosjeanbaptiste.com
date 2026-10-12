@@ -36,7 +36,7 @@ export function aResume(): Resume {
         startDate: '2022-10-15',
         endDate: '2026-09-04',
         skills: ['Python'],
-        projects: ['Algorithmique'],
+        courses: ['Algorithmique'],
       },
     ],
     projects: [
@@ -45,17 +45,15 @@ export function aResume(): Resume {
         name: 'Baba',
         keywords: ['Rust', 'Prolog'],
         startDate: '2026-07-02',
-        courseUnit: false,
       },
       {
         id: 'acteble',
         name: 'Acteble',
         keywords: ['Flutter'],
         startDate: '2025-07-01',
-        courseUnit: false,
       },
-      { id: 'algorithmique', name: 'Algorithmique', keywords: ['Algorithms'], courseUnit: true },
     ],
+    courses: [{ id: 'algorithmique', name: 'Algorithmique', keywords: ['Algorithms'] }],
     volunteer: [
       {
         id: 'umons-rep',

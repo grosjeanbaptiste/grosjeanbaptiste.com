@@ -121,9 +121,15 @@ test('the verso is a block of its own, not a break inside the recto', () => {
   );
 });
 
-test('the references are set in three columns under a heading that spans them', () => {
-  // \\begin{multicols}{3} in pdf/sections/extras.js.
+test('the verso is a landscape sheet, as \\begin{landscape} makes it in the PDF', () => {
   const css = fs.readFileSync(path.resolve(__dirname, '../../css/print-verso.css'), 'utf8');
-  assert.match(css, /#print-verso #references\s*\{[^}]*columns:\s*3/);
+  assert.match(css, /@page verso\s*\{[^}]*size:\s*A4 landscape/);
+  assert.match(css, /#print-verso\s*\{[^}]*page:\s*verso/);
+});
+
+test('the references are set in four columns under a heading that spans them', () => {
+  // \\begin{multicols}{4} in pdf/sections/extras.js.
+  const css = fs.readFileSync(path.resolve(__dirname, '../../css/print-verso.css'), 'utf8');
+  assert.match(css, /#print-verso #references\s*\{[^}]*columns:\s*4/);
   assert.match(css, /#print-verso #references h2\s*\{[^}]*column-span:\s*all/);
 });

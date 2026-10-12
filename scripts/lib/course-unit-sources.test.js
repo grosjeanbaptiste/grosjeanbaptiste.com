@@ -27,7 +27,7 @@ const decode = (text) =>
 const { units } = JSON.parse(
   fs.readFileSync(path.join(ROOT, 'dsl/course-unit-sources.json'), 'utf8'),
 );
-const courseUnits = loadResume('en').projects.filter((p) => p.type === 'Course unit');
+const courseUnits = loadResume('en').courses;
 
 // What the official sources do not back, said here rather than left unsaid.
 // The first language unit has no sheet in EPHEC's dossier, which only names it

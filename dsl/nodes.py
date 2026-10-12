@@ -160,7 +160,8 @@ class EducationEntry(Node):
     period: DateRange | None = None
     score: Value | None = None  # aliased to `gpa` in the extras sidecar
     note: Value | None = None
-    courses: tuple[str, ...] = ()
+    # The course units the degree carried — never among its projects.
+    courses: tuple[Ref, ...] = ()
     uses: tuple[str, ...] = ()
     projects: tuple[Ref, ...] = ()
     hide_on: HideTarget | None = None
@@ -188,6 +189,19 @@ class ProjectEntry(Node):
     entity: str | None = None
     # A side project the author keeps out of some or all displays.
     hide_on: HideTarget | None = None
+
+
+@dataclass(frozen=True, kw_only=True)
+class CourseEntry(Node):
+    """A course unit of a degree: its official designation, its translated
+    title, the school that teaches it and its official sheet."""
+
+    key: str
+    name: str | None = None
+    summary: Value | None = None
+    keywords: tuple[str, ...] = ()
+    url: str | None = None
+    entity: str | None = None
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -282,6 +296,7 @@ class Resume(Node):
     work: tuple[WorkEntry, ...] = ()
     education: tuple[EducationEntry, ...] = ()
     projects: tuple[ProjectEntry, ...] = ()
+    courses: tuple[CourseEntry, ...] = ()
     references: tuple[ReferenceEntry, ...] = ()
     skills: Skills | None = None
     languages: tuple[LanguageEntry, ...] = ()

@@ -33,6 +33,7 @@ from nodes import (
     Position,
     Present,
     Profile,
+    CourseEntry,
     ProjectEntry,
     Ref,
     ReferenceEntry,
@@ -111,6 +112,7 @@ class _Builder(Transformer):
             work=tuple(buckets.get("work", ())),
             education=tuple(buckets.get("education", ())),
             projects=tuple(buckets.get("projects", ())),
+            courses=tuple(buckets.get("courses", ())),
             references=tuple(buckets.get("references", ())),
             skills=singletons.get("skills"),
             languages=tuple(buckets.get("languages", ())),
@@ -364,6 +366,31 @@ class _Builder(Transformer):
         return ("roles", tuple(children[0]))
 
     def proj_entity(self, meta, children):
+        return ("entity", children[0])
+
+    # -----------------------------------------------------------------
+    # courses
+    # -----------------------------------------------------------------
+
+    def courses_section(self, meta, children):
+        return ("courses", children)
+
+    def course_entry(self, meta, children):
+        return CourseEntry(src=_pos(meta), key=str(children[0]), **dict(children[1:]))
+
+    def course_name(self, meta, children):
+        return ("name", children[0])
+
+    def course_summary(self, meta, children):
+        return ("summary", children[0])
+
+    def course_keywords(self, meta, children):
+        return ("keywords", tuple(children[0]))
+
+    def course_url(self, meta, children):
+        return ("url", children[0])
+
+    def course_entity(self, meta, children):
         return ("entity", children[0])
 
     # -----------------------------------------------------------------

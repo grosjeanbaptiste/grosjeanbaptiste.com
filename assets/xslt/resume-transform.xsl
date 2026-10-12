@@ -13,6 +13,8 @@
   <xsl:output method="html" indent="yes"/>
 
   <xsl:key name="project-by-name" match="/resume/projects/project[name]" use="name"/>
+  <!-- A course unit is a course, never a project: it has its own collection. -->
+  <xsl:key name="course-by-name"  match="/resume/courses/course[name]"   use="name"/>
   <xsl:key name="skill-by-name"   match="/resume/skills/skill"           use="name"/>
 
   <!-- Current language pulled from the XML payload (default 'en'). -->
@@ -440,6 +442,7 @@
             blockquote { font-size: 0.88em; padding: 6px 12px; }
           }
           @page { size: A4; margin: 0.8cm 0.9cm; } /* \geometry of the LaTeX CV */
+          @page verso { size: A4 landscape; margin: 0.8cm 0.9cm; } /* \begin{landscape} */
           @media print {
             .toolbar { display: none; }
             /* Force the light palette so a dark-mode reader still prints a
@@ -507,8 +510,14 @@
             .clipped-text { display: block; }
             span.clipped-text { display: inline; }
             .clipped-text + .full-text { display: none; }
-            /* The references get the verso, as they do in the PDF. */
-            .refs { break-before: page; }
+            /* The references get the verso, as they do in the PDF — a sheet
+               turned to landscape, since the timeline that opens it needs the
+               width. The script below sets the block last in the page, out of
+               the two columns: a page of another kind cannot start inside
+               them. Four columns across, as \begin{multicols}{4} sets them. */
+            .refs { break-before: page; page: verso; columns: 4; column-gap: 0.6cm; }
+            .refs > h2, .refs > #timeline, .refs > .footer-note { column-span: all; }
+            .refs .item { break-inside: auto; }
             /* The timeline is part of the page, so it is printed: the script
                below sets it at the top of the verso, above the references, the
                whole career across the column, no controls. /css/timeline.css
@@ -522,6 +531,7 @@
               width: 100% !important; min-width: 0; gap: 3pt;
             }
             html .refs .tl-years { height: 8pt; font-size: 6pt; }
+            html .refs .tl-legend { margin: 2pt 0 0; font-size: 6pt; }
             html .refs .tl-lane-label {
               position: static; padding: 0 4pt 0 0; background: none; font-size: 6.5pt;
             }
@@ -576,14 +586,22 @@
           (function () {
             var edu, parent, next;
             // The timeline goes to the top of the verso, above the references.
-            var timeline, timelineParent, timelineNext;
+            // Then the verso itself goes last in the page, out of the two
+            // columns: it is a landscape sheet, and nothing may follow it —
+            // the closing note is taken along, at its foot as before.
+            var timeline, moved = [];
+            function move(node, parent, before) {
+              moved.push([node, node.parentNode, node.nextSibling]);
+              parent.insertBefore(node, before || null);
+            }
             function moveTimeline() {
               timeline = document.querySelector('#timeline');
               var refs = document.querySelector('.refs');
               if (!timeline || !refs) { timeline = null; return; }
-              timelineParent = timeline.parentNode;
-              timelineNext = timeline.nextSibling;
-              refs.insertBefore(timeline, refs.firstChild);
+              var note = document.querySelector('.footer-note');
+              move(timeline, refs, refs.firstChild);
+              if (note) move(note, refs);
+              move(refs, document.body);
             }
             function prepare() {
               if (parent) return;
@@ -596,10 +614,11 @@
               side.insertBefore(edu, side.querySelector('h2'));
             }
             function restore() {
-              if (timeline) {
-                timelineParent.insertBefore(timeline, timelineNext);
-                timeline = null;
+              while (moved.length) {
+                var back = moved.pop();
+                back[1].insertBefore(back[0], back[2]);
               }
+              timeline = null;
               if (!parent) return;
               parent.insertBefore(edu, next);
               parent = null;
@@ -831,9 +850,9 @@
   </xsl:template>
 
   <xsl:template name="sidebar-projects">
-    <!-- Course units are referenced like projects in the data but are not
-         projects: they belong to their degree, never to this list. -->
-    <xsl:variable name="shown" select="/resume/projects/project[not(type='Course unit')]"/>
+    <!-- Course units are not projects: they have their own collection and
+         belong to their degree, never to this list. -->
+    <xsl:variable name="shown" select="/resume/projects/project"/>
     <xsl:if test="$shown">
       <!-- Not in the LaTeX sidebar: its projects appear under the roles that
            reference them. Wrapped so the print sheet can leave it out. -->
@@ -857,9 +876,9 @@
     </xsl:if>
   </xsl:template>
 
-  <!-- One list of referenced entries under a work or education item. Course
-       units are referenced exactly like projects, so the caller splits them on
-       type and calls this twice, each with its own heading. `clip` picks the
+  <!-- One list of referenced entries under a work or education item: its
+       projects, or a degree's course units — never both in one list, so the
+       caller calls this twice, each with its own heading. `clip` picks the
        two-span clipped/full pair the print sheet swaps between; the education
        list never clipped, and still doesn't. -->
   <xsl:template name="embedded-list">
@@ -884,7 +903,7 @@
         <ul>
           <xsl:for-each select="$refs">
             <xsl:variable name="ref" select="."/>
-            <xsl:variable name="proj" select="key('project-by-name', $ref)"/>
+            <xsl:variable name="proj" select="key('project-by-name', $ref)[local-name($ref) = 'project'] | key('course-by-name', $ref)[local-name($ref) = 'course']"/>
             <li>
               <strong><xsl:value-of select="$ref"/></strong>
               <xsl:choose>
@@ -905,7 +924,7 @@
        the programme's name for it) heads the units taken then; a unit on no
        block follows them. -->
   <xsl:template name="units-by-block">
-    <xsl:variable name="units" select="projects/project[key('project-by-name', .)/type='Course unit']"/>
+    <xsl:variable name="units" select="courses/course"/>
     <xsl:variable name="filed" select="blocks/block/units/unit"/>
     <div class="embedded-projects">
       <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="'courseUnits'"/></xsl:call-template></p>
@@ -1092,12 +1111,12 @@
                   </xsl:if>
 
                   <xsl:call-template name="embedded-list">
-                    <xsl:with-param name="refs" select="projects/project[not(key('project-by-name', .)/type='Course unit')]"/>
+                    <xsl:with-param name="refs" select="projects/project"/>
                     <xsl:with-param name="k" select="'projects'"/>
                     <xsl:with-param name="clip" select="1"/>
                   </xsl:call-template>
                   <xsl:call-template name="embedded-list">
-                    <xsl:with-param name="refs" select="projects/project[key('project-by-name', .)/type='Course unit']"/>
+                    <xsl:with-param name="refs" select="courses/course"/>
                     <xsl:with-param name="k" select="'courseUnits'"/>
                     <xsl:with-param name="clip" select="1"/>
                   </xsl:call-template>
@@ -1174,7 +1193,7 @@
                     </div>
                   </xsl:if>
                   <xsl:call-template name="embedded-list">
-                    <xsl:with-param name="refs" select="projects/project[not(key('project-by-name', .)/type='Course unit')]"/>
+                    <xsl:with-param name="refs" select="projects/project"/>
                     <xsl:with-param name="k" select="'projects'"/>
                     <xsl:with-param name="clip" select="0"/>
                   </xsl:call-template>
@@ -1182,7 +1201,7 @@
                     <xsl:when test="blocks/block"><xsl:call-template name="units-by-block"/></xsl:when>
                     <xsl:otherwise>
                   <xsl:call-template name="embedded-list">
-                    <xsl:with-param name="refs" select="projects/project[key('project-by-name', .)/type='Course unit']"/>
+                    <xsl:with-param name="refs" select="courses/course"/>
                     <xsl:with-param name="k" select="'courseUnits'"/>
                     <xsl:with-param name="clip" select="0"/>
                   </xsl:call-template>

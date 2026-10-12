@@ -21,13 +21,23 @@
      such ambiguity. */
   #print-verso {
     break-before: page;
+    page: verso;
   }
 
-  /* \begin{multicols}{3} under \cvsection{References}: the heading spans the
-     sheet, the references flow through three columns and break where they
+  /* \begin{landscape}: the verso is turned, because the timeline needs the
+     width — same margins as the recto (css/print.css), the sheet on its side.
+     A browser that knows no named page keeps the verso upright and loses
+     nothing but the width. */
+  @page verso {
+    size: A4 landscape;
+    margin: 0.8cm 0.9cm;
+  }
+
+  /* \begin{multicols}{4} under \cvsection{References}: the heading spans the
+     sheet, the references flow through four columns and break where they
      must, as TeX breaks them. */
   #print-verso #references {
-    columns: 3;
+    columns: 4;
     column-gap: 0.6cm;
     margin: 0;
   }

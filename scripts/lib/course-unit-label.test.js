@@ -15,10 +15,7 @@ const { LANGS, langOutFile } = require('./config');
 const { loadResume } = require('./data');
 const I18N = require('./i18n');
 
-const unitNames = (lang) =>
-  loadResume(lang)
-    .projects.filter((p) => p.type === 'Course unit')
-    .map((p) => p.name);
+const unitNames = (lang) => loadResume(lang).courses.map((c) => c.name);
 
 // The block a name sits in: the nearest embedded-label before the <li> row
 // that names it.
@@ -80,9 +77,9 @@ test('no row echoes its own name as its description', () => {
   }
 });
 
-// The sidebar has its own "Projects" list, rendered from the same
-// resume.projects array — so the 42 course units landed there too, wedged
-// between Kwalitijd and WebMenu. Same rule, second renderer.
+// The sidebar has its own "Projects" list. While the data filed the course
+// units among the projects, the 42 of them landed there too, wedged between
+// Kwalitijd and WebMenu. Same rule, second renderer.
 const sidebarProjects = (html) => {
   const start = html.indexOf('<div class="projects">');
   return start < 0 ? '' : html.slice(start, html.indexOf('</div>', start));

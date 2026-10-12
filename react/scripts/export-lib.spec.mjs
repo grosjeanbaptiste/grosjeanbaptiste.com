@@ -6,8 +6,9 @@ const canonical = {
   education: [{ institution: 'UMons' }],
   projects: [
     { name: 'Baba', type: 'CLI' },
-    { name: 'Algorithmique', type: 'Course unit' },
+    { name: 'Remi', type: 'Mobile Application' },
   ],
+  courses: [{ name: 'Algorithmique', summary: 'Algorithmics' }],
   volunteer: [{ organization: 'UMons', position: 'Student representative' }],
 };
 
@@ -16,8 +17,9 @@ const localized = {
   education: [{ institution: 'UMons' }],
   projects: [
     { name: 'Baba', type: 'CLI' },
-    { name: 'Algorithmique', type: 'Unité d’enseignement' },
+    { name: 'Remi', type: 'Application mobile' },
   ],
+  courses: [{ name: 'Algorithmique', summary: 'Algorithmique' }],
   volunteer: [{ organization: 'UMons', position: 'Délégué étudiant' }],
 };
 
@@ -30,8 +32,22 @@ describe('identify', () => {
     expect(identify(canonical, localized).work[0].position).toBe('Fondateur');
   });
 
-  it('marks course units from the canonical type, whatever the translation says', () => {
-    expect(identify(canonical, localized).projects.map((p) => p.courseUnit)).toEqual([false, true]);
+  it('identifies a course by its name, in its own section', () => {
+    expect(identify(canonical, localized).courses).toEqual([
+      { name: 'Algorithmique', summary: 'Algorithmique', id: 'algorithmique' },
+    ]);
+  });
+
+  it('leaves the projects free of any course', () => {
+    expect(identify(canonical, localized).projects.map((p) => p.id)).toEqual(['baba', 'remi']);
+  });
+
+  // An entry is looked up by its id alone: a course named like a project
+  // must not take the project's page.
+  it('gives a course named like a project an id of its own', () => {
+    const named = [{ name: 'Baba' }];
+    const ids = identify({ ...canonical, courses: named }, { ...localized, courses: named });
+    expect([ids.projects[0].id, ids.courses[0].id]).toEqual(['baba', 'baba-2']);
   });
 
   it('identifies volunteering by organisation and position', () => {

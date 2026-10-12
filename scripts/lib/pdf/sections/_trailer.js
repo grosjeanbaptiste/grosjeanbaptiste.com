@@ -50,8 +50,8 @@ const sideBySide = (left, right) =>
     '\\end{minipage}\\par',
   ].join('\n');
 
-// `projects`: the names to list, the entry's own by default (a degree leaves
-// its course units out).
+// `projects`: the names to list, the entry's own by default. A degree's course
+// units are not among them: they are left to the site.
 function appendItemTrailer(
   parts,
   item,

@@ -105,7 +105,7 @@ def _work_entry(w: WorkEntry) -> dict[str, Any]:
     return entry
 
 
-def _education_entry(e) -> dict[str, Any]:
+def _education_entry(e, course_names: dict[str, str]) -> dict[str, Any]:
     start, end = _period(e.period if e.period else None)
     entry: dict[str, Any] = {}
     if e.institution:
@@ -120,9 +120,10 @@ def _education_entry(e) -> dict[str, Any]:
         entry["startDate"] = start
     if end:
         entry["endDate"] = end
-    # `score` and `courses` are emitted by site_extras.py instead so the
-    # merged view keeps the non-strict `gpa` name and the ubiquitous
-    # empty `courses: []` array the pipeline expects.
+    # JSON Resume's own field: the courses of the degree, by name. What a
+    # course is beyond its name travels in site_extras.py, as `score` does.
+    if e.courses:
+        entry["courses"] = [course_names.get(ref.target, ref.target) for ref in e.courses]
     return entry
 
 
@@ -245,7 +246,8 @@ def emit(resume: Resume) -> dict[str, Any]:
         payload["work"] = [_work_entry(w) for w in resume.work]
 
     if resume.education:
-        payload["education"] = [_education_entry(e) for e in resume.education]
+        names = {c.key: c.name for c in resume.courses if c.name}
+        payload["education"] = [_education_entry(e, names) for e in resume.education]
 
     if resume.projects:
         payload["projects"] = [_project_entry(p) for p in resume.projects]

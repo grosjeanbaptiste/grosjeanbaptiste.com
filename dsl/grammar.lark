@@ -24,6 +24,7 @@ section: basics_section
        | work_section
        | education_section
        | projects_section
+       | courses_section
        | references_section
        | skills_section
        | languages_section
@@ -126,6 +127,22 @@ project_field: "name" value          -> proj_name
              | "type" value          -> proj_type
              | "roles" array         -> proj_roles
              | "entity" value        -> proj_entity
+
+// ---------------------------------------------------------------------------
+// courses
+// ---------------------------------------------------------------------------
+
+// A course unit of a degree. A course is not a project: it has its own
+// section, and a degree lists it under `courses`, apart from its `projects`.
+courses_section: "courses" "{" course_entry+ "}"
+
+course_entry: NAME "{" course_field+ "}"
+
+course_field: "name" value          -> course_name
+            | "summary" value       -> course_summary
+            | "keywords" array      -> course_keywords
+            | "url" value           -> course_url
+            | "entity" value        -> course_entity
 
 // ---------------------------------------------------------------------------
 // references

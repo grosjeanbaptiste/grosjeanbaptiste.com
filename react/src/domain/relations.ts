@@ -1,11 +1,25 @@
 // Cross-references between sections: jobs, degrees and competitions name the
-// projects and course units they produced (names resolve to ids; an unknown
-// name throws), and a volunteering role belongs to the job or degree of its
-// organisation.
+// projects they produced, and a degree the course units it carried — apart
+// from its projects (names resolve to ids; an unknown name throws). A
+// volunteering role belongs to the job or degree of its organisation.
 import { type Period, periodOf } from './period';
 import type { Resume } from './resume';
 
-type Referrer = { readonly id: string; readonly projects?: readonly string[] };
+type Referrer = {
+  readonly id: string;
+  readonly projects?: readonly string[];
+  readonly courses?: readonly string[];
+};
+type Named = { readonly name: string; readonly id: string };
+
+// What a referrer names in one section, as ids.
+function named(referrer: Referrer, names: readonly string[], pool: readonly Named[], what: string) {
+  return names.map((name) => {
+    const target = pool.find((entry) => entry.name === name);
+    if (!target) throw new Error(`${referrer.id} names an unknown ${what} "${name}"`);
+    return target.id;
+  });
+}
 
 // The classic page embeds a role under the entry whose name holds the first
 // word of its organisation ("EPHEC …" under "… (EPHEC-EPS)"): same rule. Gives
@@ -25,7 +39,6 @@ function hostedRoles(resume: Resume): [string, string][] {
 }
 
 export function links(resume: Resume): Map<string, Set<string>> {
-  const idByName = new Map(resume.projects.map((p) => [p.name, p.id]));
   const graph = new Map<string, Set<string>>();
   const connect = (a: string, b: string) => {
     graph.set(a, (graph.get(a) ?? new Set()).add(b));
@@ -33,11 +46,11 @@ export function links(resume: Resume): Map<string, Set<string>> {
   };
   const referrers = [...resume.work, ...resume.education, ...(resume.competitions ?? [])];
   for (const referrer of referrers as Referrer[]) {
-    for (const name of referrer.projects ?? []) {
-      const target = idByName.get(name);
-      if (!target) throw new Error(`${referrer.id} names an unknown project "${name}"`);
-      connect(referrer.id, target);
-    }
+    const targets = [
+      ...named(referrer, referrer.projects ?? [], resume.projects, 'project'),
+      ...named(referrer, referrer.courses ?? [], resume.courses, 'course'),
+    ];
+    for (const target of targets) connect(referrer.id, target);
   }
   for (const [role, host] of hostedRoles(resume)) connect(role, host);
   return graph;
@@ -49,7 +62,7 @@ export function degreePeriods(resume: Resume): Map<string, Period> {
   for (const degree of resume.education) {
     const period = periodOf(degree);
     if (!period) continue;
-    for (const name of degree.projects ?? []) out.set(name, period);
+    for (const name of degree.courses ?? []) out.set(name, period);
   }
   return out;
 }

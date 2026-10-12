@@ -89,6 +89,13 @@ def _project_overlay(p, lang: str) -> dict[str, Any] | None:
     return entry or None
 
 
+def _course_overlay(c, lang: str) -> dict[str, Any] | None:
+    entry: dict[str, Any] = {}
+    if (val := _tr(c.summary, lang)) is not None:
+        entry["summary"] = val
+    return entry or None
+
+
 def _reference_overlay(r, lang: str) -> dict[str, Any] | None:
     entry: dict[str, Any] = {}
     if (val := _tr(r.name, lang)) is not None:
@@ -166,6 +173,7 @@ def emit_for_lang(resume: Resume, lang: str) -> dict[str, Any]:
         ("work", resume.work, _work_overlay),
         ("education", resume.education, _education_overlay),
         ("projects", resume.projects, _project_overlay),
+        ("courses", resume.courses, _course_overlay),
         ("references", resume.references, _reference_overlay),
         ("awards", resume.awards, _award_overlay),
         ("competitions", resume.competitions, _competition_overlay),

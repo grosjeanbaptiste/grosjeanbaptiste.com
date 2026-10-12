@@ -17,6 +17,7 @@ const path = require('node:path');
 const { spawn } = require('node:child_process');
 const { serve, countPages, pageHeads, EXPECTED_PAGES } = require('./print-fit-harness');
 const { printedWithRetry } = require('./print-fit-retry');
+const { orientations, SHEET } = require('./print-orientation');
 
 const CANDIDATES = [
   process.env.FIREFOX_PATH,
@@ -108,6 +109,11 @@ test('the printed CV is two pages in Firefox too', async (t) => {
       pages,
       EXPECTED_PAGES,
       `Firefox prints the CV on ${pages} pages, not ${EXPECTED_PAGES} — ${pageHeads(pdf, pages)}`,
+    );
+    assert.deepEqual(
+      orientations(pdf),
+      SHEET,
+      'Firefox does not turn the verso — the timeline and the references — to landscape',
     );
   } finally {
     fs.rmSync(out, { recursive: true, force: true });

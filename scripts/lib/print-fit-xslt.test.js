@@ -16,6 +16,7 @@ const path = require('node:path');
 const { spawn, execFileSync } = require('node:child_process');
 const { serve, countPages, pageHeads, EXPECTED_PAGES } = require('./print-fit-harness');
 const { printedWithRetry } = require('./print-fit-retry');
+const { orientations, SHEET } = require('./print-orientation');
 
 const CANDIDATES = [
   process.env.FIREFOX_PATH,
@@ -133,6 +134,11 @@ test('the XSLT theme prints on two pages too', async (t) => {
     );
     const verso = execFileSync('pdftotext', ['-f', '2', '-l', '2', pdf, '-'], { encoding: 'utf8' });
     assert.match(verso, /References/, 'the references are not on the verso, under the timeline');
+    assert.deepEqual(
+      orientations(pdf),
+      SHEET,
+      'the verso of the XSLT view is not a landscape sheet',
+    );
   } finally {
     fs.rmSync(out, { recursive: true, force: true });
     server.close();

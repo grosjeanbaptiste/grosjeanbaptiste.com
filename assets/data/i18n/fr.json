@@ -188,7 +188,9 @@
     },
     {
       "summary": "Caisse enregistreuse à base de QR codes pour les établissements HoReCa (Hôtel/Restaurant/Café)."
-    },
+    }
+  ],
+  "courses": [
     {
       "summary": "Algorithmique"
     },

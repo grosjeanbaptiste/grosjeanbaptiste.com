@@ -6,7 +6,7 @@ import { entriesUsing, skillUsage } from './skills';
 
 const withProjectSkills = (keywords: string[]): Resume => {
   const resume = aResume();
-  const extra = { id: 'x', name: 'X', keywords, courseUnit: false };
+  const extra = { id: 'x', name: 'X', keywords };
   return { ...resume, projects: [...resume.projects, extra] };
 };
 

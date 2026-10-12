@@ -29,11 +29,8 @@ const resume = {
       ],
     },
   ],
-  projects: [
-    { name: 'Thesis', startDate: '2025-11-13', endDate: '2026-09-04' },
-    { name: 'Algorithmique', type: 'Course unit' },
-    { name: 'Réseaux', type: 'Course unit' },
-  ],
+  projects: [{ name: 'Thesis', startDate: '2025-11-13', endDate: '2026-09-04' }],
+  courses: [{ name: 'Algorithmique' }, { name: 'Réseaux' }],
   volunteer: [],
 };
 const html = generateTimeline(resume, 'en', TODAY, new Set(['course-algorithmique']));

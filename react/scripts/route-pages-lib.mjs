@@ -9,13 +9,14 @@ const SECTIONS = [
     (e) => ({ title: `${e.studyType ?? e.institution} — ${e.institution}`, text: e.area }),
   ],
   ['projects', (e) => ({ title: e.name, text: e.description ?? e.summary })],
+  ['courses', (e) => ({ title: e.name, text: e.summary })],
   ['volunteer', (e) => ({ title: `${e.position} — ${e.organization}`, text: e.summary })],
   ['competitions', (e) => ({ title: e.title, text: e.summary })],
 ];
 
-const KIND = { competitions: 'competition' };
-const kindOf = (section, entry) =>
-  section === 'projects' ? (entry.courseUnit ? 'course' : 'project') : (KIND[section] ?? section);
+// A section's entries are of one kind: a course is never a project.
+const KIND = { competitions: 'competition', projects: 'project', courses: 'course' };
+const kindOf = (section) => KIND[section] ?? section;
 
 const escapeHtml = (text) =>
   String(text)
@@ -94,7 +95,7 @@ export function routePages(template, documents, engine, draw) {
     const entries = SECTIONS.flatMap(([section, describe]) =>
       (resume[section] ?? []).map((entry) => {
         const { title, text } = describe(entry);
-        const route = `${lang}/${kindOf(section, entry)}/${entry.id}`;
+        const route = `${lang}/${kindOf(section)}/${entry.id}`;
         return {
           path: `${route}/index.html`,
           html: render(template, lang, `${title} · ${name}`, text ?? title, drawn(`/${route}`), [

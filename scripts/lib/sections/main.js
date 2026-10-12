@@ -97,11 +97,12 @@ function renderReferenceArticle(r, idx) {
   ].join('\n');
 }
 
-// The projects/volunteer/references pools an item renderer needs to embed
+// The projects/courses/volunteer/references pools an item renderer needs to embed
 // related entries. Bundled once per section so the item renderers stay short.
 function ctxOf(resume) {
   return {
     projects: resume.projects || [],
+    courses: resume.courses || [],
     volunteer: resume.volunteer || [],
     references: resume.references || [],
   };

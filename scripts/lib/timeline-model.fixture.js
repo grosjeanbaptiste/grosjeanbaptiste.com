@@ -24,8 +24,8 @@ const resume = (extra = {}) => ({
   projects: [
     { name: 'Synergy', startDate: '2025-11-03', endDate: '2026-06-30' },
     { name: 'Baba', startDate: '2026-07-02' },
-    { name: 'Algorithmique', type: 'Course unit' },
   ],
+  courses: [{ name: 'Algorithmique' }],
   volunteer: [
     { organization: 'UMons', position: 'Buddy', startDate: '2023-11-30', endDate: '2026-09-04' },
   ],

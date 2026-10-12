@@ -22,6 +22,23 @@ describe('entriesOf', () => {
     expect(byId('algorithmique')?.kind).toBe('course');
   });
 
+  it('makes a project of every project, whatever its type says', () => {
+    const typed = aResume();
+    const projects = typed.projects.map((p) => ({ ...p, type: 'Course unit' }));
+    const kinds = entriesOf({ ...typed, projects }).filter((e) => e.id === 'baba');
+    expect(kinds.map((e) => e.kind)).toEqual(['project']);
+  });
+
+  it('links a degree to the courses it names, by id', () => {
+    expect(byId('umons-master')?.related).toContain('algorithmique');
+  });
+
+  it('fails loudly on a degree naming a course that does not exist', () => {
+    const broken = aResume();
+    const education = broken.education.map((e) => ({ ...e, courses: ['Ghost'] }));
+    expect(() => entriesOf({ ...broken, education })).toThrow(/unknown course "Ghost"/);
+  });
+
   it('links a job to the projects it names, by id', () => {
     expect(byId('acteble-founder')?.related).toEqual(['acteble']);
   });

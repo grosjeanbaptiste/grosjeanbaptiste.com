@@ -25,7 +25,7 @@ const doc = (lang, position) => ({
     basics: { name: 'Baptiste Grosjean', label: 'Computer Scientist' },
     work: [{ id: 'acteble-founder', company: 'Acteble', position, summary: 'Rust & <Flutter>' }],
     education: [],
-    projects: [{ id: 'algo', name: 'Algo', courseUnit: true }],
+    projects: [],
     volunteer: [],
     competitions: [{ id: 'hackathon-2024', title: 'Hackathon 2024', summary: 'EduCraft' }],
   },
@@ -172,10 +172,6 @@ describe('routePages', () => {
   it('fails when the template has lost its root', () => {
     const rootless = template.replace('<div id="root"></div>', '');
     expect(() => routePages(rootless, [doc('en', 'Founder')], engine, draw)).toThrow(/#root/);
-  });
-
-  it('files course units under the course kind', () => {
-    expect(page('en/course/algo/index.html')).toBeDefined();
   });
 
   it('escapes text before putting it in the HTML', () => {

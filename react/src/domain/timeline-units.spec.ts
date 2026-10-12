@@ -9,10 +9,10 @@ const today = new Date('2026-10-01');
 const base = aResume();
 const studied = {
   ...base,
-  projects: [
-    ...base.projects,
-    { id: 'reseaux', name: 'Réseaux', keywords: [], courseUnit: true },
-    { id: 'logique', name: 'Logique', keywords: [], courseUnit: true },
+  courses: [
+    ...base.courses,
+    { id: 'reseaux', name: 'Réseaux', keywords: [] },
+    { id: 'logique', name: 'Logique', keywords: [] },
   ],
   education: base.education.map((e) => ({
     ...e,

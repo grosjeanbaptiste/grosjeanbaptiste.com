@@ -1,9 +1,6 @@
-// A course unit is a course, never a project: it may hold a project, and it
-// stays a course. The CV's data files the two in one list, told apart by
-// their type — asked here, so no renderer draws or names a unit as a project.
-const isCourseUnit = (record) => record?.type === 'Course unit';
+// A course unit is a course, never a project: the CV's data keeps courses in
+// their own section, and a degree names the ones it carried under `courses`,
+// apart from its `projects`. Everything that needs a course asks here.
+const findCourse = (resume, name) => (resume.courses || []).find((c) => c.name === name);
 
-// The kind an entry of that list is of: what its line on the page is named by.
-const kindOf = (record) => (isCourseUnit(record) ? 'course' : 'project');
-
-module.exports = { isCourseUnit, kindOf };
+module.exports = { findCourse };

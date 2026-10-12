@@ -17,25 +17,27 @@
   --card-background-rgb: 255, 255, 255; /* RGB for card background in light mode */
 }
 
-/* Dark theme */
-[data-theme="dark"] {
-  --primary-color: #ffb142; /* Amber (warm, XSLT-aligned) */
-  --secondary-color: #f3890b; /* Orange accent */
-  --third-color: #ffb347; /* Amber-orange */
-  --body-color: #ede0c8; /* Cream body text */
-  --muted-color: #b89a82; /* Warm muted (XSLT-aligned --muted) */
-  --emphasis-color: #f5ead8; /* Bright cream for emphasis */
-  --background-color: #1f0e0e; /* Dark bordeaux-brown */
-  --card-background: #2e1818; /* Raised bordeaux-brown surface */
-  --text-color: #f5ead8; /* Cream text */
-  --border-color: #4a2828; /* Bordeaux-brown rule */
-  --on-accent-color: #1f0e0e; /* Dark text on light amber surfaces */
-  --primary-color-rgb: 255, 177, 66; /* RGB for primary color in dark mode */
-  --card-background-rgb: 46, 24, 24; /* RGB for card background in dark mode */
+/* Dark theme — for screens: on paper it is cream text on a white sheet. */
+@media screen {
+  [data-theme="dark"] {
+    --primary-color: #ffb142; /* Amber (warm, XSLT-aligned) */
+    --secondary-color: #f3890b; /* Orange accent */
+    --third-color: #ffb347; /* Amber-orange */
+    --body-color: #ede0c8; /* Cream body text */
+    --muted-color: #b89a82; /* Warm muted (XSLT-aligned --muted) */
+    --emphasis-color: #f5ead8; /* Bright cream for emphasis */
+    --background-color: #1f0e0e; /* Dark bordeaux-brown */
+    --card-background: #2e1818; /* Raised bordeaux-brown surface */
+    --text-color: #f5ead8; /* Cream text */
+    --border-color: #4a2828; /* Bordeaux-brown rule */
+    --on-accent-color: #1f0e0e; /* Dark text on light amber surfaces */
+    --primary-color-rgb: 255, 177, 66; /* RGB for primary color in dark mode */
+    --card-background-rgb: 46, 24, 24; /* RGB for card background in dark mode */
+  }
 }
 
 /* System preference for dark mode */
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --primary-color: #ffb142;
     --secondary-color: #f3890b;

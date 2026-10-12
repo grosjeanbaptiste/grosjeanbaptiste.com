@@ -1,10 +1,11 @@
 // The verso of the printed page mirrors the verso of the LaTeX CV: the
-// timeline at the top, the references under it in three columns. Volunteering
+// timeline at the top, the references under it in four columns, on a sheet
+// turned to landscape — the timeline needs the width. Volunteering
 // used to fill a narrow column of its own beside the references; the roles now
 // show in the timeline, inside the degree of their school.
 //
 // Printed with a real browser and read back with poppler, positions included:
-// "to the right of" and "in three columns" are not things the source can say.
+// "to the right of" and "in four columns" are not things the source can say.
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -13,6 +14,7 @@ const path = require('node:path');
 const { execFile, execFileSync } = require('node:child_process');
 const { promisify } = require('node:util');
 const { serve } = require('./print-fit-harness');
+const { orientations, SHEET } = require('./print-orientation');
 
 const ROOT = path.resolve(__dirname, '../..');
 const CANDIDATES = [
@@ -67,7 +69,7 @@ test.before(async () => {
     const pages = Number(
       /^Pages:\s+(\d+)/m.exec(execFileSync('pdfinfo', [pdf], { encoding: 'utf8' }))[1],
     );
-    sheets = { pages, recto: wordsOf(pdf, 1), verso: wordsOf(pdf, 2) };
+    sheets = { pages, turned: orientations(pdf), recto: wordsOf(pdf, 1), verso: wordsOf(pdf, 2) };
   } finally {
     server.close();
     fs.rmSync(out, { recursive: true, force: true, maxRetries: 10, retryDelay: 300 });
@@ -86,6 +88,10 @@ function word(text, { after = -1 } = {}) {
 
 check('the printed page is still two sheets', () => assert.equal(sheets.pages, 2));
 
+check('the recto is upright, the verso is a landscape sheet', () => {
+  assert.deepEqual(sheets.turned, SHEET);
+});
+
 check('the timeline opens the verso, the references come under it', () => {
   assert.ok(word('CHRONOLOGIE').y < word('RÉFÉRENCES').y);
 });
@@ -98,14 +104,14 @@ check('the roles show in the timeline, inside their degree', () => {
   assert.ok(word('TandeMons').y < word('RÉFÉRENCES').y);
 });
 
-check('the references are set in three columns', () => {
+check('the references are set in four columns', () => {
   const references = word('RÉFÉRENCES');
   // Who speaks opens each reference, flush left in its column.
   const names = ['Waseem', 'Tino', 'Emiel', 'Steven', 'Tjörven', 'Michael'].map((name) =>
     word(name, { after: references.y }),
   );
   const columns = new Set(names.map((n) => Math.round(n.x / 10)));
-  assert.equal(columns.size, 3, `the six references start in ${columns.size} column(s)`);
+  assert.equal(columns.size, 4, `the six references start in ${columns.size} column(s)`);
 });
 
 test('the print script builds the verso from the timeline and the references', () => {
