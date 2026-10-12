@@ -55,6 +55,10 @@ function mergeExtras(resume, extras) {
   if (extras.sidebarOrder) {
     patched.meta = { ...(patched.meta || {}), sidebarOrder: extras.sidebarOrder };
   }
+  // JSON Resume has no section for course units: the sidecar holds them whole.
+  if (extras.courses) {
+    patched.courses = extras.courses;
+  }
   if (extras.competitions) {
     patched.competitions = extras.competitions;
   }

@@ -8,6 +8,7 @@ const NAMERS = {
   work: (e) => `${e.company} ${e.position}`,
   education: (e) => `${e.institution} ${e.studyType ?? ''}`,
   projects: (e) => e.name,
+  courses: (e) => e.name,
   volunteer: (e) => `${e.organization} ${e.position}`,
   competitions: (e) => e.title,
 };
@@ -22,7 +23,18 @@ function uniqueIds(names) {
   });
 }
 
-function identifySection(section, canonical, localized) {
+// Sections whose entries share one run of ids. A course is not a project,
+// but the app looks an entry up by its id alone: a course named like a project
+// takes the next id instead of the project's.
+const ID_SPACES = [
+  ['work'],
+  ['education'],
+  ['projects', 'courses'],
+  ['volunteer'],
+  ['competitions'],
+];
+
+function aligned(section, canonical, localized) {
   const source = canonical[section] ?? [];
   const target = localized[section] ?? [];
   if (source.length !== target.length) {
@@ -30,20 +42,21 @@ function identifySection(section, canonical, localized) {
       `${section}: canonical has ${source.length} entries, localized has ${target.length}`,
     );
   }
-  const ids = uniqueIds(source.map(NAMERS[section]));
-  return target.map((entry, i) => {
-    const out = { ...entry, id: ids[i] };
-    if (section === 'projects') out.courseUnit = source[i].type === 'Course unit';
-    return out;
-  });
+  return { section, source, target };
+}
+
+function identifySpace(sections, canonical, localized) {
+  const parts = sections.map((section) => aligned(section, canonical, localized));
+  const ids = uniqueIds(parts.flatMap(({ section, source }) => source.map(NAMERS[section])));
+  return parts.map(({ section, target }) => [
+    section,
+    target.map((entry) => ({ ...entry, id: ids.shift() })),
+  ]);
 }
 
 export function identify(canonical, localized) {
-  const out = { ...localized };
-  for (const section of Object.keys(NAMERS)) {
-    out[section] = identifySection(section, canonical, localized);
-  }
-  return out;
+  const identified = ID_SPACES.flatMap((sections) => identifySpace(sections, canonical, localized));
+  return { ...localized, ...Object.fromEntries(identified) };
 }
 
 // The page pictures of one language's PDFs (assets/cv/previews/manifest.json,

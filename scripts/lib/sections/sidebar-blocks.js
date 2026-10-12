@@ -2,7 +2,6 @@
 // sidebar.js so the latter stays focused on the contact header and the
 // meta.sidebarOrder orchestration.
 const { escapeHtml } = require('../format');
-const { isCourseUnit } = require('../course-unit');
 
 function renderSkillsBlocks(resume, t) {
   // "Currently Learning" stays in resume.json (JSON Resume schema compliance +
@@ -51,11 +50,10 @@ function renderLanguagesBlock(resume, t) {
 // Sidebar projects list — parity with the XSLT `sidebar-projects` template:
 // project name (linked when a url is present) plus its short description.
 //
-// Course units are referenced like projects in the data but are not projects:
-// they belong to their degree, under their own heading, never in this list.
+// Course units are not projects: the data keeps them in their own section
+// (resume.courses), and they show under their degree, never in this list.
 function renderProjectsBlock(resume, t) {
   const items = (resume.projects || [])
-    .filter((p) => !isCourseUnit(p))
     .map((p) => {
       const name = `<strong>${escapeHtml(p.name)}</strong>`;
       const label = p.url

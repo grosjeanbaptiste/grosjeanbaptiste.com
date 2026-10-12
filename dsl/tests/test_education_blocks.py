@@ -21,7 +21,7 @@ resume "test" {
         Master {
             institution "UMons"
             period 2022-10-15..2026-09-04
-            projects [ref Algo, ref Reseaux]
+            courses [ref Algo, ref Reseaux]
             blocks {
                 First {
                     year "2022-2023"
@@ -37,14 +37,12 @@ resume "test" {
             }
         }
     }
-    projects {
+    courses {
         Algo {
             name "Algorithmique"
-            type "Course unit"
         }
         Reseaux {
             name "Réseaux"
-            type "Course unit"
         }
     }
 }

@@ -5,6 +5,7 @@ import { Period, periodOf } from './period';
 import { degreePeriods, links } from './relations';
 import type {
   CompetitionRecord,
+  CourseRecord,
   EducationRecord,
   ProjectRecord,
   Resume,
@@ -51,17 +52,31 @@ const fromEducation = (e: EducationRecord, idOf: (name: string) => string): Entr
   schedule: e.schedule === 'evening' ? 'evening' : undefined,
 });
 
-const fromProject = (p: ProjectRecord, inherited?: Period): Entry => ({
-  kind: p.courseUnit ? 'course' : 'project',
+const fromProject = (p: ProjectRecord): Entry => ({
+  kind: 'project',
   id: p.id,
   title: p.name,
   subtitle: p.description,
   organisation: p.entity,
-  period: periodOf(p) ?? inherited,
+  period: periodOf(p),
   summary: p.summary,
-  details: [...(p.roles ?? []), ...(p.type && !p.courseUnit ? [p.type] : [])],
+  details: [...(p.roles ?? []), ...(p.type ? [p.type] : [])],
   skills: p.keywords ?? [],
   url: p.url,
+  related: [],
+});
+
+// A course unit carries no dates of its own: it lasts as long as its degree.
+const fromCourse = (c: CourseRecord, inherited?: Period): Entry => ({
+  kind: 'course',
+  id: c.id,
+  title: c.name,
+  organisation: c.entity,
+  period: periodOf(c) ?? inherited,
+  summary: c.summary,
+  details: [],
+  skills: c.keywords ?? [],
+  url: c.url,
   related: [],
 });
 
@@ -96,7 +111,7 @@ const fromCompetition = (c: CompetitionRecord): Entry => ({
 export function entriesOf(resume: Resume): Entry[] {
   const graph = links(resume);
   const inherited = degreePeriods(resume);
-  const ids = new Map(resume.projects.map((p) => [p.name, p.id]));
+  const ids = new Map(resume.courses.map((c) => [c.name, c.id]));
   const idOf = (name: string) => {
     const id = ids.get(name);
     if (!id) throw new Error(`A block names an unknown course unit "${name}"`);
@@ -106,7 +121,8 @@ export function entriesOf(resume: Resume): Entry[] {
     ...resume.work.map(fromWork),
     ...resume.education.map((e) => fromEducation(e, idOf)),
     ...(resume.competitions ?? []).map(fromCompetition),
-    ...resume.projects.map((p) => fromProject(p, inherited.get(p.name))),
+    ...resume.projects.map(fromProject),
+    ...resume.courses.map((c) => fromCourse(c, inherited.get(c.name))),
     ...resume.volunteer.map(fromVolunteer),
   ];
   return entries.map((e) => ({ ...e, related: [...(graph.get(e.id) ?? [])] }));

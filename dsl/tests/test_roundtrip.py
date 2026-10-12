@@ -41,6 +41,8 @@ def _merge_extras(base: dict, extras: dict) -> dict:
     for key in ("dailyLife", "brand", "sectionOrder", "sidebarOrder"):
         if key in extras:
             out["meta"] = {**(out.get("meta") or {}), key: extras[key]}
+    if "courses" in extras:
+        out["courses"] = extras["courses"]
     if "competitions" in extras:
         out["competitions"] = extras["competitions"]
     return out
@@ -59,10 +61,15 @@ def test_dsl_roundtrip_matches_original_json():
     dsl_json = json.loads((tmp / "resume.json").read_text())
     dsl_extras = json.loads((tmp / "site-extras.json").read_text())
     merged = _merge_extras(dsl_json, dsl_extras)
-    orig = json.loads((DATA / "resume.json").read_text())
+    # The shipped pair, read the way the site reads it: resume.json is strict
+    # JSON Resume, the courses reach the CV through the sidecar.
+    orig = _merge_extras(
+        json.loads((DATA / "resume.json").read_text()),
+        json.loads((DATA / "site-extras.json").read_text()),
+    )
 
     # Section-level cardinality must match exactly.
-    for section in ("work", "education", "projects", "references"):
+    for section in ("work", "education", "projects", "courses", "references"):
         assert len(merged.get(section, [])) == len(orig.get(section, [])), (
             f"{section}: DSL={len(merged.get(section, []))} orig={len(orig.get(section, []))}"
         )

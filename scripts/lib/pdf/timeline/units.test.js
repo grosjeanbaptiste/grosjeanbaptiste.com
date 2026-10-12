@@ -31,12 +31,8 @@ const resume = {
       ],
     },
   ],
-  projects: [
-    { name: 'Thesis', startDate: '2025-11-13', endDate: '2026-09-04' },
-    { name: 'Algorithmique', type: 'Course unit' },
-    { name: 'Réseaux', type: 'Course unit' },
-    { name: 'Logique', type: 'Course unit' },
-  ],
+  projects: [{ name: 'Thesis', startDate: '2025-11-13', endDate: '2026-09-04' }],
+  courses: [{ name: 'Algorithmique' }, { name: 'Réseaux' }, { name: 'Logique' }],
   volunteer: [],
 };
 const bands = (years = null) => timelineBars(resume, TODAY, years).lanes[0].groups[0].bands;

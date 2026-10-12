@@ -36,6 +36,8 @@ export interface EducationRecord extends Identified {
   readonly gpa?: string;
   readonly skills?: readonly string[];
   readonly projects?: readonly string[];
+  // The course units the degree carried, by name — never among its projects.
+  readonly courses?: readonly string[];
   readonly blocks?: readonly BlockRecord[];
   // 'evening' for a degree followed on an evening schedule ("horaire décalé").
   readonly schedule?: 'day' | 'evening';
@@ -48,7 +50,14 @@ export interface ProjectRecord extends Identified {
   readonly type?: string;
   readonly roles?: readonly string[];
   readonly entity?: string;
-  readonly courseUnit: boolean;
+}
+
+// A course unit of a degree: its official designation, and its translated
+// title as summary. A course is not a project — it has its own section.
+export interface CourseRecord extends Identified {
+  readonly name: string;
+  readonly keywords?: readonly string[];
+  readonly entity?: string;
 }
 
 export interface VolunteerRecord extends Identified {
@@ -88,6 +97,7 @@ export interface Resume {
   readonly work: readonly WorkRecord[];
   readonly education: readonly EducationRecord[];
   readonly projects: readonly ProjectRecord[];
+  readonly courses: readonly CourseRecord[];
   readonly volunteer: readonly VolunteerRecord[];
   readonly competitions?: readonly CompetitionRecord[];
   readonly skills: readonly { readonly name: string; readonly keywords: readonly string[] }[];

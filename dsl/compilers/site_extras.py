@@ -24,6 +24,14 @@ def _resolve_project_name(resume: Resume, ref_target: str) -> str:
     return ref_target
 
 
+def _resolve_course_name(resume: Resume, ref_target: str) -> str:
+    """Resolve a DSL course key (`ref X`) to its rendered ``name``."""
+    for c in resume.courses:
+        if c.key == ref_target and c.name:
+            return c.name
+    return ref_target
+
+
 def _work_extras(resume: Resume) -> list[dict[str, Any]]:
     """Index-aligned with resume.work — nulls for entries that carry no
     extras. Index matching (rather than name matching) is essential
@@ -67,16 +75,16 @@ def _block(resume: Resume, block, en) -> dict[str, Any]:
         end = block.period.end
         if hasattr(end, "iso"):
             out["endDate"] = end.iso()
-    out["units"] = [_resolve_project_name(resume, ref.target) for ref in block.units]
+    out["units"] = [_resolve_course_name(resume, ref.target) for ref in block.units]
     return out
 
 
 def _education_extras(resume: Resume) -> list[dict[str, Any] | None]:
     """Index-aligned with resume.education. Carries every field JSON
     Resume v1.0.0 does not define on education (``gpa`` from strict
-    ``score``, ``summary``, ``skills``, ``projects``, empty ``courses``
-    array) so the merged view stays byte-identical with the current
-    hand-edited resume.json.
+    ``score``, ``summary``, ``skills``, ``projects``). The names of the
+    course units the degree carried are JSON Resume's own ``courses``:
+    jsonresume.py emits them.
     """
     from nodes import Translated
     def _en(v):
@@ -100,15 +108,14 @@ def _education_extras(resume: Resume) -> list[dict[str, Any] | None]:
         extras["schedule"] = e.schedule or "day"
         if e.blocks:
             extras["blocks"] = [_block(resume, b, _en) for b in e.blocks]
-        extras["courses"] = list(e.courses) if e.courses else []
         out.append(extras)
     return _trim_trailing_nulls(out)
 
 
-def _project_extras(resume: Resume) -> list[dict[str, Any] | None]:
-    """Index-aligned with resume.projects."""
+def _summaries(entries) -> list[dict[str, Any] | None]:
+    """Index-aligned with the entries: each one's summary in English."""
     out: list[dict[str, Any] | None] = []
-    for p in resume.projects:
+    for p in entries:
         from nodes import Translated
         summary_val = None
         if p.summary is not None:
@@ -116,6 +123,29 @@ def _project_extras(resume: Resume) -> list[dict[str, Any] | None]:
         entry = {"summary": summary_val} if summary_val else None
         out.append(entry)
     return _trim_trailing_nulls(out)
+
+
+def _courses(resume: Resume) -> list[dict[str, Any]]:
+    """The course units themselves. JSON Resume has no section for them — a
+    degree only names its courses — and a course is never filed among the
+    projects: the whole record lives here, in the repository's own format."""
+    out = []
+    for c in resume.courses:
+        entry: dict[str, Any] = {}
+        if c.name:
+            entry["name"] = c.name
+        if c.keywords:
+            entry["keywords"] = list(c.keywords)
+        if c.url:
+            entry["url"] = c.url
+        if c.entity:
+            entry["entity"] = c.entity
+        # Its translated title, in English here; the overlays carry the rest.
+        title = c.summary.get("en") if isinstance(c.summary, Translated) else c.summary
+        if title:
+            entry["summary"] = title
+        out.append(entry)
+    return out
 
 
 def _trim_trailing_nulls(items: list) -> list:
@@ -177,8 +207,10 @@ def emit(resume: Resume) -> dict[str, Any]:
         payload["work"] = extras
     if (extras := _education_extras(resume)):
         payload["education"] = extras
-    if (extras := _project_extras(resume)):
+    if (extras := _summaries(resume.projects)):
         payload["projects"] = extras
+    if resume.courses:
+        payload["courses"] = _courses(resume)
     if (daily := _daily_life(resume)) is not None:
         payload["dailyLife"] = daily
     if resume.competitions:

@@ -21,7 +21,6 @@ const withHackathon = () =>
           name: 'EduCraft',
           startDate: '2024-03-29',
           endDate: '2024-03-31',
-          courseUnit: false,
         },
       ],
       competitions: [

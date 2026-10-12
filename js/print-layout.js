@@ -83,7 +83,11 @@
     if (!container?.parentNode || (!references && !timeline)) return;
     const block = document.createElement('div');
     block.id = 'print-verso';
-    container.parentNode.insertBefore(block, container.nextSibling);
+    // Last in the body, not merely after the columns: the verso is a page of
+    // its own kind (landscape — css/print-verso.css), and Firefox gives
+    // whatever follows it, even boxes that print nothing, a sheet to go back
+    // to the upright one.
+    container.parentNode.appendChild(block);
     verso = block;
     // The timeline opens the verso, as in the PDF (css/print-verso.css), and
     // is put back with everything else.

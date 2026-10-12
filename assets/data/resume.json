@@ -163,14 +163,60 @@
       "studyType": "Master of Science - MSc",
       "area": "Computer Science (work-study program) — specialised professional focus (120 ECTS)",
       "startDate": "2022-10-15",
-      "endDate": "2026-09-04"
+      "endDate": "2026-09-04",
+      "courses": [
+        "Algorithmique",
+        "Anglais I",
+        "Bases de données I",
+        "Lecture et rédaction scientifique",
+        "Mathématique",
+        "Modélisation logicielle",
+        "Réseaux",
+        "Stratégie et politiques en ressources humaines",
+        "Systèmes d'exploitation",
+        "Anglais II",
+        "Bases de données II",
+        "Ingénierie de logiciels et gestion de projets",
+        "Intelligence artificielle",
+        "Recherche opérationnelle et applications",
+        "Structures de données",
+        "Séminaires d'informatique en veille technologique",
+        "Cryptographie et sécurité des systèmes informatiques",
+        "Éthique et droit de l'informatique"
+      ]
     },
     {
       "institution": "Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)",
       "studyType": "Professional Bachelor's degree",
       "area": "Information Systems Management",
       "startDate": "2018-09-30",
-      "endDate": "2022-10-15"
+      "endDate": "2022-10-15",
+      "courses": [
+        "Structure des ordinateurs",
+        "Informatique - Système d'exploitation",
+        "Mathématique appliquée à l'informatique",
+        "Principes algorithmiques et programmation",
+        "Principes d'analyse informatique",
+        "Information et communication professionnelles",
+        "Web : principes de base",
+        "Initiation aux bases de données",
+        "Gestion et exploitation de bases de données",
+        "Programmation orientée objet",
+        "Projet d'analyse et de conception",
+        "Techniques de gestion de projet",
+        "Éléments de statistique",
+        "Projet de développement web",
+        "Notions de e-business",
+        "Projet de développement SGBD",
+        "Bases des réseaux",
+        "Organisation des entreprises et éléments de management",
+        "Produits logiciels de gestion intégrés",
+        "Projet d'intégration de développement",
+        "Veille technologique",
+        "Administration, gestion et sécurisation des réseaux",
+        "Langue en situation appliquée à l'enseignement supérieur UE1",
+        "Langue en situation appliquée à l'enseignement supérieur UE2"
+      ]
     },
     {
       "institution": "Institut Saint-Louis Bruxelles",
@@ -184,7 +230,17 @@
       "studyType": "Bachelor in Political Sciences",
       "area": "General orientation",
       "startDate": "2016-09-30",
-      "endDate": "2019-06-30"
+      "endDate": "2019-06-30",
+      "courses": [
+        "Économie I",
+        "Économie II",
+        "Science politique",
+        "Séminaire : penser le social",
+        "Séminaire : principes et méthodes en sciences sociales",
+        "Socio-économie des médias",
+        "Anglais I (Saint-Louis)",
+        "Néerlandais I"
+      ]
     },
     {
       "institution": "Solvay Brussels School of Economics and Management",
@@ -502,564 +558,6 @@
       ],
       "startDate": "2021-11-01",
       "endDate": "2022-03-31"
-    },
-    {
-      "name": "Algorithmique",
-      "keywords": [
-        "Algorithms",
-        "DataStructures",
-        "Complexity",
-        "Trees"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-011-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Anglais I",
-      "keywords": [
-        "English"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-012-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Bases de données I",
-      "keywords": [
-        "SQL",
-        "RelationalAlgebra",
-        "Normalization",
-        "Indexing",
-        "NoSQL",
-        "BigData"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-013-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Lecture et rédaction scientifique",
-      "keywords": [
-        "ScientificWriting",
-        "LiteratureReview"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-014-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Mathématique",
-      "keywords": [
-        "GraphTheory",
-        "Combinatorics",
-        "Complexity",
-        "PropositionalLogic",
-        "PredicateLogic"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-015-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Modélisation logicielle",
-      "keywords": [
-        "Java",
-        "UML",
-        "DesignPatterns",
-        "UnitTesting",
-        "MockTesting",
-        "BDD"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-016-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Réseaux",
-      "keywords": [
-        "TCP/IP",
-        "HTTP",
-        "DNS",
-        "OSPF",
-        "BGP",
-        "Ethernet"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-017-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Stratégie et politiques en ressources humaines",
-      "keywords": [
-        "HRM"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-018-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Systèmes d'exploitation",
-      "keywords": [
-        "Processes",
-        "Semaphores",
-        "Synchronization",
-        "MemoryManagement",
-        "FileSystems",
-        "Scheduling"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-019-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Anglais II",
-      "keywords": [
-        "English"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-001-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Bases de données II",
-      "keywords": [
-        "XML",
-        "XSLT",
-        "XQuery",
-        "XPath",
-        "BaseX",
-        "DataMining",
-        "Weka"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-101-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Ingénierie de logiciels et gestion de projets",
-      "keywords": [
-        "Agile",
-        "Scrum",
-        "SoftwareEngineering"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-008-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Intelligence artificielle",
-      "keywords": [
-        "SearchAlgorithms",
-        "Metaheuristics",
-        "FirstOrderLogic",
-        "SupervisedLearning"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-102-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Recherche opérationnelle et applications",
-      "keywords": [
-        "OperationsResearch",
-        "LinearProgramming",
-        "IntegerProgramming",
-        "Duality"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-103-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Structures de données",
-      "keywords": [
-        "AVLTrees",
-        "BTrees",
-        "HashTables",
-        "Sorting",
-        "Complexity"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-104-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Séminaires d'informatique en veille technologique",
-      "keywords": [
-        "TechWatch"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Cryptographie et sécurité des systèmes informatiques",
-      "keywords": [
-        "Cryptography",
-        "Unix",
-        "NetworkSecurity",
-        "ApplicationSecurity"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Éthique et droit de l'informatique",
-      "keywords": [
-        "IntellectualProperty",
-        "DataProtection",
-        "GDPR"
-      ],
-      "url": "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm",
-      "type": "Course unit",
-      "entity": "UMONS"
-    },
-    {
-      "name": "Structure des ordinateurs",
-      "keywords": [
-        "ComputerArchitecture",
-        "Binary",
-        "Hexadecimal",
-        "Hardware"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=43",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Informatique - Système d'exploitation",
-      "keywords": [
-        "OperatingSystems",
-        "ShellScripting",
-        "SystemAdministration"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=47",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Mathématique appliquée à l'informatique",
-      "keywords": [
-        "LinearAlgebra",
-        "GraphTheory",
-        "SetTheory",
-        "RelationalAlgebra",
-        "MathematicalLogic",
-        "Cryptography"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=20",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Principes algorithmiques et programmation",
-      "keywords": [
-        "Algorithms",
-        "DataTypes",
-        "ControlFlow",
-        "Programming"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=87",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Principes d'analyse informatique",
-      "keywords": [
-        "UML",
-        "EntityRelationship",
-        "SystemsAnalysis"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=116",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Information et communication professionnelles",
-      "keywords": [
-        "ProfessionalCommunication"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=39",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Web : principes de base",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "URL",
-        "DNS",
-        "WebHosting"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=95",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Initiation aux bases de données",
-      "keywords": [
-        "SQL",
-        "RelationalModel",
-        "Joins",
-        "Indexing"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=79",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Gestion et exploitation de bases de données",
-      "keywords": [
-        "Triggers",
-        "StoredProcedures",
-        "DataWarehouse",
-        "QueryOptimization"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=83",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Programmation orientée objet",
-      "keywords": [
-        "OOP",
-        "Inheritance",
-        "Polymorphism",
-        "Encapsulation",
-        "Overloading"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=91",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Projet d'analyse et de conception",
-      "keywords": [
-        "SystemsAnalysis",
-        "SoftwareDesign",
-        "Modelling"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=120",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Techniques de gestion de projet",
-      "keywords": [
-        "ProjectManagement"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=113",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Éléments de statistique",
-      "keywords": [
-        "Statistics"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=35",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Projet de développement web",
-      "keywords": [
-        "JavaScript",
-        "AJAX",
-        "JSON",
-        "XML",
-        "ClientSideScripting"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=99",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Notions de e-business",
-      "keywords": [
-        "Ebusiness"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=56",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Projet de développement SGBD",
-      "keywords": [
-        "DataAccessLayer",
-        "Transactions",
-        "DatabaseProgramming",
-        "Debugging"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=104",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Bases des réseaux",
-      "keywords": [
-        "Ethernet",
-        "MAC",
-        "TCP/IP",
-        "Networking"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=69",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Organisation des entreprises et éléments de management",
-      "keywords": [
-        "Management"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=52",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Produits logiciels de gestion intégrés",
-      "keywords": [
-        "ERP"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=61",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Projet d'intégration de développement",
-      "keywords": [
-        "AJAX",
-        "JSON",
-        "XML",
-        "SQLInjection",
-        "XSS",
-        "Caching",
-        "URLRewriting"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=108",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Veille technologique",
-      "keywords": [
-        "TechWatch"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=65",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Administration, gestion et sécurisation des réseaux",
-      "keywords": [
-        "NetworkAdministration",
-        "NetworkSecurity",
-        "ApplicationServer"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=74",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Langue en situation appliquée à l'enseignement supérieur UE1",
-      "keywords": [
-        "ProfessionalCommunication"
-      ],
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Langue en situation appliquée à l'enseignement supérieur UE2",
-      "keywords": [
-        "ProfessionalCommunication"
-      ],
-      "url": "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24",
-      "type": "Course unit",
-      "entity": "EPHEC"
-    },
-    {
-      "name": "Économie I",
-      "keywords": [
-        "Microeconomics",
-        "CompetitiveMarkets",
-        "FirmBehaviour",
-        "MarketFailure"
-      ],
-      "type": "Course unit",
-      "entity": "USL-B"
-    },
-    {
-      "name": "Économie II",
-      "keywords": [
-        "ImperfectCompetition",
-        "Macroeconomics",
-        "NationalIncome",
-        "MonetaryMarket"
-      ],
-      "type": "Course unit",
-      "entity": "USL-B"
-    },
-    {
-      "name": "Science politique",
-      "keywords": [
-        "PoliticalScience",
-        "Power",
-        "State",
-        "Democracy"
-      ],
-      "type": "Course unit",
-      "entity": "USL-B"
-    },
-    {
-      "name": "Séminaire : penser le social",
-      "keywords": [
-        "Epistemology",
-        "Durkheim",
-        "Weber",
-        "Marx"
-      ],
-      "type": "Course unit",
-      "entity": "USL-B"
-    },
-    {
-      "name": "Séminaire : principes et méthodes en sciences sociales",
-      "keywords": [
-        "AcademicWriting",
-        "Citation",
-        "Epistemology"
-      ],
-      "type": "Course unit",
-      "entity": "USL-B"
-    },
-    {
-      "name": "Socio-économie des médias",
-      "keywords": [
-        "MediaEconomics",
-        "Advertising",
-        "MediaRegulation",
-        "WebEconomy"
-      ],
-      "type": "Course unit",
-      "entity": "USL-B"
-    },
-    {
-      "name": "Anglais I (Saint-Louis)",
-      "keywords": [
-        "English"
-      ],
-      "type": "Course unit",
-      "entity": "USL-B"
-    },
-    {
-      "name": "Néerlandais I",
-      "keywords": [
-        "Dutch"
-      ],
-      "type": "Course unit",
-      "entity": "USL-B"
     }
   ],
   "references": [

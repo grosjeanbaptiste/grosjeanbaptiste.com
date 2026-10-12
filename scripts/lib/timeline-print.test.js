@@ -11,7 +11,7 @@ const studied = () => {
   const base = resume();
   return {
     ...base,
-    projects: [...base.projects, { name: 'Réseaux' }],
+    courses: [...base.courses, { name: 'Réseaux' }],
     education: [
       {
         ...base.education[0],

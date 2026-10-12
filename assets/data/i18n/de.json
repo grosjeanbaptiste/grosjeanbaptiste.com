@@ -188,7 +188,9 @@
     },
     {
       "summary": "QR-Code-basierte Kasse für HoReCa-Betriebe (Hotel/Restaurant/Café)."
-    },
+    }
+  ],
+  "courses": [
     {
       "summary": "Algorithmik"
     },

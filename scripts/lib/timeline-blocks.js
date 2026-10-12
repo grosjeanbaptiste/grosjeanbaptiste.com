@@ -1,6 +1,7 @@
 // A degree's academic years — its blocks — and the course units taken in each,
 // as bars for the timelines of the CV (timeline-groups.js).
 const { anchorOf } = require('./anchors');
+const { findCourse } = require('./course-unit');
 const { spanOf } = require('./timeline-dates');
 
 // A degree is followed year by year: each academic year is a block, a part of
@@ -25,13 +26,12 @@ function blockBar(block, now) {
 // the CV does not have is refused rather than drawn short of it.
 function unitsOf(block, bar, resume) {
   return (block.units || []).map((name, slot) => {
-    const project = (resume.projects || []).find((p) => p.name === name);
-    if (!project) throw new Error(`Block ${block.year} names an unknown course unit "${name}"`);
+    const course = findCourse(resume, name);
+    if (!course) throw new Error(`Block ${block.year} names an unknown course unit "${name}"`);
     return {
       kind: 'unit',
       ongoing: false,
-      // What a block files is a course, whatever its record says.
-      anchor: anchorOf('course', project),
+      anchor: anchorOf('course', course),
       record: block,
       start: bar.start,
       end: bar.end,

@@ -17,15 +17,16 @@ const resume = {
       studyType: 'Master',
       startDate: '2022-10-15',
       endDate: '2026-09-04',
-      projects: ['Remi', 'Algorithmique'],
+      projects: ['Remi'],
+      courses: ['Algorithmique'],
     },
     { institution: 'ULB', studyType: 'Bachelor', startDate: '2015-09-01', endDate: '2016-06-30' },
   ],
   projects: [
     { name: 'Remi', summary: 'Reminiscence app', startDate: '2024-12-01', endDate: '2025-06-30' },
     { name: 'Acteble', summary: 'Mobile app', startDate: '2025-07-01' },
-    { name: 'Algorithmique', entity: 'UMons', type: 'Course unit' },
   ],
+  courses: [{ name: 'Algorithmique', entity: 'UMons' }],
   volunteer: [
     {
       organization: 'UMons',

@@ -25,6 +25,7 @@ const { loadResume } = require('./data');
 
 const resume = loadResume('en');
 const project = (name) => resume.projects.find((p) => p.name === name);
+const course = (name) => resume.courses.find((c) => c.name === name);
 const msc = resume.education.find((e) => /Master of Science/.test(e.studyType || ''));
 
 // Sampled from the official sheets, one per bloc.
@@ -38,16 +39,16 @@ const FROM_THE_SHEETS = {
 
 test('the MSc references its course units', () => {
   assert.ok(msc, 'the MSc entry is gone');
-  // By type, not by school alone: the dissertation is a UMONS project too.
-  const units = resume.projects.filter((p) => p.entity === 'UMONS' && p.type === 'Course unit');
+  // Among the courses, not the projects: the dissertation is a UMONS project.
+  const units = resume.courses.filter((c) => c.entity === 'UMONS');
   assert.equal(units.length, 18, `found ${units.length} course units`);
-  const unreferenced = units.filter((u) => !(msc.projects || []).includes(u.name));
+  const unreferenced = units.filter((u) => !(msc.courses || []).includes(u.name));
   assert.deepEqual(unreferenced, [], 'course units the MSc does not reference');
 });
 
 test('each sampled unit carries what its official sheet names', () => {
   for (const [name, expected] of Object.entries(FROM_THE_SHEETS)) {
-    const unit = project(name);
+    const unit = course(name);
     assert.ok(unit, `no course unit named ${name}`);
     const missing = expected.filter((k) => !(unit.keywords || []).includes(k));
     assert.deepEqual(missing, [], `${name} omits: ${missing.join(', ')}`);
@@ -61,7 +62,7 @@ test('the dissertation stack sits on the dissertation, not on Operations Researc
   for (const k of ['MiniZinc', 'ConstraintProgramming', 'CombinatorialOptimization', 'Pareto']) {
     assert.ok(dissertation.keywords.includes(k), `the dissertation does not claim ${k}`);
   }
-  const or = project('Recherche opérationnelle et applications');
+  const or = course('Recherche opérationnelle et applications');
   assert.ok(!or.keywords.includes('MiniZinc'), 'the OR unit names a tool its sheet does not');
 });
 
@@ -98,15 +99,15 @@ const EPHEC_FROM_THE_DOSSIERS = {
 test('the EPHEC bachelor references its course units', () => {
   const bachelor = resume.education.find((e) => /EPHEC/.test(e.institution || ''));
   assert.ok(bachelor, 'the EPHEC entry is gone');
-  const units = resume.projects.filter((p) => p.entity === 'EPHEC');
+  const units = resume.courses.filter((c) => c.entity === 'EPHEC');
   assert.equal(units.length, 24, `found ${units.length} EPHEC units`);
-  const unreferenced = units.filter((u) => !(bachelor.projects || []).includes(u.name));
+  const unreferenced = units.filter((u) => !(bachelor.courses || []).includes(u.name));
   assert.deepEqual(unreferenced, [], 'EPHEC units the bachelor does not reference');
 });
 
 test('each sampled EPHEC unit carries what its dossier names', () => {
   for (const [name, expected] of Object.entries(EPHEC_FROM_THE_DOSSIERS)) {
-    const unit = project(name);
+    const unit = course(name);
     assert.ok(unit, `no course unit named ${name}`);
     const missing = expected.filter((k) => !(unit.keywords || []).includes(k));
     assert.deepEqual(missing, [], `${name} omits: ${missing.join(', ')}`);
@@ -117,10 +118,10 @@ test('each sampled EPHEC unit carries what its dossier names', () => {
 // degree both referenced WebMenu and the job came first in the file. A course
 // unit belongs to a degree; no job may claim one.
 //
-// Keyed on type, not on entity: MyWay carries entity "Freelance" and is a web
-// application, not a course — this test caught that on its first run.
+// Keyed on the courses, not on entity: MyWay carries entity "Freelance" and is
+// a web application, not a course — this test caught that on its first run.
 test('no job references a course unit', () => {
-  const units = new Set(resume.projects.filter((p) => p.type === 'Course unit').map((p) => p.name));
+  const units = new Set(resume.courses.map((c) => c.name));
   for (const w of resume.work) {
     const wrong = (w.projects || []).filter((n) => units.has(n));
     assert.deepEqual(wrong, [], `${w.position} references course units: ${wrong.join(', ')}`);

@@ -5,9 +5,8 @@
 // the volunteering done at the school (./_trailer.js). Skill tags and course
 // units are left to the site.
 const { tex, nohyphen, formatDate, truncate } = require('../tex');
-const { topN, findProject } = require('../data');
+const { topN } = require('../data');
 const { appendItemTrailer } = require('./_trailer');
-const { isCourseUnit } = require('../../course-unit');
 
 function renderSummary(text, max) {
   if (!text) return null;
@@ -15,12 +14,6 @@ function renderSummary(text, max) {
   if (!clean) return null;
   return `\\noindent\\raggedright{\\footnotesize ${tex(clean)}}\\par`;
 }
-
-// The projects a degree carried. Its course units are named in the same list
-// of the CV's data — told apart as the site tells them — and the PDF leaves
-// them to the site.
-const carriedProjects = (e, resume) =>
-  (e.projects || []).filter((name) => !isCourseUnit(findProject(resume, name)));
 
 function renderEducationEntry(e, lang, t, limits, resume) {
   const start = formatDate(e.startDate, lang);
@@ -38,17 +31,7 @@ function renderEducationEntry(e, lang, t, limits, resume) {
   ];
   const summary = renderSummary(e.summary, limits.summary);
   if (summary) parts.push(summary);
-  appendItemTrailer(
-    parts,
-    e,
-    resume,
-    t,
-    { ...limits, show_skills: false },
-    {
-      lang,
-      projects: carriedProjects(e, resume),
-    },
-  );
+  appendItemTrailer(parts, e, resume, t, { ...limits, show_skills: false }, { lang });
   return parts;
 }
 

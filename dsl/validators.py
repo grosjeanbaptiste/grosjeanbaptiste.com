@@ -5,7 +5,8 @@ list is empty when the tree is semantically consistent.
 
 Checks performed:
     * every ``Ref(target=…)`` inside a work / education entry resolves to
-      a project entry with the same key;
+      a project entry with the same key, and every course a degree lists
+      to a course entry — never one for the other (course_rules.py);
     * every ``DateRange.start ≤ DateRange.end`` (Present > any date);
     * ``meta.dailyLife`` items sum to 24 hours;
     * every :class:`Translated` uses one of the accepted language codes
@@ -16,6 +17,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from course_rules import degree_messages
 from nodes import (
     Date,
     DateRange,
@@ -135,28 +137,8 @@ def validate(resume: Resume) -> list[ValidationError]:
                     message=f"schedule: unknown value {e.schedule!r} (day or evening)",
                 )
             )
-        # A block files units the degree lists, each under one block only.
-        listed = {ref.target for ref in e.projects if isinstance(ref, Ref)}
-        filed: dict[str, str] = {}
-        for block in e.blocks:
-            for ref in block.units:
-                if ref.target not in listed:
-                    errors.append(
-                        ValidationError(
-                            section="education",
-                            entry=e.key,
-                            message=f"block {block.key}: unit {ref.target!r} is not among the degree's projects",
-                        )
-                    )
-                elif ref.target in filed:
-                    errors.append(
-                        ValidationError(
-                            section="education",
-                            entry=e.key,
-                            message=f"unit {ref.target!r} is filed under two blocks ({filed[ref.target]}, {block.key})",
-                        )
-                    )
-                filed.setdefault(ref.target, block.key)
+        for message in degree_messages(resume, e):
+            errors.append(ValidationError(section="education", entry=e.key, message=message))
         if e.display_period and not _range_ok(e.display_period):
             errors.append(
                 ValidationError(
@@ -165,15 +147,6 @@ def validate(resume: Resume) -> list[ValidationError]:
                     message="display_period start > end",
                 )
             )
-        for ref in e.projects:
-            if isinstance(ref, Ref) and ref.target not in project_keys:
-                errors.append(
-                    ValidationError(
-                        section="education",
-                        entry=e.key,
-                        message=f"projects: unresolved ref to {ref.target!r}",
-                    )
-                )
 
     # competitions
     for c in resume.competitions:
@@ -201,6 +174,10 @@ def validate(resume: Resume) -> list[ValidationError]:
                     message=f"startDate {p.start_date.text} > endDate {p.end_date.text}",
                 )
             )
+
+    # courses
+    for c in resume.courses:
+        errors.extend(_walk_values(c.summary, "courses", c.key, "summary"))
 
     # references
     for r in resume.references:

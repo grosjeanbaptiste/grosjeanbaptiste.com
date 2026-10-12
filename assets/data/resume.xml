@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=8b7bb3ad"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=109c6638"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -1985,6 +1985,26 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <area>Computer Science (work-study program) — specialised professional focus (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
       <endDate>2026-09-04</endDate>
+      <courses>
+        <course>Algorithmique</course>
+        <course>Anglais I</course>
+        <course>Bases de données I</course>
+        <course>Lecture et rédaction scientifique</course>
+        <course>Mathématique</course>
+        <course>Modélisation logicielle</course>
+        <course>Réseaux</course>
+        <course>Stratégie et politiques en ressources humaines</course>
+        <course>Systèmes d'exploitation</course>
+        <course>Anglais II</course>
+        <course>Bases de données II</course>
+        <course>Ingénierie de logiciels et gestion de projets</course>
+        <course>Intelligence artificielle</course>
+        <course>Recherche opérationnelle et applications</course>
+        <course>Structures de données</course>
+        <course>Séminaires d'informatique en veille technologique</course>
+        <course>Cryptographie et sécurité des systèmes informatiques</course>
+        <course>Éthique et droit de l'informatique</course>
+      </courses>
       <gpa>13.04/20 — obtained with satisfaction</gpa>
       <summary>MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative &amp; buddy TandeMons. Core coursework: software engineering &amp; project management, artificial intelligence, databases, data structures, operational research, cryptography &amp; IT security, and ethics &amp; computer law, with two paid company internships.</summary>
       <skills>
@@ -1999,24 +2019,6 @@ This comprehensive training covered various areas including SQL Server, Node.js,
         <project>fedrag-be</project>
         <project>Emvi App</project>
         <project>Remi</project>
-        <project>Algorithmique</project>
-        <project>Anglais I</project>
-        <project>Bases de données I</project>
-        <project>Lecture et rédaction scientifique</project>
-        <project>Mathématique</project>
-        <project>Modélisation logicielle</project>
-        <project>Réseaux</project>
-        <project>Stratégie et politiques en ressources humaines</project>
-        <project>Systèmes d'exploitation</project>
-        <project>Anglais II</project>
-        <project>Bases de données II</project>
-        <project>Ingénierie de logiciels et gestion de projets</project>
-        <project>Intelligence artificielle</project>
-        <project>Recherche opérationnelle et applications</project>
-        <project>Structures de données</project>
-        <project>Séminaires d'informatique en veille technologique</project>
-        <project>Cryptographie et sécurité des systèmes informatiques</project>
-        <project>Éthique et droit de l'informatique</project>
       </projects>
       <schedule>evening</schedule>
       <blocks>
@@ -2079,6 +2081,32 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <area>Information Systems Management</area>
       <startDate>2018-09-30</startDate>
       <endDate>2022-10-15</endDate>
+      <courses>
+        <course>Structure des ordinateurs</course>
+        <course>Informatique - Système d'exploitation</course>
+        <course>Mathématique appliquée à l'informatique</course>
+        <course>Principes algorithmiques et programmation</course>
+        <course>Principes d'analyse informatique</course>
+        <course>Information et communication professionnelles</course>
+        <course>Web : principes de base</course>
+        <course>Initiation aux bases de données</course>
+        <course>Gestion et exploitation de bases de données</course>
+        <course>Programmation orientée objet</course>
+        <course>Projet d'analyse et de conception</course>
+        <course>Techniques de gestion de projet</course>
+        <course>Éléments de statistique</course>
+        <course>Projet de développement web</course>
+        <course>Notions de e-business</course>
+        <course>Projet de développement SGBD</course>
+        <course>Bases des réseaux</course>
+        <course>Organisation des entreprises et éléments de management</course>
+        <course>Produits logiciels de gestion intégrés</course>
+        <course>Projet d'intégration de développement</course>
+        <course>Veille technologique</course>
+        <course>Administration, gestion et sécurisation des réseaux</course>
+        <course>Langue en situation appliquée à l'enseignement supérieur UE1</course>
+        <course>Langue en situation appliquée à l'enseignement supérieur UE2</course>
+      </courses>
       <gpa>62.8%, Satis Bene</gpa>
       <summary>Student representative and tutor. 
 
@@ -2097,30 +2125,6 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       </skills>
       <projects>
         <project>WebMenu</project>
-        <project>Structure des ordinateurs</project>
-        <project>Informatique - Système d'exploitation</project>
-        <project>Mathématique appliquée à l'informatique</project>
-        <project>Principes algorithmiques et programmation</project>
-        <project>Principes d'analyse informatique</project>
-        <project>Information et communication professionnelles</project>
-        <project>Web : principes de base</project>
-        <project>Initiation aux bases de données</project>
-        <project>Gestion et exploitation de bases de données</project>
-        <project>Programmation orientée objet</project>
-        <project>Projet d'analyse et de conception</project>
-        <project>Techniques de gestion de projet</project>
-        <project>Éléments de statistique</project>
-        <project>Projet de développement web</project>
-        <project>Notions de e-business</project>
-        <project>Projet de développement SGBD</project>
-        <project>Bases des réseaux</project>
-        <project>Organisation des entreprises et éléments de management</project>
-        <project>Produits logiciels de gestion intégrés</project>
-        <project>Projet d'intégration de développement</project>
-        <project>Veille technologique</project>
-        <project>Administration, gestion et sécurisation des réseaux</project>
-        <project>Langue en situation appliquée à l'enseignement supérieur UE1</project>
-        <project>Langue en situation appliquée à l'enseignement supérieur UE2</project>
       </projects>
       <schedule>evening</schedule>
       <blocks>
@@ -2193,17 +2197,17 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <area>General orientation</area>
       <startDate>2016-09-30</startDate>
       <endDate>2017-06-30</endDate>
+      <courses>
+        <course>Économie I</course>
+        <course>Économie II</course>
+        <course>Science politique</course>
+        <course>Séminaire : penser le social</course>
+        <course>Séminaire : principes et méthodes en sciences sociales</course>
+        <course>Socio-économie des médias</course>
+        <course>Anglais I (Saint-Louis)</course>
+        <course>Néerlandais I</course>
+      </courses>
       <gpa>29 credits earned in 2016-2017, contact me for more information.</gpa>
-      <projects>
-        <project>Économie I</project>
-        <project>Économie II</project>
-        <project>Science politique</project>
-        <project>Séminaire : penser le social</project>
-        <project>Séminaire : principes et méthodes en sciences sociales</project>
-        <project>Socio-économie des médias</project>
-        <project>Anglais I (Saint-Louis)</project>
-        <project>Néerlandais I</project>
-      </projects>
       <schedule>day</schedule>
       <blocks>
         <block>
@@ -2514,614 +2518,6 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <endDate>2022-03-31</endDate>
       <summary>QR code based cash register for HoReCa establishments.</summary>
     </project>
-    <project>
-      <name>Algorithmique</name>
-      <keywords>
-        <keyword>Algorithms</keyword>
-        <keyword>DataStructures</keyword>
-        <keyword>Complexity</keyword>
-        <keyword>Trees</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-011-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Algorithmics</summary>
-    </project>
-    <project>
-      <name>Anglais I</name>
-      <keywords>
-        <keyword>English</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-012-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>English I</summary>
-    </project>
-    <project>
-      <name>Bases de données I</name>
-      <keywords>
-        <keyword>SQL</keyword>
-        <keyword>RelationalAlgebra</keyword>
-        <keyword>Normalization</keyword>
-        <keyword>Indexing</keyword>
-        <keyword>NoSQL</keyword>
-        <keyword>BigData</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-013-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Databases I</summary>
-    </project>
-    <project>
-      <name>Lecture et rédaction scientifique</name>
-      <keywords>
-        <keyword>ScientificWriting</keyword>
-        <keyword>LiteratureReview</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-014-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Scientific reading and writing</summary>
-    </project>
-    <project>
-      <name>Mathématique</name>
-      <keywords>
-        <keyword>GraphTheory</keyword>
-        <keyword>Combinatorics</keyword>
-        <keyword>Complexity</keyword>
-        <keyword>PropositionalLogic</keyword>
-        <keyword>PredicateLogic</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-015-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Mathematics</summary>
-    </project>
-    <project>
-      <name>Modélisation logicielle</name>
-      <keywords>
-        <keyword>Java</keyword>
-        <keyword>UML</keyword>
-        <keyword>DesignPatterns</keyword>
-        <keyword>UnitTesting</keyword>
-        <keyword>MockTesting</keyword>
-        <keyword>BDD</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-016-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Software modelling</summary>
-    </project>
-    <project>
-      <name>Réseaux</name>
-      <keywords>
-        <keyword>TCP/IP</keyword>
-        <keyword>HTTP</keyword>
-        <keyword>DNS</keyword>
-        <keyword>OSPF</keyword>
-        <keyword>BGP</keyword>
-        <keyword>Ethernet</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-017-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Networks</summary>
-    </project>
-    <project>
-      <name>Stratégie et politiques en ressources humaines</name>
-      <keywords>
-        <keyword>HRM</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-018-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>HR strategy and policy</summary>
-    </project>
-    <project>
-      <name>Systèmes d'exploitation</name>
-      <keywords>
-        <keyword>Processes</keyword>
-        <keyword>Semaphores</keyword>
-        <keyword>Synchronization</keyword>
-        <keyword>MemoryManagement</keyword>
-        <keyword>FileSystems</keyword>
-        <keyword>Scheduling</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-019-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Operating systems</summary>
-    </project>
-    <project>
-      <name>Anglais II</name>
-      <keywords>
-        <keyword>English</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-001-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>English II</summary>
-    </project>
-    <project>
-      <name>Bases de données II</name>
-      <keywords>
-        <keyword>XML</keyword>
-        <keyword>XSLT</keyword>
-        <keyword>XQuery</keyword>
-        <keyword>XPath</keyword>
-        <keyword>BaseX</keyword>
-        <keyword>DataMining</keyword>
-        <keyword>Weka</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-101-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Databases II</summary>
-    </project>
-    <project>
-      <name>Ingénierie de logiciels et gestion de projets</name>
-      <keywords>
-        <keyword>Agile</keyword>
-        <keyword>Scrum</keyword>
-        <keyword>SoftwareEngineering</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-008-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Software engineering and project management</summary>
-    </project>
-    <project>
-      <name>Intelligence artificielle</name>
-      <keywords>
-        <keyword>SearchAlgorithms</keyword>
-        <keyword>Metaheuristics</keyword>
-        <keyword>FirstOrderLogic</keyword>
-        <keyword>SupervisedLearning</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-102-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Artificial intelligence</summary>
-    </project>
-    <project>
-      <name>Recherche opérationnelle et applications</name>
-      <keywords>
-        <keyword>OperationsResearch</keyword>
-        <keyword>LinearProgramming</keyword>
-        <keyword>IntegerProgramming</keyword>
-        <keyword>Duality</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-103-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Operations research and applications</summary>
-    </project>
-    <project>
-      <name>Structures de données</name>
-      <keywords>
-        <keyword>AVLTrees</keyword>
-        <keyword>BTrees</keyword>
-        <keyword>HashTables</keyword>
-        <keyword>Sorting</keyword>
-        <keyword>Complexity</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-104-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Data structures</summary>
-    </project>
-    <project>
-      <name>Séminaires d'informatique en veille technologique</name>
-      <keywords>
-        <keyword>TechWatch</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Computing seminars in technology watch</summary>
-    </project>
-    <project>
-      <name>Cryptographie et sécurité des systèmes informatiques</name>
-      <keywords>
-        <keyword>Cryptography</keyword>
-        <keyword>Unix</keyword>
-        <keyword>NetworkSecurity</keyword>
-        <keyword>ApplicationSecurity</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Cryptography and systems security</summary>
-    </project>
-    <project>
-      <name>Éthique et droit de l'informatique</name>
-      <keywords>
-        <keyword>IntellectualProperty</keyword>
-        <keyword>DataProtection</keyword>
-        <keyword>GDPR</keyword>
-      </keywords>
-      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm</url>
-      <type>Course unit</type>
-      <entity>UMONS</entity>
-      <summary>Ethics and IT law</summary>
-    </project>
-    <project>
-      <name>Structure des ordinateurs</name>
-      <keywords>
-        <keyword>ComputerArchitecture</keyword>
-        <keyword>Binary</keyword>
-        <keyword>Hexadecimal</keyword>
-        <keyword>Hardware</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=43</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Computer structure</summary>
-    </project>
-    <project>
-      <name>Informatique - Système d'exploitation</name>
-      <keywords>
-        <keyword>OperatingSystems</keyword>
-        <keyword>ShellScripting</keyword>
-        <keyword>SystemAdministration</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=47</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Operating systems</summary>
-    </project>
-    <project>
-      <name>Mathématique appliquée à l'informatique</name>
-      <keywords>
-        <keyword>LinearAlgebra</keyword>
-        <keyword>GraphTheory</keyword>
-        <keyword>SetTheory</keyword>
-        <keyword>RelationalAlgebra</keyword>
-        <keyword>MathematicalLogic</keyword>
-        <keyword>Cryptography</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=20</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Mathematics applied to computing</summary>
-    </project>
-    <project>
-      <name>Principes algorithmiques et programmation</name>
-      <keywords>
-        <keyword>Algorithms</keyword>
-        <keyword>DataTypes</keyword>
-        <keyword>ControlFlow</keyword>
-        <keyword>Programming</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=87</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Algorithmic principles and programming</summary>
-    </project>
-    <project>
-      <name>Principes d'analyse informatique</name>
-      <keywords>
-        <keyword>UML</keyword>
-        <keyword>EntityRelationship</keyword>
-        <keyword>SystemsAnalysis</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=116</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Principles of systems analysis</summary>
-    </project>
-    <project>
-      <name>Information et communication professionnelles</name>
-      <keywords>
-        <keyword>ProfessionalCommunication</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=39</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Professional information and communication</summary>
-    </project>
-    <project>
-      <name>Web : principes de base</name>
-      <keywords>
-        <keyword>HTML</keyword>
-        <keyword>CSS</keyword>
-        <keyword>URL</keyword>
-        <keyword>DNS</keyword>
-        <keyword>WebHosting</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=95</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Web: fundamentals</summary>
-    </project>
-    <project>
-      <name>Initiation aux bases de données</name>
-      <keywords>
-        <keyword>SQL</keyword>
-        <keyword>RelationalModel</keyword>
-        <keyword>Joins</keyword>
-        <keyword>Indexing</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=79</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Introduction to databases</summary>
-    </project>
-    <project>
-      <name>Gestion et exploitation de bases de données</name>
-      <keywords>
-        <keyword>Triggers</keyword>
-        <keyword>StoredProcedures</keyword>
-        <keyword>DataWarehouse</keyword>
-        <keyword>QueryOptimization</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=83</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Database management and operation</summary>
-    </project>
-    <project>
-      <name>Programmation orientée objet</name>
-      <keywords>
-        <keyword>OOP</keyword>
-        <keyword>Inheritance</keyword>
-        <keyword>Polymorphism</keyword>
-        <keyword>Encapsulation</keyword>
-        <keyword>Overloading</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=91</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Object-oriented programming</summary>
-    </project>
-    <project>
-      <name>Projet d'analyse et de conception</name>
-      <keywords>
-        <keyword>SystemsAnalysis</keyword>
-        <keyword>SoftwareDesign</keyword>
-        <keyword>Modelling</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=120</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Analysis and design project</summary>
-    </project>
-    <project>
-      <name>Techniques de gestion de projet</name>
-      <keywords>
-        <keyword>ProjectManagement</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=113</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Project management techniques</summary>
-    </project>
-    <project>
-      <name>Éléments de statistique</name>
-      <keywords>
-        <keyword>Statistics</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=35</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Elements of statistics</summary>
-    </project>
-    <project>
-      <name>Projet de développement web</name>
-      <keywords>
-        <keyword>JavaScript</keyword>
-        <keyword>AJAX</keyword>
-        <keyword>JSON</keyword>
-        <keyword>XML</keyword>
-        <keyword>ClientSideScripting</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=99</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Web development project</summary>
-    </project>
-    <project>
-      <name>Notions de e-business</name>
-      <keywords>
-        <keyword>Ebusiness</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=56</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Principles of e-business</summary>
-    </project>
-    <project>
-      <name>Projet de développement SGBD</name>
-      <keywords>
-        <keyword>DataAccessLayer</keyword>
-        <keyword>Transactions</keyword>
-        <keyword>DatabaseProgramming</keyword>
-        <keyword>Debugging</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=104</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>DBMS development project</summary>
-    </project>
-    <project>
-      <name>Bases des réseaux</name>
-      <keywords>
-        <keyword>Ethernet</keyword>
-        <keyword>MAC</keyword>
-        <keyword>TCP/IP</keyword>
-        <keyword>Networking</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=69</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Network fundamentals</summary>
-    </project>
-    <project>
-      <name>Organisation des entreprises et éléments de management</name>
-      <keywords>
-        <keyword>Management</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=52</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Business organisation and management</summary>
-    </project>
-    <project>
-      <name>Produits logiciels de gestion intégrés</name>
-      <keywords>
-        <keyword>ERP</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=61</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Integrated management software</summary>
-    </project>
-    <project>
-      <name>Projet d'intégration de développement</name>
-      <keywords>
-        <keyword>AJAX</keyword>
-        <keyword>JSON</keyword>
-        <keyword>XML</keyword>
-        <keyword>SQLInjection</keyword>
-        <keyword>XSS</keyword>
-        <keyword>Caching</keyword>
-        <keyword>URLRewriting</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=108</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Development integration project</summary>
-    </project>
-    <project>
-      <name>Veille technologique</name>
-      <keywords>
-        <keyword>TechWatch</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=65</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Technology watch</summary>
-    </project>
-    <project>
-      <name>Administration, gestion et sécurisation des réseaux</name>
-      <keywords>
-        <keyword>NetworkAdministration</keyword>
-        <keyword>NetworkSecurity</keyword>
-        <keyword>ApplicationServer</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=74</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Network administration and security</summary>
-    </project>
-    <project>
-      <name>Langue en situation appliquée à l'enseignement supérieur UE1</name>
-      <keywords>
-        <keyword>ProfessionalCommunication</keyword>
-      </keywords>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Applied language for higher education I</summary>
-    </project>
-    <project>
-      <name>Langue en situation appliquée à l'enseignement supérieur UE2</name>
-      <keywords>
-        <keyword>ProfessionalCommunication</keyword>
-      </keywords>
-      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24</url>
-      <type>Course unit</type>
-      <entity>EPHEC</entity>
-      <summary>Applied language for higher education II</summary>
-    </project>
-    <project>
-      <name>Économie I</name>
-      <keywords>
-        <keyword>Microeconomics</keyword>
-        <keyword>CompetitiveMarkets</keyword>
-        <keyword>FirmBehaviour</keyword>
-        <keyword>MarketFailure</keyword>
-      </keywords>
-      <type>Course unit</type>
-      <entity>USL-B</entity>
-      <summary>Economics I</summary>
-    </project>
-    <project>
-      <name>Économie II</name>
-      <keywords>
-        <keyword>ImperfectCompetition</keyword>
-        <keyword>Macroeconomics</keyword>
-        <keyword>NationalIncome</keyword>
-        <keyword>MonetaryMarket</keyword>
-      </keywords>
-      <type>Course unit</type>
-      <entity>USL-B</entity>
-      <summary>Economics II</summary>
-    </project>
-    <project>
-      <name>Science politique</name>
-      <keywords>
-        <keyword>PoliticalScience</keyword>
-        <keyword>Power</keyword>
-        <keyword>State</keyword>
-        <keyword>Democracy</keyword>
-      </keywords>
-      <type>Course unit</type>
-      <entity>USL-B</entity>
-      <summary>Political science</summary>
-    </project>
-    <project>
-      <name>Séminaire : penser le social</name>
-      <keywords>
-        <keyword>Epistemology</keyword>
-        <keyword>Durkheim</keyword>
-        <keyword>Weber</keyword>
-        <keyword>Marx</keyword>
-      </keywords>
-      <type>Course unit</type>
-      <entity>USL-B</entity>
-      <summary>Seminar: thinking the social</summary>
-    </project>
-    <project>
-      <name>Séminaire : principes et méthodes en sciences sociales</name>
-      <keywords>
-        <keyword>AcademicWriting</keyword>
-        <keyword>Citation</keyword>
-        <keyword>Epistemology</keyword>
-      </keywords>
-      <type>Course unit</type>
-      <entity>USL-B</entity>
-      <summary>Seminar: principles and methods in the social sciences</summary>
-    </project>
-    <project>
-      <name>Socio-économie des médias</name>
-      <keywords>
-        <keyword>MediaEconomics</keyword>
-        <keyword>Advertising</keyword>
-        <keyword>MediaRegulation</keyword>
-        <keyword>WebEconomy</keyword>
-      </keywords>
-      <type>Course unit</type>
-      <entity>USL-B</entity>
-      <summary>Socio-economics of the media</summary>
-    </project>
-    <project>
-      <name>Anglais I (Saint-Louis)</name>
-      <keywords>
-        <keyword>English</keyword>
-      </keywords>
-      <type>Course unit</type>
-      <entity>USL-B</entity>
-      <summary>English I</summary>
-    </project>
-    <project>
-      <name>Néerlandais I</name>
-      <keywords>
-        <keyword>Dutch</keyword>
-      </keywords>
-      <type>Course unit</type>
-      <entity>USL-B</entity>
-      <summary>Dutch I</summary>
-    </project>
   </projects>
   <references>
     <reference>
@@ -3329,6 +2725,566 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <endDate>2022-10-15</endDate>
     </volunteer-item>
   </volunteer>
+  <courses>
+    <course>
+      <name>Algorithmique</name>
+      <keywords>
+        <keyword>Algorithms</keyword>
+        <keyword>DataStructures</keyword>
+        <keyword>Complexity</keyword>
+        <keyword>Trees</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-011-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Algorithmics</summary>
+    </course>
+    <course>
+      <name>Anglais I</name>
+      <keywords>
+        <keyword>English</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-012-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>English I</summary>
+    </course>
+    <course>
+      <name>Bases de données I</name>
+      <keywords>
+        <keyword>SQL</keyword>
+        <keyword>RelationalAlgebra</keyword>
+        <keyword>Normalization</keyword>
+        <keyword>Indexing</keyword>
+        <keyword>NoSQL</keyword>
+        <keyword>BigData</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-013-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Databases I</summary>
+    </course>
+    <course>
+      <name>Lecture et rédaction scientifique</name>
+      <keywords>
+        <keyword>ScientificWriting</keyword>
+        <keyword>LiteratureReview</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-014-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Scientific reading and writing</summary>
+    </course>
+    <course>
+      <name>Mathématique</name>
+      <keywords>
+        <keyword>GraphTheory</keyword>
+        <keyword>Combinatorics</keyword>
+        <keyword>Complexity</keyword>
+        <keyword>PropositionalLogic</keyword>
+        <keyword>PredicateLogic</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-015-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Mathematics</summary>
+    </course>
+    <course>
+      <name>Modélisation logicielle</name>
+      <keywords>
+        <keyword>Java</keyword>
+        <keyword>UML</keyword>
+        <keyword>DesignPatterns</keyword>
+        <keyword>UnitTesting</keyword>
+        <keyword>MockTesting</keyword>
+        <keyword>BDD</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-016-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Software modelling</summary>
+    </course>
+    <course>
+      <name>Réseaux</name>
+      <keywords>
+        <keyword>TCP/IP</keyword>
+        <keyword>HTTP</keyword>
+        <keyword>DNS</keyword>
+        <keyword>OSPF</keyword>
+        <keyword>BGP</keyword>
+        <keyword>Ethernet</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-017-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Networks</summary>
+    </course>
+    <course>
+      <name>Stratégie et politiques en ressources humaines</name>
+      <keywords>
+        <keyword>HRM</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-018-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>HR strategy and policy</summary>
+    </course>
+    <course>
+      <name>Systèmes d'exploitation</name>
+      <keywords>
+        <keyword>Processes</keyword>
+        <keyword>Semaphores</keyword>
+        <keyword>Synchronization</keyword>
+        <keyword>MemoryManagement</keyword>
+        <keyword>FileSystems</keyword>
+        <keyword>Scheduling</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-019-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Operating systems</summary>
+    </course>
+    <course>
+      <name>Anglais II</name>
+      <keywords>
+        <keyword>English</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-001-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>English II</summary>
+    </course>
+    <course>
+      <name>Bases de données II</name>
+      <keywords>
+        <keyword>XML</keyword>
+        <keyword>XSLT</keyword>
+        <keyword>XQuery</keyword>
+        <keyword>XPath</keyword>
+        <keyword>BaseX</keyword>
+        <keyword>DataMining</keyword>
+        <keyword>Weka</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-101-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Databases II</summary>
+    </course>
+    <course>
+      <name>Ingénierie de logiciels et gestion de projets</name>
+      <keywords>
+        <keyword>Agile</keyword>
+        <keyword>Scrum</keyword>
+        <keyword>SoftwareEngineering</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-008-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Software engineering and project management</summary>
+    </course>
+    <course>
+      <name>Intelligence artificielle</name>
+      <keywords>
+        <keyword>SearchAlgorithms</keyword>
+        <keyword>Metaheuristics</keyword>
+        <keyword>FirstOrderLogic</keyword>
+        <keyword>SupervisedLearning</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-102-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Artificial intelligence</summary>
+    </course>
+    <course>
+      <name>Recherche opérationnelle et applications</name>
+      <keywords>
+        <keyword>OperationsResearch</keyword>
+        <keyword>LinearProgramming</keyword>
+        <keyword>IntegerProgramming</keyword>
+        <keyword>Duality</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-103-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Operations research and applications</summary>
+    </course>
+    <course>
+      <name>Structures de données</name>
+      <keywords>
+        <keyword>AVLTrees</keyword>
+        <keyword>BTrees</keyword>
+        <keyword>HashTables</keyword>
+        <keyword>Sorting</keyword>
+        <keyword>Complexity</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-104-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Data structures</summary>
+    </course>
+    <course>
+      <name>Séminaires d'informatique en veille technologique</name>
+      <keywords>
+        <keyword>TechWatch</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Computing seminars in technology watch</summary>
+    </course>
+    <course>
+      <name>Cryptographie et sécurité des systèmes informatiques</name>
+      <keywords>
+        <keyword>Cryptography</keyword>
+        <keyword>Unix</keyword>
+        <keyword>NetworkSecurity</keyword>
+        <keyword>ApplicationSecurity</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Cryptography and systems security</summary>
+    </course>
+    <course>
+      <name>Éthique et droit de l'informatique</name>
+      <keywords>
+        <keyword>IntellectualProperty</keyword>
+        <keyword>DataProtection</keyword>
+        <keyword>GDPR</keyword>
+      </keywords>
+      <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm</url>
+      <entity>UMONS</entity>
+      <summary>Ethics and IT law</summary>
+    </course>
+    <course>
+      <name>Structure des ordinateurs</name>
+      <keywords>
+        <keyword>ComputerArchitecture</keyword>
+        <keyword>Binary</keyword>
+        <keyword>Hexadecimal</keyword>
+        <keyword>Hardware</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=43</url>
+      <entity>EPHEC</entity>
+      <summary>Computer structure</summary>
+    </course>
+    <course>
+      <name>Informatique - Système d'exploitation</name>
+      <keywords>
+        <keyword>OperatingSystems</keyword>
+        <keyword>ShellScripting</keyword>
+        <keyword>SystemAdministration</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=47</url>
+      <entity>EPHEC</entity>
+      <summary>Operating systems</summary>
+    </course>
+    <course>
+      <name>Mathématique appliquée à l'informatique</name>
+      <keywords>
+        <keyword>LinearAlgebra</keyword>
+        <keyword>GraphTheory</keyword>
+        <keyword>SetTheory</keyword>
+        <keyword>RelationalAlgebra</keyword>
+        <keyword>MathematicalLogic</keyword>
+        <keyword>Cryptography</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=20</url>
+      <entity>EPHEC</entity>
+      <summary>Mathematics applied to computing</summary>
+    </course>
+    <course>
+      <name>Principes algorithmiques et programmation</name>
+      <keywords>
+        <keyword>Algorithms</keyword>
+        <keyword>DataTypes</keyword>
+        <keyword>ControlFlow</keyword>
+        <keyword>Programming</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=87</url>
+      <entity>EPHEC</entity>
+      <summary>Algorithmic principles and programming</summary>
+    </course>
+    <course>
+      <name>Principes d'analyse informatique</name>
+      <keywords>
+        <keyword>UML</keyword>
+        <keyword>EntityRelationship</keyword>
+        <keyword>SystemsAnalysis</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=116</url>
+      <entity>EPHEC</entity>
+      <summary>Principles of systems analysis</summary>
+    </course>
+    <course>
+      <name>Information et communication professionnelles</name>
+      <keywords>
+        <keyword>ProfessionalCommunication</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=39</url>
+      <entity>EPHEC</entity>
+      <summary>Professional information and communication</summary>
+    </course>
+    <course>
+      <name>Web : principes de base</name>
+      <keywords>
+        <keyword>HTML</keyword>
+        <keyword>CSS</keyword>
+        <keyword>URL</keyword>
+        <keyword>DNS</keyword>
+        <keyword>WebHosting</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=95</url>
+      <entity>EPHEC</entity>
+      <summary>Web: fundamentals</summary>
+    </course>
+    <course>
+      <name>Initiation aux bases de données</name>
+      <keywords>
+        <keyword>SQL</keyword>
+        <keyword>RelationalModel</keyword>
+        <keyword>Joins</keyword>
+        <keyword>Indexing</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=79</url>
+      <entity>EPHEC</entity>
+      <summary>Introduction to databases</summary>
+    </course>
+    <course>
+      <name>Gestion et exploitation de bases de données</name>
+      <keywords>
+        <keyword>Triggers</keyword>
+        <keyword>StoredProcedures</keyword>
+        <keyword>DataWarehouse</keyword>
+        <keyword>QueryOptimization</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=83</url>
+      <entity>EPHEC</entity>
+      <summary>Database management and operation</summary>
+    </course>
+    <course>
+      <name>Programmation orientée objet</name>
+      <keywords>
+        <keyword>OOP</keyword>
+        <keyword>Inheritance</keyword>
+        <keyword>Polymorphism</keyword>
+        <keyword>Encapsulation</keyword>
+        <keyword>Overloading</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=91</url>
+      <entity>EPHEC</entity>
+      <summary>Object-oriented programming</summary>
+    </course>
+    <course>
+      <name>Projet d'analyse et de conception</name>
+      <keywords>
+        <keyword>SystemsAnalysis</keyword>
+        <keyword>SoftwareDesign</keyword>
+        <keyword>Modelling</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=120</url>
+      <entity>EPHEC</entity>
+      <summary>Analysis and design project</summary>
+    </course>
+    <course>
+      <name>Techniques de gestion de projet</name>
+      <keywords>
+        <keyword>ProjectManagement</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=113</url>
+      <entity>EPHEC</entity>
+      <summary>Project management techniques</summary>
+    </course>
+    <course>
+      <name>Éléments de statistique</name>
+      <keywords>
+        <keyword>Statistics</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=35</url>
+      <entity>EPHEC</entity>
+      <summary>Elements of statistics</summary>
+    </course>
+    <course>
+      <name>Projet de développement web</name>
+      <keywords>
+        <keyword>JavaScript</keyword>
+        <keyword>AJAX</keyword>
+        <keyword>JSON</keyword>
+        <keyword>XML</keyword>
+        <keyword>ClientSideScripting</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=99</url>
+      <entity>EPHEC</entity>
+      <summary>Web development project</summary>
+    </course>
+    <course>
+      <name>Notions de e-business</name>
+      <keywords>
+        <keyword>Ebusiness</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=56</url>
+      <entity>EPHEC</entity>
+      <summary>Principles of e-business</summary>
+    </course>
+    <course>
+      <name>Projet de développement SGBD</name>
+      <keywords>
+        <keyword>DataAccessLayer</keyword>
+        <keyword>Transactions</keyword>
+        <keyword>DatabaseProgramming</keyword>
+        <keyword>Debugging</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=104</url>
+      <entity>EPHEC</entity>
+      <summary>DBMS development project</summary>
+    </course>
+    <course>
+      <name>Bases des réseaux</name>
+      <keywords>
+        <keyword>Ethernet</keyword>
+        <keyword>MAC</keyword>
+        <keyword>TCP/IP</keyword>
+        <keyword>Networking</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=69</url>
+      <entity>EPHEC</entity>
+      <summary>Network fundamentals</summary>
+    </course>
+    <course>
+      <name>Organisation des entreprises et éléments de management</name>
+      <keywords>
+        <keyword>Management</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=52</url>
+      <entity>EPHEC</entity>
+      <summary>Business organisation and management</summary>
+    </course>
+    <course>
+      <name>Produits logiciels de gestion intégrés</name>
+      <keywords>
+        <keyword>ERP</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=61</url>
+      <entity>EPHEC</entity>
+      <summary>Integrated management software</summary>
+    </course>
+    <course>
+      <name>Projet d'intégration de développement</name>
+      <keywords>
+        <keyword>AJAX</keyword>
+        <keyword>JSON</keyword>
+        <keyword>XML</keyword>
+        <keyword>SQLInjection</keyword>
+        <keyword>XSS</keyword>
+        <keyword>Caching</keyword>
+        <keyword>URLRewriting</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=108</url>
+      <entity>EPHEC</entity>
+      <summary>Development integration project</summary>
+    </course>
+    <course>
+      <name>Veille technologique</name>
+      <keywords>
+        <keyword>TechWatch</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=65</url>
+      <entity>EPHEC</entity>
+      <summary>Technology watch</summary>
+    </course>
+    <course>
+      <name>Administration, gestion et sécurisation des réseaux</name>
+      <keywords>
+        <keyword>NetworkAdministration</keyword>
+        <keyword>NetworkSecurity</keyword>
+        <keyword>ApplicationServer</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=74</url>
+      <entity>EPHEC</entity>
+      <summary>Network administration and security</summary>
+    </course>
+    <course>
+      <name>Langue en situation appliquée à l'enseignement supérieur UE1</name>
+      <keywords>
+        <keyword>ProfessionalCommunication</keyword>
+      </keywords>
+      <entity>EPHEC</entity>
+      <summary>Applied language for higher education I</summary>
+    </course>
+    <course>
+      <name>Langue en situation appliquée à l'enseignement supérieur UE2</name>
+      <keywords>
+        <keyword>ProfessionalCommunication</keyword>
+      </keywords>
+      <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24</url>
+      <entity>EPHEC</entity>
+      <summary>Applied language for higher education II</summary>
+    </course>
+    <course>
+      <name>Économie I</name>
+      <keywords>
+        <keyword>Microeconomics</keyword>
+        <keyword>CompetitiveMarkets</keyword>
+        <keyword>FirmBehaviour</keyword>
+        <keyword>MarketFailure</keyword>
+      </keywords>
+      <entity>USL-B</entity>
+      <summary>Economics I</summary>
+    </course>
+    <course>
+      <name>Économie II</name>
+      <keywords>
+        <keyword>ImperfectCompetition</keyword>
+        <keyword>Macroeconomics</keyword>
+        <keyword>NationalIncome</keyword>
+        <keyword>MonetaryMarket</keyword>
+      </keywords>
+      <entity>USL-B</entity>
+      <summary>Economics II</summary>
+    </course>
+    <course>
+      <name>Science politique</name>
+      <keywords>
+        <keyword>PoliticalScience</keyword>
+        <keyword>Power</keyword>
+        <keyword>State</keyword>
+        <keyword>Democracy</keyword>
+      </keywords>
+      <entity>USL-B</entity>
+      <summary>Political science</summary>
+    </course>
+    <course>
+      <name>Séminaire : penser le social</name>
+      <keywords>
+        <keyword>Epistemology</keyword>
+        <keyword>Durkheim</keyword>
+        <keyword>Weber</keyword>
+        <keyword>Marx</keyword>
+      </keywords>
+      <entity>USL-B</entity>
+      <summary>Seminar: thinking the social</summary>
+    </course>
+    <course>
+      <name>Séminaire : principes et méthodes en sciences sociales</name>
+      <keywords>
+        <keyword>AcademicWriting</keyword>
+        <keyword>Citation</keyword>
+        <keyword>Epistemology</keyword>
+      </keywords>
+      <entity>USL-B</entity>
+      <summary>Seminar: principles and methods in the social sciences</summary>
+    </course>
+    <course>
+      <name>Socio-économie des médias</name>
+      <keywords>
+        <keyword>MediaEconomics</keyword>
+        <keyword>Advertising</keyword>
+        <keyword>MediaRegulation</keyword>
+        <keyword>WebEconomy</keyword>
+      </keywords>
+      <entity>USL-B</entity>
+      <summary>Socio-economics of the media</summary>
+    </course>
+    <course>
+      <name>Anglais I (Saint-Louis)</name>
+      <keywords>
+        <keyword>English</keyword>
+      </keywords>
+      <entity>USL-B</entity>
+      <summary>English I</summary>
+    </course>
+    <course>
+      <name>Néerlandais I</name>
+      <keywords>
+        <keyword>Dutch</keyword>
+      </keywords>
+      <entity>USL-B</entity>
+      <summary>Dutch I</summary>
+    </course>
+  </courses>
   <competitions>
     <item>
       <key>HackathonCOW2024</key>

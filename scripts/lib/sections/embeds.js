@@ -3,7 +3,6 @@
 // Kept separate from main.js so the section renderers there stay short.
 const { escapeHtml, dateRangeHtml } = require('../format');
 const { anchorOf } = require('../anchors');
-const { isCourseUnit, kindOf } = require('../course-unit');
 
 // What the timeline's bar for an embedded row links to: an empty span at the
 // end of the row, so the <li> markup — which a dozen tests and the print
@@ -34,8 +33,9 @@ const renderProjectTags = (keywords) => {
   return ` <span class="skill-tags project-skills">${tags}</span>`;
 };
 
-// One referenced project or course unit as a list row.
-function rowHtml(p) {
+// One referenced project or course unit as a list row. `kind` says which of
+// the two the row is, for the id its timeline bar links to.
+function rowHtml(p, kind) {
   // A course unit's name is its official French designation and its summary
   // the localized title, so on the French page the two are the same string
   // and the row would read "Algorithmique — Algorithmique". Say it once.
@@ -50,18 +50,19 @@ function rowHtml(p) {
   const clipped = desc ? printText(desc, PRINT_PLAN.proj_desc) : null;
   const descAttr = clipped ? ` data-print-text="${escapeHtml(clipped)}"` : '';
   const descHtml = desc ? ` — <span${descAttr}>${escapeHtml(desc)}</span>` : '';
-  return `<li>${label}${descHtml}${renderProjectTags(p.keywords)}${anchorHtml(kindOf(p), p)}</li>`;
+  return `<li>${label}${descHtml}${renderProjectTags(p.keywords)}${anchorHtml(kind, p)}</li>`;
 }
-const listHtml = (projs) => [
+const listHtml = (projs, kind) => [
   '  <ul>',
-  `        ${projs.map(rowHtml).join('\n        ')}`,
+  `        ${projs.map((p) => rowHtml(p, kind)).join('\n        ')}`,
   '  </ul>',
 ];
 
+// `kind`: 'project' or 'course' — the two are never listed together.
 // `blocks`: a degree's academic years. Its course units are then listed year by
 // year, each block headed by its year and the programme's name for it; a unit
 // on no block follows them.
-function renderEmbeddedProjects(projectNames, projects, label, blocks = []) {
+function renderEmbeddedProjects(projectNames, projects, label, kind, blocks = []) {
   if (!projectNames?.length) return '';
   const projs = projectNames.map((n) => projects.find((p) => p.name === n)).filter(Boolean);
   if (!projs.length) return '';
@@ -75,9 +76,9 @@ function renderEmbeddedProjects(projectNames, projects, label, blocks = []) {
     `  <p class="embedded-label">${escapeHtml(label)}:</p>`,
     ...groups.flatMap(({ block, projs: taken }) => [
       `  <p class="embedded-block">${escapeHtml([block.year, block.label].filter(Boolean).join(' · '))}</p>`,
-      ...listHtml(taken),
+      ...listHtml(taken, kind),
     ]),
-    ...(others.length ? listHtml(others) : []),
+    ...(others.length ? listHtml(others, kind) : []),
     '</div>',
   ].join('\n');
 }
@@ -145,21 +146,15 @@ function renderEmbeddedReferenceLinks(references, hostName, t) {
 function appendEmbeds(parts, entry, hostName, ctx, t, lang) {
   const skillsHtml = renderEmbeddedSkills(entry.skills);
   if (skillsHtml) parts.push(`  ${skillsHtml}`);
-  // A degree's teaching units are not projects. They are referenced the same
-  // way, so without this split the embedded list files Algorithmique and
-  // Anglais I under "Projects" beside Acteble — telling the reader the
-  // opposite of what they are.
-  const named = (entry.projects || []).map((n) => ctx.projects.find((p) => p.name === n));
-  const projsHtml = renderEmbeddedProjects(
-    named.filter((p) => p && !isCourseUnit(p)).map((p) => p.name),
-    ctx.projects,
-    t.projects,
-  );
+  // A degree's course units are not projects: the entry names them apart, and
+  // they are listed apart, under their own heading.
+  const projsHtml = renderEmbeddedProjects(entry.projects, ctx.projects, t.projects, 'project');
   if (projsHtml) parts.push(indentLines(projsHtml, 2));
   const unitsHtml = renderEmbeddedProjects(
-    named.filter(isCourseUnit).map((p) => p.name),
-    ctx.projects,
+    entry.courses,
+    ctx.courses,
     t.courseUnits,
+    'course',
     entry.blocks,
   );
   if (unitsHtml) parts.push(indentLines(unitsHtml, 2));

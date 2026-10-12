@@ -34,8 +34,8 @@ const TYPES = {
  * file:// they would not, and the fonts would silently fall back to metrics
  * that are not the ones being measured.
  */
-function renderXslt(lang) {
-  const xsl = path.join(ROOT, 'assets/xslt/resume-transform.xsl');
+function renderXslt(lang, theme = '') {
+  const xsl = path.join(ROOT, `assets/xslt/resume-transform${theme}.xsl`);
   const xml = path.join(ROOT, `assets/data/resume-${lang}.xml`);
   return execFileSync('xsltproc', [xsl, xml], { encoding: 'utf8', maxBuffer: 1 << 24 });
 }
@@ -70,11 +70,13 @@ const injected = (file, anchor, script) =>
 function serve(headScript) {
   const server = http.createServer((req, res) => {
     const url = decodeURIComponent(req.url.split('?')[0]);
-    const xslt = /^\/__xslt\/([a-z-]+)$/.exec(url);
+    // /__xslt/<lang> is the rich theme, /__xslt-minimal/<lang> the minimal one.
+    const xslt = /^\/__xslt(-minimal)?\/([a-z-]+)$/.exec(url);
     if (xslt) {
       // Before </body>, as it was: a script after the document is tolerated
       // but is not what this path has been measuring.
-      sendHtml(res, renderXslt(xslt[1]).replace('</body>', `${autoprintScript(800)}</body>`));
+      const html = renderXslt(xslt[2], xslt[1] || '');
+      sendHtml(res, html.replace('</body>', `${autoprintScript(800)}</body>`));
       return;
     }
     const { rel, mode } = route(url);

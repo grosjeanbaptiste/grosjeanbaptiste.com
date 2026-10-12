@@ -23,8 +23,8 @@ const resume = {
   projects: [
     { name: 'Acteble', startDate: '2025-07-01' },
     { name: 'Baba', startDate: '2026-07-02' },
-    { name: 'Algorithmique', type: 'Course unit' },
   ],
+  courses: [{ name: 'Algorithmique' }],
   volunteer: [],
 };
 const ON_PAGE = new Set([

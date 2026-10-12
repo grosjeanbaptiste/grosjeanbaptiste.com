@@ -188,7 +188,9 @@
     },
     {
       "summary": "QR-code-gebaseerde kassa voor HoReCa-etablissementen (Hotel/Restaurant/Café)."
-    },
+    }
+  ],
+  "courses": [
     {
       "summary": "Algoritmiek"
     },

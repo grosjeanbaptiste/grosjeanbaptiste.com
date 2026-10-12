@@ -5,21 +5,17 @@ const assert = require('node:assert/strict');
 const { appendEmbeds } = require('./embeds');
 const I18N = require('../i18n');
 
-const unit = (name) => ({ name, type: 'Course unit' });
+const unit = (name) => ({ name });
 const ctx = {
-  projects: [
-    unit('Algorithmique'),
-    unit('Mathématique'),
-    unit('Réseaux'),
-    unit('Anglais'),
-    { name: 'Remi' },
-  ],
+  projects: [{ name: 'Remi' }],
+  courses: [unit('Algorithmique'), unit('Mathématique'), unit('Réseaux'), unit('Anglais')],
   volunteer: [],
   references: [],
 };
 const degree = (blocks) => ({
   institution: 'UMons',
-  projects: ['Remi', 'Algorithmique', 'Mathématique', 'Réseaux', 'Anglais'],
+  projects: ['Remi'],
+  courses: ['Algorithmique', 'Mathématique', 'Réseaux', 'Anglais'],
   blocks,
 });
 const BLOCKS = [

@@ -170,7 +170,7 @@ describe('what an entry carried, within its dates', () => {
   const base = aResume();
   const lasting = {
     ...base,
-    education: base.education.map((e) => ({ ...e, projects: ['Algorithmique', 'Acteble'] })),
+    education: base.education.map((e) => ({ ...e, projects: ['Acteble'] })),
   };
   const lanes = timelineOf(entriesOf(lasting), today).lanes;
   const end = (key: string) => {

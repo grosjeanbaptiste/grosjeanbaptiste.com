@@ -210,7 +210,8 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             //   fr: encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS
             note t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons. Core coursework: software engineering & project management, artificial intelligence, databases, data structures, operational research, cryptography & IT security, and ethics & computer law, with two paid company internships.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons. Cours principaux : génie logiciel et gestion de projet, intelligence artificielle, bases de données, structures de données, recherche opérationnelle, cryptographie et sécurité informatique, éthique et droit de l'informatique, avec deux stages en entreprise rémunérés.", nl: "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.", es: "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons. Cursos principales: ingeniería del software y gestión de proyectos, inteligencia artificial, bases de datos, estructuras de datos, investigación operativa, criptografía y seguridad informática, ética y derecho informático, con dos prácticas remuneradas en empresa.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons. Kernfächer: Software-Engineering und Projektmanagement, künstliche Intelligenz, Datenbanken, Datenstrukturen, Operations Research, Kryptografie und IT-Sicherheit, Ethik und Informatikrecht, mit zwei bezahlten Unternehmenspraktika.", zh: "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。" }
             uses [Python, LaTeX, DDD, CleanArchitecture]
-            projects [ref MemoireMaster, ref Synergy, ref FedRAGBE, ref EmviApp, ref Remi, ref UeAlgorithmique, ref UeAnglais1, ref UeBasesDeDonneesI, ref UeLectureRedactionScientifique, ref UeMathematique, ref UeModelisationLogicielle, ref UeReseaux, ref UeStrategieRH, ref UeSystemesExploitation, ref UeAnglais2, ref UeBasesDeDonneesII, ref UeIngenierieLogicielle, ref UeIntelligenceArtificielle, ref UeRechercheOperationnelle, ref UeStructuresDeDonnees, ref UeSeminairesVeille, ref UeCryptographieSecurite, ref UeEthiqueDroit]
+            projects [ref MemoireMaster, ref Synergy, ref FedRAGBE, ref EmviApp, ref Remi]
+            courses [ref UeAlgorithmique, ref UeAnglais1, ref UeBasesDeDonneesI, ref UeLectureRedactionScientifique, ref UeMathematique, ref UeModelisationLogicielle, ref UeReseaux, ref UeStrategieRH, ref UeSystemesExploitation, ref UeAnglais2, ref UeBasesDeDonneesII, ref UeIngenierieLogicielle, ref UeIntelligenceArtificielle, ref UeRechercheOperationnelle, ref UeStructuresDeDonnees, ref UeSeminairesVeille, ref UeCryptographieSecurite, ref UeEthiqueDroit]
             // The academic years of the master, from the author's own transcripts
             // (2022-2023 to 2025-2026): which units were taken when, and the
             // programme's name for the block. The bridging block took two years.
@@ -289,7 +290,8 @@ TFE: WebMenu 2.0
 课程内容：分析与设计，使用 .NET、Java 和 Web 进行编程，关系型数据库，电子商务与集成管理软件 (ERP)，网络与 IT 项目管理。
 """ }
             uses [SQL, "C#", ".NET", Java, Python, JS, HTML, CSS]
-            projects [ref WebMenu, ref EpStructureOrdinateurs, ref EpSystemeExploitation, ref EpMathematiqueInformatique, ref EpPrincipesAlgorithmiques, ref EpPrincipesAnalyse, ref EpInformationCommunication, ref EpWebPrincipesBase, ref EpInitiationBasesDonnees, ref EpGestionBasesDonnees, ref EpProgrammationOrienteeObjet, ref EpProjetAnalyseConception, ref EpTechniquesGestionProjet, ref EpElementsStatistique, ref EpProjetDeveloppementWeb, ref EpNotionsEbusiness, ref EpProjetDeveloppementSGBD, ref EpBasesReseaux, ref EpOrganisationEntreprises, ref EpProduitsLogicielsIntegres, ref EpProjetIntegrationDeveloppement, ref EpVeilleTechnologique, ref EpAdministrationReseaux, ref EpLangueAppliquee1, ref EpLangueAppliquee2]
+            projects [ref WebMenu]
+            courses [ref EpStructureOrdinateurs, ref EpSystemeExploitation, ref EpMathematiqueInformatique, ref EpPrincipesAlgorithmiques, ref EpPrincipesAnalyse, ref EpInformationCommunication, ref EpWebPrincipesBase, ref EpInitiationBasesDonnees, ref EpGestionBasesDonnees, ref EpProgrammationOrienteeObjet, ref EpProjetAnalyseConception, ref EpTechniquesGestionProjet, ref EpElementsStatistique, ref EpProjetDeveloppementWeb, ref EpNotionsEbusiness, ref EpProjetDeveloppementSGBD, ref EpBasesReseaux, ref EpOrganisationEntreprises, ref EpProduitsLogicielsIntegres, ref EpProjetIntegrationDeveloppement, ref EpVeilleTechnologique, ref EpAdministrationReseaux, ref EpLangueAppliquee1, ref EpLangueAppliquee2]
             // The academic years of the bachelor, from the school's yearly
             // transcripts (2018-2019 to 2021-2022). A unit taken twice is filed
             // under the year it was first taken. The two language units are on
@@ -333,7 +335,7 @@ TFE: WebMenu 2.0
             period 2016-09-30..2019-06-30
             display period: 2016-09-30..2017-06-30
             score t{ en: "29 credits earned in 2016-2017, contact me for more information.", fr: "29 crédits obtenus en 2016-2017, me contacter pour plus d'informations.", nl: "29 credits behaald in 2016-2017, contacteer mij voor meer info.", es: "29 créditos obtenidos en 2016-2017, contáctame para más información.", de: "29 Credits 2016-2017, kontaktiert mich für mehr Infos.", zh: "2016-2017 获得 29 学分，请联系我了解更多信息。" }
-            projects [ref SlEconomie1, ref SlEconomie2, ref SlSciencePolitique, ref SlPenserLeSocial, ref SlPrincipesMethodes, ref SlSocioEconomieMedias, ref SlAnglais1, ref SlNeerlandais1]
+            courses [ref SlEconomie1, ref SlEconomie2, ref SlSciencePolitique, ref SlPenserLeSocial, ref SlPrincipesMethodes, ref SlSocioEconomieMedias, ref SlAnglais1, ref SlNeerlandais1]
             blocks {
                 Y2016 {
                     year "2016-2017"
@@ -535,11 +537,15 @@ TFE: WebMenu 2.0
             startDate 2021-11-01
             endDate 2022-03-31
         }
+    }
+
+    // The course units of the degrees. A course is not a project: a degree
+    // lists the ones it carried under `courses`, apart from its `projects`.
+    courses {
         UeAlgorithmique {
             name "Algorithmique"
             summary t{ en: "Algorithmics", fr: "Algorithmique", nl: "Algoritmiek", es: "Algorítmica", de: "Algorithmik", zh: "算法" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-011-C.htm"
             keywords [Algorithms, DataStructures, Complexity, Trees]
         }
@@ -547,7 +553,6 @@ TFE: WebMenu 2.0
             name "Anglais I"
             summary t{ en: "English I", fr: "Anglais I", nl: "Engels I", es: "Inglés I", de: "Englisch I", zh: "英语 I" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-012-C.htm"
             keywords [English]
         }
@@ -555,7 +560,6 @@ TFE: WebMenu 2.0
             name "Bases de données I"
             summary t{ en: "Databases I", fr: "Bases de données I", nl: "Databanken I", es: "Bases de datos I", de: "Datenbanken I", zh: "数据库 I" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-013-C.htm"
             keywords [SQL, RelationalAlgebra, Normalization, Indexing, NoSQL, BigData]
         }
@@ -563,7 +567,6 @@ TFE: WebMenu 2.0
             name "Lecture et rédaction scientifique"
             summary t{ en: "Scientific reading and writing", fr: "Lecture et rédaction scientifique", nl: "Wetenschappelijk lezen en schrijven", es: "Lectura y redacción científica", de: "Wissenschaftliches Lesen und Schreiben", zh: "科学阅读与写作" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-014-C.htm"
             keywords [ScientificWriting, LiteratureReview]
         }
@@ -571,7 +574,6 @@ TFE: WebMenu 2.0
             name "Mathématique"
             summary t{ en: "Mathematics", fr: "Mathématique", nl: "Wiskunde", es: "Matemáticas", de: "Mathematik", zh: "数学" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-015-C.htm"
             keywords [GraphTheory, Combinatorics, Complexity, PropositionalLogic, PredicateLogic]
         }
@@ -579,7 +581,6 @@ TFE: WebMenu 2.0
             name "Modélisation logicielle"
             summary t{ en: "Software modelling", fr: "Modélisation logicielle", nl: "Softwaremodellering", es: "Modelado de software", de: "Softwaremodellierung", zh: "软件建模" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-016-C.htm"
             keywords [Java, UML, DesignPatterns, UnitTesting, MockTesting, BDD]
         }
@@ -587,7 +588,6 @@ TFE: WebMenu 2.0
             name "Réseaux"
             summary t{ en: "Networks", fr: "Réseaux", nl: "Netwerken", es: "Redes", de: "Netzwerke", zh: "计算机网络" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-017-C.htm"
             keywords ["TCP/IP", HTTP, DNS, OSPF, BGP, Ethernet]
         }
@@ -595,7 +595,6 @@ TFE: WebMenu 2.0
             name "Stratégie et politiques en ressources humaines"
             summary t{ en: "HR strategy and policy", fr: "Stratégie et politiques en ressources humaines", nl: "HR-strategie en -beleid", es: "Estrategia y políticas de recursos humanos", de: "HR-Strategie und -Politik", zh: "人力资源战略与政策" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-018-C.htm"
             keywords [HRM]
         }
@@ -603,7 +602,6 @@ TFE: WebMenu 2.0
             name "Systèmes d'exploitation"
             summary t{ en: "Operating systems", fr: "Systèmes d'exploitation", nl: "Besturingssystemen", es: "Sistemas operativos", de: "Betriebssysteme", zh: "操作系统" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-019-C.htm"
             // From the sheet of 2023-2024, the year the unit was taken.
             keywords [Processes, Semaphores, Synchronization, MemoryManagement, FileSystems, Scheduling]
@@ -612,7 +610,6 @@ TFE: WebMenu 2.0
             name "Anglais II"
             summary t{ en: "English II", fr: "Anglais II", nl: "Engels II", es: "Inglés II", de: "Englisch II", zh: "英语 II" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-001-C.htm"
             keywords [English]
         }
@@ -620,7 +617,6 @@ TFE: WebMenu 2.0
             name "Bases de données II"
             summary t{ en: "Databases II", fr: "Bases de données II", nl: "Databanken II", es: "Bases de datos II", de: "Datenbanken II", zh: "数据库 II" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-101-C.htm"
             keywords [XML, XSLT, XQuery, XPath, BaseX, DataMining, Weka]
         }
@@ -628,7 +624,6 @@ TFE: WebMenu 2.0
             name "Ingénierie de logiciels et gestion de projets"
             summary t{ en: "Software engineering and project management", fr: "Ingénierie de logiciels et gestion de projets", nl: "Software engineering en projectbeheer", es: "Ingeniería del software y gestión de proyectos", de: "Software-Engineering und Projektmanagement", zh: "软件工程与项目管理" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-008-C.htm"
             keywords [Agile, Scrum, SoftwareEngineering]
         }
@@ -636,7 +631,6 @@ TFE: WebMenu 2.0
             name "Intelligence artificielle"
             summary t{ en: "Artificial intelligence", fr: "Intelligence artificielle", nl: "Artificiële intelligentie", es: "Inteligencia artificial", de: "Künstliche Intelligenz", zh: "人工智能" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-102-C.htm"
             keywords [SearchAlgorithms, Metaheuristics, FirstOrderLogic, SupervisedLearning]
         }
@@ -644,7 +638,6 @@ TFE: WebMenu 2.0
             name "Recherche opérationnelle et applications"
             summary t{ en: "Operations research and applications", fr: "Recherche opérationnelle et applications", nl: "Operationeel onderzoek en toepassingen", es: "Investigación operativa y aplicaciones", de: "Operations Research und Anwendungen", zh: "运筹学及其应用" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-103-C.htm"
             keywords [OperationsResearch, LinearProgramming, IntegerProgramming, Duality]
         }
@@ -652,7 +645,6 @@ TFE: WebMenu 2.0
             name "Structures de données"
             summary t{ en: "Data structures", fr: "Structures de données", nl: "Datastructuren", es: "Estructuras de datos", de: "Datenstrukturen", zh: "数据结构" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-104-C.htm"
             keywords [AVLTrees, BTrees, HashTables, Sorting, Complexity]
         }
@@ -660,7 +652,6 @@ TFE: WebMenu 2.0
             name "Séminaires d'informatique en veille technologique"
             summary t{ en: "Computing seminars in technology watch", fr: "Séminaires d'informatique en veille technologique", nl: "Informaticaseminaries in technologiewatch", es: "Seminarios de informática en vigilancia tecnológica", de: "Informatikseminare zur Technologiebeobachtung", zh: "技术观察信息学研讨会" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm"
             keywords [TechWatch]
         }
@@ -668,7 +659,6 @@ TFE: WebMenu 2.0
             name "Cryptographie et sécurité des systèmes informatiques"
             summary t{ en: "Cryptography and systems security", fr: "Cryptographie et sécurité des systèmes informatiques", nl: "Cryptografie en systeembeveiliging", es: "Criptografía y seguridad de sistemas", de: "Kryptografie und Systemsicherheit", zh: "密码学与系统安全" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm"
             keywords [Cryptography, Unix, NetworkSecurity, ApplicationSecurity]
         }
@@ -676,7 +666,6 @@ TFE: WebMenu 2.0
             name "Éthique et droit de l'informatique"
             summary t{ en: "Ethics and IT law", fr: "Éthique et droit de l'informatique", nl: "Ethiek en informaticarecht", es: "Ética y derecho informático", de: "Ethik und Informatikrecht", zh: "信息伦理与法律" }
             entity "UMONS"
-            type "Course unit"
             url "https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm"
             keywords [IntellectualProperty, DataProtection, GDPR]
         }
@@ -684,7 +673,6 @@ TFE: WebMenu 2.0
             name "Structure des ordinateurs"
             summary t{ en: "Computer structure", fr: "Structure des ordinateurs", nl: "Computerstructuur", es: "Estructura de los ordenadores", de: "Rechnerstruktur", zh: "计算机结构" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=43"
             keywords [ComputerArchitecture, Binary, Hexadecimal, Hardware]
         }
@@ -692,7 +680,6 @@ TFE: WebMenu 2.0
             name "Informatique - Système d'exploitation"
             summary t{ en: "Operating systems", fr: "Informatique - Système d'exploitation", nl: "Besturingssystemen", es: "Sistemas operativos", de: "Betriebssysteme", zh: "操作系统" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=47"
             keywords [OperatingSystems, ShellScripting, SystemAdministration]
         }
@@ -700,7 +687,6 @@ TFE: WebMenu 2.0
             name "Mathématique appliquée à l'informatique"
             summary t{ en: "Mathematics applied to computing", fr: "Mathématique appliquée à l'informatique", nl: "Wiskunde toegepast op informatica", es: "Matemática aplicada a la informática", de: "Mathematik für die Informatik", zh: "应用于信息学的数学" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=20"
             keywords [LinearAlgebra, GraphTheory, SetTheory, RelationalAlgebra, MathematicalLogic, Cryptography]
         }
@@ -708,7 +694,6 @@ TFE: WebMenu 2.0
             name "Principes algorithmiques et programmation"
             summary t{ en: "Algorithmic principles and programming", fr: "Principes algorithmiques et programmation", nl: "Algoritmische principes en programmeren", es: "Principios algorítmicos y programación", de: "Algorithmische Grundlagen und Programmierung", zh: "算法原理与编程" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=87"
             keywords [Algorithms, DataTypes, ControlFlow, Programming]
         }
@@ -716,7 +701,6 @@ TFE: WebMenu 2.0
             name "Principes d'analyse informatique"
             summary t{ en: "Principles of systems analysis", fr: "Principes d'analyse informatique", nl: "Principes van informatica-analyse", es: "Principios de análisis informático", de: "Grundlagen der Systemanalyse", zh: "信息分析原理" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=116"
             keywords [UML, EntityRelationship, SystemsAnalysis]
         }
@@ -724,7 +708,6 @@ TFE: WebMenu 2.0
             name "Information et communication professionnelles"
             summary t{ en: "Professional information and communication", fr: "Information et communication professionnelles", nl: "Professionele informatie en communicatie", es: "Información y comunicación profesionales", de: "Berufliche Information und Kommunikation", zh: "专业信息与沟通" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=39"
             keywords [ProfessionalCommunication]
         }
@@ -732,7 +715,6 @@ TFE: WebMenu 2.0
             name "Web : principes de base"
             summary t{ en: "Web: fundamentals", fr: "Web : principes de base", nl: "Web: basisprincipes", es: "Web: principios básicos", de: "Web: Grundlagen", zh: "Web 基础" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=95"
             keywords [HTML, CSS, URL, DNS, WebHosting]
         }
@@ -740,7 +722,6 @@ TFE: WebMenu 2.0
             name "Initiation aux bases de données"
             summary t{ en: "Introduction to databases", fr: "Initiation aux bases de données", nl: "Inleiding tot databanken", es: "Iniciación a las bases de datos", de: "Einführung in Datenbanken", zh: "数据库入门" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=79"
             keywords [SQL, RelationalModel, Joins, Indexing]
         }
@@ -748,7 +729,6 @@ TFE: WebMenu 2.0
             name "Gestion et exploitation de bases de données"
             summary t{ en: "Database management and operation", fr: "Gestion et exploitation de bases de données", nl: "Beheer en exploitatie van databanken", es: "Gestión y explotación de bases de datos", de: "Datenbankverwaltung und -betrieb", zh: "数据库管理与运维" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=83"
             keywords [Triggers, StoredProcedures, DataWarehouse, QueryOptimization]
         }
@@ -756,7 +736,6 @@ TFE: WebMenu 2.0
             name "Programmation orientée objet"
             summary t{ en: "Object-oriented programming", fr: "Programmation orientée objet", nl: "Objectgeoriënteerd programmeren", es: "Programación orientada a objetos", de: "Objektorientierte Programmierung", zh: "面向对象编程" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=91"
             keywords [OOP, Inheritance, Polymorphism, Encapsulation, Overloading]
         }
@@ -764,7 +743,6 @@ TFE: WebMenu 2.0
             name "Projet d'analyse et de conception"
             summary t{ en: "Analysis and design project", fr: "Projet d'analyse et de conception", nl: "Analyse- en ontwerpproject", es: "Proyecto de análisis y diseño", de: "Analyse- und Entwurfsprojekt", zh: "分析与设计项目" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=120"
             keywords [SystemsAnalysis, SoftwareDesign, Modelling]
         }
@@ -772,7 +750,6 @@ TFE: WebMenu 2.0
             name "Techniques de gestion de projet"
             summary t{ en: "Project management techniques", fr: "Techniques de gestion de projet", nl: "Projectbeheertechnieken", es: "Técnicas de gestión de proyectos", de: "Projektmanagementtechniken", zh: "项目管理技术" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=113"
             keywords [ProjectManagement]
         }
@@ -780,7 +757,6 @@ TFE: WebMenu 2.0
             name "Éléments de statistique"
             summary t{ en: "Elements of statistics", fr: "Éléments de statistique", nl: "Elementen van statistiek", es: "Elementos de estadística", de: "Grundlagen der Statistik", zh: "统计学基础" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=35"
             keywords [Statistics]
         }
@@ -788,7 +764,6 @@ TFE: WebMenu 2.0
             name "Projet de développement web"
             summary t{ en: "Web development project", fr: "Projet de développement web", nl: "Webontwikkelingsproject", es: "Proyecto de desarrollo web", de: "Webentwicklungsprojekt", zh: "Web 开发项目" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=99"
             keywords [JavaScript, AJAX, JSON, XML, ClientSideScripting]
         }
@@ -796,7 +771,6 @@ TFE: WebMenu 2.0
             name "Notions de e-business"
             summary t{ en: "Principles of e-business", fr: "Notions de e-business", nl: "Beginselen van e-business", es: "Nociones de e-business", de: "Grundlagen des E-Business", zh: "电子商务概念" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=56"
             keywords [Ebusiness]
         }
@@ -804,7 +778,6 @@ TFE: WebMenu 2.0
             name "Projet de développement SGBD"
             summary t{ en: "DBMS development project", fr: "Projet de développement SGBD", nl: "DBMS-ontwikkelingsproject", es: "Proyecto de desarrollo SGBD", de: "DBMS-Entwicklungsprojekt", zh: "数据库系统开发项目" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=104"
             keywords [DataAccessLayer, Transactions, DatabaseProgramming, Debugging]
         }
@@ -812,7 +785,6 @@ TFE: WebMenu 2.0
             name "Bases des réseaux"
             summary t{ en: "Network fundamentals", fr: "Bases des réseaux", nl: "Netwerkbasis", es: "Fundamentos de redes", de: "Netzwerkgrundlagen", zh: "网络基础" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=69"
             keywords [Ethernet, MAC, "TCP/IP", Networking]
         }
@@ -820,7 +792,6 @@ TFE: WebMenu 2.0
             name "Organisation des entreprises et éléments de management"
             summary t{ en: "Business organisation and management", fr: "Organisation des entreprises et éléments de management", nl: "Bedrijfsorganisatie en management", es: "Organización de empresas y gestión", de: "Unternehmensorganisation und Management", zh: "企业组织与管理" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=52"
             keywords [Management]
         }
@@ -828,7 +799,6 @@ TFE: WebMenu 2.0
             name "Produits logiciels de gestion intégrés"
             summary t{ en: "Integrated management software", fr: "Produits logiciels de gestion intégrés", nl: "Geïntegreerde beheersoftware", es: "Productos de software de gestión integrados", de: "Integrierte Unternehmenssoftware", zh: "集成管理软件" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=61"
             keywords [ERP]
         }
@@ -836,7 +806,6 @@ TFE: WebMenu 2.0
             name "Projet d'intégration de développement"
             summary t{ en: "Development integration project", fr: "Projet d'intégration de développement", nl: "Ontwikkelingsintegratieproject", es: "Proyecto de integración de desarrollo", de: "Entwicklungsintegrationsprojekt", zh: "开发集成项目" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=108"
             keywords [AJAX, JSON, XML, SQLInjection, XSS, Caching, URLRewriting]
         }
@@ -844,7 +813,6 @@ TFE: WebMenu 2.0
             name "Veille technologique"
             summary t{ en: "Technology watch", fr: "Veille technologique", nl: "Technologiewatch", es: "Vigilancia tecnológica", de: "Technologiebeobachtung", zh: "技术观察" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=65"
             keywords [TechWatch]
         }
@@ -852,7 +820,6 @@ TFE: WebMenu 2.0
             name "Administration, gestion et sécurisation des réseaux"
             summary t{ en: "Network administration and security", fr: "Administration, gestion et sécurisation des réseaux", nl: "Netwerkbeheer en -beveiliging", es: "Administración y seguridad de redes", de: "Netzwerkadministration und -sicherheit", zh: "网络管理与安全" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=74"
             keywords [NetworkAdministration, NetworkSecurity, ApplicationServer]
         }
@@ -860,14 +827,12 @@ TFE: WebMenu 2.0
             name "Langue en situation appliquée à l'enseignement supérieur UE1"
             summary t{ en: "Applied language for higher education I", fr: "Langue en situation appliquée à l'enseignement supérieur UE1", nl: "Toegepaste taal hoger onderwijs UE1", es: "Lengua aplicada a la enseñanza superior UE1", de: "Angewandte Sprache Hochschulbildung UE1", zh: "高等教育应用语言 UE1" }
             entity "EPHEC"
-            type "Course unit"
             keywords [ProfessionalCommunication]
         }
         EpLangueAppliquee2 {
             name "Langue en situation appliquée à l'enseignement supérieur UE2"
             summary t{ en: "Applied language for higher education II", fr: "Langue en situation appliquée à l'enseignement supérieur UE2", nl: "Toegepaste taal hoger onderwijs UE2", es: "Lengua aplicada a la enseñanza superior UE2", de: "Angewandte Sprache Hochschulbildung UE2", zh: "高等教育应用语言 UE2" }
             entity "EPHEC"
-            type "Course unit"
             url "https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24"
             keywords [ProfessionalCommunication]
         }
@@ -879,56 +844,48 @@ TFE: WebMenu 2.0
             name "Économie I"
             summary t{ en: "Economics I", fr: "Économie I", nl: "Economie I", es: "Economía I", de: "Volkswirtschaftslehre I", zh: "经济学 I" }
             entity "USL-B"
-            type "Course unit"
             keywords [Microeconomics, CompetitiveMarkets, FirmBehaviour, MarketFailure]
         }
         SlEconomie2 {
             name "Économie II"
             summary t{ en: "Economics II", fr: "Économie II", nl: "Economie II", es: "Economía II", de: "Volkswirtschaftslehre II", zh: "经济学 II" }
             entity "USL-B"
-            type "Course unit"
             keywords [ImperfectCompetition, Macroeconomics, NationalIncome, MonetaryMarket]
         }
         SlSciencePolitique {
             name "Science politique"
             summary t{ en: "Political science", fr: "Science politique", nl: "Politieke wetenschap", es: "Ciencia política", de: "Politikwissenschaft", zh: "政治学" }
             entity "USL-B"
-            type "Course unit"
             keywords [PoliticalScience, Power, State, Democracy]
         }
         SlPenserLeSocial {
             name "Séminaire : penser le social"
             summary t{ en: "Seminar: thinking the social", fr: "Séminaire : penser le social", nl: "Seminarie: het sociale denken", es: "Seminario: pensar lo social", de: "Seminar: das Soziale denken", zh: "研讨课：思考社会" }
             entity "USL-B"
-            type "Course unit"
             keywords [Epistemology, Durkheim, Weber, Marx]
         }
         SlPrincipesMethodes {
             name "Séminaire : principes et méthodes en sciences sociales"
             summary t{ en: "Seminar: principles and methods in the social sciences", fr: "Séminaire : principes et méthodes en sciences sociales", nl: "Seminarie: principes en methoden in de sociale wetenschappen", es: "Seminario: principios y métodos en ciencias sociales", de: "Seminar: Prinzipien und Methoden der Sozialwissenschaften", zh: "研讨课：社会科学的原则与方法" }
             entity "USL-B"
-            type "Course unit"
             keywords [AcademicWriting, Citation, Epistemology]
         }
         SlSocioEconomieMedias {
             name "Socio-économie des médias"
             summary t{ en: "Socio-economics of the media", fr: "Socio-économie des médias", nl: "Socio-economie van de media", es: "Socioeconomía de los medios", de: "Sozioökonomie der Medien", zh: "媒体社会经济学" }
             entity "USL-B"
-            type "Course unit"
             keywords [MediaEconomics, Advertising, MediaRegulation, WebEconomy]
         }
         SlAnglais1 {
             name "Anglais I (Saint-Louis)"
             summary t{ en: "English I", fr: "Anglais I", nl: "Engels I", es: "Inglés I", de: "Englisch I", zh: "英语 I" }
             entity "USL-B"
-            type "Course unit"
             keywords [English]
         }
         SlNeerlandais1 {
             name "Néerlandais I"
             summary t{ en: "Dutch I", fr: "Néerlandais I", nl: "Nederlands I", es: "Neerlandés I", de: "Niederländisch I", zh: "荷兰语 I" }
             entity "USL-B"
-            type "Course unit"
             keywords [Dutch]
         }
     }

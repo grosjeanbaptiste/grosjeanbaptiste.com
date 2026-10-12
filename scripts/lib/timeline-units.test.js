@@ -6,12 +6,12 @@ const assert = require('node:assert/strict');
 const { timelineOf } = require('./timeline-model');
 const { TODAY, resume } = require('./timeline-model.fixture');
 
-const unit = (name) => ({ name, type: 'Course unit', entity: 'UMONS' });
+const unit = (name) => ({ name, entity: 'UMONS' });
 const studied = () => {
   const base = resume();
   return {
     ...base,
-    projects: [...base.projects, unit('Mathématique'), unit('Réseaux')],
+    courses: [...base.courses, unit('Mathématique'), unit('Réseaux')],
     education: [
       {
         ...base.education[0],

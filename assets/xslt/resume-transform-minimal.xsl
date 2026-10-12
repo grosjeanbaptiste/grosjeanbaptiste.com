@@ -10,6 +10,8 @@
   <xsl:output method="html" indent="yes"/>
 
   <xsl:key name="project-by-name" match="/resume/projects/project[name]" use="name"/>
+  <!-- A course unit is a course, never a project: it has its own collection. -->
+  <xsl:key name="course-by-name"  match="/resume/courses/course[name]"   use="name"/>
 
   <xsl:variable name="lang">
     <xsl:choose>
@@ -187,8 +189,8 @@
   </xsl:template>
 
   <!-- What a job or a degree names, as one list under its heading. A course
-       unit is a course, never a project: the data references both alike, so
-       the caller splits them on type and calls this once for each. -->
+       unit is a course, never a project: a degree names the two apart, and
+       the caller calls this once for each. -->
   <xsl:template name="referenced-list">
     <xsl:param name="refs"/>
     <xsl:param name="k"/>
@@ -197,7 +199,7 @@
       <ul>
         <xsl:for-each select="$refs">
           <xsl:variable name="ref" select="."/>
-          <xsl:variable name="proj" select="key('project-by-name', $ref)"/>
+          <xsl:variable name="proj" select="key('project-by-name', $ref)[local-name($ref) = 'project'] | key('course-by-name', $ref)[local-name($ref) = 'course']"/>
           <li>
             <strong><xsl:value-of select="$ref"/></strong>
             <xsl:choose>
@@ -396,6 +398,19 @@
           }
           @media print {
             .toolbar { display: none; }
+            /* Force the light palette so a dark-mode reader still prints a
+               clean, ink-light sheet. Mirrors the :root light values. */
+            html[data-theme="dark"] {
+              --primary: <xsl:value-of select="meta/brand/xsltPrimary"/>;
+              --accent:  <xsl:value-of select="meta/brand/accent"/>;
+              --muted:   <xsl:value-of select="meta/brand/xsltMuted"/>;
+              --body:    <xsl:value-of select="meta/brand/xsltBody"/>;
+              --bg:      <xsl:value-of select="meta/brand/xsltBg"/>;
+              --rule:    <xsl:value-of select="meta/brand/xsltRuleLight"/>;
+              --block:   <xsl:value-of select="meta/brand/xsltBlockMin"/>;
+              --tb-bg:   <xsl:value-of select="meta/brand/xsltTbBg"/>;
+            }
+            html, body { background: #fff; }
             /* The timeline is part of the page, so it is printed: in place, the
                whole career in the frame. /css/timeline.css keeps it off the
                print by default (the classic page moves it) — `html` outweighs
@@ -406,8 +421,72 @@
             html #timeline .tl-bar {
               -webkit-print-color-adjust: exact; print-color-adjust: exact;
             }
+            /* The verso: the timeline, then the references, on a last sheet
+               turned to landscape as in the PDF — the timeline needs the
+               width. The script below sets the two there; the references run
+               in four columns, as \begin{multicols}{4} sets them. */
+            #print-verso { break-before: page; page: verso; font-size: 7.5pt; line-height: 1.2; }
+            #print-verso .refs { columns: 4; column-gap: 0.6cm; }
+            #print-verso h2 { column-span: all; margin: 6pt 0 3pt; }
+            #print-verso .row { margin-bottom: 4pt; }
+            #print-verso .ref-author { margin: 0 0 1pt; }
+            #print-verso blockquote { margin: 0 0 3pt; padding-left: 4pt; }
+            /* One sheet, so the timeline is set as tightly as the classic
+               theme prints it. !important: the zoom writes the width inline. */
+            #print-verso .tl-scroll { padding: 0; }
+            #print-verso .tl-grid { --row-height: 10pt; --lane-label: 2.2cm; gap: 3pt; }
+            #print-verso .tl-years { height: 8pt; font-size: 6pt; }
+            #print-verso .tl-legend { margin: 2pt 0 0; font-size: 6pt; }
+            #print-verso .tl-lane-label {
+              position: static; padding: 0 4pt 0 0; background: none; font-size: 6.5pt;
+            }
+            #print-verso .tl-bar {
+              height: calc(var(--row-height) - 2pt); padding-inline: 2pt;
+              font-size: 6pt; outline: none; transform: none;
+            }
+            /* Nothing follows the verso, not even the page's own foot: its
+               padding alone would be given a sheet to itself. */
+            body { padding-bottom: 0; margin-bottom: 0; }
           }
+          /* A4, as every version of the CV; the verso on its side. */
+          @page { size: A4; }
+          @page verso { size: A4 landscape; margin: 0.8cm 0.9cm; }
         </style>
+        <!-- Print layout: CSS cannot move a node, and the timeline sits under
+             the introduction. Both go to a block of their own, last in the page
+             since nothing may follow a sheet of another kind; put back after. -->
+        <script>
+          (function () {
+            var verso, moved = [];
+            function prepare() {
+              if (verso) return;
+              var parts = [document.getElementById('timeline'), document.querySelector('.refs')];
+              verso = document.createElement('div');
+              verso.id = 'print-verso';
+              document.body.appendChild(verso);
+              parts.forEach(function (node) {
+                if (!node) return;
+                moved.push([node, node.parentNode, node.nextSibling]);
+                verso.appendChild(node);
+              });
+            }
+            function restore() {
+              if (!verso) return;
+              while (moved.length) {
+                var back = moved.pop();
+                back[1].insertBefore(back[0], back[2]);
+              }
+              verso.parentNode.removeChild(verso);
+              verso = null;
+            }
+            window.addEventListener('beforeprint', prepare);
+            window.addEventListener('afterprint', restore);
+            var mq = window.matchMedia('print');
+            if (mq.addEventListener) {
+              mq.addEventListener('change', function (e) { e.matches ? prepare() : restore(); });
+            }
+          })();
+        </script>
         <script>
           (function() {
             try {
@@ -424,7 +503,7 @@
              (and re-paginate) the page wherever -apple-system is missing. -->
         <link rel="stylesheet" href="/css/variables.css"/>
         <link rel="stylesheet" href="/css/views-bar.css"/>
-        <!-- The timeline's styles. No script here: this theme stays static, the
+        <!-- The timeline's styles. No timeline script here: this theme stays static, the
              whole career in the frame, bars as plain links. -->
         <link rel="stylesheet" href="/css/timeline.css"/>
         <link rel="stylesheet" href="/css/timeline-entries.css"/>
@@ -662,7 +741,7 @@
                 </ul>
               </xsl:if>
               <xsl:call-template name="referenced-list">
-                <xsl:with-param name="refs" select="projects/project[not(key('project-by-name', .)/type='Course unit')]"/>
+                <xsl:with-param name="refs" select="projects/project"/>
                 <xsl:with-param name="k" select="'projects'"/>
               </xsl:call-template>
               <xsl:variable name="workOrg" select="company"/>
@@ -726,11 +805,11 @@
               <xsl:if test="gpa"><div class="muted"><xsl:value-of select="gpa"/></div></xsl:if>
               <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
               <xsl:call-template name="referenced-list">
-                <xsl:with-param name="refs" select="projects/project[not(key('project-by-name', .)/type='Course unit')]"/>
+                <xsl:with-param name="refs" select="projects/project"/>
                 <xsl:with-param name="k" select="'projects'"/>
               </xsl:call-template>
               <xsl:call-template name="referenced-list">
-                <xsl:with-param name="refs" select="projects/project[key('project-by-name', .)/type='Course unit']"/>
+                <xsl:with-param name="refs" select="courses/course"/>
                 <xsl:with-param name="k" select="'courseUnits'"/>
               </xsl:call-template>
               <xsl:variable name="eduInst" select="institution"/>
@@ -851,6 +930,8 @@
 
   <xsl:template name="section-references">
     <xsl:if test="/resume/references/reference">
+          <!-- One block, so that the print can set it on the verso. -->
+          <section class="refs">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
           <xsl:for-each select="/resume/references/reference">
             <div class="row">
@@ -859,6 +940,7 @@
               <blockquote><xsl:value-of select="reference"/></blockquote>
             </div>
           </xsl:for-each>
+          </section>
         </xsl:if>
   </xsl:template>
 
