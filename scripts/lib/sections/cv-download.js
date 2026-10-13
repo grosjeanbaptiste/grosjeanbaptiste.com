@@ -11,6 +11,10 @@ const { icon } = require('../icons');
 //   - Timeline: the second LaTeX PDF, the timeline alone on a landscape page.
 //
 // The download link came first and stays — print is an addition beside it.
+// The timeline alone, over the whole career or over its last `years`.
+const timelinePdf = (lang, years) =>
+  `/assets/cv/cv_grosjean_baptiste_timeline${years ? `_${years}y` : ''}_${lang}.pdf`;
+
 function generateCvDownload(lang) {
   const t = I18N[lang];
   return [
@@ -18,7 +22,8 @@ function generateCvDownload(lang) {
     `  <a href="/assets/cv/cv_grosjean_baptiste_${lang}.pdf" class="cv-download-button" download>`,
     `    ${icon('download')}${escapeHtml(t.downloadCV)}`,
     '  </a>',
-    `  <a href="/assets/cv/cv_grosjean_baptiste_timeline_${lang}.pdf" class="cv-download-button" download>`,
+    // The timeline's PDF of each zoom: js/timeline.js hands out the one on screen.
+    `  <a href="${timelinePdf(lang)}" class="cv-download-button" data-timeline-pdf data-pdf-2="${timelinePdf(lang, 2)}" data-pdf-5="${timelinePdf(lang, 5)}" data-pdf-all="${timelinePdf(lang)}" download>`,
     `    ${icon('download')}${escapeHtml(t.views.timeline)}`,
     '  </a>',
     `  <button type="button" class="cv-print-button" onclick="window.print()">`,

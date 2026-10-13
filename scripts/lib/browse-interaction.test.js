@@ -4,21 +4,7 @@
 // the probe saw.
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const fs = require('node:fs');
-const os = require('node:os');
-const path = require('node:path');
-const { execFile } = require('node:child_process');
-const { promisify } = require('node:util');
-const { serve } = require('./print-fit-harness');
-
-const run = promisify(execFile);
-const CHROME_CANDIDATES = [
-  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-  '/usr/bin/google-chrome',
-  '/usr/bin/chromium',
-  '/usr/bin/chromium-browser',
-];
-const chrome = process.env.CHROME_PATH || CHROME_CANDIDATES.find((c) => fs.existsSync(c));
+const { probed } = require('./browser-probe');
 
 const PROBE = `<script>
 addEventListener('load', () => setTimeout(() => {
@@ -74,7 +60,7 @@ addEventListener('load', () => setTimeout(() => {
   $('.tl-skill-clear').click();
   document.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true, bubbles: true }));
   seen.shortcut = dialog.open;
-  seen.emptied = input.value === '' && all('#cv-search [role="option"]').length === 0;
+  seen.emptied = input.value === '' && all('#cv-search [role="option"]').every((o) => o.dataset.type === 'action');
   type('remi');
   const options = all('#cv-search [role="option"]');
   const entry = options.find((o) => o.dataset.type === 'entry');
@@ -92,36 +78,7 @@ addEventListener('load', () => setTimeout(() => {
 
 let seen;
 test.before(async () => {
-  if (!chrome) {
-    if (process.env.CI) throw new Error('no Chrome on this runner, so the search went unchecked');
-    return;
-  }
-  const server = await serve(PROBE);
-  const out = fs.mkdtempSync(path.join(os.tmpdir(), 'cv-browse-'));
-  try {
-    const { stdout } = await run(
-      chrome,
-      [
-        '--headless',
-        '--disable-gpu',
-        '--no-sandbox',
-        '--window-size=1280,900',
-        `--user-data-dir=${out}`,
-        '--virtual-time-budget=8000',
-        '--dump-dom',
-        `http://127.0.0.1:${server.address().port}/__probe/fr/?skill=Rust`,
-      ],
-      { timeout: 90000, maxBuffer: 1 << 28 },
-    );
-    const raw = (stdout.match(/data-browse="([^"]*)"/) || [])[1];
-    assert.ok(raw, 'the probe never ran to its end');
-    seen = JSON.parse(raw.replaceAll('&quot;', '"').replaceAll('&amp;', '&'));
-  } finally {
-    server.close();
-    // A Chrome killed by the timeout may still be writing its profile: retry,
-    // so a failed clean-up never hides the error that matters.
-    fs.rmSync(out, { recursive: true, force: true, maxRetries: 10, retryDelay: 300 });
-  }
+  seen = await probed(PROBE, '/fr/?skill=Rust', 'data-browse');
 });
 
 const check = (name, fn) =>
@@ -173,7 +130,9 @@ check('Enter on a skill closes the search and applies the filter', () =>
   assert.deepEqual(seen.skillPicked, [false, 'Rust', 'Rust']),
 );
 check('Ctrl+K opens the search', () => assert.equal(seen.shortcut, true));
-check('the search opens empty each time', () => assert.equal(seen.emptied, true));
+check('the search opens on an empty query each time, with its actions alone', () =>
+  assert.equal(seen.emptied, true),
+);
 check('an entry is found by its name', () => assert.equal(seen.entryFound, 'project-remi'));
 check('the arrows move through the results', () => assert.equal(seen.arrow, true));
 check('picking an entry closes the search and leads to it, set apart alone', () =>

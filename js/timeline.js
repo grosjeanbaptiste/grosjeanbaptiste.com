@@ -24,6 +24,10 @@
     grid.style.setProperty('--stretch', String(stretch));
     for (const b of zoom.querySelectorAll('button'))
       b.setAttribute('aria-pressed', String(b.dataset.years === years));
+    // The timeline's PDF on offer is the one of the zoom on screen.
+    const pdf = document.querySelector('[data-timeline-pdf]');
+    const href = pdf?.getAttribute(`data-pdf-${years}`);
+    if (href) pdf.setAttribute('href', href);
     const current = section.querySelector('.tl-bar[aria-current="true"]');
     if (current) current.scrollIntoView({ block: 'nearest', inline: 'center' });
     else scroller.scrollLeft = scroller.scrollWidth;

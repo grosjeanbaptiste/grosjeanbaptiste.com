@@ -16,7 +16,7 @@
     console.warn('search.js: the search markup is not the one this script knows; left closed.');
     return;
   }
-  const { entries, skills, kinds, groups } = JSON.parse(data.textContent);
+  const { entries, skills, kinds, groups, actions } = JSON.parse(data.textContent);
   const MAX_SKILLS = 6;
   const MAX_ENTRIES = 20;
 
@@ -27,6 +27,14 @@
     option.id = `cv-search-option-${i}`;
     option.setAttribute('role', 'option');
     option.dataset.type = hit.type;
+    if (hit.type === 'action') {
+      Object.assign(
+        option.dataset,
+        hit.action.href ? { href: hit.action.href } : { press: hit.action.press },
+      );
+      option.append(make('strong', '', hit.action.label), make('span', '', hit.action.hint));
+      return option;
+    }
     option.dataset.value = hit.type === 'skill' ? hit.skill : hit.entry.id;
     const [title, aside] =
       hit.type === 'skill'
@@ -48,9 +56,13 @@
   };
   const render = () => {
     const hits = rank.search(entries, skills, input.value);
+    // An action is found by its name; all are offered while nothing is typed.
+    const words = rank.fold(input.value).split(/\s+/).filter(Boolean);
+    const offered = actions.filter((a) => words.every((word) => rank.fold(a.label).includes(word)));
     const kept = [
       ...hits.filter((h) => h.type === 'skill').slice(0, MAX_SKILLS),
       ...hits.filter((h) => h.type === 'entry').slice(0, MAX_ENTRIES),
+      ...offered.map((action) => ({ type: 'action', action })),
     ];
     list.replaceChildren(...kept.map(optionOf));
     empty.hidden = kept.length > 0 || input.value.trim() === '';
@@ -70,9 +82,11 @@
   const pick = (option) => {
     if (!option) return;
     dialog.close();
-    if (option.dataset.type === 'skill')
-      document.dispatchEvent(new CustomEvent('cv:skill', { detail: option.dataset.value }));
-    else lead(option.dataset.value);
+    const { type, value, href, press } = option.dataset;
+    if (type === 'skill') document.dispatchEvent(new CustomEvent('cv:skill', { detail: value }));
+    else if (type === 'entry') lead(value);
+    else if (href) location.assign(href);
+    else document.querySelector(press)?.click();
   };
 
   const open = () => {

@@ -5,6 +5,35 @@
 // and leads to the entry or applies the skill filter.
 const { escapeHtml } = require('../format');
 const { skillUsage } = require('../cv-index');
+const { LANGS, langPath } = require('../config');
+
+// Each language under its own name, whatever the page's language.
+const LANG_NAMES = {
+  en: 'English',
+  fr: 'Français',
+  nl: 'Nederlands',
+  es: 'Español',
+  de: 'Deutsch',
+  zh: '中文',
+};
+
+// What can be done from the search besides reaching an entry: read the CV in
+// another language, toggle the theme (the page's own button is pressed), take
+// one of the two PDFs.
+const actionsOf = (lang, t) => [
+  ...LANGS.filter((other) => other !== lang).map((other) => ({
+    label: LANG_NAMES[other],
+    hint: t.langMenuLabel,
+    href: langPath(other),
+  })),
+  { label: t.themeLabel, press: '#theme-toggle' },
+  { label: t.downloadCV, hint: 'PDF', href: `/assets/cv/cv_grosjean_baptiste_${lang}.pdf` },
+  {
+    label: t.downloadTimeline,
+    hint: 'PDF',
+    href: `/assets/cv/cv_grosjean_baptiste_timeline_${lang}.pdf`,
+  },
+];
 
 // The section each kind of entry is listed under, in the page's language.
 const KIND_LABEL = {
@@ -20,10 +49,11 @@ const KIND_LABEL = {
 // can close the element early.
 const inert = (data) => JSON.stringify(data).replace(/</g, '\\u003c');
 
-function renderSearch(onPage, shown, t) {
+function renderSearch(onPage, shown, lang, t) {
   const kinds = Object.fromEntries(Object.entries(KIND_LABEL).map(([kind, key]) => [kind, t[key]]));
   const groups = { skills: t.searchSkills, entries: t.searchEntries };
-  const index = { entries: onPage, skills: skillUsage(shown), kinds, groups };
+  const actions = actionsOf(lang, t);
+  const index = { entries: onPage, skills: skillUsage(shown), kinds, groups, actions };
   return [
     `<dialog id="cv-search" aria-label="${escapeHtml(t.search)}">`,
     `  <input type="search" class="cv-search-input" aria-label="${escapeHtml(t.search)}" placeholder="${escapeHtml(t.searchPlaceholder)}" autocomplete="off" aria-controls="cv-search-results">`,

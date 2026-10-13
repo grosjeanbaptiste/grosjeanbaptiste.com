@@ -59,6 +59,24 @@
     root.scrollIntoView({ block: 'nearest' });
   });
 
+  // A skill named on an entry is a way in: pressing it filters by it.
+  for (const tag of document.querySelectorAll('.main-content .skill-tag')) {
+    const skill = tag.textContent.trim();
+    if (!chipOf(skill)) continue;
+    tag.setAttribute('role', 'button');
+    tag.tabIndex = 0;
+    const pick = () => {
+      choose(skill);
+      root.scrollIntoView({ block: 'center' });
+    };
+    tag.addEventListener('click', pick);
+    tag.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      pick();
+    });
+  }
+
   root.hidden = false;
   // A skill the URL names but the page does not list is left out, said once.
   const named = new URL(location.href).searchParams.get('skill');

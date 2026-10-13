@@ -24,7 +24,7 @@ function generateBrowsing(resume, lang, today, onPage) {
       head: [searchOpener(t)],
       under: renderSkillFilter(shown, t),
     }),
-    search: renderSearch(there, shown, t),
+    search: renderSearch(there, shown, lang, t),
   };
 }
 
