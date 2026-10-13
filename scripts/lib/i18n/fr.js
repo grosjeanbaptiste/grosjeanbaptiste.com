@@ -29,6 +29,18 @@ module.exports = {
   printPdf: 'Imprimer / PDF',
   dailyLifeUnit: 'h',
   dailyLifeAria: 'Répartition typique sur 24 h',
+  // The search and the skill filter, worded as the interactive view words them
+  // (react/src/ui/strings.ts).
+  search: 'Rechercher',
+  searchPlaceholder: 'Rechercher une expérience, un projet, une compétence…',
+  noResults: 'Aucun résultat.',
+  searchSkills: 'Compétences',
+  searchEntries: 'Éléments',
+  filterBySkill: 'Filtrer par compétence',
+  allSkills: 'Toutes les compétences',
+  fewerSkills: 'Moins de compétences',
+  clearFilter: 'Retirer le filtre',
+  matching: (n, s) => `${n} ${n === 1 ? 'élément utilise' : 'éléments utilisent'} ${s}`,
   views: {
     title: 'Affichages',
     classic: 'Classique',

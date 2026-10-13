@@ -67,6 +67,13 @@
       idOf(bar.getAttribute('href')) === idOf(location.hash),
   );
   if (named) reveal(named);
+  // The search led to an entry (js/search.js): its bar is the one on screen.
+  document.addEventListener('cv:reveal', (event) => {
+    const bar = bars.find(
+      (b) => b.hasAttribute('href') && idOf(b.getAttribute('href')) === event.detail,
+    );
+    if (bar) reveal(bar);
+  });
   setZoom('5');
 
   // Arrow keys: along a lane in time order, across lanes to the closest in time.

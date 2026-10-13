@@ -29,6 +29,18 @@ module.exports = {
   printPdf: '打印 / PDF',
   dailyLifeUnit: '小时',
   dailyLifeAria: '24 小时典型分布',
+  // The search and the skill filter, worded as the interactive view words them
+  // (react/src/ui/strings.ts).
+  search: '搜索',
+  searchPlaceholder: '搜索经历、项目、技能…',
+  noResults: '没有结果。',
+  searchSkills: '技能',
+  searchEntries: '条目',
+  filterBySkill: '按技能筛选',
+  allSkills: '全部技能',
+  fewerSkills: '收起技能',
+  clearFilter: '清除筛选',
+  matching: (n, s) => `${n} 项使用 ${s}`,
   views: {
     title: '视图',
     classic: '经典',

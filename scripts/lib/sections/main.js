@@ -5,7 +5,7 @@ const { icon } = require('../icons');
 const { indentLines } = require('../markers');
 const { anchorOf } = require('../anchors');
 const { appendEmbeds } = require('./embeds');
-const { generateTimeline } = require('./timeline');
+const { generateBrowsing } = require('./browsing');
 
 function renderAbout(resume, t) {
   const paras = (resume.basics?.summary || '')
@@ -187,9 +187,10 @@ function generateMain(resume, lang, today = new Date()) {
   const onPage = new Set(
     sections.flatMap(([, html]) => [...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1])),
   );
-  const timeline = generateTimeline(resume, lang, today, onPage);
+  const { timeline, search } = generateBrowsing(resume, lang, today, onPage);
   const at = sections.findIndex(([name]) => name === 'about') + 1;
   sections.splice(at, 0, ['timeline', timeline]);
+  sections.push(['search', search]);
   return sections.map(([, html]) => html).join('\n\n');
 }
 
