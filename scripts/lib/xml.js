@@ -29,6 +29,9 @@ const XML_ITEM_NAMES = {
   groups: 'group',
   blocks: 'block',
   units: 'unit',
+  // The skill filter's two lists (xml-skill-filter.js).
+  shortlist: 'skill',
+  rest: 'skill',
 };
 
 const xmlEsc = (s) =>

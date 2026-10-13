@@ -66,17 +66,34 @@ function sendHtml(res, html) {
 const injected = (file, anchor, script) =>
   fs.readFileSync(file, 'utf8').replace(anchor, `${script}${anchor}`);
 
+// A theme, rendered for the URL that asks for one — undefined for any other.
+// /__xslt/<lang> is the rich theme and /__xslt-minimal/<lang> the minimal one,
+// each printing itself; /__xslt-probe/<lang> and /__xslt-probe-minimal/<lang>
+// are the same themes as a browser would draw them, with the caller's script
+// in their <head> — to check what their CSS does once laid out.
+function xsltPage(url, headScript) {
+  const probed = /^\/__xslt-probe(-minimal)?\/([a-z-]+)$/.exec(url);
+  if (probed && headScript)
+    return renderXslt(probed[2], probed[1] || '').replace('</head>', `${headScript}</head>`);
+  const printed = /^\/__xslt(-minimal)?\/([a-z-]+)$/.exec(url);
+  // Before </body>, as it was: a script after the document is tolerated but
+  // is not what this path has been measuring.
+  if (printed)
+    return renderXslt(printed[2], printed[1] || '').replace(
+      '</body>',
+      `${autoprintScript(800)}</body>`,
+    );
+  return undefined;
+}
+
 /** Serve the site. `headScript` enables the /__probe/ prefix described above. */
 function serve(headScript) {
   const server = http.createServer((req, res) => {
     const url = decodeURIComponent(req.url.split('?')[0]);
     // /__xslt/<lang> is the rich theme, /__xslt-minimal/<lang> the minimal one.
-    const xslt = /^\/__xslt(-minimal)?\/([a-z-]+)$/.exec(url);
-    if (xslt) {
-      // Before </body>, as it was: a script after the document is tolerated
-      // but is not what this path has been measuring.
-      const html = renderXslt(xslt[2], xslt[1] || '');
-      sendHtml(res, html.replace('</body>', `${autoprintScript(800)}</body>`));
+    const theme = xsltPage(url, headScript);
+    if (theme) {
+      sendHtml(res, theme);
       return;
     }
     const { rel, mode } = route(url);

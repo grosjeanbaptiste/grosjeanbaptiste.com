@@ -7,6 +7,8 @@
   switcher, PDF download button.
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <!-- The skill filter, shared by the two themes. -->
+  <xsl:include href="skill-filter.xsl"/>
   <xsl:output method="html" indent="yes"/>
 
   <xsl:key name="project-by-name" match="/resume/projects/project[name]" use="name"/>
@@ -507,6 +509,7 @@
              whole career in the frame, bars as plain links. -->
         <link rel="stylesheet" href="/css/timeline.css"/>
         <link rel="stylesheet" href="/css/timeline-entries.css"/>
+        <link rel="stylesheet" href="/css/skill-links.css"/>
       </head>
       <body>
         <xsl:call-template name="views-bar"><xsl:with-param name="current" select="'xsltMinimal'"/></xsl:call-template>
@@ -630,6 +633,7 @@
     <xsl:variable name="tl" select="/resume/meta/timeline"/>
     <xsl:if test="$tl/lanes/lane">
       <section id="timeline" aria-labelledby="timeline-title">
+        <xsl:call-template name="skill-targets"/>
         <div class="tl-head">
           <h2 id="timeline-title"><xsl:value-of select="$tl/title"/></h2>
           <div class="tl-zoom" role="group" hidden="hidden">
@@ -689,6 +693,7 @@
             <span class="tl-moon" aria-hidden="true"></span><xsl:value-of select="$tl/legend/evening"/>
           </p>
         </xsl:if>
+        <xsl:call-template name="skill-filter"/>
       </section>
     </xsl:if>
   </xsl:template>
@@ -704,6 +709,8 @@
     <xsl:attribute name="data-name"><xsl:value-of select="name"/></xsl:attribute>
     <xsl:attribute name="data-title"><xsl:value-of select="title"/></xsl:attribute>
     <xsl:attribute name="data-period"><xsl:value-of select="period"/></xsl:attribute>
+    <!-- The skills its entry uses, as the filter's tokens (skill-filter.xsl). -->
+    <xsl:if test="uses"><xsl:attribute name="data-uses"><xsl:value-of select="uses"/></xsl:attribute></xsl:if>
   </xsl:template>
 
   <xsl:template name="section-about">
