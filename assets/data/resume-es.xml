@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=3ef3fc57"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=747694c8"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -147,6 +147,1329 @@
           <label>Todo</label>
         </zoom>
       </zooms>
+      <skillFilter>
+        <title>Filtrar por competencia</title>
+        <clear>Quitar filtro</clear>
+        <shortlist>
+          <skill>
+            <name>.NET</name>
+            <token>net</token>
+            <uses>12</uses>
+            <said>12 elementos usan .NET</said>
+          </skill>
+          <skill>
+            <name>Python</name>
+            <token>python</token>
+            <uses>10</uses>
+            <said>10 elementos usan Python</said>
+          </skill>
+          <skill>
+            <name>SQL Server</name>
+            <token>sql-server</token>
+            <uses>8</uses>
+            <said>8 elementos usan SQL Server</said>
+          </skill>
+          <skill>
+            <name>DDD</name>
+            <token>ddd</token>
+            <uses>6</uses>
+            <said>6 elementos usan DDD</said>
+          </skill>
+          <skill>
+            <name>Flutter</name>
+            <token>flutter</token>
+            <uses>6</uses>
+            <said>6 elementos usan Flutter</said>
+          </skill>
+          <skill>
+            <name>React</name>
+            <token>react</token>
+            <uses>5</uses>
+            <said>5 elementos usan React</said>
+          </skill>
+          <skill>
+            <name>Dart</name>
+            <token>dart</token>
+            <uses>4</uses>
+            <said>4 elementos usan Dart</said>
+          </skill>
+          <skill>
+            <name>Docker</name>
+            <token>docker</token>
+            <uses>4</uses>
+            <said>4 elementos usan Docker</said>
+          </skill>
+          <skill>
+            <name>EntityFramework</name>
+            <token>entityframework</token>
+            <uses>4</uses>
+            <said>4 elementos usan EntityFramework</said>
+          </skill>
+          <skill>
+            <name>Java</name>
+            <token>java</token>
+            <uses>4</uses>
+            <said>4 elementos usan Java</said>
+          </skill>
+          <skill>
+            <name>OpenAI</name>
+            <token>openai</token>
+            <uses>4</uses>
+            <said>4 elementos usan OpenAI</said>
+          </skill>
+          <skill>
+            <name>Pandas</name>
+            <token>pandas</token>
+            <uses>4</uses>
+            <said>4 elementos usan Pandas</said>
+          </skill>
+          <skill>
+            <name>PostgreSQL</name>
+            <token>postgresql</token>
+            <uses>4</uses>
+            <said>4 elementos usan PostgreSQL</said>
+          </skill>
+          <skill>
+            <name>TypeScript</name>
+            <token>typescript</token>
+            <uses>4</uses>
+            <said>4 elementos usan TypeScript</said>
+          </skill>
+          <skill>
+            <name>C#</name>
+            <token>c</token>
+            <uses>3</uses>
+            <said>3 elementos usan C#</said>
+          </skill>
+          <skill>
+            <name>CleanArchitecture</name>
+            <token>cleanarchitecture</token>
+            <uses>3</uses>
+            <said>3 elementos usan CleanArchitecture</said>
+          </skill>
+          <skill>
+            <name>Complexity</name>
+            <token>complexity</token>
+            <uses>3</uses>
+            <said>3 elementos usan Complexity</said>
+          </skill>
+          <skill>
+            <name>English</name>
+            <token>english</token>
+            <uses>3</uses>
+            <said>3 elementos usan English</said>
+          </skill>
+        </shortlist>
+        <more>Todas las competencias (219)</more>
+        <rest>
+          <skill>
+            <name>Firebase</name>
+            <token>firebase</token>
+            <uses>3</uses>
+            <said>3 elementos usan Firebase</said>
+          </skill>
+          <skill>
+            <name>JavaScript</name>
+            <token>javascript</token>
+            <uses>3</uses>
+            <said>3 elementos usan JavaScript</said>
+          </skill>
+          <skill>
+            <name>OpenTelemetry</name>
+            <token>opentelemetry</token>
+            <uses>3</uses>
+            <said>3 elementos usan OpenTelemetry</said>
+          </skill>
+          <skill>
+            <name>RAG</name>
+            <token>rag</token>
+            <uses>3</uses>
+            <said>3 elementos usan RAG</said>
+          </skill>
+          <skill>
+            <name>SQL</name>
+            <token>sql</token>
+            <uses>3</uses>
+            <said>3 elementos usan SQL</said>
+          </skill>
+          <skill>
+            <name>XML</name>
+            <token>xml</token>
+            <uses>3</uses>
+            <said>3 elementos usan XML</said>
+          </skill>
+          <skill>
+            <name>AI</name>
+            <token>ai</token>
+            <uses>2</uses>
+            <said>2 elementos usan AI</said>
+          </skill>
+          <skill>
+            <name>AJAX</name>
+            <token>ajax</token>
+            <uses>2</uses>
+            <said>2 elementos usan AJAX</said>
+          </skill>
+          <skill>
+            <name>Algorithms</name>
+            <token>algorithms</token>
+            <uses>2</uses>
+            <said>2 elementos usan Algorithms</said>
+          </skill>
+          <skill>
+            <name>Angular</name>
+            <token>angular</token>
+            <uses>2</uses>
+            <said>2 elementos usan Angular</said>
+          </skill>
+          <skill>
+            <name>API</name>
+            <token>api</token>
+            <uses>2</uses>
+            <said>2 elementos usan API</said>
+          </skill>
+          <skill>
+            <name>Auth0</name>
+            <token>auth0</token>
+            <uses>2</uses>
+            <said>2 elementos usan Auth0</said>
+          </skill>
+          <skill>
+            <name>Azure</name>
+            <token>azure</token>
+            <uses>2</uses>
+            <said>2 elementos usan Azure</said>
+          </skill>
+          <skill>
+            <name>Blazor</name>
+            <token>blazor</token>
+            <uses>2</uses>
+            <said>2 elementos usan Blazor</said>
+          </skill>
+          <skill>
+            <name>Cryptography</name>
+            <token>cryptography</token>
+            <uses>2</uses>
+            <said>2 elementos usan Cryptography</said>
+          </skill>
+          <skill>
+            <name>CSS</name>
+            <token>css</token>
+            <uses>2</uses>
+            <said>2 elementos usan CSS</said>
+          </skill>
+          <skill>
+            <name>DeepFace</name>
+            <token>deepface</token>
+            <uses>2</uses>
+            <said>2 elementos usan DeepFace</said>
+          </skill>
+          <skill>
+            <name>DNS</name>
+            <token>dns</token>
+            <uses>2</uses>
+            <said>2 elementos usan DNS</said>
+          </skill>
+          <skill>
+            <name>Epistemology</name>
+            <token>epistemology</token>
+            <uses>2</uses>
+            <said>2 elementos usan Epistemology</said>
+          </skill>
+          <skill>
+            <name>Ethernet</name>
+            <token>ethernet</token>
+            <uses>2</uses>
+            <said>2 elementos usan Ethernet</said>
+          </skill>
+          <skill>
+            <name>Express.js</name>
+            <token>express-js</token>
+            <uses>2</uses>
+            <said>2 elementos usan Express.js</said>
+          </skill>
+          <skill>
+            <name>FastAPI</name>
+            <token>fastapi</token>
+            <uses>2</uses>
+            <said>2 elementos usan FastAPI</said>
+          </skill>
+          <skill>
+            <name>GraphTheory</name>
+            <token>graphtheory</token>
+            <uses>2</uses>
+            <said>2 elementos usan GraphTheory</said>
+          </skill>
+          <skill>
+            <name>gRPC</name>
+            <token>grpc</token>
+            <uses>2</uses>
+            <said>2 elementos usan gRPC</said>
+          </skill>
+          <skill>
+            <name>HTML</name>
+            <token>html</token>
+            <uses>2</uses>
+            <said>2 elementos usan HTML</said>
+          </skill>
+          <skill>
+            <name>Indexing</name>
+            <token>indexing</token>
+            <uses>2</uses>
+            <said>2 elementos usan Indexing</said>
+          </skill>
+          <skill>
+            <name>JSON</name>
+            <token>json</token>
+            <uses>2</uses>
+            <said>2 elementos usan JSON</said>
+          </skill>
+          <skill>
+            <name>LaTeX</name>
+            <token>latex</token>
+            <uses>2</uses>
+            <said>2 elementos usan LaTeX</said>
+          </skill>
+          <skill>
+            <name>NetworkSecurity</name>
+            <token>networksecurity</token>
+            <uses>2</uses>
+            <said>2 elementos usan NetworkSecurity</said>
+          </skill>
+          <skill>
+            <name>Node.js</name>
+            <token>node-js</token>
+            <uses>2</uses>
+            <said>2 elementos usan Node.js</said>
+          </skill>
+          <skill>
+            <name>NumPy</name>
+            <token>numpy</token>
+            <uses>2</uses>
+            <said>2 elementos usan NumPy</said>
+          </skill>
+          <skill>
+            <name>OCR</name>
+            <token>ocr</token>
+            <uses>2</uses>
+            <said>2 elementos usan OCR</said>
+          </skill>
+          <skill>
+            <name>RelationalAlgebra</name>
+            <token>relationalalgebra</token>
+            <uses>2</uses>
+            <said>2 elementos usan RelationalAlgebra</said>
+          </skill>
+          <skill>
+            <name>Rust</name>
+            <token>rust</token>
+            <uses>2</uses>
+            <said>2 elementos usan Rust</said>
+          </skill>
+          <skill>
+            <name>SentenceTransformers</name>
+            <token>sentencetransformers</token>
+            <uses>2</uses>
+            <said>2 elementos usan SentenceTransformers</said>
+          </skill>
+          <skill>
+            <name>Sequelize</name>
+            <token>sequelize</token>
+            <uses>2</uses>
+            <said>2 elementos usan Sequelize</said>
+          </skill>
+          <skill>
+            <name>SpaCy</name>
+            <token>spacy</token>
+            <uses>2</uses>
+            <said>2 elementos usan SpaCy</said>
+          </skill>
+          <skill>
+            <name>SQLAlchemy</name>
+            <token>sqlalchemy</token>
+            <uses>2</uses>
+            <said>2 elementos usan SQLAlchemy</said>
+          </skill>
+          <skill>
+            <name>SystemsAnalysis</name>
+            <token>systemsanalysis</token>
+            <uses>2</uses>
+            <said>2 elementos usan SystemsAnalysis</said>
+          </skill>
+          <skill>
+            <name>TCP/IP</name>
+            <token>tcp-ip</token>
+            <uses>2</uses>
+            <said>2 elementos usan TCP/IP</said>
+          </skill>
+          <skill>
+            <name>TechWatch</name>
+            <token>techwatch</token>
+            <uses>2</uses>
+            <said>2 elementos usan TechWatch</said>
+          </skill>
+          <skill>
+            <name>Tokio</name>
+            <token>tokio</token>
+            <uses>2</uses>
+            <said>2 elementos usan Tokio</said>
+          </skill>
+          <skill>
+            <name>UI/UX</name>
+            <token>ui-ux</token>
+            <uses>2</uses>
+            <said>2 elementos usan UI/UX</said>
+          </skill>
+          <skill>
+            <name>UML</name>
+            <token>uml</token>
+            <uses>2</uses>
+            <said>2 elementos usan UML</said>
+          </skill>
+          <skill>
+            <name>Valhalla</name>
+            <token>valhalla</token>
+            <uses>2</uses>
+            <said>2 elementos usan Valhalla</said>
+          </skill>
+          <skill>
+            <name>Whisper</name>
+            <token>whisper</token>
+            <uses>2</uses>
+            <said>2 elementos usan Whisper</said>
+          </skill>
+          <skill>
+            <name>xUnit</name>
+            <token>xunit</token>
+            <uses>2</uses>
+            <said>2 elementos usan xUnit</said>
+          </skill>
+          <skill>
+            <name>AcademicWriting</name>
+            <token>academicwriting</token>
+            <uses>1</uses>
+            <said>1 elemento usa AcademicWriting</said>
+          </skill>
+          <skill>
+            <name>Advertising</name>
+            <token>advertising</token>
+            <uses>1</uses>
+            <said>1 elemento usa Advertising</said>
+          </skill>
+          <skill>
+            <name>Agile</name>
+            <token>agile</token>
+            <uses>1</uses>
+            <said>1 elemento usa Agile</said>
+          </skill>
+          <skill>
+            <name>ApplicationSecurity</name>
+            <token>applicationsecurity</token>
+            <uses>1</uses>
+            <said>1 elemento usa ApplicationSecurity</said>
+          </skill>
+          <skill>
+            <name>ApplicationServer</name>
+            <token>applicationserver</token>
+            <uses>1</uses>
+            <said>1 elemento usa ApplicationServer</said>
+          </skill>
+          <skill>
+            <name>AVLTrees</name>
+            <token>avltrees</token>
+            <uses>1</uses>
+            <said>1 elemento usa AVLTrees</said>
+          </skill>
+          <skill>
+            <name>Axum</name>
+            <token>axum</token>
+            <uses>1</uses>
+            <said>1 elemento usa Axum</said>
+          </skill>
+          <skill>
+            <name>BaseX</name>
+            <token>basex</token>
+            <uses>1</uses>
+            <said>1 elemento usa BaseX</said>
+          </skill>
+          <skill>
+            <name>BDD</name>
+            <token>bdd</token>
+            <uses>1</uses>
+            <said>1 elemento usa BDD</said>
+          </skill>
+          <skill>
+            <name>Benchmark</name>
+            <token>benchmark</token>
+            <uses>1</uses>
+            <said>1 elemento usa Benchmark</said>
+          </skill>
+          <skill>
+            <name>BGP</name>
+            <token>bgp</token>
+            <uses>1</uses>
+            <said>1 elemento usa BGP</said>
+          </skill>
+          <skill>
+            <name>BigData</name>
+            <token>bigdata</token>
+            <uses>1</uses>
+            <said>1 elemento usa BigData</said>
+          </skill>
+          <skill>
+            <name>Binary</name>
+            <token>binary</token>
+            <uses>1</uses>
+            <said>1 elemento usa Binary</said>
+          </skill>
+          <skill>
+            <name>BTrees</name>
+            <token>btrees</token>
+            <uses>1</uses>
+            <said>1 elemento usa BTrees</said>
+          </skill>
+          <skill>
+            <name>Caching</name>
+            <token>caching</token>
+            <uses>1</uses>
+            <said>1 elemento usa Caching</said>
+          </skill>
+          <skill>
+            <name>Caddy</name>
+            <token>caddy</token>
+            <uses>1</uses>
+            <said>1 elemento usa Caddy</said>
+          </skill>
+          <skill>
+            <name>Citation</name>
+            <token>citation</token>
+            <uses>1</uses>
+            <said>1 elemento usa Citation</said>
+          </skill>
+          <skill>
+            <name>CleanCode</name>
+            <token>cleancode</token>
+            <uses>1</uses>
+            <said>1 elemento usa CleanCode</said>
+          </skill>
+          <skill>
+            <name>ClientSideScripting</name>
+            <token>clientsidescripting</token>
+            <uses>1</uses>
+            <said>1 elemento usa ClientSideScripting</said>
+          </skill>
+          <skill>
+            <name>CombinatorialOptimization</name>
+            <token>combinatorialoptimization</token>
+            <uses>1</uses>
+            <said>1 elemento usa CombinatorialOptimization</said>
+          </skill>
+          <skill>
+            <name>Combinatorics</name>
+            <token>combinatorics</token>
+            <uses>1</uses>
+            <said>1 elemento usa Combinatorics</said>
+          </skill>
+          <skill>
+            <name>CompetitiveMarkets</name>
+            <token>competitivemarkets</token>
+            <uses>1</uses>
+            <said>1 elemento usa CompetitiveMarkets</said>
+          </skill>
+          <skill>
+            <name>ComputerArchitecture</name>
+            <token>computerarchitecture</token>
+            <uses>1</uses>
+            <said>1 elemento usa ComputerArchitecture</said>
+          </skill>
+          <skill>
+            <name>ConstraintProgramming</name>
+            <token>constraintprogramming</token>
+            <uses>1</uses>
+            <said>1 elemento usa ConstraintProgramming</said>
+          </skill>
+          <skill>
+            <name>ControlFlow</name>
+            <token>controlflow</token>
+            <uses>1</uses>
+            <said>1 elemento usa ControlFlow</said>
+          </skill>
+          <skill>
+            <name>CQRS</name>
+            <token>cqrs</token>
+            <uses>1</uses>
+            <said>1 elemento usa CQRS</said>
+          </skill>
+          <skill>
+            <name>DataAccessLayer</name>
+            <token>dataaccesslayer</token>
+            <uses>1</uses>
+            <said>1 elemento usa DataAccessLayer</said>
+          </skill>
+          <skill>
+            <name>DatabaseProgramming</name>
+            <token>databaseprogramming</token>
+            <uses>1</uses>
+            <said>1 elemento usa DatabaseProgramming</said>
+          </skill>
+          <skill>
+            <name>DataMining</name>
+            <token>datamining</token>
+            <uses>1</uses>
+            <said>1 elemento usa DataMining</said>
+          </skill>
+          <skill>
+            <name>DataProtection</name>
+            <token>dataprotection</token>
+            <uses>1</uses>
+            <said>1 elemento usa DataProtection</said>
+          </skill>
+          <skill>
+            <name>DataStructures</name>
+            <token>datastructures</token>
+            <uses>1</uses>
+            <said>1 elemento usa DataStructures</said>
+          </skill>
+          <skill>
+            <name>DataTypes</name>
+            <token>datatypes</token>
+            <uses>1</uses>
+            <said>1 elemento usa DataTypes</said>
+          </skill>
+          <skill>
+            <name>DataWarehouse</name>
+            <token>datawarehouse</token>
+            <uses>1</uses>
+            <said>1 elemento usa DataWarehouse</said>
+          </skill>
+          <skill>
+            <name>Debugging</name>
+            <token>debugging</token>
+            <uses>1</uses>
+            <said>1 elemento usa Debugging</said>
+          </skill>
+          <skill>
+            <name>Democracy</name>
+            <token>democracy</token>
+            <uses>1</uses>
+            <said>1 elemento usa Democracy</said>
+          </skill>
+          <skill>
+            <name>DesignPatterns</name>
+            <token>designpatterns</token>
+            <uses>1</uses>
+            <said>1 elemento usa DesignPatterns</said>
+          </skill>
+          <skill>
+            <name>Dio</name>
+            <token>dio</token>
+            <uses>1</uses>
+            <said>1 elemento usa Dio</said>
+          </skill>
+          <skill>
+            <name>Drift</name>
+            <token>drift</token>
+            <uses>1</uses>
+            <said>1 elemento usa Drift</said>
+          </skill>
+          <skill>
+            <name>Duality</name>
+            <token>duality</token>
+            <uses>1</uses>
+            <said>1 elemento usa Duality</said>
+          </skill>
+          <skill>
+            <name>Durkheim</name>
+            <token>durkheim</token>
+            <uses>1</uses>
+            <said>1 elemento usa Durkheim</said>
+          </skill>
+          <skill>
+            <name>Dutch</name>
+            <token>dutch</token>
+            <uses>1</uses>
+            <said>1 elemento usa Dutch</said>
+          </skill>
+          <skill>
+            <name>Ebusiness</name>
+            <token>ebusiness</token>
+            <uses>1</uses>
+            <said>1 elemento usa Ebusiness</said>
+          </skill>
+          <skill>
+            <name>Encapsulation</name>
+            <token>encapsulation</token>
+            <uses>1</uses>
+            <said>1 elemento usa Encapsulation</said>
+          </skill>
+          <skill>
+            <name>EntityRelationship</name>
+            <token>entityrelationship</token>
+            <uses>1</uses>
+            <said>1 elemento usa EntityRelationship</said>
+          </skill>
+          <skill>
+            <name>ERP</name>
+            <token>erp</token>
+            <uses>1</uses>
+            <said>1 elemento usa ERP</said>
+          </skill>
+          <skill>
+            <name>Evaluation</name>
+            <token>evaluation</token>
+            <uses>1</uses>
+            <said>1 elemento usa Evaluation</said>
+          </skill>
+          <skill>
+            <name>EventDriven</name>
+            <token>eventdriven</token>
+            <uses>1</uses>
+            <said>1 elemento usa EventDriven</said>
+          </skill>
+          <skill>
+            <name>FileSystems</name>
+            <token>filesystems</token>
+            <uses>1</uses>
+            <said>1 elemento usa FileSystems</said>
+          </skill>
+          <skill>
+            <name>FirmBehaviour</name>
+            <token>firmbehaviour</token>
+            <uses>1</uses>
+            <said>1 elemento usa FirmBehaviour</said>
+          </skill>
+          <skill>
+            <name>FirstOrderLogic</name>
+            <token>firstorderlogic</token>
+            <uses>1</uses>
+            <said>1 elemento usa FirstOrderLogic</said>
+          </skill>
+          <skill>
+            <name>FlutterMap</name>
+            <token>fluttermap</token>
+            <uses>1</uses>
+            <said>1 elemento usa FlutterMap</said>
+          </skill>
+          <skill>
+            <name>GDPR</name>
+            <token>gdpr</token>
+            <uses>1</uses>
+            <said>1 elemento usa GDPR</said>
+          </skill>
+          <skill>
+            <name>Hardware</name>
+            <token>hardware</token>
+            <uses>1</uses>
+            <said>1 elemento usa Hardware</said>
+          </skill>
+          <skill>
+            <name>HashTables</name>
+            <token>hashtables</token>
+            <uses>1</uses>
+            <said>1 elemento usa HashTables</said>
+          </skill>
+          <skill>
+            <name>Hexadecimal</name>
+            <token>hexadecimal</token>
+            <uses>1</uses>
+            <said>1 elemento usa Hexadecimal</said>
+          </skill>
+          <skill>
+            <name>HexagonalArchitecture</name>
+            <token>hexagonalarchitecture</token>
+            <uses>1</uses>
+            <said>1 elemento usa HexagonalArchitecture</said>
+          </skill>
+          <skill>
+            <name>HRM</name>
+            <token>hrm</token>
+            <uses>1</uses>
+            <said>1 elemento usa HRM</said>
+          </skill>
+          <skill>
+            <name>HTTP</name>
+            <token>http</token>
+            <uses>1</uses>
+            <said>1 elemento usa HTTP</said>
+          </skill>
+          <skill>
+            <name>i18next</name>
+            <token>i18next</token>
+            <uses>1</uses>
+            <said>1 elemento usa i18next</said>
+          </skill>
+          <skill>
+            <name>ImperfectCompetition</name>
+            <token>imperfectcompetition</token>
+            <uses>1</uses>
+            <said>1 elemento usa ImperfectCompetition</said>
+          </skill>
+          <skill>
+            <name>Inheritance</name>
+            <token>inheritance</token>
+            <uses>1</uses>
+            <said>1 elemento usa Inheritance</said>
+          </skill>
+          <skill>
+            <name>IntegerProgramming</name>
+            <token>integerprogramming</token>
+            <uses>1</uses>
+            <said>1 elemento usa IntegerProgramming</said>
+          </skill>
+          <skill>
+            <name>IntellectualProperty</name>
+            <token>intellectualproperty</token>
+            <uses>1</uses>
+            <said>1 elemento usa IntellectualProperty</said>
+          </skill>
+          <skill>
+            <name>Joins</name>
+            <token>joins</token>
+            <uses>1</uses>
+            <said>1 elemento usa Joins</said>
+          </skill>
+          <skill>
+            <name>JS</name>
+            <token>js</token>
+            <uses>1</uses>
+            <said>1 elemento usa JS</said>
+          </skill>
+          <skill>
+            <name>LinearAlgebra</name>
+            <token>linearalgebra</token>
+            <uses>1</uses>
+            <said>1 elemento usa LinearAlgebra</said>
+          </skill>
+          <skill>
+            <name>LinearProgramming</name>
+            <token>linearprogramming</token>
+            <uses>1</uses>
+            <said>1 elemento usa LinearProgramming</said>
+          </skill>
+          <skill>
+            <name>LiteratureReview</name>
+            <token>literaturereview</token>
+            <uses>1</uses>
+            <said>1 elemento usa LiteratureReview</said>
+          </skill>
+          <skill>
+            <name>LiveKit</name>
+            <token>livekit</token>
+            <uses>1</uses>
+            <said>1 elemento usa LiveKit</said>
+          </skill>
+          <skill>
+            <name>MAC</name>
+            <token>mac</token>
+            <uses>1</uses>
+            <said>1 elemento usa MAC</said>
+          </skill>
+          <skill>
+            <name>Macroeconomics</name>
+            <token>macroeconomics</token>
+            <uses>1</uses>
+            <said>1 elemento usa Macroeconomics</said>
+          </skill>
+          <skill>
+            <name>Management</name>
+            <token>management</token>
+            <uses>1</uses>
+            <said>1 elemento usa Management</said>
+          </skill>
+          <skill>
+            <name>MarketFailure</name>
+            <token>marketfailure</token>
+            <uses>1</uses>
+            <said>1 elemento usa MarketFailure</said>
+          </skill>
+          <skill>
+            <name>Marx</name>
+            <token>marx</token>
+            <uses>1</uses>
+            <said>1 elemento usa Marx</said>
+          </skill>
+          <skill>
+            <name>MathematicalLogic</name>
+            <token>mathematicallogic</token>
+            <uses>1</uses>
+            <said>1 elemento usa MathematicalLogic</said>
+          </skill>
+          <skill>
+            <name>MediaEconomics</name>
+            <token>mediaeconomics</token>
+            <uses>1</uses>
+            <said>1 elemento usa MediaEconomics</said>
+          </skill>
+          <skill>
+            <name>MediaRegulation</name>
+            <token>mediaregulation</token>
+            <uses>1</uses>
+            <said>1 elemento usa MediaRegulation</said>
+          </skill>
+          <skill>
+            <name>Melos</name>
+            <token>melos</token>
+            <uses>1</uses>
+            <said>1 elemento usa Melos</said>
+          </skill>
+          <skill>
+            <name>MemoryManagement</name>
+            <token>memorymanagement</token>
+            <uses>1</uses>
+            <said>1 elemento usa MemoryManagement</said>
+          </skill>
+          <skill>
+            <name>Metaheuristics</name>
+            <token>metaheuristics</token>
+            <uses>1</uses>
+            <said>1 elemento usa Metaheuristics</said>
+          </skill>
+          <skill>
+            <name>Microeconomics</name>
+            <token>microeconomics</token>
+            <uses>1</uses>
+            <said>1 elemento usa Microeconomics</said>
+          </skill>
+          <skill>
+            <name>MinIO</name>
+            <token>minio</token>
+            <uses>1</uses>
+            <said>1 elemento usa MinIO</said>
+          </skill>
+          <skill>
+            <name>MiniZinc</name>
+            <token>minizinc</token>
+            <uses>1</uses>
+            <said>1 elemento usa MiniZinc</said>
+          </skill>
+          <skill>
+            <name>Mobile</name>
+            <token>mobile</token>
+            <uses>1</uses>
+            <said>1 elemento usa Mobile</said>
+          </skill>
+          <skill>
+            <name>MockTesting</name>
+            <token>mocktesting</token>
+            <uses>1</uses>
+            <said>1 elemento usa MockTesting</said>
+          </skill>
+          <skill>
+            <name>Modelling</name>
+            <token>modelling</token>
+            <uses>1</uses>
+            <said>1 elemento usa Modelling</said>
+          </skill>
+          <skill>
+            <name>MonetaryMarket</name>
+            <token>monetarymarket</token>
+            <uses>1</uses>
+            <said>1 elemento usa MonetaryMarket</said>
+          </skill>
+          <skill>
+            <name>NationalIncome</name>
+            <token>nationalincome</token>
+            <uses>1</uses>
+            <said>1 elemento usa NationalIncome</said>
+          </skill>
+          <skill>
+            <name>NER</name>
+            <token>ner</token>
+            <uses>1</uses>
+            <said>1 elemento usa NER</said>
+          </skill>
+          <skill>
+            <name>NetworkAdministration</name>
+            <token>networkadministration</token>
+            <uses>1</uses>
+            <said>1 elemento usa NetworkAdministration</said>
+          </skill>
+          <skill>
+            <name>Networking</name>
+            <token>networking</token>
+            <uses>1</uses>
+            <said>1 elemento usa Networking</said>
+          </skill>
+          <skill>
+            <name>Normalization</name>
+            <token>normalization</token>
+            <uses>1</uses>
+            <said>1 elemento usa Normalization</said>
+          </skill>
+          <skill>
+            <name>NoSQL</name>
+            <token>nosql</token>
+            <uses>1</uses>
+            <said>1 elemento usa NoSQL</said>
+          </skill>
+          <skill>
+            <name>OfflineFirst</name>
+            <token>offlinefirst</token>
+            <uses>1</uses>
+            <said>1 elemento usa OfflineFirst</said>
+          </skill>
+          <skill>
+            <name>OOP</name>
+            <token>oop</token>
+            <uses>1</uses>
+            <said>1 elemento usa OOP</said>
+          </skill>
+          <skill>
+            <name>OperatingSystems</name>
+            <token>operatingsystems</token>
+            <uses>1</uses>
+            <said>1 elemento usa OperatingSystems</said>
+          </skill>
+          <skill>
+            <name>OperationsResearch</name>
+            <token>operationsresearch</token>
+            <uses>1</uses>
+            <said>1 elemento usa OperationsResearch</said>
+          </skill>
+          <skill>
+            <name>OSPF</name>
+            <token>ospf</token>
+            <uses>1</uses>
+            <said>1 elemento usa OSPF</said>
+          </skill>
+          <skill>
+            <name>Overloading</name>
+            <token>overloading</token>
+            <uses>1</uses>
+            <said>1 elemento usa Overloading</said>
+          </skill>
+          <skill>
+            <name>Pareto</name>
+            <token>pareto</token>
+            <uses>1</uses>
+            <said>1 elemento usa Pareto</said>
+          </skill>
+          <skill>
+            <name>PayPal</name>
+            <token>paypal</token>
+            <uses>1</uses>
+            <said>1 elemento usa PayPal</said>
+          </skill>
+          <skill>
+            <name>PHP</name>
+            <token>php</token>
+            <uses>1</uses>
+            <said>1 elemento usa PHP</said>
+          </skill>
+          <skill>
+            <name>PoliticalScience</name>
+            <token>politicalscience</token>
+            <uses>1</uses>
+            <said>1 elemento usa PoliticalScience</said>
+          </skill>
+          <skill>
+            <name>Polymorphism</name>
+            <token>polymorphism</token>
+            <uses>1</uses>
+            <said>1 elemento usa Polymorphism</said>
+          </skill>
+          <skill>
+            <name>PostGIS</name>
+            <token>postgis</token>
+            <uses>1</uses>
+            <said>1 elemento usa PostGIS</said>
+          </skill>
+          <skill>
+            <name>Power</name>
+            <token>power</token>
+            <uses>1</uses>
+            <said>1 elemento usa Power</said>
+          </skill>
+          <skill>
+            <name>PredicateLogic</name>
+            <token>predicatelogic</token>
+            <uses>1</uses>
+            <said>1 elemento usa PredicateLogic</said>
+          </skill>
+          <skill>
+            <name>Processes</name>
+            <token>processes</token>
+            <uses>1</uses>
+            <said>1 elemento usa Processes</said>
+          </skill>
+          <skill>
+            <name>ProfessionalCommunication</name>
+            <token>professionalcommunication</token>
+            <uses>1</uses>
+            <said>1 elemento usa ProfessionalCommunication</said>
+          </skill>
+          <skill>
+            <name>Programming</name>
+            <token>programming</token>
+            <uses>1</uses>
+            <said>1 elemento usa Programming</said>
+          </skill>
+          <skill>
+            <name>ProjectManagement</name>
+            <token>projectmanagement</token>
+            <uses>1</uses>
+            <said>1 elemento usa ProjectManagement</said>
+          </skill>
+          <skill>
+            <name>PropositionalLogic</name>
+            <token>propositionallogic</token>
+            <uses>1</uses>
+            <said>1 elemento usa PropositionalLogic</said>
+          </skill>
+          <skill>
+            <name>QRCode</name>
+            <token>qrcode</token>
+            <uses>1</uses>
+            <said>1 elemento usa QRCode</said>
+          </skill>
+          <skill>
+            <name>QueryOptimization</name>
+            <token>queryoptimization</token>
+            <uses>1</uses>
+            <said>1 elemento usa QueryOptimization</said>
+          </skill>
+          <skill>
+            <name>ReactRouter</name>
+            <token>reactrouter</token>
+            <uses>1</uses>
+            <said>1 elemento usa ReactRouter</said>
+          </skill>
+          <skill>
+            <name>Redis</name>
+            <token>redis</token>
+            <uses>1</uses>
+            <said>1 elemento usa Redis</said>
+          </skill>
+          <skill>
+            <name>RelationalModel</name>
+            <token>relationalmodel</token>
+            <uses>1</uses>
+            <said>1 elemento usa RelationalModel</said>
+          </skill>
+          <skill>
+            <name>Riverpod</name>
+            <token>riverpod</token>
+            <uses>1</uses>
+            <said>1 elemento usa Riverpod</said>
+          </skill>
+          <skill>
+            <name>Scheduling</name>
+            <token>scheduling</token>
+            <uses>1</uses>
+            <said>1 elemento usa Scheduling</said>
+          </skill>
+          <skill>
+            <name>ScientificWriting</name>
+            <token>scientificwriting</token>
+            <uses>1</uses>
+            <said>1 elemento usa ScientificWriting</said>
+          </skill>
+          <skill>
+            <name>Scrum</name>
+            <token>scrum</token>
+            <uses>1</uses>
+            <said>1 elemento usa Scrum</said>
+          </skill>
+          <skill>
+            <name>SearchAlgorithms</name>
+            <token>searchalgorithms</token>
+            <uses>1</uses>
+            <said>1 elemento usa SearchAlgorithms</said>
+          </skill>
+          <skill>
+            <name>Semaphores</name>
+            <token>semaphores</token>
+            <uses>1</uses>
+            <said>1 elemento usa Semaphores</said>
+          </skill>
+          <skill>
+            <name>SetTheory</name>
+            <token>settheory</token>
+            <uses>1</uses>
+            <said>1 elemento usa SetTheory</said>
+          </skill>
+          <skill>
+            <name>ShellScripting</name>
+            <token>shellscripting</token>
+            <uses>1</uses>
+            <said>1 elemento usa ShellScripting</said>
+          </skill>
+          <skill>
+            <name>SoftwareDesign</name>
+            <token>softwaredesign</token>
+            <uses>1</uses>
+            <said>1 elemento usa SoftwareDesign</said>
+          </skill>
+          <skill>
+            <name>SoftwareEngineering</name>
+            <token>softwareengineering</token>
+            <uses>1</uses>
+            <said>1 elemento usa SoftwareEngineering</said>
+          </skill>
+          <skill>
+            <name>Sorting</name>
+            <token>sorting</token>
+            <uses>1</uses>
+            <said>1 elemento usa Sorting</said>
+          </skill>
+          <skill>
+            <name>SQLInjection</name>
+            <token>sqlinjection</token>
+            <uses>1</uses>
+            <said>1 elemento usa SQLInjection</said>
+          </skill>
+          <skill>
+            <name>SQLite</name>
+            <token>sqlite</token>
+            <uses>1</uses>
+            <said>1 elemento usa SQLite</said>
+          </skill>
+          <skill>
+            <name>SQLx</name>
+            <token>sqlx</token>
+            <uses>1</uses>
+            <said>1 elemento usa SQLx</said>
+          </skill>
+          <skill>
+            <name>State</name>
+            <token>state</token>
+            <uses>1</uses>
+            <said>1 elemento usa State</said>
+          </skill>
+          <skill>
+            <name>Statistics</name>
+            <token>statistics</token>
+            <uses>1</uses>
+            <said>1 elemento usa Statistics</said>
+          </skill>
+          <skill>
+            <name>StoredProcedures</name>
+            <token>storedprocedures</token>
+            <uses>1</uses>
+            <said>1 elemento usa StoredProcedures</said>
+          </skill>
+          <skill>
+            <name>SupervisedLearning</name>
+            <token>supervisedlearning</token>
+            <uses>1</uses>
+            <said>1 elemento usa SupervisedLearning</said>
+          </skill>
+          <skill>
+            <name>Synchronization</name>
+            <token>synchronization</token>
+            <uses>1</uses>
+            <said>1 elemento usa Synchronization</said>
+          </skill>
+          <skill>
+            <name>SystemAdministration</name>
+            <token>systemadministration</token>
+            <uses>1</uses>
+            <said>1 elemento usa SystemAdministration</said>
+          </skill>
+          <skill>
+            <name>Tonic</name>
+            <token>tonic</token>
+            <uses>1</uses>
+            <said>1 elemento usa Tonic</said>
+          </skill>
+          <skill>
+            <name>Transactions</name>
+            <token>transactions</token>
+            <uses>1</uses>
+            <said>1 elemento usa Transactions</said>
+          </skill>
+          <skill>
+            <name>Trees</name>
+            <token>trees</token>
+            <uses>1</uses>
+            <said>1 elemento usa Trees</said>
+          </skill>
+          <skill>
+            <name>Triggers</name>
+            <token>triggers</token>
+            <uses>1</uses>
+            <said>1 elemento usa Triggers</said>
+          </skill>
+          <skill>
+            <name>UnitTesting</name>
+            <token>unittesting</token>
+            <uses>1</uses>
+            <said>1 elemento usa UnitTesting</said>
+          </skill>
+          <skill>
+            <name>Unix</name>
+            <token>unix</token>
+            <uses>1</uses>
+            <said>1 elemento usa Unix</said>
+          </skill>
+          <skill>
+            <name>URL</name>
+            <token>url</token>
+            <uses>1</uses>
+            <said>1 elemento usa URL</said>
+          </skill>
+          <skill>
+            <name>URLRewriting</name>
+            <token>urlrewriting</token>
+            <uses>1</uses>
+            <said>1 elemento usa URLRewriting</said>
+          </skill>
+          <skill>
+            <name>Vite</name>
+            <token>vite</token>
+            <uses>1</uses>
+            <said>1 elemento usa Vite</said>
+          </skill>
+          <skill>
+            <name>WebEconomy</name>
+            <token>webeconomy</token>
+            <uses>1</uses>
+            <said>1 elemento usa WebEconomy</said>
+          </skill>
+          <skill>
+            <name>Weber</name>
+            <token>weber</token>
+            <uses>1</uses>
+            <said>1 elemento usa Weber</said>
+          </skill>
+          <skill>
+            <name>WebHosting</name>
+            <token>webhosting</token>
+            <uses>1</uses>
+            <said>1 elemento usa WebHosting</said>
+          </skill>
+          <skill>
+            <name>Weka</name>
+            <token>weka</token>
+            <uses>1</uses>
+            <said>1 elemento usa Weka</said>
+          </skill>
+          <skill>
+            <name>XPath</name>
+            <token>xpath</token>
+            <uses>1</uses>
+            <said>1 elemento usa XPath</said>
+          </skill>
+          <skill>
+            <name>XQuery</name>
+            <token>xquery</token>
+            <uses>1</uses>
+            <said>1 elemento usa XQuery</said>
+          </skill>
+          <skill>
+            <name>XSLT</name>
+            <token>xslt</token>
+            <uses>1</uses>
+            <said>1 elemento usa XSLT</said>
+          </skill>
+          <skill>
+            <name>XSS</name>
+            <token>xss</token>
+            <uses>1</uses>
+            <said>1 elemento usa XSS</said>
+          </skill>
+        </rest>
+      </skillFilter>
       <ticks>
         <tick>
           <label>2010</label>
@@ -319,6 +1642,7 @@
               <name>RESTOMAX</name>
               <title>Desarrollador Web Full Stack en prácticas</title>
               <caption>RESTOMAX</caption>
+              <uses>net flutter sql-server</uses>
               <period>nov 2021 – mar 2022</period>
               <label>RESTOMAX — Desarrollador Web Full Stack en prácticas — nov 2021 – mar 2022</label>
               <left>70.87%</left>
@@ -332,6 +1656,7 @@
               <depth>1</depth>
               <name>WebMenu</name>
               <caption>WebMenu</caption>
+              <uses>net flutter sql-server qrcode</uses>
               <period>nov 2021 – mar 2022</period>
               <skills>.NET · Flutter · SQL Server · QRCode</skills>
               <label>WebMenu — nov 2021 – mar 2022</label>
@@ -375,6 +1700,7 @@
               <name>Technofutur TIC</name>
               <title>Desarrollador Web Full Stack en prácticas</title>
               <caption>Technofutur TIC</caption>
+              <uses>sql-server node-js express-js react angular typescript auth0 sequelize</uses>
               <period>dic 2022 – jun 2023</period>
               <label>Technofutur TIC — Desarrollador Web Full Stack en prácticas — dic 2022 – jun 2023</label>
               <left>77.18%</left>
@@ -389,6 +1715,7 @@
               <name>MyWay</name>
               <title>Freelance</title>
               <caption>MyWay · Aplicación web</caption>
+              <uses>angular javascript typescript express-js api ui-ux sql-server auth0 paypal sequelize node-js react</uses>
               <period>ene 2023 – jun 2023</period>
               <detail>Aplicación web · Fundador</detail>
               <summary>Gestor educativo para estudiantes. Sin mantenimiento; la base de datos y la autenticación no están disponibles.</summary>
@@ -406,6 +1733,7 @@
               <name>Xtrada</name>
               <title>Software Crafter</title>
               <caption>Xtrada · Software Crafter</caption>
+              <uses>net ddd cleancode cleanarchitecture</uses>
               <period>ago 2023 – sep 2024</period>
               <label>Xtrada — Software Crafter — ago 2023 – sep 2024</label>
               <left>81.38%</left>
@@ -420,6 +1748,7 @@
               <name>Xtrada</name>
               <title>Software Crafter .NET / Blazor</title>
               <caption>Xtrada · Software Crafter .NET / Blazor</caption>
+              <uses>net blazor sql-server ddd entityframework xunit</uses>
               <period>sep 2023 – dic 2023</period>
               <label>Xtrada — Software Crafter .NET / Blazor — sep 2023 – dic 2023</label>
               <left>81.55%</left>
@@ -433,6 +1762,7 @@
               <depth>1</depth>
               <name>Kwalitijd</name>
               <caption>Kwalitijd</caption>
+              <uses>net c blazor entityframework xunit sql-server ddd</uses>
               <period>sep 2023 – dic 2023</period>
               <skills>.NET · C# · Blazor · EntityFramework · xUnit</skills>
               <label>Kwalitijd — sep 2023 – dic 2023</label>
@@ -448,6 +1778,7 @@
               <name>Xtrada</name>
               <title>Software Crafter .NET / React</title>
               <caption>Xtrada · Software Crafter .NET / React</caption>
+              <uses>net react sql-server typescript entityframework docker azure opentelemetry</uses>
               <period>ene 2024 – ago 2024</period>
               <label>Xtrada — Software Crafter .NET / React — ene 2024 – ago 2024</label>
               <left>83.5%</left>
@@ -461,6 +1792,7 @@
               <depth>1</depth>
               <name>VhAuctions</name>
               <caption>VhAuctions</caption>
+              <uses>net c entityframework react typescript docker azure opentelemetry sql-server</uses>
               <period>ene 2024 – feb 2024</period>
               <skills>.NET · C# · EntityFramework · React · TypeScript</skills>
               <label>VhAuctions — ene 2024 – feb 2024</label>
@@ -476,6 +1808,7 @@
               <name>Xtrada</name>
               <title>Data Scientist</title>
               <caption>Xtrada · Data Scientist</caption>
+              <uses>python spacy pandas numpy net</uses>
               <period>mar 2024 – sep 2024</period>
               <label>Xtrada — Data Scientist — mar 2024 – sep 2024</label>
               <left>84.47%</left>
@@ -489,6 +1822,7 @@
               <depth>1</depth>
               <name>VhAuctions NER Inventory Model</name>
               <caption>VhAuctions NER Inventory Model</caption>
+              <uses>python spacy pandas numpy net ner</uses>
               <period>mar 2024 – ago 2024</period>
               <skills>Python · SpaCy · Pandas · NumPy · .NET</skills>
               <label>VhAuctions NER Inventory Model — mar 2024 – ago 2024</label>
@@ -504,6 +1838,7 @@
               <name>Emvi.ai</name>
               <title>AI Software Crafter</title>
               <caption>Emvi.ai · AI Software Crafter</caption>
+              <uses>python whisper fastapi deepface openai postgresql sqlalchemy</uses>
               <period>oct 2024 – jun 2025</period>
               <label>Emvi.ai — AI Software Crafter — oct 2024 – jun 2025</label>
               <left>87.86%</left>
@@ -517,6 +1852,7 @@
               <depth>1</depth>
               <name>Remi</name>
               <caption>Remi · Aplicación de IA</caption>
+              <uses>python fastapi openai whisper deepface postgresql sqlalchemy</uses>
               <period>oct 2024 – jun 2025</period>
               <detail>Aplicación de IA</detail>
               <summary>Aplicación de reminiscencia para personas con problemas cognitivos.</summary>
@@ -534,6 +1870,7 @@
               <name>Emvi.ai</name>
               <title>AI Software Crafter Lead</title>
               <caption>Emvi.ai · AI Software Crafter Lead</caption>
+              <uses>dart flutter firebase openai valhalla</uses>
               <period>dic 2024 – jun 2025</period>
               <label>Emvi.ai — AI Software Crafter Lead — dic 2024 – jun 2025</label>
               <left>88.83%</left>
@@ -547,6 +1884,7 @@
               <depth>1</depth>
               <name>Emvi App</name>
               <caption>Emvi App · Aplicación móvil</caption>
+              <uses>flutter firebase openai valhalla ai dart</uses>
               <period>dic 2024 – jun 2025</period>
               <detail>Aplicación móvil</detail>
               <summary>Asistente visual con IA para personas con discapacidad visual.</summary>
@@ -564,6 +1902,7 @@
               <name>Acteble</name>
               <title>Fundador</title>
               <caption>Acteble</caption>
+              <uses>rust flutter dart tokio docker ddd cleanarchitecture postgresql</uses>
               <period>jul 2025 – Actualidad</period>
               <label>Acteble — Fundador — jul 2025 – Actualidad</label>
               <left>92.23%</left>
@@ -577,6 +1916,7 @@
               <depth>1</depth>
               <name>Acteble API</name>
               <caption>Acteble API · API</caption>
+              <uses>rust tokio axum tonic grpc sqlx postgresql postgis redis minio livekit opentelemetry docker caddy ddd hexagonalarchitecture cqrs eventdriven</uses>
               <period>jun 2025 – Actualidad</period>
               <detail>API · Fundador</detail>
               <summary>Backend de la plataforma Acteble: un monolito modular en Rust.</summary>
@@ -593,6 +1933,7 @@
               <depth>1</depth>
               <name>Acteble App</name>
               <caption>Acteble App · Aplicación móvil</caption>
+              <uses>flutter dart melos riverpod drift sqlite dio grpc fluttermap firebase offlinefirst mobile</uses>
               <period>abr 2025 – Actualidad</period>
               <detail>Aplicación móvil · Fundador</detail>
               <summary>Cliente multiplataforma offline-first de Acteble, desarrollado con Flutter.</summary>
@@ -609,6 +1950,7 @@
               <depth>1</depth>
               <name>Acteble Website</name>
               <caption>Acteble Website · Sitio web</caption>
+              <uses>react vite javascript i18next reactrouter</uses>
               <period>jun 2025 – Actualidad</period>
               <detail>Sitio web · Fundador</detail>
               <summary>Sitio público de Acteble: una aplicación React de una sola página.</summary>
@@ -626,6 +1968,7 @@
               <name>Mémoire de master</name>
               <title>UMONS</title>
               <caption>Mémoire de master · Trabajo de fin de máster</caption>
+              <uses>python latex minizinc constraintprogramming combinatorialoptimization pareto</uses>
               <period>nov 2025 – sep 2026</period>
               <detail>Trabajo de fin de máster · Autor</detail>
               <summary>Trabajo de fin de máster en la UMONS — la I+D del motor de planificación de Acteble.</summary>
@@ -643,6 +1986,7 @@
               <name>Senado belga</name>
               <title>Investigador en IA</title>
               <caption>Senado belga</caption>
+              <uses>python java net rag ocr sentencetransformers pandas</uses>
               <period>nov 2025 – jun 2026</period>
               <label>Senado belga — Investigador en IA — nov 2025 – jun 2026</label>
               <left>94.21%</left>
@@ -656,6 +2000,7 @@
               <depth>1</depth>
               <name>Synergy</name>
               <caption>Synergy · Plataforma</caption>
+              <uses>python java net rag ai</uses>
               <period>nov 2025 – jun 2026</period>
               <detail>Plataforma · Autor</detail>
               <summary>Plataforma interna del Parlamento federal belga para buscar, explorar y conversar con los archivos parlamentarios.</summary>
@@ -672,6 +2017,7 @@
               <depth>1</depth>
               <name>fedrag-be</name>
               <caption>fedrag-be · Investigación</caption>
+              <uses>rag python evaluation benchmark ocr sentencetransformers pandas</uses>
               <period>nov 2025 – jun 2026</period>
               <detail>Investigación · Autor</detail>
               <summary>Protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado belga, con énfasis en la robustez bilingüe FR/NL.</summary>
@@ -796,6 +2142,7 @@
               <depth>1</depth>
               <name>Économie I</name>
               <caption>Économie I</caption>
+              <uses>microeconomics competitivemarkets firmbehaviour marketfailure</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Économie I — sep 2016 – jun 2017</label>
               <left>41.25%</left>
@@ -808,6 +2155,7 @@
               <depth>1</depth>
               <name>Économie II</name>
               <caption>Économie II</caption>
+              <uses>imperfectcompetition macroeconomics nationalincome monetarymarket</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Économie II — sep 2016 – jun 2017</label>
               <left>41.25%</left>
@@ -820,6 +2168,7 @@
               <depth>1</depth>
               <name>Science politique</name>
               <caption>Science politique</caption>
+              <uses>politicalscience power state democracy</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Science politique — sep 2016 – jun 2017</label>
               <left>41.25%</left>
@@ -832,6 +2181,7 @@
               <depth>1</depth>
               <name>Séminaire : penser le social</name>
               <caption>Séminaire : penser le social</caption>
+              <uses>epistemology durkheim weber marx</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Séminaire : penser le social — sep 2016 – jun 2017</label>
               <left>41.25%</left>
@@ -844,6 +2194,7 @@
               <depth>1</depth>
               <name>Séminaire : principes et méthodes en sciences sociales</name>
               <caption>Séminaire : principes et méthodes en sciences sociales</caption>
+              <uses>academicwriting citation epistemology</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Séminaire : principes et méthodes en sciences sociales — sep 2016 – jun 2017</label>
               <left>41.25%</left>
@@ -856,6 +2207,7 @@
               <depth>1</depth>
               <name>Socio-économie des médias</name>
               <caption>Socio-économie des médias</caption>
+              <uses>mediaeconomics advertising mediaregulation webeconomy</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Socio-économie des médias — sep 2016 – jun 2017</label>
               <left>41.25%</left>
@@ -868,6 +2220,7 @@
               <depth>1</depth>
               <name>Anglais I (Saint-Louis)</name>
               <caption>Anglais I (Saint-Louis)</caption>
+              <uses>english</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Anglais I (Saint-Louis) — sep 2016 – jun 2017</label>
               <left>41.25%</left>
@@ -880,6 +2233,7 @@
               <depth>1</depth>
               <name>Néerlandais I</name>
               <caption>Néerlandais I</caption>
+              <uses>dutch</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Néerlandais I — sep 2016 – jun 2017</label>
               <left>41.25%</left>
@@ -893,6 +2247,7 @@
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
               <title>Bachelor profesional — Informática de gestión</title>
               <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Bachelor profesional — Informática de gestión</caption>
+              <uses>sql c net java python js html css</uses>
               <period>sep 2018 – oct 2022</period>
               <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Bachelor profesional — Informática de gestión — sep 2018 – oct 2022 — horario vespertino</label>
               <schedule>evening</schedule>
@@ -907,6 +2262,7 @@
               <depth>1</depth>
               <name>18-19</name>
               <caption>18-19</caption>
+              <uses>sql c net java python js html css</uses>
               <period>sep 2018 – sep 2019</period>
               <label>18-19 — sep 2018 – sep 2019 — horario vespertino</label>
               <schedule>evening</schedule>
@@ -921,6 +2277,7 @@
               <depth>1</depth>
               <name>19-20</name>
               <caption>19-20</caption>
+              <uses>sql c net java python js html css</uses>
               <period>sep 2019 – sep 2020</period>
               <label>19-20 — sep 2019 – sep 2020 — horario vespertino</label>
               <schedule>evening</schedule>
@@ -935,6 +2292,7 @@
               <depth>1</depth>
               <name>20-21</name>
               <caption>20-21</caption>
+              <uses>sql c net java python js html css</uses>
               <period>sep 2020 – sep 2021</period>
               <label>20-21 — sep 2020 – sep 2021 — horario vespertino</label>
               <schedule>evening</schedule>
@@ -949,6 +2307,7 @@
               <depth>1</depth>
               <name>21-22</name>
               <caption>21-22</caption>
+              <uses>sql c net java python js html css</uses>
               <period>sep 2021 – oct 2022</period>
               <label>21-22 — sep 2021 – oct 2022 — horario vespertino</label>
               <schedule>evening</schedule>
@@ -963,6 +2322,7 @@
               <depth>1</depth>
               <name>Structure des ordinateurs</name>
               <caption>Structure des ordinateurs</caption>
+              <uses>computerarchitecture binary hexadecimal hardware</uses>
               <period>sep 2018 – sep 2019</period>
               <label>Structure des ordinateurs — sep 2018 – sep 2019</label>
               <left>52.9%</left>
@@ -975,6 +2335,7 @@
               <depth>1</depth>
               <name>Informatique - Système d'exploitation</name>
               <caption>Informatique - Système d'exploitation</caption>
+              <uses>operatingsystems shellscripting systemadministration</uses>
               <period>sep 2018 – sep 2019</period>
               <label>Informatique - Système d'exploitation — sep 2018 – sep 2019</label>
               <left>52.9%</left>
@@ -987,6 +2348,7 @@
               <depth>1</depth>
               <name>Mathématique appliquée à l'informatique</name>
               <caption>Mathématique appliquée à l'informatique</caption>
+              <uses>linearalgebra graphtheory settheory relationalalgebra mathematicallogic cryptography</uses>
               <period>sep 2018 – sep 2019</period>
               <label>Mathématique appliquée à l'informatique — sep 2018 – sep 2019</label>
               <left>52.9%</left>
@@ -999,6 +2361,7 @@
               <depth>1</depth>
               <name>Principes algorithmiques et programmation</name>
               <caption>Principes algorithmiques et programmation</caption>
+              <uses>algorithms datatypes controlflow programming</uses>
               <period>sep 2018 – sep 2019</period>
               <label>Principes algorithmiques et programmation — sep 2018 – sep 2019</label>
               <left>52.9%</left>
@@ -1011,6 +2374,7 @@
               <depth>1</depth>
               <name>Principes d'analyse informatique</name>
               <caption>Principes d'analyse informatique</caption>
+              <uses>uml entityrelationship systemsanalysis</uses>
               <period>sep 2018 – sep 2019</period>
               <label>Principes d'analyse informatique — sep 2018 – sep 2019</label>
               <left>52.9%</left>
@@ -1023,6 +2387,7 @@
               <depth>1</depth>
               <name>Bases des réseaux</name>
               <caption>Bases des réseaux</caption>
+              <uses>ethernet mac tcp-ip networking</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Bases des réseaux — sep 2019 – sep 2020</label>
               <left>58.46%</left>
@@ -1035,6 +2400,7 @@
               <depth>1</depth>
               <name>Gestion et exploitation de bases de données</name>
               <caption>Gestion et exploitation de bases de données</caption>
+              <uses>triggers storedprocedures datawarehouse queryoptimization</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Gestion et exploitation de bases de données — sep 2019 – sep 2020</label>
               <left>58.46%</left>
@@ -1047,6 +2413,7 @@
               <depth>1</depth>
               <name>Information et communication professionnelles</name>
               <caption>Information et communication professionnelles</caption>
+              <uses>professionalcommunication</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Information et communication professionnelles — sep 2019 – sep 2020</label>
               <left>58.46%</left>
@@ -1059,6 +2426,7 @@
               <depth>1</depth>
               <name>Initiation aux bases de données</name>
               <caption>Initiation aux bases de données</caption>
+              <uses>sql relationalmodel joins indexing</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Initiation aux bases de données — sep 2019 – sep 2020</label>
               <left>58.46%</left>
@@ -1071,6 +2439,7 @@
               <depth>1</depth>
               <name>Notions de e-business</name>
               <caption>Notions de e-business</caption>
+              <uses>ebusiness</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Notions de e-business — sep 2019 – sep 2020</label>
               <left>58.46%</left>
@@ -1083,6 +2452,7 @@
               <depth>1</depth>
               <name>Projet d'analyse et de conception</name>
               <caption>Projet d'analyse et de conception</caption>
+              <uses>systemsanalysis softwaredesign modelling</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Projet d'analyse et de conception — sep 2019 – sep 2020</label>
               <left>58.46%</left>
@@ -1095,6 +2465,7 @@
               <depth>1</depth>
               <name>Techniques de gestion de projet</name>
               <caption>Techniques de gestion de projet</caption>
+              <uses>projectmanagement</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Techniques de gestion de projet — sep 2019 – sep 2020</label>
               <left>58.46%</left>
@@ -1107,6 +2478,7 @@
               <depth>1</depth>
               <name>Web : principes de base</name>
               <caption>Web : principes de base</caption>
+              <uses>html css url dns webhosting</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Web : principes de base — sep 2019 – sep 2020</label>
               <left>58.46%</left>
@@ -1119,6 +2491,7 @@
               <depth>1</depth>
               <name>Éléments de statistique</name>
               <caption>Éléments de statistique</caption>
+              <uses>statistics</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Éléments de statistique — sep 2020 – sep 2021</label>
               <left>64.29%</left>
@@ -1131,6 +2504,7 @@
               <depth>1</depth>
               <name>Organisation des entreprises et éléments de management</name>
               <caption>Organisation des entreprises et éléments de management</caption>
+              <uses>management</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Organisation des entreprises et éléments de management — sep 2020 – sep 2021</label>
               <left>64.29%</left>
@@ -1143,6 +2517,7 @@
               <depth>1</depth>
               <name>Produits logiciels de gestion intégrés</name>
               <caption>Produits logiciels de gestion intégrés</caption>
+              <uses>erp</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Produits logiciels de gestion intégrés — sep 2020 – sep 2021</label>
               <left>64.29%</left>
@@ -1155,6 +2530,7 @@
               <depth>1</depth>
               <name>Programmation orientée objet</name>
               <caption>Programmation orientée objet</caption>
+              <uses>oop inheritance polymorphism encapsulation overloading</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Programmation orientée objet — sep 2020 – sep 2021</label>
               <left>64.29%</left>
@@ -1167,6 +2543,7 @@
               <depth>1</depth>
               <name>Projet de développement SGBD</name>
               <caption>Projet de développement SGBD</caption>
+              <uses>dataaccesslayer transactions databaseprogramming debugging</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Projet de développement SGBD — sep 2020 – sep 2021</label>
               <left>64.29%</left>
@@ -1179,6 +2556,7 @@
               <depth>1</depth>
               <name>Projet de développement web</name>
               <caption>Projet de développement web</caption>
+              <uses>javascript ajax json xml clientsidescripting</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Projet de développement web — sep 2020 – sep 2021</label>
               <left>64.29%</left>
@@ -1191,6 +2569,7 @@
               <depth>1</depth>
               <name>Administration, gestion et sécurisation des réseaux</name>
               <caption>Administration, gestion et sécurisation des réseaux</caption>
+              <uses>networkadministration networksecurity applicationserver</uses>
               <period>sep 2021 – oct 2022</period>
               <label>Administration, gestion et sécurisation des réseaux — sep 2021 – oct 2022</label>
               <left>70.11%</left>
@@ -1203,6 +2582,7 @@
               <depth>1</depth>
               <name>Projet d'intégration de développement</name>
               <caption>Projet d'intégration de développement</caption>
+              <uses>ajax json xml sqlinjection xss caching urlrewriting</uses>
               <period>sep 2021 – oct 2022</period>
               <label>Projet d'intégration de développement — sep 2021 – oct 2022</label>
               <left>70.11%</left>
@@ -1215,6 +2595,7 @@
               <depth>1</depth>
               <name>Veille technologique</name>
               <caption>Veille technologique</caption>
+              <uses>techwatch</uses>
               <period>sep 2021 – oct 2022</period>
               <label>Veille technologique — sep 2021 – oct 2022</label>
               <left>70.11%</left>
@@ -1255,6 +2636,7 @@
               <depth>1</depth>
               <name>WebMenu</name>
               <caption>WebMenu</caption>
+              <uses>net flutter sql-server qrcode</uses>
               <period>nov 2021 – mar 2022</period>
               <skills>.NET · Flutter · SQL Server · QRCode</skills>
               <label>WebMenu — nov 2021 – mar 2022</label>
@@ -1285,6 +2667,7 @@
               <name>UMons</name>
               <title>Máster en Ciencias — Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)</title>
               <caption>UMons · Máster en Ciencias — Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)</caption>
+              <uses>python latex ddd cleanarchitecture</uses>
               <period>oct 2022 – sep 2026</period>
               <label>UMons — Máster en Ciencias — Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS) — oct 2022 – sep 2026 — horario vespertino</label>
               <schedule>evening</schedule>
@@ -1300,6 +2683,7 @@
               <name>22-23</name>
               <title>Bloque complementario</title>
               <caption>22-23 · Bloque complementario</caption>
+              <uses>python latex ddd cleanarchitecture</uses>
               <period>oct 2022 – sep 2023</period>
               <label>22-23 — Bloque complementario — oct 2022 – sep 2023 — horario vespertino</label>
               <schedule>evening</schedule>
@@ -1315,6 +2699,7 @@
               <name>23-24</name>
               <title>Bloque complementario</title>
               <caption>23-24 · Bloque complementario</caption>
+              <uses>python latex ddd cleanarchitecture</uses>
               <period>sep 2023 – sep 2024</period>
               <label>23-24 — Bloque complementario — sep 2023 – sep 2024 — horario vespertino</label>
               <schedule>evening</schedule>
@@ -1330,6 +2715,7 @@
               <name>24-25</name>
               <title>Máster 1</title>
               <caption>24-25 · Máster 1</caption>
+              <uses>python latex ddd cleanarchitecture</uses>
               <period>sep 2024 – sep 2025</period>
               <label>24-25 — Máster 1 — sep 2024 – sep 2025 — horario vespertino</label>
               <schedule>evening</schedule>
@@ -1345,6 +2731,7 @@
               <name>25-26</name>
               <title>Máster 2</title>
               <caption>25-26 · Máster 2</caption>
+              <uses>python latex ddd cleanarchitecture</uses>
               <period>sep 2025 – sep 2026</period>
               <label>25-26 — Máster 2 — sep 2025 – sep 2026 — horario vespertino</label>
               <schedule>evening</schedule>
@@ -1359,6 +2746,7 @@
               <depth>1</depth>
               <name>Bases de données I</name>
               <caption>Bases de données I</caption>
+              <uses>sql relationalalgebra normalization indexing nosql bigdata</uses>
               <period>oct 2022 – sep 2023</period>
               <label>Bases de données I — oct 2022 – sep 2023</label>
               <left>76.43%</left>
@@ -1371,6 +2759,7 @@
               <depth>1</depth>
               <name>Algorithmique</name>
               <caption>Algorithmique</caption>
+              <uses>algorithms datastructures complexity trees</uses>
               <period>oct 2022 – sep 2023</period>
               <label>Algorithmique — oct 2022 – sep 2023</label>
               <left>76.43%</left>
@@ -1383,6 +2772,7 @@
               <depth>1</depth>
               <name>Modélisation logicielle</name>
               <caption>Modélisation logicielle</caption>
+              <uses>java uml designpatterns unittesting mocktesting bdd</uses>
               <period>oct 2022 – sep 2023</period>
               <label>Modélisation logicielle — oct 2022 – sep 2023</label>
               <left>76.43%</left>
@@ -1395,6 +2785,7 @@
               <depth>1</depth>
               <name>Mathématique</name>
               <caption>Mathématique</caption>
+              <uses>graphtheory combinatorics complexity propositionallogic predicatelogic</uses>
               <period>oct 2022 – sep 2023</period>
               <label>Mathématique — oct 2022 – sep 2023</label>
               <left>76.43%</left>
@@ -1407,6 +2798,7 @@
               <depth>1</depth>
               <name>Anglais I</name>
               <caption>Anglais I</caption>
+              <uses>english</uses>
               <period>sep 2023 – sep 2024</period>
               <label>Anglais I — sep 2023 – sep 2024</label>
               <left>81.76%</left>
@@ -1419,6 +2811,7 @@
               <depth>1</depth>
               <name>Lecture et rédaction scientifique</name>
               <caption>Lecture et rédaction scientifique</caption>
+              <uses>scientificwriting literaturereview</uses>
               <period>sep 2023 – sep 2024</period>
               <label>Lecture et rédaction scientifique — sep 2023 – sep 2024</label>
               <left>81.76%</left>
@@ -1431,6 +2824,7 @@
               <depth>1</depth>
               <name>Stratégie et politiques en ressources humaines</name>
               <caption>Stratégie et politiques en ressources humaines</caption>
+              <uses>hrm</uses>
               <period>sep 2023 – sep 2024</period>
               <label>Stratégie et politiques en ressources humaines — sep 2023 – sep 2024</label>
               <left>81.76%</left>
@@ -1443,6 +2837,7 @@
               <depth>1</depth>
               <name>Réseaux</name>
               <caption>Réseaux</caption>
+              <uses>tcp-ip http dns ospf bgp ethernet</uses>
               <period>sep 2023 – sep 2024</period>
               <label>Réseaux — sep 2023 – sep 2024</label>
               <left>81.76%</left>
@@ -1455,6 +2850,7 @@
               <depth>1</depth>
               <name>Systèmes d'exploitation</name>
               <caption>Systèmes d'exploitation</caption>
+              <uses>processes semaphores synchronization memorymanagement filesystems scheduling</uses>
               <period>sep 2023 – sep 2024</period>
               <label>Systèmes d'exploitation — sep 2023 – sep 2024</label>
               <left>81.76%</left>
@@ -1467,6 +2863,7 @@
               <depth>1</depth>
               <name>Anglais II</name>
               <caption>Anglais II</caption>
+              <uses>english</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Anglais II — sep 2024 – sep 2025</label>
               <left>87.59%</left>
@@ -1479,6 +2876,7 @@
               <depth>1</depth>
               <name>Bases de données II</name>
               <caption>Bases de données II</caption>
+              <uses>xml xslt xquery xpath basex datamining weka</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Bases de données II — sep 2024 – sep 2025</label>
               <left>87.59%</left>
@@ -1491,6 +2889,7 @@
               <depth>1</depth>
               <name>Ingénierie de logiciels et gestion de projets</name>
               <caption>Ingénierie de logiciels et gestion de projets</caption>
+              <uses>agile scrum softwareengineering</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Ingénierie de logiciels et gestion de projets — sep 2024 – sep 2025</label>
               <left>87.59%</left>
@@ -1503,6 +2902,7 @@
               <depth>1</depth>
               <name>Intelligence artificielle</name>
               <caption>Intelligence artificielle</caption>
+              <uses>searchalgorithms metaheuristics firstorderlogic supervisedlearning</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Intelligence artificielle — sep 2024 – sep 2025</label>
               <left>87.59%</left>
@@ -1515,6 +2915,7 @@
               <depth>1</depth>
               <name>Recherche opérationnelle et applications</name>
               <caption>Recherche opérationnelle et applications</caption>
+              <uses>operationsresearch linearprogramming integerprogramming duality</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Recherche opérationnelle et applications — sep 2024 – sep 2025</label>
               <left>87.59%</left>
@@ -1527,6 +2928,7 @@
               <depth>1</depth>
               <name>Structures de données</name>
               <caption>Structures de données</caption>
+              <uses>avltrees btrees hashtables sorting complexity</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Structures de données — sep 2024 – sep 2025</label>
               <left>87.59%</left>
@@ -1539,6 +2941,7 @@
               <depth>1</depth>
               <name>Séminaires d'informatique en veille technologique</name>
               <caption>Séminaires d'informatique en veille technologique</caption>
+              <uses>techwatch</uses>
               <period>sep 2025 – sep 2026</period>
               <label>Séminaires d'informatique en veille technologique — sep 2025 – sep 2026</label>
               <left>93.41%</left>
@@ -1551,6 +2954,7 @@
               <depth>1</depth>
               <name>Cryptographie et sécurité des systèmes informatiques</name>
               <caption>Cryptographie et sécurité des systèmes informatiques</caption>
+              <uses>cryptography unix networksecurity applicationsecurity</uses>
               <period>sep 2025 – sep 2026</period>
               <label>Cryptographie et sécurité des systèmes informatiques — sep 2025 – sep 2026</label>
               <left>93.41%</left>
@@ -1563,6 +2967,7 @@
               <depth>1</depth>
               <name>Éthique et droit de l'informatique</name>
               <caption>Éthique et droit de l'informatique</caption>
+              <uses>intellectualproperty dataprotection gdpr</uses>
               <period>sep 2025 – sep 2026</period>
               <label>Éthique et droit de l'informatique — sep 2025 – sep 2026</label>
               <left>93.41%</left>
@@ -1603,6 +3008,7 @@
               <depth>1</depth>
               <name>Remi</name>
               <caption>Remi · Aplicación de IA</caption>
+              <uses>python fastapi openai whisper deepface postgresql sqlalchemy</uses>
               <period>oct 2024 – jun 2025</period>
               <detail>Aplicación de IA</detail>
               <summary>Aplicación de reminiscencia para personas con problemas cognitivos.</summary>
@@ -1619,6 +3025,7 @@
               <depth>1</depth>
               <name>Emvi App</name>
               <caption>Emvi App · Aplicación móvil</caption>
+              <uses>flutter firebase openai valhalla ai dart</uses>
               <period>dic 2024 – jun 2025</period>
               <detail>Aplicación móvil</detail>
               <summary>Asistente visual con IA para personas con discapacidad visual.</summary>
@@ -1635,6 +3042,7 @@
               <depth>1</depth>
               <name>Synergy</name>
               <caption>Synergy · Plataforma</caption>
+              <uses>python java net rag ai</uses>
               <period>nov 2025 – jun 2026</period>
               <detail>Plataforma · Autor</detail>
               <summary>Plataforma interna del Parlamento federal belga para buscar, explorar y conversar con los archivos parlamentarios.</summary>
@@ -1651,6 +3059,7 @@
               <depth>1</depth>
               <name>fedrag-be</name>
               <caption>fedrag-be · Investigación</caption>
+              <uses>rag python evaluation benchmark ocr sentencetransformers pandas</uses>
               <period>nov 2025 – jun 2026</period>
               <detail>Investigación · Autor</detail>
               <summary>Protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado belga, con énfasis en la robustez bilingüe FR/NL.</summary>
@@ -1668,6 +3077,7 @@
               <name>Mémoire de master</name>
               <title>UMONS</title>
               <caption>Mémoire de master · Trabajo de fin de máster</caption>
+              <uses>python latex minizinc constraintprogramming combinatorialoptimization pareto</uses>
               <period>nov 2025 – sep 2026</period>
               <detail>Trabajo de fin de máster · Autor</detail>
               <summary>Trabajo de fin de máster en la UMONS — la I+D del motor de planificación de Acteble.</summary>
@@ -1727,6 +3137,7 @@
               <depth>1</depth>
               <name>EduCraft</name>
               <caption>EduCraft</caption>
+              <uses>php api ui-ux</uses>
               <period>mar 2024 – mar 2024</period>
               <summary>Plataforma que permite a cualquiera adquirir nuevas competencias.</summary>
               <skills>PHP · API · UI/UX</skills>

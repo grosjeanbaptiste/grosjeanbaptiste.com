@@ -1,0 +1,97 @@
+/* The skill filter of the XSLT themes (assets/xslt/skill-filter.xsl): links
+ * and :target, no script. The theme writes one rule per skill — which bars
+ * fade, which link reads as chosen, which sentence shows; this sheet holds
+ * what does not depend on the skill. The classic page's filter is scripted
+ * and styled by css/browse.css. */
+
+#timeline {
+  /* What the per-skill rules read. */
+  --tl-dimmed: 0.18;
+  --tl-chosen: var(--primary-color);
+  --tl-on-chosen: var(--on-accent-color);
+}
+
+/* A target is only a place for the URL to name: it takes no room. A skill's
+ * link leads to it, so it sits where the timeline starts, clear of the bars
+ * fixed at the top of the page. */
+.tl-skill-target {
+  position: absolute;
+  scroll-margin-top: calc(var(--views-bar-h, 0rem) + 4.5rem);
+}
+
+.tl-skills {
+  margin-top: 1rem;
+}
+
+.tl-skills h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95em;
+}
+
+.tl-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tl-chips li::before {
+  content: none;
+}
+
+.tl-chip,
+.tl-chip-more {
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 0.25rem 0.7rem;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 999rem;
+  background: var(--card-background);
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tl-chip-count {
+  margin-left: 0.25em;
+  opacity: 0.7;
+}
+
+.tl-chips-rest {
+  margin-top: 0.5rem;
+}
+
+.tl-chip-more {
+  border-style: dashed;
+  color: var(--muted-color);
+  list-style: none;
+}
+
+.tl-chip-more::-webkit-details-marker {
+  display: none;
+}
+
+.tl-chips-rest[open] .tl-chips {
+  margin-top: 0.5rem;
+}
+
+/* The sentence of a skill: shown by the theme's rule while it is the chosen one. */
+.tl-skill-said {
+  display: none;
+  margin: 0.6rem 0 0;
+  font-size: 0.85em;
+  color: var(--muted-color);
+}
+
+/* On paper the whole CV is printed, every bar in full ink. */
+@media print {
+  .tl-skills {
+    display: none !important;
+  }
+
+  #timeline {
+    --tl-dimmed: 1;
+  }
+}

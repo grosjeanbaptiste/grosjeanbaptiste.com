@@ -4,7 +4,9 @@
 // what each carried under it, and the outline of each such group.
 const I18N = require('./i18n');
 const { withPrintRows } = require('./timeline-print');
-const { toldBy } = require('./timeline-details');
+const { toldBy, standsFor } = require('./timeline-details');
+const { entriesOf } = require('./cv-index');
+const { skillFilterForXml } = require('./xml-skill-filter');
 const { pct, periodOf, labelOf, legendOf, LANE_LABEL, zoomsOf } = require('./timeline-view');
 
 // The XSLT themes give an id to each job and each degree, nothing else: a bar
@@ -18,12 +20,16 @@ function targetOf(bar) {
 function timelineForXml(resume, lang, today) {
   const t = I18N[lang];
   const timeline = withPrintRows(resume, today);
+  // The skill filter the themes draw with no script (xml-skill-filter.js).
+  const drawn = new Set(timeline.lanes.flatMap((lane) => lane.bars.map(standsFor)));
+  const { filter, tokensOf } = skillFilterForXml(entriesOf(resume), drawn, t);
   return {
     title: t.timelineTitle,
     months: timeline.months,
     // What the moon on a bar means; absent when no bar carries one.
     legend: legendOf(timeline, t),
     zooms: zoomsOf(t),
+    skillFilter: filter,
     ticks: timeline.years.map((y) => ({
       label: y.year,
       left: pct(y.month - timeline.from, timeline.months),
@@ -52,6 +58,8 @@ function timelineForXml(resume, lang, today) {
           name: bar.name,
           title: bar.title,
           caption: bar.caption,
+          // The tokens of the skills its entry uses, for the filter to match on.
+          uses: tokensOf(standsFor(bar)),
           period,
           // What a project tells beyond that, for the preview; absent otherwise.
           ...Object.fromEntries(toldBy(bar)),
