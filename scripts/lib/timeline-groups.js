@@ -9,6 +9,7 @@ const { anchorOf } = require('./anchors');
 const { blocksOf } = require('./timeline-blocks');
 const { monthOf, monthNow, ongoing, spanOf } = require('./timeline-dates');
 const { hostsProject: namesProject, namesRole } = require('./hosting');
+const { detailsOf } = require('./timeline-details');
 
 const datedProjects = (resume) => (resume.projects || []).filter((p) => p.startDate);
 const datedRoles = (resume) => (resume.volunteer || []).filter((v) => v.startDate);
@@ -39,6 +40,8 @@ function barOf(kind, record, now) {
     end,
     name,
     title: SHAPES[kind].title(record) || '',
+    // What it tells beyond that: a project its kind, its roles, its stack.
+    ...detailsOf(kind, record),
     // A degree is followed by day or on an evening schedule; nothing else has one.
     ...(kind === 'education' ? { schedule: record.schedule || 'day' } : {}),
   };

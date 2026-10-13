@@ -4,6 +4,7 @@
 // filter on, the entries that do not use it fade back.
 import type { CSSProperties } from 'react';
 import { Link, useLocation } from 'react-router';
+import { natureOf } from '../../domain/project-reading';
 import type { TimelineLane as Lane, TimelineBar } from '../../domain/timeline';
 import { useKindLabel, useReading } from '../context';
 import { formatPeriod } from '../format';
@@ -64,7 +65,15 @@ export function TimelineLane(props: Props) {
           const period = formatPeriod(block?.period ?? entry.period, lang, strings.ongoing);
           // Said aloud too: a degree followed on an evening schedule.
           const evening = schedule === 'evening' ? strings.scheduleEvening : undefined;
-          const name = [block ? bar.caption : entry.title, entry.organisation, period, evening]
+          // A project's kind and roles are said with its name.
+          const told = block ? undefined : natureOf(entry);
+          const name = [
+            block ? bar.caption : entry.title,
+            told,
+            entry.organisation,
+            period,
+            evening,
+          ]
             .filter(Boolean)
             .join(' — ');
           return (

@@ -7,6 +7,7 @@
 const I18N = require('../i18n');
 const { escapeHtml } = require('../format');
 const { withPrintRows } = require('../timeline-print');
+const { toldBy } = require('../timeline-details');
 const { pct, periodOf, labelOf, legendOf, LANE_LABEL, zoomsOf } = require('../timeline-view');
 
 // What the moon means: shown only when a degree carries one.
@@ -24,7 +25,10 @@ function renderBar(bar, timeline, lang, onPage, t) {
   // --print-row: the row once the course units are left out, on paper.
   const printed = bar.printRow === undefined ? '' : `;--print-row:${bar.printRow}`;
   const style = `left:${pct(bar.start - timeline.from, timeline.months)};width:${pct(bar.end + 1 - bar.start, timeline.months)};--row:${bar.row}${printed}`;
-  const data = `data-name="${escapeHtml(bar.name)}" data-title="${escapeHtml(bar.title)}" data-period="${escapeHtml(period)}"`;
+  // What the preview adds for a bar that tells more: a project's kind and
+  // roles, what it was, what it was built with.
+  const told = toldBy(bar).map(([key, text]) => ` data-${key}="${escapeHtml(text)}"`);
+  const data = `data-name="${escapeHtml(bar.name)}" data-title="${escapeHtml(bar.title)}" data-period="${escapeHtml(period)}"${told.join('')}`;
   // data-depth 1: a project or a role, drawn under the entry that carried it.
   // data-schedule: a degree followed on an evening schedule; the sheet sets a
   // crescent moon before its name.

@@ -49,6 +49,12 @@ addEventListener('load', () => setTimeout(() => {
   seen.preview = $('#tl-preview')?.textContent.includes(lane[0].dataset.name);
   lane[0].dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
   seen.arrowMoved = document.activeElement === lane[1];
+  // A project tells more: its kind and roles, what it was, what it was built with.
+  const project = $('.tl-bar[data-kind="project"][data-detail][data-summary][data-skills]');
+  project?.focus();
+  const told = $('#tl-preview')?.textContent ?? '';
+  seen.projectTold = Boolean(project) && ['detail', 'summary', 'skills'].every((key) => told.includes(project.dataset[key]));
+  seen.projectLines = [...document.querySelectorAll('#tl-preview > *')].map((line) => line.className);
   // A real click: nav.js takes it over to scroll smoothly and leaves the URL
   // alone, so nothing may rely on :target.
   const link = $('a.tl-bar[href="#project-remi"]');
@@ -122,6 +128,12 @@ check('"all" fits the whole career in the frame', () =>
   assert.deepEqual([seen.allStretch, seen.allFits], ['1', true]),
 );
 check('focusing a bar shows what it stands for', () => assert.equal(seen.preview, true));
+check('the preview of a project tells its kind, what it was and its stack', () =>
+  assert.equal(seen.projectTold, true),
+);
+check('the preview sets the summary and the stack apart', () =>
+  assert.deepEqual(seen.projectLines.slice(-2), ['tl-preview-summary', 'tl-preview-skills']),
+);
 check('the right arrow goes to the next bar of the lane', () =>
   assert.equal(seen.arrowMoved, true),
 );

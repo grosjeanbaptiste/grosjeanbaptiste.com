@@ -37,7 +37,8 @@ def test_the_dissertation_ended_the_day_the_degree_was_obtained():
 
 
 def test_the_dissertation_is_a_project_of_its_own_kind_at_umons():
-    assert (DISSERTATION.type, DISSERTATION.entity) == ("Dissertation", "UMONS")
+    # Its type is a word, translated: the English one names the kind.
+    assert (DISSERTATION.type.get("en"), DISSERTATION.entity) == ("Dissertation", "UMONS")
 
 
 def test_the_dissertation_began_with_its_repository():

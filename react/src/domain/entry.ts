@@ -38,6 +38,8 @@ export interface Entry {
   readonly related: readonly string[];
   // A degree's academic years, in order; absent when the CV does not divide it.
   readonly blocks?: readonly Block[];
+  // What kind of project it is ("API", "Mobile Application"); projects only.
+  readonly type?: string;
   // Set on a degree followed on an evening schedule ("horaire décalé").
   readonly schedule?: 'evening';
 }

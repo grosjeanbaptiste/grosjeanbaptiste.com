@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=109c6638"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=3ef3fc57"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -333,6 +333,7 @@
               <name>WebMenu</name>
               <caption>WebMenu</caption>
               <period>Nov 2021 – Mar 2022</period>
+              <skills>.NET · Flutter · SQL Server · QRCode</skills>
               <label>WebMenu — Nov 2021 – Mar 2022</label>
               <left>70.87%</left>
               <width>2.41%</width>
@@ -387,9 +388,12 @@
               <depth>1</depth>
               <name>MyWay</name>
               <title>Freelance</title>
-              <caption>MyWay</caption>
+              <caption>MyWay · Web Application</caption>
               <period>Jan 2023 – Jun 2023</period>
-              <label>MyWay — Freelance — Jan 2023 – Jun 2023</label>
+              <detail>Web Application · Founder</detail>
+              <summary>Education manager for students. No longer maintained; database and auth are unavailable.</summary>
+              <skills>Angular · JavaScript · TypeScript · Express.js · API</skills>
+              <label>MyWay — Web Application · Founder — Freelance — Jan 2023 – Jun 2023</label>
               <left>77.67%</left>
               <width>2.9%</width>
               <row>1</row>
@@ -430,6 +434,7 @@
               <name>Kwalitijd</name>
               <caption>Kwalitijd</caption>
               <period>Sep 2023 – Dec 2023</period>
+              <skills>.NET · C# · Blazor · EntityFramework · xUnit</skills>
               <label>Kwalitijd — Sep 2023 – Dec 2023</label>
               <left>81.55%</left>
               <width>1.93%</width>
@@ -457,6 +462,7 @@
               <name>VhAuctions</name>
               <caption>VhAuctions</caption>
               <period>Jan 2024 – Feb 2024</period>
+              <skills>.NET · C# · EntityFramework · React · TypeScript</skills>
               <label>VhAuctions — Jan 2024 – Feb 2024</label>
               <left>83.5%</left>
               <width>0.94%</width>
@@ -484,6 +490,7 @@
               <name>VhAuctions NER Inventory Model</name>
               <caption>VhAuctions NER Inventory Model</caption>
               <period>Mar 2024 – Aug 2024</period>
+              <skills>Python · SpaCy · Pandas · NumPy · .NET</skills>
               <label>VhAuctions NER Inventory Model — Mar 2024 – Aug 2024</label>
               <left>84.47%</left>
               <width>2.52%</width>
@@ -509,9 +516,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
-              <caption>Remi</caption>
+              <caption>Remi · AI Application</caption>
               <period>Oct 2024 – Jun 2025</period>
-              <label>Remi — Oct 2024 – Jun 2025</label>
+              <detail>AI Application</detail>
+              <summary>Reminiscence application for people with cognitive issues.</summary>
+              <skills>Python · FastAPI · OpenAI · Whisper · DeepFace</skills>
+              <label>Remi — AI Application — Oct 2024 – Jun 2025</label>
               <left>87.86%</left>
               <width>4.35%</width>
               <row>1</row>
@@ -536,9 +546,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
-              <caption>Emvi App</caption>
+              <caption>Emvi App · Mobile Application</caption>
               <period>Dec 2024 – Jun 2025</period>
-              <label>Emvi App — Dec 2024 – Jun 2025</label>
+              <detail>Mobile Application</detail>
+              <summary>AI powered visual assistant for visually impaired people.</summary>
+              <skills>Flutter · Firebase · OpenAI · Valhalla · AI</skills>
+              <label>Emvi App — Mobile Application — Dec 2024 – Jun 2025</label>
               <left>88.83%</left>
               <width>3.38%</width>
               <row>3</row>
@@ -563,9 +576,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble API</name>
-              <caption>Acteble API</caption>
+              <caption>Acteble API · API</caption>
               <period>Jun 2025 – Present</period>
-              <label>Acteble API — Jun 2025 – Present</label>
+              <detail>API · Founder</detail>
+              <summary>Backend of the Acteble platform: a modular monolith in Rust.</summary>
+              <skills>Rust · Tokio · Axum · Tonic · gRPC</skills>
+              <label>Acteble API — API · Founder — Jun 2025 – Present</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>1</row>
@@ -576,9 +592,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble App</name>
-              <caption>Acteble App</caption>
+              <caption>Acteble App · Mobile Application</caption>
               <period>Apr 2025 – Present</period>
-              <label>Acteble App — Apr 2025 – Present</label>
+              <detail>Mobile Application · Founder</detail>
+              <summary>Offline-first multi-platform client of Acteble, built with Flutter.</summary>
+              <skills>Flutter · Dart · Melos · Riverpod · Drift</skills>
+              <label>Acteble App — Mobile Application · Founder — Apr 2025 – Present</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>2</row>
@@ -589,9 +608,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble Website</name>
-              <caption>Acteble Website</caption>
+              <caption>Acteble Website · Website</caption>
               <period>Jun 2025 – Present</period>
-              <label>Acteble Website — Jun 2025 – Present</label>
+              <detail>Website · Founder</detail>
+              <summary>Public website of Acteble: a React single-page application.</summary>
+              <skills>React · Vite · JavaScript · i18next · ReactRouter</skills>
+              <label>Acteble Website — Website · Founder — Jun 2025 – Present</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>3</row>
@@ -603,9 +625,12 @@
               <depth>1</depth>
               <name>Mémoire de master</name>
               <title>UMONS</title>
-              <caption>Mémoire de master</caption>
+              <caption>Mémoire de master · Dissertation</caption>
               <period>Nov 2025 – Sep 2026</period>
-              <label>Mémoire de master — UMONS — Nov 2025 – Sep 2026</label>
+              <detail>Dissertation · Author</detail>
+              <summary>MSc dissertation at UMONS — the R&amp;D of Acteble's planning engine.</summary>
+              <skills>Python · LaTeX · MiniZinc · ConstraintProgramming · CombinatorialOptimization</skills>
+              <label>Mémoire de master — Dissertation · Author — UMONS — Nov 2025 – Sep 2026</label>
               <left>94.37%</left>
               <width>4.71%</width>
               <row>4</row>
@@ -630,9 +655,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
-              <caption>Synergy</caption>
+              <caption>Synergy · Platform</caption>
               <period>Nov 2025 – Jun 2026</period>
-              <label>Synergy — Nov 2025 – Jun 2026</label>
+              <detail>Platform · Author</detail>
+              <summary>Internal platform for the Belgian Federal Parliament to search, explore and converse with the parliamentary archives.</summary>
+              <skills>Python · Java · .NET · RAG · AI</skills>
+              <label>Synergy — Platform · Author — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
               <row>6</row>
@@ -643,9 +671,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
-              <caption>fedrag-be</caption>
+              <caption>fedrag-be · Research</caption>
               <period>Nov 2025 – Jun 2026</period>
-              <label>fedrag-be — Nov 2025 – Jun 2026</label>
+              <detail>Research · Author</detail>
+              <summary>Open evaluation protocol comparing retrieval strategies on the Belgian Senate corpus, with a focus on bilingual FR/NL robustness.</summary>
+              <skills>RAG · Python · Evaluation · Benchmark · OCR</skills>
+              <label>fedrag-be — Research · Author — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
               <row>7</row>
@@ -1225,6 +1256,7 @@
               <name>WebMenu</name>
               <caption>WebMenu</caption>
               <period>Nov 2021 – Mar 2022</period>
+              <skills>.NET · Flutter · SQL Server · QRCode</skills>
               <label>WebMenu — Nov 2021 – Mar 2022</label>
               <left>70.87%</left>
               <width>2.41%</width>
@@ -1570,9 +1602,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
-              <caption>Remi</caption>
+              <caption>Remi · AI Application</caption>
               <period>Oct 2024 – Jun 2025</period>
-              <label>Remi — Oct 2024 – Jun 2025</label>
+              <detail>AI Application</detail>
+              <summary>Reminiscence application for people with cognitive issues.</summary>
+              <skills>Python · FastAPI · OpenAI · Whisper · DeepFace</skills>
+              <label>Remi — AI Application — Oct 2024 – Jun 2025</label>
               <left>87.86%</left>
               <width>4.35%</width>
               <row>10</row>
@@ -1583,9 +1618,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
-              <caption>Emvi App</caption>
+              <caption>Emvi App · Mobile Application</caption>
               <period>Dec 2024 – Jun 2025</period>
-              <label>Emvi App — Dec 2024 – Jun 2025</label>
+              <detail>Mobile Application</detail>
+              <summary>AI powered visual assistant for visually impaired people.</summary>
+              <skills>Flutter · Firebase · OpenAI · Valhalla · AI</skills>
+              <label>Emvi App — Mobile Application — Dec 2024 – Jun 2025</label>
               <left>88.83%</left>
               <width>3.38%</width>
               <row>11</row>
@@ -1596,9 +1634,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
-              <caption>Synergy</caption>
+              <caption>Synergy · Platform</caption>
               <period>Nov 2025 – Jun 2026</period>
-              <label>Synergy — Nov 2025 – Jun 2026</label>
+              <detail>Platform · Author</detail>
+              <summary>Internal platform for the Belgian Federal Parliament to search, explore and converse with the parliamentary archives.</summary>
+              <skills>Python · Java · .NET · RAG · AI</skills>
+              <label>Synergy — Platform · Author — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
               <row>10</row>
@@ -1609,9 +1650,12 @@
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
-              <caption>fedrag-be</caption>
+              <caption>fedrag-be · Research</caption>
               <period>Nov 2025 – Jun 2026</period>
-              <label>fedrag-be — Nov 2025 – Jun 2026</label>
+              <detail>Research · Author</detail>
+              <summary>Open evaluation protocol comparing retrieval strategies on the Belgian Senate corpus, with a focus on bilingual FR/NL robustness.</summary>
+              <skills>RAG · Python · Evaluation · Benchmark · OCR</skills>
+              <label>fedrag-be — Research · Author — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
               <row>11</row>
@@ -1623,9 +1667,12 @@
               <depth>1</depth>
               <name>Mémoire de master</name>
               <title>UMONS</title>
-              <caption>Mémoire de master</caption>
+              <caption>Mémoire de master · Dissertation</caption>
               <period>Nov 2025 – Sep 2026</period>
-              <label>Mémoire de master — UMONS — Nov 2025 – Sep 2026</label>
+              <detail>Dissertation · Author</detail>
+              <summary>MSc dissertation at UMONS — the R&amp;D of Acteble's planning engine.</summary>
+              <skills>Python · LaTeX · MiniZinc · ConstraintProgramming · CombinatorialOptimization</skills>
+              <label>Mémoire de master — Dissertation · Author — UMONS — Nov 2025 – Sep 2026</label>
               <left>94.37%</left>
               <width>4.71%</width>
               <row>12</row>
@@ -1681,6 +1728,8 @@
               <name>EduCraft</name>
               <caption>EduCraft</caption>
               <period>Mar 2024 – Mar 2024</period>
+              <summary>Platform allowing users to get more skills.</summary>
+              <skills>PHP · API · UI/UX</skills>
               <label>EduCraft — Mar 2024 – Mar 2024</label>
               <left>84.9%</left>
               <width>0.03%</width>

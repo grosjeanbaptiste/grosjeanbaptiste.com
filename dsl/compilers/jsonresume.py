@@ -144,9 +144,9 @@ def _project_entry(p) -> dict[str, Any]:
     if p.url:
         entry["url"] = p.url
     if p.type:
-        entry["type"] = p.type
+        entry["type"] = _text(p.type)
     if p.roles:
-        entry["roles"] = list(p.roles)
+        entry["roles"] = [_text(r) for r in p.roles]
     if p.entity:
         entry["entity"] = p.entity
     return entry

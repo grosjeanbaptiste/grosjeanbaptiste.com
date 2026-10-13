@@ -86,6 +86,12 @@ def _project_overlay(p, lang: str) -> dict[str, Any] | None:
         entry["description"] = val
     if (val := _tr(p.summary, lang)) is not None:
         entry["summary"] = val
+    if (val := _tr(p.type, lang)) is not None:
+        entry["type"] = val
+    # Index-aligned with the project's roles: a role left as is stays null.
+    roles = [_tr(r, lang) for r in p.roles]
+    if any(role is not None for role in roles):
+        entry["roles"] = roles
     return entry or None
 
 

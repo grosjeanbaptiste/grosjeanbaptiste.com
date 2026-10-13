@@ -94,21 +94,27 @@
     neighbour(bar, event.key)?.focus();
   });
 
-  // Preview: what the bar stands for, under it.
+  // Preview: what the bar stands for, under it — and, for a project, what kind
+  // it is, the part taken in it, what it was and what it was built with.
   const preview = document.createElement('div');
   preview.className = 'tl-preview';
   preview.id = 'tl-preview';
   preview.setAttribute('role', 'tooltip');
   const show = (bar) => {
-    const { name, title, period } = bar.dataset;
+    const { name, detail, title, period, summary, skills } = bar.dataset;
     preview.replaceChildren(
       ...[
         [name, 'strong'],
+        [detail, 'span'],
         [title, 'span'],
         [period, 'span'],
+        [summary, 'span', 'tl-preview-summary'],
+        [skills, 'span', 'tl-preview-skills'],
       ]
         .filter(([text]) => text)
-        .map(([text, tag]) => Object.assign(document.createElement(tag), { textContent: text })),
+        .map(([text, tag, className = '']) =>
+          Object.assign(document.createElement(tag), { textContent: text, className }),
+        ),
     );
     grid.append(preview);
     const track = bar.closest('.tl-track');

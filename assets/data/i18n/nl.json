@@ -133,49 +133,82 @@
   "projects": [
     {
       "description": "Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.",
-      "summary": "Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders."
+      "summary": "Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders.",
+      "roles": [
+        "Auteur"
+      ]
     },
     {
       "description": "Domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines.",
-      "summary": "Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core."
+      "summary": "Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core.",
+      "roles": [
+        "Auteur"
+      ]
     },
     {
       "description": "Intern platform van het Belgisch federaal Parlement om de parlementaire archieven te doorzoeken, verkennen en bevragen.",
-      "summary": "Intern platform waarmee parlementaire medewerkers de archieven van het Belgisch federaal Parlement kunnen doorzoeken, verkennen en bevragen, aangedreven door een retrieval-augmented pijplijn met tweetalige FR/NL-ondersteuning."
+      "summary": "Intern platform waarmee parlementaire medewerkers de archieven van het Belgisch federaal Parlement kunnen doorzoeken, verkennen en bevragen, aangedreven door een retrieval-augmented pijplijn met tweetalige FR/NL-ondersteuning.",
+      "roles": [
+        "Auteur"
+      ]
     },
     {
       "description": "Open evaluatieprotocol dat retrieval-strategieën vergelijkt op het corpus van de Belgische Senaat, met focus op tweetalige FR/NL-robuustheid.",
-      "summary": "Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet."
+      "summary": "Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet.",
+      "type": "Onderzoek",
+      "roles": [
+        "Auteur"
+      ]
     },
     {
       "description": "Backend van het Acteble-platform: een modulaire monoliet in Rust.",
-      "summary": "Backend van het platform: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming."
+      "summary": "Backend van het platform: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming.",
+      "roles": [
+        "Oprichter"
+      ]
     },
     {
       "description": "Offline-first multiplatformclient van Acteble, gebouwd met Flutter.",
-      "summary": "Offline-first client voor iOS, Android, web en desktop: een Melos-monorepo met Flutter-apps en gedeelde packages, Riverpod-state boven een lokale Drift/SQLite-opslag, verbonden met de API via REST en gRPC."
+      "summary": "Offline-first client voor iOS, Android, web en desktop: een Melos-monorepo met Flutter-apps en gedeelde packages, Riverpod-state boven een lokale Drift/SQLite-opslag, verbonden met de API via REST en gRPC.",
+      "type": "Mobiele applicatie",
+      "roles": [
+        "Oprichter"
+      ]
     },
     {
       "description": "Publieke website van Acteble: een React single-page-applicatie.",
-      "summary": "Publieke website van Acteble: lichte React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next."
+      "summary": "Publieke website van Acteble: lichte React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.",
+      "roles": [
+        "Oprichter"
+      ]
     },
     {
       "description": "Masterproef aan de UMONS — de R&D van de planningsengine van Acteble.",
-      "summary": "Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS. De R&D van de planningsengine van Acteble, geschreven in Python."
+      "summary": "Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS. De R&D van de planningsengine van Acteble, geschreven in Python.",
+      "type": "Masterproef",
+      "roles": [
+        "Auteur"
+      ]
     },
     {
       "description": "AI-aangedreven visuele assistent voor slechtzienden.",
-      "summary": "AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem."
+      "summary": "AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem.",
+      "type": "Mobiele applicatie"
     },
     {
       "description": "Reminiscentie-applicatie voor mensen met cognitieve problemen.",
-      "summary": "Reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) pipeline."
+      "summary": "Reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) pipeline.",
+      "type": "AI-applicatie"
     },
     {
       "description": "Platform waarmee iedereen nieuwe vaardigheden kan verwerven."
     },
     {
-      "description": "Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar."
+      "description": "Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar.",
+      "type": "Webapplicatie",
+      "roles": [
+        "Oprichter"
+      ]
     },
     {
       "summary": "Named Entity Recognition-model dat inventarisitems extraheert uit een audiotranscriptie."

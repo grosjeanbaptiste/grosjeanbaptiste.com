@@ -1262,6 +1262,17 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   color: var(--muted-color);
 }
 
+/* What a project was, in full sentences: read as text, a line apart. */
+.tl-preview .tl-preview-summary {
+  margin-top: 0.2rem;
+  color: var(--text-color);
+}
+
+/* What it was built with. */
+.tl-preview .tl-preview-skills {
+  color: var(--primary-color);
+}
+
 /* An embedded row's anchor: an empty span at its end, pinned to its top so a
  * bar's link lands on the row and not on its last line. */
 .main-content li:has(> .tl-anchor) {

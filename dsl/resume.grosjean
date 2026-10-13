@@ -391,8 +391,8 @@ TFE: WebMenu 2.0
             // everyone who clicked it. Put it back when it opens.
             keywords [Rust, Prolog, LinkGrammar, DDD, CleanArchitecture, TDD]
             startDate 2026-07-02
-            type "CLI"
-            roles [Author]
+            type t{ en: "CLI", zh: "命令行工具" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
         KAG hide on: both {
             name "KAG"
@@ -401,8 +401,8 @@ TFE: WebMenu 2.0
             // No url: the repo is private (and is named `kag`, not `KAG`).
             keywords [Rust, DDD, CleanArchitecture, TDD, RAG]
             startDate 2026-07-05
-            type "Framework"
-            roles [Author]
+            type t{ en: "Framework", zh: "框架" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
         Synergy {
             name "Synergy"
@@ -411,8 +411,8 @@ TFE: WebMenu 2.0
             keywords [Python, Java, ".NET", RAG, AI]
             startDate 2025-11-03
             endDate 2026-06-30
-            type "Platform"
-            roles [Author]
+            type t{ en: "Platform", fr: "Plateforme", es: "Plataforma", de: "Plattform", zh: "平台" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
         FedRAGBE {
             name "fedrag-be"
@@ -421,8 +421,8 @@ TFE: WebMenu 2.0
             keywords [RAG, Python, Evaluation, Benchmark, OCR, SentenceTransformers, Pandas]
             startDate 2025-11-03
             endDate 2026-06-30
-            type "Research"
-            roles [Author]
+            type t{ en: "Research", fr: "Recherche", nl: "Onderzoek", es: "Investigación", de: "Forschung", zh: "研究" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
         // Acteble is the experience; these are its applications, as the
         // repositories of the platform define them (the portal's map and its
@@ -436,7 +436,7 @@ TFE: WebMenu 2.0
             keywords [Rust, Tokio, Axum, Tonic, gRPC, SQLx, PostgreSQL, PostGIS, Redis, MinIO, LiveKit, OpenTelemetry, Docker, Caddy, DDD, HexagonalArchitecture, CQRS, EventDriven]
             startDate 2025-06-13
             type "API"
-            roles [Founder]
+            roles [t{ en: "Founder", fr: "Fondateur", nl: "Oprichter", es: "Fundador", de: "Gründer", zh: "创始人" }]
         }
         ActebleApp {
             name "Acteble App"
@@ -445,8 +445,8 @@ TFE: WebMenu 2.0
             url "https://www.acteble.com"
             keywords [Flutter, Dart, Melos, Riverpod, Drift, SQLite, Dio, gRPC, FlutterMap, Firebase, OfflineFirst, Mobile]
             startDate 2025-04-12
-            type "Mobile Application"
-            roles [Founder]
+            type t{ en: "Mobile Application", fr: "Application mobile", nl: "Mobiele applicatie", es: "Aplicación móvil", de: "Mobile Anwendung", zh: "移动应用" }
+            roles [t{ en: "Founder", fr: "Fondateur", nl: "Oprichter", es: "Fundador", de: "Gründer", zh: "创始人" }]
         }
         ActebleWebsite {
             name "Acteble Website"
@@ -455,8 +455,8 @@ TFE: WebMenu 2.0
             url "https://www.acteble.com"
             keywords [React, Vite, JavaScript, i18next, ReactRouter]
             startDate 2025-06-05
-            type "Website"
-            roles [Founder]
+            type t{ en: "Website", fr: "Site web", es: "Sitio web", zh: "网站" }
+            roles [t{ en: "Founder", fr: "Fondateur", nl: "Oprichter", es: "Fundador", de: "Gründer", zh: "创始人" }]
         }
         // The MSc dissertation: the R&D of the platform's planning engine, and what
         // the master carried of Acteble. Begun with its repository's first commit,
@@ -468,8 +468,8 @@ TFE: WebMenu 2.0
             keywords [Python, LaTeX, MiniZinc, ConstraintProgramming, CombinatorialOptimization, Pareto]
             startDate 2025-11-13
             endDate 2026-09-04
-            type "Dissertation"
-            roles [Author]
+            type t{ en: "Dissertation", fr: "Mémoire", nl: "Masterproef", es: "Trabajo de fin de máster", de: "Masterarbeit", zh: "硕士论文" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
             entity "UMONS"
         }
         EmviApp {
@@ -480,7 +480,7 @@ TFE: WebMenu 2.0
             keywords [Flutter, Firebase, OpenAI, Valhalla, AI, Dart]
             startDate 2024-12-01
             endDate 2025-06-30
-            type "Mobile Application"
+            type t{ en: "Mobile Application", fr: "Application mobile", nl: "Mobiele applicatie", es: "Aplicación móvil", de: "Mobile Anwendung", zh: "移动应用" }
         }
         Remi {
             name "Remi"
@@ -489,7 +489,7 @@ TFE: WebMenu 2.0
             keywords [Python, FastAPI, OpenAI, Whisper, DeepFace, PostgreSQL, SQLAlchemy]
             startDate 2024-10-01
             endDate 2025-06-30
-            type "AI Application"
+            type t{ en: "AI Application", fr: "Application d'IA", nl: "AI-applicatie", es: "Aplicación de IA", de: "KI-Anwendung", zh: "人工智能应用" }
         }
         EduCraft {
             name "EduCraft"
@@ -505,8 +505,8 @@ TFE: WebMenu 2.0
             startDate 2023-01-01
             endDate 2023-06-30
             url "https://my-way-bg.vercel.app"
-            type "Web Application"
-            roles [Founder]
+            type t{ en: "Web Application", fr: "Application web", nl: "Webapplicatie", es: "Aplicación web", de: "Webanwendung", zh: "Web 应用" }
+            roles [t{ en: "Founder", fr: "Fondateur", nl: "Oprichter", es: "Fundador", de: "Gründer", zh: "创始人" }]
             entity "Freelance"
         }
         VhAuctionsNERInventoryModel {
