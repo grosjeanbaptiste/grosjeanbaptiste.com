@@ -111,6 +111,25 @@ for (const lang of LANGS) {
   });
 }
 
+test('the rich theme hands the preview what a project tells', () => {
+  const told = bars(render('fr')).filter((b) => b.includes('data-kind="project"'));
+  const one = told.find((b) => b.includes('data-name="Acteble App"'));
+  assert.match(one, /data-detail="Application mobile · Fondateur"/);
+  assert.match(one, /data-summary="[^"]+"/);
+  assert.match(one, /data-skills="Flutter · Dart · [^"]+"/);
+});
+
+test('in the rich theme a bar with nothing more to tell carries no empty attribute', () => {
+  const work = bars(render('fr')).filter((b) => b.includes('data-kind="work"'));
+  assert.ok(work.length > 0);
+  for (const bar of work) assert.doesNotMatch(bar, /data-(detail|summary|skills)/);
+});
+
+test('both themes show a project with its kind', () => {
+  for (const minimal of [false, true])
+    assert.match(render('fr', minimal), /<span>Acteble App · Application mobile<\/span>/);
+});
+
 test('the rich theme loads the classic page’s timeline script and styles', () => {
   const html = render('fr');
   assert.match(html, /<script[^>]*src="\/js\/timeline\.js"/);

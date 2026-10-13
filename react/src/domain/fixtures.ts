@@ -43,6 +43,9 @@ export function aResume(): Resume {
       {
         id: 'baba',
         name: 'Baba',
+        description: 'A shell queried in controlled English.',
+        type: 'CLI',
+        roles: ['Author'],
         keywords: ['Rust', 'Prolog'],
         startDate: '2026-07-02',
       },

@@ -110,6 +110,19 @@ describe('browsing the CV through the timeline', () => {
     expect(preview).toHaveTextContent('Prolog');
   });
 
+  it('previews what a project is: its kind, the part taken, what it was', async () => {
+    renderApp('/en');
+    fireEvent.mouseEnter(await bar(/Baba/));
+    const preview = await screen.findByRole('tooltip');
+    expect(preview).toHaveTextContent('CLI · Author');
+    expect(preview).toHaveTextContent('A shell queried in controlled English.');
+  });
+
+  it('shows the kind of a project on its bar', async () => {
+    renderApp('/en');
+    expect(await bar(/Baba/)).toHaveTextContent('Baba · CLI');
+  });
+
   it('lists a degree’s course units in its panel', async () => {
     renderApp('/en/education/umons-master');
     const panel = await screen.findByRole('region', { name: 'Master' });

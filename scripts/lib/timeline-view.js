@@ -6,10 +6,10 @@ const { formatDate } = require('./format');
 const pct = (part, whole) => `${Number(((part / whole) * 100).toFixed(2))}%`;
 const periodOf = (record, lang) =>
   `${formatDate(record.startDate, lang)} – ${formatDate(record.endDate, lang)}`;
-// A bar's accessible name: what it is, when, and — for a degree followed on
-// an evening schedule — that it was.
+// A bar's accessible name: what it is — a project's kind and roles included —
+// when, and — for a degree followed on an evening schedule — that it was.
 const labelOf = (bar, period, t) =>
-  [bar.name, bar.title, period, bar.schedule === 'evening' ? t.scheduleEvening : null]
+  [bar.name, bar.detail, bar.title, period, bar.schedule === 'evening' ? t.scheduleEvening : null]
     .filter(Boolean)
     .join(' — ');
 // The legend of the moon, when the career has an evening degree.

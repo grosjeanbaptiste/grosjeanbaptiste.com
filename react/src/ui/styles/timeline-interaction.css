@@ -38,6 +38,12 @@
   color: var(--app-muted);
 }
 
+/* What a project was, in full sentences: read as text, a line apart. */
+.timeline-preview .timeline-preview-summary {
+  margin-top: 0.2rem;
+  color: var(--app-text);
+}
+
 .timeline-preview .timeline-preview-skills {
   color: var(--app-accent);
 }

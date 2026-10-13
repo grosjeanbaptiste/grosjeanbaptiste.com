@@ -1048,6 +1048,11 @@
     <xsl:attribute name="data-name"><xsl:value-of select="name"/></xsl:attribute>
     <xsl:attribute name="data-title"><xsl:value-of select="title"/></xsl:attribute>
     <xsl:attribute name="data-period"><xsl:value-of select="period"/></xsl:attribute>
+    <!-- What a project tells beyond that: its kind and roles, what it was,
+         what it was built with. Absent from a bar with nothing more to tell. -->
+    <xsl:if test="detail"><xsl:attribute name="data-detail"><xsl:value-of select="detail"/></xsl:attribute></xsl:if>
+    <xsl:if test="summary"><xsl:attribute name="data-summary"><xsl:value-of select="summary"/></xsl:attribute></xsl:if>
+    <xsl:if test="skills"><xsl:attribute name="data-skills"><xsl:value-of select="skills"/></xsl:attribute></xsl:if>
   </xsl:template>
 
   <xsl:template name="main-about">

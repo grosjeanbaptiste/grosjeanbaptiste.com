@@ -262,6 +262,7 @@ array_item: STRING          -> arr_string
           | NAME             -> arr_name
           | ref_expr         -> arr_ref
           | NUMBER           -> arr_num
+          | translation      -> arr_translation
 
 ref_expr: "ref" NAME
 

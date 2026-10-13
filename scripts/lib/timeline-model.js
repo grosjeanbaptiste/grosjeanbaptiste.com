@@ -7,6 +7,7 @@
 // its bar.
 const { entryGroups, monthNow } = require('./timeline-groups');
 const { packRows, packGroups } = require('./timeline-packing');
+const { readingOf } = require('./timeline-details');
 
 // A group as the packer wants it: its span, and the rows it needs — the entry,
 // then its blocks on one row (a degree's academic years), the course units of
@@ -50,7 +51,7 @@ const under = (g, group) => [
   })),
   ...g.children.map((c) => ({
     ...c,
-    caption: c.name || c.title,
+    caption: readingOf(c),
     depth: 1,
     row: g.row + 1 + g.band + g.units + c.row,
     host: g.head,
@@ -71,7 +72,7 @@ const laneOf = (options) =>
     const captionOf = (head) =>
       head.title && (head.kind === 'education' || met(head.name) > 1)
         ? `${head.name} · ${head.title}`
-        : head.name || head.title;
+        : readingOf(head);
     const bars = packed.groups.flatMap((g, group) => [
       { ...g.head, caption: captionOf(g.head), depth: 0, row: g.row, group },
       ...under(g, group),

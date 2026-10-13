@@ -1,6 +1,8 @@
 // A glance at an entry while its bar is hovered or focused: what, where, when
-// and its main skills — enough to decide whether to open it.
+// and its main skills — for a project, also what kind it is, the part taken in
+// it and what it was — enough to decide whether to open it.
 import type { CSSProperties } from 'react';
+import { natureOf } from '../../domain/project-reading';
 import type { TimelineBar } from '../../domain/timeline';
 import { useReading } from '../context';
 import { formatPeriod } from '../format';
@@ -19,6 +21,7 @@ export function TimelinePreview({ bar, months, above }: Props) {
   // A course unit's bar tells the unit, in the year it was taken.
   const entry = bar.unit ?? bar.entry;
   const period = bar.unit && bar.block ? bar.block.period : bar.entry.period;
+  const nature = natureOf(entry);
   // Anchored on the bar's middle, kept inside the track at both ends.
   const middle = ((bar.offset + bar.length / 2) / months) * 100;
   const style = {
@@ -36,8 +39,12 @@ export function TimelinePreview({ bar, months, above }: Props) {
       style={style}
     >
       <strong>{entry.title}</strong>
+      {nature && <span>{nature}</span>}
       {bar.entry.organisation && <span>{bar.entry.organisation}</span>}
       <span className="timeline-preview-period">{formatPeriod(period, lang, strings.ongoing)}</span>
+      {entry.kind === 'project' && entry.subtitle && (
+        <span className="timeline-preview-summary">{entry.subtitle}</span>
+      )}
       {entry.skills.length > 0 && (
         <span className="timeline-preview-skills">
           {entry.skills.slice(0, MAX_SKILLS).join(' · ')}

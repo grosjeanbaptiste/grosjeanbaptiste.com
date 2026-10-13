@@ -184,8 +184,9 @@ class ProjectEntry(Node):
     start_date: Date | None = None
     end_date: Date | None = None
     url: str | None = None
-    type: str | None = None  # noqa: A003 — schema name
-    roles: tuple[str, ...] = ()
+    # What the project is and the parts taken in it: words, hence translated.
+    type: Value | None = None  # noqa: A003 — schema name
+    roles: tuple[Value, ...] = ()
     entity: str | None = None
     # A side project the author keeps out of some or all displays.
     hide_on: HideTarget | None = None

@@ -133,49 +133,86 @@
   "projects": [
     {
       "description": "类 shell CLI，通过纯符号 AI（无 LLM）以受控英语查询。",
-      "summary": "五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。"
+      "summary": "五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。",
+      "type": "命令行工具",
+      "roles": [
+        "作者"
+      ]
     },
     {
       "description": "领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。",
-      "summary": "采用六边形架构 + DDD + TDD，每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。"
+      "summary": "采用六边形架构 + DDD + TDD，每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。",
+      "type": "框架",
+      "roles": [
+        "作者"
+      ]
     },
     {
       "description": "比利时联邦议会的内部平台，用于搜索、探索并与议会档案对话。",
-      "summary": "内部平台，让议会工作人员可以搜索、探索并与比利时联邦议会的档案对话，由检索增强（RAG）管道驱动，支持法语/荷兰语双语。"
+      "summary": "内部平台，让议会工作人员可以搜索、探索并与比利时联邦议会的档案对话，由检索增强（RAG）管道驱动，支持法语/荷兰语双语。",
+      "type": "平台",
+      "roles": [
+        "作者"
+      ]
     },
     {
       "description": "开源评估协议，比较比利时参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。",
-      "summary": "开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。"
+      "summary": "开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。",
+      "type": "研究",
+      "roles": [
+        "作者"
+      ]
     },
     {
       "description": "Acteble 平台的后端：用 Rust 编写的模块化单体。",
-      "summary": "平台后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务。"
+      "summary": "平台后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务。",
+      "roles": [
+        "创始人"
+      ]
     },
     {
       "description": "Acteble 的离线优先多平台客户端，使用 Flutter 开发。",
-      "summary": "面向 iOS、Android、Web 和桌面的离线优先客户端：由 Flutter 应用和共享包组成的 Melos 单仓库，基于本地 Drift/SQLite 存储的 Riverpod 状态管理，通过 REST 和 gRPC 与 API 通信。"
+      "summary": "面向 iOS、Android、Web 和桌面的离线优先客户端：由 Flutter 应用和共享包组成的 Melos 单仓库，基于本地 Drift/SQLite 存储的 Riverpod 状态管理，通过 REST 和 gRPC 与 API 通信。",
+      "type": "移动应用",
+      "roles": [
+        "创始人"
+      ]
     },
     {
       "description": "Acteble 的公开网站：一个 React 单页应用。",
-      "summary": "Acteble 的公开网站：使用 Vite 构建、通过 i18next 实现国际化的轻量级 React 单页应用。"
+      "summary": "Acteble 的公开网站：使用 Vite 构建、通过 i18next 实现国际化的轻量级 React 单页应用。",
+      "type": "网站",
+      "roles": [
+        "创始人"
+      ]
     },
     {
       "description": "UMONS 硕士论文——Acteble 规划引擎的研发。",
-      "summary": "硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成。Acteble 规划引擎的研发，使用 Python 编写。"
+      "summary": "硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成。Acteble 规划引擎的研发，使用 Python 编写。",
+      "type": "硕士论文",
+      "roles": [
+        "作者"
+      ]
     },
     {
       "description": "为视障人士提供的 AI 驱动视觉助手。",
-      "summary": "为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描（二维码和条形码）以及适配的 Valhalla 路线规划系统。"
+      "summary": "为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描（二维码和条形码）以及适配的 Valhalla 路线规划系统。",
+      "type": "移动应用"
     },
     {
       "description": "为认知障碍患者设计的追忆应用。",
-      "summary": "追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。DeepFace (Serengil) 管道。"
+      "summary": "追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。DeepFace (Serengil) 管道。",
+      "type": "人工智能应用"
     },
     {
       "description": "让任何人都能获得新技能的平台。"
     },
     {
-      "description": "学生教育管理工具。不再维护；数据库和身份验证不可用。"
+      "description": "学生教育管理工具。不再维护；数据库和身份验证不可用。",
+      "type": "Web 应用",
+      "roles": [
+        "创始人"
+      ]
     },
     {
       "summary": "用于从音频转录中提取库存项目的命名实体识别机器学习模型。"

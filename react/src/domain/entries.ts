@@ -61,6 +61,7 @@ const fromProject = (p: ProjectRecord): Entry => ({
   period: periodOf(p),
   summary: p.summary,
   details: [...(p.roles ?? []), ...(p.type ? [p.type] : [])],
+  type: p.type,
   skills: p.keywords ?? [],
   url: p.url,
   related: [],

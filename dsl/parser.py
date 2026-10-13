@@ -636,6 +636,9 @@ class _Builder(Transformer):
     def arr_ref(self, meta, children):
         return children[0]
 
+    def arr_translation(self, meta, children):
+        return children[0]
+
     def arr_num(self, meta, children):
         s = str(children[0])
         return float(s) if "." in s else int(s)

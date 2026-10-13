@@ -4,6 +4,7 @@
 // what each carried under it, and the outline of each such group.
 const I18N = require('./i18n');
 const { withPrintRows } = require('./timeline-print');
+const { toldBy } = require('./timeline-details');
 const { pct, periodOf, labelOf, legendOf, LANE_LABEL, zoomsOf } = require('./timeline-view');
 
 // The XSLT themes give an id to each job and each degree, nothing else: a bar
@@ -52,6 +53,8 @@ function timelineForXml(resume, lang, today) {
           title: bar.title,
           caption: bar.caption,
           period,
+          // What a project tells beyond that, for the preview; absent otherwise.
+          ...Object.fromEntries(toldBy(bar)),
           label: labelOf(bar, period, t),
           // 'evening' for a degree followed on an evening schedule.
           schedule: bar.schedule,

@@ -1,6 +1,7 @@
 // One lane of the timeline's read model (./timeline): its entries packed into
 // rows, each a group — the entry, then what goes under it.
 import type { Block, Entry, EntryKind } from './entry';
+import { readingOf } from './project-reading';
 import type { Dated, TimelineBar } from './timeline';
 import { packGroups, packRows } from './timeline-packing';
 
@@ -84,7 +85,7 @@ function under(g: Group): TimelineBar[] {
       key: `${degree.id}>${c.entry.id}`,
       row: g.row + 1 + g.band + g.units + c.row,
       depth: 1 as const,
-      caption: c.entry.title,
+      caption: readingOf(c.entry),
     })),
   ];
 }
@@ -96,8 +97,11 @@ export function laneOf(kind: EntryKind, heads: readonly Placed[], sources: Sourc
     heads.filter((h) => h.entry.organisation === organisation).length;
   // A degree always reads with its title and its speciality: the school alone
   // does not say what was studied.
-  const captionOf = ({ organisation, title, subtitle }: Dated) => {
-    if (!organisation || title === organisation) return organisation ?? title;
+  const captionOf = (entry: Dated) => {
+    const { organisation, title, subtitle } = entry;
+    // Nothing but its title to go by: a project then reads its kind too.
+    if (!organisation) return readingOf(entry);
+    if (title === organisation) return organisation;
     if (kind === 'education')
       return `${organisation} · ${[title, subtitle].filter(Boolean).join(' — ')}`;
     return met(organisation) > 1 ? `${organisation} · ${title}` : organisation;

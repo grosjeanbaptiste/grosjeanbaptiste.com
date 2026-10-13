@@ -133,49 +133,83 @@
   "projects": [
     {
       "description": "Shell-artige CLI, in kontrolliertem Englisch abgefragt über reine symbolische KI — ohne LLM im Ablauf.",
-      "summary": "Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer."
+      "summary": "Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer.",
+      "roles": [
+        "Autor"
+      ]
     },
     {
       "description": "Domänenunabhängiges Rust-Framework zum Benchmarking von Retrieval-Augmented-Generation-Pipelines.",
-      "summary": "Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core."
+      "summary": "Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core.",
+      "roles": [
+        "Autor"
+      ]
     },
     {
       "description": "Interne Plattform des belgischen Bundesparlaments zum Durchsuchen, Erkunden und Befragen der parlamentarischen Archive.",
-      "summary": "Interne Plattform, die parlamentarischen Mitarbeitern ermöglicht, die Archive des belgischen Bundesparlaments zu durchsuchen, zu erkunden und zu befragen — angetrieben von einer Retrieval-Augmented-Pipeline mit zweisprachiger FR/NL-Unterstützung."
+      "summary": "Interne Plattform, die parlamentarischen Mitarbeitern ermöglicht, die Archive des belgischen Bundesparlaments zu durchsuchen, zu erkunden und zu befragen — angetrieben von einer Retrieval-Augmented-Pipeline mit zweisprachiger FR/NL-Unterstützung.",
+      "type": "Plattform",
+      "roles": [
+        "Autor"
+      ]
     },
     {
       "description": "Offenes Bewertungsprotokoll, das Retrieval-Strategien auf dem Korpus des belgischen Senats vergleicht, mit Fokus auf zweisprachige FR/NL-Robustheit.",
-      "summary": "Offenes, reproduzierbares Protokoll, das Retrieval-Strategien auf dem zweisprachigen Senatskorpus benchmarkt und die FR/NL-Robustheit über die gesamte Retrieval-Pipeline misst."
+      "summary": "Offenes, reproduzierbares Protokoll, das Retrieval-Strategien auf dem zweisprachigen Senatskorpus benchmarkt und die FR/NL-Robustheit über die gesamte Retrieval-Pipeline misst.",
+      "type": "Forschung",
+      "roles": [
+        "Autor"
+      ]
     },
     {
       "description": "Backend der Acteble-Plattform: ein modularer Monolith in Rust.",
-      "summary": "Backend der Plattform: modularer Monolith in Rust, gegliedert in Bounded Contexts mit hexagonaler Architektur, CQRS und einem ereignisgesteuerten Kern (Event Store, Outbox/Inbox), bereitgestellt über REST/JSON und gRPC-Streaming."
+      "summary": "Backend der Plattform: modularer Monolith in Rust, gegliedert in Bounded Contexts mit hexagonaler Architektur, CQRS und einem ereignisgesteuerten Kern (Event Store, Outbox/Inbox), bereitgestellt über REST/JSON und gRPC-Streaming.",
+      "roles": [
+        "Gründer"
+      ]
     },
     {
       "description": "Offline-first-Multiplattform-Client von Acteble, entwickelt mit Flutter.",
-      "summary": "Offline-first-Client für iOS, Android, Web und Desktop: ein Melos-Monorepo aus Flutter-Apps und gemeinsamen Paketen, Riverpod-State über einem lokalen Drift/SQLite-Speicher, per REST und gRPC mit der API verbunden."
+      "summary": "Offline-first-Client für iOS, Android, Web und Desktop: ein Melos-Monorepo aus Flutter-Apps und gemeinsamen Paketen, Riverpod-State über einem lokalen Drift/SQLite-Speicher, per REST und gRPC mit der API verbunden.",
+      "type": "Mobile Anwendung",
+      "roles": [
+        "Gründer"
+      ]
     },
     {
       "description": "Öffentliche Website von Acteble: eine React-Single-Page-Anwendung.",
-      "summary": "Öffentliche Website von Acteble: schlanke React-Single-Page-Anwendung, mit Vite gebaut und mit i18next internationalisiert."
+      "summary": "Öffentliche Website von Acteble: schlanke React-Single-Page-Anwendung, mit Vite gebaut und mit i18next internationalisiert.",
+      "roles": [
+        "Gründer"
+      ]
     },
     {
       "description": "Masterarbeit an der UMONS — die F&E der Planungs-Engine von Acteble.",
-      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Die F&E der Planungs-Engine von Acteble, in Python geschrieben."
+      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Die F&E der Planungs-Engine von Acteble, in Python geschrieben.",
+      "type": "Masterarbeit",
+      "roles": [
+        "Autor"
+      ]
     },
     {
       "description": "KI-gestützter visueller Assistent für sehbehinderte Menschen.",
-      "summary": "KI-gestützter visueller Assistent für sehbehinderte Menschen mit Beschreibung der Umgebung, OCR, Code-Scans (QR & Barcodes) und einem angepassten Valhalla-Routing-System."
+      "summary": "KI-gestützter visueller Assistent für sehbehinderte Menschen mit Beschreibung der Umgebung, OCR, Code-Scans (QR & Barcodes) und einem angepassten Valhalla-Routing-System.",
+      "type": "Mobile Anwendung"
     },
     {
       "description": "Reminiszenz-App für Menschen mit kognitiven Problemen.",
-      "summary": "Reminiszenz-Anwendung, die Menschen mit kognitiven Problemen ermöglicht, ihre Erinnerungen durch Beschreibungen ihrer Fotos mit Gesichtserkennung und LLMs wiederzuerlangen. DeepFace (Serengil) Pipeline."
+      "summary": "Reminiszenz-Anwendung, die Menschen mit kognitiven Problemen ermöglicht, ihre Erinnerungen durch Beschreibungen ihrer Fotos mit Gesichtserkennung und LLMs wiederzuerlangen. DeepFace (Serengil) Pipeline.",
+      "type": "KI-Anwendung"
     },
     {
       "description": "Plattform für den Erwerb neuer Fähigkeiten."
     },
     {
-      "description": "Bildungsmanager für Studierende. Nicht mehr gepflegt; Datenbank und Auth sind nicht verfügbar."
+      "description": "Bildungsmanager für Studierende. Nicht mehr gepflegt; Datenbank und Auth sind nicht verfügbar.",
+      "type": "Webanwendung",
+      "roles": [
+        "Gründer"
+      ]
     },
     {
       "summary": "NER-ML-Modell zur Extraktion von Inventarobjekten aus einer Audiotranskription."

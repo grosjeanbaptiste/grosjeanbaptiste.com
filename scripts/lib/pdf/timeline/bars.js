@@ -15,6 +15,10 @@ const REST_MAX = 34;
 const DEGREE_MAX = 60;
 const restMax = (bar) => (bar.kind === 'education' ? DEGREE_MAX : REST_MAX);
 
+// What follows a bar's name: for a project the kind of project it is, when it
+// states one; for anything else its title.
+const afterName = (bar) => bar.type || bar.title;
+
 // Under its host a bar is told apart by its name alone; the host says where.
 const worded = (bar, nested) => ({
   kind: bar.kind,
@@ -23,9 +27,10 @@ const worded = (bar, nested) => ({
   ongoing: bar.ongoing,
   clipped: false,
   strong: truncate(bar.name, STRONG_MAX),
-  rest: nested ? '' : truncate(bar.title, restMax(bar)),
-  // The label in full, for a bar wide enough to hold it (./rows.js).
-  full: { strong: bar.name, rest: nested ? '' : bar.title },
+  rest: nested ? '' : truncate(afterName(bar), restMax(bar)),
+  // The label in full, for a bar wide enough to hold it (./rows.js): there a
+  // project under its host reads its kind too.
+  full: { strong: bar.name, rest: nested ? bar.type || '' : afterName(bar) },
   // 'evening' for a degree followed on an evening schedule, and its blocks.
   ...(bar.schedule ? { schedule: bar.schedule } : {}),
 });
