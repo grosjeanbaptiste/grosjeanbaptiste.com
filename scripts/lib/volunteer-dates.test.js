@@ -135,8 +135,15 @@ const PUBLISHED = [
 test('the TandeMons programme is spelled the same way everywhere', () => {
   for (const file of PUBLISHED) {
     // Anchors are lowercase slugs by construction (scripts/lib/anchors.js):
-    // "#volunteer-umons-buddy-tandemons" is an id, not a spelling.
-    const prose = read(file).replace(/\s(?:id|href)="#?[a-z0-9-]*"/g, '');
+    // "#volunteer-umons-buddy-tandemons" is an id, not a spelling — wherever
+    // the page writes it: on an entry, in a link, on a timeline bar
+    // (data-entry), in a skill's list of entries (data-entries) or in the
+    // search's data ("id":"…").
+    const prose = read(file)
+      .replace(/\s(?:id|href|data-entry)="#?[a-z0-9-]*"/g, '')
+      // These two hold ids only, in any script (a role's title in Chinese).
+      .replace(/\sdata-entries="[^"]*"/g, '')
+      .replace(/"id":"[^"]*"/g, '');
     const spellings = new Set(prose.match(/[Tt]ande[mM]+ons/g) || []);
     for (const spelling of spellings) {
       assert.equal(spelling, 'TandeMons', `${file} spells it "${spelling}"`);
