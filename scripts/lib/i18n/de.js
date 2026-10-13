@@ -29,6 +29,18 @@ module.exports = {
   printPdf: 'Drucken / PDF',
   dailyLifeUnit: 'h',
   dailyLifeAria: 'Typische Aufteilung von 24 Stunden',
+  // The search and the skill filter, worded as the interactive view words them
+  // (react/src/ui/strings.ts).
+  search: 'Suchen',
+  searchPlaceholder: 'Erfahrung, Projekte, Kompetenzen suchen…',
+  noResults: 'Keine Treffer.',
+  searchSkills: 'Kompetenzen',
+  searchEntries: 'Einträge',
+  filterBySkill: 'Nach Kompetenz filtern',
+  allSkills: 'Alle Kompetenzen',
+  fewerSkills: 'Weniger Kompetenzen',
+  clearFilter: 'Filter entfernen',
+  matching: (n, s) => `${n} ${n === 1 ? 'Eintrag nutzt' : 'Einträge nutzen'} ${s}`,
   views: {
     title: 'Ansichten',
     classic: 'Klassisch',

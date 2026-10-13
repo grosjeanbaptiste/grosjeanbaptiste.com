@@ -29,6 +29,18 @@ module.exports = {
   printPdf: 'Imprimir / PDF',
   dailyLifeUnit: 'h',
   dailyLifeAria: 'Reparto típico de 24 h',
+  // The search and the skill filter, worded as the interactive view words them
+  // (react/src/ui/strings.ts).
+  search: 'Buscar',
+  searchPlaceholder: 'Buscar experiencia, proyectos, competencias…',
+  noResults: 'Sin resultados.',
+  searchSkills: 'Competencias',
+  searchEntries: 'Elementos',
+  filterBySkill: 'Filtrar por competencia',
+  allSkills: 'Todas las competencias',
+  fewerSkills: 'Menos competencias',
+  clearFilter: 'Quitar filtro',
+  matching: (n, s) => `${n} ${n === 1 ? 'elemento usa' : 'elementos usan'} ${s}`,
   views: {
     title: 'Vistas',
     classic: 'Clásica',

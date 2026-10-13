@@ -7,7 +7,7 @@
 const I18N = require('../i18n');
 const { escapeHtml } = require('../format');
 const { withPrintRows } = require('../timeline-print');
-const { toldBy } = require('../timeline-details');
+const { toldBy, standsFor } = require('../timeline-details');
 const { pct, periodOf, labelOf, legendOf, LANE_LABEL, zoomsOf } = require('../timeline-view');
 
 // What the moon means: shown only when a degree carries one.
@@ -33,7 +33,8 @@ function renderBar(bar, timeline, lang, onPage, t) {
   // data-schedule: a degree followed on an evening schedule; the sheet sets a
   // crescent moon before its name.
   const evening = bar.schedule === 'evening' ? ' data-schedule="evening"' : '';
-  const nesting = `data-kind="${bar.kind}" data-depth="${bar.depth}"${evening}`;
+  // data-entry: the entry the bar stands for, which the skill filter lights or dims.
+  const nesting = `data-kind="${bar.kind}" data-depth="${bar.depth}" data-entry="${escapeHtml(standsFor(bar))}"${evening}`;
   const common = `class="tl-bar" style="${style}" aria-label="${escapeHtml(label)}" ${nesting} ${data}`;
   const text = `<span>${escapeHtml(bar.caption)}</span>`;
   return onPage.has(bar.anchor)
@@ -41,7 +42,10 @@ function renderBar(bar, timeline, lang, onPage, t) {
     : `<span ${common} tabindex="0">${text}</span>`;
 }
 
-function generateTimeline(resume, lang, today, onPage) {
+// `extras`: what the page adds to the section (./browsing.js) — `head`, lines
+// set beside the zoom (the button opening the search), and `under`, lines set
+// at its end (the skill filter).
+function generateTimeline(resume, lang, today, onPage, { head = [], under = [] } = {}) {
   const t = I18N[lang];
   const timeline = withPrintRows(resume, today);
   const zoom = zoomsOf(t).map(
@@ -71,6 +75,7 @@ function generateTimeline(resume, lang, today, onPage) {
     '  <div class="tl-head">',
     `    <h2 id="timeline-title">${escapeHtml(t.timelineTitle)}</h2>`,
     `    <div class="tl-zoom" role="group" aria-label="${escapeHtml(t.timelineTitle)}" hidden>${zoom.join('')}</div>`,
+    ...head,
     '  </div>',
     '  <div class="tl-scroll">',
     `    <div class="tl-grid" data-months="${timeline.months}">`,
@@ -79,6 +84,7 @@ function generateTimeline(resume, lang, today, onPage) {
     '    </div>',
     '  </div>',
     ...legendHtml(legendOf(timeline, t)),
+    ...under,
     '</section>',
   ].join('\n');
 }

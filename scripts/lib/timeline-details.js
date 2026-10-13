@@ -26,4 +26,8 @@ const readingOf = (bar) =>
 const TOLD = ['detail', 'summary', 'skills'];
 const toldBy = (bar) => TOLD.filter((key) => bar[key]).map((key) => [key, bar[key]]);
 
-module.exports = { detailsOf, readingOf, toldBy };
+// The entry a bar stands for, by the id it carries on the page: a block of a
+// degree stands for its degree, any other bar for its own entry.
+const standsFor = (bar) => (bar.kind === 'block' ? bar.host.anchor : bar.anchor);
+
+module.exports = { detailsOf, readingOf, toldBy, standsFor };

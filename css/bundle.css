@@ -1370,6 +1370,188 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   }
 }
 
+/* browse.css */
+/* Browsing the classic page: the skill filter under the timeline
+ * (js/skill-filter.js) and the search dialog (js/search.js). Both are written
+ * by the generator and hidden until their script runs. */
+
+.tl-search-open {
+  font: inherit;
+  font-size: 0.85em;
+  padding: 0.35rem 0.9rem;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 999rem;
+  background: none;
+  color: var(--muted-color);
+  cursor: pointer;
+}
+
+.tl-search-open:hover,
+.tl-search-open:focus-visible {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.tl-skills {
+  margin-top: 1rem;
+}
+
+.tl-skills h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95em;
+}
+
+.tl-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* The page's lists carry a bullet (css/main.css): chips and results do not. */
+.main-content .tl-chips li::before,
+.main-content .cv-search-results li::before {
+  content: none;
+}
+
+/* Beyond the shortlist: shown once "All skills" is pressed — or while the
+ * chosen skill is one of them, so the choice never goes out of sight. */
+.tl-chip-extra {
+  display: none;
+}
+
+.tl-skills[data-expanded] .tl-chip-extra,
+.tl-chip-extra:has([aria-pressed="true"]) {
+  display: list-item;
+}
+
+.tl-chip,
+.tl-chip-more {
+  font: inherit;
+  font-size: 0.8em;
+  padding: 0.25rem 0.7rem;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 999rem;
+  background: var(--card-background);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.tl-chip[aria-pressed="true"] {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--on-accent-color);
+}
+
+.tl-chip-count {
+  margin-left: 0.25em;
+  opacity: 0.7;
+}
+
+.tl-chip-more {
+  border-style: dashed;
+  color: var(--muted-color);
+}
+
+.tl-skill-status {
+  margin: 0.6rem 0 0;
+  font-size: 0.85em;
+  color: var(--muted-color);
+}
+
+.tl-skill-clear {
+  font: inherit;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* A bar of an entry that does not use the chosen skill. */
+.tl-bar[data-dimmed="true"] {
+  opacity: 0.18;
+}
+
+#cv-search {
+  width: min(36rem, 92vw);
+  max-height: 70vh;
+  margin-top: 12vh;
+  padding: 0;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 0.75rem;
+  background: var(--card-background);
+  color: var(--text-color);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+#cv-search::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.cv-search-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 0;
+  border-bottom: 0.0625rem solid var(--border-color);
+  background: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+
+.cv-search-results {
+  max-height: 50vh;
+  margin: 0;
+  padding: 0.35rem;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.cv-search-option {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.2rem 1rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.45rem;
+  cursor: pointer;
+}
+
+.cv-search-option span {
+  font-size: 0.8em;
+  color: var(--muted-color);
+}
+
+.cv-search-option[aria-selected="true"] {
+  background: rgba(var(--primary-color-rgb), 0.12);
+}
+
+.cv-search-empty {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  color: var(--muted-color);
+}
+
+/* On paper there is nothing to filter or to search: the whole CV is printed,
+ * every bar in full ink. */
+@media print {
+  .tl-skills,
+  .tl-search-open,
+  #cv-search {
+    display: none !important;
+  }
+
+  .tl-bar[data-dimmed="true"] {
+    opacity: 1;
+  }
+}
+
 /* widgets.css */
 /* Floating CV actions (download the LaTeX PDF / the timeline PDF / print this
  * page) + daily-life
