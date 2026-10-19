@@ -76,5 +76,16 @@ for (const [theme, route] of [
   check('another skill is one click away, and in the URL', () =>
     assert.deepEqual(seen.another, [true, true]),
   );
-  check('none of it needs a script', () => assert.deepEqual(seen.scripts, []));
+  // The rich theme runs the classic page's search (xslt-search-browser.test.js),
+  // never a filter script: the filter is the theme's CSS.
+  check('none of it needs a script', () =>
+    assert.deepEqual(
+      seen.scripts.filter((src) => /skill/.test(src)),
+      [],
+    ),
+  );
+  if (theme === 'minimal')
+    check('the minimal theme loads no script for it at all', () =>
+      assert.deepEqual(seen.scripts, []),
+    );
 }

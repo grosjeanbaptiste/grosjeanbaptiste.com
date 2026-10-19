@@ -4,15 +4,17 @@ const { escapeHtml } = require('../format');
 const { icon } = require('../icons');
 const { renderViewsBar } = require('../views');
 
+// The menu: the sections it leads to. Also the rich XSLT theme's (xml.js).
+const navItemsOf = (t) => [
+  { id: 'about', label: t.nav.about },
+  { id: 'experience', label: t.nav.experience },
+  { id: 'education', label: t.nav.education },
+  { id: 'references', label: t.nav.references },
+];
+
 function generateNav(lang) {
   const t = I18N[lang];
-  const navItems = [
-    { id: 'about', label: t.nav.about },
-    { id: 'experience', label: t.nav.experience },
-    { id: 'education', label: t.nav.education },
-    { id: 'references', label: t.nav.references },
-  ];
-  const navLinks = navItems
+  const navLinks = navItemsOf(t)
     .map((i) => `    <li><a href="#${i.id}" class="nav-link">${escapeHtml(i.label)}</a></li>`)
     .join('\n');
   const langLinks = LANGS.map((l) => {
@@ -41,4 +43,4 @@ function generateNav(lang) {
   ].join('\n');
 }
 
-module.exports = { generateNav };
+module.exports = { generateNav, navItemsOf };

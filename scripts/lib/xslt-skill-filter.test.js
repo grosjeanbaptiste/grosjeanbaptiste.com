@@ -92,6 +92,8 @@ test('the filter adds no script to the minimal theme', () => {
   assert.equal(scripts(html), 3);
 });
 
+// The search is the rich theme's one script by design (it cannot be done in
+// CSS); the filter must still need none.
 test('the filter adds no script to the rich theme either', () => {
-  assert.doesNotMatch(render(false), /skill-filter\.js|search\.js/);
+  assert.doesNotMatch(render(false), /skill-filter\.js/);
 });

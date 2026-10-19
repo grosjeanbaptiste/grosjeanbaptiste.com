@@ -49,11 +49,17 @@ const KIND_LABEL = {
 // can close the element early.
 const inert = (data) => JSON.stringify(data).replace(/</g, '\\u003c');
 
-function renderSearch(onPage, shown, lang, t) {
+// The data the search reads: the entries on the page, the skills of those it
+// shows, the name of each kind, and what else it offers (`actions`). Also the
+// rich XSLT theme's (xml-search.js), with its own actions.
+function searchIndexOf(onPage, shown, t, actions) {
   const kinds = Object.fromEntries(Object.entries(KIND_LABEL).map(([kind, key]) => [kind, t[key]]));
   const groups = { skills: t.searchSkills, entries: t.searchEntries };
-  const actions = actionsOf(lang, t);
-  const index = { entries: onPage, skills: skillUsage(shown), kinds, groups, actions };
+  return { entries: onPage, skills: skillUsage(shown), kinds, groups, actions };
+}
+
+function renderSearch(onPage, shown, lang, t) {
+  const index = searchIndexOf(onPage, shown, t, actionsOf(lang, t));
   return [
     `<dialog id="cv-search" aria-label="${escapeHtml(t.search)}">`,
     `  <input type="search" class="cv-search-input" aria-label="${escapeHtml(t.search)}" placeholder="${escapeHtml(t.searchPlaceholder)}" autocomplete="off" aria-controls="cv-search-results">`,
@@ -69,4 +75,4 @@ function renderSearch(onPage, shown, lang, t) {
 const searchOpener = (t) =>
   `    <button type="button" class="tl-search-open" aria-haspopup="dialog" aria-controls="cv-search" hidden>${escapeHtml(t.search)}</button>`;
 
-module.exports = { renderSearch, searchOpener };
+module.exports = { renderSearch, searchOpener, searchIndexOf, inert, LANG_NAMES };

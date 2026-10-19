@@ -143,7 +143,10 @@ test('the TandeMons programme is spelled the same way everywhere', () => {
       .replace(/\s(?:id|href|data-entry)="#?[a-z0-9-]*"/g, '')
       // These two hold ids only, in any script (a role's title in Chinese).
       .replace(/\sdata-entries="[^"]*"/g, '')
-      .replace(/"id":"[^"]*"/g, '');
+      .replace(/"id":"[^"]*"/g, '')
+      // The XML mirrors carry the same ids as elements (xml-anchors.js,
+      // xml-timeline.js).
+      .replace(/<(anchor|anchoredIn|entry|target)>[^<]*<\/\1>/g, '');
     const spellings = new Set(prose.match(/[Tt]ande[mM]+ons/g) || []);
     for (const spelling of spellings) {
       assert.equal(spelling, 'TandeMons', `${file} spells it "${spelling}"`);

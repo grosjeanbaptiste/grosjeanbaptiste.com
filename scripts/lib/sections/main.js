@@ -2,10 +2,10 @@ const I18N = require('../i18n');
 const { printedWork, printText, printHeading, PRINT_PLAN } = require('../print-selection');
 const { escapeHtml, dateRangeHtml, wrapPictographs } = require('../format');
 const { icon } = require('../icons');
-const { indentLines } = require('../markers');
 const { anchorOf } = require('../anchors');
 const { appendEmbeds } = require('./embeds');
 const { generateBrowsing } = require('./browsing');
+const { ctxOf, renderItemSection } = require('./item-section');
 
 function renderAbout(resume, t) {
   const paras = (resume.basics?.summary || '')
@@ -97,35 +97,6 @@ function renderReferenceArticle(r, idx) {
   ].join('\n');
 }
 
-// The projects/courses/volunteer/references pools an item renderer needs to embed
-// related entries. Bundled once per section so the item renderers stay short.
-function ctxOf(resume) {
-  return {
-    projects: resume.projects || [],
-    courses: resume.courses || [],
-    volunteer: resume.volunteer || [],
-    references: resume.references || [],
-  };
-}
-
-// Wrap a list of entries in a <section id>; each item is rendered then indented
-// two spaces to match the hand-written HTML nesting. Returns null (skipped
-// downstream) when the section is empty.
-function renderItemSection(id, heading, entries, renderItem, printHeadingText = null) {
-  if (!entries?.length) return null;
-  const items = entries.map((e, i) => indentLines(renderItem(e, i), 2)).join('\n');
-  // The PDF gives a few sections a shorter title than the site does
-  // ("Experience" against "Work Experience"); data-print-text lets the sheet
-  // use the PDF's while the page keeps its own.
-  const attr = printHeadingText ? ` data-print-text="${escapeHtml(printHeadingText)}"` : '';
-  return [
-    `<section id="${id}">`,
-    `  <h2${attr}>${escapeHtml(heading)}</h2>`,
-    items,
-    '</section>',
-  ].join('\n');
-}
-
 function renderWorkSection(resume, lang, t) {
   const ctx = ctxOf(resume);
   // Entries the LaTeX CV's fit plan leaves out are marked rather than removed:
@@ -165,14 +136,11 @@ const MAIN_RENDERERS = {
   references: (resume, _lang, t) => renderReferencesSection(resume, t),
 };
 
-// The timeline goes right after About: it is the way into everything below.
-// It is rendered last, from the ids the other sections put on the page, so a
-// bar links only to an entry that is actually there.
-function generateMain(resume, lang, today = new Date()) {
-  const t = I18N[lang];
+// The sections of the main column, each with the ids it puts on the page. A
+// project shown under both its job and its degree would carry its id twice:
+// only its first appearance keeps it, and that is where its bar leads.
+function renderSections(resume, lang, t) {
   const order = resume.meta?.sectionOrder ?? ['about', 'work', 'education', 'references'];
-  // A project shown under both its job and its degree would carry its id twice:
-  // only its first appearance keeps it, and that is where its bar leads.
   const seen = new Set();
   const firstOnly = (html) =>
     html.replace(/\sid="([^"]+)"/g, (attr, id) => {
@@ -180,13 +148,26 @@ function generateMain(resume, lang, today = new Date()) {
       seen.add(id);
       return attr;
     });
-  const sections = order
+  return order
     .map((name) => [name, MAIN_RENDERERS[name]?.(resume, lang, t)])
     .filter(([, html]) => html)
     .map(([name, html]) => [name, firstOnly(html)]);
-  const onPage = new Set(
-    sections.flatMap(([, html]) => [...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1])),
-  );
+}
+
+const idsOf = (sections) =>
+  new Set(sections.flatMap(([, html]) => [...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1])));
+
+// Query: the ids of the entries the page shows, for the XML mirrors to give the
+// XSLT themes the same ones (xml-anchors.js).
+const onPageOf = (resume, lang) => idsOf(renderSections(resume, lang, I18N[lang]));
+
+// The timeline goes right after About: it is the way into everything below.
+// It is rendered last, from the ids the other sections put on the page, so a
+// bar links only to an entry that is actually there.
+function generateMain(resume, lang, today = new Date()) {
+  const t = I18N[lang];
+  const sections = renderSections(resume, lang, t);
+  const onPage = idsOf(sections);
   const { timeline, search } = generateBrowsing(resume, lang, today, onPage);
   const at = sections.findIndex(([name]) => name === 'about') + 1;
   sections.splice(at, 0, ['timeline', timeline]);
@@ -194,4 +175,4 @@ function generateMain(resume, lang, today = new Date()) {
   return sections.map(([, html]) => html).join('\n\n');
 }
 
-module.exports = { generateMain };
+module.exports = { generateMain, onPageOf };
