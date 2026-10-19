@@ -15,6 +15,20 @@
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+  <xsl:key name="skill-token" match="/resume/meta/timeline/skillFilter//skill" use="name"/>
+
+  <!-- A skill named on an entry: a link into the filter when the filter has
+       it, its plain name otherwise. -->
+  <xsl:template name="skill-tag">
+    <xsl:variable name="token" select="key('skill-token', string(.))[1]/token"/>
+    <xsl:choose>
+      <xsl:when test="$token">
+        <a class="skill-tag"><xsl:attribute name="href">#skill-<xsl:value-of select="$token"/></xsl:attribute><xsl:value-of select="."/></a>
+      </xsl:when>
+      <xsl:otherwise><span class="skill-tag"><xsl:value-of select="."/></span></xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <!-- First in the section: the targets, then the rules that read them. -->
   <xsl:template name="skill-targets">
     <xsl:variable name="skills" select="/resume/meta/timeline/skillFilter//skill"/>

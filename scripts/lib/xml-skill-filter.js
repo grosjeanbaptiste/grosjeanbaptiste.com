@@ -23,8 +23,8 @@ function tokensFor(skills) {
   );
 }
 
-// `entries`: the CV's entries (cv-index.js); `drawn`: the ids of those with a
-// bar on the timeline. Gives the filter — undefined when it would be empty —
+// `entries`: the CV's entries (cv-index.js); `drawn`: the ids of those the
+// filter counts — those with a bar on the timeline or on the page. Gives the filter — undefined when it would be empty —
 // and `tokensOf(entryId)`, what a bar of that entry carries.
 function skillFilterForXml(entries, drawn, t) {
   const shown = entries.filter((entry) => drawn.has(entry.id));

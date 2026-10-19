@@ -127,6 +127,25 @@
         <label>时间线 (PDF)</label>
       </view>
     </views>
+    <nav>
+      <link>
+        <id>about</id>
+        <label>关于</label>
+      </link>
+      <link>
+        <id>experience</id>
+        <label>经验</label>
+      </link>
+      <link>
+        <id>education</id>
+        <label>教育</label>
+      </link>
+      <link>
+        <id>references</id>
+        <label>推荐</label>
+      </link>
+    </nav>
+    <tel>+32496289705</tel>
     <timeline>
       <title>时间线</title>
       <months>206</months>
@@ -147,6 +166,12 @@
           <label>全部</label>
         </zoom>
       </zooms>
+      <pdf>
+        <label>时间线 (PDF)</label>
+        <all>/assets/cv/cv_grosjean_baptiste_timeline_zh.pdf</all>
+        <five>/assets/cv/cv_grosjean_baptiste_timeline_5y_zh.pdf</five>
+        <two>/assets/cv/cv_grosjean_baptiste_timeline_2y_zh.pdf</two>
+      </pdf>
       <skillFilter>
         <title>按技能筛选</title>
         <clear>清除筛选</clear>
@@ -279,6 +304,12 @@
             <token>opentelemetry</token>
             <uses>3</uses>
             <said>3 项使用 OpenTelemetry</said>
+          </skill>
+          <skill>
+            <name>ProfessionalCommunication</name>
+            <token>professionalcommunication</token>
+            <uses>3</uses>
+            <said>3 项使用 ProfessionalCommunication</said>
           </skill>
           <skill>
             <name>RAG</name>
@@ -1193,12 +1224,6 @@
             <said>1 项使用 Processes</said>
           </skill>
           <skill>
-            <name>ProfessionalCommunication</name>
-            <token>professionalcommunication</token>
-            <uses>1</uses>
-            <said>1 项使用 ProfessionalCommunication</said>
-          </skill>
-          <skill>
             <name>Programming</name>
             <token>programming</token>
             <uses>1</uses>
@@ -1470,6 +1495,12 @@
           </skill>
         </rest>
       </skillFilter>
+      <search>
+        <label>搜索</label>
+        <placeholder>搜索经历、项目、技能…</placeholder>
+        <empty>没有结果。</empty>
+        <index>{"entries":[{"id":"work-acteble-创始人","kind":"work","title":"创始人","organisation":"Acteble","summary":"唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。","skills":["Rust","Flutter","Dart","Tokio","Docker","DDD","CleanArchitecture","PostgreSQL"]},{"id":"work-比利时参议院-ai-研究员","kind":"work","title":"AI 研究员","organisation":"比利时参议院","summary":"为比利时联邦议会进行 AI 研究和工程。设计了一个内部平台，让工作人员可以搜索、探索和与议会档案对话。撰写了一个开源评估协议，比较参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。","skills":["Python","Java",".NET","RAG","OCR","SentenceTransformers","Pandas"]},{"id":"work-emvi-ai-ai-软件工艺负责人","kind":"work","title":"AI 软件工艺负责人","organisation":"Emvi.ai","summary":"从技术设计到交付主导开发：OCR 管道、代码扫描以及为视障人士适配的 Valhalla 路线规划系统。","skills":["Dart","Flutter","Firebase","OpenAI","Valhalla"]},{"id":"work-emvi-ai-ai-软件工艺师","kind":"work","title":"AI 软件工艺师","organisation":"Emvi.ai","summary":"构建面部识别管道 (DeepFace / Serengil，检测与识别) 以及为 LLM 生成的照片描述提供情感分析栈。","skills":["Python","Whisper","FastAPI","DeepFace","OpenAI","PostgreSQL","SQLAlchemy"]},{"id":"work-xtrada-数据科学家","kind":"work","title":"数据科学家","organisation":"Xtrada","summary":"使用 Python 库 (SpaCy 等) 通过 NER 模型训练从文本中提取命名实体，并在 .NET 中实现。模型召回率：87%。","skills":["Python","SpaCy","Pandas","NumPy",".NET"]},{"id":"work-xtrada-软件工艺师","kind":"work","title":"软件工艺师","organisation":"Xtrada","summary":"在 .NET 技术栈中遵循领域驱动设计和整洁代码原则进行软件现代化。在 .NET 解决方案中实施 Azure AI 服务。","skills":[".NET","DDD","CleanCode","CleanArchitecture"]},{"id":"work-xtrada-net-react-软件工艺师","kind":"work","title":".NET/React 软件工艺师","organisation":"Xtrada","skills":[".NET","React","SQL Server","TypeScript","EntityFramework","Docker","Azure","OpenTelemetry"]},{"id":"work-xtrada-net-blazor-软件工艺师","kind":"work","title":".NET/Blazor 软件工艺师","organisation":"Xtrada","summary":"使用 .NET / Blazor 按照领域驱动设计和整洁代码原则开发 Web 应用。","skills":[".NET","Blazor","SQL Server","DDD","EntityFramework","xUnit"]},{"id":"work-technofutur-tic-全栈-web-开发实习生","kind":"work","title":"全栈 Web 开发实习生","organisation":"Technofutur TIC","summary":"旨在加强我在 EPHEC 学士学位项目中获得的技术技能的资格培训。\n扩展期间，我们接受了 Microsoft 工具 (SSIS 等) 的商业智能和 ETL 流程 (数据仓库) 的介绍。\n培训涵盖了 SQL Server、Node.js、Express.js、React 和 Angular，从数据库开发到用户界面和后端。","skills":["SQL Server","Node.js","Express.js","React","Angular","TypeScript","Auth0","Sequelize"]},{"id":"work-editx-it-challenges-it-jobs-education-in-it-for-x-全栈-web-开发实习生","kind":"work","title":"全栈 Web 开发实习生","organisation":"EDITx: IT Challenges, IT Jobs, Education in IT for X","skills":[]},{"id":"work-les-auberges-de-jeunesse-wallonie-bruxelles-学生工","kind":"work","title":"学生工","organisation":"Les Auberges de Jeunesse - Wallonie &amp; Bruxelles","skills":[]},{"id":"work-restomax-全栈-web-开发实习生","kind":"work","title":"全栈 Web 开发实习生","organisation":"RESTOMAX","skills":[".NET","Flutter","SQL Server"]},{"id":"work-quick-restaurant-学生工","kind":"work","title":"学生工","organisation":"Quick Restaurant","skills":[]},{"id":"education-umons-理学硕士","kind":"education","title":"理学硕士","organisation":"UMons","subtitle":"计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS 学分)","summary":"硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 &amp; Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。","skills":["Python","LaTeX","DDD","CleanArchitecture"]},{"id":"education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士","kind":"education","title":"职业学士","organisation":"Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)","subtitle":"管理信息学","summary":"学生代表和辅导员。\n\nTFE: WebMenu 2.0\n\n课程内容：分析与设计，使用 .NET、Java 和 Web 进行编程，关系型数据库，电子商务与集成管理软件 (ERP)，网络与 IT 项目管理。","skills":["SQL","C#",".NET","Java","Python","JS","HTML","CSS"]},{"id":"education-institut-saint-louis-bruxelles-证书","kind":"education","title":"证书","organisation":"Institut Saint-Louis Bruxelles","subtitle":"7e Spéciale Mathématiques","skills":[]},{"id":"education-universite-saint-louis-bruxelles-政治学学士","kind":"education","title":"政治学学士","organisation":"Université Saint-Louis - Bruxelles","subtitle":"综合方向","skills":[]},{"id":"education-uclouvain-universite-catholique-de-louvain-预科课程","kind":"education","title":"预科课程","organisation":"UCLouvain - Université catholique de Louvain","subtitle":"医学和牙科","skills":[]},{"id":"education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s","kind":"education","title":"C.E.S.S.","organisation":"Centre Scolaire Saint-Adrien - Val Duchesse","subtitle":"通识学习 — 数学和现代语言","skills":[]},{"id":"education-lycee-mater-dei","kind":"education","title":"Lycée Mater Dei","organisation":"Lycée Mater Dei","subtitle":"通识学习 — 拉丁语和希腊语","skills":[]},{"id":"project-synergy","kind":"project","title":"Synergy","subtitle":"比利时联邦议会的内部平台，用于搜索、探索并与议会档案对话。","summary":"内部平台，让议会工作人员可以搜索、探索并与比利时联邦议会的档案对话，由检索增强（RAG）管道驱动，支持法语/荷兰语双语。","skills":["Python","Java",".NET","RAG","AI"]},{"id":"project-fedrag-be","kind":"project","title":"fedrag-be","subtitle":"开源评估协议，比较比利时参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。","summary":"开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。","skills":["RAG","Python","Evaluation","Benchmark","OCR","SentenceTransformers","Pandas"]},{"id":"project-acteble-api","kind":"project","title":"Acteble API","subtitle":"Acteble 平台的后端：用 Rust 编写的模块化单体。","summary":"平台后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务。","skills":["Rust","Tokio","Axum","Tonic","gRPC","SQLx","PostgreSQL","PostGIS","Redis","MinIO","LiveKit","OpenTelemetry","Docker","Caddy","DDD","HexagonalArchitecture","CQRS","EventDriven"]},{"id":"project-acteble-app","kind":"project","title":"Acteble App","subtitle":"Acteble 的离线优先多平台客户端，使用 Flutter 开发。","summary":"面向 iOS、Android、Web 和桌面的离线优先客户端：由 Flutter 应用和共享包组成的 Melos 单仓库，基于本地 Drift/SQLite 存储的 Riverpod 状态管理，通过 REST 和 gRPC 与 API 通信。","skills":["Flutter","Dart","Melos","Riverpod","Drift","SQLite","Dio","gRPC","FlutterMap","Firebase","OfflineFirst","Mobile"]},{"id":"project-acteble-website","kind":"project","title":"Acteble Website","subtitle":"Acteble 的公开网站：一个 React 单页应用。","summary":"Acteble 的公开网站：使用 Vite 构建、通过 i18next 实现国际化的轻量级 React 单页应用。","skills":["React","Vite","JavaScript","i18next","ReactRouter"]},{"id":"project-memoire-de-master","kind":"project","title":"Mémoire de master","organisation":"UMONS","subtitle":"UMONS 硕士论文——Acteble 规划引擎的研发。","summary":"硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成。Acteble 规划引擎的研发，使用 Python 编写。","skills":["Python","LaTeX","MiniZinc","ConstraintProgramming","CombinatorialOptimization","Pareto"]},{"id":"project-emvi-app","kind":"project","title":"Emvi App","subtitle":"为视障人士提供的 AI 驱动视觉助手。","summary":"为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描（二维码和条形码）以及适配的 Valhalla 路线规划系统。","skills":["Flutter","Firebase","OpenAI","Valhalla","AI","Dart"]},{"id":"project-remi","kind":"project","title":"Remi","subtitle":"为认知障碍患者设计的追忆应用。","summary":"追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。DeepFace (Serengil) 管道。","skills":["Python","FastAPI","OpenAI","Whisper","DeepFace","PostgreSQL","SQLAlchemy"]},{"id":"project-myway","kind":"project","title":"MyWay","organisation":"Freelance","subtitle":"学生教育管理工具。不再维护；数据库和身份验证不可用。","skills":["Angular","JavaScript","TypeScript","Express.js","API","UI/UX","SQL Server","Auth0","PayPal","Sequelize","Node.js","React"]},{"id":"project-vhauctions-ner-inventory-model","kind":"project","title":"VhAuctions NER Inventory Model","summary":"用于从音频转录中提取库存项目的命名实体识别机器学习模型。","skills":["Python","SpaCy","Pandas","NumPy",".NET","NER"]},{"id":"project-vhauctions","kind":"project","title":"VhAuctions","summary":"拍卖车队管理器。","skills":[".NET","C#","EntityFramework","React","TypeScript","Docker","Azure","OpenTelemetry","SQL Server"]},{"id":"project-kwalitijd","kind":"project","title":"Kwalitijd","summary":"体育俱乐部和联合会的调查管理器。","skills":[".NET","C#","Blazor","EntityFramework","xUnit","SQL Server","DDD"]},{"id":"project-webmenu","kind":"project","title":"WebMenu","summary":"基于二维码的酒店、餐厅、咖啡馆 (HoReCa) 收银机。","skills":[".NET","Flutter","SQL Server","QRCode"]},{"id":"course-algorithmique","kind":"course","title":"Algorithmique","organisation":"UMONS","subtitle":"算法","skills":["Algorithms","DataStructures","Complexity","Trees"]},{"id":"course-anglais-i","kind":"course","title":"Anglais I","organisation":"UMONS","subtitle":"英语 I","skills":["English"]},{"id":"course-bases-de-donnees-i","kind":"course","title":"Bases de données I","organisation":"UMONS","subtitle":"数据库 I","skills":["SQL","RelationalAlgebra","Normalization","Indexing","NoSQL","BigData"]},{"id":"course-lecture-et-redaction-scientifique","kind":"course","title":"Lecture et rédaction scientifique","organisation":"UMONS","subtitle":"科学阅读与写作","skills":["ScientificWriting","LiteratureReview"]},{"id":"course-mathematique","kind":"course","title":"Mathématique","organisation":"UMONS","subtitle":"数学","skills":["GraphTheory","Combinatorics","Complexity","PropositionalLogic","PredicateLogic"]},{"id":"course-modelisation-logicielle","kind":"course","title":"Modélisation logicielle","organisation":"UMONS","subtitle":"软件建模","skills":["Java","UML","DesignPatterns","UnitTesting","MockTesting","BDD"]},{"id":"course-reseaux","kind":"course","title":"Réseaux","organisation":"UMONS","subtitle":"计算机网络","skills":["TCP/IP","HTTP","DNS","OSPF","BGP","Ethernet"]},{"id":"course-strategie-et-politiques-en-ressources-humaines","kind":"course","title":"Stratégie et politiques en ressources humaines","organisation":"UMONS","subtitle":"人力资源战略与政策","skills":["HRM"]},{"id":"course-systemes-d-exploitation","kind":"course","title":"Systèmes d'exploitation","organisation":"UMONS","subtitle":"操作系统","skills":["Processes","Semaphores","Synchronization","MemoryManagement","FileSystems","Scheduling"]},{"id":"course-anglais-ii","kind":"course","title":"Anglais II","organisation":"UMONS","subtitle":"英语 II","skills":["English"]},{"id":"course-bases-de-donnees-ii","kind":"course","title":"Bases de données II","organisation":"UMONS","subtitle":"数据库 II","skills":["XML","XSLT","XQuery","XPath","BaseX","DataMining","Weka"]},{"id":"course-ingenierie-de-logiciels-et-gestion-de-projets","kind":"course","title":"Ingénierie de logiciels et gestion de projets","organisation":"UMONS","subtitle":"软件工程与项目管理","skills":["Agile","Scrum","SoftwareEngineering"]},{"id":"course-intelligence-artificielle","kind":"course","title":"Intelligence artificielle","organisation":"UMONS","subtitle":"人工智能","skills":["SearchAlgorithms","Metaheuristics","FirstOrderLogic","SupervisedLearning"]},{"id":"course-recherche-operationnelle-et-applications","kind":"course","title":"Recherche opérationnelle et applications","organisation":"UMONS","subtitle":"运筹学及其应用","skills":["OperationsResearch","LinearProgramming","IntegerProgramming","Duality"]},{"id":"course-structures-de-donnees","kind":"course","title":"Structures de données","organisation":"UMONS","subtitle":"数据结构","skills":["AVLTrees","BTrees","HashTables","Sorting","Complexity"]},{"id":"course-seminaires-d-informatique-en-veille-technologique","kind":"course","title":"Séminaires d'informatique en veille technologique","organisation":"UMONS","subtitle":"技术观察信息学研讨会","skills":["TechWatch"]},{"id":"course-cryptographie-et-securite-des-systemes-informatiques","kind":"course","title":"Cryptographie et sécurité des systèmes informatiques","organisation":"UMONS","subtitle":"密码学与系统安全","skills":["Cryptography","Unix","NetworkSecurity","ApplicationSecurity"]},{"id":"course-ethique-et-droit-de-l-informatique","kind":"course","title":"Éthique et droit de l'informatique","organisation":"UMONS","subtitle":"信息伦理与法律","skills":["IntellectualProperty","DataProtection","GDPR"]},{"id":"course-structure-des-ordinateurs","kind":"course","title":"Structure des ordinateurs","organisation":"EPHEC","subtitle":"计算机结构","skills":["ComputerArchitecture","Binary","Hexadecimal","Hardware"]},{"id":"course-informatique-systeme-d-exploitation","kind":"course","title":"Informatique - Système d'exploitation","organisation":"EPHEC","subtitle":"操作系统","skills":["OperatingSystems","ShellScripting","SystemAdministration"]},{"id":"course-mathematique-appliquee-a-l-informatique","kind":"course","title":"Mathématique appliquée à l'informatique","organisation":"EPHEC","subtitle":"应用于信息学的数学","skills":["LinearAlgebra","GraphTheory","SetTheory","RelationalAlgebra","MathematicalLogic","Cryptography"]},{"id":"course-principes-algorithmiques-et-programmation","kind":"course","title":"Principes algorithmiques et programmation","organisation":"EPHEC","subtitle":"算法原理与编程","skills":["Algorithms","DataTypes","ControlFlow","Programming"]},{"id":"course-principes-d-analyse-informatique","kind":"course","title":"Principes d'analyse informatique","organisation":"EPHEC","subtitle":"信息分析原理","skills":["UML","EntityRelationship","SystemsAnalysis"]},{"id":"course-information-et-communication-professionnelles","kind":"course","title":"Information et communication professionnelles","organisation":"EPHEC","subtitle":"专业信息与沟通","skills":["ProfessionalCommunication"]},{"id":"course-web-principes-de-base","kind":"course","title":"Web : principes de base","organisation":"EPHEC","subtitle":"Web 基础","skills":["HTML","CSS","URL","DNS","WebHosting"]},{"id":"course-initiation-aux-bases-de-donnees","kind":"course","title":"Initiation aux bases de données","organisation":"EPHEC","subtitle":"数据库入门","skills":["SQL","RelationalModel","Joins","Indexing"]},{"id":"course-gestion-et-exploitation-de-bases-de-donnees","kind":"course","title":"Gestion et exploitation de bases de données","organisation":"EPHEC","subtitle":"数据库管理与运维","skills":["Triggers","StoredProcedures","DataWarehouse","QueryOptimization"]},{"id":"course-programmation-orientee-objet","kind":"course","title":"Programmation orientée objet","organisation":"EPHEC","subtitle":"面向对象编程","skills":["OOP","Inheritance","Polymorphism","Encapsulation","Overloading"]},{"id":"course-projet-d-analyse-et-de-conception","kind":"course","title":"Projet d'analyse et de conception","organisation":"EPHEC","subtitle":"分析与设计项目","skills":["SystemsAnalysis","SoftwareDesign","Modelling"]},{"id":"course-techniques-de-gestion-de-projet","kind":"course","title":"Techniques de gestion de projet","organisation":"EPHEC","subtitle":"项目管理技术","skills":["ProjectManagement"]},{"id":"course-elements-de-statistique","kind":"course","title":"Éléments de statistique","organisation":"EPHEC","subtitle":"统计学基础","skills":["Statistics"]},{"id":"course-projet-de-developpement-web","kind":"course","title":"Projet de développement web","organisation":"EPHEC","subtitle":"Web 开发项目","skills":["JavaScript","AJAX","JSON","XML","ClientSideScripting"]},{"id":"course-notions-de-e-business","kind":"course","title":"Notions de e-business","organisation":"EPHEC","subtitle":"电子商务概念","skills":["Ebusiness"]},{"id":"course-projet-de-developpement-sgbd","kind":"course","title":"Projet de développement SGBD","organisation":"EPHEC","subtitle":"数据库系统开发项目","skills":["DataAccessLayer","Transactions","DatabaseProgramming","Debugging"]},{"id":"course-bases-des-reseaux","kind":"course","title":"Bases des réseaux","organisation":"EPHEC","subtitle":"网络基础","skills":["Ethernet","MAC","TCP/IP","Networking"]},{"id":"course-organisation-des-entreprises-et-elements-de-management","kind":"course","title":"Organisation des entreprises et éléments de management","organisation":"EPHEC","subtitle":"企业组织与管理","skills":["Management"]},{"id":"course-produits-logiciels-de-gestion-integres","kind":"course","title":"Produits logiciels de gestion intégrés","organisation":"EPHEC","subtitle":"集成管理软件","skills":["ERP"]},{"id":"course-projet-d-integration-de-developpement","kind":"course","title":"Projet d'intégration de développement","organisation":"EPHEC","subtitle":"开发集成项目","skills":["AJAX","JSON","XML","SQLInjection","XSS","Caching","URLRewriting"]},{"id":"course-veille-technologique","kind":"course","title":"Veille technologique","organisation":"EPHEC","subtitle":"技术观察","skills":["TechWatch"]},{"id":"course-administration-gestion-et-securisation-des-reseaux","kind":"course","title":"Administration, gestion et sécurisation des réseaux","organisation":"EPHEC","subtitle":"网络管理与安全","skills":["NetworkAdministration","NetworkSecurity","ApplicationServer"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue1","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE1","organisation":"EPHEC","subtitle":"高等教育应用语言 UE1","skills":["ProfessionalCommunication"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue2","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE2","organisation":"EPHEC","subtitle":"高等教育应用语言 UE2","skills":["ProfessionalCommunication"]},{"id":"course-economie-i","kind":"course","title":"Économie I","organisation":"USL-B","subtitle":"经济学 I","skills":["Microeconomics","CompetitiveMarkets","FirmBehaviour","MarketFailure"]},{"id":"course-economie-ii","kind":"course","title":"Économie II","organisation":"USL-B","subtitle":"经济学 II","skills":["ImperfectCompetition","Macroeconomics","NationalIncome","MonetaryMarket"]},{"id":"course-science-politique","kind":"course","title":"Science politique","organisation":"USL-B","subtitle":"政治学","skills":["PoliticalScience","Power","State","Democracy"]},{"id":"course-seminaire-penser-le-social","kind":"course","title":"Séminaire : penser le social","organisation":"USL-B","subtitle":"研讨课：思考社会","skills":["Epistemology","Durkheim","Weber","Marx"]},{"id":"course-seminaire-principes-et-methodes-en-sciences-sociales","kind":"course","title":"Séminaire : principes et méthodes en sciences sociales","organisation":"USL-B","subtitle":"研讨课：社会科学的原则与方法","skills":["AcademicWriting","Citation","Epistemology"]},{"id":"course-socio-economie-des-medias","kind":"course","title":"Socio-économie des médias","organisation":"USL-B","subtitle":"媒体社会经济学","skills":["MediaEconomics","Advertising","MediaRegulation","WebEconomy"]},{"id":"course-anglais-i-saint-louis","kind":"course","title":"Anglais I (Saint-Louis)","organisation":"USL-B","subtitle":"英语 I","skills":["English"]},{"id":"course-neerlandais-i","kind":"course","title":"Néerlandais I","organisation":"USL-B","subtitle":"荷兰语 I","skills":["Dutch"]},{"id":"volunteer-umons-学生代表","kind":"volunteer","title":"学生代表","organisation":"UMons","skills":[]},{"id":"volunteer-umons-buddy-tandemons","kind":"volunteer","title":"Buddy TandeMons","organisation":"UMons","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-学生代表","kind":"volunteer","title":"学生代表","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-辅导员","kind":"volunteer","title":"辅导员","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]}],"skills":[{"skill":".NET","uses":12,"href":"#skill-net"},{"skill":"Python","uses":10,"href":"#skill-python"},{"skill":"SQL Server","uses":8,"href":"#skill-sql-server"},{"skill":"DDD","uses":6,"href":"#skill-ddd"},{"skill":"Flutter","uses":6,"href":"#skill-flutter"},{"skill":"React","uses":5,"href":"#skill-react"},{"skill":"Dart","uses":4,"href":"#skill-dart"},{"skill":"Docker","uses":4,"href":"#skill-docker"},{"skill":"EntityFramework","uses":4,"href":"#skill-entityframework"},{"skill":"Java","uses":4,"href":"#skill-java"},{"skill":"OpenAI","uses":4,"href":"#skill-openai"},{"skill":"Pandas","uses":4,"href":"#skill-pandas"},{"skill":"PostgreSQL","uses":4,"href":"#skill-postgresql"},{"skill":"TypeScript","uses":4,"href":"#skill-typescript"},{"skill":"C#","uses":3,"href":"#skill-c"},{"skill":"CleanArchitecture","uses":3,"href":"#skill-cleanarchitecture"},{"skill":"Complexity","uses":3,"href":"#skill-complexity"},{"skill":"English","uses":3,"href":"#skill-english"},{"skill":"Firebase","uses":3,"href":"#skill-firebase"},{"skill":"JavaScript","uses":3,"href":"#skill-javascript"},{"skill":"OpenTelemetry","uses":3,"href":"#skill-opentelemetry"},{"skill":"ProfessionalCommunication","uses":3,"href":"#skill-professionalcommunication"},{"skill":"RAG","uses":3,"href":"#skill-rag"},{"skill":"SQL","uses":3,"href":"#skill-sql"},{"skill":"XML","uses":3,"href":"#skill-xml"},{"skill":"AI","uses":2,"href":"#skill-ai"},{"skill":"AJAX","uses":2,"href":"#skill-ajax"},{"skill":"Algorithms","uses":2,"href":"#skill-algorithms"},{"skill":"Angular","uses":2,"href":"#skill-angular"},{"skill":"API","uses":2,"href":"#skill-api"},{"skill":"Auth0","uses":2,"href":"#skill-auth0"},{"skill":"Azure","uses":2,"href":"#skill-azure"},{"skill":"Blazor","uses":2,"href":"#skill-blazor"},{"skill":"Cryptography","uses":2,"href":"#skill-cryptography"},{"skill":"CSS","uses":2,"href":"#skill-css"},{"skill":"DeepFace","uses":2,"href":"#skill-deepface"},{"skill":"DNS","uses":2,"href":"#skill-dns"},{"skill":"Epistemology","uses":2,"href":"#skill-epistemology"},{"skill":"Ethernet","uses":2,"href":"#skill-ethernet"},{"skill":"Express.js","uses":2,"href":"#skill-express-js"},{"skill":"FastAPI","uses":2,"href":"#skill-fastapi"},{"skill":"GraphTheory","uses":2,"href":"#skill-graphtheory"},{"skill":"gRPC","uses":2,"href":"#skill-grpc"},{"skill":"HTML","uses":2,"href":"#skill-html"},{"skill":"Indexing","uses":2,"href":"#skill-indexing"},{"skill":"JSON","uses":2,"href":"#skill-json"},{"skill":"LaTeX","uses":2,"href":"#skill-latex"},{"skill":"NetworkSecurity","uses":2,"href":"#skill-networksecurity"},{"skill":"Node.js","uses":2,"href":"#skill-node-js"},{"skill":"NumPy","uses":2,"href":"#skill-numpy"},{"skill":"OCR","uses":2,"href":"#skill-ocr"},{"skill":"RelationalAlgebra","uses":2,"href":"#skill-relationalalgebra"},{"skill":"Rust","uses":2,"href":"#skill-rust"},{"skill":"SentenceTransformers","uses":2,"href":"#skill-sentencetransformers"},{"skill":"Sequelize","uses":2,"href":"#skill-sequelize"},{"skill":"SpaCy","uses":2,"href":"#skill-spacy"},{"skill":"SQLAlchemy","uses":2,"href":"#skill-sqlalchemy"},{"skill":"SystemsAnalysis","uses":2,"href":"#skill-systemsanalysis"},{"skill":"TCP/IP","uses":2,"href":"#skill-tcp-ip"},{"skill":"TechWatch","uses":2,"href":"#skill-techwatch"},{"skill":"Tokio","uses":2,"href":"#skill-tokio"},{"skill":"UI/UX","uses":2,"href":"#skill-ui-ux"},{"skill":"UML","uses":2,"href":"#skill-uml"},{"skill":"Valhalla","uses":2,"href":"#skill-valhalla"},{"skill":"Whisper","uses":2,"href":"#skill-whisper"},{"skill":"xUnit","uses":2,"href":"#skill-xunit"},{"skill":"AcademicWriting","uses":1,"href":"#skill-academicwriting"},{"skill":"Advertising","uses":1,"href":"#skill-advertising"},{"skill":"Agile","uses":1,"href":"#skill-agile"},{"skill":"ApplicationSecurity","uses":1,"href":"#skill-applicationsecurity"},{"skill":"ApplicationServer","uses":1,"href":"#skill-applicationserver"},{"skill":"AVLTrees","uses":1,"href":"#skill-avltrees"},{"skill":"Axum","uses":1,"href":"#skill-axum"},{"skill":"BaseX","uses":1,"href":"#skill-basex"},{"skill":"BDD","uses":1,"href":"#skill-bdd"},{"skill":"Benchmark","uses":1,"href":"#skill-benchmark"},{"skill":"BGP","uses":1,"href":"#skill-bgp"},{"skill":"BigData","uses":1,"href":"#skill-bigdata"},{"skill":"Binary","uses":1,"href":"#skill-binary"},{"skill":"BTrees","uses":1,"href":"#skill-btrees"},{"skill":"Caching","uses":1,"href":"#skill-caching"},{"skill":"Caddy","uses":1,"href":"#skill-caddy"},{"skill":"Citation","uses":1,"href":"#skill-citation"},{"skill":"CleanCode","uses":1,"href":"#skill-cleancode"},{"skill":"ClientSideScripting","uses":1,"href":"#skill-clientsidescripting"},{"skill":"CombinatorialOptimization","uses":1,"href":"#skill-combinatorialoptimization"},{"skill":"Combinatorics","uses":1,"href":"#skill-combinatorics"},{"skill":"CompetitiveMarkets","uses":1,"href":"#skill-competitivemarkets"},{"skill":"ComputerArchitecture","uses":1,"href":"#skill-computerarchitecture"},{"skill":"ConstraintProgramming","uses":1,"href":"#skill-constraintprogramming"},{"skill":"ControlFlow","uses":1,"href":"#skill-controlflow"},{"skill":"CQRS","uses":1,"href":"#skill-cqrs"},{"skill":"DataAccessLayer","uses":1,"href":"#skill-dataaccesslayer"},{"skill":"DatabaseProgramming","uses":1,"href":"#skill-databaseprogramming"},{"skill":"DataMining","uses":1,"href":"#skill-datamining"},{"skill":"DataProtection","uses":1,"href":"#skill-dataprotection"},{"skill":"DataStructures","uses":1,"href":"#skill-datastructures"},{"skill":"DataTypes","uses":1,"href":"#skill-datatypes"},{"skill":"DataWarehouse","uses":1,"href":"#skill-datawarehouse"},{"skill":"Debugging","uses":1,"href":"#skill-debugging"},{"skill":"Democracy","uses":1,"href":"#skill-democracy"},{"skill":"DesignPatterns","uses":1,"href":"#skill-designpatterns"},{"skill":"Dio","uses":1,"href":"#skill-dio"},{"skill":"Drift","uses":1,"href":"#skill-drift"},{"skill":"Duality","uses":1,"href":"#skill-duality"},{"skill":"Durkheim","uses":1,"href":"#skill-durkheim"},{"skill":"Dutch","uses":1,"href":"#skill-dutch"},{"skill":"Ebusiness","uses":1,"href":"#skill-ebusiness"},{"skill":"Encapsulation","uses":1,"href":"#skill-encapsulation"},{"skill":"EntityRelationship","uses":1,"href":"#skill-entityrelationship"},{"skill":"ERP","uses":1,"href":"#skill-erp"},{"skill":"Evaluation","uses":1,"href":"#skill-evaluation"},{"skill":"EventDriven","uses":1,"href":"#skill-eventdriven"},{"skill":"FileSystems","uses":1,"href":"#skill-filesystems"},{"skill":"FirmBehaviour","uses":1,"href":"#skill-firmbehaviour"},{"skill":"FirstOrderLogic","uses":1,"href":"#skill-firstorderlogic"},{"skill":"FlutterMap","uses":1,"href":"#skill-fluttermap"},{"skill":"GDPR","uses":1,"href":"#skill-gdpr"},{"skill":"Hardware","uses":1,"href":"#skill-hardware"},{"skill":"HashTables","uses":1,"href":"#skill-hashtables"},{"skill":"Hexadecimal","uses":1,"href":"#skill-hexadecimal"},{"skill":"HexagonalArchitecture","uses":1,"href":"#skill-hexagonalarchitecture"},{"skill":"HRM","uses":1,"href":"#skill-hrm"},{"skill":"HTTP","uses":1,"href":"#skill-http"},{"skill":"i18next","uses":1,"href":"#skill-i18next"},{"skill":"ImperfectCompetition","uses":1,"href":"#skill-imperfectcompetition"},{"skill":"Inheritance","uses":1,"href":"#skill-inheritance"},{"skill":"IntegerProgramming","uses":1,"href":"#skill-integerprogramming"},{"skill":"IntellectualProperty","uses":1,"href":"#skill-intellectualproperty"},{"skill":"Joins","uses":1,"href":"#skill-joins"},{"skill":"JS","uses":1,"href":"#skill-js"},{"skill":"LinearAlgebra","uses":1,"href":"#skill-linearalgebra"},{"skill":"LinearProgramming","uses":1,"href":"#skill-linearprogramming"},{"skill":"LiteratureReview","uses":1,"href":"#skill-literaturereview"},{"skill":"LiveKit","uses":1,"href":"#skill-livekit"},{"skill":"MAC","uses":1,"href":"#skill-mac"},{"skill":"Macroeconomics","uses":1,"href":"#skill-macroeconomics"},{"skill":"Management","uses":1,"href":"#skill-management"},{"skill":"MarketFailure","uses":1,"href":"#skill-marketfailure"},{"skill":"Marx","uses":1,"href":"#skill-marx"},{"skill":"MathematicalLogic","uses":1,"href":"#skill-mathematicallogic"},{"skill":"MediaEconomics","uses":1,"href":"#skill-mediaeconomics"},{"skill":"MediaRegulation","uses":1,"href":"#skill-mediaregulation"},{"skill":"Melos","uses":1,"href":"#skill-melos"},{"skill":"MemoryManagement","uses":1,"href":"#skill-memorymanagement"},{"skill":"Metaheuristics","uses":1,"href":"#skill-metaheuristics"},{"skill":"Microeconomics","uses":1,"href":"#skill-microeconomics"},{"skill":"MinIO","uses":1,"href":"#skill-minio"},{"skill":"MiniZinc","uses":1,"href":"#skill-minizinc"},{"skill":"Mobile","uses":1,"href":"#skill-mobile"},{"skill":"MockTesting","uses":1,"href":"#skill-mocktesting"},{"skill":"Modelling","uses":1,"href":"#skill-modelling"},{"skill":"MonetaryMarket","uses":1,"href":"#skill-monetarymarket"},{"skill":"NationalIncome","uses":1,"href":"#skill-nationalincome"},{"skill":"NER","uses":1,"href":"#skill-ner"},{"skill":"NetworkAdministration","uses":1,"href":"#skill-networkadministration"},{"skill":"Networking","uses":1,"href":"#skill-networking"},{"skill":"Normalization","uses":1,"href":"#skill-normalization"},{"skill":"NoSQL","uses":1,"href":"#skill-nosql"},{"skill":"OfflineFirst","uses":1,"href":"#skill-offlinefirst"},{"skill":"OOP","uses":1,"href":"#skill-oop"},{"skill":"OperatingSystems","uses":1,"href":"#skill-operatingsystems"},{"skill":"OperationsResearch","uses":1,"href":"#skill-operationsresearch"},{"skill":"OSPF","uses":1,"href":"#skill-ospf"},{"skill":"Overloading","uses":1,"href":"#skill-overloading"},{"skill":"Pareto","uses":1,"href":"#skill-pareto"},{"skill":"PayPal","uses":1,"href":"#skill-paypal"},{"skill":"PHP","uses":1,"href":"#skill-php"},{"skill":"PoliticalScience","uses":1,"href":"#skill-politicalscience"},{"skill":"Polymorphism","uses":1,"href":"#skill-polymorphism"},{"skill":"PostGIS","uses":1,"href":"#skill-postgis"},{"skill":"Power","uses":1,"href":"#skill-power"},{"skill":"PredicateLogic","uses":1,"href":"#skill-predicatelogic"},{"skill":"Processes","uses":1,"href":"#skill-processes"},{"skill":"Programming","uses":1,"href":"#skill-programming"},{"skill":"ProjectManagement","uses":1,"href":"#skill-projectmanagement"},{"skill":"PropositionalLogic","uses":1,"href":"#skill-propositionallogic"},{"skill":"QRCode","uses":1,"href":"#skill-qrcode"},{"skill":"QueryOptimization","uses":1,"href":"#skill-queryoptimization"},{"skill":"ReactRouter","uses":1,"href":"#skill-reactrouter"},{"skill":"Redis","uses":1,"href":"#skill-redis"},{"skill":"RelationalModel","uses":1,"href":"#skill-relationalmodel"},{"skill":"Riverpod","uses":1,"href":"#skill-riverpod"},{"skill":"Scheduling","uses":1,"href":"#skill-scheduling"},{"skill":"ScientificWriting","uses":1,"href":"#skill-scientificwriting"},{"skill":"Scrum","uses":1,"href":"#skill-scrum"},{"skill":"SearchAlgorithms","uses":1,"href":"#skill-searchalgorithms"},{"skill":"Semaphores","uses":1,"href":"#skill-semaphores"},{"skill":"SetTheory","uses":1,"href":"#skill-settheory"},{"skill":"ShellScripting","uses":1,"href":"#skill-shellscripting"},{"skill":"SoftwareDesign","uses":1,"href":"#skill-softwaredesign"},{"skill":"SoftwareEngineering","uses":1,"href":"#skill-softwareengineering"},{"skill":"Sorting","uses":1,"href":"#skill-sorting"},{"skill":"SQLInjection","uses":1,"href":"#skill-sqlinjection"},{"skill":"SQLite","uses":1,"href":"#skill-sqlite"},{"skill":"SQLx","uses":1,"href":"#skill-sqlx"},{"skill":"State","uses":1,"href":"#skill-state"},{"skill":"Statistics","uses":1,"href":"#skill-statistics"},{"skill":"StoredProcedures","uses":1,"href":"#skill-storedprocedures"},{"skill":"SupervisedLearning","uses":1,"href":"#skill-supervisedlearning"},{"skill":"Synchronization","uses":1,"href":"#skill-synchronization"},{"skill":"SystemAdministration","uses":1,"href":"#skill-systemadministration"},{"skill":"Tonic","uses":1,"href":"#skill-tonic"},{"skill":"Transactions","uses":1,"href":"#skill-transactions"},{"skill":"Trees","uses":1,"href":"#skill-trees"},{"skill":"Triggers","uses":1,"href":"#skill-triggers"},{"skill":"UnitTesting","uses":1,"href":"#skill-unittesting"},{"skill":"Unix","uses":1,"href":"#skill-unix"},{"skill":"URL","uses":1,"href":"#skill-url"},{"skill":"URLRewriting","uses":1,"href":"#skill-urlrewriting"},{"skill":"Vite","uses":1,"href":"#skill-vite"},{"skill":"WebEconomy","uses":1,"href":"#skill-webeconomy"},{"skill":"Weber","uses":1,"href":"#skill-weber"},{"skill":"WebHosting","uses":1,"href":"#skill-webhosting"},{"skill":"Weka","uses":1,"href":"#skill-weka"},{"skill":"XPath","uses":1,"href":"#skill-xpath"},{"skill":"XQuery","uses":1,"href":"#skill-xquery"},{"skill":"XSLT","uses":1,"href":"#skill-xslt"},{"skill":"XSS","uses":1,"href":"#skill-xss"}],"kinds":{"work":"工作经验","education":"教育","project":"项目","course":"教学单元","volunteer":"志愿者","competition":"竞赛"},"groups":{"skills":"技能","entries":"条目"},"actions":[{"label":"English","hint":"语言","href":"/assets/data/resume-en.xml"},{"label":"Français","hint":"语言","href":"/assets/data/resume-fr.xml"},{"label":"Nederlands","hint":"语言","href":"/assets/data/resume-nl.xml"},{"label":"Español","hint":"语言","href":"/assets/data/resume-es.xml"},{"label":"Deutsch","hint":"语言","href":"/assets/data/resume-de.xml"},{"label":"切换主题","press":"#theme-toggle"},{"label":"下载简历","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_zh.pdf"},{"label":"下载时间线","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_timeline_zh.pdf"}]}</index>
+      </search>
       <ticks>
         <tick>
           <label>2010</label>
@@ -1623,6 +1654,7 @@
           <bars>
             <bar>
               <target>work-quick-restaurant-学生工</target>
+              <entry>work-quick-restaurant-学生工</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Quick Restaurant</name>
@@ -1637,6 +1669,7 @@
             </bar>
             <bar>
               <target>work-restomax-全栈-web-开发实习生</target>
+              <entry>work-restomax-全栈-web-开发实习生</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>RESTOMAX</name>
@@ -1652,6 +1685,7 @@
             </bar>
             <bar>
               <target>work-restomax-全栈-web-开发实习生</target>
+              <entry>project-webmenu</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>WebMenu</name>
@@ -1667,6 +1701,7 @@
             </bar>
             <bar>
               <target>work-les-auberges-de-jeunesse-wallonie-bruxelles-学生工</target>
+              <entry>work-les-auberges-de-jeunesse-wallonie-bruxelles-学生工</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</name>
@@ -1681,6 +1716,7 @@
             </bar>
             <bar>
               <target>work-editx-it-challenges-it-jobs-education-in-it-for-x-全栈-web-开发实习生</target>
+              <entry>work-editx-it-challenges-it-jobs-education-in-it-for-x-全栈-web-开发实习生</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>EDITx: IT Challenges, IT Jobs, Education in IT for X</name>
@@ -1695,6 +1731,7 @@
             </bar>
             <bar>
               <target>work-technofutur-tic-全栈-web-开发实习生</target>
+              <entry>work-technofutur-tic-全栈-web-开发实习生</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Technofutur TIC</name>
@@ -1710,6 +1747,7 @@
             </bar>
             <bar>
               <target>work-technofutur-tic-全栈-web-开发实习生</target>
+              <entry>project-myway</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>MyWay</name>
@@ -1728,6 +1766,7 @@
             </bar>
             <bar>
               <target>work-xtrada-软件工艺师</target>
+              <entry>work-xtrada-软件工艺师</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Xtrada</name>
@@ -1743,6 +1782,7 @@
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-软件工艺师</target>
+              <entry>work-xtrada-net-blazor-软件工艺师</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Xtrada</name>
@@ -1758,6 +1798,7 @@
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-软件工艺师</target>
+              <entry>project-kwalitijd</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Kwalitijd</name>
@@ -1773,6 +1814,7 @@
             </bar>
             <bar>
               <target>work-xtrada-net-react-软件工艺师</target>
+              <entry>work-xtrada-net-react-软件工艺师</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Xtrada</name>
@@ -1788,6 +1830,7 @@
             </bar>
             <bar>
               <target>work-xtrada-net-react-软件工艺师</target>
+              <entry>project-vhauctions</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>VhAuctions</name>
@@ -1803,6 +1846,7 @@
             </bar>
             <bar>
               <target>work-xtrada-数据科学家</target>
+              <entry>work-xtrada-数据科学家</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Xtrada</name>
@@ -1818,6 +1862,7 @@
             </bar>
             <bar>
               <target>work-xtrada-数据科学家</target>
+              <entry>project-vhauctions-ner-inventory-model</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>VhAuctions NER Inventory Model</name>
@@ -1833,6 +1878,7 @@
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺师</target>
+              <entry>work-emvi-ai-ai-软件工艺师</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Emvi.ai</name>
@@ -1848,6 +1894,7 @@
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺师</target>
+              <entry>project-remi</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
@@ -1865,6 +1912,7 @@
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺负责人</target>
+              <entry>work-emvi-ai-ai-软件工艺负责人</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Emvi.ai</name>
@@ -1880,6 +1928,7 @@
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺负责人</target>
+              <entry>project-emvi-app</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
@@ -1897,6 +1946,7 @@
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
+              <entry>work-acteble-创始人</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Acteble</name>
@@ -1912,6 +1962,7 @@
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
+              <entry>project-acteble-api</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble API</name>
@@ -1929,6 +1980,7 @@
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
+              <entry>project-acteble-app</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble App</name>
@@ -1946,6 +1998,7 @@
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
+              <entry>project-acteble-website</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble Website</name>
@@ -1963,6 +2016,7 @@
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
+              <entry>project-memoire-de-master</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Mémoire de master</name>
@@ -1981,6 +2035,7 @@
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
+              <entry>work-比利时参议院-ai-研究员</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>比利时参议院</name>
@@ -1996,6 +2051,7 @@
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
+              <entry>project-synergy</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
@@ -2013,6 +2069,7 @@
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
+              <entry>project-fedrag-be</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
@@ -2064,6 +2121,7 @@
           <bars>
             <bar>
               <target>education-lycee-mater-dei</target>
+              <entry>education-lycee-mater-dei</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>Lycée Mater Dei</name>
@@ -2079,6 +2137,7 @@
             </bar>
             <bar>
               <target>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</target>
+              <entry>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
@@ -2094,6 +2153,7 @@
             </bar>
             <bar>
               <target>education-uclouvain-universite-catholique-de-louvain-预科课程</target>
+              <entry>education-uclouvain-universite-catholique-de-louvain-预科课程</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
@@ -2109,6 +2169,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <entry>education-universite-saint-louis-bruxelles-政治学学士</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
@@ -2138,6 +2199,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <entry>course-economie-i</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Économie I</name>
@@ -2151,6 +2213,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <entry>course-economie-ii</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Économie II</name>
@@ -2164,6 +2227,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <entry>course-science-politique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Science politique</name>
@@ -2177,6 +2241,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <entry>course-seminaire-penser-le-social</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Séminaire : penser le social</name>
@@ -2190,6 +2255,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <entry>course-seminaire-principes-et-methodes-en-sciences-sociales</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Séminaire : principes et méthodes en sciences sociales</name>
@@ -2203,6 +2269,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <entry>course-socio-economie-des-medias</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Socio-économie des médias</name>
@@ -2216,6 +2283,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <entry>course-anglais-i-saint-louis</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Anglais I (Saint-Louis)</name>
@@ -2229,6 +2297,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
+              <entry>course-neerlandais-i</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Néerlandais I</name>
@@ -2242,6 +2311,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
@@ -2318,6 +2388,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-structure-des-ordinateurs</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Structure des ordinateurs</name>
@@ -2331,6 +2402,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-informatique-systeme-d-exploitation</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Informatique - Système d'exploitation</name>
@@ -2344,6 +2416,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-mathematique-appliquee-a-l-informatique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Mathématique appliquée à l'informatique</name>
@@ -2357,6 +2430,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-principes-algorithmiques-et-programmation</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Principes algorithmiques et programmation</name>
@@ -2370,6 +2444,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-principes-d-analyse-informatique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Principes d'analyse informatique</name>
@@ -2383,6 +2458,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-bases-des-reseaux</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Bases des réseaux</name>
@@ -2396,6 +2472,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-gestion-et-exploitation-de-bases-de-donnees</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Gestion et exploitation de bases de données</name>
@@ -2409,6 +2486,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-information-et-communication-professionnelles</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Information et communication professionnelles</name>
@@ -2422,6 +2500,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-initiation-aux-bases-de-donnees</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Initiation aux bases de données</name>
@@ -2435,6 +2514,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-notions-de-e-business</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Notions de e-business</name>
@@ -2448,6 +2528,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-projet-d-analyse-et-de-conception</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Projet d'analyse et de conception</name>
@@ -2461,6 +2542,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-techniques-de-gestion-de-projet</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Techniques de gestion de projet</name>
@@ -2474,6 +2556,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-web-principes-de-base</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Web : principes de base</name>
@@ -2487,6 +2570,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-elements-de-statistique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Éléments de statistique</name>
@@ -2500,6 +2584,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-organisation-des-entreprises-et-elements-de-management</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Organisation des entreprises et éléments de management</name>
@@ -2513,6 +2598,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-produits-logiciels-de-gestion-integres</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Produits logiciels de gestion intégrés</name>
@@ -2526,6 +2612,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-programmation-orientee-objet</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Programmation orientée objet</name>
@@ -2539,6 +2626,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-projet-de-developpement-sgbd</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Projet de développement SGBD</name>
@@ -2552,6 +2640,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-projet-de-developpement-web</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Projet de développement web</name>
@@ -2565,6 +2654,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-administration-gestion-et-securisation-des-reseaux</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Administration, gestion et sécurisation des réseaux</name>
@@ -2578,6 +2668,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-projet-d-integration-de-developpement</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Projet d'intégration de développement</name>
@@ -2591,6 +2682,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>course-veille-technologique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Veille technologique</name>
@@ -2604,6 +2696,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>volunteer-ephec-ecole-superieure-de-promotion-sociale-学生代表</entry>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>学生代表</name>
@@ -2618,6 +2711,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>volunteer-ephec-ecole-superieure-de-promotion-sociale-辅导员</entry>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>辅导员</name>
@@ -2632,6 +2726,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
+              <entry>project-webmenu</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>WebMenu</name>
@@ -2647,6 +2742,7 @@
             </bar>
             <bar>
               <target>education-institut-saint-louis-bruxelles-证书</target>
+              <entry>education-institut-saint-louis-bruxelles-证书</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
@@ -2662,6 +2758,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>education-umons-理学硕士</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>UMons</name>
@@ -2742,6 +2839,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-bases-de-donnees-i</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Bases de données I</name>
@@ -2755,6 +2853,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-algorithmique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Algorithmique</name>
@@ -2768,6 +2867,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-modelisation-logicielle</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Modélisation logicielle</name>
@@ -2781,6 +2881,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-mathematique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Mathématique</name>
@@ -2794,6 +2895,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-anglais-i</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Anglais I</name>
@@ -2807,6 +2909,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-lecture-et-redaction-scientifique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Lecture et rédaction scientifique</name>
@@ -2820,6 +2923,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-strategie-et-politiques-en-ressources-humaines</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Stratégie et politiques en ressources humaines</name>
@@ -2833,6 +2937,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-reseaux</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Réseaux</name>
@@ -2846,6 +2951,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-systemes-d-exploitation</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Systèmes d'exploitation</name>
@@ -2859,6 +2965,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-anglais-ii</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Anglais II</name>
@@ -2872,6 +2979,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-bases-de-donnees-ii</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Bases de données II</name>
@@ -2885,6 +2993,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-ingenierie-de-logiciels-et-gestion-de-projets</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Ingénierie de logiciels et gestion de projets</name>
@@ -2898,6 +3007,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-intelligence-artificielle</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Intelligence artificielle</name>
@@ -2911,6 +3021,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-recherche-operationnelle-et-applications</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Recherche opérationnelle et applications</name>
@@ -2924,6 +3035,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-structures-de-donnees</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Structures de données</name>
@@ -2937,6 +3049,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-seminaires-d-informatique-en-veille-technologique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Séminaires d'informatique en veille technologique</name>
@@ -2950,6 +3063,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-cryptographie-et-securite-des-systemes-informatiques</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Cryptographie et sécurité des systèmes informatiques</name>
@@ -2963,6 +3077,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>course-ethique-et-droit-de-l-informatique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Éthique et droit de l'informatique</name>
@@ -2976,6 +3091,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>volunteer-umons-学生代表</entry>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>学生代表</name>
@@ -2990,6 +3106,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>volunteer-umons-buddy-tandemons</entry>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>Buddy TandeMons</name>
@@ -3004,6 +3121,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>project-remi</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
@@ -3021,6 +3139,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>project-emvi-app</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
@@ -3038,6 +3157,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>project-synergy</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
@@ -3055,6 +3175,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>project-fedrag-be</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
@@ -3072,6 +3193,7 @@
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
+              <entry>project-memoire-de-master</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Mémoire de master</name>
@@ -3735,6 +3857,8 @@ TFE: WebMenu 2.0
         <role>作者</role>
       </roles>
       <summary>内部平台，让议会工作人员可以搜索、探索并与比利时联邦议会的档案对话，由检索增强（RAG）管道驱动，支持法语/荷兰语双语。</summary>
+      <anchor>project-synergy</anchor>
+      <anchoredIn>work-比利时参议院-ai-研究员</anchoredIn>
     </project>
     <project>
       <name>fedrag-be</name>
@@ -3755,6 +3879,8 @@ TFE: WebMenu 2.0
         <role>作者</role>
       </roles>
       <summary>开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。</summary>
+      <anchor>project-fedrag-be</anchor>
+      <anchoredIn>work-比利时参议院-ai-研究员</anchoredIn>
     </project>
     <project>
       <name>Acteble API</name>
@@ -3785,6 +3911,8 @@ TFE: WebMenu 2.0
         <role>创始人</role>
       </roles>
       <summary>平台后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务。</summary>
+      <anchor>project-acteble-api</anchor>
+      <anchoredIn>work-acteble-创始人</anchoredIn>
     </project>
     <project>
       <name>Acteble App</name>
@@ -3810,6 +3938,8 @@ TFE: WebMenu 2.0
         <role>创始人</role>
       </roles>
       <summary>面向 iOS、Android、Web 和桌面的离线优先客户端：由 Flutter 应用和共享包组成的 Melos 单仓库，基于本地 Drift/SQLite 存储的 Riverpod 状态管理，通过 REST 和 gRPC 与 API 通信。</summary>
+      <anchor>project-acteble-app</anchor>
+      <anchoredIn>work-acteble-创始人</anchoredIn>
     </project>
     <project>
       <name>Acteble Website</name>
@@ -3828,6 +3958,8 @@ TFE: WebMenu 2.0
         <role>创始人</role>
       </roles>
       <summary>Acteble 的公开网站：使用 Vite 构建、通过 i18next 实现国际化的轻量级 React 单页应用。</summary>
+      <anchor>project-acteble-website</anchor>
+      <anchoredIn>work-acteble-创始人</anchoredIn>
     </project>
     <project>
       <name>Mémoire de master</name>
@@ -3848,6 +3980,8 @@ TFE: WebMenu 2.0
       </roles>
       <entity>UMONS</entity>
       <summary>硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成。Acteble 规划引擎的研发，使用 Python 编写。</summary>
+      <anchor>project-memoire-de-master</anchor>
+      <anchoredIn>work-acteble-创始人</anchoredIn>
     </project>
     <project>
       <name>Emvi App</name>
@@ -3865,6 +3999,8 @@ TFE: WebMenu 2.0
       <url>https://www.emvi.ai</url>
       <type>移动应用</type>
       <summary>为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描（二维码和条形码）以及适配的 Valhalla 路线规划系统。</summary>
+      <anchor>project-emvi-app</anchor>
+      <anchoredIn>work-emvi-ai-ai-软件工艺负责人</anchoredIn>
     </project>
     <project>
       <name>Remi</name>
@@ -3882,6 +4018,8 @@ TFE: WebMenu 2.0
       <endDate>2025-06-30</endDate>
       <type>人工智能应用</type>
       <summary>追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。DeepFace (Serengil) 管道。</summary>
+      <anchor>project-remi</anchor>
+      <anchoredIn>work-emvi-ai-ai-软件工艺师</anchoredIn>
     </project>
     <project>
       <name>EduCraft</name>
@@ -3893,6 +4031,7 @@ TFE: WebMenu 2.0
       </keywords>
       <startDate>2024-03-29</startDate>
       <endDate>2024-03-31</endDate>
+      <anchor>project-educraft</anchor>
     </project>
     <project>
       <name>MyWay</name>
@@ -3919,6 +4058,8 @@ TFE: WebMenu 2.0
         <role>创始人</role>
       </roles>
       <entity>Freelance</entity>
+      <anchor>project-myway</anchor>
+      <anchoredIn>work-technofutur-tic-全栈-web-开发实习生</anchoredIn>
     </project>
     <project>
       <name>VhAuctions NER Inventory Model</name>
@@ -3933,6 +4074,8 @@ TFE: WebMenu 2.0
       <startDate>2024-03-01</startDate>
       <endDate>2024-08-07</endDate>
       <summary>用于从音频转录中提取库存项目的命名实体识别机器学习模型。</summary>
+      <anchor>project-vhauctions-ner-inventory-model</anchor>
+      <anchoredIn>work-xtrada-数据科学家</anchoredIn>
     </project>
     <project>
       <name>VhAuctions</name>
@@ -3950,6 +4093,8 @@ TFE: WebMenu 2.0
       <startDate>2024-01-01</startDate>
       <endDate>2024-02-28</endDate>
       <summary>拍卖车队管理器。</summary>
+      <anchor>project-vhauctions</anchor>
+      <anchoredIn>work-xtrada-net-react-软件工艺师</anchoredIn>
     </project>
     <project>
       <name>Kwalitijd</name>
@@ -3965,6 +4110,8 @@ TFE: WebMenu 2.0
       <startDate>2023-09-01</startDate>
       <endDate>2023-12-31</endDate>
       <summary>体育俱乐部和联合会的调查管理器。</summary>
+      <anchor>project-kwalitijd</anchor>
+      <anchoredIn>work-xtrada-net-blazor-软件工艺师</anchoredIn>
     </project>
     <project>
       <name>WebMenu</name>
@@ -3977,6 +4124,8 @@ TFE: WebMenu 2.0
       <startDate>2021-11-01</startDate>
       <endDate>2022-03-31</endDate>
       <summary>基于二维码的酒店、餐厅、咖啡馆 (HoReCa) 收银机。</summary>
+      <anchor>project-webmenu</anchor>
+      <anchoredIn>work-restomax-全栈-web-开发实习生</anchoredIn>
     </project>
   </projects>
   <references>
@@ -4162,6 +4311,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.umons.be</url>
       <startDate>2023-11-30</startDate>
       <endDate>2026-09-04</endDate>
+      <anchor>volunteer-umons-学生代表</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </volunteer-item>
     <volunteer-item>
       <organization>UMons</organization>
@@ -4169,6 +4320,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.umons.be</url>
       <startDate>2023-11-30</startDate>
       <endDate>2026-09-04</endDate>
+      <anchor>volunteer-umons-buddy-tandemons</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </volunteer-item>
     <volunteer-item>
       <organization>EPHEC École Supérieure de Promotion Sociale</organization>
@@ -4176,6 +4329,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be</url>
       <startDate>2019-09-30</startDate>
       <endDate>2022-10-15</endDate>
+      <anchor>volunteer-ephec-ecole-superieure-de-promotion-sociale-学生代表</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </volunteer-item>
     <volunteer-item>
       <organization>EPHEC École Supérieure de Promotion Sociale</organization>
@@ -4183,6 +4338,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be</url>
       <startDate>2019-09-30</startDate>
       <endDate>2022-10-15</endDate>
+      <anchor>volunteer-ephec-ecole-superieure-de-promotion-sociale-辅导员</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </volunteer-item>
   </volunteer>
   <courses>
@@ -4197,6 +4354,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-011-C.htm</url>
       <entity>UMONS</entity>
       <summary>算法</summary>
+      <anchor>course-algorithmique</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Anglais I</name>
@@ -4206,6 +4365,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-012-C.htm</url>
       <entity>UMONS</entity>
       <summary>英语 I</summary>
+      <anchor>course-anglais-i</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Bases de données I</name>
@@ -4220,6 +4381,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-013-C.htm</url>
       <entity>UMONS</entity>
       <summary>数据库 I</summary>
+      <anchor>course-bases-de-donnees-i</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Lecture et rédaction scientifique</name>
@@ -4230,6 +4393,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-014-C.htm</url>
       <entity>UMONS</entity>
       <summary>科学阅读与写作</summary>
+      <anchor>course-lecture-et-redaction-scientifique</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Mathématique</name>
@@ -4243,6 +4408,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-015-C.htm</url>
       <entity>UMONS</entity>
       <summary>数学</summary>
+      <anchor>course-mathematique</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Modélisation logicielle</name>
@@ -4257,6 +4424,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-016-C.htm</url>
       <entity>UMONS</entity>
       <summary>软件建模</summary>
+      <anchor>course-modelisation-logicielle</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Réseaux</name>
@@ -4271,6 +4440,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-017-C.htm</url>
       <entity>UMONS</entity>
       <summary>计算机网络</summary>
+      <anchor>course-reseaux</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Stratégie et politiques en ressources humaines</name>
@@ -4280,6 +4451,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-018-C.htm</url>
       <entity>UMONS</entity>
       <summary>人力资源战略与政策</summary>
+      <anchor>course-strategie-et-politiques-en-ressources-humaines</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Systèmes d'exploitation</name>
@@ -4294,6 +4467,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-019-C.htm</url>
       <entity>UMONS</entity>
       <summary>操作系统</summary>
+      <anchor>course-systemes-d-exploitation</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Anglais II</name>
@@ -4303,6 +4478,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-001-C.htm</url>
       <entity>UMONS</entity>
       <summary>英语 II</summary>
+      <anchor>course-anglais-ii</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Bases de données II</name>
@@ -4318,6 +4495,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-101-C.htm</url>
       <entity>UMONS</entity>
       <summary>数据库 II</summary>
+      <anchor>course-bases-de-donnees-ii</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Ingénierie de logiciels et gestion de projets</name>
@@ -4329,6 +4508,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-008-C.htm</url>
       <entity>UMONS</entity>
       <summary>软件工程与项目管理</summary>
+      <anchor>course-ingenierie-de-logiciels-et-gestion-de-projets</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Intelligence artificielle</name>
@@ -4341,6 +4522,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-102-C.htm</url>
       <entity>UMONS</entity>
       <summary>人工智能</summary>
+      <anchor>course-intelligence-artificielle</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Recherche opérationnelle et applications</name>
@@ -4353,6 +4536,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-103-C.htm</url>
       <entity>UMONS</entity>
       <summary>运筹学及其应用</summary>
+      <anchor>course-recherche-operationnelle-et-applications</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Structures de données</name>
@@ -4366,6 +4551,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-104-C.htm</url>
       <entity>UMONS</entity>
       <summary>数据结构</summary>
+      <anchor>course-structures-de-donnees</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Séminaires d'informatique en veille technologique</name>
@@ -4375,6 +4562,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm</url>
       <entity>UMONS</entity>
       <summary>技术观察信息学研讨会</summary>
+      <anchor>course-seminaires-d-informatique-en-veille-technologique</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Cryptographie et sécurité des systèmes informatiques</name>
@@ -4387,6 +4576,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm</url>
       <entity>UMONS</entity>
       <summary>密码学与系统安全</summary>
+      <anchor>course-cryptographie-et-securite-des-systemes-informatiques</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Éthique et droit de l'informatique</name>
@@ -4398,6 +4589,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm</url>
       <entity>UMONS</entity>
       <summary>信息伦理与法律</summary>
+      <anchor>course-ethique-et-droit-de-l-informatique</anchor>
+      <anchoredIn>education-umons-理学硕士</anchoredIn>
     </course>
     <course>
       <name>Structure des ordinateurs</name>
@@ -4410,6 +4603,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=43</url>
       <entity>EPHEC</entity>
       <summary>计算机结构</summary>
+      <anchor>course-structure-des-ordinateurs</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Informatique - Système d'exploitation</name>
@@ -4421,6 +4616,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=47</url>
       <entity>EPHEC</entity>
       <summary>操作系统</summary>
+      <anchor>course-informatique-systeme-d-exploitation</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Mathématique appliquée à l'informatique</name>
@@ -4435,6 +4632,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=20</url>
       <entity>EPHEC</entity>
       <summary>应用于信息学的数学</summary>
+      <anchor>course-mathematique-appliquee-a-l-informatique</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Principes algorithmiques et programmation</name>
@@ -4447,6 +4646,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=87</url>
       <entity>EPHEC</entity>
       <summary>算法原理与编程</summary>
+      <anchor>course-principes-algorithmiques-et-programmation</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Principes d'analyse informatique</name>
@@ -4458,6 +4659,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=116</url>
       <entity>EPHEC</entity>
       <summary>信息分析原理</summary>
+      <anchor>course-principes-d-analyse-informatique</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Information et communication professionnelles</name>
@@ -4467,6 +4670,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=39</url>
       <entity>EPHEC</entity>
       <summary>专业信息与沟通</summary>
+      <anchor>course-information-et-communication-professionnelles</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Web : principes de base</name>
@@ -4480,6 +4685,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=95</url>
       <entity>EPHEC</entity>
       <summary>Web 基础</summary>
+      <anchor>course-web-principes-de-base</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Initiation aux bases de données</name>
@@ -4492,6 +4699,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=79</url>
       <entity>EPHEC</entity>
       <summary>数据库入门</summary>
+      <anchor>course-initiation-aux-bases-de-donnees</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Gestion et exploitation de bases de données</name>
@@ -4504,6 +4713,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=83</url>
       <entity>EPHEC</entity>
       <summary>数据库管理与运维</summary>
+      <anchor>course-gestion-et-exploitation-de-bases-de-donnees</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Programmation orientée objet</name>
@@ -4517,6 +4728,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=91</url>
       <entity>EPHEC</entity>
       <summary>面向对象编程</summary>
+      <anchor>course-programmation-orientee-objet</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Projet d'analyse et de conception</name>
@@ -4528,6 +4741,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=120</url>
       <entity>EPHEC</entity>
       <summary>分析与设计项目</summary>
+      <anchor>course-projet-d-analyse-et-de-conception</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Techniques de gestion de projet</name>
@@ -4537,6 +4752,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=113</url>
       <entity>EPHEC</entity>
       <summary>项目管理技术</summary>
+      <anchor>course-techniques-de-gestion-de-projet</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Éléments de statistique</name>
@@ -4546,6 +4763,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=35</url>
       <entity>EPHEC</entity>
       <summary>统计学基础</summary>
+      <anchor>course-elements-de-statistique</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Projet de développement web</name>
@@ -4559,6 +4778,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=99</url>
       <entity>EPHEC</entity>
       <summary>Web 开发项目</summary>
+      <anchor>course-projet-de-developpement-web</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Notions de e-business</name>
@@ -4568,6 +4789,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=56</url>
       <entity>EPHEC</entity>
       <summary>电子商务概念</summary>
+      <anchor>course-notions-de-e-business</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Projet de développement SGBD</name>
@@ -4580,6 +4803,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=104</url>
       <entity>EPHEC</entity>
       <summary>数据库系统开发项目</summary>
+      <anchor>course-projet-de-developpement-sgbd</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Bases des réseaux</name>
@@ -4592,6 +4817,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=69</url>
       <entity>EPHEC</entity>
       <summary>网络基础</summary>
+      <anchor>course-bases-des-reseaux</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Organisation des entreprises et éléments de management</name>
@@ -4601,6 +4828,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=52</url>
       <entity>EPHEC</entity>
       <summary>企业组织与管理</summary>
+      <anchor>course-organisation-des-entreprises-et-elements-de-management</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Produits logiciels de gestion intégrés</name>
@@ -4610,6 +4839,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=61</url>
       <entity>EPHEC</entity>
       <summary>集成管理软件</summary>
+      <anchor>course-produits-logiciels-de-gestion-integres</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Projet d'intégration de développement</name>
@@ -4625,6 +4856,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=108</url>
       <entity>EPHEC</entity>
       <summary>开发集成项目</summary>
+      <anchor>course-projet-d-integration-de-developpement</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Veille technologique</name>
@@ -4634,6 +4867,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=65</url>
       <entity>EPHEC</entity>
       <summary>技术观察</summary>
+      <anchor>course-veille-technologique</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Administration, gestion et sécurisation des réseaux</name>
@@ -4645,6 +4880,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=74</url>
       <entity>EPHEC</entity>
       <summary>网络管理与安全</summary>
+      <anchor>course-administration-gestion-et-securisation-des-reseaux</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Langue en situation appliquée à l'enseignement supérieur UE1</name>
@@ -4653,6 +4890,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       </keywords>
       <entity>EPHEC</entity>
       <summary>高等教育应用语言 UE1</summary>
+      <anchor>course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue1</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Langue en situation appliquée à l'enseignement supérieur UE2</name>
@@ -4662,6 +4901,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24</url>
       <entity>EPHEC</entity>
       <summary>高等教育应用语言 UE2</summary>
+      <anchor>course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue2</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
     </course>
     <course>
       <name>Économie I</name>
@@ -4673,6 +4914,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       </keywords>
       <entity>USL-B</entity>
       <summary>经济学 I</summary>
+      <anchor>course-economie-i</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
     </course>
     <course>
       <name>Économie II</name>
@@ -4684,6 +4927,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       </keywords>
       <entity>USL-B</entity>
       <summary>经济学 II</summary>
+      <anchor>course-economie-ii</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
     </course>
     <course>
       <name>Science politique</name>
@@ -4695,6 +4940,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       </keywords>
       <entity>USL-B</entity>
       <summary>政治学</summary>
+      <anchor>course-science-politique</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
     </course>
     <course>
       <name>Séminaire : penser le social</name>
@@ -4706,6 +4953,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       </keywords>
       <entity>USL-B</entity>
       <summary>研讨课：思考社会</summary>
+      <anchor>course-seminaire-penser-le-social</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
     </course>
     <course>
       <name>Séminaire : principes et méthodes en sciences sociales</name>
@@ -4716,6 +4965,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       </keywords>
       <entity>USL-B</entity>
       <summary>研讨课：社会科学的原则与方法</summary>
+      <anchor>course-seminaire-principes-et-methodes-en-sciences-sociales</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
     </course>
     <course>
       <name>Socio-économie des médias</name>
@@ -4727,6 +4978,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       </keywords>
       <entity>USL-B</entity>
       <summary>媒体社会经济学</summary>
+      <anchor>course-socio-economie-des-medias</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
     </course>
     <course>
       <name>Anglais I (Saint-Louis)</name>
@@ -4735,6 +4988,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       </keywords>
       <entity>USL-B</entity>
       <summary>英语 I</summary>
+      <anchor>course-anglais-i-saint-louis</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
     </course>
     <course>
       <name>Néerlandais I</name>
@@ -4743,6 +4998,8 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       </keywords>
       <entity>USL-B</entity>
       <summary>荷兰语 I</summary>
+      <anchor>course-neerlandais-i</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
     </course>
   </courses>
   <competitions>

@@ -9,8 +9,11 @@ const {
   renderProjectsBlock,
 } = require('./sidebar-blocks');
 
+// What a tel: link dials: the digits, and the + of an international number.
+const telOf = (phone) => (phone || '').replace(/[^+\d]/g, '');
+
 function renderContactInfo(b, t, degreeLines, profileLines) {
-  const phoneDigits = (b.phone || '').replace(/[^+\d]/g, '');
+  const phoneDigits = telOf(b.phone);
   // The PDF writes the country out in the page's language; the screen keeps the
   // ISO code. data-print-text is this repo's existing way of letting the sheet
   // say what the PDF says — carried on a span, not on the <p>, so the swap
@@ -90,4 +93,4 @@ function generateSidebar(resume, lang) {
   return [renderContactInfo(b, t, degreeLines, profileLines), ...blocks].join('\n\n');
 }
 
-module.exports = { generateSidebar };
+module.exports = { generateSidebar, telOf };

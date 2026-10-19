@@ -33,4 +33,4 @@ function generateCvDownload(lang) {
   ].join('\n');
 }
 
-module.exports = { generateCvDownload };
+module.exports = { generateCvDownload, timelinePdf };

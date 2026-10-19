@@ -1,7 +1,9 @@
 // The classic page's search: a dialog opened by the button in the timeline's
 // head or by ⌘K / Ctrl+K, over the entries the generator handed the page
 // (scripts/lib/sections/search.js), ranked by js/search-rank.js. A skill
-// applies the skill filter (js/skill-filter.js, through `cv:skill`); an entry
+// applies the skill filter (js/skill-filter.js, through `cv:skill`) — or, when
+// the index names its target (the rich XSLT theme, scripts/lib/xml-search.js),
+// leads there: that filter is CSS, applied by the URL alone. An entry
 // is scrolled to and set apart, its bar marked (js/timeline.js, through
 // `cv:reveal`). Without this script the button stays hidden.
 (() => {
@@ -17,6 +19,7 @@
     return;
   }
   const { entries, skills, kinds, groups, actions } = JSON.parse(data.textContent);
+  const targetOf = new Map(skills.map((s) => [s.skill, s.href]));
   const MAX_SKILLS = 6;
   const MAX_ENTRIES = 20;
 
@@ -83,7 +86,9 @@
     if (!option) return;
     dialog.close();
     const { type, value, href, press } = option.dataset;
-    if (type === 'skill') document.dispatchEvent(new CustomEvent('cv:skill', { detail: value }));
+    if (type === 'skill' && targetOf.get(value)) location.hash = targetOf.get(value);
+    else if (type === 'skill')
+      document.dispatchEvent(new CustomEvent('cv:skill', { detail: value }));
     else if (type === 'entry') lead(value);
     else if (href) location.assign(href);
     else document.querySelector(press)?.click();
