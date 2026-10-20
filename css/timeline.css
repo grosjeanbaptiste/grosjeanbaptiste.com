@@ -51,20 +51,6 @@
   scrollbar-width: thin;
 }
 
-/* A zoomed-in timeline keeps its last years on screen: a right-to-left frame
-   anchors its scroll at the right end, today, so a frame that narrows or widens
-   (a window resized, fonts loaded) stays there instead of sliding back towards
-   the first years. The axis itself still runs left to right. */
-@media screen {
-  .tl-scroll {
-    direction: rtl;
-  }
-}
-
-.tl-grid {
-  direction: ltr;
-}
-
 .tl-grid {
   --lane-label: 7rem;
   --row-height: 1.9rem;

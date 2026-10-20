@@ -661,6 +661,7 @@
              arrow keys, preview). -->
         <link rel="stylesheet" href="/css/timeline.css"/>
         <link rel="stylesheet" href="/css/timeline-entries.css"/>
+        <link rel="stylesheet" href="/css/timeline-scroll.css"/>
         <!-- The classic page's search, as is (before the theme's filter
              styles, which keep the last word on the chips). -->
         <link rel="stylesheet" href="/css/browse.css"/>
