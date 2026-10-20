@@ -269,6 +269,10 @@
             background: var(--bg-page);
             line-height: 1.45;
           }
+          /* Every link in the accent, as on the classic page; the blocks below
+             style their own on top of this. */
+          a { color: var(--accent); text-decoration: none; }
+          a:hover { text-decoration: underline; }
           .toolbar {
             background: var(--bg-sidebar);
             padding: 8px 18px;

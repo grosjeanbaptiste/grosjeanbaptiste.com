@@ -1,6 +1,7 @@
 {
   "name": "grosjeanbaptiste-app",
   "private": true,
+  "license": "UNLICENSED",
   "version": "0.0.0",
   "type": "module",
   "description": "React view of the CV, served at /app/. Built into ../app and committed like the other generated views.",
