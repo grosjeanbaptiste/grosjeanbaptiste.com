@@ -509,6 +509,7 @@
              whole career in the frame, bars as plain links. -->
         <link rel="stylesheet" href="/css/timeline.css"/>
         <link rel="stylesheet" href="/css/timeline-entries.css"/>
+        <link rel="stylesheet" href="/css/timeline-scroll.css"/>
         <link rel="stylesheet" href="/css/skill-links.css"/>
       </head>
       <body>

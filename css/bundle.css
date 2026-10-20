@@ -1370,6 +1370,22 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   }
 }
 
+/* timeline-scroll.css */
+/* A zoomed-in timeline keeps its last years on screen: a right-to-left frame
+ * anchors its scroll at the right end, today, so a frame that narrows or widens
+ * (a window resized, fonts loaded) stays there instead of sliding back towards
+ * the first years. The grid, and so the axis, still runs left to right. Split
+ * from css/timeline.css, which lays the timeline out. */
+@media screen {
+  .tl-scroll {
+    direction: rtl;
+  }
+}
+
+.tl-grid {
+  direction: ltr;
+}
+
 /* browse.css */
 /* Browsing the classic page: the skill filter under the timeline
  * (js/skill-filter.js) and the search dialog (js/search.js). Both are written
