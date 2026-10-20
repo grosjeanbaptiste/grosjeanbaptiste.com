@@ -23,7 +23,7 @@ module.exports = {
   timelineTitle: 'Zeitleiste',
   // A degree followed on an evening schedule ("horaire décalé").
   scheduleEvening: 'Abendstudium',
-  competitions: 'Wettbewerbe',
+  competitions: 'Veranstaltungen',
   lastYears: (n) => `${n} Jahre`,
   wholeCareer: 'Alles',
   printPdf: 'Drucken / PDF',

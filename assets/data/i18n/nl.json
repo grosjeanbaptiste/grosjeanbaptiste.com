@@ -133,14 +133,30 @@
   "projects": [
     {
       "description": "Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.",
-      "summary": "Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders.",
+      "summary": "Vijf lagen: een Rust-CLI die alle I/O doet, een link-grammar syntactische parser, een SWI-Prolog symbolische engine zonder I/O, domeinvocabulairepacks als data, en een vijftigtal Rust-actiebinaries — een nieuw werkwoord is één packfeit en één binary. Mutatiegetest, met een corpus van regressiezinnen en een koude start van ongeveer 120 ms.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines.",
-      "summary": "Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core.",
+      "description": "Puur algoritmisch Rust-framework dat uitwisselbare onderdelen van een RAG-pipeline op BEIR benchmarkt en de best gemeten configuratie levert als vraag-antwoord-CLI met geciteerde bronnen.",
+      "summary": "Negen pipelinestappen (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), elk een port waarvan het algoritme per label wordt gekozen (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonaal + DDD + TDD, alleen de standaardbibliotheek in de core, geen LLM. De metrieken komen exact overeen met pytrec_eval. Op zes BEIR-datasets wint geen enkele retriever overal (ndcg@10 0,668 op SciFact met BM25F); een LambdaMART-reranker tilt ArguAna van 0,301 naar 0,527 in 5-voudige kruisvalidatie.",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Vocabulairetrainer met gespreide herhaling voor zes talen, waarbij elk woord wordt aangeleerd met een uitgelijnde voorbeeldzin in elke taal.",
+      "summary": "Een Rust-workspace waarvan de pure domeinkern (hexagonaal, DDD, test-first) een terminal-UI (ratatui) en Dioxus-apps voor desktop en iOS aanstuurt: Leitner-dozen met SM-2-planning op SQLite, inhoud uit datapakketten met gecontroleerde checksum. Het datalab bouwt in Python de lexicale databank in zes talen — ongeveer 8.900 woordbetekenissen (oktober 2026) uitgelijnd op WordNet, geïllustreerd met Tatoeba-zinnen, geanalyseerd met spaCy, elke woord-in-zin-koppeling gecontroleerd.",
+      "type": "Applicatie",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Voorspellingen van het FIFA WK 2026 met een ensemble van voetbalratingstrategieën.",
+      "summary": "Een Python-engine (DDD, hexagonaal) weegt vijftien strategieën voor wedstrijduitslagen — Elo, Poisson aanval/verdediging, vorm, onderlinge duels, waarde van de selectie, rustdagen, bookmakerquoteringen — aangepast aan de speellocatie, en is overgezet naar Rust/Dioxus-apps voor web (WebAssembly), desktop, mobiel en terminal, die er gelijk mee blijven. Een onderzoekslab backtest de strategieën walk-forward, telkens met één toernooi apart gehouden, op 635 wedstrijden uit tien toernooien (WK's 2002–2022 en vier continentale toernooien van 2023–2024) en stemt de ensemblegewichten af; buiten de steekproef scoort Elo alleen het best (55,6% juist).",
+      "type": "Voorspellingsengine",
       "roles": [
         "Auteur"
       ]
@@ -161,30 +177,16 @@
       ]
     },
     {
-      "description": "Backend van het Acteble-platform: een modulaire monoliet in Rust.",
-      "summary": "Backend van het platform: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming.",
-      "roles": [
-        "Oprichter"
-      ]
-    },
-    {
-      "description": "Offline-first multiplatformclient van Acteble, gebouwd met Flutter.",
-      "summary": "Offline-first client voor iOS, Android, web en desktop: een Melos-monorepo met Flutter-apps en gedeelde packages, Riverpod-state boven een lokale Drift/SQLite-opslag, verbonden met de API via REST en gRPC.",
-      "type": "Mobiele applicatie",
-      "roles": [
-        "Oprichter"
-      ]
-    },
-    {
-      "description": "Publieke website van Acteble: een React single-page-applicatie.",
-      "summary": "Publieke website van Acteble: lichte React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.",
+      "description": "Geolokaliseerd sociaal platform dat mensen samenbrengt rond gedeelde activiteiten: een Rust-backend, een offline-first Flutter-app en een React-website.",
+      "summary": "Backend: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming; een PostGIS-pipeline zet OpenStreetMap-data om in routeringsgrafen die via een CDN worden gepubliceerd, en eigen Dylint-lints bewaken de architectuur in CI. App: offline-first Flutter-client voor iOS, Android, web en desktop — een Melos-monorepo met Riverpod boven een versleutelde lokale opslag (Drift, SQLCipher), end-to-end-versleuteling via een Rust-kern (vodozemac via flutter_rust_bridge), peer-to-peer-synchronisatie via Bluetooth, MapLibre-kaarten en realtime media met LiveKit. Website: React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.",
+      "type": "Platform",
       "roles": [
         "Oprichter"
       ]
     },
     {
       "description": "Masterproef aan de UMONS — de R&D van de planningsengine van Acteble.",
-      "summary": "Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS. De R&D van de planningsengine van Acteble, geschreven in Python.",
+      "summary": "Masterproef « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », Service d'Algorithmique van de UMONS — de R&D van de planningsengine van Acteble. Multi-objectieve groepsvorming onder ruimtelijk-temporele beperkingen: NP-moeilijk via reductie van k-CLIQUE; toelaatbare groepen opgesomd als bicliques (Close-by-One); een iteratieve Pareto-solver met garanties voor terminatie en lokale convergentie; één DSL gecompileerd naar Python, MiniZinc en Rust met bit-identieke fronten, waarvan de Rust-uitvoer in de Acteble-API draait. Vergeleken met CP-SAT, NSGA-II, MOEA/D en SPEA2 (hypervolume, IGD, 30 seeds, Wilcoxon–Holm): significant beter dan MOEA/D bij elke grootte, dan NSGA-II en SPEA2 vanaf 500 gebruikers.",
       "type": "Masterproef",
       "roles": [
         "Auteur"
@@ -407,6 +409,46 @@
     }
   ],
   "competitions": [
+    {
+      "title": "SoCraTes BE 2026",
+      "organizer": "SoCraTes BE",
+      "summary": "Unconference voor software crafters, 22–25 oktober in La Roche-en-Ardenne: coding dojo's, pair programming, workshops en discussies, met een agenda die de deelnemers zelf bepalen."
+    },
+    {
+      "title": "SoCraTes BE 2023",
+      "organizer": "SoCraTes BE",
+      "summary": "Unconference voor software crafters, november 2023: code kata's, lightning talks en open-spacesessies, met een agenda die de deelnemers zelf bepalen."
+    },
+    {
+      "title": "VisugXL 2023",
+      "organizer": "VISUG — Visual Studio User Group Belgium",
+      "summary": "Eendaagse conferentie van de Belgische .NET- en Visual Studio-community, op de AP Hogeschool in Antwerpen."
+    },
+    {
+      "title": "VISUG-meetup — Mediator-patroon en .NET 8",
+      "organizer": "VISUG — Visual Studio User Group Belgium",
+      "summary": "Avond in Mechelen: centrale fout- en validatieafhandeling met het Mediator-patroon, en wat er nieuw is in .NET 8, ASP.NET 8 en EF 8."
+    },
+    {
+      "title": "20 km Maredsous–Dinant 2026",
+      "summary": "Loopwedstrijd van 20 km tussen de abdij van Maredsous en Dinant."
+    },
+    {
+      "title": "20 km door Brussel 2025",
+      "summary": "Wegwedstrijd van 20 km door de straten van Brussel."
+    },
+    {
+      "title": "20 km Maredsous–Dinant 2025",
+      "summary": "Loopwedstrijd van 20 km tussen de abdij van Maredsous en Dinant."
+    },
+    {
+      "title": "20 km door Brussel 2024",
+      "summary": "Wegwedstrijd van 20 km door de straten van Brussel."
+    },
+    {
+      "title": "20 km door Brussel 2022",
+      "summary": "Wegwedstrijd van 20 km door de straten van Brussel."
+    },
     {
       "title": "Hackathon Citizens of Wallonia 2024",
       "organizer": "Citizens of Wallonia",

@@ -23,7 +23,7 @@ module.exports = {
   timelineTitle: '时间线',
   // A degree followed on an evening schedule ("horaire décalé").
   scheduleEvening: '夜间课程',
-  competitions: '竞赛',
+  competitions: '活动',
   lastYears: (n) => `近 ${n} 年`,
   wholeCareer: '全部',
   printPdf: '打印 / PDF',

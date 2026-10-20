@@ -160,8 +160,14 @@
           <skill>
             <name>Python</name>
             <token>python</token>
+            <uses>12</uses>
+            <said>12 items gebruiken Python</said>
+          </skill>
+          <skill>
+            <name>DDD</name>
+            <token>ddd</token>
             <uses>10</uses>
-            <said>10 items gebruiken Python</said>
+            <said>10 items gebruiken DDD</said>
           </skill>
           <skill>
             <name>SQL Server</name>
@@ -170,16 +176,22 @@
             <said>8 items gebruiken SQL Server</said>
           </skill>
           <skill>
-            <name>DDD</name>
-            <token>ddd</token>
-            <uses>6</uses>
-            <said>6 items gebruiken DDD</said>
+            <name>Rust</name>
+            <token>rust</token>
+            <uses>7</uses>
+            <said>7 items gebruiken Rust</said>
           </skill>
           <skill>
             <name>Flutter</name>
             <token>flutter</token>
             <uses>6</uses>
             <said>6 items gebruiken Flutter</said>
+          </skill>
+          <skill>
+            <name>Pandas</name>
+            <token>pandas</token>
+            <uses>5</uses>
+            <said>5 items gebruiken Pandas</said>
           </skill>
           <skill>
             <name>React</name>
@@ -206,6 +218,12 @@
             <said>4 items gebruiken EntityFramework</said>
           </skill>
           <skill>
+            <name>HexagonalArchitecture</name>
+            <token>hexagonalarchitecture</token>
+            <uses>4</uses>
+            <said>4 items gebruiken HexagonalArchitecture</said>
+          </skill>
+          <skill>
             <name>Java</name>
             <token>java</token>
             <uses>4</uses>
@@ -218,16 +236,22 @@
             <said>4 items gebruiken OpenAI</said>
           </skill>
           <skill>
-            <name>Pandas</name>
-            <token>pandas</token>
-            <uses>4</uses>
-            <said>4 items gebruiken Pandas</said>
-          </skill>
-          <skill>
             <name>PostgreSQL</name>
             <token>postgresql</token>
             <uses>4</uses>
             <said>4 items gebruiken PostgreSQL</said>
+          </skill>
+          <skill>
+            <name>RAG</name>
+            <token>rag</token>
+            <uses>4</uses>
+            <said>4 items gebruiken RAG</said>
+          </skill>
+          <skill>
+            <name>TDD</name>
+            <token>tdd</token>
+            <uses>4</uses>
+            <said>4 items gebruiken TDD</said>
           </skill>
           <skill>
             <name>TypeScript</name>
@@ -235,6 +259,9 @@
             <uses>4</uses>
             <said>4 items gebruiken TypeScript</said>
           </skill>
+        </shortlist>
+        <more>Alle vaardigheden (260)</more>
+        <rest>
           <skill>
             <name>C#</name>
             <token>c</token>
@@ -259,9 +286,6 @@
             <uses>3</uses>
             <said>3 items gebruiken English</said>
           </skill>
-        </shortlist>
-        <more>Alle vaardigheden (219)</more>
-        <rest>
           <skill>
             <name>Firebase</name>
             <token>firebase</token>
@@ -275,16 +299,10 @@
             <said>3 items gebruiken JavaScript</said>
           </skill>
           <skill>
-            <name>OpenTelemetry</name>
-            <token>opentelemetry</token>
+            <name>NumPy</name>
+            <token>numpy</token>
             <uses>3</uses>
-            <said>3 items gebruiken OpenTelemetry</said>
-          </skill>
-          <skill>
-            <name>RAG</name>
-            <token>rag</token>
-            <uses>3</uses>
-            <said>3 items gebruiken RAG</said>
+            <said>3 items gebruiken NumPy</said>
           </skill>
           <skill>
             <name>SQL</name>
@@ -365,6 +383,12 @@
             <said>2 items gebruiken DeepFace</said>
           </skill>
           <skill>
+            <name>Dioxus</name>
+            <token>dioxus</token>
+            <uses>2</uses>
+            <said>2 items gebruiken Dioxus</said>
+          </skill>
+          <skill>
             <name>DNS</name>
             <token>dns</token>
             <uses>2</uses>
@@ -401,12 +425,6 @@
             <said>2 items gebruiken GraphTheory</said>
           </skill>
           <skill>
-            <name>gRPC</name>
-            <token>grpc</token>
-            <uses>2</uses>
-            <said>2 items gebruiken gRPC</said>
-          </skill>
-          <skill>
             <name>HTML</name>
             <token>html</token>
             <uses>2</uses>
@@ -431,10 +449,22 @@
             <said>2 items gebruiken LaTeX</said>
           </skill>
           <skill>
+            <name>MutationTesting</name>
+            <token>mutationtesting</token>
+            <uses>2</uses>
+            <said>2 items gebruiken MutationTesting</said>
+          </skill>
+          <skill>
             <name>NetworkSecurity</name>
             <token>networksecurity</token>
             <uses>2</uses>
             <said>2 items gebruiken NetworkSecurity</said>
+          </skill>
+          <skill>
+            <name>NLP</name>
+            <token>nlp</token>
+            <uses>2</uses>
+            <said>2 items gebruiken NLP</said>
           </skill>
           <skill>
             <name>Node.js</name>
@@ -443,28 +473,22 @@
             <said>2 items gebruiken Node.js</said>
           </skill>
           <skill>
-            <name>NumPy</name>
-            <token>numpy</token>
-            <uses>2</uses>
-            <said>2 items gebruiken NumPy</said>
-          </skill>
-          <skill>
             <name>OCR</name>
             <token>ocr</token>
             <uses>2</uses>
             <said>2 items gebruiken OCR</said>
           </skill>
           <skill>
+            <name>OpenTelemetry</name>
+            <token>opentelemetry</token>
+            <uses>2</uses>
+            <said>2 items gebruiken OpenTelemetry</said>
+          </skill>
+          <skill>
             <name>RelationalAlgebra</name>
             <token>relationalalgebra</token>
             <uses>2</uses>
             <said>2 items gebruiken RelationalAlgebra</said>
-          </skill>
-          <skill>
-            <name>Rust</name>
-            <token>rust</token>
-            <uses>2</uses>
-            <said>2 items gebruiken Rust</said>
           </skill>
           <skill>
             <name>SentenceTransformers</name>
@@ -489,6 +513,12 @@
             <token>sqlalchemy</token>
             <uses>2</uses>
             <said>2 items gebruiken SQLAlchemy</said>
+          </skill>
+          <skill>
+            <name>SQLite</name>
+            <token>sqlite</token>
+            <uses>2</uses>
+            <said>2 items gebruiken SQLite</said>
           </skill>
           <skill>
             <name>SystemsAnalysis</name>
@@ -599,6 +629,12 @@
             <said>1 item gebruikt BDD</said>
           </skill>
           <skill>
+            <name>BEIR</name>
+            <token>beir</token>
+            <uses>1</uses>
+            <said>1 item gebruikt BEIR</said>
+          </skill>
+          <skill>
             <name>Benchmark</name>
             <token>benchmark</token>
             <uses>1</uses>
@@ -621,6 +657,12 @@
             <token>binary</token>
             <uses>1</uses>
             <said>1 item gebruikt Binary</said>
+          </skill>
+          <skill>
+            <name>BrierScore</name>
+            <token>brierscore</token>
+            <uses>1</uses>
+            <said>1 item gebruikt BrierScore</said>
           </skill>
           <skill>
             <name>BTrees</name>
@@ -773,10 +815,22 @@
             <said>1 item gebruikt Drift</said>
           </skill>
           <skill>
+            <name>DSL</name>
+            <token>dsl</token>
+            <uses>1</uses>
+            <said>1 item gebruikt DSL</said>
+          </skill>
+          <skill>
             <name>Duality</name>
             <token>duality</token>
             <uses>1</uses>
             <said>1 item gebruikt Duality</said>
+          </skill>
+          <skill>
+            <name>DuckDB</name>
+            <token>duckdb</token>
+            <uses>1</uses>
+            <said>1 item gebruikt DuckDB</said>
           </skill>
           <skill>
             <name>Durkheim</name>
@@ -791,16 +845,40 @@
             <said>1 item gebruikt Dutch</said>
           </skill>
           <skill>
+            <name>Dylint</name>
+            <token>dylint</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Dylint</said>
+          </skill>
+          <skill>
+            <name>E2EE</name>
+            <token>e2ee</token>
+            <uses>1</uses>
+            <said>1 item gebruikt E2EE</said>
+          </skill>
+          <skill>
             <name>Ebusiness</name>
             <token>ebusiness</token>
             <uses>1</uses>
             <said>1 item gebruikt Ebusiness</said>
           </skill>
           <skill>
+            <name>EloRating</name>
+            <token>elorating</token>
+            <uses>1</uses>
+            <said>1 item gebruikt EloRating</said>
+          </skill>
+          <skill>
             <name>Encapsulation</name>
             <token>encapsulation</token>
             <uses>1</uses>
             <said>1 item gebruikt Encapsulation</said>
+          </skill>
+          <skill>
+            <name>EnsembleModel</name>
+            <token>ensemblemodel</token>
+            <uses>1</uses>
+            <said>1 item gebruikt EnsembleModel</said>
           </skill>
           <skill>
             <name>EntityRelationship</name>
@@ -813,6 +891,12 @@
             <token>erp</token>
             <uses>1</uses>
             <said>1 item gebruikt ERP</said>
+          </skill>
+          <skill>
+            <name>ESLint</name>
+            <token>eslint</token>
+            <uses>1</uses>
+            <said>1 item gebruikt ESLint</said>
           </skill>
           <skill>
             <name>Evaluation</name>
@@ -851,10 +935,22 @@
             <said>1 item gebruikt FlutterMap</said>
           </skill>
           <skill>
+            <name>FlutterRustBridge</name>
+            <token>flutterrustbridge</token>
+            <uses>1</uses>
+            <said>1 item gebruikt FlutterRustBridge</said>
+          </skill>
+          <skill>
             <name>GDPR</name>
             <token>gdpr</token>
             <uses>1</uses>
             <said>1 item gebruikt GDPR</said>
+          </skill>
+          <skill>
+            <name>gRPC</name>
+            <token>grpc</token>
+            <uses>1</uses>
+            <said>1 item gebruikt gRPC</said>
           </skill>
           <skill>
             <name>Hardware</name>
@@ -873,12 +969,6 @@
             <token>hexadecimal</token>
             <uses>1</uses>
             <said>1 item gebruikt Hexadecimal</said>
-          </skill>
-          <skill>
-            <name>HexagonalArchitecture</name>
-            <token>hexagonalarchitecture</token>
-            <uses>1</uses>
-            <said>1 item gebruikt HexagonalArchitecture</said>
           </skill>
           <skill>
             <name>HRM</name>
@@ -905,6 +995,12 @@
             <said>1 item gebruikt ImperfectCompetition</said>
           </skill>
           <skill>
+            <name>InformationRetrieval</name>
+            <token>informationretrieval</token>
+            <uses>1</uses>
+            <said>1 item gebruikt InformationRetrieval</said>
+          </skill>
+          <skill>
             <name>Inheritance</name>
             <token>inheritance</token>
             <uses>1</uses>
@@ -923,6 +1019,12 @@
             <said>1 item gebruikt IntellectualProperty</said>
           </skill>
           <skill>
+            <name>iOS</name>
+            <token>ios</token>
+            <uses>1</uses>
+            <said>1 item gebruikt iOS</said>
+          </skill>
+          <skill>
             <name>Joins</name>
             <token>joins</token>
             <uses>1</uses>
@@ -935,6 +1037,18 @@
             <said>1 item gebruikt JS</said>
           </skill>
           <skill>
+            <name>LearningToRank</name>
+            <token>learningtorank</token>
+            <uses>1</uses>
+            <said>1 item gebruikt LearningToRank</said>
+          </skill>
+          <skill>
+            <name>Leitner</name>
+            <token>leitner</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Leitner</said>
+          </skill>
+          <skill>
             <name>LinearAlgebra</name>
             <token>linearalgebra</token>
             <uses>1</uses>
@@ -945,6 +1059,12 @@
             <token>linearprogramming</token>
             <uses>1</uses>
             <said>1 item gebruikt LinearProgramming</said>
+          </skill>
+          <skill>
+            <name>LinkGrammar</name>
+            <token>linkgrammar</token>
+            <uses>1</uses>
+            <said>1 item gebruikt LinkGrammar</said>
           </skill>
           <skill>
             <name>LiteratureReview</name>
@@ -975,6 +1095,12 @@
             <token>management</token>
             <uses>1</uses>
             <said>1 item gebruikt Management</said>
+          </skill>
+          <skill>
+            <name>MapLibre</name>
+            <token>maplibre</token>
+            <uses>1</uses>
+            <said>1 item gebruikt MapLibre</said>
           </skill>
           <skill>
             <name>MarketFailure</name>
@@ -1067,6 +1193,12 @@
             <said>1 item gebruikt MonetaryMarket</said>
           </skill>
           <skill>
+            <name>MultiObjectiveOptimization</name>
+            <token>multiobjectiveoptimization</token>
+            <uses>1</uses>
+            <said>1 item gebruikt MultiObjectiveOptimization</said>
+          </skill>
+          <skill>
             <name>NationalIncome</name>
             <token>nationalincome</token>
             <uses>1</uses>
@@ -1115,6 +1247,18 @@
             <said>1 item gebruikt OOP</said>
           </skill>
           <skill>
+            <name>OpenBao</name>
+            <token>openbao</token>
+            <uses>1</uses>
+            <said>1 item gebruikt OpenBao</said>
+          </skill>
+          <skill>
+            <name>OpenStreetMap</name>
+            <token>openstreetmap</token>
+            <uses>1</uses>
+            <said>1 item gebruikt OpenStreetMap</said>
+          </skill>
+          <skill>
             <name>OperatingSystems</name>
             <token>operatingsystems</token>
             <uses>1</uses>
@@ -1125,6 +1269,12 @@
             <token>operationsresearch</token>
             <uses>1</uses>
             <said>1 item gebruikt OperationsResearch</said>
+          </skill>
+          <skill>
+            <name>ORTools</name>
+            <token>ortools</token>
+            <uses>1</uses>
+            <said>1 item gebruikt ORTools</said>
           </skill>
           <skill>
             <name>OSPF</name>
@@ -1155,6 +1305,12 @@
             <token>php</token>
             <uses>1</uses>
             <said>1 item gebruikt PHP</said>
+          </skill>
+          <skill>
+            <name>PoissonModel</name>
+            <token>poissonmodel</token>
+            <uses>1</uses>
+            <said>1 item gebruikt PoissonModel</said>
           </skill>
           <skill>
             <name>PoliticalScience</name>
@@ -1211,10 +1367,28 @@
             <said>1 item gebruikt ProjectManagement</said>
           </skill>
           <skill>
+            <name>Prolog</name>
+            <token>prolog</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Prolog</said>
+          </skill>
+          <skill>
+            <name>Prometheus</name>
+            <token>prometheus</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Prometheus</said>
+          </skill>
+          <skill>
             <name>PropositionalLogic</name>
             <token>propositionallogic</token>
             <uses>1</uses>
             <said>1 item gebruikt PropositionalLogic</said>
+          </skill>
+          <skill>
+            <name>Protobuf</name>
+            <token>protobuf</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Protobuf</said>
           </skill>
           <skill>
             <name>QRCode</name>
@@ -1227,6 +1401,12 @@
             <token>queryoptimization</token>
             <uses>1</uses>
             <said>1 item gebruikt QueryOptimization</said>
+          </skill>
+          <skill>
+            <name>Ratatui</name>
+            <token>ratatui</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Ratatui</said>
           </skill>
           <skill>
             <name>ReactRouter</name>
@@ -1265,6 +1445,12 @@
             <said>1 item gebruikt ScientificWriting</said>
           </skill>
           <skill>
+            <name>SciPy</name>
+            <token>scipy</token>
+            <uses>1</uses>
+            <said>1 item gebruikt SciPy</said>
+          </skill>
+          <skill>
             <name>Scrum</name>
             <token>scrum</token>
             <uses>1</uses>
@@ -1295,6 +1481,12 @@
             <said>1 item gebruikt ShellScripting</said>
           </skill>
           <skill>
+            <name>SM2</name>
+            <token>sm2</token>
+            <uses>1</uses>
+            <said>1 item gebruikt SM2</said>
+          </skill>
+          <skill>
             <name>SoftwareDesign</name>
             <token>softwaredesign</token>
             <uses>1</uses>
@@ -1313,16 +1505,28 @@
             <said>1 item gebruikt Sorting</said>
           </skill>
           <skill>
+            <name>SpacedRepetition</name>
+            <token>spacedrepetition</token>
+            <uses>1</uses>
+            <said>1 item gebruikt SpacedRepetition</said>
+          </skill>
+          <skill>
+            <name>spaCy</name>
+            <token>spacy-2</token>
+            <uses>1</uses>
+            <said>1 item gebruikt spaCy</said>
+          </skill>
+          <skill>
+            <name>SQLCipher</name>
+            <token>sqlcipher</token>
+            <uses>1</uses>
+            <said>1 item gebruikt SQLCipher</said>
+          </skill>
+          <skill>
             <name>SQLInjection</name>
             <token>sqlinjection</token>
             <uses>1</uses>
             <said>1 item gebruikt SQLInjection</said>
-          </skill>
-          <skill>
-            <name>SQLite</name>
-            <token>sqlite</token>
-            <uses>1</uses>
-            <said>1 item gebruikt SQLite</said>
           </skill>
           <skill>
             <name>SQLx</name>
@@ -1355,6 +1559,12 @@
             <said>1 item gebruikt SupervisedLearning</said>
           </skill>
           <skill>
+            <name>SymbolicAI</name>
+            <token>symbolicai</token>
+            <uses>1</uses>
+            <said>1 item gebruikt SymbolicAI</said>
+          </skill>
+          <skill>
             <name>Synchronization</name>
             <token>synchronization</token>
             <uses>1</uses>
@@ -1365,6 +1575,18 @@
             <token>systemadministration</token>
             <uses>1</uses>
             <said>1 item gebruikt SystemAdministration</said>
+          </skill>
+          <skill>
+            <name>Tatoeba</name>
+            <token>tatoeba</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Tatoeba</said>
+          </skill>
+          <skill>
+            <name>Testcontainers</name>
+            <token>testcontainers</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Testcontainers</said>
           </skill>
           <skill>
             <name>Tonic</name>
@@ -1415,10 +1637,28 @@
             <said>1 item gebruikt URLRewriting</said>
           </skill>
           <skill>
+            <name>Vercel</name>
+            <token>vercel</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Vercel</said>
+          </skill>
+          <skill>
             <name>Vite</name>
             <token>vite</token>
             <uses>1</uses>
             <said>1 item gebruikt Vite</said>
+          </skill>
+          <skill>
+            <name>WalkForwardBacktest</name>
+            <token>walkforwardbacktest</token>
+            <uses>1</uses>
+            <said>1 item gebruikt WalkForwardBacktest</said>
+          </skill>
+          <skill>
+            <name>WebAssembly</name>
+            <token>webassembly</token>
+            <uses>1</uses>
+            <said>1 item gebruikt WebAssembly</said>
           </skill>
           <skill>
             <name>WebEconomy</name>
@@ -1443,6 +1683,12 @@
             <token>weka</token>
             <uses>1</uses>
             <said>1 item gebruikt Weka</said>
+          </skill>
+          <skill>
+            <name>WordNet</name>
+            <token>wordnet</token>
+            <uses>1</uses>
+            <said>1 item gebruikt WordNet</said>
           </skill>
           <skill>
             <name>XPath</name>
@@ -1544,8 +1790,8 @@
         <lane>
           <kind>work</kind>
           <label>Werkervaring</label>
-          <rows>8</rows>
-          <printRows>8</printRows>
+          <rows>10</rows>
+          <printRows>10</printRows>
           <groups>
             <group>
               <left>70.87%</left>
@@ -1607,16 +1853,16 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
-              <rows>5</rows>
+              <rows>7</rows>
               <printRow>0</printRow>
-              <printRows>5</printRows>
+              <printRows>7</printRows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>7</row>
               <rows>3</rows>
-              <printRow>5</printRow>
+              <printRow>7</printRow>
               <printRows>3</printRows>
             </group>
           </groups>
@@ -1914,14 +2160,14 @@
               <target>work-acteble-oprichter</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble API</name>
-              <caption>Acteble API · API</caption>
-              <uses>rust tokio axum tonic grpc sqlx postgresql postgis redis minio livekit opentelemetry docker caddy ddd hexagonalarchitecture cqrs eventdriven</uses>
-              <period>jun 2025 – Heden</period>
-              <detail>API · Oprichter</detail>
-              <summary>Backend van het Acteble-platform: een modulaire monoliet in Rust.</summary>
+              <name>Acteble</name>
+              <caption>Acteble · Platform</caption>
+              <uses>rust tokio axum tonic grpc protobuf sqlx postgresql postgis redis minio livekit openbao prometheus testcontainers openstreetmap docker caddy dylint ddd hexagonalarchitecture cqrs eventdriven flutter dart melos riverpod drift sqlite sqlcipher dio flutterrustbridge maplibre fluttermap firebase offlinefirst e2ee mobile react vite javascript i18next reactrouter eslint vercel</uses>
+              <period>apr 2025 – Heden</period>
+              <detail>Platform · Oprichter</detail>
+              <summary>Geolokaliseerd sociaal platform dat mensen samenbrengt rond gedeelde activiteiten: een Rust-backend, een offline-first Flutter-app en een React-website.</summary>
               <skills>Rust · Tokio · Axum · Tonic · gRPC</skills>
-              <label>Acteble API — API · Oprichter — jun 2025 – Heden</label>
+              <label>Acteble — Platform · Oprichter — apr 2025 – Heden</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>1</row>
@@ -1931,16 +2177,17 @@
               <target>work-acteble-oprichter</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble App</name>
-              <caption>Acteble App · Mobiele applicatie</caption>
-              <uses>flutter dart melos riverpod drift sqlite dio grpc fluttermap firebase offlinefirst mobile</uses>
-              <period>apr 2025 – Heden</period>
-              <detail>Mobiele applicatie · Oprichter</detail>
-              <summary>Offline-first multiplatformclient van Acteble, gebouwd met Flutter.</summary>
-              <skills>Flutter · Dart · Melos · Riverpod · Drift</skills>
-              <label>Acteble App — Mobiele applicatie · Oprichter — apr 2025 – Heden</label>
-              <left>92.23%</left>
-              <width>7.77%</width>
+              <name>Mémoire de master</name>
+              <title>UMONS</title>
+              <caption>Mémoire de master · Masterproef</caption>
+              <uses>python rust latex minizinc ortools constraintprogramming combinatorialoptimization multiobjectiveoptimization pareto dsl mutationtesting</uses>
+              <period>nov 2025 – sep 2026</period>
+              <detail>Masterproef · Auteur</detail>
+              <summary>Masterproef aan de UMONS — de R&amp;D van de planningsengine van Acteble.</summary>
+              <skills>Python · Rust · LaTeX · MiniZinc · ORTools</skills>
+              <label>Mémoire de master — Masterproef · Auteur — UMONS — nov 2025 – sep 2026</label>
+              <left>94.37%</left>
+              <width>4.71%</width>
               <row>2</row>
               <printRow>2</printRow>
             </bar>
@@ -1948,16 +2195,16 @@
               <target>work-acteble-oprichter</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble Website</name>
-              <caption>Acteble Website · Website</caption>
-              <uses>react vite javascript i18next reactrouter</uses>
-              <period>jun 2025 – Heden</period>
-              <detail>Website · Oprichter</detail>
-              <summary>Publieke website van Acteble: een React single-page-applicatie.</summary>
-              <skills>React · Vite · JavaScript · i18next · ReactRouter</skills>
-              <label>Acteble Website — Website · Oprichter — jun 2025 – Heden</label>
-              <left>92.23%</left>
-              <width>7.77%</width>
+              <name>Actrack</name>
+              <caption>Actrack · Voorspellingsengine</caption>
+              <uses>python pandas numpy scipy duckdb rust dioxus webassembly elorating poissonmodel ensemblemodel walkforwardbacktest brierscore hexagonalarchitecture ddd tdd</uses>
+              <period>jun 2026 – Heden</period>
+              <detail>Voorspellingsengine · Auteur</detail>
+              <summary>Voorspellingen van het FIFA WK 2026 met een ensemble van voetbalratingstrategieën.</summary>
+              <skills>Python · Pandas · NumPy · SciPy · DuckDB</skills>
+              <label>Actrack — Voorspellingsengine · Auteur — jun 2026 – Heden</label>
+              <left>98.01%</left>
+              <width>1.99%</width>
               <row>3</row>
               <printRow>3</printRow>
             </bar>
@@ -1965,19 +2212,52 @@
               <target>work-acteble-oprichter</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Mémoire de master</name>
-              <title>UMONS</title>
-              <caption>Mémoire de master · Masterproef</caption>
-              <uses>python latex minizinc constraintprogramming combinatorialoptimization pareto</uses>
-              <period>nov 2025 – sep 2026</period>
-              <detail>Masterproef · Auteur</detail>
-              <summary>Masterproef aan de UMONS — de R&amp;D van de planningsengine van Acteble.</summary>
-              <skills>Python · LaTeX · MiniZinc · ConstraintProgramming · CombinatorialOptimization</skills>
-              <label>Mémoire de master — Masterproef · Auteur — UMONS — nov 2025 – sep 2026</label>
-              <left>94.37%</left>
-              <width>4.71%</width>
+              <name>Baba</name>
+              <caption>Baba · CLI</caption>
+              <uses>rust prolog linkgrammar symbolicai nlp ddd tdd mutationtesting</uses>
+              <period>jul 2026 – Heden</period>
+              <detail>CLI · Auteur</detail>
+              <summary>Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.</summary>
+              <skills>Rust · Prolog · LinkGrammar · SymbolicAI · NLP</skills>
+              <label>Baba — CLI · Auteur — jul 2026 – Heden</label>
+              <left>98.07%</left>
+              <width>1.93%</width>
               <row>4</row>
               <printRow>4</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-oprichter</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>LL</name>
+              <caption>LL · Applicatie</caption>
+              <uses>rust dioxus ratatui sqlite ios spacedrepetition leitner sm2 python spacy-2 nlp wordnet tatoeba hexagonalarchitecture ddd tdd</uses>
+              <period>jul 2026 – Heden</period>
+              <detail>Applicatie · Auteur</detail>
+              <summary>Vocabulairetrainer met gespreide herhaling voor zes talen, waarbij elk woord wordt aangeleerd met een uitgelijnde voorbeeldzin in elke taal.</summary>
+              <skills>Rust · Dioxus · Ratatui · SQLite · iOS</skills>
+              <label>LL — Applicatie · Auteur — jul 2026 – Heden</label>
+              <left>98.09%</left>
+              <width>1.91%</width>
+              <row>5</row>
+              <printRow>5</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-oprichter</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>KAG</name>
+              <caption>KAG · Framework</caption>
+              <uses>rust rag informationretrieval learningtorank beir ddd hexagonalarchitecture tdd</uses>
+              <period>jul 2026 – Heden</period>
+              <detail>Framework · Auteur</detail>
+              <summary>Puur algoritmisch Rust-framework dat uitwisselbare onderdelen van een RAG-pipeline op BEIR benchmarkt en de best gemeten configuratie levert als vraag-antwoord-CLI met geciteerde bronnen.</summary>
+              <skills>Rust · RAG · InformationRetrieval · LearningToRank · BEIR</skills>
+              <label>KAG — Framework · Auteur — jul 2026 – Heden</label>
+              <left>98.12%</left>
+              <width>1.88%</width>
+              <row>6</row>
+              <printRow>6</printRow>
             </bar>
             <bar>
               <target>work-belgische-senaat-ai-onderzoeker</target>
@@ -1991,8 +2271,8 @@
               <label>Belgische Senaat — AI-onderzoeker — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
-              <printRow>5</printRow>
+              <row>7</row>
+              <printRow>7</printRow>
             </bar>
             <bar>
               <target>work-belgische-senaat-ai-onderzoeker</target>
@@ -2008,8 +2288,8 @@
               <label>Synergy — Platform · Auteur — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>6</row>
-              <printRow>6</printRow>
+              <row>8</row>
+              <printRow>8</printRow>
             </bar>
             <bar>
               <target>work-belgische-senaat-ai-onderzoeker</target>
@@ -2025,8 +2305,8 @@
               <label>fedrag-be — Onderzoek · Auteur — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>7</row>
-              <printRow>7</printRow>
+              <row>9</row>
+              <printRow>9</printRow>
             </bar>
           </bars>
         </lane>
@@ -3077,11 +3357,11 @@
               <name>Mémoire de master</name>
               <title>UMONS</title>
               <caption>Mémoire de master · Masterproef</caption>
-              <uses>python latex minizinc constraintprogramming combinatorialoptimization pareto</uses>
+              <uses>python rust latex minizinc ortools constraintprogramming combinatorialoptimization multiobjectiveoptimization pareto dsl mutationtesting</uses>
               <period>nov 2025 – sep 2026</period>
               <detail>Masterproef · Auteur</detail>
               <summary>Masterproef aan de UMONS — de R&amp;D van de planningsengine van Acteble.</summary>
-              <skills>Python · LaTeX · MiniZinc · ConstraintProgramming · CombinatorialOptimization</skills>
+              <skills>Python · Rust · LaTeX · MiniZinc · ORTools</skills>
               <label>Mémoire de master — Masterproef · Auteur — UMONS — nov 2025 – sep 2026</label>
               <left>94.37%</left>
               <width>4.71%</width>
@@ -3092,9 +3372,9 @@
         </lane>
         <lane>
           <kind>competitions</kind>
-          <label>Wedstrijden</label>
-          <rows>2</rows>
-          <printRows>2</printRows>
+          <label>Evenementen</label>
+          <rows>3</rows>
+          <printRows>3</printRows>
           <groups>
             <group>
               <left>84.47%</left>
@@ -3109,6 +3389,18 @@
             <bar>
               <kind>competition</kind>
               <depth>0</depth>
+              <name>20 km door Brussel 2022</name>
+              <caption>20 km door Brussel 2022</caption>
+              <period>mei 2022 – mei 2022</period>
+              <label>20 km door Brussel 2022 — mei 2022 – mei 2022</label>
+              <left>73.79%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
               <name>Hackathon Citizens of Wallonia 2023</name>
               <title>Citizens of Wallonia</title>
               <caption>Hackathon Citizens of Wallonia 2023</caption>
@@ -3118,6 +3410,45 @@
               <width>0.49%</width>
               <row>0</row>
               <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>SoCraTes BE 2023</name>
+              <title>SoCraTes BE</title>
+              <caption>SoCraTes BE 2023</caption>
+              <period>nov 2023 – nov 2023</period>
+              <label>SoCraTes BE 2023 — SoCraTes BE — nov 2023 – nov 2023</label>
+              <left>82.52%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>VisugXL 2023</name>
+              <title>VISUG — Visual Studio User Group Belgium</title>
+              <caption>VisugXL 2023</caption>
+              <period>nov 2023 – nov 2023</period>
+              <label>VisugXL 2023 — VISUG — Visual Studio User Group Belgium — nov 2023 – nov 2023</label>
+              <left>82.52%</left>
+              <width>0.49%</width>
+              <row>1</row>
+              <printRow>1</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>VISUG-meetup — Mediator-patroon en .NET 8</name>
+              <title>VISUG — Visual Studio User Group Belgium</title>
+              <caption>VISUG-meetup — Mediator-patroon en .NET 8</caption>
+              <period>nov 2023 – nov 2023</period>
+              <label>VISUG-meetup — Mediator-patroon en .NET 8 — VISUG — Visual Studio User Group Belgium — nov 2023 – nov 2023</label>
+              <left>82.52%</left>
+              <width>0.49%</width>
+              <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -3146,6 +3477,67 @@
               <width>0.03%</width>
               <row>1</row>
               <printRow>1</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>20 km door Brussel 2024</name>
+              <caption>20 km door Brussel 2024</caption>
+              <period>mei 2024 – mei 2024</period>
+              <label>20 km door Brussel 2024 — mei 2024 – mei 2024</label>
+              <left>85.44%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>20 km Maredsous–Dinant 2025</name>
+              <caption>20 km Maredsous–Dinant 2025</caption>
+              <period>mrt 2025 – mrt 2025</period>
+              <label>20 km Maredsous–Dinant 2025 — mrt 2025 – mrt 2025</label>
+              <left>90.29%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>20 km door Brussel 2025</name>
+              <caption>20 km door Brussel 2025</caption>
+              <period>mei 2025 – mei 2025</period>
+              <label>20 km door Brussel 2025 — mei 2025 – mei 2025</label>
+              <left>91.26%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>20 km Maredsous–Dinant 2026</name>
+              <caption>20 km Maredsous–Dinant 2026</caption>
+              <period>mrt 2026 – mrt 2026</period>
+              <label>20 km Maredsous–Dinant 2026 — mrt 2026 – mrt 2026</label>
+              <left>96.12%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>SoCraTes BE 2026</name>
+              <title>SoCraTes BE</title>
+              <caption>SoCraTes BE 2026</caption>
+              <period>okt 2026 – okt 2026</period>
+              <label>SoCraTes BE 2026 — SoCraTes BE — okt 2026 – okt 2026</label>
+              <left>99.51%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
             </bar>
           </bars>
         </lane>
@@ -3209,10 +3601,12 @@ Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-wor
         <skill>PostgreSQL</skill>
       </skills>
       <projects>
-        <project>Acteble API</project>
-        <project>Acteble App</project>
-        <project>Acteble Website</project>
+        <project>Acteble</project>
         <project>Mémoire de master</project>
+        <project>Actrack</project>
+        <project>LL</project>
+        <project>Baba</project>
+        <project>KAG</project>
       </projects>
       <anchor>work-acteble-oprichter</anchor>
     </job>
@@ -3719,6 +4113,102 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
   </education>
   <projects>
     <project>
+      <name>Baba</name>
+      <description>Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Prolog</keyword>
+        <keyword>LinkGrammar</keyword>
+        <keyword>SymbolicAI</keyword>
+        <keyword>NLP</keyword>
+        <keyword>DDD</keyword>
+        <keyword>TDD</keyword>
+        <keyword>MutationTesting</keyword>
+      </keywords>
+      <startDate>2026-07-02</startDate>
+      <type>CLI</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>Vijf lagen: een Rust-CLI die alle I/O doet, een link-grammar syntactische parser, een SWI-Prolog symbolische engine zonder I/O, domeinvocabulairepacks als data, en een vijftigtal Rust-actiebinaries — een nieuw werkwoord is één packfeit en één binary. Mutatiegetest, met een corpus van regressiezinnen en een koude start van ongeveer 120 ms.</summary>
+    </project>
+    <project>
+      <name>KAG</name>
+      <description>Puur algoritmisch Rust-framework dat uitwisselbare onderdelen van een RAG-pipeline op BEIR benchmarkt en de best gemeten configuratie levert als vraag-antwoord-CLI met geciteerde bronnen.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>RAG</keyword>
+        <keyword>InformationRetrieval</keyword>
+        <keyword>LearningToRank</keyword>
+        <keyword>BEIR</keyword>
+        <keyword>DDD</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-07-05</startDate>
+      <type>Framework</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>Negen pipelinestappen (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), elk een port waarvan het algoritme per label wordt gekozen (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonaal + DDD + TDD, alleen de standaardbibliotheek in de core, geen LLM. De metrieken komen exact overeen met pytrec_eval. Op zes BEIR-datasets wint geen enkele retriever overal (ndcg@10 0,668 op SciFact met BM25F); een LambdaMART-reranker tilt ArguAna van 0,301 naar 0,527 in 5-voudige kruisvalidatie.</summary>
+    </project>
+    <project>
+      <name>LL</name>
+      <description>Vocabulairetrainer met gespreide herhaling voor zes talen, waarbij elk woord wordt aangeleerd met een uitgelijnde voorbeeldzin in elke taal.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Dioxus</keyword>
+        <keyword>Ratatui</keyword>
+        <keyword>SQLite</keyword>
+        <keyword>iOS</keyword>
+        <keyword>SpacedRepetition</keyword>
+        <keyword>Leitner</keyword>
+        <keyword>SM2</keyword>
+        <keyword>Python</keyword>
+        <keyword>spaCy</keyword>
+        <keyword>NLP</keyword>
+        <keyword>WordNet</keyword>
+        <keyword>Tatoeba</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>DDD</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-07-03</startDate>
+      <type>Applicatie</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>Een Rust-workspace waarvan de pure domeinkern (hexagonaal, DDD, test-first) een terminal-UI (ratatui) en Dioxus-apps voor desktop en iOS aanstuurt: Leitner-dozen met SM-2-planning op SQLite, inhoud uit datapakketten met gecontroleerde checksum. Het datalab bouwt in Python de lexicale databank in zes talen — ongeveer 8.900 woordbetekenissen (oktober 2026) uitgelijnd op WordNet, geïllustreerd met Tatoeba-zinnen, geanalyseerd met spaCy, elke woord-in-zin-koppeling gecontroleerd.</summary>
+    </project>
+    <project>
+      <name>Actrack</name>
+      <description>Voorspellingen van het FIFA WK 2026 met een ensemble van voetbalratingstrategieën.</description>
+      <keywords>
+        <keyword>Python</keyword>
+        <keyword>Pandas</keyword>
+        <keyword>NumPy</keyword>
+        <keyword>SciPy</keyword>
+        <keyword>DuckDB</keyword>
+        <keyword>Rust</keyword>
+        <keyword>Dioxus</keyword>
+        <keyword>WebAssembly</keyword>
+        <keyword>EloRating</keyword>
+        <keyword>PoissonModel</keyword>
+        <keyword>EnsembleModel</keyword>
+        <keyword>WalkForwardBacktest</keyword>
+        <keyword>BrierScore</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>DDD</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-06-28</startDate>
+      <type>Voorspellingsengine</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>Een Python-engine (DDD, hexagonaal) weegt vijftien strategieën voor wedstrijduitslagen — Elo, Poisson aanval/verdediging, vorm, onderlinge duels, waarde van de selectie, rustdagen, bookmakerquoteringen — aangepast aan de speellocatie, en is overgezet naar Rust/Dioxus-apps voor web (WebAssembly), desktop, mobiel en terminal, die er gelijk mee blijven. Een onderzoekslab backtest de strategieën walk-forward, telkens met één toernooi apart gehouden, op 635 wedstrijden uit tien toernooien (WK's 2002–2022 en vier continentale toernooien van 2023–2024) en stemt de ensemblegewichten af; buiten de steekproef scoort Elo alleen het best (55,6% juist).</summary>
+    </project>
+    <project>
       <name>Synergy</name>
       <description>Intern platform van het Belgisch federaal Parlement om de parlementaire archieven te doorzoeken, verkennen en bevragen.</description>
       <keywords>
@@ -3757,88 +4247,78 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <summary>Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet.</summary>
     </project>
     <project>
-      <name>Acteble API</name>
-      <description>Backend van het Acteble-platform: een modulaire monoliet in Rust.</description>
+      <name>Acteble</name>
+      <description>Geolokaliseerd sociaal platform dat mensen samenbrengt rond gedeelde activiteiten: een Rust-backend, een offline-first Flutter-app en een React-website.</description>
       <keywords>
         <keyword>Rust</keyword>
         <keyword>Tokio</keyword>
         <keyword>Axum</keyword>
         <keyword>Tonic</keyword>
         <keyword>gRPC</keyword>
+        <keyword>Protobuf</keyword>
         <keyword>SQLx</keyword>
         <keyword>PostgreSQL</keyword>
         <keyword>PostGIS</keyword>
         <keyword>Redis</keyword>
         <keyword>MinIO</keyword>
         <keyword>LiveKit</keyword>
-        <keyword>OpenTelemetry</keyword>
+        <keyword>OpenBao</keyword>
+        <keyword>Prometheus</keyword>
+        <keyword>Testcontainers</keyword>
+        <keyword>OpenStreetMap</keyword>
         <keyword>Docker</keyword>
         <keyword>Caddy</keyword>
+        <keyword>Dylint</keyword>
         <keyword>DDD</keyword>
         <keyword>HexagonalArchitecture</keyword>
         <keyword>CQRS</keyword>
         <keyword>EventDriven</keyword>
-      </keywords>
-      <startDate>2025-06-13</startDate>
-      <type>API</type>
-      <roles>
-        <role>Oprichter</role>
-      </roles>
-      <summary>Backend van het platform: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming.</summary>
-    </project>
-    <project>
-      <name>Acteble App</name>
-      <description>Offline-first multiplatformclient van Acteble, gebouwd met Flutter.</description>
-      <keywords>
         <keyword>Flutter</keyword>
         <keyword>Dart</keyword>
         <keyword>Melos</keyword>
         <keyword>Riverpod</keyword>
         <keyword>Drift</keyword>
         <keyword>SQLite</keyword>
+        <keyword>SQLCipher</keyword>
         <keyword>Dio</keyword>
-        <keyword>gRPC</keyword>
+        <keyword>FlutterRustBridge</keyword>
+        <keyword>MapLibre</keyword>
         <keyword>FlutterMap</keyword>
         <keyword>Firebase</keyword>
         <keyword>OfflineFirst</keyword>
+        <keyword>E2EE</keyword>
         <keyword>Mobile</keyword>
-      </keywords>
-      <startDate>2025-04-12</startDate>
-      <url>https://www.acteble.com</url>
-      <type>Mobiele applicatie</type>
-      <roles>
-        <role>Oprichter</role>
-      </roles>
-      <summary>Offline-first client voor iOS, Android, web en desktop: een Melos-monorepo met Flutter-apps en gedeelde packages, Riverpod-state boven een lokale Drift/SQLite-opslag, verbonden met de API via REST en gRPC.</summary>
-    </project>
-    <project>
-      <name>Acteble Website</name>
-      <description>Publieke website van Acteble: een React single-page-applicatie.</description>
-      <keywords>
         <keyword>React</keyword>
         <keyword>Vite</keyword>
         <keyword>JavaScript</keyword>
         <keyword>i18next</keyword>
         <keyword>ReactRouter</keyword>
+        <keyword>ESLint</keyword>
+        <keyword>Vercel</keyword>
       </keywords>
-      <startDate>2025-06-05</startDate>
+      <startDate>2025-04-12</startDate>
       <url>https://www.acteble.com</url>
-      <type>Website</type>
+      <type>Platform</type>
       <roles>
         <role>Oprichter</role>
       </roles>
-      <summary>Publieke website van Acteble: lichte React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.</summary>
+      <summary>Backend: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming; een PostGIS-pipeline zet OpenStreetMap-data om in routeringsgrafen die via een CDN worden gepubliceerd, en eigen Dylint-lints bewaken de architectuur in CI. App: offline-first Flutter-client voor iOS, Android, web en desktop — een Melos-monorepo met Riverpod boven een versleutelde lokale opslag (Drift, SQLCipher), end-to-end-versleuteling via een Rust-kern (vodozemac via flutter_rust_bridge), peer-to-peer-synchronisatie via Bluetooth, MapLibre-kaarten en realtime media met LiveKit. Website: React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.</summary>
     </project>
     <project>
       <name>Mémoire de master</name>
       <description>Masterproef aan de UMONS — de R&amp;D van de planningsengine van Acteble.</description>
       <keywords>
         <keyword>Python</keyword>
+        <keyword>Rust</keyword>
         <keyword>LaTeX</keyword>
         <keyword>MiniZinc</keyword>
+        <keyword>ORTools</keyword>
         <keyword>ConstraintProgramming</keyword>
         <keyword>CombinatorialOptimization</keyword>
+        <keyword>MultiObjectiveOptimization</keyword>
         <keyword>Pareto</keyword>
+        <keyword>DSL</keyword>
+        <keyword>MutationTesting</keyword>
       </keywords>
       <startDate>2025-11-13</startDate>
       <endDate>2026-09-04</endDate>
@@ -3847,7 +4327,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <role>Auteur</role>
       </roles>
       <entity>UMONS</entity>
-      <summary>Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS. De R&amp;D van de planningsengine van Acteble, geschreven in Python.</summary>
+      <summary>Masterproef « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », Service d'Algorithmique van de UMONS — de R&amp;D van de planningsengine van Acteble. Multi-objectieve groepsvorming onder ruimtelijk-temporele beperkingen: NP-moeilijk via reductie van k-CLIQUE; toelaatbare groepen opgesomd als bicliques (Close-by-One); een iteratieve Pareto-solver met garanties voor terminatie en lokale convergentie; één DSL gecompileerd naar Python, MiniZinc en Rust met bit-identieke fronten, waarvan de Rust-uitvoer in de Acteble-API draait. Vergeleken met CP-SAT, NSGA-II, MOEA/D en SPEA2 (hypervolume, IGD, 30 seeds, Wilcoxon–Holm): significant beter dan MOEA/D bij elke grootte, dan NSGA-II en SPEA2 vanaf 500 gebruikers.</summary>
     </project>
     <project>
       <name>Emvi App</name>
@@ -4746,6 +5226,68 @@ Kortom, als je iemand zoekt die enthousiasme, intelligentie en een vleugje humor
     </course>
   </courses>
   <competitions>
+    <item>
+      <key>SoCraTesBE2026</key>
+      <title>SoCraTes BE 2026</title>
+      <date>2026-10-22</date>
+      <organizer>SoCraTes BE</organizer>
+      <summary>Unconference voor software crafters, 22–25 oktober in La Roche-en-Ardenne: coding dojo's, pair programming, workshops en discussies, met een agenda die de deelnemers zelf bepalen.</summary>
+      <url>https://socratesbe.org</url>
+    </item>
+    <item>
+      <key>SoCraTesBE2023</key>
+      <title>SoCraTes BE 2023</title>
+      <date>2023-11-10</date>
+      <organizer>SoCraTes BE</organizer>
+      <summary>Unconference voor software crafters, november 2023: code kata's, lightning talks en open-spacesessies, met een agenda die de deelnemers zelf bepalen.</summary>
+      <url>https://socratesbe.org</url>
+    </item>
+    <item>
+      <key>VisugXL2023</key>
+      <title>VisugXL 2023</title>
+      <date>2023-11-30</date>
+      <organizer>VISUG — Visual Studio User Group Belgium</organizer>
+      <summary>Eendaagse conferentie van de Belgische .NET- en Visual Studio-community, op de AP Hogeschool in Antwerpen.</summary>
+      <url>https://www.visug.be</url>
+    </item>
+    <item>
+      <key>VisugMeetup202311</key>
+      <title>VISUG-meetup — Mediator-patroon en .NET 8</title>
+      <date>2023-11-07</date>
+      <organizer>VISUG — Visual Studio User Group Belgium</organizer>
+      <summary>Avond in Mechelen: centrale fout- en validatieafhandeling met het Mediator-patroon, en wat er nieuw is in .NET 8, ASP.NET 8 en EF 8.</summary>
+      <url>https://www.visug.be</url>
+    </item>
+    <item>
+      <key>TwentyKmMaredsousDinant2026</key>
+      <title>20 km Maredsous–Dinant 2026</title>
+      <date>2026-03</date>
+      <summary>Loopwedstrijd van 20 km tussen de abdij van Maredsous en Dinant.</summary>
+    </item>
+    <item>
+      <key>TwentyKmBrussels2025</key>
+      <title>20 km door Brussel 2025</title>
+      <date>2025-05-25</date>
+      <summary>Wegwedstrijd van 20 km door de straten van Brussel.</summary>
+    </item>
+    <item>
+      <key>TwentyKmMaredsousDinant2025</key>
+      <title>20 km Maredsous–Dinant 2025</title>
+      <date>2025-03-09</date>
+      <summary>Loopwedstrijd van 20 km tussen de abdij van Maredsous en Dinant.</summary>
+    </item>
+    <item>
+      <key>TwentyKmBrussels2024</key>
+      <title>20 km door Brussel 2024</title>
+      <date>2024-05-26</date>
+      <summary>Wegwedstrijd van 20 km door de straten van Brussel.</summary>
+    </item>
+    <item>
+      <key>TwentyKmBrussels2022</key>
+      <title>20 km door Brussel 2022</title>
+      <date>2022-05-29</date>
+      <summary>Wegwedstrijd van 20 km door de straten van Brussel.</summary>
+    </item>
     <item>
       <key>HackathonCOW2024</key>
       <title>Hackathon Citizens of Wallonia 2024</title>

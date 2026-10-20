@@ -160,8 +160,14 @@
           <skill>
             <name>Python</name>
             <token>python</token>
+            <uses>12</uses>
+            <said>12 项使用 Python</said>
+          </skill>
+          <skill>
+            <name>DDD</name>
+            <token>ddd</token>
             <uses>10</uses>
-            <said>10 项使用 Python</said>
+            <said>10 项使用 DDD</said>
           </skill>
           <skill>
             <name>SQL Server</name>
@@ -170,16 +176,22 @@
             <said>8 项使用 SQL Server</said>
           </skill>
           <skill>
-            <name>DDD</name>
-            <token>ddd</token>
-            <uses>6</uses>
-            <said>6 项使用 DDD</said>
+            <name>Rust</name>
+            <token>rust</token>
+            <uses>7</uses>
+            <said>7 项使用 Rust</said>
           </skill>
           <skill>
             <name>Flutter</name>
             <token>flutter</token>
             <uses>6</uses>
             <said>6 项使用 Flutter</said>
+          </skill>
+          <skill>
+            <name>Pandas</name>
+            <token>pandas</token>
+            <uses>5</uses>
+            <said>5 项使用 Pandas</said>
           </skill>
           <skill>
             <name>React</name>
@@ -206,6 +218,12 @@
             <said>4 项使用 EntityFramework</said>
           </skill>
           <skill>
+            <name>HexagonalArchitecture</name>
+            <token>hexagonalarchitecture</token>
+            <uses>4</uses>
+            <said>4 项使用 HexagonalArchitecture</said>
+          </skill>
+          <skill>
             <name>Java</name>
             <token>java</token>
             <uses>4</uses>
@@ -218,16 +236,22 @@
             <said>4 项使用 OpenAI</said>
           </skill>
           <skill>
-            <name>Pandas</name>
-            <token>pandas</token>
-            <uses>4</uses>
-            <said>4 项使用 Pandas</said>
-          </skill>
-          <skill>
             <name>PostgreSQL</name>
             <token>postgresql</token>
             <uses>4</uses>
             <said>4 项使用 PostgreSQL</said>
+          </skill>
+          <skill>
+            <name>RAG</name>
+            <token>rag</token>
+            <uses>4</uses>
+            <said>4 项使用 RAG</said>
+          </skill>
+          <skill>
+            <name>TDD</name>
+            <token>tdd</token>
+            <uses>4</uses>
+            <said>4 项使用 TDD</said>
           </skill>
           <skill>
             <name>TypeScript</name>
@@ -235,6 +259,9 @@
             <uses>4</uses>
             <said>4 项使用 TypeScript</said>
           </skill>
+        </shortlist>
+        <more>全部技能 (260)</more>
+        <rest>
           <skill>
             <name>C#</name>
             <token>c</token>
@@ -259,9 +286,6 @@
             <uses>3</uses>
             <said>3 项使用 English</said>
           </skill>
-        </shortlist>
-        <more>全部技能 (219)</more>
-        <rest>
           <skill>
             <name>Firebase</name>
             <token>firebase</token>
@@ -275,16 +299,10 @@
             <said>3 项使用 JavaScript</said>
           </skill>
           <skill>
-            <name>OpenTelemetry</name>
-            <token>opentelemetry</token>
+            <name>NumPy</name>
+            <token>numpy</token>
             <uses>3</uses>
-            <said>3 项使用 OpenTelemetry</said>
-          </skill>
-          <skill>
-            <name>RAG</name>
-            <token>rag</token>
-            <uses>3</uses>
-            <said>3 项使用 RAG</said>
+            <said>3 项使用 NumPy</said>
           </skill>
           <skill>
             <name>SQL</name>
@@ -365,6 +383,12 @@
             <said>2 项使用 DeepFace</said>
           </skill>
           <skill>
+            <name>Dioxus</name>
+            <token>dioxus</token>
+            <uses>2</uses>
+            <said>2 项使用 Dioxus</said>
+          </skill>
+          <skill>
             <name>DNS</name>
             <token>dns</token>
             <uses>2</uses>
@@ -401,12 +425,6 @@
             <said>2 项使用 GraphTheory</said>
           </skill>
           <skill>
-            <name>gRPC</name>
-            <token>grpc</token>
-            <uses>2</uses>
-            <said>2 项使用 gRPC</said>
-          </skill>
-          <skill>
             <name>HTML</name>
             <token>html</token>
             <uses>2</uses>
@@ -431,10 +449,22 @@
             <said>2 项使用 LaTeX</said>
           </skill>
           <skill>
+            <name>MutationTesting</name>
+            <token>mutationtesting</token>
+            <uses>2</uses>
+            <said>2 项使用 MutationTesting</said>
+          </skill>
+          <skill>
             <name>NetworkSecurity</name>
             <token>networksecurity</token>
             <uses>2</uses>
             <said>2 项使用 NetworkSecurity</said>
+          </skill>
+          <skill>
+            <name>NLP</name>
+            <token>nlp</token>
+            <uses>2</uses>
+            <said>2 项使用 NLP</said>
           </skill>
           <skill>
             <name>Node.js</name>
@@ -443,28 +473,22 @@
             <said>2 项使用 Node.js</said>
           </skill>
           <skill>
-            <name>NumPy</name>
-            <token>numpy</token>
-            <uses>2</uses>
-            <said>2 项使用 NumPy</said>
-          </skill>
-          <skill>
             <name>OCR</name>
             <token>ocr</token>
             <uses>2</uses>
             <said>2 项使用 OCR</said>
           </skill>
           <skill>
+            <name>OpenTelemetry</name>
+            <token>opentelemetry</token>
+            <uses>2</uses>
+            <said>2 项使用 OpenTelemetry</said>
+          </skill>
+          <skill>
             <name>RelationalAlgebra</name>
             <token>relationalalgebra</token>
             <uses>2</uses>
             <said>2 项使用 RelationalAlgebra</said>
-          </skill>
-          <skill>
-            <name>Rust</name>
-            <token>rust</token>
-            <uses>2</uses>
-            <said>2 项使用 Rust</said>
           </skill>
           <skill>
             <name>SentenceTransformers</name>
@@ -489,6 +513,12 @@
             <token>sqlalchemy</token>
             <uses>2</uses>
             <said>2 项使用 SQLAlchemy</said>
+          </skill>
+          <skill>
+            <name>SQLite</name>
+            <token>sqlite</token>
+            <uses>2</uses>
+            <said>2 项使用 SQLite</said>
           </skill>
           <skill>
             <name>SystemsAnalysis</name>
@@ -599,6 +629,12 @@
             <said>1 项使用 BDD</said>
           </skill>
           <skill>
+            <name>BEIR</name>
+            <token>beir</token>
+            <uses>1</uses>
+            <said>1 项使用 BEIR</said>
+          </skill>
+          <skill>
             <name>Benchmark</name>
             <token>benchmark</token>
             <uses>1</uses>
@@ -621,6 +657,12 @@
             <token>binary</token>
             <uses>1</uses>
             <said>1 项使用 Binary</said>
+          </skill>
+          <skill>
+            <name>BrierScore</name>
+            <token>brierscore</token>
+            <uses>1</uses>
+            <said>1 项使用 BrierScore</said>
           </skill>
           <skill>
             <name>BTrees</name>
@@ -773,10 +815,22 @@
             <said>1 项使用 Drift</said>
           </skill>
           <skill>
+            <name>DSL</name>
+            <token>dsl</token>
+            <uses>1</uses>
+            <said>1 项使用 DSL</said>
+          </skill>
+          <skill>
             <name>Duality</name>
             <token>duality</token>
             <uses>1</uses>
             <said>1 项使用 Duality</said>
+          </skill>
+          <skill>
+            <name>DuckDB</name>
+            <token>duckdb</token>
+            <uses>1</uses>
+            <said>1 项使用 DuckDB</said>
           </skill>
           <skill>
             <name>Durkheim</name>
@@ -791,16 +845,40 @@
             <said>1 项使用 Dutch</said>
           </skill>
           <skill>
+            <name>Dylint</name>
+            <token>dylint</token>
+            <uses>1</uses>
+            <said>1 项使用 Dylint</said>
+          </skill>
+          <skill>
+            <name>E2EE</name>
+            <token>e2ee</token>
+            <uses>1</uses>
+            <said>1 项使用 E2EE</said>
+          </skill>
+          <skill>
             <name>Ebusiness</name>
             <token>ebusiness</token>
             <uses>1</uses>
             <said>1 项使用 Ebusiness</said>
           </skill>
           <skill>
+            <name>EloRating</name>
+            <token>elorating</token>
+            <uses>1</uses>
+            <said>1 项使用 EloRating</said>
+          </skill>
+          <skill>
             <name>Encapsulation</name>
             <token>encapsulation</token>
             <uses>1</uses>
             <said>1 项使用 Encapsulation</said>
+          </skill>
+          <skill>
+            <name>EnsembleModel</name>
+            <token>ensemblemodel</token>
+            <uses>1</uses>
+            <said>1 项使用 EnsembleModel</said>
           </skill>
           <skill>
             <name>EntityRelationship</name>
@@ -813,6 +891,12 @@
             <token>erp</token>
             <uses>1</uses>
             <said>1 项使用 ERP</said>
+          </skill>
+          <skill>
+            <name>ESLint</name>
+            <token>eslint</token>
+            <uses>1</uses>
+            <said>1 项使用 ESLint</said>
           </skill>
           <skill>
             <name>Evaluation</name>
@@ -851,10 +935,22 @@
             <said>1 项使用 FlutterMap</said>
           </skill>
           <skill>
+            <name>FlutterRustBridge</name>
+            <token>flutterrustbridge</token>
+            <uses>1</uses>
+            <said>1 项使用 FlutterRustBridge</said>
+          </skill>
+          <skill>
             <name>GDPR</name>
             <token>gdpr</token>
             <uses>1</uses>
             <said>1 项使用 GDPR</said>
+          </skill>
+          <skill>
+            <name>gRPC</name>
+            <token>grpc</token>
+            <uses>1</uses>
+            <said>1 项使用 gRPC</said>
           </skill>
           <skill>
             <name>Hardware</name>
@@ -873,12 +969,6 @@
             <token>hexadecimal</token>
             <uses>1</uses>
             <said>1 项使用 Hexadecimal</said>
-          </skill>
-          <skill>
-            <name>HexagonalArchitecture</name>
-            <token>hexagonalarchitecture</token>
-            <uses>1</uses>
-            <said>1 项使用 HexagonalArchitecture</said>
           </skill>
           <skill>
             <name>HRM</name>
@@ -905,6 +995,12 @@
             <said>1 项使用 ImperfectCompetition</said>
           </skill>
           <skill>
+            <name>InformationRetrieval</name>
+            <token>informationretrieval</token>
+            <uses>1</uses>
+            <said>1 项使用 InformationRetrieval</said>
+          </skill>
+          <skill>
             <name>Inheritance</name>
             <token>inheritance</token>
             <uses>1</uses>
@@ -923,6 +1019,12 @@
             <said>1 项使用 IntellectualProperty</said>
           </skill>
           <skill>
+            <name>iOS</name>
+            <token>ios</token>
+            <uses>1</uses>
+            <said>1 项使用 iOS</said>
+          </skill>
+          <skill>
             <name>Joins</name>
             <token>joins</token>
             <uses>1</uses>
@@ -935,6 +1037,18 @@
             <said>1 项使用 JS</said>
           </skill>
           <skill>
+            <name>LearningToRank</name>
+            <token>learningtorank</token>
+            <uses>1</uses>
+            <said>1 项使用 LearningToRank</said>
+          </skill>
+          <skill>
+            <name>Leitner</name>
+            <token>leitner</token>
+            <uses>1</uses>
+            <said>1 项使用 Leitner</said>
+          </skill>
+          <skill>
             <name>LinearAlgebra</name>
             <token>linearalgebra</token>
             <uses>1</uses>
@@ -945,6 +1059,12 @@
             <token>linearprogramming</token>
             <uses>1</uses>
             <said>1 项使用 LinearProgramming</said>
+          </skill>
+          <skill>
+            <name>LinkGrammar</name>
+            <token>linkgrammar</token>
+            <uses>1</uses>
+            <said>1 项使用 LinkGrammar</said>
           </skill>
           <skill>
             <name>LiteratureReview</name>
@@ -975,6 +1095,12 @@
             <token>management</token>
             <uses>1</uses>
             <said>1 项使用 Management</said>
+          </skill>
+          <skill>
+            <name>MapLibre</name>
+            <token>maplibre</token>
+            <uses>1</uses>
+            <said>1 项使用 MapLibre</said>
           </skill>
           <skill>
             <name>MarketFailure</name>
@@ -1067,6 +1193,12 @@
             <said>1 项使用 MonetaryMarket</said>
           </skill>
           <skill>
+            <name>MultiObjectiveOptimization</name>
+            <token>multiobjectiveoptimization</token>
+            <uses>1</uses>
+            <said>1 项使用 MultiObjectiveOptimization</said>
+          </skill>
+          <skill>
             <name>NationalIncome</name>
             <token>nationalincome</token>
             <uses>1</uses>
@@ -1115,6 +1247,18 @@
             <said>1 项使用 OOP</said>
           </skill>
           <skill>
+            <name>OpenBao</name>
+            <token>openbao</token>
+            <uses>1</uses>
+            <said>1 项使用 OpenBao</said>
+          </skill>
+          <skill>
+            <name>OpenStreetMap</name>
+            <token>openstreetmap</token>
+            <uses>1</uses>
+            <said>1 项使用 OpenStreetMap</said>
+          </skill>
+          <skill>
             <name>OperatingSystems</name>
             <token>operatingsystems</token>
             <uses>1</uses>
@@ -1125,6 +1269,12 @@
             <token>operationsresearch</token>
             <uses>1</uses>
             <said>1 项使用 OperationsResearch</said>
+          </skill>
+          <skill>
+            <name>ORTools</name>
+            <token>ortools</token>
+            <uses>1</uses>
+            <said>1 项使用 ORTools</said>
           </skill>
           <skill>
             <name>OSPF</name>
@@ -1155,6 +1305,12 @@
             <token>php</token>
             <uses>1</uses>
             <said>1 项使用 PHP</said>
+          </skill>
+          <skill>
+            <name>PoissonModel</name>
+            <token>poissonmodel</token>
+            <uses>1</uses>
+            <said>1 项使用 PoissonModel</said>
           </skill>
           <skill>
             <name>PoliticalScience</name>
@@ -1211,10 +1367,28 @@
             <said>1 项使用 ProjectManagement</said>
           </skill>
           <skill>
+            <name>Prolog</name>
+            <token>prolog</token>
+            <uses>1</uses>
+            <said>1 项使用 Prolog</said>
+          </skill>
+          <skill>
+            <name>Prometheus</name>
+            <token>prometheus</token>
+            <uses>1</uses>
+            <said>1 项使用 Prometheus</said>
+          </skill>
+          <skill>
             <name>PropositionalLogic</name>
             <token>propositionallogic</token>
             <uses>1</uses>
             <said>1 项使用 PropositionalLogic</said>
+          </skill>
+          <skill>
+            <name>Protobuf</name>
+            <token>protobuf</token>
+            <uses>1</uses>
+            <said>1 项使用 Protobuf</said>
           </skill>
           <skill>
             <name>QRCode</name>
@@ -1227,6 +1401,12 @@
             <token>queryoptimization</token>
             <uses>1</uses>
             <said>1 项使用 QueryOptimization</said>
+          </skill>
+          <skill>
+            <name>Ratatui</name>
+            <token>ratatui</token>
+            <uses>1</uses>
+            <said>1 项使用 Ratatui</said>
           </skill>
           <skill>
             <name>ReactRouter</name>
@@ -1265,6 +1445,12 @@
             <said>1 项使用 ScientificWriting</said>
           </skill>
           <skill>
+            <name>SciPy</name>
+            <token>scipy</token>
+            <uses>1</uses>
+            <said>1 项使用 SciPy</said>
+          </skill>
+          <skill>
             <name>Scrum</name>
             <token>scrum</token>
             <uses>1</uses>
@@ -1295,6 +1481,12 @@
             <said>1 项使用 ShellScripting</said>
           </skill>
           <skill>
+            <name>SM2</name>
+            <token>sm2</token>
+            <uses>1</uses>
+            <said>1 项使用 SM2</said>
+          </skill>
+          <skill>
             <name>SoftwareDesign</name>
             <token>softwaredesign</token>
             <uses>1</uses>
@@ -1313,16 +1505,28 @@
             <said>1 项使用 Sorting</said>
           </skill>
           <skill>
+            <name>SpacedRepetition</name>
+            <token>spacedrepetition</token>
+            <uses>1</uses>
+            <said>1 项使用 SpacedRepetition</said>
+          </skill>
+          <skill>
+            <name>spaCy</name>
+            <token>spacy-2</token>
+            <uses>1</uses>
+            <said>1 项使用 spaCy</said>
+          </skill>
+          <skill>
+            <name>SQLCipher</name>
+            <token>sqlcipher</token>
+            <uses>1</uses>
+            <said>1 项使用 SQLCipher</said>
+          </skill>
+          <skill>
             <name>SQLInjection</name>
             <token>sqlinjection</token>
             <uses>1</uses>
             <said>1 项使用 SQLInjection</said>
-          </skill>
-          <skill>
-            <name>SQLite</name>
-            <token>sqlite</token>
-            <uses>1</uses>
-            <said>1 项使用 SQLite</said>
           </skill>
           <skill>
             <name>SQLx</name>
@@ -1355,6 +1559,12 @@
             <said>1 项使用 SupervisedLearning</said>
           </skill>
           <skill>
+            <name>SymbolicAI</name>
+            <token>symbolicai</token>
+            <uses>1</uses>
+            <said>1 项使用 SymbolicAI</said>
+          </skill>
+          <skill>
             <name>Synchronization</name>
             <token>synchronization</token>
             <uses>1</uses>
@@ -1365,6 +1575,18 @@
             <token>systemadministration</token>
             <uses>1</uses>
             <said>1 项使用 SystemAdministration</said>
+          </skill>
+          <skill>
+            <name>Tatoeba</name>
+            <token>tatoeba</token>
+            <uses>1</uses>
+            <said>1 项使用 Tatoeba</said>
+          </skill>
+          <skill>
+            <name>Testcontainers</name>
+            <token>testcontainers</token>
+            <uses>1</uses>
+            <said>1 项使用 Testcontainers</said>
           </skill>
           <skill>
             <name>Tonic</name>
@@ -1415,10 +1637,28 @@
             <said>1 项使用 URLRewriting</said>
           </skill>
           <skill>
+            <name>Vercel</name>
+            <token>vercel</token>
+            <uses>1</uses>
+            <said>1 项使用 Vercel</said>
+          </skill>
+          <skill>
             <name>Vite</name>
             <token>vite</token>
             <uses>1</uses>
             <said>1 项使用 Vite</said>
+          </skill>
+          <skill>
+            <name>WalkForwardBacktest</name>
+            <token>walkforwardbacktest</token>
+            <uses>1</uses>
+            <said>1 项使用 WalkForwardBacktest</said>
+          </skill>
+          <skill>
+            <name>WebAssembly</name>
+            <token>webassembly</token>
+            <uses>1</uses>
+            <said>1 项使用 WebAssembly</said>
           </skill>
           <skill>
             <name>WebEconomy</name>
@@ -1443,6 +1683,12 @@
             <token>weka</token>
             <uses>1</uses>
             <said>1 项使用 Weka</said>
+          </skill>
+          <skill>
+            <name>WordNet</name>
+            <token>wordnet</token>
+            <uses>1</uses>
+            <said>1 项使用 WordNet</said>
           </skill>
           <skill>
             <name>XPath</name>
@@ -1544,8 +1790,8 @@
         <lane>
           <kind>work</kind>
           <label>工作经验</label>
-          <rows>8</rows>
-          <printRows>8</printRows>
+          <rows>10</rows>
+          <printRows>10</printRows>
           <groups>
             <group>
               <left>70.87%</left>
@@ -1607,16 +1853,16 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
-              <rows>5</rows>
+              <rows>7</rows>
               <printRow>0</printRow>
-              <printRows>5</printRows>
+              <printRows>7</printRows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>7</row>
               <rows>3</rows>
-              <printRow>5</printRow>
+              <printRow>7</printRow>
               <printRows>3</printRows>
             </group>
           </groups>
@@ -1914,14 +2160,14 @@
               <target>work-acteble-创始人</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble API</name>
-              <caption>Acteble API · API</caption>
-              <uses>rust tokio axum tonic grpc sqlx postgresql postgis redis minio livekit opentelemetry docker caddy ddd hexagonalarchitecture cqrs eventdriven</uses>
-              <period>6月 2025 – 至今</period>
-              <detail>API · 创始人</detail>
-              <summary>Acteble 平台的后端：用 Rust 编写的模块化单体。</summary>
+              <name>Acteble</name>
+              <caption>Acteble · 平台</caption>
+              <uses>rust tokio axum tonic grpc protobuf sqlx postgresql postgis redis minio livekit openbao prometheus testcontainers openstreetmap docker caddy dylint ddd hexagonalarchitecture cqrs eventdriven flutter dart melos riverpod drift sqlite sqlcipher dio flutterrustbridge maplibre fluttermap firebase offlinefirst e2ee mobile react vite javascript i18next reactrouter eslint vercel</uses>
+              <period>4月 2025 – 至今</period>
+              <detail>平台 · 创始人</detail>
+              <summary>基于地理位置的社交平台，把人们聚集到共同的活动周围：Rust 后端、离线优先的 Flutter 应用和 React 网站。</summary>
               <skills>Rust · Tokio · Axum · Tonic · gRPC</skills>
-              <label>Acteble API — API · 创始人 — 6月 2025 – 至今</label>
+              <label>Acteble — 平台 · 创始人 — 4月 2025 – 至今</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>1</row>
@@ -1931,16 +2177,17 @@
               <target>work-acteble-创始人</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble App</name>
-              <caption>Acteble App · 移动应用</caption>
-              <uses>flutter dart melos riverpod drift sqlite dio grpc fluttermap firebase offlinefirst mobile</uses>
-              <period>4月 2025 – 至今</period>
-              <detail>移动应用 · 创始人</detail>
-              <summary>Acteble 的离线优先多平台客户端，使用 Flutter 开发。</summary>
-              <skills>Flutter · Dart · Melos · Riverpod · Drift</skills>
-              <label>Acteble App — 移动应用 · 创始人 — 4月 2025 – 至今</label>
-              <left>92.23%</left>
-              <width>7.77%</width>
+              <name>Mémoire de master</name>
+              <title>UMONS</title>
+              <caption>Mémoire de master · 硕士论文</caption>
+              <uses>python rust latex minizinc ortools constraintprogramming combinatorialoptimization multiobjectiveoptimization pareto dsl mutationtesting</uses>
+              <period>11月 2025 – 9月 2026</period>
+              <detail>硕士论文 · 作者</detail>
+              <summary>UMONS 硕士论文——Acteble 规划引擎的研发。</summary>
+              <skills>Python · Rust · LaTeX · MiniZinc · ORTools</skills>
+              <label>Mémoire de master — 硕士论文 · 作者 — UMONS — 11月 2025 – 9月 2026</label>
+              <left>94.37%</left>
+              <width>4.71%</width>
               <row>2</row>
               <printRow>2</printRow>
             </bar>
@@ -1948,16 +2195,16 @@
               <target>work-acteble-创始人</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble Website</name>
-              <caption>Acteble Website · 网站</caption>
-              <uses>react vite javascript i18next reactrouter</uses>
-              <period>6月 2025 – 至今</period>
-              <detail>网站 · 创始人</detail>
-              <summary>Acteble 的公开网站：一个 React 单页应用。</summary>
-              <skills>React · Vite · JavaScript · i18next · ReactRouter</skills>
-              <label>Acteble Website — 网站 · 创始人 — 6月 2025 – 至今</label>
-              <left>92.23%</left>
-              <width>7.77%</width>
+              <name>Actrack</name>
+              <caption>Actrack · 预测引擎</caption>
+              <uses>python pandas numpy scipy duckdb rust dioxus webassembly elorating poissonmodel ensemblemodel walkforwardbacktest brierscore hexagonalarchitecture ddd tdd</uses>
+              <period>6月 2026 – 至今</period>
+              <detail>预测引擎 · 作者</detail>
+              <summary>基于多种足球评级策略集成的 2026 年 FIFA 世界杯预测。</summary>
+              <skills>Python · Pandas · NumPy · SciPy · DuckDB</skills>
+              <label>Actrack — 预测引擎 · 作者 — 6月 2026 – 至今</label>
+              <left>98.01%</left>
+              <width>1.99%</width>
               <row>3</row>
               <printRow>3</printRow>
             </bar>
@@ -1965,19 +2212,52 @@
               <target>work-acteble-创始人</target>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Mémoire de master</name>
-              <title>UMONS</title>
-              <caption>Mémoire de master · 硕士论文</caption>
-              <uses>python latex minizinc constraintprogramming combinatorialoptimization pareto</uses>
-              <period>11月 2025 – 9月 2026</period>
-              <detail>硕士论文 · 作者</detail>
-              <summary>UMONS 硕士论文——Acteble 规划引擎的研发。</summary>
-              <skills>Python · LaTeX · MiniZinc · ConstraintProgramming · CombinatorialOptimization</skills>
-              <label>Mémoire de master — 硕士论文 · 作者 — UMONS — 11月 2025 – 9月 2026</label>
-              <left>94.37%</left>
-              <width>4.71%</width>
+              <name>Baba</name>
+              <caption>Baba · 命令行工具</caption>
+              <uses>rust prolog linkgrammar symbolicai nlp ddd tdd mutationtesting</uses>
+              <period>7月 2026 – 至今</period>
+              <detail>命令行工具 · 作者</detail>
+              <summary>类 shell CLI，通过纯符号 AI（无 LLM）以受控英语查询。</summary>
+              <skills>Rust · Prolog · LinkGrammar · SymbolicAI · NLP</skills>
+              <label>Baba — 命令行工具 · 作者 — 7月 2026 – 至今</label>
+              <left>98.07%</left>
+              <width>1.93%</width>
               <row>4</row>
               <printRow>4</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-创始人</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>LL</name>
+              <caption>LL · 应用</caption>
+              <uses>rust dioxus ratatui sqlite ios spacedrepetition leitner sm2 python spacy-2 nlp wordnet tatoeba hexagonalarchitecture ddd tdd</uses>
+              <period>7月 2026 – 至今</period>
+              <detail>应用 · 作者</detail>
+              <summary>面向六种语言的间隔重复词汇训练器，每个词都配有在各语言间对齐的例句。</summary>
+              <skills>Rust · Dioxus · Ratatui · SQLite · iOS</skills>
+              <label>LL — 应用 · 作者 — 7月 2026 – 至今</label>
+              <left>98.09%</left>
+              <width>1.91%</width>
+              <row>5</row>
+              <printRow>5</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-创始人</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>KAG</name>
+              <caption>KAG · 框架</caption>
+              <uses>rust rag informationretrieval learningtorank beir ddd hexagonalarchitecture tdd</uses>
+              <period>7月 2026 – 至今</period>
+              <detail>框架 · 作者</detail>
+              <summary>纯算法的 Rust 框架：在 BEIR 上评测可互换的 RAG 管道组件，并将实测最佳配置作为带引用来源的问答 CLI 交付。</summary>
+              <skills>Rust · RAG · InformationRetrieval · LearningToRank · BEIR</skills>
+              <label>KAG — 框架 · 作者 — 7月 2026 – 至今</label>
+              <left>98.12%</left>
+              <width>1.88%</width>
+              <row>6</row>
+              <printRow>6</printRow>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -1991,8 +2271,8 @@
               <label>比利时参议院 — AI 研究员 — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
-              <printRow>5</printRow>
+              <row>7</row>
+              <printRow>7</printRow>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -2008,8 +2288,8 @@
               <label>Synergy — 平台 · 作者 — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>6</row>
-              <printRow>6</printRow>
+              <row>8</row>
+              <printRow>8</printRow>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -2025,8 +2305,8 @@
               <label>fedrag-be — 研究 · 作者 — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>7</row>
-              <printRow>7</printRow>
+              <row>9</row>
+              <printRow>9</printRow>
             </bar>
           </bars>
         </lane>
@@ -3077,11 +3357,11 @@
               <name>Mémoire de master</name>
               <title>UMONS</title>
               <caption>Mémoire de master · 硕士论文</caption>
-              <uses>python latex minizinc constraintprogramming combinatorialoptimization pareto</uses>
+              <uses>python rust latex minizinc ortools constraintprogramming combinatorialoptimization multiobjectiveoptimization pareto dsl mutationtesting</uses>
               <period>11月 2025 – 9月 2026</period>
               <detail>硕士论文 · 作者</detail>
               <summary>UMONS 硕士论文——Acteble 规划引擎的研发。</summary>
-              <skills>Python · LaTeX · MiniZinc · ConstraintProgramming · CombinatorialOptimization</skills>
+              <skills>Python · Rust · LaTeX · MiniZinc · ORTools</skills>
               <label>Mémoire de master — 硕士论文 · 作者 — UMONS — 11月 2025 – 9月 2026</label>
               <left>94.37%</left>
               <width>4.71%</width>
@@ -3092,9 +3372,9 @@
         </lane>
         <lane>
           <kind>competitions</kind>
-          <label>竞赛</label>
-          <rows>2</rows>
-          <printRows>2</printRows>
+          <label>活动</label>
+          <rows>3</rows>
+          <printRows>3</printRows>
           <groups>
             <group>
               <left>84.47%</left>
@@ -3109,6 +3389,18 @@
             <bar>
               <kind>competition</kind>
               <depth>0</depth>
+              <name>布鲁塞尔 20 公里赛 2022</name>
+              <caption>布鲁塞尔 20 公里赛 2022</caption>
+              <period>5月 2022 – 5月 2022</period>
+              <label>布鲁塞尔 20 公里赛 2022 — 5月 2022 – 5月 2022</label>
+              <left>73.79%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
               <name>Hackathon Citizens of Wallonia 2023</name>
               <title>Citizens of Wallonia</title>
               <caption>Hackathon Citizens of Wallonia 2023</caption>
@@ -3118,6 +3410,45 @@
               <width>0.49%</width>
               <row>0</row>
               <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>SoCraTes BE 2023</name>
+              <title>SoCraTes BE</title>
+              <caption>SoCraTes BE 2023</caption>
+              <period>11月 2023 – 11月 2023</period>
+              <label>SoCraTes BE 2023 — SoCraTes BE — 11月 2023 – 11月 2023</label>
+              <left>82.52%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>VisugXL 2023</name>
+              <title>VISUG — Visual Studio User Group Belgium</title>
+              <caption>VisugXL 2023</caption>
+              <period>11月 2023 – 11月 2023</period>
+              <label>VisugXL 2023 — VISUG — Visual Studio User Group Belgium — 11月 2023 – 11月 2023</label>
+              <left>82.52%</left>
+              <width>0.49%</width>
+              <row>1</row>
+              <printRow>1</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>VISUG 聚会——中介者模式与 .NET 8</name>
+              <title>VISUG — Visual Studio User Group Belgium</title>
+              <caption>VISUG 聚会——中介者模式与 .NET 8</caption>
+              <period>11月 2023 – 11月 2023</period>
+              <label>VISUG 聚会——中介者模式与 .NET 8 — VISUG — Visual Studio User Group Belgium — 11月 2023 – 11月 2023</label>
+              <left>82.52%</left>
+              <width>0.49%</width>
+              <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -3146,6 +3477,67 @@
               <width>0.03%</width>
               <row>1</row>
               <printRow>1</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>布鲁塞尔 20 公里赛 2024</name>
+              <caption>布鲁塞尔 20 公里赛 2024</caption>
+              <period>5月 2024 – 5月 2024</period>
+              <label>布鲁塞尔 20 公里赛 2024 — 5月 2024 – 5月 2024</label>
+              <left>85.44%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>20 km Maredsous–Dinant 2025</name>
+              <caption>20 km Maredsous–Dinant 2025</caption>
+              <period>3月 2025 – 3月 2025</period>
+              <label>20 km Maredsous–Dinant 2025 — 3月 2025 – 3月 2025</label>
+              <left>90.29%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>布鲁塞尔 20 公里赛 2025</name>
+              <caption>布鲁塞尔 20 公里赛 2025</caption>
+              <period>5月 2025 – 5月 2025</period>
+              <label>布鲁塞尔 20 公里赛 2025 — 5月 2025 – 5月 2025</label>
+              <left>91.26%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>20 km Maredsous–Dinant 2026</name>
+              <caption>20 km Maredsous–Dinant 2026</caption>
+              <period>3月 2026 – 3月 2026</period>
+              <label>20 km Maredsous–Dinant 2026 — 3月 2026 – 3月 2026</label>
+              <left>96.12%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>SoCraTes BE 2026</name>
+              <title>SoCraTes BE</title>
+              <caption>SoCraTes BE 2026</caption>
+              <period>10月 2026 – 10月 2026</period>
+              <label>SoCraTes BE 2026 — SoCraTes BE — 10月 2026 – 10月 2026</label>
+              <left>99.51%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
             </bar>
           </bars>
         </lane>
@@ -3209,10 +3601,12 @@
         <skill>PostgreSQL</skill>
       </skills>
       <projects>
-        <project>Acteble API</project>
-        <project>Acteble App</project>
-        <project>Acteble Website</project>
+        <project>Acteble</project>
         <project>Mémoire de master</project>
+        <project>Actrack</project>
+        <project>LL</project>
+        <project>Baba</project>
+        <project>KAG</project>
       </projects>
       <anchor>work-acteble-创始人</anchor>
     </job>
@@ -3719,6 +4113,102 @@ TFE: WebMenu 2.0
   </education>
   <projects>
     <project>
+      <name>Baba</name>
+      <description>类 shell CLI，通过纯符号 AI（无 LLM）以受控英语查询。</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Prolog</keyword>
+        <keyword>LinkGrammar</keyword>
+        <keyword>SymbolicAI</keyword>
+        <keyword>NLP</keyword>
+        <keyword>DDD</keyword>
+        <keyword>TDD</keyword>
+        <keyword>MutationTesting</keyword>
+      </keywords>
+      <startDate>2026-07-02</startDate>
+      <type>命令行工具</type>
+      <roles>
+        <role>作者</role>
+      </roles>
+      <summary>五层结构：负责全部 I/O 的 Rust CLI、link-grammar 句法解析器、不含 I/O 的 SWI-Prolog 符号引擎、以数据形式保存的领域词汇包，以及约五十个 Rust 动作程序——新增一个动词只需一条词汇包事实和一个程序。经过变异测试，配有回归句子语料库，冷启动约 120 毫秒。</summary>
+    </project>
+    <project>
+      <name>KAG</name>
+      <description>纯算法的 Rust 框架：在 BEIR 上评测可互换的 RAG 管道组件，并将实测最佳配置作为带引用来源的问答 CLI 交付。</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>RAG</keyword>
+        <keyword>InformationRetrieval</keyword>
+        <keyword>LearningToRank</keyword>
+        <keyword>BEIR</keyword>
+        <keyword>DDD</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-07-05</startDate>
+      <type>框架</type>
+      <roles>
+        <role>作者</role>
+      </roles>
+      <summary>九个管道阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate），每个阶段都是一个端口，其算法按标签选择（BM25F、RM3、MMR、LambdaMART、TextRank…）；六边形架构 + DDD + TDD，核心仅使用标准库，不用 LLM。评测指标与 pytrec_eval 完全一致。在六个 BEIR 数据集上没有一种检索器处处最优（SciFact 上 BM25F 的 ndcg@10 为 0.668）；LambdaMART 重排序器在 5 折交叉验证中把 ArguAna 从 0.301 提升到 0.527。</summary>
+    </project>
+    <project>
+      <name>LL</name>
+      <description>面向六种语言的间隔重复词汇训练器，每个词都配有在各语言间对齐的例句。</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Dioxus</keyword>
+        <keyword>Ratatui</keyword>
+        <keyword>SQLite</keyword>
+        <keyword>iOS</keyword>
+        <keyword>SpacedRepetition</keyword>
+        <keyword>Leitner</keyword>
+        <keyword>SM2</keyword>
+        <keyword>Python</keyword>
+        <keyword>spaCy</keyword>
+        <keyword>NLP</keyword>
+        <keyword>WordNet</keyword>
+        <keyword>Tatoeba</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>DDD</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-07-03</startDate>
+      <type>应用</type>
+      <roles>
+        <role>作者</role>
+      </roles>
+      <summary>一个 Rust 工作区，其纯领域核心（六边形架构、DDD、测试先行）驱动终端界面（ratatui）以及 Dioxus 桌面和 iOS 应用：基于 SQLite 的 Leitner 盒子与 SM-2 调度，内容来自带校验和的数据包。其数据实验室用 Python 构建六语种词汇数据库——约 8,900 个词义（2026 年 10 月），与 WordNet 对齐，配有 Tatoeba 例句，经 spaCy 分析，每个词与句子的关联都经过校验。</summary>
+    </project>
+    <project>
+      <name>Actrack</name>
+      <description>基于多种足球评级策略集成的 2026 年 FIFA 世界杯预测。</description>
+      <keywords>
+        <keyword>Python</keyword>
+        <keyword>Pandas</keyword>
+        <keyword>NumPy</keyword>
+        <keyword>SciPy</keyword>
+        <keyword>DuckDB</keyword>
+        <keyword>Rust</keyword>
+        <keyword>Dioxus</keyword>
+        <keyword>WebAssembly</keyword>
+        <keyword>EloRating</keyword>
+        <keyword>PoissonModel</keyword>
+        <keyword>EnsembleModel</keyword>
+        <keyword>WalkForwardBacktest</keyword>
+        <keyword>BrierScore</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>DDD</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-06-28</startDate>
+      <type>预测引擎</type>
+      <roles>
+        <role>作者</role>
+      </roles>
+      <summary>一个 Python 引擎（DDD、六边形架构）对十五种比赛结果策略加权——Elo、泊松攻防、近期状态、交锋记录、阵容身价、休息天数、博彩赔率——并按比赛场地进行调整；它被移植到 Web（WebAssembly）、桌面、移动端和终端的 Rust/Dioxus 应用中，并与之保持一致。研究实验室以逐届留出一项赛事的前向滚动方式，在十项赛事（2002–2022 年世界杯及 2023–2024 年四项洲际杯赛）的 635 场比赛上回测这些策略，并调整集成权重；在样本外，单独的 Elo 表现最好（准确率 55.6%）。</summary>
+    </project>
+    <project>
       <name>Synergy</name>
       <description>比利时联邦议会的内部平台，用于搜索、探索并与议会档案对话。</description>
       <keywords>
@@ -3757,88 +4247,78 @@ TFE: WebMenu 2.0
       <summary>开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。</summary>
     </project>
     <project>
-      <name>Acteble API</name>
-      <description>Acteble 平台的后端：用 Rust 编写的模块化单体。</description>
+      <name>Acteble</name>
+      <description>基于地理位置的社交平台，把人们聚集到共同的活动周围：Rust 后端、离线优先的 Flutter 应用和 React 网站。</description>
       <keywords>
         <keyword>Rust</keyword>
         <keyword>Tokio</keyword>
         <keyword>Axum</keyword>
         <keyword>Tonic</keyword>
         <keyword>gRPC</keyword>
+        <keyword>Protobuf</keyword>
         <keyword>SQLx</keyword>
         <keyword>PostgreSQL</keyword>
         <keyword>PostGIS</keyword>
         <keyword>Redis</keyword>
         <keyword>MinIO</keyword>
         <keyword>LiveKit</keyword>
-        <keyword>OpenTelemetry</keyword>
+        <keyword>OpenBao</keyword>
+        <keyword>Prometheus</keyword>
+        <keyword>Testcontainers</keyword>
+        <keyword>OpenStreetMap</keyword>
         <keyword>Docker</keyword>
         <keyword>Caddy</keyword>
+        <keyword>Dylint</keyword>
         <keyword>DDD</keyword>
         <keyword>HexagonalArchitecture</keyword>
         <keyword>CQRS</keyword>
         <keyword>EventDriven</keyword>
-      </keywords>
-      <startDate>2025-06-13</startDate>
-      <type>API</type>
-      <roles>
-        <role>创始人</role>
-      </roles>
-      <summary>平台后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务。</summary>
-    </project>
-    <project>
-      <name>Acteble App</name>
-      <description>Acteble 的离线优先多平台客户端，使用 Flutter 开发。</description>
-      <keywords>
         <keyword>Flutter</keyword>
         <keyword>Dart</keyword>
         <keyword>Melos</keyword>
         <keyword>Riverpod</keyword>
         <keyword>Drift</keyword>
         <keyword>SQLite</keyword>
+        <keyword>SQLCipher</keyword>
         <keyword>Dio</keyword>
-        <keyword>gRPC</keyword>
+        <keyword>FlutterRustBridge</keyword>
+        <keyword>MapLibre</keyword>
         <keyword>FlutterMap</keyword>
         <keyword>Firebase</keyword>
         <keyword>OfflineFirst</keyword>
+        <keyword>E2EE</keyword>
         <keyword>Mobile</keyword>
-      </keywords>
-      <startDate>2025-04-12</startDate>
-      <url>https://www.acteble.com</url>
-      <type>移动应用</type>
-      <roles>
-        <role>创始人</role>
-      </roles>
-      <summary>面向 iOS、Android、Web 和桌面的离线优先客户端：由 Flutter 应用和共享包组成的 Melos 单仓库，基于本地 Drift/SQLite 存储的 Riverpod 状态管理，通过 REST 和 gRPC 与 API 通信。</summary>
-    </project>
-    <project>
-      <name>Acteble Website</name>
-      <description>Acteble 的公开网站：一个 React 单页应用。</description>
-      <keywords>
         <keyword>React</keyword>
         <keyword>Vite</keyword>
         <keyword>JavaScript</keyword>
         <keyword>i18next</keyword>
         <keyword>ReactRouter</keyword>
+        <keyword>ESLint</keyword>
+        <keyword>Vercel</keyword>
       </keywords>
-      <startDate>2025-06-05</startDate>
+      <startDate>2025-04-12</startDate>
       <url>https://www.acteble.com</url>
-      <type>网站</type>
+      <type>平台</type>
       <roles>
         <role>创始人</role>
       </roles>
-      <summary>Acteble 的公开网站：使用 Vite 构建、通过 i18next 实现国际化的轻量级 React 单页应用。</summary>
+      <summary>后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务；PostGIS 管道将 OpenStreetMap 数据转换为发布到 CDN 的路由图，自定义 Dylint lint 在 CI 中强制执行架构规则。应用：面向 iOS、Android、Web 和桌面的离线优先 Flutter 客户端——Melos 单仓库，基于加密本地存储（Drift、SQLCipher）的 Riverpod 状态管理，通过 Rust 核心实现端到端加密（经 flutter_rust_bridge 调用 vodozemac），支持蓝牙点对点同步、MapLibre 地图和 LiveKit 实时媒体。网站：使用 Vite 构建、通过 i18next 实现国际化的 React 单页应用。</summary>
     </project>
     <project>
       <name>Mémoire de master</name>
       <description>UMONS 硕士论文——Acteble 规划引擎的研发。</description>
       <keywords>
         <keyword>Python</keyword>
+        <keyword>Rust</keyword>
         <keyword>LaTeX</keyword>
         <keyword>MiniZinc</keyword>
+        <keyword>ORTools</keyword>
         <keyword>ConstraintProgramming</keyword>
         <keyword>CombinatorialOptimization</keyword>
+        <keyword>MultiObjectiveOptimization</keyword>
         <keyword>Pareto</keyword>
+        <keyword>DSL</keyword>
+        <keyword>MutationTesting</keyword>
       </keywords>
       <startDate>2025-11-13</startDate>
       <endDate>2026-09-04</endDate>
@@ -3847,7 +4327,7 @@ TFE: WebMenu 2.0
         <role>作者</role>
       </roles>
       <entity>UMONS</entity>
-      <summary>硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成。Acteble 规划引擎的研发，使用 Python 编写。</summary>
+      <summary>硕士论文 « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »，UMONS 算法研究部——Acteble 规划引擎的研发。时空约束下的多目标分组：经由 k-CLIQUE 归约证明为 NP 难；以二分团（Close-by-One）枚举可行分组；具备终止性和局部收敛保证的迭代 Pareto 求解器；同一 DSL 编译为 Python、MiniZinc 和 Rust，得到逐位一致的前沿，其 Rust 输出运行于 Acteble API 中。与 CP-SAT、NSGA-II、MOEA/D 和 SPEA2 对比（超体积、IGD、30 个随机种子、Wilcoxon–Holm 检验）：在所有规模上显著优于 MOEA/D，从 500 名用户起显著优于 NSGA-II 和 SPEA2。</summary>
     </project>
     <project>
       <name>Emvi App</name>
@@ -4746,6 +5226,68 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
     </course>
   </courses>
   <competitions>
+    <item>
+      <key>SoCraTesBE2026</key>
+      <title>SoCraTes BE 2026</title>
+      <date>2026-10-22</date>
+      <organizer>SoCraTes BE</organizer>
+      <summary>面向软件工匠（software crafters）的非会议活动，10 月 22–25 日于 La Roche-en-Ardenne 举行：编程道场、结对编程、工作坊和讨论，议程由参与者共同决定。</summary>
+      <url>https://socratesbe.org</url>
+    </item>
+    <item>
+      <key>SoCraTesBE2023</key>
+      <title>SoCraTes BE 2023</title>
+      <date>2023-11-10</date>
+      <organizer>SoCraTes BE</organizer>
+      <summary>面向软件工匠的非会议活动，2023 年 11 月：代码套路练习、闪电演讲和开放空间讨论，议程由参与者共同决定。</summary>
+      <url>https://socratesbe.org</url>
+    </item>
+    <item>
+      <key>VisugXL2023</key>
+      <title>VisugXL 2023</title>
+      <date>2023-11-30</date>
+      <organizer>VISUG — Visual Studio User Group Belgium</organizer>
+      <summary>比利时 .NET 与 Visual Studio 社区的全天会议，在安特卫普 AP Hogeschool 举行。</summary>
+      <url>https://www.visug.be</url>
+    </item>
+    <item>
+      <key>VisugMeetup202311</key>
+      <title>VISUG 聚会——中介者模式与 .NET 8</title>
+      <date>2023-11-07</date>
+      <organizer>VISUG — Visual Studio User Group Belgium</organizer>
+      <summary>梅赫伦晚间活动：用中介者模式集中处理错误与校验，以及 .NET 8、ASP.NET 8 和 EF 8 的新特性。</summary>
+      <url>https://www.visug.be</url>
+    </item>
+    <item>
+      <key>TwentyKmMaredsousDinant2026</key>
+      <title>20 km Maredsous–Dinant 2026</title>
+      <date>2026-03</date>
+      <summary>马雷德苏修道院与迪南之间的 20 公里赛跑。</summary>
+    </item>
+    <item>
+      <key>TwentyKmBrussels2025</key>
+      <title>布鲁塞尔 20 公里赛 2025</title>
+      <date>2025-05-25</date>
+      <summary>穿越布鲁塞尔街道的 20 公里路跑。</summary>
+    </item>
+    <item>
+      <key>TwentyKmMaredsousDinant2025</key>
+      <title>20 km Maredsous–Dinant 2025</title>
+      <date>2025-03-09</date>
+      <summary>马雷德苏修道院与迪南之间的 20 公里赛跑。</summary>
+    </item>
+    <item>
+      <key>TwentyKmBrussels2024</key>
+      <title>布鲁塞尔 20 公里赛 2024</title>
+      <date>2024-05-26</date>
+      <summary>穿越布鲁塞尔街道的 20 公里路跑。</summary>
+    </item>
+    <item>
+      <key>TwentyKmBrussels2022</key>
+      <title>布鲁塞尔 20 公里赛 2022</title>
+      <date>2022-05-29</date>
+      <summary>穿越布鲁塞尔街道的 20 公里路跑。</summary>
+    </item>
     <item>
       <key>HackathonCOW2024</key>
       <title>Hackathon Citizens of Wallonia 2024</title>

@@ -133,14 +133,30 @@
   "projects": [
     {
       "description": "Shell-artige CLI, in kontrolliertem Englisch abgefragt über reine symbolische KI — ohne LLM im Ablauf.",
-      "summary": "Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer.",
+      "summary": "Fünf Schichten: eine Rust-CLI, die alle Ein- und Ausgaben übernimmt, ein link-grammar-Syntaxparser, eine SWI-Prolog-Symbol-Engine ohne Ein-/Ausgabe, Domänen-Vokabularpakete als Daten und rund fünfzig Rust-Aktionsprogramme — ein neues Verb ist ein Paketfakt und ein Programm. Mit Mutationstests, einem Korpus von Regressionssätzen und einem Kaltstart von etwa 120 ms.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Domänenunabhängiges Rust-Framework zum Benchmarking von Retrieval-Augmented-Generation-Pipelines.",
-      "summary": "Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core.",
+      "description": "Rein algorithmisches Rust-Framework, das austauschbare Komponenten einer RAG-Pipeline auf BEIR vergleicht und die am besten gemessene Konfiguration als Frage-Antwort-CLI mit zitierten Quellen ausliefert.",
+      "summary": "Neun Pipeline-Stufen (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), jede ein Port, dessen Algorithmus per Label gewählt wird (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonal + DDD + TDD, nur die Standardbibliothek im Kern, kein LLM. Die Metriken stimmen exakt mit pytrec_eval überein. Auf sechs BEIR-Datensätzen gewinnt kein Retriever überall (ndcg@10 0,668 auf SciFact mit BM25F); ein LambdaMART-Reranker hebt ArguAna in 5-facher Kreuzvalidierung von 0,301 auf 0,527.",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Vokabeltrainer mit verteilter Wiederholung für sechs Sprachen, jedes Wort mit einem abgeglichenen Beispielsatz in jeder Sprache.",
+      "summary": "Ein Rust-Workspace, dessen reiner Domänenkern (hexagonal, DDD, Test-first) eine Terminal-Oberfläche (ratatui) sowie Dioxus-Apps für Desktop und iOS antreibt: Leitner-Kästen mit SM-2-Planung auf SQLite, Inhalte aus prüfsummengesicherten Datenpaketen. Sein Datenlabor baut in Python die sechssprachige lexikalische Datenbank — rund 8.900 Wortbedeutungen (Oktober 2026), an WordNet ausgerichtet, mit Tatoeba-Sätzen belegt, mit spaCy analysiert, jede Wort-im-Satz-Verknüpfung geprüft.",
+      "type": "Anwendung",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Prognosen zur FIFA-Weltmeisterschaft 2026 aus einem Ensemble von Fußball-Bewertungsstrategien.",
+      "summary": "Eine Python-Engine (DDD, hexagonal) gewichtet fünfzehn Strategien für Spielausgänge — Elo, Poisson-Angriff/-Abwehr, Form, direkte Duelle, Kaderwert, Ruhetage, Buchmacherquoten — an den Spielort angepasst, und ist in Rust/Dioxus-Apps für Web (WebAssembly), Desktop, Mobilgeräte und Terminal portiert, die mit ihr gleichauf gehalten werden. Ein Forschungslabor testet die Strategien walk-forward, jeweils ein Turnier zurückgehalten, an 635 Spielen aus zehn Turnieren (Weltmeisterschaften 2002–2022 und vier Kontinentalturniere 2023–2024) und stimmt die Ensemble-Gewichte ab; außerhalb der Stichprobe schneidet Elo allein am besten ab (55,6 % Trefferquote).",
+      "type": "Prognose-Engine",
       "roles": [
         "Autor"
       ]
@@ -162,30 +178,16 @@
       ]
     },
     {
-      "description": "Backend der Acteble-Plattform: ein modularer Monolith in Rust.",
-      "summary": "Backend der Plattform: modularer Monolith in Rust, gegliedert in Bounded Contexts mit hexagonaler Architektur, CQRS und einem ereignisgesteuerten Kern (Event Store, Outbox/Inbox), bereitgestellt über REST/JSON und gRPC-Streaming.",
-      "roles": [
-        "Gründer"
-      ]
-    },
-    {
-      "description": "Offline-first-Multiplattform-Client von Acteble, entwickelt mit Flutter.",
-      "summary": "Offline-first-Client für iOS, Android, Web und Desktop: ein Melos-Monorepo aus Flutter-Apps und gemeinsamen Paketen, Riverpod-State über einem lokalen Drift/SQLite-Speicher, per REST und gRPC mit der API verbunden.",
-      "type": "Mobile Anwendung",
-      "roles": [
-        "Gründer"
-      ]
-    },
-    {
-      "description": "Öffentliche Website von Acteble: eine React-Single-Page-Anwendung.",
-      "summary": "Öffentliche Website von Acteble: schlanke React-Single-Page-Anwendung, mit Vite gebaut und mit i18next internationalisiert.",
+      "description": "Geolokalisierte soziale Plattform, die Menschen um gemeinsame Aktivitäten zusammenbringt: ein Rust-Backend, eine Offline-first-Flutter-App und eine React-Website.",
+      "summary": "Backend: modularer Monolith in Rust, gegliedert in Bounded Contexts mit hexagonaler Architektur, CQRS und einem ereignisgesteuerten Kern (Event Store, Outbox/Inbox), bereitgestellt über REST/JSON und gRPC-Streaming; eine PostGIS-Pipeline macht aus OpenStreetMap-Daten Routing-Graphen, die über ein CDN veröffentlicht werden, und eigene Dylint-Lints setzen die Architektur in der CI durch. App: Offline-first-Flutter-Client für iOS, Android, Web und Desktop — ein Melos-Monorepo mit Riverpod über einem verschlüsselten lokalen Speicher (Drift, SQLCipher), Ende-zu-Ende-Verschlüsselung über einen Rust-Kern (vodozemac via flutter_rust_bridge), Peer-to-Peer-Synchronisation per Bluetooth, MapLibre-Karten und Echtzeitmedien mit LiveKit. Website: React-Single-Page-Anwendung, mit Vite gebaut und mit i18next internationalisiert.",
+      "type": "Plattform",
       "roles": [
         "Gründer"
       ]
     },
     {
       "description": "Masterarbeit an der UMONS — die F&E der Planungs-Engine von Acteble.",
-      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Die F&E der Planungs-Engine von Acteble, in Python geschrieben.",
+      "summary": "Masterarbeit « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », Service d'Algorithmique der UMONS — die F&E der Planungs-Engine von Acteble. Mehrzielige Gruppenbildung unter räumlich-zeitlichen Bedingungen: NP-schwer per Reduktion von k-CLIQUE; zulässige Gruppen als Bicliquen aufgezählt (Close-by-One); ein iterativer Pareto-Solver mit Garantien für Terminierung und lokale Konvergenz; eine DSL, nach Python, MiniZinc und Rust kompiliert, mit bitidentischen Fronten, deren Rust-Ausgabe in der Acteble-API läuft. Verglichen mit CP-SAT, NSGA-II, MOEA/D und SPEA2 (Hypervolumen, IGD, 30 Seeds, Wilcoxon–Holm): signifikant vor MOEA/D bei jeder Größe, vor NSGA-II und SPEA2 ab 500 Nutzern.",
       "type": "Masterarbeit",
       "roles": [
         "Autor"
@@ -410,6 +412,46 @@
     }
   ],
   "competitions": [
+    {
+      "title": "SoCraTes BE 2026",
+      "organizer": "SoCraTes BE",
+      "summary": "Unkonferenz für Software Crafters, 22.–25. Oktober in La Roche-en-Ardenne: Coding Dojos, Pair Programming, Workshops und Diskussionen, mit einer von den Teilnehmenden gestalteten Agenda."
+    },
+    {
+      "title": "SoCraTes BE 2023",
+      "organizer": "SoCraTes BE",
+      "summary": "Unkonferenz für Software Crafters, November 2023: Code Katas, Lightning Talks und Open-Space-Sessions, mit einer von den Teilnehmenden gestalteten Agenda."
+    },
+    {
+      "title": "VisugXL 2023",
+      "organizer": "VISUG — Visual Studio User Group Belgium",
+      "summary": "Eintägige Konferenz der belgischen .NET- und Visual-Studio-Community an der AP Hogeschool in Antwerpen."
+    },
+    {
+      "title": "VISUG-Meetup — Mediator-Muster und .NET 8",
+      "organizer": "VISUG — Visual Studio User Group Belgium",
+      "summary": "Abend in Mechelen: zentrale Fehler- und Validierungsbehandlung mit dem Mediator-Muster und Neues in .NET 8, ASP.NET 8 und EF 8."
+    },
+    {
+      "title": "20 km Maredsous–Dinant 2026",
+      "summary": "20-km-Lauf zwischen der Abtei Maredsous und Dinant."
+    },
+    {
+      "title": "20 km von Brüssel 2025",
+      "summary": "20-km-Straßenlauf durch die Straßen von Brüssel."
+    },
+    {
+      "title": "20 km Maredsous–Dinant 2025",
+      "summary": "20-km-Lauf zwischen der Abtei Maredsous und Dinant."
+    },
+    {
+      "title": "20 km von Brüssel 2024",
+      "summary": "20-km-Straßenlauf durch die Straßen von Brüssel."
+    },
+    {
+      "title": "20 km von Brüssel 2022",
+      "summary": "20-km-Straßenlauf durch die Straßen von Brüssel."
+    },
     {
       "title": "Hackathon Citizens of Wallonia 2024",
       "organizer": "Citizens of Wallonia",

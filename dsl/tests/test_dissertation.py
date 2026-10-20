@@ -19,17 +19,25 @@ targets = lambda entry: [ref.target for ref in entry.projects]  # noqa: E731
 
 def test_the_master_carried_the_dissertation_not_the_venture():
     assert "MemoireMaster" in targets(MASTER)
-    assert not {"ActebleApp", "ActebleApi"} & set(targets(MASTER))
+    assert "Acteble" not in targets(MASTER)
 
 
-def test_the_acteble_experience_holds_its_applications_and_the_dissertation():
-    assert targets(FOUNDER) == ["ActebleApi", "ActebleApp", "ActebleWebsite", "MemoireMaster"]
+def test_the_acteble_experience_holds_the_platform_the_dissertation_and_the_side_projects():
+    assert targets(FOUNDER) == [
+        "Acteble",
+        "MemoireMaster",
+        "Actrack",
+        "LL",
+        "Baba",
+        "KAG",
+    ]
 
 
-def test_the_api_is_rust_and_the_app_is_flutter():
-    by_key = {p.key: p for p in RESUME.projects}
-    assert "Rust" in by_key["ActebleApi"].keywords and "Flutter" not in by_key["ActebleApi"].keywords
-    assert "Flutter" in by_key["ActebleApp"].keywords and "Rust" not in by_key["ActebleApp"].keywords
+def test_the_platform_is_one_project_not_one_line_per_application():
+    # Its backend, app and website are parts of one product, so one line.
+    keys = {p.key for p in RESUME.projects}
+    assert "Acteble" in keys
+    assert not {"ActebleApi", "ActebleApp", "ActebleWebsite"} & keys
 
 
 def test_the_dissertation_ended_the_day_the_degree_was_obtained():
@@ -45,9 +53,8 @@ def test_the_dissertation_began_with_its_repository():
     assert DISSERTATION.start_date.text == "2025-11-13"
 
 
-def test_each_application_names_its_own_technologies():
-    by_key = {p.key: p for p in RESUME.projects}
-    assert {"Axum", "Tonic", "PostGIS", "HexagonalArchitecture", "CQRS"} <= set(by_key["ActebleApi"].keywords)
-    assert {"Melos", "Riverpod", "Drift"} <= set(by_key["ActebleApp"].keywords)
-    assert {"React", "Vite"} <= set(by_key["ActebleWebsite"].keywords)
-
+def test_the_platform_names_the_technologies_of_each_of_its_parts():
+    keywords = set(next(p for p in RESUME.projects if p.key == "Acteble").keywords)
+    assert {"Axum", "Tonic", "PostGIS", "HexagonalArchitecture", "CQRS"} <= keywords
+    assert {"Flutter", "Melos", "Riverpod", "Drift"} <= keywords
+    assert {"React", "Vite"} <= keywords

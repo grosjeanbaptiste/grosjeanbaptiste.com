@@ -133,16 +133,32 @@
   "projects": [
     {
       "description": "类 shell CLI，通过纯符号 AI（无 LLM）以受控英语查询。",
-      "summary": "五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。",
+      "summary": "五层结构：负责全部 I/O 的 Rust CLI、link-grammar 句法解析器、不含 I/O 的 SWI-Prolog 符号引擎、以数据形式保存的领域词汇包，以及约五十个 Rust 动作程序——新增一个动词只需一条词汇包事实和一个程序。经过变异测试，配有回归句子语料库，冷启动约 120 毫秒。",
       "type": "命令行工具",
       "roles": [
         "作者"
       ]
     },
     {
-      "description": "领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。",
-      "summary": "采用六边形架构 + DDD + TDD，每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。",
+      "description": "纯算法的 Rust 框架：在 BEIR 上评测可互换的 RAG 管道组件，并将实测最佳配置作为带引用来源的问答 CLI 交付。",
+      "summary": "九个管道阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate），每个阶段都是一个端口，其算法按标签选择（BM25F、RM3、MMR、LambdaMART、TextRank…）；六边形架构 + DDD + TDD，核心仅使用标准库，不用 LLM。评测指标与 pytrec_eval 完全一致。在六个 BEIR 数据集上没有一种检索器处处最优（SciFact 上 BM25F 的 ndcg@10 为 0.668）；LambdaMART 重排序器在 5 折交叉验证中把 ArguAna 从 0.301 提升到 0.527。",
       "type": "框架",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "面向六种语言的间隔重复词汇训练器，每个词都配有在各语言间对齐的例句。",
+      "summary": "一个 Rust 工作区，其纯领域核心（六边形架构、DDD、测试先行）驱动终端界面（ratatui）以及 Dioxus 桌面和 iOS 应用：基于 SQLite 的 Leitner 盒子与 SM-2 调度，内容来自带校验和的数据包。其数据实验室用 Python 构建六语种词汇数据库——约 8,900 个词义（2026 年 10 月），与 WordNet 对齐，配有 Tatoeba 例句，经 spaCy 分析，每个词与句子的关联都经过校验。",
+      "type": "应用",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "基于多种足球评级策略集成的 2026 年 FIFA 世界杯预测。",
+      "summary": "一个 Python 引擎（DDD、六边形架构）对十五种比赛结果策略加权——Elo、泊松攻防、近期状态、交锋记录、阵容身价、休息天数、博彩赔率——并按比赛场地进行调整；它被移植到 Web（WebAssembly）、桌面、移动端和终端的 Rust/Dioxus 应用中，并与之保持一致。研究实验室以逐届留出一项赛事的前向滚动方式，在十项赛事（2002–2022 年世界杯及 2023–2024 年四项洲际杯赛）的 635 场比赛上回测这些策略，并调整集成权重；在样本外，单独的 Elo 表现最好（准确率 55.6%）。",
+      "type": "预测引擎",
       "roles": [
         "作者"
       ]
@@ -164,31 +180,16 @@
       ]
     },
     {
-      "description": "Acteble 平台的后端：用 Rust 编写的模块化单体。",
-      "summary": "平台后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务。",
-      "roles": [
-        "创始人"
-      ]
-    },
-    {
-      "description": "Acteble 的离线优先多平台客户端，使用 Flutter 开发。",
-      "summary": "面向 iOS、Android、Web 和桌面的离线优先客户端：由 Flutter 应用和共享包组成的 Melos 单仓库，基于本地 Drift/SQLite 存储的 Riverpod 状态管理，通过 REST 和 gRPC 与 API 通信。",
-      "type": "移动应用",
-      "roles": [
-        "创始人"
-      ]
-    },
-    {
-      "description": "Acteble 的公开网站：一个 React 单页应用。",
-      "summary": "Acteble 的公开网站：使用 Vite 构建、通过 i18next 实现国际化的轻量级 React 单页应用。",
-      "type": "网站",
+      "description": "基于地理位置的社交平台，把人们聚集到共同的活动周围：Rust 后端、离线优先的 Flutter 应用和 React 网站。",
+      "summary": "后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务；PostGIS 管道将 OpenStreetMap 数据转换为发布到 CDN 的路由图，自定义 Dylint lint 在 CI 中强制执行架构规则。应用：面向 iOS、Android、Web 和桌面的离线优先 Flutter 客户端——Melos 单仓库，基于加密本地存储（Drift、SQLCipher）的 Riverpod 状态管理，通过 Rust 核心实现端到端加密（经 flutter_rust_bridge 调用 vodozemac），支持蓝牙点对点同步、MapLibre 地图和 LiveKit 实时媒体。网站：使用 Vite 构建、通过 i18next 实现国际化的 React 单页应用。",
+      "type": "平台",
       "roles": [
         "创始人"
       ]
     },
     {
       "description": "UMONS 硕士论文——Acteble 规划引擎的研发。",
-      "summary": "硕士论文：« Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »——在 UMONS 算法研究部完成。Acteble 规划引擎的研发，使用 Python 编写。",
+      "summary": "硕士论文 « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »，UMONS 算法研究部——Acteble 规划引擎的研发。时空约束下的多目标分组：经由 k-CLIQUE 归约证明为 NP 难；以二分团（Close-by-One）枚举可行分组；具备终止性和局部收敛保证的迭代 Pareto 求解器；同一 DSL 编译为 Python、MiniZinc 和 Rust，得到逐位一致的前沿，其 Rust 输出运行于 Acteble API 中。与 CP-SAT、NSGA-II、MOEA/D 和 SPEA2 对比（超体积、IGD、30 个随机种子、Wilcoxon–Holm 检验）：在所有规模上显著优于 MOEA/D，从 500 名用户起显著优于 NSGA-II 和 SPEA2。",
       "type": "硕士论文",
       "roles": [
         "作者"
@@ -413,6 +414,46 @@
     }
   ],
   "competitions": [
+    {
+      "title": "SoCraTes BE 2026",
+      "organizer": "SoCraTes BE",
+      "summary": "面向软件工匠（software crafters）的非会议活动，10 月 22–25 日于 La Roche-en-Ardenne 举行：编程道场、结对编程、工作坊和讨论，议程由参与者共同决定。"
+    },
+    {
+      "title": "SoCraTes BE 2023",
+      "organizer": "SoCraTes BE",
+      "summary": "面向软件工匠的非会议活动，2023 年 11 月：代码套路练习、闪电演讲和开放空间讨论，议程由参与者共同决定。"
+    },
+    {
+      "title": "VisugXL 2023",
+      "organizer": "VISUG — Visual Studio User Group Belgium",
+      "summary": "比利时 .NET 与 Visual Studio 社区的全天会议，在安特卫普 AP Hogeschool 举行。"
+    },
+    {
+      "title": "VISUG 聚会——中介者模式与 .NET 8",
+      "organizer": "VISUG — Visual Studio User Group Belgium",
+      "summary": "梅赫伦晚间活动：用中介者模式集中处理错误与校验，以及 .NET 8、ASP.NET 8 和 EF 8 的新特性。"
+    },
+    {
+      "title": "20 km Maredsous–Dinant 2026",
+      "summary": "马雷德苏修道院与迪南之间的 20 公里赛跑。"
+    },
+    {
+      "title": "布鲁塞尔 20 公里赛 2025",
+      "summary": "穿越布鲁塞尔街道的 20 公里路跑。"
+    },
+    {
+      "title": "20 km Maredsous–Dinant 2025",
+      "summary": "马雷德苏修道院与迪南之间的 20 公里赛跑。"
+    },
+    {
+      "title": "布鲁塞尔 20 公里赛 2024",
+      "summary": "穿越布鲁塞尔街道的 20 公里路跑。"
+    },
+    {
+      "title": "布鲁塞尔 20 公里赛 2022",
+      "summary": "穿越布鲁塞尔街道的 20 公里路跑。"
+    },
     {
       "title": "Hackathon Citizens of Wallonia 2024",
       "organizer": "Citizens of Wallonia",
