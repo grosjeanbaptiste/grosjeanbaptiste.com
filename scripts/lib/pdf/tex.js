@@ -58,7 +58,11 @@ function tex(value) {
     .replace(/\{/g, '\\{')
     .replace(/\}/g, '\\}')
     .replace(/~/g, '\\textasciitilde{}')
-    .replace(/\^/g, '\\textasciicircum{}');
+    .replace(/\^/g, '\\textasciicircum{}')
+    // As commands, not characters: under xeCJK (zh) a dash typed as a
+    // character went to the Chinese font, squeezed over the letter before it.
+    .replace(/\u2013/g, '\\textendash{}')
+    .replace(/\u2014/g, '\\textemdash{}');
 }
 
 // Wrap each word in \mbox{} so narrow-column titles can't be hyphenated.
