@@ -48,6 +48,11 @@ function profileFor(out, attempt, pdf) {
       `user_pref("${p}.print_footerright", "");`,
       'user_pref("browser.cache.disk.enable", false);',
       'user_pref("browser.cache.memory.enable", false);',
+      // Firefox 158 prints through a new Skia PDF backend that ignores the
+      // size of every @page rule — even a whole document set to A4 landscape
+      // comes out on US Letter, upright — so the verso could never be turned.
+      // The previous backend honours them, as Firefox 157 did.
+      'user_pref("print.experimental.skpdf", false);',
       '',
     ].join('\n'),
   );
