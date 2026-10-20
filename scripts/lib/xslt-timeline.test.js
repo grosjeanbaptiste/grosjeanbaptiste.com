@@ -9,7 +9,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
-const { ROOT, LANGS } = require('./config');
+const { ROOT, LANGS, langPath } = require('./config');
 const { timelineForXml } = require('./xml-timeline');
 
 const xmlOf = (lang, minimal) =>
@@ -24,6 +24,7 @@ const render = (lang, minimal = false) =>
     { encoding: 'utf8' },
   );
 const bars = (html) => [...html.matchAll(/<(a|span) class="tl-bar"[^>]*>/g)].map((m) => m[0]);
+const styleOf = (tag) => (tag.match(/style="([^"]*)"/) || [])[1];
 const ids = (html) => [...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]);
 
 const TODAY = new Date(Date.UTC(2026, 9, 3));
@@ -109,6 +110,17 @@ for (const lang of LANGS) {
   test(`${lang}: the minimal theme draws the timeline too`, () => {
     assert.ok(bars(render(lang, true)).length > 20);
   });
+
+  // The outline that groups an entry with what it carried, as on the classic
+  // page: same outlines, same place, in both themes.
+  for (const minimal of [false, true]) {
+    test(`${lang}: the ${minimal ? 'minimal' : 'rich'} theme draws the classic page's groups`, () => {
+      const groups = (html) => [...html.matchAll(/<span class="tl-group"[^>]*>/g)].map((m) => m[0]);
+      const classic = groups(fs.readFileSync(path.join(ROOT, `${langPath(lang).replace(/^\//, '')}index.html`), 'utf8'));
+      assert.ok(classic.length > 0, 'the classic page draws no group');
+      assert.deepEqual(groups(render(lang, minimal)).map(styleOf), classic.map(styleOf));
+    });
+  }
 }
 
 test('the rich theme hands the preview what a project tells', () => {

@@ -664,6 +664,13 @@
                 <span class="tl-lane-label"><xsl:value-of select="label"/></span>
                 <div class="tl-track">
                   <xsl:attribute name="style">--rows:<xsl:value-of select="rows"/>;--print-rows:<xsl:value-of select="printRows"/></xsl:attribute>
+                  <!-- Behind the bars: the outline of each entry that carried
+                       something, as on the classic page. -->
+                  <xsl:for-each select="groups/group">
+                    <span class="tl-group" aria-hidden="true">
+                      <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/>;--group-rows:<xsl:value-of select="rows"/>;--print-row:<xsl:value-of select="printRow"/>;--print-group-rows:<xsl:value-of select="printRows"/></xsl:attribute>
+                    </span>
+                  </xsl:for-each>
                   <xsl:for-each select="bars/bar">
                     <xsl:choose>
                       <!-- A bar leads to the entry that carries it on this page. -->
