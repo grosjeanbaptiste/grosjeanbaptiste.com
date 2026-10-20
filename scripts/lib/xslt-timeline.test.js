@@ -116,7 +116,9 @@ for (const lang of LANGS) {
   for (const minimal of [false, true]) {
     test(`${lang}: the ${minimal ? 'minimal' : 'rich'} theme draws the classic page's groups`, () => {
       const groups = (html) => [...html.matchAll(/<span class="tl-group"[^>]*>/g)].map((m) => m[0]);
-      const classic = groups(fs.readFileSync(path.join(ROOT, `${langPath(lang).replace(/^\//, '')}index.html`), 'utf8'));
+      const classic = groups(
+        fs.readFileSync(path.join(ROOT, `${langPath(lang).replace(/^\//, '')}index.html`), 'utf8'),
+      );
       assert.ok(classic.length > 0, 'the classic page draws no group');
       assert.deepEqual(groups(render(lang, minimal)).map(styleOf), classic.map(styleOf));
     });
