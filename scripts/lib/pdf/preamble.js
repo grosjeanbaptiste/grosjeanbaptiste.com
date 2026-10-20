@@ -10,6 +10,9 @@ const CJK_FONT_FALLBACKS = [
   '    }%',
   '  }%',
   '}',
+  // xeCJK counts the en dash as CJK punctuation and squeezes it over the
+  // letter before it ("Maredsous–Dinant"); set it as Latin, like the hyphen.
+  '\\xeCJKsetcharclass{"2013}{"2013}{0}',
 ];
 
 const COLOURS = [
