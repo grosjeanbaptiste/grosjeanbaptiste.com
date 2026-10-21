@@ -6,7 +6,8 @@ const { buildPreamble } = require('../preamble');
 const { tex } = require('../tex');
 const { formatLongDate } = require('../today');
 const { timelineBars } = require('./bars');
-const { layOut } = require('./page');
+const { layOut, TimelineOverflow } = require('./page');
+const { gatherNewest } = require('./gather');
 const { buildPicture } = require('./picture');
 
 // The busy years of the career get the width the quiet ones can spare.
@@ -23,12 +24,27 @@ function buildHeader(resume, t, lang, today, years) {
   ].join('\n');
 }
 
+// The sheet of the timeline, gathering the newest projects still running two
+// by two (./gather.js) while the page cannot hold them; loud once nothing is
+// left to gather.
+function fitted(timeline) {
+  for (let bars = timeline; ; ) {
+    try {
+      return layOut(bars, { density: DENSITY });
+    } catch (err) {
+      const fewer = err instanceof TimelineOverflow ? gatherNewest(bars) : null;
+      if (!fewer) throw err;
+      bars = fewer;
+    }
+  }
+}
+
 // `years`: null for the whole career, or the span of the 2- and 5-year PDFs.
 // Gives the source, which labels the sheet could carry ('full' or 'names') and
 // whether it had room for the course units ('drawn', 'dropped' or 'none').
 function buildTimelineDocument(resume, lang, today, years = null) {
   const t = I18N[lang];
-  const sheet = layOut(timelineBars(resume, today, years), { density: DENSITY });
+  const sheet = fitted(timelineBars(resume, today, years));
   const tex = [
     buildPreamble(lang),
     '\\geometry{landscape,left=10mm,right=10mm,top=10mm,bottom=8mm}',
