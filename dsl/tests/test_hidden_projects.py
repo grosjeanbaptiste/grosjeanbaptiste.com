@@ -50,8 +50,9 @@ def test_a_project_without_the_flag_is_hidden_nowhere():
 
 def test_the_side_projects_of_the_cv_are_shown_everywhere():
     # Baba, KAG, LL and Actrack were hidden while they belonged to no
-    # experience; the author files them under Acteble and shows them.
+    # experience; the author files them under Acteble and shows them, as
+    # Indexer, Polytech and Converge.
     payload = site_overrides.emit(parse_file(DSL_DIR / "resume.grosjean"))
-    side = {"Baba", "KAG", "LL", "Actrack"}
+    side = {"Baba", "KAG", "LL", "Actrack", "Indexer", "Polytech", "Converge"}
     for target in ("hideOnHtml", "hideOnPdf"):
         assert not side & set(payload.get(target, {}).get("projects", []))

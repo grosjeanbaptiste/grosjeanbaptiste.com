@@ -154,6 +154,30 @@
       ]
     },
     {
+      "description": "Kuratierter Index externer Datenquellen, Bücher und Softwarepakete, bereitgestellt über eine öffentliche Lese-API.",
+      "summary": "Jede der 523 Quellen ist eine TOML-Datei, die Rust validiert und zu statischem JSON kompiliert, beim Build in einen Cloudflare Worker eingebettet: API-Logik in reinem Rust, ETag- und 304-Antworten, Ratenbegrenzung pro IP und API-Schlüssel, exakt gezählt von einem Durable Object, BM25F-Ranking gewichtet mit einem Zuverlässigkeitswert aus sechs Kriterien und eine Lückenanalyse, die Bedarfe passenden Quellen zuordnet.",
+      "type": "API",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Bibliothek für das Ingenieurstudium, die jede Zahl und jeden Ausdruck ausgearbeiteter LaTeX-Lösungen berechnet, nichts von Hand getippt.",
+      "summary": "Eine Python-Bibliothek (DDD, hexagonal, test-first, mutationsgetestet, mypy strict) mit den Begriffen aus Mathematik, Physik, Elektronik, Signalverarbeitung und Optimierung, berechnet mit SymPy, NumPy und SciPy und per Makros in 920 LaTeX-Dokumente eingesetzt; eine Pipeline wandelt Kursmaterial in Markdown, LaTeX und XML um, und Lean-4-Beweise mit Mathlib führen Ergebnisse bis auf die Axiome zurück.",
+      "type": "Bibliothek",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "KI-gestützte Plattform für mechanisches 3D-Design, die Open-Source-Engines für Geometrie, Vernetzung und Simulation orchestriert.",
+      "summary": "Die KI schreibt die Operationen, die Engines rechnen: Ein LLM erzeugt ein streng validiertes Bauteilprogramm in JSON; zwei unabhängige Kerne, OpenCASCADE (exakt) und Manifold (Netz), müssen bei Volumen und Hüllquader übereinstimmen, und die Baugruppe wird vor jedem Export nach STEP, STL, 3MF oder glTF auf Überschneidungen geprüft. Ein Rust-Kern (hexagonale Ports und Adapter) steuert einen Python-Worker über JSON-Zeilen, und eine NSGA-II-Suche (Optuna) wählt die Komponenten auf einer Pareto-Front, gegengeprüft durch exakte Aufzählung.",
+      "type": "Plattform",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
       "description": "Prognosen zur FIFA-Weltmeisterschaft 2026 aus einem Ensemble von Fußball-Bewertungsstrategien.",
       "summary": "Eine Python-Engine (DDD, hexagonal) gewichtet fünfzehn Strategien für Spielausgänge — Elo, Poisson-Angriff/-Abwehr, Form, direkte Duelle, Kaderwert, Ruhetage, Buchmacherquoten — an den Spielort angepasst, und ist in Rust/Dioxus-Apps für Web (WebAssembly), Desktop, Mobilgeräte und Terminal portiert, die mit ihr gleichauf gehalten werden. Ein Forschungslabor testet die Strategien walk-forward, jeweils ein Turnier zurückgehalten, an 635 Spielen aus zehn Turnieren (Weltmeisterschaften 2002–2022 und vier Kontinentalturniere 2023–2024) und stimmt die Ensemble-Gewichte ab; außerhalb der Stichprobe schneidet Elo allein am besten ab (55,6 % Trefferquote).",
       "type": "Prognose-Engine",

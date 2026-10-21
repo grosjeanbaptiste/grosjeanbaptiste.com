@@ -156,6 +156,30 @@
       ]
     },
     {
+      "description": "精选的外部数据源、书籍和软件包索引，通过公开的只读 API 提供。",
+      "summary": "523 个数据源各为一个 TOML 文件，由 Rust 校验并编译为静态 JSON，在构建时嵌入 Cloudflare Worker：纯 Rust 的 API 逻辑、ETag 与 304 响应、由 Durable Object 精确计数的按 IP 和 API 密钥限流、按六项可靠性指标加权的 BM25F 排序，以及将需求与候选数据源匹配的缺口分析。",
+      "type": "API",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "工程学习库：LaTeX 题解中的每个数字和表达式都由计算生成，无一手工输入。",
+      "summary": "一个 Python 库（DDD、六边形架构、测试先行、变异测试、mypy strict），涵盖数学、物理、电子、信号与优化的概念，用 SymPy、NumPy 和 SciPy 计算，并通过宏注入 920 份 LaTeX 文档；一条流水线将课程资料转换为 Markdown、LaTeX 和 XML，基于 Mathlib 的 Lean 4 证明把结论追溯到公理。",
+      "type": "库",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "AI 辅助的三维机械设计平台，编排开源的几何、网格划分与仿真引擎。",
+      "summary": "AI 编写操作，引擎负责计算：LLM 生成经严格校验的 JSON 零件程序；两个独立内核 OpenCASCADE（精确）与 Manifold（网格）必须在体积和包围盒上一致，装配体在导出 STEP、STL、3MF 或 glTF 之前要通过重叠检查。Rust 核心（六边形端口与适配器）通过 JSON 行驱动 Python 工作进程，NSGA-II 搜索（Optuna）在帕累托前沿上选择元器件，并以精确枚举交叉验证。",
+      "type": "平台",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
       "description": "基于多种足球评级策略集成的 2026 年 FIFA 世界杯预测。",
       "summary": "一个 Python 引擎（DDD、六边形架构）对十五种比赛结果策略加权——Elo、泊松攻防、近期状态、交锋记录、阵容身价、休息天数、博彩赔率——并按比赛场地进行调整；它被移植到 Web（WebAssembly）、桌面、移动端和终端的 Rust/Dioxus 应用中，并与之保持一致。研究实验室以逐届留出一项赛事的前向滚动方式，在十项赛事（2002–2022 年世界杯及 2023–2024 年四项洲际杯赛）的 635 场比赛上回测这些策略，并调整集成权重；在样本外，单独的 Elo 表现最好（准确率 55.6%）。",
       "type": "预测引擎",

@@ -152,22 +152,28 @@
         <clear>清除筛选</clear>
         <shortlist>
           <skill>
+            <name>Python</name>
+            <token>python</token>
+            <uses>14</uses>
+            <said>14 项使用 Python</said>
+          </skill>
+          <skill>
             <name>.NET</name>
             <token>net</token>
             <uses>12</uses>
             <said>12 项使用 .NET</said>
           </skill>
           <skill>
-            <name>Python</name>
-            <token>python</token>
-            <uses>12</uses>
-            <said>12 项使用 Python</said>
-          </skill>
-          <skill>
             <name>DDD</name>
             <token>ddd</token>
-            <uses>10</uses>
-            <said>10 项使用 DDD</said>
+            <uses>11</uses>
+            <said>11 项使用 DDD</said>
+          </skill>
+          <skill>
+            <name>Rust</name>
+            <token>rust</token>
+            <uses>9</uses>
+            <said>9 项使用 Rust</said>
           </skill>
           <skill>
             <name>SQL Server</name>
@@ -176,16 +182,22 @@
             <said>8 项使用 SQL Server</said>
           </skill>
           <skill>
-            <name>Rust</name>
-            <token>rust</token>
+            <name>TDD</name>
+            <token>tdd</token>
             <uses>7</uses>
-            <said>7 项使用 Rust</said>
+            <said>7 项使用 TDD</said>
           </skill>
           <skill>
             <name>Flutter</name>
             <token>flutter</token>
             <uses>6</uses>
             <said>6 项使用 Flutter</said>
+          </skill>
+          <skill>
+            <name>HexagonalArchitecture</name>
+            <token>hexagonalarchitecture</token>
+            <uses>6</uses>
+            <said>6 项使用 HexagonalArchitecture</said>
           </skill>
           <skill>
             <name>Pandas</name>
@@ -218,16 +230,16 @@
             <said>4 项使用 EntityFramework</said>
           </skill>
           <skill>
-            <name>HexagonalArchitecture</name>
-            <token>hexagonalarchitecture</token>
-            <uses>4</uses>
-            <said>4 项使用 HexagonalArchitecture</said>
-          </skill>
-          <skill>
             <name>Java</name>
             <token>java</token>
             <uses>4</uses>
             <said>4 项使用 Java</said>
+          </skill>
+          <skill>
+            <name>NumPy</name>
+            <token>numpy</token>
+            <uses>4</uses>
+            <said>4 项使用 NumPy</said>
           </skill>
           <skill>
             <name>OpenAI</name>
@@ -247,21 +259,15 @@
             <uses>4</uses>
             <said>4 项使用 RAG</said>
           </skill>
-          <skill>
-            <name>TDD</name>
-            <token>tdd</token>
-            <uses>4</uses>
-            <said>4 项使用 TDD</said>
-          </skill>
+        </shortlist>
+        <more>全部技能 (274)</more>
+        <rest>
           <skill>
             <name>TypeScript</name>
             <token>typescript</token>
             <uses>4</uses>
             <said>4 项使用 TypeScript</said>
           </skill>
-        </shortlist>
-        <more>全部技能 (260)</more>
-        <rest>
           <skill>
             <name>C#</name>
             <token>c</token>
@@ -299,10 +305,16 @@
             <said>3 项使用 JavaScript</said>
           </skill>
           <skill>
-            <name>NumPy</name>
-            <token>numpy</token>
+            <name>LaTeX</name>
+            <token>latex</token>
             <uses>3</uses>
-            <said>3 项使用 NumPy</said>
+            <said>3 项使用 LaTeX</said>
+          </skill>
+          <skill>
+            <name>MutationTesting</name>
+            <token>mutationtesting</token>
+            <uses>3</uses>
+            <said>3 项使用 MutationTesting</said>
           </skill>
           <skill>
             <name>SQL</name>
@@ -437,22 +449,22 @@
             <said>2 项使用 Indexing</said>
           </skill>
           <skill>
+            <name>InformationRetrieval</name>
+            <token>informationretrieval</token>
+            <uses>2</uses>
+            <said>2 项使用 InformationRetrieval</said>
+          </skill>
+          <skill>
             <name>JSON</name>
             <token>json</token>
             <uses>2</uses>
             <said>2 项使用 JSON</said>
           </skill>
           <skill>
-            <name>LaTeX</name>
-            <token>latex</token>
+            <name>MultiObjectiveOptimization</name>
+            <token>multiobjectiveoptimization</token>
             <uses>2</uses>
-            <said>2 项使用 LaTeX</said>
-          </skill>
-          <skill>
-            <name>MutationTesting</name>
-            <token>mutationtesting</token>
-            <uses>2</uses>
-            <said>2 项使用 MutationTesting</said>
+            <said>2 项使用 MultiObjectiveOptimization</said>
           </skill>
           <skill>
             <name>NetworkSecurity</name>
@@ -485,10 +497,22 @@
             <said>2 项使用 OpenTelemetry</said>
           </skill>
           <skill>
+            <name>Pareto</name>
+            <token>pareto</token>
+            <uses>2</uses>
+            <said>2 项使用 Pareto</said>
+          </skill>
+          <skill>
             <name>RelationalAlgebra</name>
             <token>relationalalgebra</token>
             <uses>2</uses>
             <said>2 项使用 RelationalAlgebra</said>
+          </skill>
+          <skill>
+            <name>SciPy</name>
+            <token>scipy</token>
+            <uses>2</uses>
+            <said>2 项使用 SciPy</said>
           </skill>
           <skill>
             <name>SentenceTransformers</name>
@@ -561,6 +585,12 @@
             <token>valhalla</token>
             <uses>2</uses>
             <said>2 项使用 Valhalla</said>
+          </skill>
+          <skill>
+            <name>WebAssembly</name>
+            <token>webassembly</token>
+            <uses>2</uses>
+            <said>2 项使用 WebAssembly</said>
           </skill>
           <skill>
             <name>Whisper</name>
@@ -659,6 +689,12 @@
             <said>1 项使用 Binary</said>
           </skill>
           <skill>
+            <name>BM25F</name>
+            <token>bm25f</token>
+            <uses>1</uses>
+            <said>1 项使用 BM25F</said>
+          </skill>
+          <skill>
             <name>BrierScore</name>
             <token>brierscore</token>
             <uses>1</uses>
@@ -669,6 +705,12 @@
             <token>btrees</token>
             <uses>1</uses>
             <said>1 项使用 BTrees</said>
+          </skill>
+          <skill>
+            <name>build123d</name>
+            <token>build123d</token>
+            <uses>1</uses>
+            <said>1 项使用 build123d</said>
           </skill>
           <skill>
             <name>Caching</name>
@@ -699,6 +741,12 @@
             <token>clientsidescripting</token>
             <uses>1</uses>
             <said>1 项使用 ClientSideScripting</said>
+          </skill>
+          <skill>
+            <name>CloudflareWorkers</name>
+            <token>cloudflareworkers</token>
+            <uses>1</uses>
+            <said>1 项使用 CloudflareWorkers</said>
           </skill>
           <skill>
             <name>CombinatorialOptimization</name>
@@ -833,6 +881,12 @@
             <said>1 项使用 DuckDB</said>
           </skill>
           <skill>
+            <name>DurableObjects</name>
+            <token>durableobjects</token>
+            <uses>1</uses>
+            <said>1 项使用 DurableObjects</said>
+          </skill>
+          <skill>
             <name>Durkheim</name>
             <token>durkheim</token>
             <uses>1</uses>
@@ -947,6 +1001,12 @@
             <said>1 项使用 GDPR</said>
           </skill>
           <skill>
+            <name>Gmsh</name>
+            <token>gmsh</token>
+            <uses>1</uses>
+            <said>1 项使用 Gmsh</said>
+          </skill>
+          <skill>
             <name>gRPC</name>
             <token>grpc</token>
             <uses>1</uses>
@@ -995,12 +1055,6 @@
             <said>1 项使用 ImperfectCompetition</said>
           </skill>
           <skill>
-            <name>InformationRetrieval</name>
-            <token>informationretrieval</token>
-            <uses>1</uses>
-            <said>1 项使用 InformationRetrieval</said>
-          </skill>
-          <skill>
             <name>Inheritance</name>
             <token>inheritance</token>
             <uses>1</uses>
@@ -1035,6 +1089,12 @@
             <token>js</token>
             <uses>1</uses>
             <said>1 项使用 JS</said>
+          </skill>
+          <skill>
+            <name>Lean4</name>
+            <token>lean4</token>
+            <uses>1</uses>
+            <said>1 项使用 Lean4</said>
           </skill>
           <skill>
             <name>LearningToRank</name>
@@ -1097,6 +1157,12 @@
             <said>1 项使用 Management</said>
           </skill>
           <skill>
+            <name>Manifold</name>
+            <token>manifold</token>
+            <uses>1</uses>
+            <said>1 项使用 Manifold</said>
+          </skill>
+          <skill>
             <name>MapLibre</name>
             <token>maplibre</token>
             <uses>1</uses>
@@ -1119,6 +1185,12 @@
             <token>mathematicallogic</token>
             <uses>1</uses>
             <said>1 项使用 MathematicalLogic</said>
+          </skill>
+          <skill>
+            <name>Mathlib</name>
+            <token>mathlib</token>
+            <uses>1</uses>
+            <said>1 项使用 Mathlib</said>
           </skill>
           <skill>
             <name>MediaEconomics</name>
@@ -1193,12 +1265,6 @@
             <said>1 项使用 MonetaryMarket</said>
           </skill>
           <skill>
-            <name>MultiObjectiveOptimization</name>
-            <token>multiobjectiveoptimization</token>
-            <uses>1</uses>
-            <said>1 项使用 MultiObjectiveOptimization</said>
-          </skill>
-          <skill>
             <name>NationalIncome</name>
             <token>nationalincome</token>
             <uses>1</uses>
@@ -1235,6 +1301,12 @@
             <said>1 项使用 NoSQL</said>
           </skill>
           <skill>
+            <name>NSGA2</name>
+            <token>nsga2</token>
+            <uses>1</uses>
+            <said>1 项使用 NSGA2</said>
+          </skill>
+          <skill>
             <name>OfflineFirst</name>
             <token>offlinefirst</token>
             <uses>1</uses>
@@ -1251,6 +1323,12 @@
             <token>openbao</token>
             <uses>1</uses>
             <said>1 项使用 OpenBao</said>
+          </skill>
+          <skill>
+            <name>OpenCASCADE</name>
+            <token>opencascade</token>
+            <uses>1</uses>
+            <said>1 项使用 OpenCASCADE</said>
           </skill>
           <skill>
             <name>OpenStreetMap</name>
@@ -1271,6 +1349,12 @@
             <said>1 项使用 OperationsResearch</said>
           </skill>
           <skill>
+            <name>Optuna</name>
+            <token>optuna</token>
+            <uses>1</uses>
+            <said>1 项使用 Optuna</said>
+          </skill>
+          <skill>
             <name>ORTools</name>
             <token>ortools</token>
             <uses>1</uses>
@@ -1287,12 +1371,6 @@
             <token>overloading</token>
             <uses>1</uses>
             <said>1 项使用 Overloading</said>
-          </skill>
-          <skill>
-            <name>Pareto</name>
-            <token>pareto</token>
-            <uses>1</uses>
-            <said>1 项使用 Pareto</said>
           </skill>
           <skill>
             <name>PayPal</name>
@@ -1445,12 +1523,6 @@
             <said>1 项使用 ScientificWriting</said>
           </skill>
           <skill>
-            <name>SciPy</name>
-            <token>scipy</token>
-            <uses>1</uses>
-            <said>1 项使用 SciPy</said>
-          </skill>
-          <skill>
             <name>Scrum</name>
             <token>scrum</token>
             <uses>1</uses>
@@ -1565,6 +1637,12 @@
             <said>1 项使用 SymbolicAI</said>
           </skill>
           <skill>
+            <name>SymPy</name>
+            <token>sympy</token>
+            <uses>1</uses>
+            <said>1 项使用 SymPy</said>
+          </skill>
+          <skill>
             <name>Synchronization</name>
             <token>synchronization</token>
             <uses>1</uses>
@@ -1587,6 +1665,18 @@
             <token>testcontainers</token>
             <uses>1</uses>
             <said>1 项使用 Testcontainers</said>
+          </skill>
+          <skill>
+            <name>ThreeJS</name>
+            <token>threejs</token>
+            <uses>1</uses>
+            <said>1 项使用 ThreeJS</said>
+          </skill>
+          <skill>
+            <name>TOML</name>
+            <token>toml</token>
+            <uses>1</uses>
+            <said>1 项使用 TOML</said>
           </skill>
           <skill>
             <name>Tonic</name>
@@ -1653,12 +1743,6 @@
             <token>walkforwardbacktest</token>
             <uses>1</uses>
             <said>1 项使用 WalkForwardBacktest</said>
-          </skill>
-          <skill>
-            <name>WebAssembly</name>
-            <token>webassembly</token>
-            <uses>1</uses>
-            <said>1 项使用 WebAssembly</said>
           </skill>
           <skill>
             <name>WebEconomy</name>
@@ -1790,8 +1874,8 @@
         <lane>
           <kind>work</kind>
           <label>工作经验</label>
-          <rows>10</rows>
-          <printRows>10</printRows>
+          <rows>12</rows>
+          <printRows>12</printRows>
           <groups>
             <group>
               <left>70.87%</left>
@@ -1853,16 +1937,16 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
-              <rows>7</rows>
+              <rows>9</rows>
               <printRow>0</printRow>
-              <printRows>7</printRows>
+              <printRows>9</printRows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>7</row>
+              <row>9</row>
               <rows>3</rows>
-              <printRow>7</printRow>
+              <printRow>9</printRow>
               <printRows>3</printRows>
             </group>
           </groups>
@@ -2260,6 +2344,57 @@
               <printRow>6</printRow>
             </bar>
             <bar>
+              <target>work-acteble-创始人</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Polytech</name>
+              <caption>Polytech · 库</caption>
+              <uses>python sympy numpy scipy latex lean4 mathlib ddd hexagonalarchitecture tdd mutationtesting</uses>
+              <period>9月 2026 – 至今</period>
+              <detail>库 · 作者</detail>
+              <summary>工程学习库：LaTeX 题解中的每个数字和表达式都由计算生成，无一手工输入。</summary>
+              <skills>Python · SymPy · NumPy · SciPy · LaTeX</skills>
+              <label>Polytech — 库 · 作者 — 9月 2026 – 至今</label>
+              <left>99.39%</left>
+              <width>0.61%</width>
+              <row>2</row>
+              <printRow>2</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-创始人</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Indexer</name>
+              <caption>Indexer · API</caption>
+              <uses>rust cloudflareworkers webassembly durableobjects toml bm25f informationretrieval tdd</uses>
+              <period>10月 2026 – 至今</period>
+              <detail>API · 作者</detail>
+              <summary>精选的外部数据源、书籍和软件包索引，通过公开的只读 API 提供。</summary>
+              <skills>Rust · CloudflareWorkers · WebAssembly · DurableObjects · TOML</skills>
+              <label>Indexer — API · 作者 — 10月 2026 – 至今</label>
+              <left>99.59%</left>
+              <width>0.41%</width>
+              <row>7</row>
+              <printRow>7</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-创始人</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Converge</name>
+              <caption>Converge · 平台</caption>
+              <uses>rust python opencascade manifold build123d gmsh optuna nsga2 multiobjectiveoptimization pareto threejs hexagonalarchitecture tdd</uses>
+              <period>10月 2026 – 至今</period>
+              <detail>平台 · 作者</detail>
+              <summary>AI 辅助的三维机械设计平台，编排开源的几何、网格划分与仿真引擎。</summary>
+              <skills>Rust · Python · OpenCASCADE · Manifold · build123d</skills>
+              <label>Converge — 平台 · 作者 — 10月 2026 – 至今</label>
+              <left>99.81%</left>
+              <width>0.19%</width>
+              <row>8</row>
+              <printRow>8</printRow>
+            </bar>
+            <bar>
               <target>work-比利时参议院-ai-研究员</target>
               <kind>work</kind>
               <depth>0</depth>
@@ -2271,8 +2406,8 @@
               <label>比利时参议院 — AI 研究员 — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>7</row>
-              <printRow>7</printRow>
+              <row>9</row>
+              <printRow>9</printRow>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -2288,8 +2423,8 @@
               <label>Synergy — 平台 · 作者 — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>8</row>
-              <printRow>8</printRow>
+              <row>10</row>
+              <printRow>10</printRow>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -2305,8 +2440,8 @@
               <label>fedrag-be — 研究 · 作者 — 11月 2025 – 6月 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>9</row>
-              <printRow>9</printRow>
+              <row>11</row>
+              <printRow>11</printRow>
             </bar>
           </bars>
         </lane>
@@ -3607,6 +3742,9 @@
         <project>LL</project>
         <project>Baba</project>
         <project>KAG</project>
+        <project>Indexer</project>
+        <project>Polytech</project>
+        <project>Converge</project>
       </projects>
       <anchor>work-acteble-创始人</anchor>
     </job>
@@ -4179,6 +4317,74 @@ TFE: WebMenu 2.0
         <role>作者</role>
       </roles>
       <summary>一个 Rust 工作区，其纯领域核心（六边形架构、DDD、测试先行）驱动终端界面（ratatui）以及 Dioxus 桌面和 iOS 应用：基于 SQLite 的 Leitner 盒子与 SM-2 调度，内容来自带校验和的数据包。其数据实验室用 Python 构建六语种词汇数据库——约 8,900 个词义（2026 年 10 月），与 WordNet 对齐，配有 Tatoeba 例句，经 spaCy 分析，每个词与句子的关联都经过校验。</summary>
+    </project>
+    <project>
+      <name>Indexer</name>
+      <description>精选的外部数据源、书籍和软件包索引，通过公开的只读 API 提供。</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>CloudflareWorkers</keyword>
+        <keyword>WebAssembly</keyword>
+        <keyword>DurableObjects</keyword>
+        <keyword>TOML</keyword>
+        <keyword>BM25F</keyword>
+        <keyword>InformationRetrieval</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-10-06</startDate>
+      <type>API</type>
+      <roles>
+        <role>作者</role>
+      </roles>
+      <summary>523 个数据源各为一个 TOML 文件，由 Rust 校验并编译为静态 JSON，在构建时嵌入 Cloudflare Worker：纯 Rust 的 API 逻辑、ETag 与 304 响应、由 Durable Object 精确计数的按 IP 和 API 密钥限流、按六项可靠性指标加权的 BM25F 排序，以及将需求与候选数据源匹配的缺口分析。</summary>
+    </project>
+    <project>
+      <name>Polytech</name>
+      <description>工程学习库：LaTeX 题解中的每个数字和表达式都由计算生成，无一手工输入。</description>
+      <keywords>
+        <keyword>Python</keyword>
+        <keyword>SymPy</keyword>
+        <keyword>NumPy</keyword>
+        <keyword>SciPy</keyword>
+        <keyword>LaTeX</keyword>
+        <keyword>Lean4</keyword>
+        <keyword>Mathlib</keyword>
+        <keyword>DDD</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>TDD</keyword>
+        <keyword>MutationTesting</keyword>
+      </keywords>
+      <startDate>2026-09-23</startDate>
+      <type>库</type>
+      <roles>
+        <role>作者</role>
+      </roles>
+      <summary>一个 Python 库（DDD、六边形架构、测试先行、变异测试、mypy strict），涵盖数学、物理、电子、信号与优化的概念，用 SymPy、NumPy 和 SciPy 计算，并通过宏注入 920 份 LaTeX 文档；一条流水线将课程资料转换为 Markdown、LaTeX 和 XML，基于 Mathlib 的 Lean 4 证明把结论追溯到公理。</summary>
+    </project>
+    <project>
+      <name>Converge</name>
+      <description>AI 辅助的三维机械设计平台，编排开源的几何、网格划分与仿真引擎。</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Python</keyword>
+        <keyword>OpenCASCADE</keyword>
+        <keyword>Manifold</keyword>
+        <keyword>build123d</keyword>
+        <keyword>Gmsh</keyword>
+        <keyword>Optuna</keyword>
+        <keyword>NSGA2</keyword>
+        <keyword>MultiObjectiveOptimization</keyword>
+        <keyword>Pareto</keyword>
+        <keyword>ThreeJS</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-10-20</startDate>
+      <type>平台</type>
+      <roles>
+        <role>作者</role>
+      </roles>
+      <summary>AI 编写操作，引擎负责计算：LLM 生成经严格校验的 JSON 零件程序；两个独立内核 OpenCASCADE（精确）与 Manifold（网格）必须在体积和包围盒上一致，装配体在导出 STEP、STL、3MF 或 glTF 之前要通过重叠检查。Rust 核心（六边形端口与适配器）通过 JSON 行驱动 Python 工作进程，NSGA-II 搜索（Optuna）在帕累托前沿上选择元器件，并以精确枚举交叉验证。</summary>
     </project>
     <project>
       <name>Actrack</name>

@@ -154,6 +154,30 @@
       ]
     },
     {
+      "description": "Index curé de sources de données externes, de livres et de paquets logiciels, servi par une API publique en lecture.",
+      "summary": "Chacune des 523 sources est un fichier TOML que Rust valide et compile en JSON statique, embarqué à la compilation dans un Cloudflare Worker : logique d'API en Rust pur, réponses ETag et 304, limites de débit par IP et par clé d'API comptées exactement par un Durable Object, classement BM25F pondéré par un score de fiabilité à six critères, et une analyse des manques qui associe chaque besoin aux sources candidates.",
+      "type": "API",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Bibliothèque d'études d'ingénieur qui calcule chaque nombre et chaque expression de solutions rédigées en LaTeX, aucun saisi à la main.",
+      "summary": "Une bibliothèque Python (DDD, hexagonale, test-first, testée par mutation, mypy strict) des notions de mathématiques, de physique, d'électronique, de signaux et d'optimisation, calculées avec SymPy, NumPy et SciPy et injectées par macros dans 920 documents LaTeX ; un pipeline convertit les supports de cours en Markdown, LaTeX et XML, et des preuves Lean 4 avec Mathlib remontent les résultats jusqu'aux axiomes.",
+      "type": "Bibliothèque",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Plateforme de conception mécanique 3D assistée par IA qui orchestre des moteurs open source de géométrie, de maillage et de simulation.",
+      "summary": "L'IA écrit les opérations, les moteurs calculent : un LLM produit un programme de pièce en JSON strictement validé ; deux noyaux indépendants, OpenCASCADE (exact) et Manifold (maillage), doivent s'accorder sur le volume et la boîte englobante, et l'assemblage est contrôlé contre les chevauchements avant tout export STEP, STL, 3MF ou glTF. Un cœur Rust (ports et adaptateurs hexagonaux) pilote un worker Python en lignes JSON, et une recherche NSGA-II (Optuna) choisit les composants sur un front de Pareto, recoupé par énumération exacte.",
+      "type": "Plateforme",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
       "description": "Prévisions de la Coupe du monde de la FIFA 2026 par un ensemble de stratégies de notation du football.",
       "summary": "Un moteur Python (DDD, hexagonal) pondère quinze stratégies de pronostic — Elo, Poisson attaque/défense, forme, confrontations directes, valeur de l'effectif, jours de repos, cotes des bookmakers — ajustées au lieu du match, et il est porté dans des apps Rust/Dioxus pour le web (WebAssembly), le desktop, le mobile et le terminal, tenues à parité avec lui. Un laboratoire de recherche évalue les stratégies en walk-forward, un tournoi mis de côté à la fois, sur 635 matchs de dix tournois (Coupes du monde 2002–2022 et quatre coupes continentales de 2023–2024), et ajuste les poids de l'ensemble ; hors échantillon, Elo seul fait le mieux (55,6 % de bons pronostics).",
       "type": "Moteur de prévision",

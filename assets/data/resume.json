@@ -344,6 +344,71 @@
       ]
     },
     {
+      "name": "Indexer",
+      "description": "Curated index of external data sources, books and software packages, served as a public read API.",
+      "keywords": [
+        "Rust",
+        "CloudflareWorkers",
+        "WebAssembly",
+        "DurableObjects",
+        "TOML",
+        "BM25F",
+        "InformationRetrieval",
+        "TDD"
+      ],
+      "startDate": "2026-10-06",
+      "type": "API",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Polytech",
+      "description": "Engineering-studies library that computes every number and expression of LaTeX worked solutions, none typed by hand.",
+      "keywords": [
+        "Python",
+        "SymPy",
+        "NumPy",
+        "SciPy",
+        "LaTeX",
+        "Lean4",
+        "Mathlib",
+        "DDD",
+        "HexagonalArchitecture",
+        "TDD",
+        "MutationTesting"
+      ],
+      "startDate": "2026-09-23",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Converge",
+      "description": "AI-assisted 3D mechanical design platform that orchestrates open-source geometry, meshing and simulation engines.",
+      "keywords": [
+        "Rust",
+        "Python",
+        "OpenCASCADE",
+        "Manifold",
+        "build123d",
+        "Gmsh",
+        "Optuna",
+        "NSGA2",
+        "MultiObjectiveOptimization",
+        "Pareto",
+        "ThreeJS",
+        "HexagonalArchitecture",
+        "TDD"
+      ],
+      "startDate": "2026-10-20",
+      "type": "Platform",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
       "name": "Actrack",
       "description": "Forecasts of the FIFA World Cup 2026 from an ensemble of football-rating strategies.",
       "keywords": [

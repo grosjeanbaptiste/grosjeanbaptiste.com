@@ -30,6 +30,9 @@ def test_the_acteble_experience_holds_the_platform_the_dissertation_and_the_side
         "LL",
         "Baba",
         "KAG",
+        "Indexer",
+        "Polytech",
+        "Converge",
     ]
 
 

@@ -152,22 +152,28 @@
         <clear>Clear filter</clear>
         <shortlist>
           <skill>
+            <name>Python</name>
+            <token>python</token>
+            <uses>14</uses>
+            <said>14 entries use Python</said>
+          </skill>
+          <skill>
             <name>.NET</name>
             <token>net</token>
             <uses>12</uses>
             <said>12 entries use .NET</said>
           </skill>
           <skill>
-            <name>Python</name>
-            <token>python</token>
-            <uses>12</uses>
-            <said>12 entries use Python</said>
-          </skill>
-          <skill>
             <name>DDD</name>
             <token>ddd</token>
-            <uses>10</uses>
-            <said>10 entries use DDD</said>
+            <uses>11</uses>
+            <said>11 entries use DDD</said>
+          </skill>
+          <skill>
+            <name>Rust</name>
+            <token>rust</token>
+            <uses>9</uses>
+            <said>9 entries use Rust</said>
           </skill>
           <skill>
             <name>SQL Server</name>
@@ -176,16 +182,22 @@
             <said>8 entries use SQL Server</said>
           </skill>
           <skill>
-            <name>Rust</name>
-            <token>rust</token>
+            <name>TDD</name>
+            <token>tdd</token>
             <uses>7</uses>
-            <said>7 entries use Rust</said>
+            <said>7 entries use TDD</said>
           </skill>
           <skill>
             <name>Flutter</name>
             <token>flutter</token>
             <uses>6</uses>
             <said>6 entries use Flutter</said>
+          </skill>
+          <skill>
+            <name>HexagonalArchitecture</name>
+            <token>hexagonalarchitecture</token>
+            <uses>6</uses>
+            <said>6 entries use HexagonalArchitecture</said>
           </skill>
           <skill>
             <name>Pandas</name>
@@ -218,16 +230,16 @@
             <said>4 entries use EntityFramework</said>
           </skill>
           <skill>
-            <name>HexagonalArchitecture</name>
-            <token>hexagonalarchitecture</token>
-            <uses>4</uses>
-            <said>4 entries use HexagonalArchitecture</said>
-          </skill>
-          <skill>
             <name>Java</name>
             <token>java</token>
             <uses>4</uses>
             <said>4 entries use Java</said>
+          </skill>
+          <skill>
+            <name>NumPy</name>
+            <token>numpy</token>
+            <uses>4</uses>
+            <said>4 entries use NumPy</said>
           </skill>
           <skill>
             <name>OpenAI</name>
@@ -247,21 +259,15 @@
             <uses>4</uses>
             <said>4 entries use RAG</said>
           </skill>
-          <skill>
-            <name>TDD</name>
-            <token>tdd</token>
-            <uses>4</uses>
-            <said>4 entries use TDD</said>
-          </skill>
+        </shortlist>
+        <more>All skills (274)</more>
+        <rest>
           <skill>
             <name>TypeScript</name>
             <token>typescript</token>
             <uses>4</uses>
             <said>4 entries use TypeScript</said>
           </skill>
-        </shortlist>
-        <more>All skills (260)</more>
-        <rest>
           <skill>
             <name>C#</name>
             <token>c</token>
@@ -299,10 +305,16 @@
             <said>3 entries use JavaScript</said>
           </skill>
           <skill>
-            <name>NumPy</name>
-            <token>numpy</token>
+            <name>LaTeX</name>
+            <token>latex</token>
             <uses>3</uses>
-            <said>3 entries use NumPy</said>
+            <said>3 entries use LaTeX</said>
+          </skill>
+          <skill>
+            <name>MutationTesting</name>
+            <token>mutationtesting</token>
+            <uses>3</uses>
+            <said>3 entries use MutationTesting</said>
           </skill>
           <skill>
             <name>SQL</name>
@@ -437,22 +449,22 @@
             <said>2 entries use Indexing</said>
           </skill>
           <skill>
+            <name>InformationRetrieval</name>
+            <token>informationretrieval</token>
+            <uses>2</uses>
+            <said>2 entries use InformationRetrieval</said>
+          </skill>
+          <skill>
             <name>JSON</name>
             <token>json</token>
             <uses>2</uses>
             <said>2 entries use JSON</said>
           </skill>
           <skill>
-            <name>LaTeX</name>
-            <token>latex</token>
+            <name>MultiObjectiveOptimization</name>
+            <token>multiobjectiveoptimization</token>
             <uses>2</uses>
-            <said>2 entries use LaTeX</said>
-          </skill>
-          <skill>
-            <name>MutationTesting</name>
-            <token>mutationtesting</token>
-            <uses>2</uses>
-            <said>2 entries use MutationTesting</said>
+            <said>2 entries use MultiObjectiveOptimization</said>
           </skill>
           <skill>
             <name>NetworkSecurity</name>
@@ -485,10 +497,22 @@
             <said>2 entries use OpenTelemetry</said>
           </skill>
           <skill>
+            <name>Pareto</name>
+            <token>pareto</token>
+            <uses>2</uses>
+            <said>2 entries use Pareto</said>
+          </skill>
+          <skill>
             <name>RelationalAlgebra</name>
             <token>relationalalgebra</token>
             <uses>2</uses>
             <said>2 entries use RelationalAlgebra</said>
+          </skill>
+          <skill>
+            <name>SciPy</name>
+            <token>scipy</token>
+            <uses>2</uses>
+            <said>2 entries use SciPy</said>
           </skill>
           <skill>
             <name>SentenceTransformers</name>
@@ -561,6 +585,12 @@
             <token>valhalla</token>
             <uses>2</uses>
             <said>2 entries use Valhalla</said>
+          </skill>
+          <skill>
+            <name>WebAssembly</name>
+            <token>webassembly</token>
+            <uses>2</uses>
+            <said>2 entries use WebAssembly</said>
           </skill>
           <skill>
             <name>Whisper</name>
@@ -659,6 +689,12 @@
             <said>1 entry uses Binary</said>
           </skill>
           <skill>
+            <name>BM25F</name>
+            <token>bm25f</token>
+            <uses>1</uses>
+            <said>1 entry uses BM25F</said>
+          </skill>
+          <skill>
             <name>BrierScore</name>
             <token>brierscore</token>
             <uses>1</uses>
@@ -669,6 +705,12 @@
             <token>btrees</token>
             <uses>1</uses>
             <said>1 entry uses BTrees</said>
+          </skill>
+          <skill>
+            <name>build123d</name>
+            <token>build123d</token>
+            <uses>1</uses>
+            <said>1 entry uses build123d</said>
           </skill>
           <skill>
             <name>Caching</name>
@@ -699,6 +741,12 @@
             <token>clientsidescripting</token>
             <uses>1</uses>
             <said>1 entry uses ClientSideScripting</said>
+          </skill>
+          <skill>
+            <name>CloudflareWorkers</name>
+            <token>cloudflareworkers</token>
+            <uses>1</uses>
+            <said>1 entry uses CloudflareWorkers</said>
           </skill>
           <skill>
             <name>CombinatorialOptimization</name>
@@ -833,6 +881,12 @@
             <said>1 entry uses DuckDB</said>
           </skill>
           <skill>
+            <name>DurableObjects</name>
+            <token>durableobjects</token>
+            <uses>1</uses>
+            <said>1 entry uses DurableObjects</said>
+          </skill>
+          <skill>
             <name>Durkheim</name>
             <token>durkheim</token>
             <uses>1</uses>
@@ -947,6 +1001,12 @@
             <said>1 entry uses GDPR</said>
           </skill>
           <skill>
+            <name>Gmsh</name>
+            <token>gmsh</token>
+            <uses>1</uses>
+            <said>1 entry uses Gmsh</said>
+          </skill>
+          <skill>
             <name>gRPC</name>
             <token>grpc</token>
             <uses>1</uses>
@@ -995,12 +1055,6 @@
             <said>1 entry uses ImperfectCompetition</said>
           </skill>
           <skill>
-            <name>InformationRetrieval</name>
-            <token>informationretrieval</token>
-            <uses>1</uses>
-            <said>1 entry uses InformationRetrieval</said>
-          </skill>
-          <skill>
             <name>Inheritance</name>
             <token>inheritance</token>
             <uses>1</uses>
@@ -1035,6 +1089,12 @@
             <token>js</token>
             <uses>1</uses>
             <said>1 entry uses JS</said>
+          </skill>
+          <skill>
+            <name>Lean4</name>
+            <token>lean4</token>
+            <uses>1</uses>
+            <said>1 entry uses Lean4</said>
           </skill>
           <skill>
             <name>LearningToRank</name>
@@ -1097,6 +1157,12 @@
             <said>1 entry uses Management</said>
           </skill>
           <skill>
+            <name>Manifold</name>
+            <token>manifold</token>
+            <uses>1</uses>
+            <said>1 entry uses Manifold</said>
+          </skill>
+          <skill>
             <name>MapLibre</name>
             <token>maplibre</token>
             <uses>1</uses>
@@ -1119,6 +1185,12 @@
             <token>mathematicallogic</token>
             <uses>1</uses>
             <said>1 entry uses MathematicalLogic</said>
+          </skill>
+          <skill>
+            <name>Mathlib</name>
+            <token>mathlib</token>
+            <uses>1</uses>
+            <said>1 entry uses Mathlib</said>
           </skill>
           <skill>
             <name>MediaEconomics</name>
@@ -1193,12 +1265,6 @@
             <said>1 entry uses MonetaryMarket</said>
           </skill>
           <skill>
-            <name>MultiObjectiveOptimization</name>
-            <token>multiobjectiveoptimization</token>
-            <uses>1</uses>
-            <said>1 entry uses MultiObjectiveOptimization</said>
-          </skill>
-          <skill>
             <name>NationalIncome</name>
             <token>nationalincome</token>
             <uses>1</uses>
@@ -1235,6 +1301,12 @@
             <said>1 entry uses NoSQL</said>
           </skill>
           <skill>
+            <name>NSGA2</name>
+            <token>nsga2</token>
+            <uses>1</uses>
+            <said>1 entry uses NSGA2</said>
+          </skill>
+          <skill>
             <name>OfflineFirst</name>
             <token>offlinefirst</token>
             <uses>1</uses>
@@ -1251,6 +1323,12 @@
             <token>openbao</token>
             <uses>1</uses>
             <said>1 entry uses OpenBao</said>
+          </skill>
+          <skill>
+            <name>OpenCASCADE</name>
+            <token>opencascade</token>
+            <uses>1</uses>
+            <said>1 entry uses OpenCASCADE</said>
           </skill>
           <skill>
             <name>OpenStreetMap</name>
@@ -1271,6 +1349,12 @@
             <said>1 entry uses OperationsResearch</said>
           </skill>
           <skill>
+            <name>Optuna</name>
+            <token>optuna</token>
+            <uses>1</uses>
+            <said>1 entry uses Optuna</said>
+          </skill>
+          <skill>
             <name>ORTools</name>
             <token>ortools</token>
             <uses>1</uses>
@@ -1287,12 +1371,6 @@
             <token>overloading</token>
             <uses>1</uses>
             <said>1 entry uses Overloading</said>
-          </skill>
-          <skill>
-            <name>Pareto</name>
-            <token>pareto</token>
-            <uses>1</uses>
-            <said>1 entry uses Pareto</said>
           </skill>
           <skill>
             <name>PayPal</name>
@@ -1445,12 +1523,6 @@
             <said>1 entry uses ScientificWriting</said>
           </skill>
           <skill>
-            <name>SciPy</name>
-            <token>scipy</token>
-            <uses>1</uses>
-            <said>1 entry uses SciPy</said>
-          </skill>
-          <skill>
             <name>Scrum</name>
             <token>scrum</token>
             <uses>1</uses>
@@ -1565,6 +1637,12 @@
             <said>1 entry uses SymbolicAI</said>
           </skill>
           <skill>
+            <name>SymPy</name>
+            <token>sympy</token>
+            <uses>1</uses>
+            <said>1 entry uses SymPy</said>
+          </skill>
+          <skill>
             <name>Synchronization</name>
             <token>synchronization</token>
             <uses>1</uses>
@@ -1587,6 +1665,18 @@
             <token>testcontainers</token>
             <uses>1</uses>
             <said>1 entry uses Testcontainers</said>
+          </skill>
+          <skill>
+            <name>ThreeJS</name>
+            <token>threejs</token>
+            <uses>1</uses>
+            <said>1 entry uses ThreeJS</said>
+          </skill>
+          <skill>
+            <name>TOML</name>
+            <token>toml</token>
+            <uses>1</uses>
+            <said>1 entry uses TOML</said>
           </skill>
           <skill>
             <name>Tonic</name>
@@ -1653,12 +1743,6 @@
             <token>walkforwardbacktest</token>
             <uses>1</uses>
             <said>1 entry uses WalkForwardBacktest</said>
-          </skill>
-          <skill>
-            <name>WebAssembly</name>
-            <token>webassembly</token>
-            <uses>1</uses>
-            <said>1 entry uses WebAssembly</said>
           </skill>
           <skill>
             <name>WebEconomy</name>
@@ -1790,8 +1874,8 @@
         <lane>
           <kind>work</kind>
           <label>Work Experience</label>
-          <rows>10</rows>
-          <printRows>10</printRows>
+          <rows>12</rows>
+          <printRows>12</printRows>
           <groups>
             <group>
               <left>70.87%</left>
@@ -1853,16 +1937,16 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
-              <rows>7</rows>
+              <rows>9</rows>
               <printRow>0</printRow>
-              <printRows>7</printRows>
+              <printRows>9</printRows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>7</row>
+              <row>9</row>
               <rows>3</rows>
-              <printRow>7</printRow>
+              <printRow>9</printRow>
               <printRows>3</printRows>
             </group>
           </groups>
@@ -2260,6 +2344,57 @@
               <printRow>6</printRow>
             </bar>
             <bar>
+              <target>work-acteble-founder</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Polytech</name>
+              <caption>Polytech · Library</caption>
+              <uses>python sympy numpy scipy latex lean4 mathlib ddd hexagonalarchitecture tdd mutationtesting</uses>
+              <period>Sep 2026 – Present</period>
+              <detail>Library · Author</detail>
+              <summary>Engineering-studies library that computes every number and expression of LaTeX worked solutions, none typed by hand.</summary>
+              <skills>Python · SymPy · NumPy · SciPy · LaTeX</skills>
+              <label>Polytech — Library · Author — Sep 2026 – Present</label>
+              <left>99.39%</left>
+              <width>0.61%</width>
+              <row>2</row>
+              <printRow>2</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-founder</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Indexer</name>
+              <caption>Indexer · API</caption>
+              <uses>rust cloudflareworkers webassembly durableobjects toml bm25f informationretrieval tdd</uses>
+              <period>Oct 2026 – Present</period>
+              <detail>API · Author</detail>
+              <summary>Curated index of external data sources, books and software packages, served as a public read API.</summary>
+              <skills>Rust · CloudflareWorkers · WebAssembly · DurableObjects · TOML</skills>
+              <label>Indexer — API · Author — Oct 2026 – Present</label>
+              <left>99.59%</left>
+              <width>0.41%</width>
+              <row>7</row>
+              <printRow>7</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-founder</target>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Converge</name>
+              <caption>Converge · Platform</caption>
+              <uses>rust python opencascade manifold build123d gmsh optuna nsga2 multiobjectiveoptimization pareto threejs hexagonalarchitecture tdd</uses>
+              <period>Oct 2026 – Present</period>
+              <detail>Platform · Author</detail>
+              <summary>AI-assisted 3D mechanical design platform that orchestrates open-source geometry, meshing and simulation engines.</summary>
+              <skills>Rust · Python · OpenCASCADE · Manifold · build123d</skills>
+              <label>Converge — Platform · Author — Oct 2026 – Present</label>
+              <left>99.81%</left>
+              <width>0.19%</width>
+              <row>8</row>
+              <printRow>8</printRow>
+            </bar>
+            <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
               <kind>work</kind>
               <depth>0</depth>
@@ -2271,8 +2406,8 @@
               <label>Belgian Senate — AI Research Scientist — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>7</row>
-              <printRow>7</printRow>
+              <row>9</row>
+              <printRow>9</printRow>
             </bar>
             <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
@@ -2288,8 +2423,8 @@
               <label>Synergy — Platform · Author — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>8</row>
-              <printRow>8</printRow>
+              <row>10</row>
+              <printRow>10</printRow>
             </bar>
             <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
@@ -2305,8 +2440,8 @@
               <label>fedrag-be — Research · Author — Nov 2025 – Jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>9</row>
-              <printRow>9</printRow>
+              <row>11</row>
+              <printRow>11</printRow>
             </bar>
           </bars>
         </lane>
@@ -3607,6 +3742,9 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
         <project>LL</project>
         <project>Baba</project>
         <project>KAG</project>
+        <project>Indexer</project>
+        <project>Polytech</project>
+        <project>Converge</project>
       </projects>
       <anchor>work-acteble-founder</anchor>
     </job>
@@ -4179,6 +4317,74 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Author</role>
       </roles>
       <summary>A Rust workspace whose pure domain core (hexagonal, DDD, test-first) drives a terminal UI (ratatui) and Dioxus desktop and iOS apps: Leitner boxes with SM-2 scheduling over SQLite, content from checksummed data packs. Its data lab builds the six-language lexical database in Python — about 8,900 word senses (October 2026) aligned on WordNet, illustrated with Tatoeba sentences, analysed with spaCy, every word-in-sentence link checked.</summary>
+    </project>
+    <project>
+      <name>Indexer</name>
+      <description>Curated index of external data sources, books and software packages, served as a public read API.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>CloudflareWorkers</keyword>
+        <keyword>WebAssembly</keyword>
+        <keyword>DurableObjects</keyword>
+        <keyword>TOML</keyword>
+        <keyword>BM25F</keyword>
+        <keyword>InformationRetrieval</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-10-06</startDate>
+      <type>API</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Each of the 523 sources is a TOML file that Rust validates and compiles into static JSON, embedded at build time in a Cloudflare Worker: pure-Rust API logic, ETag and 304 responses, per-IP and API-key rate limits counted exactly by a Durable Object, BM25F ranking weighted by a six-criterion reliability score, and a gap analysis that matches needs to candidate sources.</summary>
+    </project>
+    <project>
+      <name>Polytech</name>
+      <description>Engineering-studies library that computes every number and expression of LaTeX worked solutions, none typed by hand.</description>
+      <keywords>
+        <keyword>Python</keyword>
+        <keyword>SymPy</keyword>
+        <keyword>NumPy</keyword>
+        <keyword>SciPy</keyword>
+        <keyword>LaTeX</keyword>
+        <keyword>Lean4</keyword>
+        <keyword>Mathlib</keyword>
+        <keyword>DDD</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>TDD</keyword>
+        <keyword>MutationTesting</keyword>
+      </keywords>
+      <startDate>2026-09-23</startDate>
+      <type>Library</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>A Python library (DDD, hexagonal, test-first, mutation-tested, mypy strict) of the notions of maths, physics, electronics, signals and optimisation, computed with SymPy, NumPy and SciPy and injected through macros into 920 LaTeX documents; a pipeline converts course material to Markdown, LaTeX and XML, and Lean 4 proofs with Mathlib trace results back to the axioms.</summary>
+    </project>
+    <project>
+      <name>Converge</name>
+      <description>AI-assisted 3D mechanical design platform that orchestrates open-source geometry, meshing and simulation engines.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Python</keyword>
+        <keyword>OpenCASCADE</keyword>
+        <keyword>Manifold</keyword>
+        <keyword>build123d</keyword>
+        <keyword>Gmsh</keyword>
+        <keyword>Optuna</keyword>
+        <keyword>NSGA2</keyword>
+        <keyword>MultiObjectiveOptimization</keyword>
+        <keyword>Pareto</keyword>
+        <keyword>ThreeJS</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-10-20</startDate>
+      <type>Platform</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>The AI writes operations, the engines compute: an LLM emits a strictly validated JSON part program; two independent kernels, OpenCASCADE (exact) and Manifold (mesh), must agree on volume and bounding box, and the assembly is checked for overlaps before any STEP, STL, 3MF or glTF export. A Rust core (hexagonal ports and adapters) drives a Python worker over JSON lines, and an NSGA-II search (Optuna) picks the components on a Pareto front, cross-checked by exact enumeration.</summary>
     </project>
     <project>
       <name>Actrack</name>

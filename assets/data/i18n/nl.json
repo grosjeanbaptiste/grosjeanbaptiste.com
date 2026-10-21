@@ -154,6 +154,30 @@
       ]
     },
     {
+      "description": "Gecureerde index van externe databronnen, boeken en softwarepakketten, aangeboden via een openbare lees-API.",
+      "summary": "Elk van de 523 bronnen is een TOML-bestand dat Rust valideert en compileert tot statische JSON, bij het bouwen ingebed in een Cloudflare Worker: API-logica in puur Rust, ETag- en 304-antwoorden, snelheidslimieten per IP en per API-sleutel, exact geteld door een Durable Object, BM25F-rangschikking gewogen met een betrouwbaarheidsscore op zes criteria, en een hiaatanalyse die behoeften aan kandidaat-bronnen koppelt.",
+      "type": "API",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Bibliotheek voor ingenieursstudies die elk getal en elke uitdrukking van uitgewerkte LaTeX-oplossingen berekent, niets met de hand ingetypt.",
+      "summary": "Een Python-bibliotheek (DDD, hexagonaal, test-first, met mutatietests, mypy strict) met de begrippen uit wiskunde, natuurkunde, elektronica, signalen en optimalisatie, berekend met SymPy, NumPy en SciPy en via macro's in 920 LaTeX-documenten ingevoegd; een pipeline zet cursusmateriaal om naar Markdown, LaTeX en XML, en Lean 4-bewijzen met Mathlib herleiden resultaten tot de axioma's.",
+      "type": "Bibliotheek",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "AI-ondersteund platform voor mechanisch 3D-ontwerp dat opensource-engines voor geometrie, meshing en simulatie aanstuurt.",
+      "summary": "De AI schrijft bewerkingen, de engines rekenen: een LLM levert een strikt gevalideerd onderdeelprogramma in JSON; twee onafhankelijke kernels, OpenCASCADE (exact) en Manifold (mesh), moeten het eens zijn over volume en omhullende doos, en de assemblage wordt op overlappingen gecontroleerd vóór elke export naar STEP, STL, 3MF of glTF. Een Rust-kern (hexagonale poorten en adapters) stuurt een Python-worker aan via JSON-regels, en een NSGA-II-zoektocht (Optuna) kiest de componenten op een Paretofront, gecontroleerd door exacte enumeratie.",
+      "type": "Platform",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
       "description": "Voorspellingen van het FIFA WK 2026 met een ensemble van voetbalratingstrategieën.",
       "summary": "Een Python-engine (DDD, hexagonaal) weegt vijftien strategieën voor wedstrijduitslagen — Elo, Poisson aanval/verdediging, vorm, onderlinge duels, waarde van de selectie, rustdagen, bookmakerquoteringen — aangepast aan de speellocatie, en is overgezet naar Rust/Dioxus-apps voor web (WebAssembly), desktop, mobiel en terminal, die er gelijk mee blijven. Een onderzoekslab backtest de strategieën walk-forward, telkens met één toernooi apart gehouden, op 635 wedstrijden uit tien toernooien (WK's 2002–2022 en vier continentale toernooien van 2023–2024) en stemt de ensemblegewichten af; buiten de steekproef scoort Elo alleen het best (55,6% juist).",
       "type": "Voorspellingsengine",

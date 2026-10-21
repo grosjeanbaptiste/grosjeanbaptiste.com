@@ -18,7 +18,10 @@
         "Actrack",
         "LL",
         "Baba",
-        "KAG"
+        "KAG",
+        "Indexer",
+        "Polytech",
+        "Converge"
       ]
     },
     {
@@ -335,6 +338,15 @@
     },
     {
       "summary": "A Rust workspace whose pure domain core (hexagonal, DDD, test-first) drives a terminal UI (ratatui) and Dioxus desktop and iOS apps: Leitner boxes with SM-2 scheduling over SQLite, content from checksummed data packs. Its data lab builds the six-language lexical database in Python — about 8,900 word senses (October 2026) aligned on WordNet, illustrated with Tatoeba sentences, analysed with spaCy, every word-in-sentence link checked."
+    },
+    {
+      "summary": "Each of the 523 sources is a TOML file that Rust validates and compiles into static JSON, embedded at build time in a Cloudflare Worker: pure-Rust API logic, ETag and 304 responses, per-IP and API-key rate limits counted exactly by a Durable Object, BM25F ranking weighted by a six-criterion reliability score, and a gap analysis that matches needs to candidate sources."
+    },
+    {
+      "summary": "A Python library (DDD, hexagonal, test-first, mutation-tested, mypy strict) of the notions of maths, physics, electronics, signals and optimisation, computed with SymPy, NumPy and SciPy and injected through macros into 920 LaTeX documents; a pipeline converts course material to Markdown, LaTeX and XML, and Lean 4 proofs with Mathlib trace results back to the axioms."
+    },
+    {
+      "summary": "The AI writes operations, the engines compute: an LLM emits a strictly validated JSON part program; two independent kernels, OpenCASCADE (exact) and Manifold (mesh), must agree on volume and bounding box, and the assembly is checked for overlaps before any STEP, STL, 3MF or glTF export. A Rust core (hexagonal ports and adapters) drives a Python worker over JSON lines, and an NSGA-II search (Optuna) picks the components on a Pareto front, cross-checked by exact enumeration."
     },
     {
       "summary": "A Python engine (DDD, hexagonal) weighs fifteen match-outcome strategies — Elo, Poisson attack/defence, form, head-to-head, squad value, rest days, bookmaker odds — adjusted for venue, and is ported to Rust/Dioxus apps for web (WebAssembly), desktop, mobile and terminal, kept at parity with it. A research lab backtests the strategies walk-forward, one tournament held out at a time, on 635 matches from ten tournaments (World Cups 2002–2022 and four continental cups of 2023–2024), and tunes the ensemble weights; out of sample, Elo alone scores best (55.6% accuracy)."
