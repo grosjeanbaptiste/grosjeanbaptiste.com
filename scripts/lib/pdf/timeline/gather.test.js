@@ -29,7 +29,7 @@ test('the two newest projects still running share one bar', () => {
     .groups;
   assert.deepEqual(
     group.children.map((c) => c.strong),
-    ['Old', 'Mid · New'],
+    ['Old', 'Mid, New'],
   );
 });
 

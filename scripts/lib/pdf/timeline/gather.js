@@ -15,7 +15,9 @@ function busiest(lanes) {
   return best && running(best.children).length >= 2 ? best : null;
 }
 
-const named = (a, b) => `${a} · ${b}`;
+// A comma, not a middle dot: the dot is a TS1 glyph, whose font descriptor
+// made poppler read the header's words taller, into one another.
+const named = (a, b) => `${a}, ${b}`;
 const shared = (a, b) => ({
   ...a,
   end: Math.max(a.end, b.end),
