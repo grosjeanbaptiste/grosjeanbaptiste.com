@@ -1,5 +1,8 @@
 const { viewsOf } = require('./views');
-const { anchorOf } = require('./anchors');
+const { anchoredResume } = require('./xml-anchors');
+const { onPageOf } = require('./sections/main');
+const { navItemsOf } = require('./sections/nav');
+const { telOf } = require('./sections/sidebar');
 const { timelineForXml } = require('./xml-timeline');
 const I18N = require('./i18n');
 const { highestObtainedDegree, highestInProgressDegree, formatDegreeLine } = require('./degrees');
@@ -22,6 +25,7 @@ const XML_ITEM_NAMES = {
   sectionOrder: 'section',
   sidebarOrder: 'section',
   views: 'view',
+  nav: 'link',
   zooms: 'zoom',
   ticks: 'tick',
   lanes: 'lane',
@@ -84,20 +88,18 @@ function generateXml(
     lang,
     viewsTitle: I18N[lang].views.title,
     views: viewsOf(lang),
-    // Laid out here: XSLT 1.0 cannot compute it (see xml-timeline.js).
-    timeline: timelineForXml(resume, lang, today),
+    // The classic page's menu, and its phone link: XSLT 1.0 cannot strip
+    // what is not a digit.
+    nav: navItemsOf(I18N[lang]),
+    tel: telOf(resume.basics?.phone),
+    // Laid out here: XSLT 1.0 cannot compute it (see xml-timeline.js), from
+    // the entries the classic page shows, so its bars lead where those do.
+    timeline: timelineForXml(resume, lang, today, onPageOf(resume, lang)),
   };
   if (Object.keys(degrees).length) meta.degrees = degrees;
-  // Each job and degree carries the id the themes give it, for the timeline's
-  // bars to link to.
-  const anchored = (kind, entries) =>
-    (entries || []).map((e) => ({ ...e, anchor: anchorOf(kind, e) }));
-  const tagged = {
-    ...resume,
-    work: anchored('work', resume.work),
-    education: anchored('education', resume.education),
-    meta,
-  };
+  // Each entry carries the id the classic page gives it (xml-anchors.js), for
+  // the timeline's bars to link to.
+  const tagged = { ...anchoredResume(resume), meta };
   const body = emitXml('resume', tagged, 0);
   return `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="${themePath}"?>\n${body}\n`;
 }

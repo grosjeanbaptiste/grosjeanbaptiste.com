@@ -36,7 +36,16 @@ addEventListener('load', () => setTimeout(() => {
   seen.twoYears = shownAt('2');
   seen.fiveYears = shownAt('5');
   seen.widerThanFrame = grid.scrollWidth > scroller.clientWidth;
-  seen.scrolledToToday = Math.abs(scroller.scrollLeft + scroller.clientWidth - scroller.scrollWidth) < 2;
+  // Today is the right end of the grid: on screen when that end meets the
+  // frame's (measured, so it holds whichever way the frame scrolls).
+  const onToday = () => Math.abs(grid.getBoundingClientRect().right - scroller.getBoundingClientRect().right) < 2;
+  seen.scrolledToToday = onToday();
+  // The frame narrows (a window resized, a sidebar shown): the last years
+  // must stay on screen, not slide out to the right.
+  scroller.style.width = '60%';
+  seen.todayAfterNarrowing = onToday();
+  scroller.style.width = '';
+  seen.todayAfterWidening = onToday();
   // The zoom itself: the timeline is taller than the window can centre.
   zoom.scrollIntoView({ block: 'center' });
   const button = $('button[data-years="all"]', zoom).getBoundingClientRect();
@@ -123,6 +132,12 @@ check('five years draw the career wider than its frame', () =>
   assert.equal(seen.widerThanFrame, true),
 );
 check('a zoomed timeline opens on today', () => assert.equal(seen.scrolledToToday, true));
+check('a zoomed timeline keeps today on screen when its frame narrows', () =>
+  assert.equal(seen.todayAfterNarrowing, true),
+);
+check('a zoomed timeline keeps today on screen when its frame widens again', () =>
+  assert.equal(seen.todayAfterWidening, true),
+);
 check('nothing covers the zoom', () => assert.equal(seen.zoomReachable, true));
 check('"all" fits the whole career in the frame', () =>
   assert.deepEqual([seen.allStretch, seen.allFits], ['1', true]),

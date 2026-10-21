@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=747694c8"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=bc7e0de9"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -127,6 +127,25 @@
         <label>Timeline (PDF)</label>
       </view>
     </views>
+    <nav>
+      <link>
+        <id>about</id>
+        <label>About</label>
+      </link>
+      <link>
+        <id>experience</id>
+        <label>Experience</label>
+      </link>
+      <link>
+        <id>education</id>
+        <label>Education</label>
+      </link>
+      <link>
+        <id>references</id>
+        <label>References</label>
+      </link>
+    </nav>
+    <tel>+32496289705</tel>
     <timeline>
       <title>Timeline</title>
       <months>206</months>
@@ -147,6 +166,12 @@
           <label>All</label>
         </zoom>
       </zooms>
+      <pdf>
+        <label>Timeline (PDF)</label>
+        <all>/assets/cv/cv_grosjean_baptiste_timeline_en.pdf</all>
+        <five>/assets/cv/cv_grosjean_baptiste_timeline_5y_en.pdf</five>
+        <two>/assets/cv/cv_grosjean_baptiste_timeline_2y_en.pdf</two>
+      </pdf>
       <skillFilter>
         <title>Filter by skill</title>
         <clear>Clear filter</clear>
@@ -315,6 +340,12 @@
             <token>mutationtesting</token>
             <uses>3</uses>
             <said>3 entries use MutationTesting</said>
+          </skill>
+          <skill>
+            <name>ProfessionalCommunication</name>
+            <token>professionalcommunication</token>
+            <uses>3</uses>
+            <said>3 entries use ProfessionalCommunication</said>
           </skill>
           <skill>
             <name>SQL</name>
@@ -1427,12 +1458,6 @@
             <said>1 entry uses Processes</said>
           </skill>
           <skill>
-            <name>ProfessionalCommunication</name>
-            <token>professionalcommunication</token>
-            <uses>1</uses>
-            <said>1 entry uses ProfessionalCommunication</said>
-          </skill>
-          <skill>
             <name>Programming</name>
             <token>programming</token>
             <uses>1</uses>
@@ -1800,6 +1825,12 @@
           </skill>
         </rest>
       </skillFilter>
+      <search>
+        <label>Search</label>
+        <placeholder>Search experience, projects, skills…</placeholder>
+        <empty>Nothing matches.</empty>
+        <index>{"entries":[{"id":"work-acteble-founder","kind":"work","title":"Founder","organisation":"Acteble","summary":"Sole founder, architect and developer. Rust backend + Flutter mobile. The R&amp;D layer also served as the dissertation for my MSc in Computer Science at UMons.","skills":["Rust","Flutter","Dart","Tokio","Docker","DDD","CleanArchitecture","PostgreSQL"]},{"id":"work-belgian-senate-ai-research-scientist","kind":"work","title":"AI Research Scientist","organisation":"Belgian Senate","summary":"AI research and engineering for the Belgian Federal Parliament. Designed an internal platform that lets staff search, explore and converse with the parliamentary archives. Authored an open evaluation protocol that compares retrieval strategies on the Senate corpus, with a focus on bilingual FR/NL robustness.","skills":["Python","Java",".NET","RAG","OCR","SentenceTransformers","Pandas"]},{"id":"work-emvi-ai-ai-software-crafter-lead","kind":"work","title":"AI Software Crafter Lead","organisation":"Emvi.ai","summary":"Led the crafting from technical design through delivery: OCR pipeline, code scanning, and a Valhalla routing system adapted for the visually impaired.","skills":["Dart","Flutter","Firebase","OpenAI","Valhalla"]},{"id":"work-emvi-ai-ai-software-crafter","kind":"work","title":"AI Software Crafter","organisation":"Emvi.ai","summary":"Built the facial recognition pipeline (DeepFace / Serengil — detection + recognition) and the sentiment-analysis stack for the LLM-generated photo descriptions.","skills":["Python","Whisper","FastAPI","DeepFace","OpenAI","PostgreSQL","SQLAlchemy"]},{"id":"work-xtrada-data-scientist","kind":"work","title":"Data Scientist","organisation":"Xtrada","summary":"Used Python libraries (SpaCy, ...) to extract named entities from text via NER model training and implementation in .NET. Model recall score: 87%.","skills":["Python","SpaCy","Pandas","NumPy",".NET"]},{"id":"work-xtrada-software-crafter","kind":"work","title":"Software Crafter","organisation":"Xtrada","summary":"Software modernization within the .NET stack following domain-driven design and clean code principles. Implementation of Azure AI services in a .NET solution.","skills":[".NET","DDD","CleanCode","CleanArchitecture"]},{"id":"work-xtrada-net-react-software-crafter","kind":"work","title":".NET/React Software Crafter","organisation":"Xtrada","skills":[".NET","React","SQL Server","TypeScript","EntityFramework","Docker","Azure","OpenTelemetry"]},{"id":"work-xtrada-net-blazor-software-crafter","kind":"work","title":".NET/Blazor Software Crafter","organisation":"Xtrada","summary":"Crafted the webapp in .NET / Blazor following DDD and clean code principles.","skills":[".NET","Blazor","SQL Server","DDD","EntityFramework","xUnit"]},{"id":"work-technofutur-tic-full-stack-developer-web-intern","kind":"work","title":"Full Stack Developer Web Intern","organisation":"Technofutur TIC","summary":"This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC.\nIn addition, during the extension, we received an introduction to Business Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...).\nThis comprehensive training covered various areas including SQL Server, Node.js, Express.js, React, and Angular, encompassing everything from database development to user interface and backend.","skills":["SQL Server","Node.js","Express.js","React","Angular","TypeScript","Auth0","Sequelize"]},{"id":"work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-developer-web-intern","kind":"work","title":"Full Stack Developer Web Intern","organisation":"EDITx: IT Challenges, IT Jobs, Education in IT for X","skills":[]},{"id":"work-les-auberges-de-jeunesse-wallonie-bruxelles-student-job","kind":"work","title":"Student Job","organisation":"Les Auberges de Jeunesse - Wallonie &amp; Bruxelles","skills":[]},{"id":"work-restomax-full-stack-developer-web-intern","kind":"work","title":"Full Stack Developer Web Intern","organisation":"RESTOMAX","skills":[".NET","Flutter","SQL Server"]},{"id":"work-quick-restaurant-student-job","kind":"work","title":"Student Job","organisation":"Quick Restaurant","skills":[]},{"id":"education-umons-master-of-science-msc","kind":"education","title":"Master of Science - MSc","organisation":"UMons","subtitle":"Computer Science (work-study program) — specialised professional focus (120 ECTS)","summary":"MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative &amp; buddy TandeMons. Core coursework: software engineering &amp; project management, artificial intelligence, databases, data structures, operational research, cryptography &amp; IT security, and ethics &amp; computer law, with two paid company internships.","skills":["Python","LaTeX","DDD","CleanArchitecture"]},{"id":"education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree","kind":"education","title":"Professional Bachelor's degree","organisation":"Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)","subtitle":"Information Systems Management","summary":"Student representative and tutor. \n\nTFE: WebMenu 2.0\n\nProgramme: analysis &amp; design, programming in .NET, Java and web, relational databases, e-business and integrated management software (ERP), networking and IT project management.","skills":["SQL","C#",".NET","Java","Python","JS","HTML","CSS"]},{"id":"education-institut-saint-louis-bruxelles-attestation","kind":"education","title":"Attestation","organisation":"Institut Saint-Louis Bruxelles","subtitle":"7e Spéciale Mathématiques","skills":[]},{"id":"education-universite-saint-louis-bruxelles-bachelor-in-political-sciences","kind":"education","title":"Bachelor in Political Sciences","organisation":"Université Saint-Louis - Bruxelles","subtitle":"General orientation","skills":[]},{"id":"education-uclouvain-universite-catholique-de-louvain-cours-preparatoires","kind":"education","title":"Cours préparatoires","organisation":"UCLouvain - Université catholique de Louvain","subtitle":"Médecine et dentisterie","skills":[]},{"id":"education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s","kind":"education","title":"C.E.S.S.","organisation":"Centre Scolaire Saint-Adrien - Val Duchesse","subtitle":"General Studies Maths &amp; Modern languages","skills":[]},{"id":"education-lycee-mater-dei","kind":"education","title":"Lycée Mater Dei","organisation":"Lycée Mater Dei","subtitle":"General studies Latin &amp; Greek","skills":[]},{"id":"project-baba","kind":"project","title":"Baba","subtitle":"Shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop.","summary":"Five layers: a Rust CLI that does all the I/O, a link-grammar syntactic parser, an SWI-Prolog symbolic engine with no I/O, domain vocabulary packs kept as data, and some fifty Rust action binaries — a new verb is one pack fact and one binary. Mutation-tested, with a corpus of regression sentences and a cold start around 120 ms.","skills":["Rust","Prolog","LinkGrammar","SymbolicAI","NLP","DDD","TDD","MutationTesting"]},{"id":"project-kag","kind":"project","title":"KAG","subtitle":"Purely algorithmic Rust framework that benchmarks interchangeable RAG pipeline components on BEIR and ships the best measured configuration as a question-answering CLI with cited sources.","summary":"Nine pipeline stages (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), each a port whose algorithm is chosen by label (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonal + DDD + TDD, standard library only in the core, no LLM. Metrics match pytrec_eval exactly. On six BEIR datasets no retriever wins everywhere (ndcg@10 0.668 on SciFact with BM25F); a LambdaMART reranker lifts ArguAna from 0.301 to 0.527 in 5-fold cross-validation.","skills":["Rust","RAG","InformationRetrieval","LearningToRank","BEIR","DDD","HexagonalArchitecture","TDD"]},{"id":"project-ll","kind":"project","title":"LL","subtitle":"Spaced-repetition vocabulary trainer for six languages, each word taught with an aligned example sentence in every language.","summary":"A Rust workspace whose pure domain core (hexagonal, DDD, test-first) drives a terminal UI (ratatui) and Dioxus desktop and iOS apps: Leitner boxes with SM-2 scheduling over SQLite, content from checksummed data packs. Its data lab builds the six-language lexical database in Python — about 8,900 word senses (October 2026) aligned on WordNet, illustrated with Tatoeba sentences, analysed with spaCy, every word-in-sentence link checked.","skills":["Rust","Dioxus","Ratatui","SQLite","iOS","SpacedRepetition","Leitner","SM2","Python","spaCy","NLP","WordNet","Tatoeba","HexagonalArchitecture","DDD","TDD"]},{"id":"project-indexer","kind":"project","title":"Indexer","subtitle":"Curated index of external data sources, books and software packages, served as a public read API.","summary":"Each of the 523 sources is a TOML file that Rust validates and compiles into static JSON, embedded at build time in a Cloudflare Worker: pure-Rust API logic, ETag and 304 responses, per-IP and API-key rate limits counted exactly by a Durable Object, BM25F ranking weighted by a six-criterion reliability score, and a gap analysis that matches needs to candidate sources.","skills":["Rust","CloudflareWorkers","WebAssembly","DurableObjects","TOML","BM25F","InformationRetrieval","TDD"]},{"id":"project-polytech","kind":"project","title":"Polytech","subtitle":"Engineering-studies library that computes every number and expression of LaTeX worked solutions, none typed by hand.","summary":"A Python library (DDD, hexagonal, test-first, mutation-tested, mypy strict) of the notions of maths, physics, electronics, signals and optimisation, computed with SymPy, NumPy and SciPy and injected through macros into 920 LaTeX documents; a pipeline converts course material to Markdown, LaTeX and XML, and Lean 4 proofs with Mathlib trace results back to the axioms.","skills":["Python","SymPy","NumPy","SciPy","LaTeX","Lean4","Mathlib","DDD","HexagonalArchitecture","TDD","MutationTesting"]},{"id":"project-converge","kind":"project","title":"Converge","subtitle":"AI-assisted 3D mechanical design platform that orchestrates open-source geometry, meshing and simulation engines.","summary":"The AI writes operations, the engines compute: an LLM emits a strictly validated JSON part program; two independent kernels, OpenCASCADE (exact) and Manifold (mesh), must agree on volume and bounding box, and the assembly is checked for overlaps before any STEP, STL, 3MF or glTF export. A Rust core (hexagonal ports and adapters) drives a Python worker over JSON lines, and an NSGA-II search (Optuna) picks the components on a Pareto front, cross-checked by exact enumeration.","skills":["Rust","Python","OpenCASCADE","Manifold","build123d","Gmsh","Optuna","NSGA2","MultiObjectiveOptimization","Pareto","ThreeJS","HexagonalArchitecture","TDD"]},{"id":"project-actrack","kind":"project","title":"Actrack","subtitle":"Forecasts of the FIFA World Cup 2026 from an ensemble of football-rating strategies.","summary":"A Python engine (DDD, hexagonal) weighs fifteen match-outcome strategies — Elo, Poisson attack/defence, form, head-to-head, squad value, rest days, bookmaker odds — adjusted for venue, and is ported to Rust/Dioxus apps for web (WebAssembly), desktop, mobile and terminal, kept at parity with it. A research lab backtests the strategies walk-forward, one tournament held out at a time, on 635 matches from ten tournaments (World Cups 2002–2022 and four continental cups of 2023–2024), and tunes the ensemble weights; out of sample, Elo alone scores best (55.6% accuracy).","skills":["Python","Pandas","NumPy","SciPy","DuckDB","Rust","Dioxus","WebAssembly","EloRating","PoissonModel","EnsembleModel","WalkForwardBacktest","BrierScore","HexagonalArchitecture","DDD","TDD"]},{"id":"project-synergy","kind":"project","title":"Synergy","subtitle":"Internal platform for the Belgian Federal Parliament to search, explore and converse with the parliamentary archives.","summary":"Internal platform that lets parliamentary staff search, explore and converse with the archives of the Belgian Federal Parliament, powered by a retrieval-augmented pipeline with bilingual FR/NL support.","skills":["Python","Java",".NET","RAG","AI"]},{"id":"project-fedrag-be","kind":"project","title":"fedrag-be","subtitle":"Open evaluation protocol comparing retrieval strategies on the Belgian Senate corpus, with a focus on bilingual FR/NL robustness.","summary":"Open, reproducible protocol that benchmarks retrieval strategies on the bilingual Senate corpus, measuring FR/NL robustness across the retrieval pipeline.","skills":["RAG","Python","Evaluation","Benchmark","OCR","SentenceTransformers","Pandas"]},{"id":"project-acteble","kind":"project","title":"Acteble","subtitle":"Geolocated social platform that brings people together around shared activities: a Rust backend, an offline-first Flutter app and a React website.","summary":"Backend: a modular monolith in Rust, split into bounded contexts with a hexagonal architecture, CQRS and an event-driven core (event store, outbox/inbox), served over REST/JSON and gRPC streaming; a PostGIS pipeline turns OpenStreetMap data into routing graphs published to a CDN, and custom Dylint lints enforce the architecture in CI. App: an offline-first Flutter client for iOS, Android, web and desktop — a Melos monorepo with Riverpod over an encrypted local store (Drift, SQLCipher), end-to-end encryption through a Rust core (vodozemac via flutter_rust_bridge), Bluetooth peer-to-peer sync, MapLibre maps and LiveKit real-time media. Website: a React single-page application built with Vite and internationalised with i18next.","skills":["Rust","Tokio","Axum","Tonic","gRPC","Protobuf","SQLx","PostgreSQL","PostGIS","Redis","MinIO","LiveKit","OpenBao","Prometheus","Testcontainers","OpenStreetMap","Docker","Caddy","Dylint","DDD","HexagonalArchitecture","CQRS","EventDriven","Flutter","Dart","Melos","Riverpod","Drift","SQLite","SQLCipher","Dio","FlutterRustBridge","MapLibre","FlutterMap","Firebase","OfflineFirst","E2EE","Mobile","React","Vite","JavaScript","i18next","ReactRouter","ESLint","Vercel"]},{"id":"project-memoire-de-master","kind":"project","title":"Mémoire de master","organisation":"UMONS","subtitle":"MSc dissertation at UMONS — the R&amp;D of Acteble's planning engine.","summary":"MSc dissertation « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », UMONS Service d'Algorithmique — the R&amp;D of Acteble's planning engine. Multi-objective group formation under spatio-temporal constraints: NP-hard by reduction from k-CLIQUE; admissible groups enumerated as bicliques (Close-by-One); an iterative Pareto solver with termination and local-convergence guarantees; one DSL compiled to Python, MiniZinc and Rust that yield bit-identical fronts, the Rust output running in the Acteble API. Benchmarked against CP-SAT, NSGA-II, MOEA/D and SPEA2 (hypervolume, IGD, 30 seeds, Wilcoxon–Holm): significantly ahead of MOEA/D at every size, of NSGA-II and SPEA2 from 500 users.","skills":["Python","Rust","LaTeX","MiniZinc","ORTools","ConstraintProgramming","CombinatorialOptimization","MultiObjectiveOptimization","Pareto","DSL","MutationTesting"]},{"id":"project-emvi-app","kind":"project","title":"Emvi App","subtitle":"AI powered visual assistant for visually impaired people.","summary":"AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes &amp; barcodes), and an adapted Valhalla routing system for the visually impaired.","skills":["Flutter","Firebase","OpenAI","Valhalla","AI","Dart"]},{"id":"project-remi","kind":"project","title":"Remi","subtitle":"Reminiscence application for people with cognitive issues.","summary":"Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline.","skills":["Python","FastAPI","OpenAI","Whisper","DeepFace","PostgreSQL","SQLAlchemy"]},{"id":"project-myway","kind":"project","title":"MyWay","organisation":"Freelance","subtitle":"Education manager for students. No longer maintained; database and auth are unavailable.","skills":["Angular","JavaScript","TypeScript","Express.js","API","UI/UX","SQL Server","Auth0","PayPal","Sequelize","Node.js","React"]},{"id":"project-vhauctions-ner-inventory-model","kind":"project","title":"VhAuctions NER Inventory Model","summary":"Named Entity Recognition machine learning model to extract inventory items from an audio transcription.","skills":["Python","SpaCy","Pandas","NumPy",".NET","NER"]},{"id":"project-vhauctions","kind":"project","title":"VhAuctions","summary":"Fleet manager for auctions.","skills":[".NET","C#","EntityFramework","React","TypeScript","Docker","Azure","OpenTelemetry","SQL Server"]},{"id":"project-kwalitijd","kind":"project","title":"Kwalitijd","summary":"Survey manager for sports clubs and federations.","skills":[".NET","C#","Blazor","EntityFramework","xUnit","SQL Server","DDD"]},{"id":"project-webmenu","kind":"project","title":"WebMenu","summary":"QR code based cash register for HoReCa establishments.","skills":[".NET","Flutter","SQL Server","QRCode"]},{"id":"course-algorithmique","kind":"course","title":"Algorithmique","organisation":"UMONS","subtitle":"Algorithmics","skills":["Algorithms","DataStructures","Complexity","Trees"]},{"id":"course-anglais-i","kind":"course","title":"Anglais I","organisation":"UMONS","subtitle":"English I","skills":["English"]},{"id":"course-bases-de-donnees-i","kind":"course","title":"Bases de données I","organisation":"UMONS","subtitle":"Databases I","skills":["SQL","RelationalAlgebra","Normalization","Indexing","NoSQL","BigData"]},{"id":"course-lecture-et-redaction-scientifique","kind":"course","title":"Lecture et rédaction scientifique","organisation":"UMONS","subtitle":"Scientific reading and writing","skills":["ScientificWriting","LiteratureReview"]},{"id":"course-mathematique","kind":"course","title":"Mathématique","organisation":"UMONS","subtitle":"Mathematics","skills":["GraphTheory","Combinatorics","Complexity","PropositionalLogic","PredicateLogic"]},{"id":"course-modelisation-logicielle","kind":"course","title":"Modélisation logicielle","organisation":"UMONS","subtitle":"Software modelling","skills":["Java","UML","DesignPatterns","UnitTesting","MockTesting","BDD"]},{"id":"course-reseaux","kind":"course","title":"Réseaux","organisation":"UMONS","subtitle":"Networks","skills":["TCP/IP","HTTP","DNS","OSPF","BGP","Ethernet"]},{"id":"course-strategie-et-politiques-en-ressources-humaines","kind":"course","title":"Stratégie et politiques en ressources humaines","organisation":"UMONS","subtitle":"HR strategy and policy","skills":["HRM"]},{"id":"course-systemes-d-exploitation","kind":"course","title":"Systèmes d'exploitation","organisation":"UMONS","subtitle":"Operating systems","skills":["Processes","Semaphores","Synchronization","MemoryManagement","FileSystems","Scheduling"]},{"id":"course-anglais-ii","kind":"course","title":"Anglais II","organisation":"UMONS","subtitle":"English II","skills":["English"]},{"id":"course-bases-de-donnees-ii","kind":"course","title":"Bases de données II","organisation":"UMONS","subtitle":"Databases II","skills":["XML","XSLT","XQuery","XPath","BaseX","DataMining","Weka"]},{"id":"course-ingenierie-de-logiciels-et-gestion-de-projets","kind":"course","title":"Ingénierie de logiciels et gestion de projets","organisation":"UMONS","subtitle":"Software engineering and project management","skills":["Agile","Scrum","SoftwareEngineering"]},{"id":"course-intelligence-artificielle","kind":"course","title":"Intelligence artificielle","organisation":"UMONS","subtitle":"Artificial intelligence","skills":["SearchAlgorithms","Metaheuristics","FirstOrderLogic","SupervisedLearning"]},{"id":"course-recherche-operationnelle-et-applications","kind":"course","title":"Recherche opérationnelle et applications","organisation":"UMONS","subtitle":"Operations research and applications","skills":["OperationsResearch","LinearProgramming","IntegerProgramming","Duality"]},{"id":"course-structures-de-donnees","kind":"course","title":"Structures de données","organisation":"UMONS","subtitle":"Data structures","skills":["AVLTrees","BTrees","HashTables","Sorting","Complexity"]},{"id":"course-seminaires-d-informatique-en-veille-technologique","kind":"course","title":"Séminaires d'informatique en veille technologique","organisation":"UMONS","subtitle":"Computing seminars in technology watch","skills":["TechWatch"]},{"id":"course-cryptographie-et-securite-des-systemes-informatiques","kind":"course","title":"Cryptographie et sécurité des systèmes informatiques","organisation":"UMONS","subtitle":"Cryptography and systems security","skills":["Cryptography","Unix","NetworkSecurity","ApplicationSecurity"]},{"id":"course-ethique-et-droit-de-l-informatique","kind":"course","title":"Éthique et droit de l'informatique","organisation":"UMONS","subtitle":"Ethics and IT law","skills":["IntellectualProperty","DataProtection","GDPR"]},{"id":"course-structure-des-ordinateurs","kind":"course","title":"Structure des ordinateurs","organisation":"EPHEC","subtitle":"Computer structure","skills":["ComputerArchitecture","Binary","Hexadecimal","Hardware"]},{"id":"course-informatique-systeme-d-exploitation","kind":"course","title":"Informatique - Système d'exploitation","organisation":"EPHEC","subtitle":"Operating systems","skills":["OperatingSystems","ShellScripting","SystemAdministration"]},{"id":"course-mathematique-appliquee-a-l-informatique","kind":"course","title":"Mathématique appliquée à l'informatique","organisation":"EPHEC","subtitle":"Mathematics applied to computing","skills":["LinearAlgebra","GraphTheory","SetTheory","RelationalAlgebra","MathematicalLogic","Cryptography"]},{"id":"course-principes-algorithmiques-et-programmation","kind":"course","title":"Principes algorithmiques et programmation","organisation":"EPHEC","subtitle":"Algorithmic principles and programming","skills":["Algorithms","DataTypes","ControlFlow","Programming"]},{"id":"course-principes-d-analyse-informatique","kind":"course","title":"Principes d'analyse informatique","organisation":"EPHEC","subtitle":"Principles of systems analysis","skills":["UML","EntityRelationship","SystemsAnalysis"]},{"id":"course-information-et-communication-professionnelles","kind":"course","title":"Information et communication professionnelles","organisation":"EPHEC","subtitle":"Professional information and communication","skills":["ProfessionalCommunication"]},{"id":"course-web-principes-de-base","kind":"course","title":"Web : principes de base","organisation":"EPHEC","subtitle":"Web: fundamentals","skills":["HTML","CSS","URL","DNS","WebHosting"]},{"id":"course-initiation-aux-bases-de-donnees","kind":"course","title":"Initiation aux bases de données","organisation":"EPHEC","subtitle":"Introduction to databases","skills":["SQL","RelationalModel","Joins","Indexing"]},{"id":"course-gestion-et-exploitation-de-bases-de-donnees","kind":"course","title":"Gestion et exploitation de bases de données","organisation":"EPHEC","subtitle":"Database management and operation","skills":["Triggers","StoredProcedures","DataWarehouse","QueryOptimization"]},{"id":"course-programmation-orientee-objet","kind":"course","title":"Programmation orientée objet","organisation":"EPHEC","subtitle":"Object-oriented programming","skills":["OOP","Inheritance","Polymorphism","Encapsulation","Overloading"]},{"id":"course-projet-d-analyse-et-de-conception","kind":"course","title":"Projet d'analyse et de conception","organisation":"EPHEC","subtitle":"Analysis and design project","skills":["SystemsAnalysis","SoftwareDesign","Modelling"]},{"id":"course-techniques-de-gestion-de-projet","kind":"course","title":"Techniques de gestion de projet","organisation":"EPHEC","subtitle":"Project management techniques","skills":["ProjectManagement"]},{"id":"course-elements-de-statistique","kind":"course","title":"Éléments de statistique","organisation":"EPHEC","subtitle":"Elements of statistics","skills":["Statistics"]},{"id":"course-projet-de-developpement-web","kind":"course","title":"Projet de développement web","organisation":"EPHEC","subtitle":"Web development project","skills":["JavaScript","AJAX","JSON","XML","ClientSideScripting"]},{"id":"course-notions-de-e-business","kind":"course","title":"Notions de e-business","organisation":"EPHEC","subtitle":"Principles of e-business","skills":["Ebusiness"]},{"id":"course-projet-de-developpement-sgbd","kind":"course","title":"Projet de développement SGBD","organisation":"EPHEC","subtitle":"DBMS development project","skills":["DataAccessLayer","Transactions","DatabaseProgramming","Debugging"]},{"id":"course-bases-des-reseaux","kind":"course","title":"Bases des réseaux","organisation":"EPHEC","subtitle":"Network fundamentals","skills":["Ethernet","MAC","TCP/IP","Networking"]},{"id":"course-organisation-des-entreprises-et-elements-de-management","kind":"course","title":"Organisation des entreprises et éléments de management","organisation":"EPHEC","subtitle":"Business organisation and management","skills":["Management"]},{"id":"course-produits-logiciels-de-gestion-integres","kind":"course","title":"Produits logiciels de gestion intégrés","organisation":"EPHEC","subtitle":"Integrated management software","skills":["ERP"]},{"id":"course-projet-d-integration-de-developpement","kind":"course","title":"Projet d'intégration de développement","organisation":"EPHEC","subtitle":"Development integration project","skills":["AJAX","JSON","XML","SQLInjection","XSS","Caching","URLRewriting"]},{"id":"course-veille-technologique","kind":"course","title":"Veille technologique","organisation":"EPHEC","subtitle":"Technology watch","skills":["TechWatch"]},{"id":"course-administration-gestion-et-securisation-des-reseaux","kind":"course","title":"Administration, gestion et sécurisation des réseaux","organisation":"EPHEC","subtitle":"Network administration and security","skills":["NetworkAdministration","NetworkSecurity","ApplicationServer"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue1","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE1","organisation":"EPHEC","subtitle":"Applied language for higher education I","skills":["ProfessionalCommunication"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue2","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE2","organisation":"EPHEC","subtitle":"Applied language for higher education II","skills":["ProfessionalCommunication"]},{"id":"course-economie-i","kind":"course","title":"Économie I","organisation":"USL-B","subtitle":"Economics I","skills":["Microeconomics","CompetitiveMarkets","FirmBehaviour","MarketFailure"]},{"id":"course-economie-ii","kind":"course","title":"Économie II","organisation":"USL-B","subtitle":"Economics II","skills":["ImperfectCompetition","Macroeconomics","NationalIncome","MonetaryMarket"]},{"id":"course-science-politique","kind":"course","title":"Science politique","organisation":"USL-B","subtitle":"Political science","skills":["PoliticalScience","Power","State","Democracy"]},{"id":"course-seminaire-penser-le-social","kind":"course","title":"Séminaire : penser le social","organisation":"USL-B","subtitle":"Seminar: thinking the social","skills":["Epistemology","Durkheim","Weber","Marx"]},{"id":"course-seminaire-principes-et-methodes-en-sciences-sociales","kind":"course","title":"Séminaire : principes et méthodes en sciences sociales","organisation":"USL-B","subtitle":"Seminar: principles and methods in the social sciences","skills":["AcademicWriting","Citation","Epistemology"]},{"id":"course-socio-economie-des-medias","kind":"course","title":"Socio-économie des médias","organisation":"USL-B","subtitle":"Socio-economics of the media","skills":["MediaEconomics","Advertising","MediaRegulation","WebEconomy"]},{"id":"course-anglais-i-saint-louis","kind":"course","title":"Anglais I (Saint-Louis)","organisation":"USL-B","subtitle":"English I","skills":["English"]},{"id":"course-neerlandais-i","kind":"course","title":"Néerlandais I","organisation":"USL-B","subtitle":"Dutch I","skills":["Dutch"]},{"id":"volunteer-umons-student-representative","kind":"volunteer","title":"Student Representative","organisation":"UMons","skills":[]},{"id":"volunteer-umons-buddy-tandemons","kind":"volunteer","title":"Buddy TandeMons","organisation":"UMons","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-student-representative","kind":"volunteer","title":"Student Representative","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-tutor","kind":"volunteer","title":"Tutor","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]}],"skills":[{"skill":"Python","uses":14,"href":"#skill-python"},{"skill":".NET","uses":12,"href":"#skill-net"},{"skill":"DDD","uses":11,"href":"#skill-ddd"},{"skill":"Rust","uses":9,"href":"#skill-rust"},{"skill":"SQL Server","uses":8,"href":"#skill-sql-server"},{"skill":"TDD","uses":7,"href":"#skill-tdd"},{"skill":"Flutter","uses":6,"href":"#skill-flutter"},{"skill":"HexagonalArchitecture","uses":6,"href":"#skill-hexagonalarchitecture"},{"skill":"Pandas","uses":5,"href":"#skill-pandas"},{"skill":"React","uses":5,"href":"#skill-react"},{"skill":"Dart","uses":4,"href":"#skill-dart"},{"skill":"Docker","uses":4,"href":"#skill-docker"},{"skill":"EntityFramework","uses":4,"href":"#skill-entityframework"},{"skill":"Java","uses":4,"href":"#skill-java"},{"skill":"NumPy","uses":4,"href":"#skill-numpy"},{"skill":"OpenAI","uses":4,"href":"#skill-openai"},{"skill":"PostgreSQL","uses":4,"href":"#skill-postgresql"},{"skill":"RAG","uses":4,"href":"#skill-rag"},{"skill":"TypeScript","uses":4,"href":"#skill-typescript"},{"skill":"C#","uses":3,"href":"#skill-c"},{"skill":"CleanArchitecture","uses":3,"href":"#skill-cleanarchitecture"},{"skill":"Complexity","uses":3,"href":"#skill-complexity"},{"skill":"English","uses":3,"href":"#skill-english"},{"skill":"Firebase","uses":3,"href":"#skill-firebase"},{"skill":"JavaScript","uses":3,"href":"#skill-javascript"},{"skill":"LaTeX","uses":3,"href":"#skill-latex"},{"skill":"MutationTesting","uses":3,"href":"#skill-mutationtesting"},{"skill":"ProfessionalCommunication","uses":3,"href":"#skill-professionalcommunication"},{"skill":"SQL","uses":3,"href":"#skill-sql"},{"skill":"XML","uses":3,"href":"#skill-xml"},{"skill":"AI","uses":2,"href":"#skill-ai"},{"skill":"AJAX","uses":2,"href":"#skill-ajax"},{"skill":"Algorithms","uses":2,"href":"#skill-algorithms"},{"skill":"Angular","uses":2,"href":"#skill-angular"},{"skill":"API","uses":2,"href":"#skill-api"},{"skill":"Auth0","uses":2,"href":"#skill-auth0"},{"skill":"Azure","uses":2,"href":"#skill-azure"},{"skill":"Blazor","uses":2,"href":"#skill-blazor"},{"skill":"Cryptography","uses":2,"href":"#skill-cryptography"},{"skill":"CSS","uses":2,"href":"#skill-css"},{"skill":"DeepFace","uses":2,"href":"#skill-deepface"},{"skill":"Dioxus","uses":2,"href":"#skill-dioxus"},{"skill":"DNS","uses":2,"href":"#skill-dns"},{"skill":"Epistemology","uses":2,"href":"#skill-epistemology"},{"skill":"Ethernet","uses":2,"href":"#skill-ethernet"},{"skill":"Express.js","uses":2,"href":"#skill-express-js"},{"skill":"FastAPI","uses":2,"href":"#skill-fastapi"},{"skill":"GraphTheory","uses":2,"href":"#skill-graphtheory"},{"skill":"HTML","uses":2,"href":"#skill-html"},{"skill":"Indexing","uses":2,"href":"#skill-indexing"},{"skill":"InformationRetrieval","uses":2,"href":"#skill-informationretrieval"},{"skill":"JSON","uses":2,"href":"#skill-json"},{"skill":"MultiObjectiveOptimization","uses":2,"href":"#skill-multiobjectiveoptimization"},{"skill":"NetworkSecurity","uses":2,"href":"#skill-networksecurity"},{"skill":"NLP","uses":2,"href":"#skill-nlp"},{"skill":"Node.js","uses":2,"href":"#skill-node-js"},{"skill":"OCR","uses":2,"href":"#skill-ocr"},{"skill":"OpenTelemetry","uses":2,"href":"#skill-opentelemetry"},{"skill":"Pareto","uses":2,"href":"#skill-pareto"},{"skill":"RelationalAlgebra","uses":2,"href":"#skill-relationalalgebra"},{"skill":"SciPy","uses":2,"href":"#skill-scipy"},{"skill":"SentenceTransformers","uses":2,"href":"#skill-sentencetransformers"},{"skill":"Sequelize","uses":2,"href":"#skill-sequelize"},{"skill":"SpaCy","uses":2,"href":"#skill-spacy"},{"skill":"SQLAlchemy","uses":2,"href":"#skill-sqlalchemy"},{"skill":"SQLite","uses":2,"href":"#skill-sqlite"},{"skill":"SystemsAnalysis","uses":2,"href":"#skill-systemsanalysis"},{"skill":"TCP/IP","uses":2,"href":"#skill-tcp-ip"},{"skill":"TechWatch","uses":2,"href":"#skill-techwatch"},{"skill":"Tokio","uses":2,"href":"#skill-tokio"},{"skill":"UI/UX","uses":2,"href":"#skill-ui-ux"},{"skill":"UML","uses":2,"href":"#skill-uml"},{"skill":"Valhalla","uses":2,"href":"#skill-valhalla"},{"skill":"WebAssembly","uses":2,"href":"#skill-webassembly"},{"skill":"Whisper","uses":2,"href":"#skill-whisper"},{"skill":"xUnit","uses":2,"href":"#skill-xunit"},{"skill":"AcademicWriting","uses":1,"href":"#skill-academicwriting"},{"skill":"Advertising","uses":1,"href":"#skill-advertising"},{"skill":"Agile","uses":1,"href":"#skill-agile"},{"skill":"ApplicationSecurity","uses":1,"href":"#skill-applicationsecurity"},{"skill":"ApplicationServer","uses":1,"href":"#skill-applicationserver"},{"skill":"AVLTrees","uses":1,"href":"#skill-avltrees"},{"skill":"Axum","uses":1,"href":"#skill-axum"},{"skill":"BaseX","uses":1,"href":"#skill-basex"},{"skill":"BDD","uses":1,"href":"#skill-bdd"},{"skill":"BEIR","uses":1,"href":"#skill-beir"},{"skill":"Benchmark","uses":1,"href":"#skill-benchmark"},{"skill":"BGP","uses":1,"href":"#skill-bgp"},{"skill":"BigData","uses":1,"href":"#skill-bigdata"},{"skill":"Binary","uses":1,"href":"#skill-binary"},{"skill":"BM25F","uses":1,"href":"#skill-bm25f"},{"skill":"BrierScore","uses":1,"href":"#skill-brierscore"},{"skill":"BTrees","uses":1,"href":"#skill-btrees"},{"skill":"build123d","uses":1,"href":"#skill-build123d"},{"skill":"Caching","uses":1,"href":"#skill-caching"},{"skill":"Caddy","uses":1,"href":"#skill-caddy"},{"skill":"Citation","uses":1,"href":"#skill-citation"},{"skill":"CleanCode","uses":1,"href":"#skill-cleancode"},{"skill":"ClientSideScripting","uses":1,"href":"#skill-clientsidescripting"},{"skill":"CloudflareWorkers","uses":1,"href":"#skill-cloudflareworkers"},{"skill":"CombinatorialOptimization","uses":1,"href":"#skill-combinatorialoptimization"},{"skill":"Combinatorics","uses":1,"href":"#skill-combinatorics"},{"skill":"CompetitiveMarkets","uses":1,"href":"#skill-competitivemarkets"},{"skill":"ComputerArchitecture","uses":1,"href":"#skill-computerarchitecture"},{"skill":"ConstraintProgramming","uses":1,"href":"#skill-constraintprogramming"},{"skill":"ControlFlow","uses":1,"href":"#skill-controlflow"},{"skill":"CQRS","uses":1,"href":"#skill-cqrs"},{"skill":"DataAccessLayer","uses":1,"href":"#skill-dataaccesslayer"},{"skill":"DatabaseProgramming","uses":1,"href":"#skill-databaseprogramming"},{"skill":"DataMining","uses":1,"href":"#skill-datamining"},{"skill":"DataProtection","uses":1,"href":"#skill-dataprotection"},{"skill":"DataStructures","uses":1,"href":"#skill-datastructures"},{"skill":"DataTypes","uses":1,"href":"#skill-datatypes"},{"skill":"DataWarehouse","uses":1,"href":"#skill-datawarehouse"},{"skill":"Debugging","uses":1,"href":"#skill-debugging"},{"skill":"Democracy","uses":1,"href":"#skill-democracy"},{"skill":"DesignPatterns","uses":1,"href":"#skill-designpatterns"},{"skill":"Dio","uses":1,"href":"#skill-dio"},{"skill":"Drift","uses":1,"href":"#skill-drift"},{"skill":"DSL","uses":1,"href":"#skill-dsl"},{"skill":"Duality","uses":1,"href":"#skill-duality"},{"skill":"DuckDB","uses":1,"href":"#skill-duckdb"},{"skill":"DurableObjects","uses":1,"href":"#skill-durableobjects"},{"skill":"Durkheim","uses":1,"href":"#skill-durkheim"},{"skill":"Dutch","uses":1,"href":"#skill-dutch"},{"skill":"Dylint","uses":1,"href":"#skill-dylint"},{"skill":"E2EE","uses":1,"href":"#skill-e2ee"},{"skill":"Ebusiness","uses":1,"href":"#skill-ebusiness"},{"skill":"EloRating","uses":1,"href":"#skill-elorating"},{"skill":"Encapsulation","uses":1,"href":"#skill-encapsulation"},{"skill":"EnsembleModel","uses":1,"href":"#skill-ensemblemodel"},{"skill":"EntityRelationship","uses":1,"href":"#skill-entityrelationship"},{"skill":"ERP","uses":1,"href":"#skill-erp"},{"skill":"ESLint","uses":1,"href":"#skill-eslint"},{"skill":"Evaluation","uses":1,"href":"#skill-evaluation"},{"skill":"EventDriven","uses":1,"href":"#skill-eventdriven"},{"skill":"FileSystems","uses":1,"href":"#skill-filesystems"},{"skill":"FirmBehaviour","uses":1,"href":"#skill-firmbehaviour"},{"skill":"FirstOrderLogic","uses":1,"href":"#skill-firstorderlogic"},{"skill":"FlutterMap","uses":1,"href":"#skill-fluttermap"},{"skill":"FlutterRustBridge","uses":1,"href":"#skill-flutterrustbridge"},{"skill":"GDPR","uses":1,"href":"#skill-gdpr"},{"skill":"Gmsh","uses":1,"href":"#skill-gmsh"},{"skill":"gRPC","uses":1,"href":"#skill-grpc"},{"skill":"Hardware","uses":1,"href":"#skill-hardware"},{"skill":"HashTables","uses":1,"href":"#skill-hashtables"},{"skill":"Hexadecimal","uses":1,"href":"#skill-hexadecimal"},{"skill":"HRM","uses":1,"href":"#skill-hrm"},{"skill":"HTTP","uses":1,"href":"#skill-http"},{"skill":"i18next","uses":1,"href":"#skill-i18next"},{"skill":"ImperfectCompetition","uses":1,"href":"#skill-imperfectcompetition"},{"skill":"Inheritance","uses":1,"href":"#skill-inheritance"},{"skill":"IntegerProgramming","uses":1,"href":"#skill-integerprogramming"},{"skill":"IntellectualProperty","uses":1,"href":"#skill-intellectualproperty"},{"skill":"iOS","uses":1,"href":"#skill-ios"},{"skill":"Joins","uses":1,"href":"#skill-joins"},{"skill":"JS","uses":1,"href":"#skill-js"},{"skill":"Lean4","uses":1,"href":"#skill-lean4"},{"skill":"LearningToRank","uses":1,"href":"#skill-learningtorank"},{"skill":"Leitner","uses":1,"href":"#skill-leitner"},{"skill":"LinearAlgebra","uses":1,"href":"#skill-linearalgebra"},{"skill":"LinearProgramming","uses":1,"href":"#skill-linearprogramming"},{"skill":"LinkGrammar","uses":1,"href":"#skill-linkgrammar"},{"skill":"LiteratureReview","uses":1,"href":"#skill-literaturereview"},{"skill":"LiveKit","uses":1,"href":"#skill-livekit"},{"skill":"MAC","uses":1,"href":"#skill-mac"},{"skill":"Macroeconomics","uses":1,"href":"#skill-macroeconomics"},{"skill":"Management","uses":1,"href":"#skill-management"},{"skill":"Manifold","uses":1,"href":"#skill-manifold"},{"skill":"MapLibre","uses":1,"href":"#skill-maplibre"},{"skill":"MarketFailure","uses":1,"href":"#skill-marketfailure"},{"skill":"Marx","uses":1,"href":"#skill-marx"},{"skill":"MathematicalLogic","uses":1,"href":"#skill-mathematicallogic"},{"skill":"Mathlib","uses":1,"href":"#skill-mathlib"},{"skill":"MediaEconomics","uses":1,"href":"#skill-mediaeconomics"},{"skill":"MediaRegulation","uses":1,"href":"#skill-mediaregulation"},{"skill":"Melos","uses":1,"href":"#skill-melos"},{"skill":"MemoryManagement","uses":1,"href":"#skill-memorymanagement"},{"skill":"Metaheuristics","uses":1,"href":"#skill-metaheuristics"},{"skill":"Microeconomics","uses":1,"href":"#skill-microeconomics"},{"skill":"MinIO","uses":1,"href":"#skill-minio"},{"skill":"MiniZinc","uses":1,"href":"#skill-minizinc"},{"skill":"Mobile","uses":1,"href":"#skill-mobile"},{"skill":"MockTesting","uses":1,"href":"#skill-mocktesting"},{"skill":"Modelling","uses":1,"href":"#skill-modelling"},{"skill":"MonetaryMarket","uses":1,"href":"#skill-monetarymarket"},{"skill":"NationalIncome","uses":1,"href":"#skill-nationalincome"},{"skill":"NER","uses":1,"href":"#skill-ner"},{"skill":"NetworkAdministration","uses":1,"href":"#skill-networkadministration"},{"skill":"Networking","uses":1,"href":"#skill-networking"},{"skill":"Normalization","uses":1,"href":"#skill-normalization"},{"skill":"NoSQL","uses":1,"href":"#skill-nosql"},{"skill":"NSGA2","uses":1,"href":"#skill-nsga2"},{"skill":"OfflineFirst","uses":1,"href":"#skill-offlinefirst"},{"skill":"OOP","uses":1,"href":"#skill-oop"},{"skill":"OpenBao","uses":1,"href":"#skill-openbao"},{"skill":"OpenCASCADE","uses":1,"href":"#skill-opencascade"},{"skill":"OpenStreetMap","uses":1,"href":"#skill-openstreetmap"},{"skill":"OperatingSystems","uses":1,"href":"#skill-operatingsystems"},{"skill":"OperationsResearch","uses":1,"href":"#skill-operationsresearch"},{"skill":"Optuna","uses":1,"href":"#skill-optuna"},{"skill":"ORTools","uses":1,"href":"#skill-ortools"},{"skill":"OSPF","uses":1,"href":"#skill-ospf"},{"skill":"Overloading","uses":1,"href":"#skill-overloading"},{"skill":"PayPal","uses":1,"href":"#skill-paypal"},{"skill":"PHP","uses":1,"href":"#skill-php"},{"skill":"PoissonModel","uses":1,"href":"#skill-poissonmodel"},{"skill":"PoliticalScience","uses":1,"href":"#skill-politicalscience"},{"skill":"Polymorphism","uses":1,"href":"#skill-polymorphism"},{"skill":"PostGIS","uses":1,"href":"#skill-postgis"},{"skill":"Power","uses":1,"href":"#skill-power"},{"skill":"PredicateLogic","uses":1,"href":"#skill-predicatelogic"},{"skill":"Processes","uses":1,"href":"#skill-processes"},{"skill":"Programming","uses":1,"href":"#skill-programming"},{"skill":"ProjectManagement","uses":1,"href":"#skill-projectmanagement"},{"skill":"Prolog","uses":1,"href":"#skill-prolog"},{"skill":"Prometheus","uses":1,"href":"#skill-prometheus"},{"skill":"PropositionalLogic","uses":1,"href":"#skill-propositionallogic"},{"skill":"Protobuf","uses":1,"href":"#skill-protobuf"},{"skill":"QRCode","uses":1,"href":"#skill-qrcode"},{"skill":"QueryOptimization","uses":1,"href":"#skill-queryoptimization"},{"skill":"Ratatui","uses":1,"href":"#skill-ratatui"},{"skill":"ReactRouter","uses":1,"href":"#skill-reactrouter"},{"skill":"Redis","uses":1,"href":"#skill-redis"},{"skill":"RelationalModel","uses":1,"href":"#skill-relationalmodel"},{"skill":"Riverpod","uses":1,"href":"#skill-riverpod"},{"skill":"Scheduling","uses":1,"href":"#skill-scheduling"},{"skill":"ScientificWriting","uses":1,"href":"#skill-scientificwriting"},{"skill":"Scrum","uses":1,"href":"#skill-scrum"},{"skill":"SearchAlgorithms","uses":1,"href":"#skill-searchalgorithms"},{"skill":"Semaphores","uses":1,"href":"#skill-semaphores"},{"skill":"SetTheory","uses":1,"href":"#skill-settheory"},{"skill":"ShellScripting","uses":1,"href":"#skill-shellscripting"},{"skill":"SM2","uses":1,"href":"#skill-sm2"},{"skill":"SoftwareDesign","uses":1,"href":"#skill-softwaredesign"},{"skill":"SoftwareEngineering","uses":1,"href":"#skill-softwareengineering"},{"skill":"Sorting","uses":1,"href":"#skill-sorting"},{"skill":"SpacedRepetition","uses":1,"href":"#skill-spacedrepetition"},{"skill":"spaCy","uses":1,"href":"#skill-spacy-2"},{"skill":"SQLCipher","uses":1,"href":"#skill-sqlcipher"},{"skill":"SQLInjection","uses":1,"href":"#skill-sqlinjection"},{"skill":"SQLx","uses":1,"href":"#skill-sqlx"},{"skill":"State","uses":1,"href":"#skill-state"},{"skill":"Statistics","uses":1,"href":"#skill-statistics"},{"skill":"StoredProcedures","uses":1,"href":"#skill-storedprocedures"},{"skill":"SupervisedLearning","uses":1,"href":"#skill-supervisedlearning"},{"skill":"SymbolicAI","uses":1,"href":"#skill-symbolicai"},{"skill":"SymPy","uses":1,"href":"#skill-sympy"},{"skill":"Synchronization","uses":1,"href":"#skill-synchronization"},{"skill":"SystemAdministration","uses":1,"href":"#skill-systemadministration"},{"skill":"Tatoeba","uses":1,"href":"#skill-tatoeba"},{"skill":"Testcontainers","uses":1,"href":"#skill-testcontainers"},{"skill":"ThreeJS","uses":1,"href":"#skill-threejs"},{"skill":"TOML","uses":1,"href":"#skill-toml"},{"skill":"Tonic","uses":1,"href":"#skill-tonic"},{"skill":"Transactions","uses":1,"href":"#skill-transactions"},{"skill":"Trees","uses":1,"href":"#skill-trees"},{"skill":"Triggers","uses":1,"href":"#skill-triggers"},{"skill":"UnitTesting","uses":1,"href":"#skill-unittesting"},{"skill":"Unix","uses":1,"href":"#skill-unix"},{"skill":"URL","uses":1,"href":"#skill-url"},{"skill":"URLRewriting","uses":1,"href":"#skill-urlrewriting"},{"skill":"Vercel","uses":1,"href":"#skill-vercel"},{"skill":"Vite","uses":1,"href":"#skill-vite"},{"skill":"WalkForwardBacktest","uses":1,"href":"#skill-walkforwardbacktest"},{"skill":"WebEconomy","uses":1,"href":"#skill-webeconomy"},{"skill":"Weber","uses":1,"href":"#skill-weber"},{"skill":"WebHosting","uses":1,"href":"#skill-webhosting"},{"skill":"Weka","uses":1,"href":"#skill-weka"},{"skill":"WordNet","uses":1,"href":"#skill-wordnet"},{"skill":"XPath","uses":1,"href":"#skill-xpath"},{"skill":"XQuery","uses":1,"href":"#skill-xquery"},{"skill":"XSLT","uses":1,"href":"#skill-xslt"},{"skill":"XSS","uses":1,"href":"#skill-xss"}],"kinds":{"work":"Work Experience","education":"Education","project":"Projects","course":"Course units","volunteer":"Volunteer","competition":"Events"},"groups":{"skills":"Skills","entries":"Entries"},"actions":[{"label":"Français","hint":"Language","href":"/assets/data/resume-fr.xml"},{"label":"Nederlands","hint":"Language","href":"/assets/data/resume-nl.xml"},{"label":"Español","hint":"Language","href":"/assets/data/resume-es.xml"},{"label":"Deutsch","hint":"Language","href":"/assets/data/resume-de.xml"},{"label":"中文","hint":"Language","href":"/assets/data/resume-zh.xml"},{"label":"Toggle theme","press":"#theme-toggle"},{"label":"Download CV","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_en.pdf"},{"label":"Download the timeline","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_timeline_en.pdf"}]}</index>
+      </search>
       <ticks>
         <tick>
           <label>2010</label>
@@ -1953,6 +1984,7 @@
           <bars>
             <bar>
               <target>work-quick-restaurant-student-job</target>
+              <entry>work-quick-restaurant-student-job</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Quick Restaurant</name>
@@ -1967,6 +1999,7 @@
             </bar>
             <bar>
               <target>work-restomax-full-stack-developer-web-intern</target>
+              <entry>work-restomax-full-stack-developer-web-intern</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>RESTOMAX</name>
@@ -1982,6 +2015,7 @@
             </bar>
             <bar>
               <target>work-restomax-full-stack-developer-web-intern</target>
+              <entry>project-webmenu</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>WebMenu</name>
@@ -1997,6 +2031,7 @@
             </bar>
             <bar>
               <target>work-les-auberges-de-jeunesse-wallonie-bruxelles-student-job</target>
+              <entry>work-les-auberges-de-jeunesse-wallonie-bruxelles-student-job</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</name>
@@ -2011,6 +2046,7 @@
             </bar>
             <bar>
               <target>work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-developer-web-intern</target>
+              <entry>work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-developer-web-intern</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>EDITx: IT Challenges, IT Jobs, Education in IT for X</name>
@@ -2025,6 +2061,7 @@
             </bar>
             <bar>
               <target>work-technofutur-tic-full-stack-developer-web-intern</target>
+              <entry>work-technofutur-tic-full-stack-developer-web-intern</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Technofutur TIC</name>
@@ -2040,6 +2077,7 @@
             </bar>
             <bar>
               <target>work-technofutur-tic-full-stack-developer-web-intern</target>
+              <entry>project-myway</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>MyWay</name>
@@ -2058,6 +2096,7 @@
             </bar>
             <bar>
               <target>work-xtrada-software-crafter</target>
+              <entry>work-xtrada-software-crafter</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Xtrada</name>
@@ -2073,6 +2112,7 @@
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-software-crafter</target>
+              <entry>work-xtrada-net-blazor-software-crafter</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Xtrada</name>
@@ -2088,6 +2128,7 @@
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-software-crafter</target>
+              <entry>project-kwalitijd</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Kwalitijd</name>
@@ -2103,6 +2144,7 @@
             </bar>
             <bar>
               <target>work-xtrada-net-react-software-crafter</target>
+              <entry>work-xtrada-net-react-software-crafter</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Xtrada</name>
@@ -2118,6 +2160,7 @@
             </bar>
             <bar>
               <target>work-xtrada-net-react-software-crafter</target>
+              <entry>project-vhauctions</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>VhAuctions</name>
@@ -2133,6 +2176,7 @@
             </bar>
             <bar>
               <target>work-xtrada-data-scientist</target>
+              <entry>work-xtrada-data-scientist</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Xtrada</name>
@@ -2148,6 +2192,7 @@
             </bar>
             <bar>
               <target>work-xtrada-data-scientist</target>
+              <entry>project-vhauctions-ner-inventory-model</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>VhAuctions NER Inventory Model</name>
@@ -2163,6 +2208,7 @@
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter</target>
+              <entry>work-emvi-ai-ai-software-crafter</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Emvi.ai</name>
@@ -2178,6 +2224,7 @@
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter</target>
+              <entry>project-remi</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
@@ -2195,6 +2242,7 @@
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter-lead</target>
+              <entry>work-emvi-ai-ai-software-crafter-lead</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Emvi.ai</name>
@@ -2210,6 +2258,7 @@
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter-lead</target>
+              <entry>project-emvi-app</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
@@ -2227,6 +2276,7 @@
             </bar>
             <bar>
               <target>work-acteble-founder</target>
+              <entry>work-acteble-founder</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Acteble</name>
@@ -2242,6 +2292,7 @@
             </bar>
             <bar>
               <target>work-acteble-founder</target>
+              <entry>project-acteble</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Acteble</name>
@@ -2259,6 +2310,7 @@
             </bar>
             <bar>
               <target>work-acteble-founder</target>
+              <entry>project-memoire-de-master</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Mémoire de master</name>
@@ -2277,6 +2329,7 @@
             </bar>
             <bar>
               <target>work-acteble-founder</target>
+              <entry>project-actrack</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Actrack</name>
@@ -2294,6 +2347,7 @@
             </bar>
             <bar>
               <target>work-acteble-founder</target>
+              <entry>project-baba</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Baba</name>
@@ -2311,6 +2365,7 @@
             </bar>
             <bar>
               <target>work-acteble-founder</target>
+              <entry>project-ll</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>LL</name>
@@ -2328,6 +2383,7 @@
             </bar>
             <bar>
               <target>work-acteble-founder</target>
+              <entry>project-kag</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>KAG</name>
@@ -2345,6 +2401,7 @@
             </bar>
             <bar>
               <target>work-acteble-founder</target>
+              <entry>project-polytech</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Polytech</name>
@@ -2362,6 +2419,7 @@
             </bar>
             <bar>
               <target>work-acteble-founder</target>
+              <entry>project-indexer</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Indexer</name>
@@ -2379,6 +2437,7 @@
             </bar>
             <bar>
               <target>work-acteble-founder</target>
+              <entry>project-converge</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Converge</name>
@@ -2396,6 +2455,7 @@
             </bar>
             <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
+              <entry>work-belgian-senate-ai-research-scientist</entry>
               <kind>work</kind>
               <depth>0</depth>
               <name>Belgian Senate</name>
@@ -2411,6 +2471,7 @@
             </bar>
             <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
+              <entry>project-synergy</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
@@ -2428,6 +2489,7 @@
             </bar>
             <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
+              <entry>project-fedrag-be</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
@@ -2479,6 +2541,7 @@
           <bars>
             <bar>
               <target>education-lycee-mater-dei</target>
+              <entry>education-lycee-mater-dei</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>Lycée Mater Dei</name>
@@ -2494,6 +2557,7 @@
             </bar>
             <bar>
               <target>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</target>
+              <entry>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>Centre Scolaire Saint-Adrien - Val Duchesse</name>
@@ -2509,6 +2573,7 @@
             </bar>
             <bar>
               <target>education-uclouvain-universite-catholique-de-louvain-cours-preparatoires</target>
+              <entry>education-uclouvain-universite-catholique-de-louvain-cours-preparatoires</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>UCLouvain - Université catholique de Louvain</name>
@@ -2524,6 +2589,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <entry>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>Université Saint-Louis - Bruxelles</name>
@@ -2553,6 +2619,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <entry>course-economie-i</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Économie I</name>
@@ -2566,6 +2633,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <entry>course-economie-ii</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Économie II</name>
@@ -2579,6 +2647,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <entry>course-science-politique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Science politique</name>
@@ -2592,6 +2661,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <entry>course-seminaire-penser-le-social</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Séminaire : penser le social</name>
@@ -2605,6 +2675,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <entry>course-seminaire-principes-et-methodes-en-sciences-sociales</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Séminaire : principes et méthodes en sciences sociales</name>
@@ -2618,6 +2689,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <entry>course-socio-economie-des-medias</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Socio-économie des médias</name>
@@ -2631,6 +2703,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <entry>course-anglais-i-saint-louis</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Anglais I (Saint-Louis)</name>
@@ -2644,6 +2717,7 @@
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</target>
+              <entry>course-neerlandais-i</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Néerlandais I</name>
@@ -2657,6 +2731,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</name>
@@ -2733,6 +2808,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-structure-des-ordinateurs</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Structure des ordinateurs</name>
@@ -2746,6 +2822,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-informatique-systeme-d-exploitation</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Informatique - Système d'exploitation</name>
@@ -2759,6 +2836,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-mathematique-appliquee-a-l-informatique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Mathématique appliquée à l'informatique</name>
@@ -2772,6 +2850,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-principes-algorithmiques-et-programmation</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Principes algorithmiques et programmation</name>
@@ -2785,6 +2864,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-principes-d-analyse-informatique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Principes d'analyse informatique</name>
@@ -2798,6 +2878,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-bases-des-reseaux</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Bases des réseaux</name>
@@ -2811,6 +2892,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-gestion-et-exploitation-de-bases-de-donnees</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Gestion et exploitation de bases de données</name>
@@ -2824,6 +2906,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-information-et-communication-professionnelles</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Information et communication professionnelles</name>
@@ -2837,6 +2920,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-initiation-aux-bases-de-donnees</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Initiation aux bases de données</name>
@@ -2850,6 +2934,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-notions-de-e-business</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Notions de e-business</name>
@@ -2863,6 +2948,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-projet-d-analyse-et-de-conception</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Projet d'analyse et de conception</name>
@@ -2876,6 +2962,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-techniques-de-gestion-de-projet</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Techniques de gestion de projet</name>
@@ -2889,6 +2976,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-web-principes-de-base</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Web : principes de base</name>
@@ -2902,6 +2990,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-elements-de-statistique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Éléments de statistique</name>
@@ -2915,6 +3004,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-organisation-des-entreprises-et-elements-de-management</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Organisation des entreprises et éléments de management</name>
@@ -2928,6 +3018,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-produits-logiciels-de-gestion-integres</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Produits logiciels de gestion intégrés</name>
@@ -2941,6 +3032,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-programmation-orientee-objet</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Programmation orientée objet</name>
@@ -2954,6 +3046,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-projet-de-developpement-sgbd</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Projet de développement SGBD</name>
@@ -2967,6 +3060,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-projet-de-developpement-web</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Projet de développement web</name>
@@ -2980,6 +3074,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-administration-gestion-et-securisation-des-reseaux</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Administration, gestion et sécurisation des réseaux</name>
@@ -2993,6 +3088,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-projet-d-integration-de-developpement</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Projet d'intégration de développement</name>
@@ -3006,6 +3102,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>course-veille-technologique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Veille technologique</name>
@@ -3019,6 +3116,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>volunteer-ephec-ecole-superieure-de-promotion-sociale-student-representative</entry>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>Student Representative</name>
@@ -3033,6 +3131,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>volunteer-ephec-ecole-superieure-de-promotion-sociale-tutor</entry>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>Tutor</name>
@@ -3047,6 +3146,7 @@
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</target>
+              <entry>project-webmenu</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>WebMenu</name>
@@ -3062,6 +3162,7 @@
             </bar>
             <bar>
               <target>education-institut-saint-louis-bruxelles-attestation</target>
+              <entry>education-institut-saint-louis-bruxelles-attestation</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>Institut Saint-Louis Bruxelles</name>
@@ -3077,6 +3178,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>education-umons-master-of-science-msc</entry>
               <kind>education</kind>
               <depth>0</depth>
               <name>UMons</name>
@@ -3157,6 +3259,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-bases-de-donnees-i</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Bases de données I</name>
@@ -3170,6 +3273,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-algorithmique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Algorithmique</name>
@@ -3183,6 +3287,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-modelisation-logicielle</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Modélisation logicielle</name>
@@ -3196,6 +3301,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-mathematique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Mathématique</name>
@@ -3209,6 +3315,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-anglais-i</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Anglais I</name>
@@ -3222,6 +3329,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-lecture-et-redaction-scientifique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Lecture et rédaction scientifique</name>
@@ -3235,6 +3343,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-strategie-et-politiques-en-ressources-humaines</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Stratégie et politiques en ressources humaines</name>
@@ -3248,6 +3357,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-reseaux</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Réseaux</name>
@@ -3261,6 +3371,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-systemes-d-exploitation</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Systèmes d'exploitation</name>
@@ -3274,6 +3385,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-anglais-ii</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Anglais II</name>
@@ -3287,6 +3399,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-bases-de-donnees-ii</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Bases de données II</name>
@@ -3300,6 +3413,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-ingenierie-de-logiciels-et-gestion-de-projets</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Ingénierie de logiciels et gestion de projets</name>
@@ -3313,6 +3427,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-intelligence-artificielle</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Intelligence artificielle</name>
@@ -3326,6 +3441,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-recherche-operationnelle-et-applications</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Recherche opérationnelle et applications</name>
@@ -3339,6 +3455,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-structures-de-donnees</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Structures de données</name>
@@ -3352,6 +3469,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-seminaires-d-informatique-en-veille-technologique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Séminaires d'informatique en veille technologique</name>
@@ -3365,6 +3483,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-cryptographie-et-securite-des-systemes-informatiques</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Cryptographie et sécurité des systèmes informatiques</name>
@@ -3378,6 +3497,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>course-ethique-et-droit-de-l-informatique</entry>
               <kind>unit</kind>
               <depth>1</depth>
               <name>Éthique et droit de l'informatique</name>
@@ -3391,6 +3511,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>volunteer-umons-student-representative</entry>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>Student Representative</name>
@@ -3405,6 +3526,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>volunteer-umons-buddy-tandemons</entry>
               <kind>volunteer</kind>
               <depth>1</depth>
               <name>Buddy TandeMons</name>
@@ -3419,6 +3541,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>project-remi</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Remi</name>
@@ -3436,6 +3559,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>project-emvi-app</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Emvi App</name>
@@ -3453,6 +3577,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>project-synergy</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Synergy</name>
@@ -3470,6 +3595,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>project-fedrag-be</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>fedrag-be</name>
@@ -3487,6 +3613,7 @@
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
+              <entry>project-memoire-de-master</entry>
               <kind>project</kind>
               <depth>1</depth>
               <name>Mémoire de master</name>
@@ -4269,6 +4396,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Author</role>
       </roles>
       <summary>Five layers: a Rust CLI that does all the I/O, a link-grammar syntactic parser, an SWI-Prolog symbolic engine with no I/O, domain vocabulary packs kept as data, and some fifty Rust action binaries — a new verb is one pack fact and one binary. Mutation-tested, with a corpus of regression sentences and a cold start around 120 ms.</summary>
+      <anchor>project-baba</anchor>
+      <anchoredIn>work-acteble-founder</anchoredIn>
     </project>
     <project>
       <name>KAG</name>
@@ -4289,6 +4418,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Author</role>
       </roles>
       <summary>Nine pipeline stages (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), each a port whose algorithm is chosen by label (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonal + DDD + TDD, standard library only in the core, no LLM. Metrics match pytrec_eval exactly. On six BEIR datasets no retriever wins everywhere (ndcg@10 0.668 on SciFact with BM25F); a LambdaMART reranker lifts ArguAna from 0.301 to 0.527 in 5-fold cross-validation.</summary>
+      <anchor>project-kag</anchor>
+      <anchoredIn>work-acteble-founder</anchoredIn>
     </project>
     <project>
       <name>LL</name>
@@ -4317,6 +4448,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Author</role>
       </roles>
       <summary>A Rust workspace whose pure domain core (hexagonal, DDD, test-first) drives a terminal UI (ratatui) and Dioxus desktop and iOS apps: Leitner boxes with SM-2 scheduling over SQLite, content from checksummed data packs. Its data lab builds the six-language lexical database in Python — about 8,900 word senses (October 2026) aligned on WordNet, illustrated with Tatoeba sentences, analysed with spaCy, every word-in-sentence link checked.</summary>
+      <anchor>project-ll</anchor>
+      <anchoredIn>work-acteble-founder</anchoredIn>
     </project>
     <project>
       <name>Indexer</name>
@@ -4337,6 +4470,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Author</role>
       </roles>
       <summary>Each of the 523 sources is a TOML file that Rust validates and compiles into static JSON, embedded at build time in a Cloudflare Worker: pure-Rust API logic, ETag and 304 responses, per-IP and API-key rate limits counted exactly by a Durable Object, BM25F ranking weighted by a six-criterion reliability score, and a gap analysis that matches needs to candidate sources.</summary>
+      <anchor>project-indexer</anchor>
+      <anchoredIn>work-acteble-founder</anchoredIn>
     </project>
     <project>
       <name>Polytech</name>
@@ -4360,6 +4495,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Author</role>
       </roles>
       <summary>A Python library (DDD, hexagonal, test-first, mutation-tested, mypy strict) of the notions of maths, physics, electronics, signals and optimisation, computed with SymPy, NumPy and SciPy and injected through macros into 920 LaTeX documents; a pipeline converts course material to Markdown, LaTeX and XML, and Lean 4 proofs with Mathlib trace results back to the axioms.</summary>
+      <anchor>project-polytech</anchor>
+      <anchoredIn>work-acteble-founder</anchoredIn>
     </project>
     <project>
       <name>Converge</name>
@@ -4385,6 +4522,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Author</role>
       </roles>
       <summary>The AI writes operations, the engines compute: an LLM emits a strictly validated JSON part program; two independent kernels, OpenCASCADE (exact) and Manifold (mesh), must agree on volume and bounding box, and the assembly is checked for overlaps before any STEP, STL, 3MF or glTF export. A Rust core (hexagonal ports and adapters) drives a Python worker over JSON lines, and an NSGA-II search (Optuna) picks the components on a Pareto front, cross-checked by exact enumeration.</summary>
+      <anchor>project-converge</anchor>
+      <anchoredIn>work-acteble-founder</anchoredIn>
     </project>
     <project>
       <name>Actrack</name>
@@ -4413,6 +4552,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Author</role>
       </roles>
       <summary>A Python engine (DDD, hexagonal) weighs fifteen match-outcome strategies — Elo, Poisson attack/defence, form, head-to-head, squad value, rest days, bookmaker odds — adjusted for venue, and is ported to Rust/Dioxus apps for web (WebAssembly), desktop, mobile and terminal, kept at parity with it. A research lab backtests the strategies walk-forward, one tournament held out at a time, on 635 matches from ten tournaments (World Cups 2002–2022 and four continental cups of 2023–2024), and tunes the ensemble weights; out of sample, Elo alone scores best (55.6% accuracy).</summary>
+      <anchor>project-actrack</anchor>
+      <anchoredIn>work-acteble-founder</anchoredIn>
     </project>
     <project>
       <name>Synergy</name>
@@ -4431,6 +4572,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Author</role>
       </roles>
       <summary>Internal platform that lets parliamentary staff search, explore and converse with the archives of the Belgian Federal Parliament, powered by a retrieval-augmented pipeline with bilingual FR/NL support.</summary>
+      <anchor>project-synergy</anchor>
+      <anchoredIn>work-belgian-senate-ai-research-scientist</anchoredIn>
     </project>
     <project>
       <name>fedrag-be</name>
@@ -4451,6 +4594,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Author</role>
       </roles>
       <summary>Open, reproducible protocol that benchmarks retrieval strategies on the bilingual Senate corpus, measuring FR/NL robustness across the retrieval pipeline.</summary>
+      <anchor>project-fedrag-be</anchor>
+      <anchoredIn>work-belgian-senate-ai-research-scientist</anchoredIn>
     </project>
     <project>
       <name>Acteble</name>
@@ -4509,6 +4654,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Founder</role>
       </roles>
       <summary>Backend: a modular monolith in Rust, split into bounded contexts with a hexagonal architecture, CQRS and an event-driven core (event store, outbox/inbox), served over REST/JSON and gRPC streaming; a PostGIS pipeline turns OpenStreetMap data into routing graphs published to a CDN, and custom Dylint lints enforce the architecture in CI. App: an offline-first Flutter client for iOS, Android, web and desktop — a Melos monorepo with Riverpod over an encrypted local store (Drift, SQLCipher), end-to-end encryption through a Rust core (vodozemac via flutter_rust_bridge), Bluetooth peer-to-peer sync, MapLibre maps and LiveKit real-time media. Website: a React single-page application built with Vite and internationalised with i18next.</summary>
+      <anchor>project-acteble</anchor>
+      <anchoredIn>work-acteble-founder</anchoredIn>
     </project>
     <project>
       <name>Mémoire de master</name>
@@ -4534,6 +4681,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       </roles>
       <entity>UMONS</entity>
       <summary>MSc dissertation « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », UMONS Service d'Algorithmique — the R&amp;D of Acteble's planning engine. Multi-objective group formation under spatio-temporal constraints: NP-hard by reduction from k-CLIQUE; admissible groups enumerated as bicliques (Close-by-One); an iterative Pareto solver with termination and local-convergence guarantees; one DSL compiled to Python, MiniZinc and Rust that yield bit-identical fronts, the Rust output running in the Acteble API. Benchmarked against CP-SAT, NSGA-II, MOEA/D and SPEA2 (hypervolume, IGD, 30 seeds, Wilcoxon–Holm): significantly ahead of MOEA/D at every size, of NSGA-II and SPEA2 from 500 users.</summary>
+      <anchor>project-memoire-de-master</anchor>
+      <anchoredIn>work-acteble-founder</anchoredIn>
     </project>
     <project>
       <name>Emvi App</name>
@@ -4551,6 +4700,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <url>https://www.emvi.ai</url>
       <type>Mobile Application</type>
       <summary>AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes &amp; barcodes), and an adapted Valhalla routing system for the visually impaired.</summary>
+      <anchor>project-emvi-app</anchor>
+      <anchoredIn>work-emvi-ai-ai-software-crafter-lead</anchoredIn>
     </project>
     <project>
       <name>Remi</name>
@@ -4568,6 +4719,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <endDate>2025-06-30</endDate>
       <type>AI Application</type>
       <summary>Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline.</summary>
+      <anchor>project-remi</anchor>
+      <anchoredIn>work-emvi-ai-ai-software-crafter</anchoredIn>
     </project>
     <project>
       <name>EduCraft</name>
@@ -4579,6 +4732,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       </keywords>
       <startDate>2024-03-29</startDate>
       <endDate>2024-03-31</endDate>
+      <anchor>project-educraft</anchor>
     </project>
     <project>
       <name>MyWay</name>
@@ -4605,6 +4759,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <role>Founder</role>
       </roles>
       <entity>Freelance</entity>
+      <anchor>project-myway</anchor>
+      <anchoredIn>work-technofutur-tic-full-stack-developer-web-intern</anchoredIn>
     </project>
     <project>
       <name>VhAuctions NER Inventory Model</name>
@@ -4619,6 +4775,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <startDate>2024-03-01</startDate>
       <endDate>2024-08-07</endDate>
       <summary>Named Entity Recognition machine learning model to extract inventory items from an audio transcription.</summary>
+      <anchor>project-vhauctions-ner-inventory-model</anchor>
+      <anchoredIn>work-xtrada-data-scientist</anchoredIn>
     </project>
     <project>
       <name>VhAuctions</name>
@@ -4636,6 +4794,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <startDate>2024-01-01</startDate>
       <endDate>2024-02-28</endDate>
       <summary>Fleet manager for auctions.</summary>
+      <anchor>project-vhauctions</anchor>
+      <anchoredIn>work-xtrada-net-react-software-crafter</anchoredIn>
     </project>
     <project>
       <name>Kwalitijd</name>
@@ -4651,6 +4811,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <startDate>2023-09-01</startDate>
       <endDate>2023-12-31</endDate>
       <summary>Survey manager for sports clubs and federations.</summary>
+      <anchor>project-kwalitijd</anchor>
+      <anchoredIn>work-xtrada-net-blazor-software-crafter</anchoredIn>
     </project>
     <project>
       <name>WebMenu</name>
@@ -4663,6 +4825,8 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       <startDate>2021-11-01</startDate>
       <endDate>2022-03-31</endDate>
       <summary>QR code based cash register for HoReCa establishments.</summary>
+      <anchor>project-webmenu</anchor>
+      <anchoredIn>work-restomax-full-stack-developer-web-intern</anchoredIn>
     </project>
   </projects>
   <references>
@@ -4848,6 +5012,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.umons.be</url>
       <startDate>2023-11-30</startDate>
       <endDate>2026-09-04</endDate>
+      <anchor>volunteer-umons-student-representative</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </volunteer-item>
     <volunteer-item>
       <organization>UMons</organization>
@@ -4855,6 +5021,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.umons.be</url>
       <startDate>2023-11-30</startDate>
       <endDate>2026-09-04</endDate>
+      <anchor>volunteer-umons-buddy-tandemons</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </volunteer-item>
     <volunteer-item>
       <organization>EPHEC École Supérieure de Promotion Sociale</organization>
@@ -4862,6 +5030,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be</url>
       <startDate>2019-09-30</startDate>
       <endDate>2022-10-15</endDate>
+      <anchor>volunteer-ephec-ecole-superieure-de-promotion-sociale-student-representative</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </volunteer-item>
     <volunteer-item>
       <organization>EPHEC École Supérieure de Promotion Sociale</organization>
@@ -4869,6 +5039,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be</url>
       <startDate>2019-09-30</startDate>
       <endDate>2022-10-15</endDate>
+      <anchor>volunteer-ephec-ecole-superieure-de-promotion-sociale-tutor</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </volunteer-item>
   </volunteer>
   <courses>
@@ -4883,6 +5055,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-011-C.htm</url>
       <entity>UMONS</entity>
       <summary>Algorithmics</summary>
+      <anchor>course-algorithmique</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Anglais I</name>
@@ -4892,6 +5066,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-012-C.htm</url>
       <entity>UMONS</entity>
       <summary>English I</summary>
+      <anchor>course-anglais-i</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Bases de données I</name>
@@ -4906,6 +5082,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-013-C.htm</url>
       <entity>UMONS</entity>
       <summary>Databases I</summary>
+      <anchor>course-bases-de-donnees-i</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Lecture et rédaction scientifique</name>
@@ -4916,6 +5094,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-014-C.htm</url>
       <entity>UMONS</entity>
       <summary>Scientific reading and writing</summary>
+      <anchor>course-lecture-et-redaction-scientifique</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Mathématique</name>
@@ -4929,6 +5109,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-015-C.htm</url>
       <entity>UMONS</entity>
       <summary>Mathematics</summary>
+      <anchor>course-mathematique</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Modélisation logicielle</name>
@@ -4943,6 +5125,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2022-2023/ue/US-MC-INFO60-016-C.htm</url>
       <entity>UMONS</entity>
       <summary>Software modelling</summary>
+      <anchor>course-modelisation-logicielle</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Réseaux</name>
@@ -4957,6 +5141,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-017-C.htm</url>
       <entity>UMONS</entity>
       <summary>Networks</summary>
+      <anchor>course-reseaux</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Stratégie et politiques en ressources humaines</name>
@@ -4966,6 +5152,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-018-C.htm</url>
       <entity>UMONS</entity>
       <summary>HR strategy and policy</summary>
+      <anchor>course-strategie-et-politiques-en-ressources-humaines</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Systèmes d'exploitation</name>
@@ -4980,6 +5168,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2023-2024/ue/US-MC-INFO60-019-C.htm</url>
       <entity>UMONS</entity>
       <summary>Operating systems</summary>
+      <anchor>course-systemes-d-exploitation</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Anglais II</name>
@@ -4989,6 +5179,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-001-C.htm</url>
       <entity>UMONS</entity>
       <summary>English II</summary>
+      <anchor>course-anglais-ii</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Bases de données II</name>
@@ -5004,6 +5196,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-101-C.htm</url>
       <entity>UMONS</entity>
       <summary>Databases II</summary>
+      <anchor>course-bases-de-donnees-ii</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Ingénierie de logiciels et gestion de projets</name>
@@ -5015,6 +5209,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-008-C.htm</url>
       <entity>UMONS</entity>
       <summary>Software engineering and project management</summary>
+      <anchor>course-ingenierie-de-logiciels-et-gestion-de-projets</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Intelligence artificielle</name>
@@ -5027,6 +5223,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-102-C.htm</url>
       <entity>UMONS</entity>
       <summary>Artificial intelligence</summary>
+      <anchor>course-intelligence-artificielle</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Recherche opérationnelle et applications</name>
@@ -5039,6 +5237,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-103-C.htm</url>
       <entity>UMONS</entity>
       <summary>Operations research and applications</summary>
+      <anchor>course-recherche-operationnelle-et-applications</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Structures de données</name>
@@ -5052,6 +5252,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2024-2025/ue/US-M1-INFOSP-104-C.htm</url>
       <entity>UMONS</entity>
       <summary>Data structures</summary>
+      <anchor>course-structures-de-donnees</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Séminaires d'informatique en veille technologique</name>
@@ -5061,6 +5263,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-005-C.htm</url>
       <entity>UMONS</entity>
       <summary>Computing seminars in technology watch</summary>
+      <anchor>course-seminaires-d-informatique-en-veille-technologique</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Cryptographie et sécurité des systèmes informatiques</name>
@@ -5073,6 +5277,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-107-C.htm</url>
       <entity>UMONS</entity>
       <summary>Cryptography and systems security</summary>
+      <anchor>course-cryptographie-et-securite-des-systemes-informatiques</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Éthique et droit de l'informatique</name>
@@ -5084,6 +5290,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://webcontent.umons.ac.be/web/fr/pde/2025-2026/ue/US-M2-INFOSP-108-C.htm</url>
       <entity>UMONS</entity>
       <summary>Ethics and IT law</summary>
+      <anchor>course-ethique-et-droit-de-l-informatique</anchor>
+      <anchoredIn>education-umons-master-of-science-msc</anchoredIn>
     </course>
     <course>
       <name>Structure des ordinateurs</name>
@@ -5096,6 +5304,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=43</url>
       <entity>EPHEC</entity>
       <summary>Computer structure</summary>
+      <anchor>course-structure-des-ordinateurs</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Informatique - Système d'exploitation</name>
@@ -5107,6 +5317,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=47</url>
       <entity>EPHEC</entity>
       <summary>Operating systems</summary>
+      <anchor>course-informatique-systeme-d-exploitation</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Mathématique appliquée à l'informatique</name>
@@ -5121,6 +5333,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=20</url>
       <entity>EPHEC</entity>
       <summary>Mathematics applied to computing</summary>
+      <anchor>course-mathematique-appliquee-a-l-informatique</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Principes algorithmiques et programmation</name>
@@ -5133,6 +5347,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=87</url>
       <entity>EPHEC</entity>
       <summary>Algorithmic principles and programming</summary>
+      <anchor>course-principes-algorithmiques-et-programmation</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Principes d'analyse informatique</name>
@@ -5144,6 +5360,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=116</url>
       <entity>EPHEC</entity>
       <summary>Principles of systems analysis</summary>
+      <anchor>course-principes-d-analyse-informatique</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Information et communication professionnelles</name>
@@ -5153,6 +5371,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=39</url>
       <entity>EPHEC</entity>
       <summary>Professional information and communication</summary>
+      <anchor>course-information-et-communication-professionnelles</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Web : principes de base</name>
@@ -5166,6 +5386,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=95</url>
       <entity>EPHEC</entity>
       <summary>Web: fundamentals</summary>
+      <anchor>course-web-principes-de-base</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Initiation aux bases de données</name>
@@ -5178,6 +5400,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=79</url>
       <entity>EPHEC</entity>
       <summary>Introduction to databases</summary>
+      <anchor>course-initiation-aux-bases-de-donnees</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Gestion et exploitation de bases de données</name>
@@ -5190,6 +5414,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=83</url>
       <entity>EPHEC</entity>
       <summary>Database management and operation</summary>
+      <anchor>course-gestion-et-exploitation-de-bases-de-donnees</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Programmation orientée objet</name>
@@ -5203,6 +5429,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=91</url>
       <entity>EPHEC</entity>
       <summary>Object-oriented programming</summary>
+      <anchor>course-programmation-orientee-objet</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Projet d'analyse et de conception</name>
@@ -5214,6 +5442,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=120</url>
       <entity>EPHEC</entity>
       <summary>Analysis and design project</summary>
+      <anchor>course-projet-d-analyse-et-de-conception</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Techniques de gestion de projet</name>
@@ -5223,6 +5453,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=113</url>
       <entity>EPHEC</entity>
       <summary>Project management techniques</summary>
+      <anchor>course-techniques-de-gestion-de-projet</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Éléments de statistique</name>
@@ -5232,6 +5464,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=35</url>
       <entity>EPHEC</entity>
       <summary>Elements of statistics</summary>
+      <anchor>course-elements-de-statistique</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Projet de développement web</name>
@@ -5245,6 +5479,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=99</url>
       <entity>EPHEC</entity>
       <summary>Web development project</summary>
+      <anchor>course-projet-de-developpement-web</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Notions de e-business</name>
@@ -5254,6 +5490,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=56</url>
       <entity>EPHEC</entity>
       <summary>Principles of e-business</summary>
+      <anchor>course-notions-de-e-business</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Projet de développement SGBD</name>
@@ -5266,6 +5504,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=104</url>
       <entity>EPHEC</entity>
       <summary>DBMS development project</summary>
+      <anchor>course-projet-de-developpement-sgbd</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Bases des réseaux</name>
@@ -5278,6 +5518,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=69</url>
       <entity>EPHEC</entity>
       <summary>Network fundamentals</summary>
+      <anchor>course-bases-des-reseaux</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Organisation des entreprises et éléments de management</name>
@@ -5287,6 +5529,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=52</url>
       <entity>EPHEC</entity>
       <summary>Business organisation and management</summary>
+      <anchor>course-organisation-des-entreprises-et-elements-de-management</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Produits logiciels de gestion intégrés</name>
@@ -5296,6 +5540,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=61</url>
       <entity>EPHEC</entity>
       <summary>Integrated management software</summary>
+      <anchor>course-produits-logiciels-de-gestion-integres</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Projet d'intégration de développement</name>
@@ -5311,6 +5557,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=108</url>
       <entity>EPHEC</entity>
       <summary>Development integration project</summary>
+      <anchor>course-projet-d-integration-de-developpement</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Veille technologique</name>
@@ -5320,6 +5568,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=65</url>
       <entity>EPHEC</entity>
       <summary>Technology watch</summary>
+      <anchor>course-veille-technologique</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Administration, gestion et sécurisation des réseaux</name>
@@ -5331,6 +5581,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=74</url>
       <entity>EPHEC</entity>
       <summary>Network administration and security</summary>
+      <anchor>course-administration-gestion-et-securisation-des-reseaux</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Langue en situation appliquée à l'enseignement supérieur UE1</name>
@@ -5339,6 +5591,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       </keywords>
       <entity>EPHEC</entity>
       <summary>Applied language for higher education I</summary>
+      <anchor>course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue1</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Langue en situation appliquée à l'enseignement supérieur UE2</name>
@@ -5348,6 +5602,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <url>https://www.ephec.be/sites/default/files/2024-04/bachelier_en_informatique_version_2_dossier_complet.pdf#page=24</url>
       <entity>EPHEC</entity>
       <summary>Applied language for higher education II</summary>
+      <anchor>course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue2</anchor>
+      <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree</anchoredIn>
     </course>
     <course>
       <name>Économie I</name>
@@ -5359,6 +5615,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       </keywords>
       <entity>USL-B</entity>
       <summary>Economics I</summary>
+      <anchor>course-economie-i</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</anchoredIn>
     </course>
     <course>
       <name>Économie II</name>
@@ -5370,6 +5628,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       </keywords>
       <entity>USL-B</entity>
       <summary>Economics II</summary>
+      <anchor>course-economie-ii</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</anchoredIn>
     </course>
     <course>
       <name>Science politique</name>
@@ -5381,6 +5641,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       </keywords>
       <entity>USL-B</entity>
       <summary>Political science</summary>
+      <anchor>course-science-politique</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</anchoredIn>
     </course>
     <course>
       <name>Séminaire : penser le social</name>
@@ -5392,6 +5654,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       </keywords>
       <entity>USL-B</entity>
       <summary>Seminar: thinking the social</summary>
+      <anchor>course-seminaire-penser-le-social</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</anchoredIn>
     </course>
     <course>
       <name>Séminaire : principes et méthodes en sciences sociales</name>
@@ -5402,6 +5666,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       </keywords>
       <entity>USL-B</entity>
       <summary>Seminar: principles and methods in the social sciences</summary>
+      <anchor>course-seminaire-principes-et-methodes-en-sciences-sociales</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</anchoredIn>
     </course>
     <course>
       <name>Socio-économie des médias</name>
@@ -5413,6 +5679,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       </keywords>
       <entity>USL-B</entity>
       <summary>Socio-economics of the media</summary>
+      <anchor>course-socio-economie-des-medias</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</anchoredIn>
     </course>
     <course>
       <name>Anglais I (Saint-Louis)</name>
@@ -5421,6 +5689,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       </keywords>
       <entity>USL-B</entity>
       <summary>English I</summary>
+      <anchor>course-anglais-i-saint-louis</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</anchoredIn>
     </course>
     <course>
       <name>Néerlandais I</name>
@@ -5429,6 +5699,8 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       </keywords>
       <entity>USL-B</entity>
       <summary>Dutch I</summary>
+      <anchor>course-neerlandais-i</anchor>
+      <anchoredIn>education-universite-saint-louis-bruxelles-bachelor-in-political-sciences</anchoredIn>
     </course>
   </courses>
   <competitions>

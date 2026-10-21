@@ -269,6 +269,10 @@
             background: var(--bg-page);
             line-height: 1.45;
           }
+          /* Every link in the accent, as on the classic page; the blocks below
+             style their own on top of this. */
+          a { color: var(--accent); text-decoration: none; }
+          a:hover { text-decoration: underline; }
           .toolbar {
             background: var(--bg-sidebar);
             padding: 8px 18px;
@@ -358,6 +362,10 @@
             border-radius: 3px;
             font-size: 0.78em;
           }
+          /* A skill that leads into the filter (skill-filter.xsl). */
+          a.skill-tag, .sidebar a.skill-tag { color: #fff; text-decoration: none; word-break: normal; }
+          a.skill-tag:hover, .sidebar a.skill-tag:hover { background: var(--primary); text-decoration: none; }
+          .project-skills .skill-tag { font-size: 0.7em; padding: 0.05em 0.45em; }
           .lang-item { margin: 6px 0; font-size: 0.88em; }
           .lang-item strong { color: var(--primary); }
           .day-list { font-size: 0.85em; color: var(--muted); margin: 0; padding: 0; }
@@ -487,6 +495,8 @@
                its projects appear under the roles that reference them — plus
                awards and interests. */
             .print-drop { display: none; }
+            /* The PDF names no project's skills (show_skills: false). */
+            .project-skills { display: none; }
             /* education_in_body: false — the PDF prints no Education entries,
                only the two-line degrees summary the identity block carries.
                Keeping the entries cost eighteen lines of the narrow column and
@@ -655,14 +665,30 @@
              arrow keys, preview). -->
         <link rel="stylesheet" href="/css/timeline.css"/>
         <link rel="stylesheet" href="/css/timeline-entries.css"/>
+        <link rel="stylesheet" href="/css/timeline-scroll.css"/>
+        <!-- The classic page's search, as is (before the theme's filter
+             styles, which keep the last word on the chips). -->
+        <link rel="stylesheet" href="/css/browse.css"/>
         <link rel="stylesheet" href="/css/skill-links.css"/>
         <script src="/js/timeline.js" defer="defer"></script>
+        <script src="/js/search-rank.js" defer="defer"></script>
+        <script src="/js/search.js" defer="defer"></script>
       </head>
       <body>
         <xsl:call-template name="views-bar"><xsl:with-param name="current" select="'xsltRich'"/></xsl:call-template>
 
         <!-- ============== TOOLBAR ============== -->
         <div class="toolbar">
+
+          <!-- The classic page's menu: its four sections. -->
+          <nav class="group">
+            <xsl:for-each select="meta/nav/link">
+              <a class="nav-link">
+                <xsl:attribute name="href">#<xsl:value-of select="id"/></xsl:attribute>
+                <xsl:value-of select="label"/>
+              </a>
+            </xsl:for-each>
+          </nav>
 
           <!-- Language switcher -->
           <div class="group">
@@ -687,6 +713,18 @@
             <xsl:attribute name="download">cv_grosjean_baptiste_<xsl:value-of select="$lang"/>.pdf</xsl:attribute>
             ⬇ <xsl:call-template name="t"><xsl:with-param name="k" select="'downloadCV'"/></xsl:call-template>
           </a>
+
+          <!-- The timeline's PDF: /js/timeline.js hands out the one of the zoom
+               on screen, from data-pdf-*; the whole career without it. -->
+          <xsl:for-each select="meta/timeline/pdf">
+            <a class="download" data-timeline-pdf="" download="">
+              <xsl:attribute name="href"><xsl:value-of select="all"/></xsl:attribute>
+              <xsl:attribute name="data-pdf-2"><xsl:value-of select="two"/></xsl:attribute>
+              <xsl:attribute name="data-pdf-5"><xsl:value-of select="five"/></xsl:attribute>
+              <xsl:attribute name="data-pdf-all"><xsl:value-of select="all"/></xsl:attribute>
+              ⬇ <xsl:value-of select="label"/>
+            </a>
+          </xsl:for-each>
 
           <!-- Live PDF: print this XSLT-rendered view straight from the
                browser (Cmd/Ctrl+P → Save as PDF). Always in sync with the XML,
@@ -730,7 +768,11 @@
               </p>
             </xsl:if>
             <xsl:if test="basics/phone">
-              <p><span class="icon">☎</span><xsl:value-of select="basics/phone"/></p>
+              <p><span class="icon">☎</span>
+                <a><xsl:attribute name="href">tel:<xsl:value-of select="meta/tel"/></xsl:attribute>
+                  <xsl:value-of select="basics/phone"/>
+                </a>
+              </p>
             </xsl:if>
             <xsl:if test="basics/location/city">
               <p><span class="icon">⌖</span>
@@ -786,6 +828,8 @@
               · canonical JSON Resume v1.0.0.
             </div>
 
+            <xsl:call-template name="search"/>
+
           </main>
 
         </div>
@@ -825,7 +869,7 @@
       <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'technicalSkills'"/></xsl:call-template></h2>
       <div class="skill-tags">
         <xsl:for-each select="$hard/keywords/keyword">
-          <span class="skill-tag"><xsl:value-of select="."/></span>
+          <xsl:call-template name="skill-tag"/>
         </xsl:for-each>
       </div>
     </xsl:if>
@@ -834,7 +878,7 @@
       <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'softSkills'"/></xsl:call-template></h2>
       <div class="skill-tags">
         <xsl:for-each select="$soft/keywords/keyword">
-          <span class="skill-tag"><xsl:value-of select="."/></span>
+          <xsl:call-template name="skill-tag"/>
         </xsl:for-each>
       </div>
     </xsl:if>
@@ -908,7 +952,17 @@
             <xsl:variable name="ref" select="."/>
             <xsl:variable name="proj" select="key('project-by-name', $ref)[local-name($ref) = 'project'] | key('course-by-name', $ref)[local-name($ref) = 'course']"/>
             <li>
-              <strong><xsl:value-of select="$ref"/></strong>
+              <xsl:choose>
+                <xsl:when test="$proj/url">
+                  <a>
+                    <xsl:attribute name="href"><xsl:value-of select="$proj/url"/></xsl:attribute>
+                    <xsl:attribute name="target">_blank</xsl:attribute>
+                    <xsl:attribute name="rel">noopener</xsl:attribute>
+                    <strong><xsl:value-of select="$ref"/></strong>
+                  </a>
+                </xsl:when>
+                <xsl:otherwise><strong><xsl:value-of select="$ref"/></strong></xsl:otherwise>
+              </xsl:choose>
               <xsl:choose>
                 <!-- A course unit's name is its official French designation and
                      its summary the localized title, so on the French page the
@@ -918,9 +972,30 @@
                 <xsl:when test="$proj/summary"> — <xsl:value-of select="$proj/summary"/></xsl:when>
                 <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
               </xsl:choose>
+              <!-- What it was built with, each skill a way into the filter. -->
+              <xsl:if test="$proj/keywords/keyword">
+                <xsl:text> </xsl:text>
+                <span class="skill-tags project-skills">
+                  <xsl:for-each select="$proj/keywords/keyword"><xsl:call-template name="skill-tag"/></xsl:for-each>
+                </span>
+              </xsl:if>
+              <xsl:for-each select="$proj">
+                <xsl:call-template name="row-anchor"><xsl:with-param name="host" select="$ref/../../anchor"/></xsl:call-template>
+              </xsl:for-each>
             </li>
           </xsl:for-each>
         </ul>
+  </xsl:template>
+
+  <!-- The id of a project, course unit or volunteering row, which its timeline
+       bar leads to: on the row of the entry that lists it first, as on the
+       classic page (scripts/lib/xml-anchors.js). An empty span at the row's
+       end, which /css/timeline.css pins to the row's top. -->
+  <xsl:template name="row-anchor">
+    <xsl:param name="host"/>
+    <xsl:if test="anchoredIn and anchoredIn = $host">
+      <span class="tl-anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></span>
+    </xsl:if>
   </xsl:template>
 
   <!-- A degree's course units, year by year: each block (an academic year, with
@@ -989,6 +1064,10 @@
               </button>
             </xsl:for-each>
           </div>
+          <!-- Opens the search; /js/search.js shows it, with ⌘K / Ctrl+K. -->
+          <xsl:for-each select="$tl/search">
+            <button type="button" class="tl-search-open" aria-haspopup="dialog" aria-controls="cv-search" hidden="hidden"><xsl:value-of select="label"/></button>
+          </xsl:for-each>
         </div>
         <div class="tl-scroll">
           <div class="tl-grid">
@@ -1007,13 +1086,20 @@
                 <span class="tl-lane-label"><xsl:value-of select="label"/></span>
                 <div class="tl-track">
                   <xsl:attribute name="style">--rows:<xsl:value-of select="rows"/>;--print-rows:<xsl:value-of select="printRows"/></xsl:attribute>
+                  <!-- Behind the bars: the outline of each entry that carried
+                       something, as on the classic page. -->
+                  <xsl:for-each select="groups/group">
+                    <span class="tl-group" aria-hidden="true">
+                      <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/>;--group-rows:<xsl:value-of select="rows"/>;--print-row:<xsl:value-of select="printRow"/>;--print-group-rows:<xsl:value-of select="printRows"/></xsl:attribute>
+                    </span>
+                  </xsl:for-each>
                   <xsl:for-each select="bars/bar">
                     <xsl:choose>
-                      <!-- A bar leads to the entry that carries it on this page. -->
-                      <xsl:when test="target">
+                      <!-- A bar leads to its entry, where the classic page's leads. -->
+                      <xsl:when test="entry">
                         <a class="tl-bar">
                           <xsl:call-template name="timeline-bar"/>
-                          <xsl:attribute name="href">#<xsl:value-of select="target"/></xsl:attribute>
+                          <xsl:attribute name="href">#<xsl:value-of select="entry"/></xsl:attribute>
                           <span><xsl:value-of select="caption"/></span>
                         </a>
                       </xsl:when>
@@ -1042,6 +1128,24 @@
     </xsl:if>
   </xsl:template>
 
+  <!-- The classic page's search dialog (scripts/lib/sections/search.js), run
+       by /js/search.js over the index the generator wrote (meta/timeline/
+       search — scripts/lib/xml-search.js), inert JSON. Closed. -->
+  <xsl:template name="search">
+    <xsl:for-each select="/resume/meta/timeline/search">
+      <dialog id="cv-search">
+        <xsl:attribute name="aria-label"><xsl:value-of select="label"/></xsl:attribute>
+        <input type="search" class="cv-search-input" autocomplete="off" aria-controls="cv-search-results">
+          <xsl:attribute name="aria-label"><xsl:value-of select="label"/></xsl:attribute>
+          <xsl:attribute name="placeholder"><xsl:value-of select="placeholder"/></xsl:attribute>
+        </input>
+        <ul id="cv-search-results" class="cv-search-results" role="listbox"></ul>
+        <p class="cv-search-empty" hidden="hidden"><xsl:value-of select="empty"/></p>
+        <script type="application/json" id="cv-index"><xsl:value-of select="index"/></script>
+      </dialog>
+    </xsl:for-each>
+  </xsl:template>
+
   <!-- What every bar carries, linked or not: its place, its name for assistive
        technology, and what the preview shows. -->
   <xsl:template name="timeline-bar">
@@ -1064,13 +1168,16 @@
 
   <xsl:template name="main-about">
     <xsl:if test="/resume/basics/summary">
+      <section id="about">
       <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
       <p><xsl:value-of select="/resume/basics/summary"/></p>
+      </section>
     </xsl:if>
   </xsl:template>
 
   <xsl:template name="main-work">
     <xsl:if test="/resume/work/job">
+              <section id="experience">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'experience'"/></xsl:call-template></h2>
               <xsl:for-each select="/resume/work/job">
                 <div>
@@ -1118,7 +1225,7 @@
 
                   <xsl:if test="skills/skill">
                     <div class="inline-skills skill-tags">
-                      <xsl:for-each select="skills/skill"><span class="skill-tag"><xsl:value-of select="."/></span></xsl:for-each>
+                      <xsl:for-each select="skills/skill"><xsl:call-template name="skill-tag"/></xsl:for-each>
                     </div>
                   </xsl:if>
 
@@ -1139,6 +1246,7 @@
                     <div class="embedded-projects">
                       <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template></p>
                       <ul>
+                        <xsl:variable name="host" select="anchor"/>
                         <xsl:for-each select="$workVols">
                           <li>
                             <strong><xsl:value-of select="position"/></strong>
@@ -1149,6 +1257,7 @@
                               <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
                               <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
                             </xsl:choose>
+                            <xsl:call-template name="row-anchor"><xsl:with-param name="host" select="$host"/></xsl:call-template>
                           </li>
                         </xsl:for-each>
                       </ul>
@@ -1171,12 +1280,13 @@
                   </xsl:if>
                 </div>
               </xsl:for-each>
+              </section>
             </xsl:if>
   </xsl:template>
 
   <xsl:template name="main-education">
     <xsl:if test="/resume/education/school">
-              <div class="edu-block">
+              <div class="edu-block" id="education">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'education'"/></xsl:call-template></h2>
               <xsl:for-each select="/resume/education/school">
                 <div>
@@ -1201,7 +1311,7 @@
                   <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
                   <xsl:if test="skills/skill">
                     <div class="inline-skills skill-tags">
-                      <xsl:for-each select="skills/skill"><span class="skill-tag"><xsl:value-of select="."/></span></xsl:for-each>
+                      <xsl:for-each select="skills/skill"><xsl:call-template name="skill-tag"/></xsl:for-each>
                     </div>
                   </xsl:if>
                   <xsl:call-template name="embedded-list">
@@ -1226,6 +1336,7 @@
                     <div class="embedded-projects">
                       <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template></p>
                       <ul>
+                        <xsl:variable name="host" select="anchor"/>
                         <xsl:for-each select="$eduVols">
                           <li>
                             <strong><xsl:value-of select="position"/></strong>
@@ -1236,6 +1347,7 @@
                               <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
                               <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
                             </xsl:choose>
+                            <xsl:call-template name="row-anchor"><xsl:with-param name="host" select="$host"/></xsl:call-template>
                           </li>
                         </xsl:for-each>
                       </ul>
@@ -1290,7 +1402,7 @@
                   <h3><xsl:value-of select="name"/></h3>
                   <xsl:if test="keywords/keyword">
                     <div class="inline-skills skill-tags">
-                      <xsl:for-each select="keywords/keyword"><span class="skill-tag"><xsl:value-of select="."/></span></xsl:for-each>
+                      <xsl:for-each select="keywords/keyword"><xsl:call-template name="skill-tag"/></xsl:for-each>
                     </div>
                   </xsl:if>
                 </div>
@@ -1302,7 +1414,7 @@
   <xsl:template name="main-references">
     <xsl:if test="/resume/references/reference">
               <!-- The LaTeX CV gives the references the verso to themselves. -->
-              <div class="refs">
+              <div class="refs" id="references">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
               <xsl:for-each select="/resume/references/reference">
                 <div class="item">

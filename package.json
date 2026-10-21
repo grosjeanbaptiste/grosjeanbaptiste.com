@@ -1,6 +1,7 @@
 {
   "name": "grosjeanbaptiste.github.io",
   "private": true,
+  "license": "UNLICENSED",
   "version": "0.0.0",
   "type": "commonjs",
   "description": "Personal portfolio/resume — static site generated from resume.json.",
