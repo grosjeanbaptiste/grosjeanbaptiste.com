@@ -46,23 +46,25 @@ const VARIATION_SELECTORS = /\p{Variation_Selector}/gu;
 
 function tex(value) {
   if (value === null || value === undefined) return '';
-  return String(value)
-    .replace(EMOJI_RANGES, '')
-    .replace(VARIATION_SELECTORS, '')
-    .replace(/\\/g, '\\textbackslash{}')
-    .replace(/&/g, '\\&')
-    .replace(/%/g, '\\%')
-    .replace(/\$/g, '\\$')
-    .replace(/#/g, '\\#')
-    .replace(/_/g, '\\_')
-    .replace(/\{/g, '\\{')
-    .replace(/\}/g, '\\}')
-    .replace(/~/g, '\\textasciitilde{}')
-    .replace(/\^/g, '\\textasciicircum{}')
-    // As commands, not characters: under xeCJK (zh) a dash typed as a
-    // character went to the Chinese font, squeezed over the letter before it.
-    .replace(/\u2013/g, '\\textendash{}')
-    .replace(/\u2014/g, '\\textemdash{}');
+  return (
+    String(value)
+      .replace(EMOJI_RANGES, '')
+      .replace(VARIATION_SELECTORS, '')
+      .replace(/\\/g, '\\textbackslash{}')
+      .replace(/&/g, '\\&')
+      .replace(/%/g, '\\%')
+      .replace(/\$/g, '\\$')
+      .replace(/#/g, '\\#')
+      .replace(/_/g, '\\_')
+      .replace(/\{/g, '\\{')
+      .replace(/\}/g, '\\}')
+      .replace(/~/g, '\\textasciitilde{}')
+      .replace(/\^/g, '\\textasciicircum{}')
+      // As commands, not characters: under xeCJK (zh) a dash typed as a
+      // character went to the Chinese font, squeezed over the letter before it.
+      .replace(/\u2013/g, '\\textendash{}')
+      .replace(/\u2014/g, '\\textemdash{}')
+  );
 }
 
 // Wrap each word in \mbox{} so narrow-column titles can't be hyphenated.
