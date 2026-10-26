@@ -95,7 +95,10 @@ test('a long project list carries each project kind, for the sheet', () => {
 test('the sheet sets a long project list in three columns, kinds only', () => {
   const html = render('en');
   assert.match(html, /\.embedded-projects\.many ul \{ columns: 3;/, 'no three-column rule');
-  assert.match(html, /\.embedded-projects\.many \.full-text, \.embedded-projects\.many \.clipped-text \{ display: none/);
+  assert.match(
+    html,
+    /\.embedded-projects\.many \.full-text, \.embedded-projects\.many \.clipped-text \{ display: none/,
+  );
   assert.match(html, /\.embedded-projects\.many \.project-kind \{ display: inline/);
 });
 
