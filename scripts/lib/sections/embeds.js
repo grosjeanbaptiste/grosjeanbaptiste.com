@@ -11,6 +11,7 @@ const anchorHtml = (kind, record) =>
   `<span class="tl-anchor" id="${anchorOf(kind, record)}"></span>`;
 const { indentLines } = require('../markers');
 const { printText, PRINT_PLAN } = require('../print-selection');
+const { PROJECT_COLUMNS_FROM } = require('../pdf/config');
 
 // Tags for an entry that references no project at all. With a project, the
 // skills hang off the project that earned them — see renderProjectTags.
@@ -34,8 +35,10 @@ const renderProjectTags = (keywords) => {
 };
 
 // One referenced project or course unit as a list row. `kind` says which of
-// the two the row is, for the id its timeline bar links to.
-function rowHtml(p, kind) {
+// the two the row is, for the id its timeline bar links to. `many`: the row
+// sits in a long project list, which the sheet sets in three columns with each
+// project's kind in place of its description (print-density.css).
+function rowHtml(p, kind, many) {
   // A course unit's name is its official French designation and its summary
   // the localized title, so on the French page the two are the same string
   // and the row would read "Algorithmique — Algorithmique". Say it once.
@@ -49,12 +52,15 @@ function rowHtml(p, kind) {
   // gives print-layout.js something to swap without touching the link.
   const clipped = desc ? printText(desc, PRINT_PLAN.proj_desc) : null;
   const descAttr = clipped ? ` data-print-text="${escapeHtml(clipped)}"` : '';
-  const descHtml = desc ? ` — <span${descAttr}>${escapeHtml(desc)}</span>` : '';
-  return `<li>${label}${descHtml}${renderProjectTags(p.keywords)}${anchorHtml(kind, p)}</li>`;
+  const descText = desc ? ` — <span${descAttr}>${escapeHtml(desc)}</span>` : '';
+  const descHtml = many && desc ? `<span class="project-desc">${descText}</span>` : descText;
+  const kindHtml =
+    many && p.type ? `<span class="project-kind"> · ${escapeHtml(p.type)}</span>` : '';
+  return `<li>${label}${descHtml}${kindHtml}${renderProjectTags(p.keywords)}${anchorHtml(kind, p)}</li>`;
 }
-const listHtml = (projs, kind) => [
+const listHtml = (projs, kind, many = false) => [
   '  <ul>',
-  `        ${projs.map((p) => rowHtml(p, kind)).join('\n        ')}`,
+  `        ${projs.map((p) => rowHtml(p, kind, many)).join('\n        ')}`,
   '  </ul>',
 ];
 
@@ -71,14 +77,15 @@ function renderEmbeddedProjects(projectNames, projects, label, kind, blocks = []
     .filter((group) => group.projs.length);
   const filed = new Set(groups.flatMap((group) => group.projs));
   const others = projs.filter((p) => !filed.has(p));
+  const many = kind === 'project' && projs.length >= PROJECT_COLUMNS_FROM;
   return [
-    '<div class="embedded-projects">',
+    `<div class="embedded-projects${many ? ' many' : ''}">`,
     `  <p class="embedded-label">${escapeHtml(label)}:</p>`,
     ...groups.flatMap(({ block, projs: taken }) => [
       `  <p class="embedded-block">${escapeHtml([block.year, block.label].filter(Boolean).join(' · '))}</p>`,
       ...listHtml(taken, kind),
     ]),
-    ...(others.length ? listHtml(others, kind) : []),
+    ...(others.length ? listHtml(others, kind, many) : []),
     '</div>',
   ].join('\n');
 }

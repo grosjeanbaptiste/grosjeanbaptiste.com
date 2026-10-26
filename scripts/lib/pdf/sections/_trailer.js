@@ -6,6 +6,7 @@ const { tex, tagText, truncate } = require('../tex');
 const { findProject, sortByRecency } = require('../data');
 const { rolesHostedBy } = require('../../hosting');
 const { roleItem } = require('./volunteer');
+const { PROJECT_COLUMNS_FROM: COLUMNS_FROM } = require('../config');
 
 function renderSkillTags(skills, limits) {
   if (!limits.show_skills || !skills?.length) return null;
@@ -13,9 +14,8 @@ function renderSkillTags(skills, limits) {
   return `\\par\\nobreak\\noindent{\\footnotesize ${tags}}\\par\\nobreak\\smallskip`;
 }
 
-// From this many projects on, the list goes into three columns and each
+// From COLUMNS_FROM projects on, the list goes into three columns and each
 // project reads with its kind only: its description stays on the site.
-const COLUMNS_FROM = 4;
 
 const described = (p, limits) => {
   const desc = p.summary || p.description || '';

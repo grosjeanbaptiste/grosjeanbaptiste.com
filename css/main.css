@@ -123,6 +123,12 @@
   padding: 0;
 }
 
+/* Print-only: the kind a long project list gives in place of the description
+   (css/print-density.css). */
+.project-kind {
+  display: none;
+}
+
 .embedded-projects li {
   font-size: 0.9em;
   margin: 2px 0;

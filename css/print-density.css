@@ -51,6 +51,22 @@
     padding-left: 9pt;
   }
 
+  /* Four projects or more: three columns, each project with its kind only,
+     as renderProjectList sets them in three minipages. The description stays
+     on the screen. */
+  .embedded-projects.many ul {
+    columns: 3;
+    column-gap: 0.6rem;
+  }
+
+  .embedded-projects.many .project-desc {
+    display: none;
+  }
+
+  .embedded-projects.many .project-kind {
+    display: inline;
+  }
+
   .embedded-label {
     margin: 0;
   }

@@ -98,9 +98,15 @@ const FIT_PLANS = [
 // recorded build ever disagrees — so this is checked, not merely asserted.
 const PRINT_PLAN_INDEX = 4;
 
+// From this many projects on, an entry's project list is set in three columns,
+// each project with its kind only — in the PDF (pdf/sections/_trailer.js) and
+// on the printed page (sections/embeds.js), so the two cannot drift.
+const PROJECT_COLUMNS_FROM = 4;
+
 module.exports = {
   ROOT,
   PRINT_PLAN_INDEX,
+  PROJECT_COLUMNS_FROM,
   CLS_PATH: path.join(ROOT, 'latex/altacv.cls'),
   // Sized for print by scripts/make-photo-sizes.sh, not the site's 837 px original.
   PROFILE_IMG: path.join(ROOT, 'assets/images/profil-print.jpeg'),
