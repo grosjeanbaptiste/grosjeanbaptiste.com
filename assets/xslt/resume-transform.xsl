@@ -395,6 +395,9 @@
           .embedded-projects li { margin: 2px 0; }
           /* Print-only copies of text the LaTeX fit plan clips. */
           .clipped-text { display: none; }
+          /* Print-only: the kind a long project list gives in place of the
+             description. */
+          .project-kind { display: none; }
           .embedded-block { margin: 0.5rem 0 0.15rem; font-size: 0.85em; font-weight: 600; color: var(--muted); }
           .ref-links { margin: 6px 0 0; font-size: 0.92em; color: var(--muted); }
           .ref-links a { color: var(--accent); text-decoration: none; }
@@ -522,6 +525,12 @@
             .clipped-text { display: block; }
             span.clipped-text { display: inline; }
             .clipped-text + .full-text { display: none; }
+            /* From four projects on, the LaTeX CV sets the list in three
+               columns, each project with its kind only — its description
+               stays on the site (scripts/lib/pdf/sections/_trailer.js). */
+            .embedded-projects.many ul { columns: 3; column-gap: 0.3cm; }
+            .embedded-projects.many .full-text, .embedded-projects.many .clipped-text { display: none; }
+            .embedded-projects.many .project-kind { display: inline; }
             /* The references get the verso, as they do in the PDF — a sheet
                turned to landscape, since the timeline that opens it needs the
                width. The script below sets the block last in the page, out of
@@ -933,11 +942,16 @@
     <xsl:param name="k"/>
     <xsl:param name="clip" select="0"/>
     <xsl:if test="$refs">
-      <div class="embedded-projects">
+      <div>
+        <!-- Four projects or more: the sheet sets them in three columns,
+             kinds only, as the LaTeX CV does. -->
+        <xsl:variable name="many" select="$k = 'projects' and count($refs) &gt;= 4"/>
+        <xsl:attribute name="class">embedded-projects<xsl:if test="$many"> many</xsl:if></xsl:attribute>
         <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="$k"/></xsl:call-template></p>
         <xsl:call-template name="embedded-rows">
           <xsl:with-param name="refs" select="$refs"/>
           <xsl:with-param name="clip" select="$clip"/>
+          <xsl:with-param name="kinds" select="$many"/>
         </xsl:call-template>
       </div>
     </xsl:if>
@@ -947,6 +961,7 @@
   <xsl:template name="embedded-rows">
     <xsl:param name="refs"/>
     <xsl:param name="clip" select="0"/>
+    <xsl:param name="kinds" select="false()"/>
         <ul>
           <xsl:for-each select="$refs">
             <xsl:variable name="ref" select="."/>
@@ -972,6 +987,7 @@
                 <xsl:when test="$proj/summary"> — <xsl:value-of select="$proj/summary"/></xsl:when>
                 <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
               </xsl:choose>
+              <xsl:if test="$kinds and $proj/type"><span class="project-kind"> · <xsl:value-of select="$proj/type"/></span></xsl:if>
               <!-- What it was built with, each skill a way into the filter. -->
               <xsl:if test="$proj/keywords/keyword">
                 <xsl:text> </xsl:text>

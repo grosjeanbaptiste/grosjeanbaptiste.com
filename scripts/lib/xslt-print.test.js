@@ -78,3 +78,30 @@ test('the print label is localized in every toolbar language', () => {
     assert.ok(html.includes(label), `missing "${label}" for ${lang}`);
   }
 });
+
+// The LaTeX CV sets a list of four projects or more in three columns, each
+// project with its kind only (scripts/lib/pdf/sections/_trailer.js). The sheet
+// does the same, or the founder entry's nine projects push the recto onto the
+// verso.
+test('a long project list carries each project kind, for the sheet', () => {
+  const html = render('en');
+  assert.match(
+    html,
+    /<div class="embedded-projects many">(?:(?!<\/div>).)*Indexer<\/strong>(?:(?!<\/li>).)*<span class="project-kind"> · API<\/span>/s,
+    'the Acteble projects are not marked as a long list with their kinds',
+  );
+});
+
+test('the sheet sets a long project list in three columns, kinds only', () => {
+  const html = render('en');
+  assert.match(html, /\.embedded-projects\.many ul \{ columns: 3;/, 'no three-column rule');
+  assert.match(html, /\.embedded-projects\.many \.full-text, \.embedded-projects\.many \.clipped-text \{ display: none/);
+  assert.match(html, /\.embedded-projects\.many \.project-kind \{ display: inline/);
+});
+
+test('a short project list keeps its descriptions and no kind', () => {
+  const html = render('en');
+  const short = html.match(/<div class="embedded-projects">(?:(?!<\/div>).)*<\/div>/s);
+  assert.ok(short, 'no short project list rendered');
+  assert.doesNotMatch(short[0], /project-kind/);
+});
