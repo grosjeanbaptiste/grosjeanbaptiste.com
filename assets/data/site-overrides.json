@@ -4,16 +4,6 @@
     "education": [
       "Solvay Brussels School of Economics and Management",
       "Université libre de Bruxelles"
-    ],
-    "projects": [
-      "Baba",
-      "KAG"
-    ]
-  },
-  "hideOnPdf": {
-    "projects": [
-      "Baba",
-      "KAG"
     ]
   },
   "displayOverrides": {

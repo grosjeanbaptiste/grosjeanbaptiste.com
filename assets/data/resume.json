@@ -285,9 +285,11 @@
         "Rust",
         "Prolog",
         "LinkGrammar",
+        "SymbolicAI",
+        "NLP",
         "DDD",
-        "CleanArchitecture",
-        "TDD"
+        "TDD",
+        "MutationTesting"
       ],
       "startDate": "2026-07-02",
       "type": "CLI",
@@ -297,16 +299,138 @@
     },
     {
       "name": "KAG",
-      "description": "Domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines.",
+      "description": "Purely algorithmic Rust framework that benchmarks interchangeable RAG pipeline components on BEIR and ships the best measured configuration as a question-answering CLI with cited sources.",
       "keywords": [
         "Rust",
+        "RAG",
+        "InformationRetrieval",
+        "LearningToRank",
+        "BEIR",
         "DDD",
-        "CleanArchitecture",
-        "TDD",
-        "RAG"
+        "HexagonalArchitecture",
+        "TDD"
       ],
       "startDate": "2026-07-05",
       "type": "Framework",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "LL",
+      "description": "Spaced-repetition vocabulary trainer for six languages, each word taught with an aligned example sentence in every language.",
+      "keywords": [
+        "Rust",
+        "Dioxus",
+        "Ratatui",
+        "SQLite",
+        "iOS",
+        "SpacedRepetition",
+        "Leitner",
+        "SM2",
+        "Python",
+        "spaCy",
+        "NLP",
+        "WordNet",
+        "Tatoeba",
+        "HexagonalArchitecture",
+        "DDD",
+        "TDD"
+      ],
+      "startDate": "2026-07-03",
+      "type": "Application",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Indexer",
+      "description": "Curated index of external data sources, books and software packages, served as a public read API.",
+      "keywords": [
+        "Rust",
+        "CloudflareWorkers",
+        "WebAssembly",
+        "DurableObjects",
+        "TOML",
+        "BM25F",
+        "InformationRetrieval",
+        "TDD"
+      ],
+      "startDate": "2026-10-06",
+      "type": "API",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Polytech",
+      "description": "Engineering-studies library that computes every number and expression of LaTeX worked solutions, none typed by hand.",
+      "keywords": [
+        "Python",
+        "SymPy",
+        "NumPy",
+        "SciPy",
+        "LaTeX",
+        "Lean4",
+        "Mathlib",
+        "DDD",
+        "HexagonalArchitecture",
+        "TDD",
+        "MutationTesting"
+      ],
+      "startDate": "2026-09-23",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Converge",
+      "description": "AI-assisted 3D mechanical design platform that orchestrates open-source geometry, meshing and simulation engines.",
+      "keywords": [
+        "Rust",
+        "Python",
+        "OpenCASCADE",
+        "Manifold",
+        "build123d",
+        "Gmsh",
+        "Optuna",
+        "NSGA2",
+        "MultiObjectiveOptimization",
+        "Pareto",
+        "ThreeJS",
+        "HexagonalArchitecture",
+        "TDD"
+      ],
+      "startDate": "2026-10-20",
+      "type": "Platform",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Actrack",
+      "description": "Forecasts of the FIFA World Cup 2026 from an ensemble of football-rating strategies.",
+      "keywords": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "SciPy",
+        "DuckDB",
+        "Rust",
+        "Dioxus",
+        "WebAssembly",
+        "EloRating",
+        "PoissonModel",
+        "EnsembleModel",
+        "WalkForwardBacktest",
+        "BrierScore",
+        "HexagonalArchitecture",
+        "DDD",
+        "TDD"
+      ],
+      "startDate": "2026-06-28",
+      "type": "Forecasting engine",
       "roles": [
         "Author"
       ]
@@ -348,71 +472,58 @@
       ]
     },
     {
-      "name": "Acteble API",
-      "description": "Backend of the Acteble platform: a modular monolith in Rust.",
+      "name": "Acteble",
+      "description": "Geolocated social platform that brings people together around shared activities: a Rust backend, an offline-first Flutter app and a React website.",
       "keywords": [
         "Rust",
         "Tokio",
         "Axum",
         "Tonic",
         "gRPC",
+        "Protobuf",
         "SQLx",
         "PostgreSQL",
         "PostGIS",
         "Redis",
         "MinIO",
         "LiveKit",
-        "OpenTelemetry",
+        "OpenBao",
+        "Prometheus",
+        "Testcontainers",
+        "OpenStreetMap",
         "Docker",
         "Caddy",
+        "Dylint",
         "DDD",
         "HexagonalArchitecture",
         "CQRS",
-        "EventDriven"
-      ],
-      "startDate": "2025-06-13",
-      "type": "API",
-      "roles": [
-        "Founder"
-      ]
-    },
-    {
-      "name": "Acteble App",
-      "description": "Offline-first multi-platform client of Acteble, built with Flutter.",
-      "keywords": [
+        "EventDriven",
         "Flutter",
         "Dart",
         "Melos",
         "Riverpod",
         "Drift",
         "SQLite",
+        "SQLCipher",
         "Dio",
-        "gRPC",
+        "FlutterRustBridge",
+        "MapLibre",
         "FlutterMap",
         "Firebase",
         "OfflineFirst",
-        "Mobile"
-      ],
-      "startDate": "2025-04-12",
-      "url": "https://www.acteble.com",
-      "type": "Mobile Application",
-      "roles": [
-        "Founder"
-      ]
-    },
-    {
-      "name": "Acteble Website",
-      "description": "Public website of Acteble: a React single-page application.",
-      "keywords": [
+        "E2EE",
+        "Mobile",
         "React",
         "Vite",
         "JavaScript",
         "i18next",
-        "ReactRouter"
+        "ReactRouter",
+        "ESLint",
+        "Vercel"
       ],
-      "startDate": "2025-06-05",
+      "startDate": "2025-04-12",
       "url": "https://www.acteble.com",
-      "type": "Website",
+      "type": "Platform",
       "roles": [
         "Founder"
       ]
@@ -422,11 +533,16 @@
       "description": "MSc dissertation at UMONS — the R&D of Acteble's planning engine.",
       "keywords": [
         "Python",
+        "Rust",
         "LaTeX",
         "MiniZinc",
+        "ORTools",
         "ConstraintProgramming",
         "CombinatorialOptimization",
-        "Pareto"
+        "MultiObjectiveOptimization",
+        "Pareto",
+        "DSL",
+        "MutationTesting"
       ],
       "startDate": "2025-11-13",
       "endDate": "2026-09-04",

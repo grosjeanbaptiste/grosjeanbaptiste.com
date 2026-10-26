@@ -48,7 +48,7 @@ test('no course unit sits under the Projects heading', () => {
 test('a real project still sits under the Projects heading', () => {
   for (const lang of LANGS) {
     const html = fs.readFileSync(langOutFile(lang), 'utf8');
-    assert.equal(labelFor(html, 'Acteble App'), I18N[lang].projects, `${lang}: Acteble App moved`);
+    assert.equal(labelFor(html, 'Acteble'), I18N[lang].projects, `${lang}: Acteble moved`);
   }
 });
 
@@ -96,6 +96,6 @@ test('no course unit appears in the sidebar projects list', () => {
 test('a real project still appears in the sidebar projects list', () => {
   for (const lang of LANGS) {
     const block = sidebarProjects(fs.readFileSync(langOutFile(lang), 'utf8'));
-    assert.match(block, /<strong>Acteble App<\/strong>/, `${lang}: Acteble App left the sidebar`);
+    assert.match(block, /<strong>Acteble<\/strong>/, `${lang}: Acteble left the sidebar`);
   }
 });

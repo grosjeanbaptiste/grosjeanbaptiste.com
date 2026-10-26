@@ -112,6 +112,9 @@ function fitted(plan, timeline, { x, measure, track, room }) {
 // (`units`), for the caller to report a reduction.
 // `density`: the share of the width given to the years by what they hold
 // rather than by time (./scale.js); 0 draws time to scale.
+// What no plan could fit: the caller may gather bars and try again.
+class TimelineOverflow extends Error {}
+
 function layOut(
   timeline,
   { measure = labelWidth, track = TRACK, height = HEIGHT, density = 0 } = {},
@@ -125,9 +128,9 @@ function layOut(
     const sheet = fitted(plan, timeline, { x, measure, track, room });
     if (sheet) return { ...sheet, years: yearsOf(timeline, x) };
   }
-  throw new Error(
+  throw new TimelineOverflow(
     `The timeline does not fit on one page (${height} mm), even with names alone in ${SIZES.at(-1)} pt type`,
   );
 }
 
-module.exports = { layOut, TRACK };
+module.exports = { layOut, TRACK, TimelineOverflow };

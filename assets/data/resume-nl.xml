@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=bc7e0de9"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=af88bd2f"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -177,16 +177,28 @@
         <clear>Filter wissen</clear>
         <shortlist>
           <skill>
+            <name>Python</name>
+            <token>python</token>
+            <uses>14</uses>
+            <said>14 items gebruiken Python</said>
+          </skill>
+          <skill>
             <name>.NET</name>
             <token>net</token>
             <uses>12</uses>
             <said>12 items gebruiken .NET</said>
           </skill>
           <skill>
-            <name>Python</name>
-            <token>python</token>
-            <uses>10</uses>
-            <said>10 items gebruiken Python</said>
+            <name>DDD</name>
+            <token>ddd</token>
+            <uses>11</uses>
+            <said>11 items gebruiken DDD</said>
+          </skill>
+          <skill>
+            <name>Rust</name>
+            <token>rust</token>
+            <uses>9</uses>
+            <said>9 items gebruiken Rust</said>
           </skill>
           <skill>
             <name>SQL Server</name>
@@ -195,16 +207,28 @@
             <said>8 items gebruiken SQL Server</said>
           </skill>
           <skill>
-            <name>DDD</name>
-            <token>ddd</token>
-            <uses>6</uses>
-            <said>6 items gebruiken DDD</said>
+            <name>TDD</name>
+            <token>tdd</token>
+            <uses>7</uses>
+            <said>7 items gebruiken TDD</said>
           </skill>
           <skill>
             <name>Flutter</name>
             <token>flutter</token>
             <uses>6</uses>
             <said>6 items gebruiken Flutter</said>
+          </skill>
+          <skill>
+            <name>HexagonalArchitecture</name>
+            <token>hexagonalarchitecture</token>
+            <uses>6</uses>
+            <said>6 items gebruiken HexagonalArchitecture</said>
+          </skill>
+          <skill>
+            <name>Pandas</name>
+            <token>pandas</token>
+            <uses>5</uses>
+            <said>5 items gebruiken Pandas</said>
           </skill>
           <skill>
             <name>React</name>
@@ -237,16 +261,16 @@
             <said>4 items gebruiken Java</said>
           </skill>
           <skill>
+            <name>NumPy</name>
+            <token>numpy</token>
+            <uses>4</uses>
+            <said>4 items gebruiken NumPy</said>
+          </skill>
+          <skill>
             <name>OpenAI</name>
             <token>openai</token>
             <uses>4</uses>
             <said>4 items gebruiken OpenAI</said>
-          </skill>
-          <skill>
-            <name>Pandas</name>
-            <token>pandas</token>
-            <uses>4</uses>
-            <said>4 items gebruiken Pandas</said>
           </skill>
           <skill>
             <name>PostgreSQL</name>
@@ -254,6 +278,15 @@
             <uses>4</uses>
             <said>4 items gebruiken PostgreSQL</said>
           </skill>
+          <skill>
+            <name>RAG</name>
+            <token>rag</token>
+            <uses>4</uses>
+            <said>4 items gebruiken RAG</said>
+          </skill>
+        </shortlist>
+        <more>Alle vaardigheden (274)</more>
+        <rest>
           <skill>
             <name>TypeScript</name>
             <token>typescript</token>
@@ -284,9 +317,6 @@
             <uses>3</uses>
             <said>3 items gebruiken English</said>
           </skill>
-        </shortlist>
-        <more>Alle vaardigheden (219)</more>
-        <rest>
           <skill>
             <name>Firebase</name>
             <token>firebase</token>
@@ -300,22 +330,22 @@
             <said>3 items gebruiken JavaScript</said>
           </skill>
           <skill>
-            <name>OpenTelemetry</name>
-            <token>opentelemetry</token>
+            <name>LaTeX</name>
+            <token>latex</token>
             <uses>3</uses>
-            <said>3 items gebruiken OpenTelemetry</said>
+            <said>3 items gebruiken LaTeX</said>
+          </skill>
+          <skill>
+            <name>MutationTesting</name>
+            <token>mutationtesting</token>
+            <uses>3</uses>
+            <said>3 items gebruiken MutationTesting</said>
           </skill>
           <skill>
             <name>ProfessionalCommunication</name>
             <token>professionalcommunication</token>
             <uses>3</uses>
             <said>3 items gebruiken ProfessionalCommunication</said>
-          </skill>
-          <skill>
-            <name>RAG</name>
-            <token>rag</token>
-            <uses>3</uses>
-            <said>3 items gebruiken RAG</said>
           </skill>
           <skill>
             <name>SQL</name>
@@ -396,6 +426,12 @@
             <said>2 items gebruiken DeepFace</said>
           </skill>
           <skill>
+            <name>Dioxus</name>
+            <token>dioxus</token>
+            <uses>2</uses>
+            <said>2 items gebruiken Dioxus</said>
+          </skill>
+          <skill>
             <name>DNS</name>
             <token>dns</token>
             <uses>2</uses>
@@ -432,12 +468,6 @@
             <said>2 items gebruiken GraphTheory</said>
           </skill>
           <skill>
-            <name>gRPC</name>
-            <token>grpc</token>
-            <uses>2</uses>
-            <said>2 items gebruiken gRPC</said>
-          </skill>
-          <skill>
             <name>HTML</name>
             <token>html</token>
             <uses>2</uses>
@@ -450,16 +480,22 @@
             <said>2 items gebruiken Indexing</said>
           </skill>
           <skill>
+            <name>InformationRetrieval</name>
+            <token>informationretrieval</token>
+            <uses>2</uses>
+            <said>2 items gebruiken InformationRetrieval</said>
+          </skill>
+          <skill>
             <name>JSON</name>
             <token>json</token>
             <uses>2</uses>
             <said>2 items gebruiken JSON</said>
           </skill>
           <skill>
-            <name>LaTeX</name>
-            <token>latex</token>
+            <name>MultiObjectiveOptimization</name>
+            <token>multiobjectiveoptimization</token>
             <uses>2</uses>
-            <said>2 items gebruiken LaTeX</said>
+            <said>2 items gebruiken MultiObjectiveOptimization</said>
           </skill>
           <skill>
             <name>NetworkSecurity</name>
@@ -468,16 +504,16 @@
             <said>2 items gebruiken NetworkSecurity</said>
           </skill>
           <skill>
+            <name>NLP</name>
+            <token>nlp</token>
+            <uses>2</uses>
+            <said>2 items gebruiken NLP</said>
+          </skill>
+          <skill>
             <name>Node.js</name>
             <token>node-js</token>
             <uses>2</uses>
             <said>2 items gebruiken Node.js</said>
-          </skill>
-          <skill>
-            <name>NumPy</name>
-            <token>numpy</token>
-            <uses>2</uses>
-            <said>2 items gebruiken NumPy</said>
           </skill>
           <skill>
             <name>OCR</name>
@@ -486,16 +522,28 @@
             <said>2 items gebruiken OCR</said>
           </skill>
           <skill>
+            <name>OpenTelemetry</name>
+            <token>opentelemetry</token>
+            <uses>2</uses>
+            <said>2 items gebruiken OpenTelemetry</said>
+          </skill>
+          <skill>
+            <name>Pareto</name>
+            <token>pareto</token>
+            <uses>2</uses>
+            <said>2 items gebruiken Pareto</said>
+          </skill>
+          <skill>
             <name>RelationalAlgebra</name>
             <token>relationalalgebra</token>
             <uses>2</uses>
             <said>2 items gebruiken RelationalAlgebra</said>
           </skill>
           <skill>
-            <name>Rust</name>
-            <token>rust</token>
+            <name>SciPy</name>
+            <token>scipy</token>
             <uses>2</uses>
-            <said>2 items gebruiken Rust</said>
+            <said>2 items gebruiken SciPy</said>
           </skill>
           <skill>
             <name>SentenceTransformers</name>
@@ -520,6 +568,12 @@
             <token>sqlalchemy</token>
             <uses>2</uses>
             <said>2 items gebruiken SQLAlchemy</said>
+          </skill>
+          <skill>
+            <name>SQLite</name>
+            <token>sqlite</token>
+            <uses>2</uses>
+            <said>2 items gebruiken SQLite</said>
           </skill>
           <skill>
             <name>SystemsAnalysis</name>
@@ -562,6 +616,12 @@
             <token>valhalla</token>
             <uses>2</uses>
             <said>2 items gebruiken Valhalla</said>
+          </skill>
+          <skill>
+            <name>WebAssembly</name>
+            <token>webassembly</token>
+            <uses>2</uses>
+            <said>2 items gebruiken WebAssembly</said>
           </skill>
           <skill>
             <name>Whisper</name>
@@ -630,6 +690,12 @@
             <said>1 item gebruikt BDD</said>
           </skill>
           <skill>
+            <name>BEIR</name>
+            <token>beir</token>
+            <uses>1</uses>
+            <said>1 item gebruikt BEIR</said>
+          </skill>
+          <skill>
             <name>Benchmark</name>
             <token>benchmark</token>
             <uses>1</uses>
@@ -654,10 +720,28 @@
             <said>1 item gebruikt Binary</said>
           </skill>
           <skill>
+            <name>BM25F</name>
+            <token>bm25f</token>
+            <uses>1</uses>
+            <said>1 item gebruikt BM25F</said>
+          </skill>
+          <skill>
+            <name>BrierScore</name>
+            <token>brierscore</token>
+            <uses>1</uses>
+            <said>1 item gebruikt BrierScore</said>
+          </skill>
+          <skill>
             <name>BTrees</name>
             <token>btrees</token>
             <uses>1</uses>
             <said>1 item gebruikt BTrees</said>
+          </skill>
+          <skill>
+            <name>build123d</name>
+            <token>build123d</token>
+            <uses>1</uses>
+            <said>1 item gebruikt build123d</said>
           </skill>
           <skill>
             <name>Caching</name>
@@ -688,6 +772,12 @@
             <token>clientsidescripting</token>
             <uses>1</uses>
             <said>1 item gebruikt ClientSideScripting</said>
+          </skill>
+          <skill>
+            <name>CloudflareWorkers</name>
+            <token>cloudflareworkers</token>
+            <uses>1</uses>
+            <said>1 item gebruikt CloudflareWorkers</said>
           </skill>
           <skill>
             <name>CombinatorialOptimization</name>
@@ -804,10 +894,28 @@
             <said>1 item gebruikt Drift</said>
           </skill>
           <skill>
+            <name>DSL</name>
+            <token>dsl</token>
+            <uses>1</uses>
+            <said>1 item gebruikt DSL</said>
+          </skill>
+          <skill>
             <name>Duality</name>
             <token>duality</token>
             <uses>1</uses>
             <said>1 item gebruikt Duality</said>
+          </skill>
+          <skill>
+            <name>DuckDB</name>
+            <token>duckdb</token>
+            <uses>1</uses>
+            <said>1 item gebruikt DuckDB</said>
+          </skill>
+          <skill>
+            <name>DurableObjects</name>
+            <token>durableobjects</token>
+            <uses>1</uses>
+            <said>1 item gebruikt DurableObjects</said>
           </skill>
           <skill>
             <name>Durkheim</name>
@@ -822,16 +930,40 @@
             <said>1 item gebruikt Dutch</said>
           </skill>
           <skill>
+            <name>Dylint</name>
+            <token>dylint</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Dylint</said>
+          </skill>
+          <skill>
+            <name>E2EE</name>
+            <token>e2ee</token>
+            <uses>1</uses>
+            <said>1 item gebruikt E2EE</said>
+          </skill>
+          <skill>
             <name>Ebusiness</name>
             <token>ebusiness</token>
             <uses>1</uses>
             <said>1 item gebruikt Ebusiness</said>
           </skill>
           <skill>
+            <name>EloRating</name>
+            <token>elorating</token>
+            <uses>1</uses>
+            <said>1 item gebruikt EloRating</said>
+          </skill>
+          <skill>
             <name>Encapsulation</name>
             <token>encapsulation</token>
             <uses>1</uses>
             <said>1 item gebruikt Encapsulation</said>
+          </skill>
+          <skill>
+            <name>EnsembleModel</name>
+            <token>ensemblemodel</token>
+            <uses>1</uses>
+            <said>1 item gebruikt EnsembleModel</said>
           </skill>
           <skill>
             <name>EntityRelationship</name>
@@ -844,6 +976,12 @@
             <token>erp</token>
             <uses>1</uses>
             <said>1 item gebruikt ERP</said>
+          </skill>
+          <skill>
+            <name>ESLint</name>
+            <token>eslint</token>
+            <uses>1</uses>
+            <said>1 item gebruikt ESLint</said>
           </skill>
           <skill>
             <name>Evaluation</name>
@@ -882,10 +1020,28 @@
             <said>1 item gebruikt FlutterMap</said>
           </skill>
           <skill>
+            <name>FlutterRustBridge</name>
+            <token>flutterrustbridge</token>
+            <uses>1</uses>
+            <said>1 item gebruikt FlutterRustBridge</said>
+          </skill>
+          <skill>
             <name>GDPR</name>
             <token>gdpr</token>
             <uses>1</uses>
             <said>1 item gebruikt GDPR</said>
+          </skill>
+          <skill>
+            <name>Gmsh</name>
+            <token>gmsh</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Gmsh</said>
+          </skill>
+          <skill>
+            <name>gRPC</name>
+            <token>grpc</token>
+            <uses>1</uses>
+            <said>1 item gebruikt gRPC</said>
           </skill>
           <skill>
             <name>Hardware</name>
@@ -904,12 +1060,6 @@
             <token>hexadecimal</token>
             <uses>1</uses>
             <said>1 item gebruikt Hexadecimal</said>
-          </skill>
-          <skill>
-            <name>HexagonalArchitecture</name>
-            <token>hexagonalarchitecture</token>
-            <uses>1</uses>
-            <said>1 item gebruikt HexagonalArchitecture</said>
           </skill>
           <skill>
             <name>HRM</name>
@@ -954,6 +1104,12 @@
             <said>1 item gebruikt IntellectualProperty</said>
           </skill>
           <skill>
+            <name>iOS</name>
+            <token>ios</token>
+            <uses>1</uses>
+            <said>1 item gebruikt iOS</said>
+          </skill>
+          <skill>
             <name>Joins</name>
             <token>joins</token>
             <uses>1</uses>
@@ -966,6 +1122,24 @@
             <said>1 item gebruikt JS</said>
           </skill>
           <skill>
+            <name>Lean4</name>
+            <token>lean4</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Lean4</said>
+          </skill>
+          <skill>
+            <name>LearningToRank</name>
+            <token>learningtorank</token>
+            <uses>1</uses>
+            <said>1 item gebruikt LearningToRank</said>
+          </skill>
+          <skill>
+            <name>Leitner</name>
+            <token>leitner</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Leitner</said>
+          </skill>
+          <skill>
             <name>LinearAlgebra</name>
             <token>linearalgebra</token>
             <uses>1</uses>
@@ -976,6 +1150,12 @@
             <token>linearprogramming</token>
             <uses>1</uses>
             <said>1 item gebruikt LinearProgramming</said>
+          </skill>
+          <skill>
+            <name>LinkGrammar</name>
+            <token>linkgrammar</token>
+            <uses>1</uses>
+            <said>1 item gebruikt LinkGrammar</said>
           </skill>
           <skill>
             <name>LiteratureReview</name>
@@ -1008,6 +1188,18 @@
             <said>1 item gebruikt Management</said>
           </skill>
           <skill>
+            <name>Manifold</name>
+            <token>manifold</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Manifold</said>
+          </skill>
+          <skill>
+            <name>MapLibre</name>
+            <token>maplibre</token>
+            <uses>1</uses>
+            <said>1 item gebruikt MapLibre</said>
+          </skill>
+          <skill>
             <name>MarketFailure</name>
             <token>marketfailure</token>
             <uses>1</uses>
@@ -1024,6 +1216,12 @@
             <token>mathematicallogic</token>
             <uses>1</uses>
             <said>1 item gebruikt MathematicalLogic</said>
+          </skill>
+          <skill>
+            <name>Mathlib</name>
+            <token>mathlib</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Mathlib</said>
           </skill>
           <skill>
             <name>MediaEconomics</name>
@@ -1134,6 +1332,12 @@
             <said>1 item gebruikt NoSQL</said>
           </skill>
           <skill>
+            <name>NSGA2</name>
+            <token>nsga2</token>
+            <uses>1</uses>
+            <said>1 item gebruikt NSGA2</said>
+          </skill>
+          <skill>
             <name>OfflineFirst</name>
             <token>offlinefirst</token>
             <uses>1</uses>
@@ -1144,6 +1348,24 @@
             <token>oop</token>
             <uses>1</uses>
             <said>1 item gebruikt OOP</said>
+          </skill>
+          <skill>
+            <name>OpenBao</name>
+            <token>openbao</token>
+            <uses>1</uses>
+            <said>1 item gebruikt OpenBao</said>
+          </skill>
+          <skill>
+            <name>OpenCASCADE</name>
+            <token>opencascade</token>
+            <uses>1</uses>
+            <said>1 item gebruikt OpenCASCADE</said>
+          </skill>
+          <skill>
+            <name>OpenStreetMap</name>
+            <token>openstreetmap</token>
+            <uses>1</uses>
+            <said>1 item gebruikt OpenStreetMap</said>
           </skill>
           <skill>
             <name>OperatingSystems</name>
@@ -1158,6 +1380,18 @@
             <said>1 item gebruikt OperationsResearch</said>
           </skill>
           <skill>
+            <name>Optuna</name>
+            <token>optuna</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Optuna</said>
+          </skill>
+          <skill>
+            <name>ORTools</name>
+            <token>ortools</token>
+            <uses>1</uses>
+            <said>1 item gebruikt ORTools</said>
+          </skill>
+          <skill>
             <name>OSPF</name>
             <token>ospf</token>
             <uses>1</uses>
@@ -1170,12 +1404,6 @@
             <said>1 item gebruikt Overloading</said>
           </skill>
           <skill>
-            <name>Pareto</name>
-            <token>pareto</token>
-            <uses>1</uses>
-            <said>1 item gebruikt Pareto</said>
-          </skill>
-          <skill>
             <name>PayPal</name>
             <token>paypal</token>
             <uses>1</uses>
@@ -1186,6 +1414,12 @@
             <token>php</token>
             <uses>1</uses>
             <said>1 item gebruikt PHP</said>
+          </skill>
+          <skill>
+            <name>PoissonModel</name>
+            <token>poissonmodel</token>
+            <uses>1</uses>
+            <said>1 item gebruikt PoissonModel</said>
           </skill>
           <skill>
             <name>PoliticalScience</name>
@@ -1236,10 +1470,28 @@
             <said>1 item gebruikt ProjectManagement</said>
           </skill>
           <skill>
+            <name>Prolog</name>
+            <token>prolog</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Prolog</said>
+          </skill>
+          <skill>
+            <name>Prometheus</name>
+            <token>prometheus</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Prometheus</said>
+          </skill>
+          <skill>
             <name>PropositionalLogic</name>
             <token>propositionallogic</token>
             <uses>1</uses>
             <said>1 item gebruikt PropositionalLogic</said>
+          </skill>
+          <skill>
+            <name>Protobuf</name>
+            <token>protobuf</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Protobuf</said>
           </skill>
           <skill>
             <name>QRCode</name>
@@ -1252,6 +1504,12 @@
             <token>queryoptimization</token>
             <uses>1</uses>
             <said>1 item gebruikt QueryOptimization</said>
+          </skill>
+          <skill>
+            <name>Ratatui</name>
+            <token>ratatui</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Ratatui</said>
           </skill>
           <skill>
             <name>ReactRouter</name>
@@ -1320,6 +1578,12 @@
             <said>1 item gebruikt ShellScripting</said>
           </skill>
           <skill>
+            <name>SM2</name>
+            <token>sm2</token>
+            <uses>1</uses>
+            <said>1 item gebruikt SM2</said>
+          </skill>
+          <skill>
             <name>SoftwareDesign</name>
             <token>softwaredesign</token>
             <uses>1</uses>
@@ -1338,16 +1602,28 @@
             <said>1 item gebruikt Sorting</said>
           </skill>
           <skill>
+            <name>SpacedRepetition</name>
+            <token>spacedrepetition</token>
+            <uses>1</uses>
+            <said>1 item gebruikt SpacedRepetition</said>
+          </skill>
+          <skill>
+            <name>spaCy</name>
+            <token>spacy-2</token>
+            <uses>1</uses>
+            <said>1 item gebruikt spaCy</said>
+          </skill>
+          <skill>
+            <name>SQLCipher</name>
+            <token>sqlcipher</token>
+            <uses>1</uses>
+            <said>1 item gebruikt SQLCipher</said>
+          </skill>
+          <skill>
             <name>SQLInjection</name>
             <token>sqlinjection</token>
             <uses>1</uses>
             <said>1 item gebruikt SQLInjection</said>
-          </skill>
-          <skill>
-            <name>SQLite</name>
-            <token>sqlite</token>
-            <uses>1</uses>
-            <said>1 item gebruikt SQLite</said>
           </skill>
           <skill>
             <name>SQLx</name>
@@ -1380,6 +1656,18 @@
             <said>1 item gebruikt SupervisedLearning</said>
           </skill>
           <skill>
+            <name>SymbolicAI</name>
+            <token>symbolicai</token>
+            <uses>1</uses>
+            <said>1 item gebruikt SymbolicAI</said>
+          </skill>
+          <skill>
+            <name>SymPy</name>
+            <token>sympy</token>
+            <uses>1</uses>
+            <said>1 item gebruikt SymPy</said>
+          </skill>
+          <skill>
             <name>Synchronization</name>
             <token>synchronization</token>
             <uses>1</uses>
@@ -1390,6 +1678,30 @@
             <token>systemadministration</token>
             <uses>1</uses>
             <said>1 item gebruikt SystemAdministration</said>
+          </skill>
+          <skill>
+            <name>Tatoeba</name>
+            <token>tatoeba</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Tatoeba</said>
+          </skill>
+          <skill>
+            <name>Testcontainers</name>
+            <token>testcontainers</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Testcontainers</said>
+          </skill>
+          <skill>
+            <name>ThreeJS</name>
+            <token>threejs</token>
+            <uses>1</uses>
+            <said>1 item gebruikt ThreeJS</said>
+          </skill>
+          <skill>
+            <name>TOML</name>
+            <token>toml</token>
+            <uses>1</uses>
+            <said>1 item gebruikt TOML</said>
           </skill>
           <skill>
             <name>Tonic</name>
@@ -1440,10 +1752,22 @@
             <said>1 item gebruikt URLRewriting</said>
           </skill>
           <skill>
+            <name>Vercel</name>
+            <token>vercel</token>
+            <uses>1</uses>
+            <said>1 item gebruikt Vercel</said>
+          </skill>
+          <skill>
             <name>Vite</name>
             <token>vite</token>
             <uses>1</uses>
             <said>1 item gebruikt Vite</said>
+          </skill>
+          <skill>
+            <name>WalkForwardBacktest</name>
+            <token>walkforwardbacktest</token>
+            <uses>1</uses>
+            <said>1 item gebruikt WalkForwardBacktest</said>
           </skill>
           <skill>
             <name>WebEconomy</name>
@@ -1468,6 +1792,12 @@
             <token>weka</token>
             <uses>1</uses>
             <said>1 item gebruikt Weka</said>
+          </skill>
+          <skill>
+            <name>WordNet</name>
+            <token>wordnet</token>
+            <uses>1</uses>
+            <said>1 item gebruikt WordNet</said>
           </skill>
           <skill>
             <name>XPath</name>
@@ -1499,7 +1829,7 @@
         <label>Zoeken</label>
         <placeholder>Zoek ervaring, projecten, vaardigheden…</placeholder>
         <empty>Geen resultaten.</empty>
-        <index>{"entries":[{"id":"work-acteble-oprichter","kind":"work","title":"Oprichter","organisation":"Acteble","summary":"Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&amp;D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.","skills":["Rust","Flutter","Dart","Tokio","Docker","DDD","CleanArchitecture","PostgreSQL"]},{"id":"work-belgische-senaat-ai-onderzoeker","kind":"work","title":"AI-onderzoeker","organisation":"Belgische Senaat","summary":"AI-onderzoek en engineering voor het Belgisch federaal Parlement. Ontwerp van een intern platform waarmee medewerkers de parlementaire archieven kunnen doorzoeken, verkennen en bevragen. Auteur van een open evaluatieprotocol dat retrieval-strategieën vergelijkt op het Senaat-corpus, met focus op tweetalige FR/NL-robuustheid.","skills":["Python","Java",".NET","RAG","OCR","SentenceTransformers","Pandas"]},{"id":"work-emvi-ai-ai-software-crafter-lead","kind":"work","title":"AI Software Crafter Lead","organisation":"Emvi.ai","summary":"Technische leiding en ontwikkeling van ontwerp tot oplevering: OCR-pijplijn, code-scans en aangepast Valhalla-routesysteem voor slechtzienden.","skills":["Dart","Flutter","Firebase","OpenAI","Valhalla"]},{"id":"work-emvi-ai-ai-software-crafter","kind":"work","title":"AI Software Crafter","organisation":"Emvi.ai","summary":"Bouwde de gezichtsherkenningspijplijn (DeepFace / Serengil, detectie + herkenning) en de sentimentanalyse-stack voor de door LLM gegenereerde fotobeschrijvingen.","skills":["Python","Whisper","FastAPI","DeepFace","OpenAI","PostgreSQL","SQLAlchemy"]},{"id":"work-xtrada-data-scientist","kind":"work","title":"Data Scientist","organisation":"Xtrada","summary":"Python-bibliotheken (SpaCy…) om benoemde entiteiten uit tekst te extraheren via NER-modeltraining en implementatie in .NET. Recall-score van het model: 87%.","skills":["Python","SpaCy","Pandas","NumPy",".NET"]},{"id":"work-xtrada-software-crafter","kind":"work","title":"Software Crafter","organisation":"Xtrada","summary":"Softwaremodernisering binnen de .NET-stack volgens DDD en clean code principes. Implementatie van Azure AI-services in een .NET-oplossing.","skills":[".NET","DDD","CleanCode","CleanArchitecture"]},{"id":"work-xtrada-net-react-software-crafter","kind":"work","title":".NET / React Software Crafter","organisation":"Xtrada","skills":[".NET","React","SQL Server","TypeScript","EntityFramework","Docker","Azure","OpenTelemetry"]},{"id":"work-xtrada-net-blazor-software-crafter","kind":"work","title":".NET / Blazor Software Crafter","organisation":"Xtrada","summary":"Ontwikkeling van de webapp in .NET / Blazor volgens DDD en clean code principes.","skills":[".NET","Blazor","SQL Server","DDD","EntityFramework","xUnit"]},{"id":"work-technofutur-tic-full-stack-webontwikkelaar-stagiair","kind":"work","title":"Full Stack Webontwikkelaar Stagiair","organisation":"Technofutur TIC","summary":"Kwalificerende opleiding om de technische vaardigheden te versterken die ik tijdens mijn bachelor aan EPHEC heb verworven.\nDe verlenging omvatte een introductie tot Business Intelligence en ETL-processen (Data Warehousing) met Microsoft-tools (SSIS, …).\nDe opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van databaseontwikkeling tot gebruikersinterface en backend.","skills":["SQL Server","Node.js","Express.js","React","Angular","TypeScript","Auth0","Sequelize"]},{"id":"work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-webontwikkelaar-stagiair","kind":"work","title":"Full Stack Webontwikkelaar Stagiair","organisation":"EDITx: IT Challenges, IT Jobs, Education in IT for X","skills":[]},{"id":"work-les-auberges-de-jeunesse-wallonie-bruxelles-studentenjob","kind":"work","title":"Studentenjob","organisation":"Les Auberges de Jeunesse - Wallonie &amp; Bruxelles","skills":[]},{"id":"work-restomax-full-stack-webontwikkelaar-stagiair","kind":"work","title":"Full Stack Webontwikkelaar Stagiair","organisation":"RESTOMAX","skills":[".NET","Flutter","SQL Server"]},{"id":"work-quick-restaurant-studentenjob","kind":"work","title":"Studentenjob","organisation":"Quick Restaurant","skills":[]},{"id":"education-umons-master-of-science","kind":"education","title":"Master of Science","organisation":"UMons","subtitle":"Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)","summary":"Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger &amp; buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.","skills":["Python","LaTeX","DDD","CleanArchitecture"]},{"id":"education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professionele-bachelor","kind":"education","title":"Professionele bachelor","organisation":"Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)","subtitle":"Bedrijfsinformatica","summary":"Studentenvertegenwoordiger en tutor.\n\nTFE: WebMenu 2.0\n\nProgramma: analyse en ontwerp, programmeren in .NET, Java en web, relationele databanken, e-business en geïntegreerde beheersoftware (ERP), netwerken en IT-projectbeheer.","skills":["SQL","C#",".NET","Java","Python","JS","HTML","CSS"]},{"id":"education-institut-saint-louis-bruxelles-attestation","kind":"education","title":"Attestation","organisation":"Institut Saint-Louis Bruxelles","subtitle":"7e Spéciale Mathématiques","skills":[]},{"id":"education-universite-saint-louis-bruxelles-bachelor-in-de-politieke-wetenschappen","kind":"education","title":"Bachelor in de politieke wetenschappen","organisation":"Université Saint-Louis - Bruxelles","subtitle":"Algemene oriëntatie","skills":[]},{"id":"education-uclouvain-universite-catholique-de-louvain-voorbereidende-cursussen","kind":"education","title":"Voorbereidende cursussen","organisation":"UCLouvain - Université catholique de Louvain","subtitle":"Geneeskunde en tandheelkunde","skills":[]},{"id":"education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s","kind":"education","title":"C.E.S.S.","organisation":"Centre Scolaire Saint-Adrien - Val Duchesse","subtitle":"Algemene studies — Wiskunde en moderne talen","skills":[]},{"id":"education-lycee-mater-dei","kind":"education","title":"Lycée Mater Dei","organisation":"Lycée Mater Dei","subtitle":"Algemene studies — Latijn en Grieks","skills":[]},{"id":"project-synergy","kind":"project","title":"Synergy","subtitle":"Intern platform van het Belgisch federaal Parlement om de parlementaire archieven te doorzoeken, verkennen en bevragen.","summary":"Intern platform waarmee parlementaire medewerkers de archieven van het Belgisch federaal Parlement kunnen doorzoeken, verkennen en bevragen, aangedreven door een retrieval-augmented pijplijn met tweetalige FR/NL-ondersteuning.","skills":["Python","Java",".NET","RAG","AI"]},{"id":"project-fedrag-be","kind":"project","title":"fedrag-be","subtitle":"Open evaluatieprotocol dat retrieval-strategieën vergelijkt op het corpus van de Belgische Senaat, met focus op tweetalige FR/NL-robuustheid.","summary":"Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet.","skills":["RAG","Python","Evaluation","Benchmark","OCR","SentenceTransformers","Pandas"]},{"id":"project-acteble-api","kind":"project","title":"Acteble API","subtitle":"Backend van het Acteble-platform: een modulaire monoliet in Rust.","summary":"Backend van het platform: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming.","skills":["Rust","Tokio","Axum","Tonic","gRPC","SQLx","PostgreSQL","PostGIS","Redis","MinIO","LiveKit","OpenTelemetry","Docker","Caddy","DDD","HexagonalArchitecture","CQRS","EventDriven"]},{"id":"project-acteble-app","kind":"project","title":"Acteble App","subtitle":"Offline-first multiplatformclient van Acteble, gebouwd met Flutter.","summary":"Offline-first client voor iOS, Android, web en desktop: een Melos-monorepo met Flutter-apps en gedeelde packages, Riverpod-state boven een lokale Drift/SQLite-opslag, verbonden met de API via REST en gRPC.","skills":["Flutter","Dart","Melos","Riverpod","Drift","SQLite","Dio","gRPC","FlutterMap","Firebase","OfflineFirst","Mobile"]},{"id":"project-acteble-website","kind":"project","title":"Acteble Website","subtitle":"Publieke website van Acteble: een React single-page-applicatie.","summary":"Publieke website van Acteble: lichte React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.","skills":["React","Vite","JavaScript","i18next","ReactRouter"]},{"id":"project-memoire-de-master","kind":"project","title":"Mémoire de master","organisation":"UMONS","subtitle":"Masterproef aan de UMONS — de R&amp;D van de planningsengine van Acteble.","summary":"Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS. De R&amp;D van de planningsengine van Acteble, geschreven in Python.","skills":["Python","LaTeX","MiniZinc","ConstraintProgramming","CombinatorialOptimization","Pareto"]},{"id":"project-emvi-app","kind":"project","title":"Emvi App","subtitle":"AI-aangedreven visuele assistent voor slechtzienden.","summary":"AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR &amp; barcodes) en aangepast Valhalla-routesysteem.","skills":["Flutter","Firebase","OpenAI","Valhalla","AI","Dart"]},{"id":"project-remi","kind":"project","title":"Remi","subtitle":"Reminiscentie-applicatie voor mensen met cognitieve problemen.","summary":"Reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) pipeline.","skills":["Python","FastAPI","OpenAI","Whisper","DeepFace","PostgreSQL","SQLAlchemy"]},{"id":"project-myway","kind":"project","title":"MyWay","organisation":"Freelance","subtitle":"Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar.","skills":["Angular","JavaScript","TypeScript","Express.js","API","UI/UX","SQL Server","Auth0","PayPal","Sequelize","Node.js","React"]},{"id":"project-vhauctions-ner-inventory-model","kind":"project","title":"VhAuctions NER Inventory Model","summary":"Named Entity Recognition-model dat inventarisitems extraheert uit een audiotranscriptie.","skills":["Python","SpaCy","Pandas","NumPy",".NET","NER"]},{"id":"project-vhauctions","kind":"project","title":"VhAuctions","summary":"Wagenparkbeheerder voor veilingen.","skills":[".NET","C#","EntityFramework","React","TypeScript","Docker","Azure","OpenTelemetry","SQL Server"]},{"id":"project-kwalitijd","kind":"project","title":"Kwalitijd","summary":"Enquêtebeheerder voor sportclubs en federaties.","skills":[".NET","C#","Blazor","EntityFramework","xUnit","SQL Server","DDD"]},{"id":"project-webmenu","kind":"project","title":"WebMenu","summary":"QR-code-gebaseerde kassa voor HoReCa-etablissementen (Hotel/Restaurant/Café).","skills":[".NET","Flutter","SQL Server","QRCode"]},{"id":"course-algorithmique","kind":"course","title":"Algorithmique","organisation":"UMONS","subtitle":"Algoritmiek","skills":["Algorithms","DataStructures","Complexity","Trees"]},{"id":"course-anglais-i","kind":"course","title":"Anglais I","organisation":"UMONS","subtitle":"Engels I","skills":["English"]},{"id":"course-bases-de-donnees-i","kind":"course","title":"Bases de données I","organisation":"UMONS","subtitle":"Databanken I","skills":["SQL","RelationalAlgebra","Normalization","Indexing","NoSQL","BigData"]},{"id":"course-lecture-et-redaction-scientifique","kind":"course","title":"Lecture et rédaction scientifique","organisation":"UMONS","subtitle":"Wetenschappelijk lezen en schrijven","skills":["ScientificWriting","LiteratureReview"]},{"id":"course-mathematique","kind":"course","title":"Mathématique","organisation":"UMONS","subtitle":"Wiskunde","skills":["GraphTheory","Combinatorics","Complexity","PropositionalLogic","PredicateLogic"]},{"id":"course-modelisation-logicielle","kind":"course","title":"Modélisation logicielle","organisation":"UMONS","subtitle":"Softwaremodellering","skills":["Java","UML","DesignPatterns","UnitTesting","MockTesting","BDD"]},{"id":"course-reseaux","kind":"course","title":"Réseaux","organisation":"UMONS","subtitle":"Netwerken","skills":["TCP/IP","HTTP","DNS","OSPF","BGP","Ethernet"]},{"id":"course-strategie-et-politiques-en-ressources-humaines","kind":"course","title":"Stratégie et politiques en ressources humaines","organisation":"UMONS","subtitle":"HR-strategie en -beleid","skills":["HRM"]},{"id":"course-systemes-d-exploitation","kind":"course","title":"Systèmes d'exploitation","organisation":"UMONS","subtitle":"Besturingssystemen","skills":["Processes","Semaphores","Synchronization","MemoryManagement","FileSystems","Scheduling"]},{"id":"course-anglais-ii","kind":"course","title":"Anglais II","organisation":"UMONS","subtitle":"Engels II","skills":["English"]},{"id":"course-bases-de-donnees-ii","kind":"course","title":"Bases de données II","organisation":"UMONS","subtitle":"Databanken II","skills":["XML","XSLT","XQuery","XPath","BaseX","DataMining","Weka"]},{"id":"course-ingenierie-de-logiciels-et-gestion-de-projets","kind":"course","title":"Ingénierie de logiciels et gestion de projets","organisation":"UMONS","subtitle":"Software engineering en projectbeheer","skills":["Agile","Scrum","SoftwareEngineering"]},{"id":"course-intelligence-artificielle","kind":"course","title":"Intelligence artificielle","organisation":"UMONS","subtitle":"Artificiële intelligentie","skills":["SearchAlgorithms","Metaheuristics","FirstOrderLogic","SupervisedLearning"]},{"id":"course-recherche-operationnelle-et-applications","kind":"course","title":"Recherche opérationnelle et applications","organisation":"UMONS","subtitle":"Operationeel onderzoek en toepassingen","skills":["OperationsResearch","LinearProgramming","IntegerProgramming","Duality"]},{"id":"course-structures-de-donnees","kind":"course","title":"Structures de données","organisation":"UMONS","subtitle":"Datastructuren","skills":["AVLTrees","BTrees","HashTables","Sorting","Complexity"]},{"id":"course-seminaires-d-informatique-en-veille-technologique","kind":"course","title":"Séminaires d'informatique en veille technologique","organisation":"UMONS","subtitle":"Informaticaseminaries in technologiewatch","skills":["TechWatch"]},{"id":"course-cryptographie-et-securite-des-systemes-informatiques","kind":"course","title":"Cryptographie et sécurité des systèmes informatiques","organisation":"UMONS","subtitle":"Cryptografie en systeembeveiliging","skills":["Cryptography","Unix","NetworkSecurity","ApplicationSecurity"]},{"id":"course-ethique-et-droit-de-l-informatique","kind":"course","title":"Éthique et droit de l'informatique","organisation":"UMONS","subtitle":"Ethiek en informaticarecht","skills":["IntellectualProperty","DataProtection","GDPR"]},{"id":"course-structure-des-ordinateurs","kind":"course","title":"Structure des ordinateurs","organisation":"EPHEC","subtitle":"Computerstructuur","skills":["ComputerArchitecture","Binary","Hexadecimal","Hardware"]},{"id":"course-informatique-systeme-d-exploitation","kind":"course","title":"Informatique - Système d'exploitation","organisation":"EPHEC","subtitle":"Besturingssystemen","skills":["OperatingSystems","ShellScripting","SystemAdministration"]},{"id":"course-mathematique-appliquee-a-l-informatique","kind":"course","title":"Mathématique appliquée à l'informatique","organisation":"EPHEC","subtitle":"Wiskunde toegepast op informatica","skills":["LinearAlgebra","GraphTheory","SetTheory","RelationalAlgebra","MathematicalLogic","Cryptography"]},{"id":"course-principes-algorithmiques-et-programmation","kind":"course","title":"Principes algorithmiques et programmation","organisation":"EPHEC","subtitle":"Algoritmische principes en programmeren","skills":["Algorithms","DataTypes","ControlFlow","Programming"]},{"id":"course-principes-d-analyse-informatique","kind":"course","title":"Principes d'analyse informatique","organisation":"EPHEC","subtitle":"Principes van informatica-analyse","skills":["UML","EntityRelationship","SystemsAnalysis"]},{"id":"course-information-et-communication-professionnelles","kind":"course","title":"Information et communication professionnelles","organisation":"EPHEC","subtitle":"Professionele informatie en communicatie","skills":["ProfessionalCommunication"]},{"id":"course-web-principes-de-base","kind":"course","title":"Web : principes de base","organisation":"EPHEC","subtitle":"Web: basisprincipes","skills":["HTML","CSS","URL","DNS","WebHosting"]},{"id":"course-initiation-aux-bases-de-donnees","kind":"course","title":"Initiation aux bases de données","organisation":"EPHEC","subtitle":"Inleiding tot databanken","skills":["SQL","RelationalModel","Joins","Indexing"]},{"id":"course-gestion-et-exploitation-de-bases-de-donnees","kind":"course","title":"Gestion et exploitation de bases de données","organisation":"EPHEC","subtitle":"Beheer en exploitatie van databanken","skills":["Triggers","StoredProcedures","DataWarehouse","QueryOptimization"]},{"id":"course-programmation-orientee-objet","kind":"course","title":"Programmation orientée objet","organisation":"EPHEC","subtitle":"Objectgeoriënteerd programmeren","skills":["OOP","Inheritance","Polymorphism","Encapsulation","Overloading"]},{"id":"course-projet-d-analyse-et-de-conception","kind":"course","title":"Projet d'analyse et de conception","organisation":"EPHEC","subtitle":"Analyse- en ontwerpproject","skills":["SystemsAnalysis","SoftwareDesign","Modelling"]},{"id":"course-techniques-de-gestion-de-projet","kind":"course","title":"Techniques de gestion de projet","organisation":"EPHEC","subtitle":"Projectbeheertechnieken","skills":["ProjectManagement"]},{"id":"course-elements-de-statistique","kind":"course","title":"Éléments de statistique","organisation":"EPHEC","subtitle":"Elementen van statistiek","skills":["Statistics"]},{"id":"course-projet-de-developpement-web","kind":"course","title":"Projet de développement web","organisation":"EPHEC","subtitle":"Webontwikkelingsproject","skills":["JavaScript","AJAX","JSON","XML","ClientSideScripting"]},{"id":"course-notions-de-e-business","kind":"course","title":"Notions de e-business","organisation":"EPHEC","subtitle":"Beginselen van e-business","skills":["Ebusiness"]},{"id":"course-projet-de-developpement-sgbd","kind":"course","title":"Projet de développement SGBD","organisation":"EPHEC","subtitle":"DBMS-ontwikkelingsproject","skills":["DataAccessLayer","Transactions","DatabaseProgramming","Debugging"]},{"id":"course-bases-des-reseaux","kind":"course","title":"Bases des réseaux","organisation":"EPHEC","subtitle":"Netwerkbasis","skills":["Ethernet","MAC","TCP/IP","Networking"]},{"id":"course-organisation-des-entreprises-et-elements-de-management","kind":"course","title":"Organisation des entreprises et éléments de management","organisation":"EPHEC","subtitle":"Bedrijfsorganisatie en management","skills":["Management"]},{"id":"course-produits-logiciels-de-gestion-integres","kind":"course","title":"Produits logiciels de gestion intégrés","organisation":"EPHEC","subtitle":"Geïntegreerde beheersoftware","skills":["ERP"]},{"id":"course-projet-d-integration-de-developpement","kind":"course","title":"Projet d'intégration de développement","organisation":"EPHEC","subtitle":"Ontwikkelingsintegratieproject","skills":["AJAX","JSON","XML","SQLInjection","XSS","Caching","URLRewriting"]},{"id":"course-veille-technologique","kind":"course","title":"Veille technologique","organisation":"EPHEC","subtitle":"Technologiewatch","skills":["TechWatch"]},{"id":"course-administration-gestion-et-securisation-des-reseaux","kind":"course","title":"Administration, gestion et sécurisation des réseaux","organisation":"EPHEC","subtitle":"Netwerkbeheer en -beveiliging","skills":["NetworkAdministration","NetworkSecurity","ApplicationServer"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue1","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE1","organisation":"EPHEC","subtitle":"Toegepaste taal hoger onderwijs UE1","skills":["ProfessionalCommunication"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue2","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE2","organisation":"EPHEC","subtitle":"Toegepaste taal hoger onderwijs UE2","skills":["ProfessionalCommunication"]},{"id":"course-economie-i","kind":"course","title":"Économie I","organisation":"USL-B","subtitle":"Economie I","skills":["Microeconomics","CompetitiveMarkets","FirmBehaviour","MarketFailure"]},{"id":"course-economie-ii","kind":"course","title":"Économie II","organisation":"USL-B","subtitle":"Economie II","skills":["ImperfectCompetition","Macroeconomics","NationalIncome","MonetaryMarket"]},{"id":"course-science-politique","kind":"course","title":"Science politique","organisation":"USL-B","subtitle":"Politieke wetenschap","skills":["PoliticalScience","Power","State","Democracy"]},{"id":"course-seminaire-penser-le-social","kind":"course","title":"Séminaire : penser le social","organisation":"USL-B","subtitle":"Seminarie: het sociale denken","skills":["Epistemology","Durkheim","Weber","Marx"]},{"id":"course-seminaire-principes-et-methodes-en-sciences-sociales","kind":"course","title":"Séminaire : principes et méthodes en sciences sociales","organisation":"USL-B","subtitle":"Seminarie: principes en methoden in de sociale wetenschappen","skills":["AcademicWriting","Citation","Epistemology"]},{"id":"course-socio-economie-des-medias","kind":"course","title":"Socio-économie des médias","organisation":"USL-B","subtitle":"Socio-economie van de media","skills":["MediaEconomics","Advertising","MediaRegulation","WebEconomy"]},{"id":"course-anglais-i-saint-louis","kind":"course","title":"Anglais I (Saint-Louis)","organisation":"USL-B","subtitle":"Engels I","skills":["English"]},{"id":"course-neerlandais-i","kind":"course","title":"Néerlandais I","organisation":"USL-B","subtitle":"Nederlands I","skills":["Dutch"]},{"id":"volunteer-umons-studentenvertegenwoordiger","kind":"volunteer","title":"Studentenvertegenwoordiger","organisation":"UMons","skills":[]},{"id":"volunteer-umons-buddy-tandemons","kind":"volunteer","title":"Buddy TandeMons","organisation":"UMons","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-studentenvertegenwoordiger","kind":"volunteer","title":"Studentenvertegenwoordiger","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-tutor","kind":"volunteer","title":"Tutor","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]}],"skills":[{"skill":".NET","uses":12,"href":"#skill-net"},{"skill":"Python","uses":10,"href":"#skill-python"},{"skill":"SQL Server","uses":8,"href":"#skill-sql-server"},{"skill":"DDD","uses":6,"href":"#skill-ddd"},{"skill":"Flutter","uses":6,"href":"#skill-flutter"},{"skill":"React","uses":5,"href":"#skill-react"},{"skill":"Dart","uses":4,"href":"#skill-dart"},{"skill":"Docker","uses":4,"href":"#skill-docker"},{"skill":"EntityFramework","uses":4,"href":"#skill-entityframework"},{"skill":"Java","uses":4,"href":"#skill-java"},{"skill":"OpenAI","uses":4,"href":"#skill-openai"},{"skill":"Pandas","uses":4,"href":"#skill-pandas"},{"skill":"PostgreSQL","uses":4,"href":"#skill-postgresql"},{"skill":"TypeScript","uses":4,"href":"#skill-typescript"},{"skill":"C#","uses":3,"href":"#skill-c"},{"skill":"CleanArchitecture","uses":3,"href":"#skill-cleanarchitecture"},{"skill":"Complexity","uses":3,"href":"#skill-complexity"},{"skill":"English","uses":3,"href":"#skill-english"},{"skill":"Firebase","uses":3,"href":"#skill-firebase"},{"skill":"JavaScript","uses":3,"href":"#skill-javascript"},{"skill":"OpenTelemetry","uses":3,"href":"#skill-opentelemetry"},{"skill":"ProfessionalCommunication","uses":3,"href":"#skill-professionalcommunication"},{"skill":"RAG","uses":3,"href":"#skill-rag"},{"skill":"SQL","uses":3,"href":"#skill-sql"},{"skill":"XML","uses":3,"href":"#skill-xml"},{"skill":"AI","uses":2,"href":"#skill-ai"},{"skill":"AJAX","uses":2,"href":"#skill-ajax"},{"skill":"Algorithms","uses":2,"href":"#skill-algorithms"},{"skill":"Angular","uses":2,"href":"#skill-angular"},{"skill":"API","uses":2,"href":"#skill-api"},{"skill":"Auth0","uses":2,"href":"#skill-auth0"},{"skill":"Azure","uses":2,"href":"#skill-azure"},{"skill":"Blazor","uses":2,"href":"#skill-blazor"},{"skill":"Cryptography","uses":2,"href":"#skill-cryptography"},{"skill":"CSS","uses":2,"href":"#skill-css"},{"skill":"DeepFace","uses":2,"href":"#skill-deepface"},{"skill":"DNS","uses":2,"href":"#skill-dns"},{"skill":"Epistemology","uses":2,"href":"#skill-epistemology"},{"skill":"Ethernet","uses":2,"href":"#skill-ethernet"},{"skill":"Express.js","uses":2,"href":"#skill-express-js"},{"skill":"FastAPI","uses":2,"href":"#skill-fastapi"},{"skill":"GraphTheory","uses":2,"href":"#skill-graphtheory"},{"skill":"gRPC","uses":2,"href":"#skill-grpc"},{"skill":"HTML","uses":2,"href":"#skill-html"},{"skill":"Indexing","uses":2,"href":"#skill-indexing"},{"skill":"JSON","uses":2,"href":"#skill-json"},{"skill":"LaTeX","uses":2,"href":"#skill-latex"},{"skill":"NetworkSecurity","uses":2,"href":"#skill-networksecurity"},{"skill":"Node.js","uses":2,"href":"#skill-node-js"},{"skill":"NumPy","uses":2,"href":"#skill-numpy"},{"skill":"OCR","uses":2,"href":"#skill-ocr"},{"skill":"RelationalAlgebra","uses":2,"href":"#skill-relationalalgebra"},{"skill":"Rust","uses":2,"href":"#skill-rust"},{"skill":"SentenceTransformers","uses":2,"href":"#skill-sentencetransformers"},{"skill":"Sequelize","uses":2,"href":"#skill-sequelize"},{"skill":"SpaCy","uses":2,"href":"#skill-spacy"},{"skill":"SQLAlchemy","uses":2,"href":"#skill-sqlalchemy"},{"skill":"SystemsAnalysis","uses":2,"href":"#skill-systemsanalysis"},{"skill":"TCP/IP","uses":2,"href":"#skill-tcp-ip"},{"skill":"TechWatch","uses":2,"href":"#skill-techwatch"},{"skill":"Tokio","uses":2,"href":"#skill-tokio"},{"skill":"UI/UX","uses":2,"href":"#skill-ui-ux"},{"skill":"UML","uses":2,"href":"#skill-uml"},{"skill":"Valhalla","uses":2,"href":"#skill-valhalla"},{"skill":"Whisper","uses":2,"href":"#skill-whisper"},{"skill":"xUnit","uses":2,"href":"#skill-xunit"},{"skill":"AcademicWriting","uses":1,"href":"#skill-academicwriting"},{"skill":"Advertising","uses":1,"href":"#skill-advertising"},{"skill":"Agile","uses":1,"href":"#skill-agile"},{"skill":"ApplicationSecurity","uses":1,"href":"#skill-applicationsecurity"},{"skill":"ApplicationServer","uses":1,"href":"#skill-applicationserver"},{"skill":"AVLTrees","uses":1,"href":"#skill-avltrees"},{"skill":"Axum","uses":1,"href":"#skill-axum"},{"skill":"BaseX","uses":1,"href":"#skill-basex"},{"skill":"BDD","uses":1,"href":"#skill-bdd"},{"skill":"Benchmark","uses":1,"href":"#skill-benchmark"},{"skill":"BGP","uses":1,"href":"#skill-bgp"},{"skill":"BigData","uses":1,"href":"#skill-bigdata"},{"skill":"Binary","uses":1,"href":"#skill-binary"},{"skill":"BTrees","uses":1,"href":"#skill-btrees"},{"skill":"Caching","uses":1,"href":"#skill-caching"},{"skill":"Caddy","uses":1,"href":"#skill-caddy"},{"skill":"Citation","uses":1,"href":"#skill-citation"},{"skill":"CleanCode","uses":1,"href":"#skill-cleancode"},{"skill":"ClientSideScripting","uses":1,"href":"#skill-clientsidescripting"},{"skill":"CombinatorialOptimization","uses":1,"href":"#skill-combinatorialoptimization"},{"skill":"Combinatorics","uses":1,"href":"#skill-combinatorics"},{"skill":"CompetitiveMarkets","uses":1,"href":"#skill-competitivemarkets"},{"skill":"ComputerArchitecture","uses":1,"href":"#skill-computerarchitecture"},{"skill":"ConstraintProgramming","uses":1,"href":"#skill-constraintprogramming"},{"skill":"ControlFlow","uses":1,"href":"#skill-controlflow"},{"skill":"CQRS","uses":1,"href":"#skill-cqrs"},{"skill":"DataAccessLayer","uses":1,"href":"#skill-dataaccesslayer"},{"skill":"DatabaseProgramming","uses":1,"href":"#skill-databaseprogramming"},{"skill":"DataMining","uses":1,"href":"#skill-datamining"},{"skill":"DataProtection","uses":1,"href":"#skill-dataprotection"},{"skill":"DataStructures","uses":1,"href":"#skill-datastructures"},{"skill":"DataTypes","uses":1,"href":"#skill-datatypes"},{"skill":"DataWarehouse","uses":1,"href":"#skill-datawarehouse"},{"skill":"Debugging","uses":1,"href":"#skill-debugging"},{"skill":"Democracy","uses":1,"href":"#skill-democracy"},{"skill":"DesignPatterns","uses":1,"href":"#skill-designpatterns"},{"skill":"Dio","uses":1,"href":"#skill-dio"},{"skill":"Drift","uses":1,"href":"#skill-drift"},{"skill":"Duality","uses":1,"href":"#skill-duality"},{"skill":"Durkheim","uses":1,"href":"#skill-durkheim"},{"skill":"Dutch","uses":1,"href":"#skill-dutch"},{"skill":"Ebusiness","uses":1,"href":"#skill-ebusiness"},{"skill":"Encapsulation","uses":1,"href":"#skill-encapsulation"},{"skill":"EntityRelationship","uses":1,"href":"#skill-entityrelationship"},{"skill":"ERP","uses":1,"href":"#skill-erp"},{"skill":"Evaluation","uses":1,"href":"#skill-evaluation"},{"skill":"EventDriven","uses":1,"href":"#skill-eventdriven"},{"skill":"FileSystems","uses":1,"href":"#skill-filesystems"},{"skill":"FirmBehaviour","uses":1,"href":"#skill-firmbehaviour"},{"skill":"FirstOrderLogic","uses":1,"href":"#skill-firstorderlogic"},{"skill":"FlutterMap","uses":1,"href":"#skill-fluttermap"},{"skill":"GDPR","uses":1,"href":"#skill-gdpr"},{"skill":"Hardware","uses":1,"href":"#skill-hardware"},{"skill":"HashTables","uses":1,"href":"#skill-hashtables"},{"skill":"Hexadecimal","uses":1,"href":"#skill-hexadecimal"},{"skill":"HexagonalArchitecture","uses":1,"href":"#skill-hexagonalarchitecture"},{"skill":"HRM","uses":1,"href":"#skill-hrm"},{"skill":"HTTP","uses":1,"href":"#skill-http"},{"skill":"i18next","uses":1,"href":"#skill-i18next"},{"skill":"ImperfectCompetition","uses":1,"href":"#skill-imperfectcompetition"},{"skill":"Inheritance","uses":1,"href":"#skill-inheritance"},{"skill":"IntegerProgramming","uses":1,"href":"#skill-integerprogramming"},{"skill":"IntellectualProperty","uses":1,"href":"#skill-intellectualproperty"},{"skill":"Joins","uses":1,"href":"#skill-joins"},{"skill":"JS","uses":1,"href":"#skill-js"},{"skill":"LinearAlgebra","uses":1,"href":"#skill-linearalgebra"},{"skill":"LinearProgramming","uses":1,"href":"#skill-linearprogramming"},{"skill":"LiteratureReview","uses":1,"href":"#skill-literaturereview"},{"skill":"LiveKit","uses":1,"href":"#skill-livekit"},{"skill":"MAC","uses":1,"href":"#skill-mac"},{"skill":"Macroeconomics","uses":1,"href":"#skill-macroeconomics"},{"skill":"Management","uses":1,"href":"#skill-management"},{"skill":"MarketFailure","uses":1,"href":"#skill-marketfailure"},{"skill":"Marx","uses":1,"href":"#skill-marx"},{"skill":"MathematicalLogic","uses":1,"href":"#skill-mathematicallogic"},{"skill":"MediaEconomics","uses":1,"href":"#skill-mediaeconomics"},{"skill":"MediaRegulation","uses":1,"href":"#skill-mediaregulation"},{"skill":"Melos","uses":1,"href":"#skill-melos"},{"skill":"MemoryManagement","uses":1,"href":"#skill-memorymanagement"},{"skill":"Metaheuristics","uses":1,"href":"#skill-metaheuristics"},{"skill":"Microeconomics","uses":1,"href":"#skill-microeconomics"},{"skill":"MinIO","uses":1,"href":"#skill-minio"},{"skill":"MiniZinc","uses":1,"href":"#skill-minizinc"},{"skill":"Mobile","uses":1,"href":"#skill-mobile"},{"skill":"MockTesting","uses":1,"href":"#skill-mocktesting"},{"skill":"Modelling","uses":1,"href":"#skill-modelling"},{"skill":"MonetaryMarket","uses":1,"href":"#skill-monetarymarket"},{"skill":"NationalIncome","uses":1,"href":"#skill-nationalincome"},{"skill":"NER","uses":1,"href":"#skill-ner"},{"skill":"NetworkAdministration","uses":1,"href":"#skill-networkadministration"},{"skill":"Networking","uses":1,"href":"#skill-networking"},{"skill":"Normalization","uses":1,"href":"#skill-normalization"},{"skill":"NoSQL","uses":1,"href":"#skill-nosql"},{"skill":"OfflineFirst","uses":1,"href":"#skill-offlinefirst"},{"skill":"OOP","uses":1,"href":"#skill-oop"},{"skill":"OperatingSystems","uses":1,"href":"#skill-operatingsystems"},{"skill":"OperationsResearch","uses":1,"href":"#skill-operationsresearch"},{"skill":"OSPF","uses":1,"href":"#skill-ospf"},{"skill":"Overloading","uses":1,"href":"#skill-overloading"},{"skill":"Pareto","uses":1,"href":"#skill-pareto"},{"skill":"PayPal","uses":1,"href":"#skill-paypal"},{"skill":"PHP","uses":1,"href":"#skill-php"},{"skill":"PoliticalScience","uses":1,"href":"#skill-politicalscience"},{"skill":"Polymorphism","uses":1,"href":"#skill-polymorphism"},{"skill":"PostGIS","uses":1,"href":"#skill-postgis"},{"skill":"Power","uses":1,"href":"#skill-power"},{"skill":"PredicateLogic","uses":1,"href":"#skill-predicatelogic"},{"skill":"Processes","uses":1,"href":"#skill-processes"},{"skill":"Programming","uses":1,"href":"#skill-programming"},{"skill":"ProjectManagement","uses":1,"href":"#skill-projectmanagement"},{"skill":"PropositionalLogic","uses":1,"href":"#skill-propositionallogic"},{"skill":"QRCode","uses":1,"href":"#skill-qrcode"},{"skill":"QueryOptimization","uses":1,"href":"#skill-queryoptimization"},{"skill":"ReactRouter","uses":1,"href":"#skill-reactrouter"},{"skill":"Redis","uses":1,"href":"#skill-redis"},{"skill":"RelationalModel","uses":1,"href":"#skill-relationalmodel"},{"skill":"Riverpod","uses":1,"href":"#skill-riverpod"},{"skill":"Scheduling","uses":1,"href":"#skill-scheduling"},{"skill":"ScientificWriting","uses":1,"href":"#skill-scientificwriting"},{"skill":"Scrum","uses":1,"href":"#skill-scrum"},{"skill":"SearchAlgorithms","uses":1,"href":"#skill-searchalgorithms"},{"skill":"Semaphores","uses":1,"href":"#skill-semaphores"},{"skill":"SetTheory","uses":1,"href":"#skill-settheory"},{"skill":"ShellScripting","uses":1,"href":"#skill-shellscripting"},{"skill":"SoftwareDesign","uses":1,"href":"#skill-softwaredesign"},{"skill":"SoftwareEngineering","uses":1,"href":"#skill-softwareengineering"},{"skill":"Sorting","uses":1,"href":"#skill-sorting"},{"skill":"SQLInjection","uses":1,"href":"#skill-sqlinjection"},{"skill":"SQLite","uses":1,"href":"#skill-sqlite"},{"skill":"SQLx","uses":1,"href":"#skill-sqlx"},{"skill":"State","uses":1,"href":"#skill-state"},{"skill":"Statistics","uses":1,"href":"#skill-statistics"},{"skill":"StoredProcedures","uses":1,"href":"#skill-storedprocedures"},{"skill":"SupervisedLearning","uses":1,"href":"#skill-supervisedlearning"},{"skill":"Synchronization","uses":1,"href":"#skill-synchronization"},{"skill":"SystemAdministration","uses":1,"href":"#skill-systemadministration"},{"skill":"Tonic","uses":1,"href":"#skill-tonic"},{"skill":"Transactions","uses":1,"href":"#skill-transactions"},{"skill":"Trees","uses":1,"href":"#skill-trees"},{"skill":"Triggers","uses":1,"href":"#skill-triggers"},{"skill":"UnitTesting","uses":1,"href":"#skill-unittesting"},{"skill":"Unix","uses":1,"href":"#skill-unix"},{"skill":"URL","uses":1,"href":"#skill-url"},{"skill":"URLRewriting","uses":1,"href":"#skill-urlrewriting"},{"skill":"Vite","uses":1,"href":"#skill-vite"},{"skill":"WebEconomy","uses":1,"href":"#skill-webeconomy"},{"skill":"Weber","uses":1,"href":"#skill-weber"},{"skill":"WebHosting","uses":1,"href":"#skill-webhosting"},{"skill":"Weka","uses":1,"href":"#skill-weka"},{"skill":"XPath","uses":1,"href":"#skill-xpath"},{"skill":"XQuery","uses":1,"href":"#skill-xquery"},{"skill":"XSLT","uses":1,"href":"#skill-xslt"},{"skill":"XSS","uses":1,"href":"#skill-xss"}],"kinds":{"work":"Werkervaring","education":"Opleiding","project":"Projecten","course":"Opleidingsonderdelen","volunteer":"Vrijwilligerswerk","competition":"Wedstrijden"},"groups":{"skills":"Vaardigheden","entries":"Items"},"actions":[{"label":"English","hint":"Taal","href":"/assets/data/resume-en.xml"},{"label":"Français","hint":"Taal","href":"/assets/data/resume-fr.xml"},{"label":"Español","hint":"Taal","href":"/assets/data/resume-es.xml"},{"label":"Deutsch","hint":"Taal","href":"/assets/data/resume-de.xml"},{"label":"中文","hint":"Taal","href":"/assets/data/resume-zh.xml"},{"label":"Thema wisselen","press":"#theme-toggle"},{"label":"CV downloaden","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_nl.pdf"},{"label":"Tijdlijn downloaden","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_timeline_nl.pdf"}]}</index>
+        <index>{"entries":[{"id":"work-acteble-oprichter","kind":"work","title":"Oprichter","organisation":"Acteble","summary":"Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&amp;D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.","skills":["Rust","Flutter","Dart","Tokio","Docker","DDD","CleanArchitecture","PostgreSQL"]},{"id":"work-belgische-senaat-ai-onderzoeker","kind":"work","title":"AI-onderzoeker","organisation":"Belgische Senaat","summary":"AI-onderzoek en engineering voor het Belgisch federaal Parlement. Ontwerp van een intern platform waarmee medewerkers de parlementaire archieven kunnen doorzoeken, verkennen en bevragen. Auteur van een open evaluatieprotocol dat retrieval-strategieën vergelijkt op het Senaat-corpus, met focus op tweetalige FR/NL-robuustheid.","skills":["Python","Java",".NET","RAG","OCR","SentenceTransformers","Pandas"]},{"id":"work-emvi-ai-ai-software-crafter-lead","kind":"work","title":"AI Software Crafter Lead","organisation":"Emvi.ai","summary":"Technische leiding en ontwikkeling van ontwerp tot oplevering: OCR-pijplijn, code-scans en aangepast Valhalla-routesysteem voor slechtzienden.","skills":["Dart","Flutter","Firebase","OpenAI","Valhalla"]},{"id":"work-emvi-ai-ai-software-crafter","kind":"work","title":"AI Software Crafter","organisation":"Emvi.ai","summary":"Bouwde de gezichtsherkenningspijplijn (DeepFace / Serengil, detectie + herkenning) en de sentimentanalyse-stack voor de door LLM gegenereerde fotobeschrijvingen.","skills":["Python","Whisper","FastAPI","DeepFace","OpenAI","PostgreSQL","SQLAlchemy"]},{"id":"work-xtrada-data-scientist","kind":"work","title":"Data Scientist","organisation":"Xtrada","summary":"Python-bibliotheken (SpaCy…) om benoemde entiteiten uit tekst te extraheren via NER-modeltraining en implementatie in .NET. Recall-score van het model: 87%.","skills":["Python","SpaCy","Pandas","NumPy",".NET"]},{"id":"work-xtrada-software-crafter","kind":"work","title":"Software Crafter","organisation":"Xtrada","summary":"Softwaremodernisering binnen de .NET-stack volgens DDD en clean code principes. Implementatie van Azure AI-services in een .NET-oplossing.","skills":[".NET","DDD","CleanCode","CleanArchitecture"]},{"id":"work-xtrada-net-react-software-crafter","kind":"work","title":".NET / React Software Crafter","organisation":"Xtrada","skills":[".NET","React","SQL Server","TypeScript","EntityFramework","Docker","Azure","OpenTelemetry"]},{"id":"work-xtrada-net-blazor-software-crafter","kind":"work","title":".NET / Blazor Software Crafter","organisation":"Xtrada","summary":"Ontwikkeling van de webapp in .NET / Blazor volgens DDD en clean code principes.","skills":[".NET","Blazor","SQL Server","DDD","EntityFramework","xUnit"]},{"id":"work-technofutur-tic-full-stack-webontwikkelaar-stagiair","kind":"work","title":"Full Stack Webontwikkelaar Stagiair","organisation":"Technofutur TIC","summary":"Kwalificerende opleiding om de technische vaardigheden te versterken die ik tijdens mijn bachelor aan EPHEC heb verworven.\nDe verlenging omvatte een introductie tot Business Intelligence en ETL-processen (Data Warehousing) met Microsoft-tools (SSIS, …).\nDe opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van databaseontwikkeling tot gebruikersinterface en backend.","skills":["SQL Server","Node.js","Express.js","React","Angular","TypeScript","Auth0","Sequelize"]},{"id":"work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-webontwikkelaar-stagiair","kind":"work","title":"Full Stack Webontwikkelaar Stagiair","organisation":"EDITx: IT Challenges, IT Jobs, Education in IT for X","skills":[]},{"id":"work-les-auberges-de-jeunesse-wallonie-bruxelles-studentenjob","kind":"work","title":"Studentenjob","organisation":"Les Auberges de Jeunesse - Wallonie &amp; Bruxelles","skills":[]},{"id":"work-restomax-full-stack-webontwikkelaar-stagiair","kind":"work","title":"Full Stack Webontwikkelaar Stagiair","organisation":"RESTOMAX","skills":[".NET","Flutter","SQL Server"]},{"id":"work-quick-restaurant-studentenjob","kind":"work","title":"Studentenjob","organisation":"Quick Restaurant","skills":[]},{"id":"education-umons-master-of-science","kind":"education","title":"Master of Science","organisation":"UMons","subtitle":"Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)","summary":"Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger &amp; buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.","skills":["Python","LaTeX","DDD","CleanArchitecture"]},{"id":"education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professionele-bachelor","kind":"education","title":"Professionele bachelor","organisation":"Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)","subtitle":"Bedrijfsinformatica","summary":"Studentenvertegenwoordiger en tutor.\n\nTFE: WebMenu 2.0\n\nProgramma: analyse en ontwerp, programmeren in .NET, Java en web, relationele databanken, e-business en geïntegreerde beheersoftware (ERP), netwerken en IT-projectbeheer.","skills":["SQL","C#",".NET","Java","Python","JS","HTML","CSS"]},{"id":"education-institut-saint-louis-bruxelles-attestation","kind":"education","title":"Attestation","organisation":"Institut Saint-Louis Bruxelles","subtitle":"7e Spéciale Mathématiques","skills":[]},{"id":"education-universite-saint-louis-bruxelles-bachelor-in-de-politieke-wetenschappen","kind":"education","title":"Bachelor in de politieke wetenschappen","organisation":"Université Saint-Louis - Bruxelles","subtitle":"Algemene oriëntatie","skills":[]},{"id":"education-uclouvain-universite-catholique-de-louvain-voorbereidende-cursussen","kind":"education","title":"Voorbereidende cursussen","organisation":"UCLouvain - Université catholique de Louvain","subtitle":"Geneeskunde en tandheelkunde","skills":[]},{"id":"education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s","kind":"education","title":"C.E.S.S.","organisation":"Centre Scolaire Saint-Adrien - Val Duchesse","subtitle":"Algemene studies — Wiskunde en moderne talen","skills":[]},{"id":"education-lycee-mater-dei","kind":"education","title":"Lycée Mater Dei","organisation":"Lycée Mater Dei","subtitle":"Algemene studies — Latijn en Grieks","skills":[]},{"id":"project-baba","kind":"project","title":"Baba","subtitle":"Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.","summary":"Vijf lagen: een Rust-CLI die alle I/O doet, een link-grammar syntactische parser, een SWI-Prolog symbolische engine zonder I/O, domeinvocabulairepacks als data, en een vijftigtal Rust-actiebinaries — een nieuw werkwoord is één packfeit en één binary. Mutatiegetest, met een corpus van regressiezinnen en een koude start van ongeveer 120 ms.","skills":["Rust","Prolog","LinkGrammar","SymbolicAI","NLP","DDD","TDD","MutationTesting"]},{"id":"project-kag","kind":"project","title":"KAG","subtitle":"Puur algoritmisch Rust-framework dat uitwisselbare onderdelen van een RAG-pipeline op BEIR benchmarkt en de best gemeten configuratie levert als vraag-antwoord-CLI met geciteerde bronnen.","summary":"Negen pipelinestappen (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), elk een port waarvan het algoritme per label wordt gekozen (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonaal + DDD + TDD, alleen de standaardbibliotheek in de core, geen LLM. De metrieken komen exact overeen met pytrec_eval. Op zes BEIR-datasets wint geen enkele retriever overal (ndcg@10 0,668 op SciFact met BM25F); een LambdaMART-reranker tilt ArguAna van 0,301 naar 0,527 in 5-voudige kruisvalidatie.","skills":["Rust","RAG","InformationRetrieval","LearningToRank","BEIR","DDD","HexagonalArchitecture","TDD"]},{"id":"project-ll","kind":"project","title":"LL","subtitle":"Vocabulairetrainer met gespreide herhaling voor zes talen, waarbij elk woord wordt aangeleerd met een uitgelijnde voorbeeldzin in elke taal.","summary":"Een Rust-workspace waarvan de pure domeinkern (hexagonaal, DDD, test-first) een terminal-UI (ratatui) en Dioxus-apps voor desktop en iOS aanstuurt: Leitner-dozen met SM-2-planning op SQLite, inhoud uit datapakketten met gecontroleerde checksum. Het datalab bouwt in Python de lexicale databank in zes talen — ongeveer 8.900 woordbetekenissen (oktober 2026) uitgelijnd op WordNet, geïllustreerd met Tatoeba-zinnen, geanalyseerd met spaCy, elke woord-in-zin-koppeling gecontroleerd.","skills":["Rust","Dioxus","Ratatui","SQLite","iOS","SpacedRepetition","Leitner","SM2","Python","spaCy","NLP","WordNet","Tatoeba","HexagonalArchitecture","DDD","TDD"]},{"id":"project-indexer","kind":"project","title":"Indexer","subtitle":"Gecureerde index van externe databronnen, boeken en softwarepakketten, aangeboden via een openbare lees-API.","summary":"Elk van de 523 bronnen is een TOML-bestand dat Rust valideert en compileert tot statische JSON, bij het bouwen ingebed in een Cloudflare Worker: API-logica in puur Rust, ETag- en 304-antwoorden, snelheidslimieten per IP en per API-sleutel, exact geteld door een Durable Object, BM25F-rangschikking gewogen met een betrouwbaarheidsscore op zes criteria, en een hiaatanalyse die behoeften aan kandidaat-bronnen koppelt.","skills":["Rust","CloudflareWorkers","WebAssembly","DurableObjects","TOML","BM25F","InformationRetrieval","TDD"]},{"id":"project-polytech","kind":"project","title":"Polytech","subtitle":"Bibliotheek voor ingenieursstudies die elk getal en elke uitdrukking van uitgewerkte LaTeX-oplossingen berekent, niets met de hand ingetypt.","summary":"Een Python-bibliotheek (DDD, hexagonaal, test-first, met mutatietests, mypy strict) met de begrippen uit wiskunde, natuurkunde, elektronica, signalen en optimalisatie, berekend met SymPy, NumPy en SciPy en via macro's in 920 LaTeX-documenten ingevoegd; een pipeline zet cursusmateriaal om naar Markdown, LaTeX en XML, en Lean 4-bewijzen met Mathlib herleiden resultaten tot de axioma's.","skills":["Python","SymPy","NumPy","SciPy","LaTeX","Lean4","Mathlib","DDD","HexagonalArchitecture","TDD","MutationTesting"]},{"id":"project-converge","kind":"project","title":"Converge","subtitle":"AI-ondersteund platform voor mechanisch 3D-ontwerp dat opensource-engines voor geometrie, meshing en simulatie aanstuurt.","summary":"De AI schrijft bewerkingen, de engines rekenen: een LLM levert een strikt gevalideerd onderdeelprogramma in JSON; twee onafhankelijke kernels, OpenCASCADE (exact) en Manifold (mesh), moeten het eens zijn over volume en omhullende doos, en de assemblage wordt op overlappingen gecontroleerd vóór elke export naar STEP, STL, 3MF of glTF. Een Rust-kern (hexagonale poorten en adapters) stuurt een Python-worker aan via JSON-regels, en een NSGA-II-zoektocht (Optuna) kiest de componenten op een Paretofront, gecontroleerd door exacte enumeratie.","skills":["Rust","Python","OpenCASCADE","Manifold","build123d","Gmsh","Optuna","NSGA2","MultiObjectiveOptimization","Pareto","ThreeJS","HexagonalArchitecture","TDD"]},{"id":"project-actrack","kind":"project","title":"Actrack","subtitle":"Voorspellingen van het FIFA WK 2026 met een ensemble van voetbalratingstrategieën.","summary":"Een Python-engine (DDD, hexagonaal) weegt vijftien strategieën voor wedstrijduitslagen — Elo, Poisson aanval/verdediging, vorm, onderlinge duels, waarde van de selectie, rustdagen, bookmakerquoteringen — aangepast aan de speellocatie, en is overgezet naar Rust/Dioxus-apps voor web (WebAssembly), desktop, mobiel en terminal, die er gelijk mee blijven. Een onderzoekslab backtest de strategieën walk-forward, telkens met één toernooi apart gehouden, op 635 wedstrijden uit tien toernooien (WK's 2002–2022 en vier continentale toernooien van 2023–2024) en stemt de ensemblegewichten af; buiten de steekproef scoort Elo alleen het best (55,6% juist).","skills":["Python","Pandas","NumPy","SciPy","DuckDB","Rust","Dioxus","WebAssembly","EloRating","PoissonModel","EnsembleModel","WalkForwardBacktest","BrierScore","HexagonalArchitecture","DDD","TDD"]},{"id":"project-synergy","kind":"project","title":"Synergy","subtitle":"Intern platform van het Belgisch federaal Parlement om de parlementaire archieven te doorzoeken, verkennen en bevragen.","summary":"Intern platform waarmee parlementaire medewerkers de archieven van het Belgisch federaal Parlement kunnen doorzoeken, verkennen en bevragen, aangedreven door een retrieval-augmented pijplijn met tweetalige FR/NL-ondersteuning.","skills":["Python","Java",".NET","RAG","AI"]},{"id":"project-fedrag-be","kind":"project","title":"fedrag-be","subtitle":"Open evaluatieprotocol dat retrieval-strategieën vergelijkt op het corpus van de Belgische Senaat, met focus op tweetalige FR/NL-robuustheid.","summary":"Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet.","skills":["RAG","Python","Evaluation","Benchmark","OCR","SentenceTransformers","Pandas"]},{"id":"project-acteble","kind":"project","title":"Acteble","subtitle":"Geolokaliseerd sociaal platform dat mensen samenbrengt rond gedeelde activiteiten: een Rust-backend, een offline-first Flutter-app en een React-website.","summary":"Backend: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming; een PostGIS-pipeline zet OpenStreetMap-data om in routeringsgrafen die via een CDN worden gepubliceerd, en eigen Dylint-lints bewaken de architectuur in CI. App: offline-first Flutter-client voor iOS, Android, web en desktop — een Melos-monorepo met Riverpod boven een versleutelde lokale opslag (Drift, SQLCipher), end-to-end-versleuteling via een Rust-kern (vodozemac via flutter_rust_bridge), peer-to-peer-synchronisatie via Bluetooth, MapLibre-kaarten en realtime media met LiveKit. Website: React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.","skills":["Rust","Tokio","Axum","Tonic","gRPC","Protobuf","SQLx","PostgreSQL","PostGIS","Redis","MinIO","LiveKit","OpenBao","Prometheus","Testcontainers","OpenStreetMap","Docker","Caddy","Dylint","DDD","HexagonalArchitecture","CQRS","EventDriven","Flutter","Dart","Melos","Riverpod","Drift","SQLite","SQLCipher","Dio","FlutterRustBridge","MapLibre","FlutterMap","Firebase","OfflineFirst","E2EE","Mobile","React","Vite","JavaScript","i18next","ReactRouter","ESLint","Vercel"]},{"id":"project-memoire-de-master","kind":"project","title":"Mémoire de master","organisation":"UMONS","subtitle":"Masterproef aan de UMONS — de R&amp;D van de planningsengine van Acteble.","summary":"Masterproef « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », Service d'Algorithmique van de UMONS — de R&amp;D van de planningsengine van Acteble. Multi-objectieve groepsvorming onder ruimtelijk-temporele beperkingen: NP-moeilijk via reductie van k-CLIQUE; toelaatbare groepen opgesomd als bicliques (Close-by-One); een iteratieve Pareto-solver met garanties voor terminatie en lokale convergentie; één DSL gecompileerd naar Python, MiniZinc en Rust met bit-identieke fronten, waarvan de Rust-uitvoer in de Acteble-API draait. Vergeleken met CP-SAT, NSGA-II, MOEA/D en SPEA2 (hypervolume, IGD, 30 seeds, Wilcoxon–Holm): significant beter dan MOEA/D bij elke grootte, dan NSGA-II en SPEA2 vanaf 500 gebruikers.","skills":["Python","Rust","LaTeX","MiniZinc","ORTools","ConstraintProgramming","CombinatorialOptimization","MultiObjectiveOptimization","Pareto","DSL","MutationTesting"]},{"id":"project-emvi-app","kind":"project","title":"Emvi App","subtitle":"AI-aangedreven visuele assistent voor slechtzienden.","summary":"AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR &amp; barcodes) en aangepast Valhalla-routesysteem.","skills":["Flutter","Firebase","OpenAI","Valhalla","AI","Dart"]},{"id":"project-remi","kind":"project","title":"Remi","subtitle":"Reminiscentie-applicatie voor mensen met cognitieve problemen.","summary":"Reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) pipeline.","skills":["Python","FastAPI","OpenAI","Whisper","DeepFace","PostgreSQL","SQLAlchemy"]},{"id":"project-myway","kind":"project","title":"MyWay","organisation":"Freelance","subtitle":"Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar.","skills":["Angular","JavaScript","TypeScript","Express.js","API","UI/UX","SQL Server","Auth0","PayPal","Sequelize","Node.js","React"]},{"id":"project-vhauctions-ner-inventory-model","kind":"project","title":"VhAuctions NER Inventory Model","summary":"Named Entity Recognition-model dat inventarisitems extraheert uit een audiotranscriptie.","skills":["Python","SpaCy","Pandas","NumPy",".NET","NER"]},{"id":"project-vhauctions","kind":"project","title":"VhAuctions","summary":"Wagenparkbeheerder voor veilingen.","skills":[".NET","C#","EntityFramework","React","TypeScript","Docker","Azure","OpenTelemetry","SQL Server"]},{"id":"project-kwalitijd","kind":"project","title":"Kwalitijd","summary":"Enquêtebeheerder voor sportclubs en federaties.","skills":[".NET","C#","Blazor","EntityFramework","xUnit","SQL Server","DDD"]},{"id":"project-webmenu","kind":"project","title":"WebMenu","summary":"QR-code-gebaseerde kassa voor HoReCa-etablissementen (Hotel/Restaurant/Café).","skills":[".NET","Flutter","SQL Server","QRCode"]},{"id":"course-algorithmique","kind":"course","title":"Algorithmique","organisation":"UMONS","subtitle":"Algoritmiek","skills":["Algorithms","DataStructures","Complexity","Trees"]},{"id":"course-anglais-i","kind":"course","title":"Anglais I","organisation":"UMONS","subtitle":"Engels I","skills":["English"]},{"id":"course-bases-de-donnees-i","kind":"course","title":"Bases de données I","organisation":"UMONS","subtitle":"Databanken I","skills":["SQL","RelationalAlgebra","Normalization","Indexing","NoSQL","BigData"]},{"id":"course-lecture-et-redaction-scientifique","kind":"course","title":"Lecture et rédaction scientifique","organisation":"UMONS","subtitle":"Wetenschappelijk lezen en schrijven","skills":["ScientificWriting","LiteratureReview"]},{"id":"course-mathematique","kind":"course","title":"Mathématique","organisation":"UMONS","subtitle":"Wiskunde","skills":["GraphTheory","Combinatorics","Complexity","PropositionalLogic","PredicateLogic"]},{"id":"course-modelisation-logicielle","kind":"course","title":"Modélisation logicielle","organisation":"UMONS","subtitle":"Softwaremodellering","skills":["Java","UML","DesignPatterns","UnitTesting","MockTesting","BDD"]},{"id":"course-reseaux","kind":"course","title":"Réseaux","organisation":"UMONS","subtitle":"Netwerken","skills":["TCP/IP","HTTP","DNS","OSPF","BGP","Ethernet"]},{"id":"course-strategie-et-politiques-en-ressources-humaines","kind":"course","title":"Stratégie et politiques en ressources humaines","organisation":"UMONS","subtitle":"HR-strategie en -beleid","skills":["HRM"]},{"id":"course-systemes-d-exploitation","kind":"course","title":"Systèmes d'exploitation","organisation":"UMONS","subtitle":"Besturingssystemen","skills":["Processes","Semaphores","Synchronization","MemoryManagement","FileSystems","Scheduling"]},{"id":"course-anglais-ii","kind":"course","title":"Anglais II","organisation":"UMONS","subtitle":"Engels II","skills":["English"]},{"id":"course-bases-de-donnees-ii","kind":"course","title":"Bases de données II","organisation":"UMONS","subtitle":"Databanken II","skills":["XML","XSLT","XQuery","XPath","BaseX","DataMining","Weka"]},{"id":"course-ingenierie-de-logiciels-et-gestion-de-projets","kind":"course","title":"Ingénierie de logiciels et gestion de projets","organisation":"UMONS","subtitle":"Software engineering en projectbeheer","skills":["Agile","Scrum","SoftwareEngineering"]},{"id":"course-intelligence-artificielle","kind":"course","title":"Intelligence artificielle","organisation":"UMONS","subtitle":"Artificiële intelligentie","skills":["SearchAlgorithms","Metaheuristics","FirstOrderLogic","SupervisedLearning"]},{"id":"course-recherche-operationnelle-et-applications","kind":"course","title":"Recherche opérationnelle et applications","organisation":"UMONS","subtitle":"Operationeel onderzoek en toepassingen","skills":["OperationsResearch","LinearProgramming","IntegerProgramming","Duality"]},{"id":"course-structures-de-donnees","kind":"course","title":"Structures de données","organisation":"UMONS","subtitle":"Datastructuren","skills":["AVLTrees","BTrees","HashTables","Sorting","Complexity"]},{"id":"course-seminaires-d-informatique-en-veille-technologique","kind":"course","title":"Séminaires d'informatique en veille technologique","organisation":"UMONS","subtitle":"Informaticaseminaries in technologiewatch","skills":["TechWatch"]},{"id":"course-cryptographie-et-securite-des-systemes-informatiques","kind":"course","title":"Cryptographie et sécurité des systèmes informatiques","organisation":"UMONS","subtitle":"Cryptografie en systeembeveiliging","skills":["Cryptography","Unix","NetworkSecurity","ApplicationSecurity"]},{"id":"course-ethique-et-droit-de-l-informatique","kind":"course","title":"Éthique et droit de l'informatique","organisation":"UMONS","subtitle":"Ethiek en informaticarecht","skills":["IntellectualProperty","DataProtection","GDPR"]},{"id":"course-structure-des-ordinateurs","kind":"course","title":"Structure des ordinateurs","organisation":"EPHEC","subtitle":"Computerstructuur","skills":["ComputerArchitecture","Binary","Hexadecimal","Hardware"]},{"id":"course-informatique-systeme-d-exploitation","kind":"course","title":"Informatique - Système d'exploitation","organisation":"EPHEC","subtitle":"Besturingssystemen","skills":["OperatingSystems","ShellScripting","SystemAdministration"]},{"id":"course-mathematique-appliquee-a-l-informatique","kind":"course","title":"Mathématique appliquée à l'informatique","organisation":"EPHEC","subtitle":"Wiskunde toegepast op informatica","skills":["LinearAlgebra","GraphTheory","SetTheory","RelationalAlgebra","MathematicalLogic","Cryptography"]},{"id":"course-principes-algorithmiques-et-programmation","kind":"course","title":"Principes algorithmiques et programmation","organisation":"EPHEC","subtitle":"Algoritmische principes en programmeren","skills":["Algorithms","DataTypes","ControlFlow","Programming"]},{"id":"course-principes-d-analyse-informatique","kind":"course","title":"Principes d'analyse informatique","organisation":"EPHEC","subtitle":"Principes van informatica-analyse","skills":["UML","EntityRelationship","SystemsAnalysis"]},{"id":"course-information-et-communication-professionnelles","kind":"course","title":"Information et communication professionnelles","organisation":"EPHEC","subtitle":"Professionele informatie en communicatie","skills":["ProfessionalCommunication"]},{"id":"course-web-principes-de-base","kind":"course","title":"Web : principes de base","organisation":"EPHEC","subtitle":"Web: basisprincipes","skills":["HTML","CSS","URL","DNS","WebHosting"]},{"id":"course-initiation-aux-bases-de-donnees","kind":"course","title":"Initiation aux bases de données","organisation":"EPHEC","subtitle":"Inleiding tot databanken","skills":["SQL","RelationalModel","Joins","Indexing"]},{"id":"course-gestion-et-exploitation-de-bases-de-donnees","kind":"course","title":"Gestion et exploitation de bases de données","organisation":"EPHEC","subtitle":"Beheer en exploitatie van databanken","skills":["Triggers","StoredProcedures","DataWarehouse","QueryOptimization"]},{"id":"course-programmation-orientee-objet","kind":"course","title":"Programmation orientée objet","organisation":"EPHEC","subtitle":"Objectgeoriënteerd programmeren","skills":["OOP","Inheritance","Polymorphism","Encapsulation","Overloading"]},{"id":"course-projet-d-analyse-et-de-conception","kind":"course","title":"Projet d'analyse et de conception","organisation":"EPHEC","subtitle":"Analyse- en ontwerpproject","skills":["SystemsAnalysis","SoftwareDesign","Modelling"]},{"id":"course-techniques-de-gestion-de-projet","kind":"course","title":"Techniques de gestion de projet","organisation":"EPHEC","subtitle":"Projectbeheertechnieken","skills":["ProjectManagement"]},{"id":"course-elements-de-statistique","kind":"course","title":"Éléments de statistique","organisation":"EPHEC","subtitle":"Elementen van statistiek","skills":["Statistics"]},{"id":"course-projet-de-developpement-web","kind":"course","title":"Projet de développement web","organisation":"EPHEC","subtitle":"Webontwikkelingsproject","skills":["JavaScript","AJAX","JSON","XML","ClientSideScripting"]},{"id":"course-notions-de-e-business","kind":"course","title":"Notions de e-business","organisation":"EPHEC","subtitle":"Beginselen van e-business","skills":["Ebusiness"]},{"id":"course-projet-de-developpement-sgbd","kind":"course","title":"Projet de développement SGBD","organisation":"EPHEC","subtitle":"DBMS-ontwikkelingsproject","skills":["DataAccessLayer","Transactions","DatabaseProgramming","Debugging"]},{"id":"course-bases-des-reseaux","kind":"course","title":"Bases des réseaux","organisation":"EPHEC","subtitle":"Netwerkbasis","skills":["Ethernet","MAC","TCP/IP","Networking"]},{"id":"course-organisation-des-entreprises-et-elements-de-management","kind":"course","title":"Organisation des entreprises et éléments de management","organisation":"EPHEC","subtitle":"Bedrijfsorganisatie en management","skills":["Management"]},{"id":"course-produits-logiciels-de-gestion-integres","kind":"course","title":"Produits logiciels de gestion intégrés","organisation":"EPHEC","subtitle":"Geïntegreerde beheersoftware","skills":["ERP"]},{"id":"course-projet-d-integration-de-developpement","kind":"course","title":"Projet d'intégration de développement","organisation":"EPHEC","subtitle":"Ontwikkelingsintegratieproject","skills":["AJAX","JSON","XML","SQLInjection","XSS","Caching","URLRewriting"]},{"id":"course-veille-technologique","kind":"course","title":"Veille technologique","organisation":"EPHEC","subtitle":"Technologiewatch","skills":["TechWatch"]},{"id":"course-administration-gestion-et-securisation-des-reseaux","kind":"course","title":"Administration, gestion et sécurisation des réseaux","organisation":"EPHEC","subtitle":"Netwerkbeheer en -beveiliging","skills":["NetworkAdministration","NetworkSecurity","ApplicationServer"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue1","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE1","organisation":"EPHEC","subtitle":"Toegepaste taal hoger onderwijs UE1","skills":["ProfessionalCommunication"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue2","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE2","organisation":"EPHEC","subtitle":"Toegepaste taal hoger onderwijs UE2","skills":["ProfessionalCommunication"]},{"id":"course-economie-i","kind":"course","title":"Économie I","organisation":"USL-B","subtitle":"Economie I","skills":["Microeconomics","CompetitiveMarkets","FirmBehaviour","MarketFailure"]},{"id":"course-economie-ii","kind":"course","title":"Économie II","organisation":"USL-B","subtitle":"Economie II","skills":["ImperfectCompetition","Macroeconomics","NationalIncome","MonetaryMarket"]},{"id":"course-science-politique","kind":"course","title":"Science politique","organisation":"USL-B","subtitle":"Politieke wetenschap","skills":["PoliticalScience","Power","State","Democracy"]},{"id":"course-seminaire-penser-le-social","kind":"course","title":"Séminaire : penser le social","organisation":"USL-B","subtitle":"Seminarie: het sociale denken","skills":["Epistemology","Durkheim","Weber","Marx"]},{"id":"course-seminaire-principes-et-methodes-en-sciences-sociales","kind":"course","title":"Séminaire : principes et méthodes en sciences sociales","organisation":"USL-B","subtitle":"Seminarie: principes en methoden in de sociale wetenschappen","skills":["AcademicWriting","Citation","Epistemology"]},{"id":"course-socio-economie-des-medias","kind":"course","title":"Socio-économie des médias","organisation":"USL-B","subtitle":"Socio-economie van de media","skills":["MediaEconomics","Advertising","MediaRegulation","WebEconomy"]},{"id":"course-anglais-i-saint-louis","kind":"course","title":"Anglais I (Saint-Louis)","organisation":"USL-B","subtitle":"Engels I","skills":["English"]},{"id":"course-neerlandais-i","kind":"course","title":"Néerlandais I","organisation":"USL-B","subtitle":"Nederlands I","skills":["Dutch"]},{"id":"volunteer-umons-studentenvertegenwoordiger","kind":"volunteer","title":"Studentenvertegenwoordiger","organisation":"UMons","skills":[]},{"id":"volunteer-umons-buddy-tandemons","kind":"volunteer","title":"Buddy TandeMons","organisation":"UMons","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-studentenvertegenwoordiger","kind":"volunteer","title":"Studentenvertegenwoordiger","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-tutor","kind":"volunteer","title":"Tutor","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]}],"skills":[{"skill":"Python","uses":14,"href":"#skill-python"},{"skill":".NET","uses":12,"href":"#skill-net"},{"skill":"DDD","uses":11,"href":"#skill-ddd"},{"skill":"Rust","uses":9,"href":"#skill-rust"},{"skill":"SQL Server","uses":8,"href":"#skill-sql-server"},{"skill":"TDD","uses":7,"href":"#skill-tdd"},{"skill":"Flutter","uses":6,"href":"#skill-flutter"},{"skill":"HexagonalArchitecture","uses":6,"href":"#skill-hexagonalarchitecture"},{"skill":"Pandas","uses":5,"href":"#skill-pandas"},{"skill":"React","uses":5,"href":"#skill-react"},{"skill":"Dart","uses":4,"href":"#skill-dart"},{"skill":"Docker","uses":4,"href":"#skill-docker"},{"skill":"EntityFramework","uses":4,"href":"#skill-entityframework"},{"skill":"Java","uses":4,"href":"#skill-java"},{"skill":"NumPy","uses":4,"href":"#skill-numpy"},{"skill":"OpenAI","uses":4,"href":"#skill-openai"},{"skill":"PostgreSQL","uses":4,"href":"#skill-postgresql"},{"skill":"RAG","uses":4,"href":"#skill-rag"},{"skill":"TypeScript","uses":4,"href":"#skill-typescript"},{"skill":"C#","uses":3,"href":"#skill-c"},{"skill":"CleanArchitecture","uses":3,"href":"#skill-cleanarchitecture"},{"skill":"Complexity","uses":3,"href":"#skill-complexity"},{"skill":"English","uses":3,"href":"#skill-english"},{"skill":"Firebase","uses":3,"href":"#skill-firebase"},{"skill":"JavaScript","uses":3,"href":"#skill-javascript"},{"skill":"LaTeX","uses":3,"href":"#skill-latex"},{"skill":"MutationTesting","uses":3,"href":"#skill-mutationtesting"},{"skill":"ProfessionalCommunication","uses":3,"href":"#skill-professionalcommunication"},{"skill":"SQL","uses":3,"href":"#skill-sql"},{"skill":"XML","uses":3,"href":"#skill-xml"},{"skill":"AI","uses":2,"href":"#skill-ai"},{"skill":"AJAX","uses":2,"href":"#skill-ajax"},{"skill":"Algorithms","uses":2,"href":"#skill-algorithms"},{"skill":"Angular","uses":2,"href":"#skill-angular"},{"skill":"API","uses":2,"href":"#skill-api"},{"skill":"Auth0","uses":2,"href":"#skill-auth0"},{"skill":"Azure","uses":2,"href":"#skill-azure"},{"skill":"Blazor","uses":2,"href":"#skill-blazor"},{"skill":"Cryptography","uses":2,"href":"#skill-cryptography"},{"skill":"CSS","uses":2,"href":"#skill-css"},{"skill":"DeepFace","uses":2,"href":"#skill-deepface"},{"skill":"Dioxus","uses":2,"href":"#skill-dioxus"},{"skill":"DNS","uses":2,"href":"#skill-dns"},{"skill":"Epistemology","uses":2,"href":"#skill-epistemology"},{"skill":"Ethernet","uses":2,"href":"#skill-ethernet"},{"skill":"Express.js","uses":2,"href":"#skill-express-js"},{"skill":"FastAPI","uses":2,"href":"#skill-fastapi"},{"skill":"GraphTheory","uses":2,"href":"#skill-graphtheory"},{"skill":"HTML","uses":2,"href":"#skill-html"},{"skill":"Indexing","uses":2,"href":"#skill-indexing"},{"skill":"InformationRetrieval","uses":2,"href":"#skill-informationretrieval"},{"skill":"JSON","uses":2,"href":"#skill-json"},{"skill":"MultiObjectiveOptimization","uses":2,"href":"#skill-multiobjectiveoptimization"},{"skill":"NetworkSecurity","uses":2,"href":"#skill-networksecurity"},{"skill":"NLP","uses":2,"href":"#skill-nlp"},{"skill":"Node.js","uses":2,"href":"#skill-node-js"},{"skill":"OCR","uses":2,"href":"#skill-ocr"},{"skill":"OpenTelemetry","uses":2,"href":"#skill-opentelemetry"},{"skill":"Pareto","uses":2,"href":"#skill-pareto"},{"skill":"RelationalAlgebra","uses":2,"href":"#skill-relationalalgebra"},{"skill":"SciPy","uses":2,"href":"#skill-scipy"},{"skill":"SentenceTransformers","uses":2,"href":"#skill-sentencetransformers"},{"skill":"Sequelize","uses":2,"href":"#skill-sequelize"},{"skill":"SpaCy","uses":2,"href":"#skill-spacy"},{"skill":"SQLAlchemy","uses":2,"href":"#skill-sqlalchemy"},{"skill":"SQLite","uses":2,"href":"#skill-sqlite"},{"skill":"SystemsAnalysis","uses":2,"href":"#skill-systemsanalysis"},{"skill":"TCP/IP","uses":2,"href":"#skill-tcp-ip"},{"skill":"TechWatch","uses":2,"href":"#skill-techwatch"},{"skill":"Tokio","uses":2,"href":"#skill-tokio"},{"skill":"UI/UX","uses":2,"href":"#skill-ui-ux"},{"skill":"UML","uses":2,"href":"#skill-uml"},{"skill":"Valhalla","uses":2,"href":"#skill-valhalla"},{"skill":"WebAssembly","uses":2,"href":"#skill-webassembly"},{"skill":"Whisper","uses":2,"href":"#skill-whisper"},{"skill":"xUnit","uses":2,"href":"#skill-xunit"},{"skill":"AcademicWriting","uses":1,"href":"#skill-academicwriting"},{"skill":"Advertising","uses":1,"href":"#skill-advertising"},{"skill":"Agile","uses":1,"href":"#skill-agile"},{"skill":"ApplicationSecurity","uses":1,"href":"#skill-applicationsecurity"},{"skill":"ApplicationServer","uses":1,"href":"#skill-applicationserver"},{"skill":"AVLTrees","uses":1,"href":"#skill-avltrees"},{"skill":"Axum","uses":1,"href":"#skill-axum"},{"skill":"BaseX","uses":1,"href":"#skill-basex"},{"skill":"BDD","uses":1,"href":"#skill-bdd"},{"skill":"BEIR","uses":1,"href":"#skill-beir"},{"skill":"Benchmark","uses":1,"href":"#skill-benchmark"},{"skill":"BGP","uses":1,"href":"#skill-bgp"},{"skill":"BigData","uses":1,"href":"#skill-bigdata"},{"skill":"Binary","uses":1,"href":"#skill-binary"},{"skill":"BM25F","uses":1,"href":"#skill-bm25f"},{"skill":"BrierScore","uses":1,"href":"#skill-brierscore"},{"skill":"BTrees","uses":1,"href":"#skill-btrees"},{"skill":"build123d","uses":1,"href":"#skill-build123d"},{"skill":"Caching","uses":1,"href":"#skill-caching"},{"skill":"Caddy","uses":1,"href":"#skill-caddy"},{"skill":"Citation","uses":1,"href":"#skill-citation"},{"skill":"CleanCode","uses":1,"href":"#skill-cleancode"},{"skill":"ClientSideScripting","uses":1,"href":"#skill-clientsidescripting"},{"skill":"CloudflareWorkers","uses":1,"href":"#skill-cloudflareworkers"},{"skill":"CombinatorialOptimization","uses":1,"href":"#skill-combinatorialoptimization"},{"skill":"Combinatorics","uses":1,"href":"#skill-combinatorics"},{"skill":"CompetitiveMarkets","uses":1,"href":"#skill-competitivemarkets"},{"skill":"ComputerArchitecture","uses":1,"href":"#skill-computerarchitecture"},{"skill":"ConstraintProgramming","uses":1,"href":"#skill-constraintprogramming"},{"skill":"ControlFlow","uses":1,"href":"#skill-controlflow"},{"skill":"CQRS","uses":1,"href":"#skill-cqrs"},{"skill":"DataAccessLayer","uses":1,"href":"#skill-dataaccesslayer"},{"skill":"DatabaseProgramming","uses":1,"href":"#skill-databaseprogramming"},{"skill":"DataMining","uses":1,"href":"#skill-datamining"},{"skill":"DataProtection","uses":1,"href":"#skill-dataprotection"},{"skill":"DataStructures","uses":1,"href":"#skill-datastructures"},{"skill":"DataTypes","uses":1,"href":"#skill-datatypes"},{"skill":"DataWarehouse","uses":1,"href":"#skill-datawarehouse"},{"skill":"Debugging","uses":1,"href":"#skill-debugging"},{"skill":"Democracy","uses":1,"href":"#skill-democracy"},{"skill":"DesignPatterns","uses":1,"href":"#skill-designpatterns"},{"skill":"Dio","uses":1,"href":"#skill-dio"},{"skill":"Drift","uses":1,"href":"#skill-drift"},{"skill":"DSL","uses":1,"href":"#skill-dsl"},{"skill":"Duality","uses":1,"href":"#skill-duality"},{"skill":"DuckDB","uses":1,"href":"#skill-duckdb"},{"skill":"DurableObjects","uses":1,"href":"#skill-durableobjects"},{"skill":"Durkheim","uses":1,"href":"#skill-durkheim"},{"skill":"Dutch","uses":1,"href":"#skill-dutch"},{"skill":"Dylint","uses":1,"href":"#skill-dylint"},{"skill":"E2EE","uses":1,"href":"#skill-e2ee"},{"skill":"Ebusiness","uses":1,"href":"#skill-ebusiness"},{"skill":"EloRating","uses":1,"href":"#skill-elorating"},{"skill":"Encapsulation","uses":1,"href":"#skill-encapsulation"},{"skill":"EnsembleModel","uses":1,"href":"#skill-ensemblemodel"},{"skill":"EntityRelationship","uses":1,"href":"#skill-entityrelationship"},{"skill":"ERP","uses":1,"href":"#skill-erp"},{"skill":"ESLint","uses":1,"href":"#skill-eslint"},{"skill":"Evaluation","uses":1,"href":"#skill-evaluation"},{"skill":"EventDriven","uses":1,"href":"#skill-eventdriven"},{"skill":"FileSystems","uses":1,"href":"#skill-filesystems"},{"skill":"FirmBehaviour","uses":1,"href":"#skill-firmbehaviour"},{"skill":"FirstOrderLogic","uses":1,"href":"#skill-firstorderlogic"},{"skill":"FlutterMap","uses":1,"href":"#skill-fluttermap"},{"skill":"FlutterRustBridge","uses":1,"href":"#skill-flutterrustbridge"},{"skill":"GDPR","uses":1,"href":"#skill-gdpr"},{"skill":"Gmsh","uses":1,"href":"#skill-gmsh"},{"skill":"gRPC","uses":1,"href":"#skill-grpc"},{"skill":"Hardware","uses":1,"href":"#skill-hardware"},{"skill":"HashTables","uses":1,"href":"#skill-hashtables"},{"skill":"Hexadecimal","uses":1,"href":"#skill-hexadecimal"},{"skill":"HRM","uses":1,"href":"#skill-hrm"},{"skill":"HTTP","uses":1,"href":"#skill-http"},{"skill":"i18next","uses":1,"href":"#skill-i18next"},{"skill":"ImperfectCompetition","uses":1,"href":"#skill-imperfectcompetition"},{"skill":"Inheritance","uses":1,"href":"#skill-inheritance"},{"skill":"IntegerProgramming","uses":1,"href":"#skill-integerprogramming"},{"skill":"IntellectualProperty","uses":1,"href":"#skill-intellectualproperty"},{"skill":"iOS","uses":1,"href":"#skill-ios"},{"skill":"Joins","uses":1,"href":"#skill-joins"},{"skill":"JS","uses":1,"href":"#skill-js"},{"skill":"Lean4","uses":1,"href":"#skill-lean4"},{"skill":"LearningToRank","uses":1,"href":"#skill-learningtorank"},{"skill":"Leitner","uses":1,"href":"#skill-leitner"},{"skill":"LinearAlgebra","uses":1,"href":"#skill-linearalgebra"},{"skill":"LinearProgramming","uses":1,"href":"#skill-linearprogramming"},{"skill":"LinkGrammar","uses":1,"href":"#skill-linkgrammar"},{"skill":"LiteratureReview","uses":1,"href":"#skill-literaturereview"},{"skill":"LiveKit","uses":1,"href":"#skill-livekit"},{"skill":"MAC","uses":1,"href":"#skill-mac"},{"skill":"Macroeconomics","uses":1,"href":"#skill-macroeconomics"},{"skill":"Management","uses":1,"href":"#skill-management"},{"skill":"Manifold","uses":1,"href":"#skill-manifold"},{"skill":"MapLibre","uses":1,"href":"#skill-maplibre"},{"skill":"MarketFailure","uses":1,"href":"#skill-marketfailure"},{"skill":"Marx","uses":1,"href":"#skill-marx"},{"skill":"MathematicalLogic","uses":1,"href":"#skill-mathematicallogic"},{"skill":"Mathlib","uses":1,"href":"#skill-mathlib"},{"skill":"MediaEconomics","uses":1,"href":"#skill-mediaeconomics"},{"skill":"MediaRegulation","uses":1,"href":"#skill-mediaregulation"},{"skill":"Melos","uses":1,"href":"#skill-melos"},{"skill":"MemoryManagement","uses":1,"href":"#skill-memorymanagement"},{"skill":"Metaheuristics","uses":1,"href":"#skill-metaheuristics"},{"skill":"Microeconomics","uses":1,"href":"#skill-microeconomics"},{"skill":"MinIO","uses":1,"href":"#skill-minio"},{"skill":"MiniZinc","uses":1,"href":"#skill-minizinc"},{"skill":"Mobile","uses":1,"href":"#skill-mobile"},{"skill":"MockTesting","uses":1,"href":"#skill-mocktesting"},{"skill":"Modelling","uses":1,"href":"#skill-modelling"},{"skill":"MonetaryMarket","uses":1,"href":"#skill-monetarymarket"},{"skill":"NationalIncome","uses":1,"href":"#skill-nationalincome"},{"skill":"NER","uses":1,"href":"#skill-ner"},{"skill":"NetworkAdministration","uses":1,"href":"#skill-networkadministration"},{"skill":"Networking","uses":1,"href":"#skill-networking"},{"skill":"Normalization","uses":1,"href":"#skill-normalization"},{"skill":"NoSQL","uses":1,"href":"#skill-nosql"},{"skill":"NSGA2","uses":1,"href":"#skill-nsga2"},{"skill":"OfflineFirst","uses":1,"href":"#skill-offlinefirst"},{"skill":"OOP","uses":1,"href":"#skill-oop"},{"skill":"OpenBao","uses":1,"href":"#skill-openbao"},{"skill":"OpenCASCADE","uses":1,"href":"#skill-opencascade"},{"skill":"OpenStreetMap","uses":1,"href":"#skill-openstreetmap"},{"skill":"OperatingSystems","uses":1,"href":"#skill-operatingsystems"},{"skill":"OperationsResearch","uses":1,"href":"#skill-operationsresearch"},{"skill":"Optuna","uses":1,"href":"#skill-optuna"},{"skill":"ORTools","uses":1,"href":"#skill-ortools"},{"skill":"OSPF","uses":1,"href":"#skill-ospf"},{"skill":"Overloading","uses":1,"href":"#skill-overloading"},{"skill":"PayPal","uses":1,"href":"#skill-paypal"},{"skill":"PHP","uses":1,"href":"#skill-php"},{"skill":"PoissonModel","uses":1,"href":"#skill-poissonmodel"},{"skill":"PoliticalScience","uses":1,"href":"#skill-politicalscience"},{"skill":"Polymorphism","uses":1,"href":"#skill-polymorphism"},{"skill":"PostGIS","uses":1,"href":"#skill-postgis"},{"skill":"Power","uses":1,"href":"#skill-power"},{"skill":"PredicateLogic","uses":1,"href":"#skill-predicatelogic"},{"skill":"Processes","uses":1,"href":"#skill-processes"},{"skill":"Programming","uses":1,"href":"#skill-programming"},{"skill":"ProjectManagement","uses":1,"href":"#skill-projectmanagement"},{"skill":"Prolog","uses":1,"href":"#skill-prolog"},{"skill":"Prometheus","uses":1,"href":"#skill-prometheus"},{"skill":"PropositionalLogic","uses":1,"href":"#skill-propositionallogic"},{"skill":"Protobuf","uses":1,"href":"#skill-protobuf"},{"skill":"QRCode","uses":1,"href":"#skill-qrcode"},{"skill":"QueryOptimization","uses":1,"href":"#skill-queryoptimization"},{"skill":"Ratatui","uses":1,"href":"#skill-ratatui"},{"skill":"ReactRouter","uses":1,"href":"#skill-reactrouter"},{"skill":"Redis","uses":1,"href":"#skill-redis"},{"skill":"RelationalModel","uses":1,"href":"#skill-relationalmodel"},{"skill":"Riverpod","uses":1,"href":"#skill-riverpod"},{"skill":"Scheduling","uses":1,"href":"#skill-scheduling"},{"skill":"ScientificWriting","uses":1,"href":"#skill-scientificwriting"},{"skill":"Scrum","uses":1,"href":"#skill-scrum"},{"skill":"SearchAlgorithms","uses":1,"href":"#skill-searchalgorithms"},{"skill":"Semaphores","uses":1,"href":"#skill-semaphores"},{"skill":"SetTheory","uses":1,"href":"#skill-settheory"},{"skill":"ShellScripting","uses":1,"href":"#skill-shellscripting"},{"skill":"SM2","uses":1,"href":"#skill-sm2"},{"skill":"SoftwareDesign","uses":1,"href":"#skill-softwaredesign"},{"skill":"SoftwareEngineering","uses":1,"href":"#skill-softwareengineering"},{"skill":"Sorting","uses":1,"href":"#skill-sorting"},{"skill":"SpacedRepetition","uses":1,"href":"#skill-spacedrepetition"},{"skill":"spaCy","uses":1,"href":"#skill-spacy-2"},{"skill":"SQLCipher","uses":1,"href":"#skill-sqlcipher"},{"skill":"SQLInjection","uses":1,"href":"#skill-sqlinjection"},{"skill":"SQLx","uses":1,"href":"#skill-sqlx"},{"skill":"State","uses":1,"href":"#skill-state"},{"skill":"Statistics","uses":1,"href":"#skill-statistics"},{"skill":"StoredProcedures","uses":1,"href":"#skill-storedprocedures"},{"skill":"SupervisedLearning","uses":1,"href":"#skill-supervisedlearning"},{"skill":"SymbolicAI","uses":1,"href":"#skill-symbolicai"},{"skill":"SymPy","uses":1,"href":"#skill-sympy"},{"skill":"Synchronization","uses":1,"href":"#skill-synchronization"},{"skill":"SystemAdministration","uses":1,"href":"#skill-systemadministration"},{"skill":"Tatoeba","uses":1,"href":"#skill-tatoeba"},{"skill":"Testcontainers","uses":1,"href":"#skill-testcontainers"},{"skill":"ThreeJS","uses":1,"href":"#skill-threejs"},{"skill":"TOML","uses":1,"href":"#skill-toml"},{"skill":"Tonic","uses":1,"href":"#skill-tonic"},{"skill":"Transactions","uses":1,"href":"#skill-transactions"},{"skill":"Trees","uses":1,"href":"#skill-trees"},{"skill":"Triggers","uses":1,"href":"#skill-triggers"},{"skill":"UnitTesting","uses":1,"href":"#skill-unittesting"},{"skill":"Unix","uses":1,"href":"#skill-unix"},{"skill":"URL","uses":1,"href":"#skill-url"},{"skill":"URLRewriting","uses":1,"href":"#skill-urlrewriting"},{"skill":"Vercel","uses":1,"href":"#skill-vercel"},{"skill":"Vite","uses":1,"href":"#skill-vite"},{"skill":"WalkForwardBacktest","uses":1,"href":"#skill-walkforwardbacktest"},{"skill":"WebEconomy","uses":1,"href":"#skill-webeconomy"},{"skill":"Weber","uses":1,"href":"#skill-weber"},{"skill":"WebHosting","uses":1,"href":"#skill-webhosting"},{"skill":"Weka","uses":1,"href":"#skill-weka"},{"skill":"WordNet","uses":1,"href":"#skill-wordnet"},{"skill":"XPath","uses":1,"href":"#skill-xpath"},{"skill":"XQuery","uses":1,"href":"#skill-xquery"},{"skill":"XSLT","uses":1,"href":"#skill-xslt"},{"skill":"XSS","uses":1,"href":"#skill-xss"}],"kinds":{"work":"Werkervaring","education":"Opleiding","project":"Projecten","course":"Opleidingsonderdelen","volunteer":"Vrijwilligerswerk","competition":"Evenementen"},"groups":{"skills":"Vaardigheden","entries":"Items"},"actions":[{"label":"English","hint":"Taal","href":"/assets/data/resume-en.xml"},{"label":"Français","hint":"Taal","href":"/assets/data/resume-fr.xml"},{"label":"Español","hint":"Taal","href":"/assets/data/resume-es.xml"},{"label":"Deutsch","hint":"Taal","href":"/assets/data/resume-de.xml"},{"label":"中文","hint":"Taal","href":"/assets/data/resume-zh.xml"},{"label":"Thema wisselen","press":"#theme-toggle"},{"label":"CV downloaden","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_nl.pdf"},{"label":"Tijdlijn downloaden","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_timeline_nl.pdf"}]}</index>
       </search>
       <ticks>
         <tick>
@@ -1575,8 +1905,8 @@
         <lane>
           <kind>work</kind>
           <label>Werkervaring</label>
-          <rows>8</rows>
-          <printRows>8</printRows>
+          <rows>12</rows>
+          <printRows>12</printRows>
           <groups>
             <group>
               <left>70.87%</left>
@@ -1638,16 +1968,16 @@
               <left>92.23%</left>
               <width>7.77%</width>
               <row>0</row>
-              <rows>5</rows>
+              <rows>9</rows>
               <printRow>0</printRow>
-              <printRows>5</printRows>
+              <printRows>9</printRows>
             </group>
             <group>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
+              <row>9</row>
               <rows>3</rows>
-              <printRow>5</printRow>
+              <printRow>9</printRow>
               <printRows>3</printRows>
             </group>
           </groups>
@@ -1962,57 +2292,21 @@
             </bar>
             <bar>
               <target>work-acteble-oprichter</target>
-              <entry>project-acteble-api</entry>
+              <entry>project-acteble</entry>
               <kind>project</kind>
               <depth>1</depth>
-              <name>Acteble API</name>
-              <caption>Acteble API · API</caption>
-              <uses>rust tokio axum tonic grpc sqlx postgresql postgis redis minio livekit opentelemetry docker caddy ddd hexagonalarchitecture cqrs eventdriven</uses>
-              <period>jun 2025 – Heden</period>
-              <detail>API · Oprichter</detail>
-              <summary>Backend van het Acteble-platform: een modulaire monoliet in Rust.</summary>
+              <name>Acteble</name>
+              <caption>Acteble · Platform</caption>
+              <uses>rust tokio axum tonic grpc protobuf sqlx postgresql postgis redis minio livekit openbao prometheus testcontainers openstreetmap docker caddy dylint ddd hexagonalarchitecture cqrs eventdriven flutter dart melos riverpod drift sqlite sqlcipher dio flutterrustbridge maplibre fluttermap firebase offlinefirst e2ee mobile react vite javascript i18next reactrouter eslint vercel</uses>
+              <period>apr 2025 – Heden</period>
+              <detail>Platform · Oprichter</detail>
+              <summary>Geolokaliseerd sociaal platform dat mensen samenbrengt rond gedeelde activiteiten: een Rust-backend, een offline-first Flutter-app en een React-website.</summary>
               <skills>Rust · Tokio · Axum · Tonic · gRPC</skills>
-              <label>Acteble API — API · Oprichter — jun 2025 – Heden</label>
+              <label>Acteble — Platform · Oprichter — apr 2025 – Heden</label>
               <left>92.23%</left>
               <width>7.77%</width>
               <row>1</row>
               <printRow>1</printRow>
-            </bar>
-            <bar>
-              <target>work-acteble-oprichter</target>
-              <entry>project-acteble-app</entry>
-              <kind>project</kind>
-              <depth>1</depth>
-              <name>Acteble App</name>
-              <caption>Acteble App · Mobiele applicatie</caption>
-              <uses>flutter dart melos riverpod drift sqlite dio grpc fluttermap firebase offlinefirst mobile</uses>
-              <period>apr 2025 – Heden</period>
-              <detail>Mobiele applicatie · Oprichter</detail>
-              <summary>Offline-first multiplatformclient van Acteble, gebouwd met Flutter.</summary>
-              <skills>Flutter · Dart · Melos · Riverpod · Drift</skills>
-              <label>Acteble App — Mobiele applicatie · Oprichter — apr 2025 – Heden</label>
-              <left>92.23%</left>
-              <width>7.77%</width>
-              <row>2</row>
-              <printRow>2</printRow>
-            </bar>
-            <bar>
-              <target>work-acteble-oprichter</target>
-              <entry>project-acteble-website</entry>
-              <kind>project</kind>
-              <depth>1</depth>
-              <name>Acteble Website</name>
-              <caption>Acteble Website · Website</caption>
-              <uses>react vite javascript i18next reactrouter</uses>
-              <period>jun 2025 – Heden</period>
-              <detail>Website · Oprichter</detail>
-              <summary>Publieke website van Acteble: een React single-page-applicatie.</summary>
-              <skills>React · Vite · JavaScript · i18next · ReactRouter</skills>
-              <label>Acteble Website — Website · Oprichter — jun 2025 – Heden</label>
-              <left>92.23%</left>
-              <width>7.77%</width>
-              <row>3</row>
-              <printRow>3</printRow>
             </bar>
             <bar>
               <target>work-acteble-oprichter</target>
@@ -2022,16 +2316,142 @@
               <name>Mémoire de master</name>
               <title>UMONS</title>
               <caption>Mémoire de master · Masterproef</caption>
-              <uses>python latex minizinc constraintprogramming combinatorialoptimization pareto</uses>
+              <uses>python rust latex minizinc ortools constraintprogramming combinatorialoptimization multiobjectiveoptimization pareto dsl mutationtesting</uses>
               <period>nov 2025 – sep 2026</period>
               <detail>Masterproef · Auteur</detail>
               <summary>Masterproef aan de UMONS — de R&amp;D van de planningsengine van Acteble.</summary>
-              <skills>Python · LaTeX · MiniZinc · ConstraintProgramming · CombinatorialOptimization</skills>
+              <skills>Python · Rust · LaTeX · MiniZinc · ORTools</skills>
               <label>Mémoire de master — Masterproef · Auteur — UMONS — nov 2025 – sep 2026</label>
               <left>94.37%</left>
               <width>4.71%</width>
+              <row>2</row>
+              <printRow>2</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-oprichter</target>
+              <entry>project-actrack</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actrack</name>
+              <caption>Actrack · Voorspellingsengine</caption>
+              <uses>python pandas numpy scipy duckdb rust dioxus webassembly elorating poissonmodel ensemblemodel walkforwardbacktest brierscore hexagonalarchitecture ddd tdd</uses>
+              <period>jun 2026 – Heden</period>
+              <detail>Voorspellingsengine · Auteur</detail>
+              <summary>Voorspellingen van het FIFA WK 2026 met een ensemble van voetbalratingstrategieën.</summary>
+              <skills>Python · Pandas · NumPy · SciPy · DuckDB</skills>
+              <label>Actrack — Voorspellingsengine · Auteur — jun 2026 – Heden</label>
+              <left>98.01%</left>
+              <width>1.99%</width>
+              <row>3</row>
+              <printRow>3</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-oprichter</target>
+              <entry>project-baba</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Baba</name>
+              <caption>Baba · CLI</caption>
+              <uses>rust prolog linkgrammar symbolicai nlp ddd tdd mutationtesting</uses>
+              <period>jul 2026 – Heden</period>
+              <detail>CLI · Auteur</detail>
+              <summary>Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.</summary>
+              <skills>Rust · Prolog · LinkGrammar · SymbolicAI · NLP</skills>
+              <label>Baba — CLI · Auteur — jul 2026 – Heden</label>
+              <left>98.07%</left>
+              <width>1.93%</width>
               <row>4</row>
               <printRow>4</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-oprichter</target>
+              <entry>project-ll</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>LL</name>
+              <caption>LL · Applicatie</caption>
+              <uses>rust dioxus ratatui sqlite ios spacedrepetition leitner sm2 python spacy-2 nlp wordnet tatoeba hexagonalarchitecture ddd tdd</uses>
+              <period>jul 2026 – Heden</period>
+              <detail>Applicatie · Auteur</detail>
+              <summary>Vocabulairetrainer met gespreide herhaling voor zes talen, waarbij elk woord wordt aangeleerd met een uitgelijnde voorbeeldzin in elke taal.</summary>
+              <skills>Rust · Dioxus · Ratatui · SQLite · iOS</skills>
+              <label>LL — Applicatie · Auteur — jul 2026 – Heden</label>
+              <left>98.09%</left>
+              <width>1.91%</width>
+              <row>5</row>
+              <printRow>5</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-oprichter</target>
+              <entry>project-kag</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>KAG</name>
+              <caption>KAG · Framework</caption>
+              <uses>rust rag informationretrieval learningtorank beir ddd hexagonalarchitecture tdd</uses>
+              <period>jul 2026 – Heden</period>
+              <detail>Framework · Auteur</detail>
+              <summary>Puur algoritmisch Rust-framework dat uitwisselbare onderdelen van een RAG-pipeline op BEIR benchmarkt en de best gemeten configuratie levert als vraag-antwoord-CLI met geciteerde bronnen.</summary>
+              <skills>Rust · RAG · InformationRetrieval · LearningToRank · BEIR</skills>
+              <label>KAG — Framework · Auteur — jul 2026 – Heden</label>
+              <left>98.12%</left>
+              <width>1.88%</width>
+              <row>6</row>
+              <printRow>6</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-oprichter</target>
+              <entry>project-polytech</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Polytech</name>
+              <caption>Polytech · Bibliotheek</caption>
+              <uses>python sympy numpy scipy latex lean4 mathlib ddd hexagonalarchitecture tdd mutationtesting</uses>
+              <period>sep 2026 – Heden</period>
+              <detail>Bibliotheek · Auteur</detail>
+              <summary>Bibliotheek voor ingenieursstudies die elk getal en elke uitdrukking van uitgewerkte LaTeX-oplossingen berekent, niets met de hand ingetypt.</summary>
+              <skills>Python · SymPy · NumPy · SciPy · LaTeX</skills>
+              <label>Polytech — Bibliotheek · Auteur — sep 2026 – Heden</label>
+              <left>99.39%</left>
+              <width>0.61%</width>
+              <row>2</row>
+              <printRow>2</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-oprichter</target>
+              <entry>project-indexer</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Indexer</name>
+              <caption>Indexer · API</caption>
+              <uses>rust cloudflareworkers webassembly durableobjects toml bm25f informationretrieval tdd</uses>
+              <period>okt 2026 – Heden</period>
+              <detail>API · Auteur</detail>
+              <summary>Gecureerde index van externe databronnen, boeken en softwarepakketten, aangeboden via een openbare lees-API.</summary>
+              <skills>Rust · CloudflareWorkers · WebAssembly · DurableObjects · TOML</skills>
+              <label>Indexer — API · Auteur — okt 2026 – Heden</label>
+              <left>99.59%</left>
+              <width>0.41%</width>
+              <row>7</row>
+              <printRow>7</printRow>
+            </bar>
+            <bar>
+              <target>work-acteble-oprichter</target>
+              <entry>project-converge</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Converge</name>
+              <caption>Converge · Platform</caption>
+              <uses>rust python opencascade manifold build123d gmsh optuna nsga2 multiobjectiveoptimization pareto threejs hexagonalarchitecture tdd</uses>
+              <period>okt 2026 – Heden</period>
+              <detail>Platform · Auteur</detail>
+              <summary>AI-ondersteund platform voor mechanisch 3D-ontwerp dat opensource-engines voor geometrie, meshing en simulatie aanstuurt.</summary>
+              <skills>Rust · Python · OpenCASCADE · Manifold · build123d</skills>
+              <label>Converge — Platform · Auteur — okt 2026 – Heden</label>
+              <left>99.81%</left>
+              <width>0.19%</width>
+              <row>8</row>
+              <printRow>8</printRow>
             </bar>
             <bar>
               <target>work-belgische-senaat-ai-onderzoeker</target>
@@ -2046,8 +2466,8 @@
               <label>Belgische Senaat — AI-onderzoeker — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>5</row>
-              <printRow>5</printRow>
+              <row>9</row>
+              <printRow>9</printRow>
             </bar>
             <bar>
               <target>work-belgische-senaat-ai-onderzoeker</target>
@@ -2064,8 +2484,8 @@
               <label>Synergy — Platform · Auteur — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>6</row>
-              <printRow>6</printRow>
+              <row>10</row>
+              <printRow>10</printRow>
             </bar>
             <bar>
               <target>work-belgische-senaat-ai-onderzoeker</target>
@@ -2082,8 +2502,8 @@
               <label>fedrag-be — Onderzoek · Auteur — nov 2025 – jun 2026</label>
               <left>94.21%</left>
               <width>3.83%</width>
-              <row>7</row>
-              <printRow>7</printRow>
+              <row>11</row>
+              <printRow>11</printRow>
             </bar>
           </bars>
         </lane>
@@ -3199,11 +3619,11 @@
               <name>Mémoire de master</name>
               <title>UMONS</title>
               <caption>Mémoire de master · Masterproef</caption>
-              <uses>python latex minizinc constraintprogramming combinatorialoptimization pareto</uses>
+              <uses>python rust latex minizinc ortools constraintprogramming combinatorialoptimization multiobjectiveoptimization pareto dsl mutationtesting</uses>
               <period>nov 2025 – sep 2026</period>
               <detail>Masterproef · Auteur</detail>
               <summary>Masterproef aan de UMONS — de R&amp;D van de planningsengine van Acteble.</summary>
-              <skills>Python · LaTeX · MiniZinc · ConstraintProgramming · CombinatorialOptimization</skills>
+              <skills>Python · Rust · LaTeX · MiniZinc · ORTools</skills>
               <label>Mémoire de master — Masterproef · Auteur — UMONS — nov 2025 – sep 2026</label>
               <left>94.37%</left>
               <width>4.71%</width>
@@ -3214,9 +3634,9 @@
         </lane>
         <lane>
           <kind>competitions</kind>
-          <label>Wedstrijden</label>
-          <rows>2</rows>
-          <printRows>2</printRows>
+          <label>Evenementen</label>
+          <rows>3</rows>
+          <printRows>3</printRows>
           <groups>
             <group>
               <left>84.47%</left>
@@ -3231,6 +3651,18 @@
             <bar>
               <kind>competition</kind>
               <depth>0</depth>
+              <name>20 km door Brussel 2022</name>
+              <caption>20 km door Brussel 2022</caption>
+              <period>mei 2022 – mei 2022</period>
+              <label>20 km door Brussel 2022 — mei 2022 – mei 2022</label>
+              <left>73.79%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
               <name>Hackathon Citizens of Wallonia 2023</name>
               <title>Citizens of Wallonia</title>
               <caption>Hackathon Citizens of Wallonia 2023</caption>
@@ -3240,6 +3672,45 @@
               <width>0.49%</width>
               <row>0</row>
               <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>SoCraTes BE 2023</name>
+              <title>SoCraTes BE</title>
+              <caption>SoCraTes BE 2023</caption>
+              <period>nov 2023 – nov 2023</period>
+              <label>SoCraTes BE 2023 — SoCraTes BE — nov 2023 – nov 2023</label>
+              <left>82.52%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>VisugXL 2023</name>
+              <title>VISUG — Visual Studio User Group Belgium</title>
+              <caption>VisugXL 2023</caption>
+              <period>nov 2023 – nov 2023</period>
+              <label>VisugXL 2023 — VISUG — Visual Studio User Group Belgium — nov 2023 – nov 2023</label>
+              <left>82.52%</left>
+              <width>0.49%</width>
+              <row>1</row>
+              <printRow>1</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>VISUG-meetup — Mediator-patroon en .NET 8</name>
+              <title>VISUG — Visual Studio User Group Belgium</title>
+              <caption>VISUG-meetup — Mediator-patroon en .NET 8</caption>
+              <period>nov 2023 – nov 2023</period>
+              <label>VISUG-meetup — Mediator-patroon en .NET 8 — VISUG — Visual Studio User Group Belgium — nov 2023 – nov 2023</label>
+              <left>82.52%</left>
+              <width>0.49%</width>
+              <row>2</row>
+              <printRow>2</printRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -3268,6 +3739,67 @@
               <width>0.03%</width>
               <row>1</row>
               <printRow>1</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>20 km door Brussel 2024</name>
+              <caption>20 km door Brussel 2024</caption>
+              <period>mei 2024 – mei 2024</period>
+              <label>20 km door Brussel 2024 — mei 2024 – mei 2024</label>
+              <left>85.44%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>20 km Maredsous–Dinant 2025</name>
+              <caption>20 km Maredsous–Dinant 2025</caption>
+              <period>mrt 2025 – mrt 2025</period>
+              <label>20 km Maredsous–Dinant 2025 — mrt 2025 – mrt 2025</label>
+              <left>90.29%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>20 km door Brussel 2025</name>
+              <caption>20 km door Brussel 2025</caption>
+              <period>mei 2025 – mei 2025</period>
+              <label>20 km door Brussel 2025 — mei 2025 – mei 2025</label>
+              <left>91.26%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>20 km Maredsous–Dinant 2026</name>
+              <caption>20 km Maredsous–Dinant 2026</caption>
+              <period>mrt 2026 – mrt 2026</period>
+              <label>20 km Maredsous–Dinant 2026 — mrt 2026 – mrt 2026</label>
+              <left>96.12%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+            </bar>
+            <bar>
+              <kind>competition</kind>
+              <depth>0</depth>
+              <name>SoCraTes BE 2026</name>
+              <title>SoCraTes BE</title>
+              <caption>SoCraTes BE 2026</caption>
+              <period>okt 2026 – okt 2026</period>
+              <label>SoCraTes BE 2026 — SoCraTes BE — okt 2026 – okt 2026</label>
+              <left>99.51%</left>
+              <width>0.49%</width>
+              <row>0</row>
+              <printRow>0</printRow>
             </bar>
           </bars>
         </lane>
@@ -3331,10 +3863,15 @@ Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-wor
         <skill>PostgreSQL</skill>
       </skills>
       <projects>
-        <project>Acteble API</project>
-        <project>Acteble App</project>
-        <project>Acteble Website</project>
+        <project>Acteble</project>
         <project>Mémoire de master</project>
+        <project>Actrack</project>
+        <project>LL</project>
+        <project>Baba</project>
+        <project>KAG</project>
+        <project>Indexer</project>
+        <project>Polytech</project>
+        <project>Converge</project>
       </projects>
       <anchor>work-acteble-oprichter</anchor>
     </job>
@@ -3841,6 +4378,184 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
   </education>
   <projects>
     <project>
+      <name>Baba</name>
+      <description>Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Prolog</keyword>
+        <keyword>LinkGrammar</keyword>
+        <keyword>SymbolicAI</keyword>
+        <keyword>NLP</keyword>
+        <keyword>DDD</keyword>
+        <keyword>TDD</keyword>
+        <keyword>MutationTesting</keyword>
+      </keywords>
+      <startDate>2026-07-02</startDate>
+      <type>CLI</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>Vijf lagen: een Rust-CLI die alle I/O doet, een link-grammar syntactische parser, een SWI-Prolog symbolische engine zonder I/O, domeinvocabulairepacks als data, en een vijftigtal Rust-actiebinaries — een nieuw werkwoord is één packfeit en één binary. Mutatiegetest, met een corpus van regressiezinnen en een koude start van ongeveer 120 ms.</summary>
+      <anchor>project-baba</anchor>
+      <anchoredIn>work-acteble-oprichter</anchoredIn>
+    </project>
+    <project>
+      <name>KAG</name>
+      <description>Puur algoritmisch Rust-framework dat uitwisselbare onderdelen van een RAG-pipeline op BEIR benchmarkt en de best gemeten configuratie levert als vraag-antwoord-CLI met geciteerde bronnen.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>RAG</keyword>
+        <keyword>InformationRetrieval</keyword>
+        <keyword>LearningToRank</keyword>
+        <keyword>BEIR</keyword>
+        <keyword>DDD</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-07-05</startDate>
+      <type>Framework</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>Negen pipelinestappen (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), elk een port waarvan het algoritme per label wordt gekozen (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonaal + DDD + TDD, alleen de standaardbibliotheek in de core, geen LLM. De metrieken komen exact overeen met pytrec_eval. Op zes BEIR-datasets wint geen enkele retriever overal (ndcg@10 0,668 op SciFact met BM25F); een LambdaMART-reranker tilt ArguAna van 0,301 naar 0,527 in 5-voudige kruisvalidatie.</summary>
+      <anchor>project-kag</anchor>
+      <anchoredIn>work-acteble-oprichter</anchoredIn>
+    </project>
+    <project>
+      <name>LL</name>
+      <description>Vocabulairetrainer met gespreide herhaling voor zes talen, waarbij elk woord wordt aangeleerd met een uitgelijnde voorbeeldzin in elke taal.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Dioxus</keyword>
+        <keyword>Ratatui</keyword>
+        <keyword>SQLite</keyword>
+        <keyword>iOS</keyword>
+        <keyword>SpacedRepetition</keyword>
+        <keyword>Leitner</keyword>
+        <keyword>SM2</keyword>
+        <keyword>Python</keyword>
+        <keyword>spaCy</keyword>
+        <keyword>NLP</keyword>
+        <keyword>WordNet</keyword>
+        <keyword>Tatoeba</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>DDD</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-07-03</startDate>
+      <type>Applicatie</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>Een Rust-workspace waarvan de pure domeinkern (hexagonaal, DDD, test-first) een terminal-UI (ratatui) en Dioxus-apps voor desktop en iOS aanstuurt: Leitner-dozen met SM-2-planning op SQLite, inhoud uit datapakketten met gecontroleerde checksum. Het datalab bouwt in Python de lexicale databank in zes talen — ongeveer 8.900 woordbetekenissen (oktober 2026) uitgelijnd op WordNet, geïllustreerd met Tatoeba-zinnen, geanalyseerd met spaCy, elke woord-in-zin-koppeling gecontroleerd.</summary>
+      <anchor>project-ll</anchor>
+      <anchoredIn>work-acteble-oprichter</anchoredIn>
+    </project>
+    <project>
+      <name>Indexer</name>
+      <description>Gecureerde index van externe databronnen, boeken en softwarepakketten, aangeboden via een openbare lees-API.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>CloudflareWorkers</keyword>
+        <keyword>WebAssembly</keyword>
+        <keyword>DurableObjects</keyword>
+        <keyword>TOML</keyword>
+        <keyword>BM25F</keyword>
+        <keyword>InformationRetrieval</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-10-06</startDate>
+      <type>API</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>Elk van de 523 bronnen is een TOML-bestand dat Rust valideert en compileert tot statische JSON, bij het bouwen ingebed in een Cloudflare Worker: API-logica in puur Rust, ETag- en 304-antwoorden, snelheidslimieten per IP en per API-sleutel, exact geteld door een Durable Object, BM25F-rangschikking gewogen met een betrouwbaarheidsscore op zes criteria, en een hiaatanalyse die behoeften aan kandidaat-bronnen koppelt.</summary>
+      <anchor>project-indexer</anchor>
+      <anchoredIn>work-acteble-oprichter</anchoredIn>
+    </project>
+    <project>
+      <name>Polytech</name>
+      <description>Bibliotheek voor ingenieursstudies die elk getal en elke uitdrukking van uitgewerkte LaTeX-oplossingen berekent, niets met de hand ingetypt.</description>
+      <keywords>
+        <keyword>Python</keyword>
+        <keyword>SymPy</keyword>
+        <keyword>NumPy</keyword>
+        <keyword>SciPy</keyword>
+        <keyword>LaTeX</keyword>
+        <keyword>Lean4</keyword>
+        <keyword>Mathlib</keyword>
+        <keyword>DDD</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>TDD</keyword>
+        <keyword>MutationTesting</keyword>
+      </keywords>
+      <startDate>2026-09-23</startDate>
+      <type>Bibliotheek</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>Een Python-bibliotheek (DDD, hexagonaal, test-first, met mutatietests, mypy strict) met de begrippen uit wiskunde, natuurkunde, elektronica, signalen en optimalisatie, berekend met SymPy, NumPy en SciPy en via macro's in 920 LaTeX-documenten ingevoegd; een pipeline zet cursusmateriaal om naar Markdown, LaTeX en XML, en Lean 4-bewijzen met Mathlib herleiden resultaten tot de axioma's.</summary>
+      <anchor>project-polytech</anchor>
+      <anchoredIn>work-acteble-oprichter</anchoredIn>
+    </project>
+    <project>
+      <name>Converge</name>
+      <description>AI-ondersteund platform voor mechanisch 3D-ontwerp dat opensource-engines voor geometrie, meshing en simulatie aanstuurt.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Python</keyword>
+        <keyword>OpenCASCADE</keyword>
+        <keyword>Manifold</keyword>
+        <keyword>build123d</keyword>
+        <keyword>Gmsh</keyword>
+        <keyword>Optuna</keyword>
+        <keyword>NSGA2</keyword>
+        <keyword>MultiObjectiveOptimization</keyword>
+        <keyword>Pareto</keyword>
+        <keyword>ThreeJS</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-10-20</startDate>
+      <type>Platform</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>De AI schrijft bewerkingen, de engines rekenen: een LLM levert een strikt gevalideerd onderdeelprogramma in JSON; twee onafhankelijke kernels, OpenCASCADE (exact) en Manifold (mesh), moeten het eens zijn over volume en omhullende doos, en de assemblage wordt op overlappingen gecontroleerd vóór elke export naar STEP, STL, 3MF of glTF. Een Rust-kern (hexagonale poorten en adapters) stuurt een Python-worker aan via JSON-regels, en een NSGA-II-zoektocht (Optuna) kiest de componenten op een Paretofront, gecontroleerd door exacte enumeratie.</summary>
+      <anchor>project-converge</anchor>
+      <anchoredIn>work-acteble-oprichter</anchoredIn>
+    </project>
+    <project>
+      <name>Actrack</name>
+      <description>Voorspellingen van het FIFA WK 2026 met een ensemble van voetbalratingstrategieën.</description>
+      <keywords>
+        <keyword>Python</keyword>
+        <keyword>Pandas</keyword>
+        <keyword>NumPy</keyword>
+        <keyword>SciPy</keyword>
+        <keyword>DuckDB</keyword>
+        <keyword>Rust</keyword>
+        <keyword>Dioxus</keyword>
+        <keyword>WebAssembly</keyword>
+        <keyword>EloRating</keyword>
+        <keyword>PoissonModel</keyword>
+        <keyword>EnsembleModel</keyword>
+        <keyword>WalkForwardBacktest</keyword>
+        <keyword>BrierScore</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>DDD</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-06-28</startDate>
+      <type>Voorspellingsengine</type>
+      <roles>
+        <role>Auteur</role>
+      </roles>
+      <summary>Een Python-engine (DDD, hexagonaal) weegt vijftien strategieën voor wedstrijduitslagen — Elo, Poisson aanval/verdediging, vorm, onderlinge duels, waarde van de selectie, rustdagen, bookmakerquoteringen — aangepast aan de speellocatie, en is overgezet naar Rust/Dioxus-apps voor web (WebAssembly), desktop, mobiel en terminal, die er gelijk mee blijven. Een onderzoekslab backtest de strategieën walk-forward, telkens met één toernooi apart gehouden, op 635 wedstrijden uit tien toernooien (WK's 2002–2022 en vier continentale toernooien van 2023–2024) en stemt de ensemblegewichten af; buiten de steekproef scoort Elo alleen het best (55,6% juist).</summary>
+      <anchor>project-actrack</anchor>
+      <anchoredIn>work-acteble-oprichter</anchoredIn>
+    </project>
+    <project>
       <name>Synergy</name>
       <description>Intern platform van het Belgisch federaal Parlement om de parlementaire archieven te doorzoeken, verkennen en bevragen.</description>
       <keywords>
@@ -3883,82 +4598,63 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <anchoredIn>work-belgische-senaat-ai-onderzoeker</anchoredIn>
     </project>
     <project>
-      <name>Acteble API</name>
-      <description>Backend van het Acteble-platform: een modulaire monoliet in Rust.</description>
+      <name>Acteble</name>
+      <description>Geolokaliseerd sociaal platform dat mensen samenbrengt rond gedeelde activiteiten: een Rust-backend, een offline-first Flutter-app en een React-website.</description>
       <keywords>
         <keyword>Rust</keyword>
         <keyword>Tokio</keyword>
         <keyword>Axum</keyword>
         <keyword>Tonic</keyword>
         <keyword>gRPC</keyword>
+        <keyword>Protobuf</keyword>
         <keyword>SQLx</keyword>
         <keyword>PostgreSQL</keyword>
         <keyword>PostGIS</keyword>
         <keyword>Redis</keyword>
         <keyword>MinIO</keyword>
         <keyword>LiveKit</keyword>
-        <keyword>OpenTelemetry</keyword>
+        <keyword>OpenBao</keyword>
+        <keyword>Prometheus</keyword>
+        <keyword>Testcontainers</keyword>
+        <keyword>OpenStreetMap</keyword>
         <keyword>Docker</keyword>
         <keyword>Caddy</keyword>
+        <keyword>Dylint</keyword>
         <keyword>DDD</keyword>
         <keyword>HexagonalArchitecture</keyword>
         <keyword>CQRS</keyword>
         <keyword>EventDriven</keyword>
-      </keywords>
-      <startDate>2025-06-13</startDate>
-      <type>API</type>
-      <roles>
-        <role>Oprichter</role>
-      </roles>
-      <summary>Backend van het platform: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming.</summary>
-      <anchor>project-acteble-api</anchor>
-      <anchoredIn>work-acteble-oprichter</anchoredIn>
-    </project>
-    <project>
-      <name>Acteble App</name>
-      <description>Offline-first multiplatformclient van Acteble, gebouwd met Flutter.</description>
-      <keywords>
         <keyword>Flutter</keyword>
         <keyword>Dart</keyword>
         <keyword>Melos</keyword>
         <keyword>Riverpod</keyword>
         <keyword>Drift</keyword>
         <keyword>SQLite</keyword>
+        <keyword>SQLCipher</keyword>
         <keyword>Dio</keyword>
-        <keyword>gRPC</keyword>
+        <keyword>FlutterRustBridge</keyword>
+        <keyword>MapLibre</keyword>
         <keyword>FlutterMap</keyword>
         <keyword>Firebase</keyword>
         <keyword>OfflineFirst</keyword>
+        <keyword>E2EE</keyword>
         <keyword>Mobile</keyword>
-      </keywords>
-      <startDate>2025-04-12</startDate>
-      <url>https://www.acteble.com</url>
-      <type>Mobiele applicatie</type>
-      <roles>
-        <role>Oprichter</role>
-      </roles>
-      <summary>Offline-first client voor iOS, Android, web en desktop: een Melos-monorepo met Flutter-apps en gedeelde packages, Riverpod-state boven een lokale Drift/SQLite-opslag, verbonden met de API via REST en gRPC.</summary>
-      <anchor>project-acteble-app</anchor>
-      <anchoredIn>work-acteble-oprichter</anchoredIn>
-    </project>
-    <project>
-      <name>Acteble Website</name>
-      <description>Publieke website van Acteble: een React single-page-applicatie.</description>
-      <keywords>
         <keyword>React</keyword>
         <keyword>Vite</keyword>
         <keyword>JavaScript</keyword>
         <keyword>i18next</keyword>
         <keyword>ReactRouter</keyword>
+        <keyword>ESLint</keyword>
+        <keyword>Vercel</keyword>
       </keywords>
-      <startDate>2025-06-05</startDate>
+      <startDate>2025-04-12</startDate>
       <url>https://www.acteble.com</url>
-      <type>Website</type>
+      <type>Platform</type>
       <roles>
         <role>Oprichter</role>
       </roles>
-      <summary>Publieke website van Acteble: lichte React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.</summary>
-      <anchor>project-acteble-website</anchor>
+      <summary>Backend: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming; een PostGIS-pipeline zet OpenStreetMap-data om in routeringsgrafen die via een CDN worden gepubliceerd, en eigen Dylint-lints bewaken de architectuur in CI. App: offline-first Flutter-client voor iOS, Android, web en desktop — een Melos-monorepo met Riverpod boven een versleutelde lokale opslag (Drift, SQLCipher), end-to-end-versleuteling via een Rust-kern (vodozemac via flutter_rust_bridge), peer-to-peer-synchronisatie via Bluetooth, MapLibre-kaarten en realtime media met LiveKit. Website: React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.</summary>
+      <anchor>project-acteble</anchor>
       <anchoredIn>work-acteble-oprichter</anchoredIn>
     </project>
     <project>
@@ -3966,11 +4662,16 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       <description>Masterproef aan de UMONS — de R&amp;D van de planningsengine van Acteble.</description>
       <keywords>
         <keyword>Python</keyword>
+        <keyword>Rust</keyword>
         <keyword>LaTeX</keyword>
         <keyword>MiniZinc</keyword>
+        <keyword>ORTools</keyword>
         <keyword>ConstraintProgramming</keyword>
         <keyword>CombinatorialOptimization</keyword>
+        <keyword>MultiObjectiveOptimization</keyword>
         <keyword>Pareto</keyword>
+        <keyword>DSL</keyword>
+        <keyword>MutationTesting</keyword>
       </keywords>
       <startDate>2025-11-13</startDate>
       <endDate>2026-09-04</endDate>
@@ -3979,7 +4680,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
         <role>Auteur</role>
       </roles>
       <entity>UMONS</entity>
-      <summary>Masterproef: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd bij de Service d'Algorithmique van de UMONS. De R&amp;D van de planningsengine van Acteble, geschreven in Python.</summary>
+      <summary>Masterproef « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », Service d'Algorithmique van de UMONS — de R&amp;D van de planningsengine van Acteble. Multi-objectieve groepsvorming onder ruimtelijk-temporele beperkingen: NP-moeilijk via reductie van k-CLIQUE; toelaatbare groepen opgesomd als bicliques (Close-by-One); een iteratieve Pareto-solver met garanties voor terminatie en lokale convergentie; één DSL gecompileerd naar Python, MiniZinc en Rust met bit-identieke fronten, waarvan de Rust-uitvoer in de Acteble-API draait. Vergeleken met CP-SAT, NSGA-II, MOEA/D en SPEA2 (hypervolume, IGD, 30 seeds, Wilcoxon–Holm): significant beter dan MOEA/D bij elke grootte, dan NSGA-II en SPEA2 vanaf 500 gebruikers.</summary>
       <anchor>project-memoire-de-master</anchor>
       <anchoredIn>work-acteble-oprichter</anchoredIn>
     </project>
@@ -5003,6 +5704,68 @@ Kortom, als je iemand zoekt die enthousiasme, intelligentie en een vleugje humor
     </course>
   </courses>
   <competitions>
+    <item>
+      <key>SoCraTesBE2026</key>
+      <title>SoCraTes BE 2026</title>
+      <date>2026-10-22</date>
+      <organizer>SoCraTes BE</organizer>
+      <summary>Unconference voor software crafters, 22–25 oktober in La Roche-en-Ardenne: coding dojo's, pair programming, workshops en discussies, met een agenda die de deelnemers zelf bepalen.</summary>
+      <url>https://socratesbe.org</url>
+    </item>
+    <item>
+      <key>SoCraTesBE2023</key>
+      <title>SoCraTes BE 2023</title>
+      <date>2023-11-10</date>
+      <organizer>SoCraTes BE</organizer>
+      <summary>Unconference voor software crafters, november 2023: code kata's, lightning talks en open-spacesessies, met een agenda die de deelnemers zelf bepalen.</summary>
+      <url>https://socratesbe.org</url>
+    </item>
+    <item>
+      <key>VisugXL2023</key>
+      <title>VisugXL 2023</title>
+      <date>2023-11-30</date>
+      <organizer>VISUG — Visual Studio User Group Belgium</organizer>
+      <summary>Eendaagse conferentie van de Belgische .NET- en Visual Studio-community, op de AP Hogeschool in Antwerpen.</summary>
+      <url>https://www.visug.be</url>
+    </item>
+    <item>
+      <key>VisugMeetup202311</key>
+      <title>VISUG-meetup — Mediator-patroon en .NET 8</title>
+      <date>2023-11-07</date>
+      <organizer>VISUG — Visual Studio User Group Belgium</organizer>
+      <summary>Avond in Mechelen: centrale fout- en validatieafhandeling met het Mediator-patroon, en wat er nieuw is in .NET 8, ASP.NET 8 en EF 8.</summary>
+      <url>https://www.visug.be</url>
+    </item>
+    <item>
+      <key>TwentyKmMaredsousDinant2026</key>
+      <title>20 km Maredsous–Dinant 2026</title>
+      <date>2026-03</date>
+      <summary>Loopwedstrijd van 20 km tussen de abdij van Maredsous en Dinant.</summary>
+    </item>
+    <item>
+      <key>TwentyKmBrussels2025</key>
+      <title>20 km door Brussel 2025</title>
+      <date>2025-05-25</date>
+      <summary>Wegwedstrijd van 20 km door de straten van Brussel.</summary>
+    </item>
+    <item>
+      <key>TwentyKmMaredsousDinant2025</key>
+      <title>20 km Maredsous–Dinant 2025</title>
+      <date>2025-03-09</date>
+      <summary>Loopwedstrijd van 20 km tussen de abdij van Maredsous en Dinant.</summary>
+    </item>
+    <item>
+      <key>TwentyKmBrussels2024</key>
+      <title>20 km door Brussel 2024</title>
+      <date>2024-05-26</date>
+      <summary>Wegwedstrijd van 20 km door de straten van Brussel.</summary>
+    </item>
+    <item>
+      <key>TwentyKmBrussels2022</key>
+      <title>20 km door Brussel 2022</title>
+      <date>2022-05-29</date>
+      <summary>Wegwedstrijd van 20 km door de straten van Brussel.</summary>
+    </item>
     <item>
       <key>HackathonCOW2024</key>
       <title>Hackathon Citizens of Wallonia 2024</title>

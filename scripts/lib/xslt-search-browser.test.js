@@ -29,7 +29,7 @@ addEventListener('load', () => setTimeout(() => {
     const faded = all('#timeline .tl-bar').filter((b) => getComputedStyle(b).opacity === '0.18');
     seen.fadedByCss = faded.length > 0 && all('.tl-bar[data-dimmed]').length === 0;
     $('.tl-search-open').click();
-    type('acteble api');
+    type('acteble');
     const at = options().findIndex((o) => o.dataset.type === 'entry');
     for (let i = 0; i < at; i++) key(input, { key: 'ArrowDown' });
     seen.entry = options()[at]?.dataset.value;
@@ -66,12 +66,12 @@ check('Enter on a skill leads to the filter, in the URL', () =>
 );
 check('the filter is applied by CSS, not by a script', () => assert.equal(seen.fadedByCss, true));
 check('Enter on an entry leads to its id', () => {
-  assert.equal(seen.entry, 'project-acteble-api');
-  assert.deepEqual(seen.led, [false, '#project-acteble-api']);
+  assert.equal(seen.entry, 'project-acteble');
+  assert.deepEqual(seen.led, [false, '#project-acteble']);
 });
 check('the entry is set apart and its bar marked', () => {
-  assert.equal(seen.setApart, 'project-acteble-api');
-  assert.equal(seen.barMarked, '#project-acteble-api');
+  assert.equal(seen.setApart, 'project-acteble');
+  assert.equal(seen.barMarked, '#project-acteble');
 });
 check('the only scripts are the search, no filter script', () =>
   assert.deepEqual(seen.scripts, ['/js/search-rank.js', '/js/search.js']),

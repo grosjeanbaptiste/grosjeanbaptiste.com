@@ -23,7 +23,7 @@ module.exports = {
   timelineTitle: 'Cronología',
   // A degree followed on an evening schedule ("horaire décalé").
   scheduleEvening: 'horario vespertino',
-  competitions: 'Competiciones',
+  competitions: 'Eventos',
   lastYears: (n) => `${n} años`,
   wholeCareer: 'Todo',
   printPdf: 'Imprimir / PDF',

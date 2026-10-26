@@ -13,10 +13,15 @@
         "PostgreSQL"
       ],
       "projects": [
-        "Acteble API",
-        "Acteble App",
-        "Acteble Website",
-        "Mémoire de master"
+        "Acteble",
+        "Mémoire de master",
+        "Actrack",
+        "LL",
+        "Baba",
+        "KAG",
+        "Indexer",
+        "Polytech",
+        "Converge"
       ]
     },
     {
@@ -326,10 +331,25 @@
   ],
   "projects": [
     {
-      "summary": "Five layers: Rust CLI shell, link-grammar syntactic parser, SWI-Prolog symbolic engine, domain vocabulary packs, action executors."
+      "summary": "Five layers: a Rust CLI that does all the I/O, a link-grammar syntactic parser, an SWI-Prolog symbolic engine with no I/O, domain vocabulary packs kept as data, and some fifty Rust action binaries — a new verb is one pack fact and one binary. Mutation-tested, with a corpus of regression sentences and a cold start around 120 ms."
     },
     {
-      "summary": "Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, zero external dependencies in the core."
+      "summary": "Nine pipeline stages (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), each a port whose algorithm is chosen by label (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonal + DDD + TDD, standard library only in the core, no LLM. Metrics match pytrec_eval exactly. On six BEIR datasets no retriever wins everywhere (ndcg@10 0.668 on SciFact with BM25F); a LambdaMART reranker lifts ArguAna from 0.301 to 0.527 in 5-fold cross-validation."
+    },
+    {
+      "summary": "A Rust workspace whose pure domain core (hexagonal, DDD, test-first) drives a terminal UI (ratatui) and Dioxus desktop and iOS apps: Leitner boxes with SM-2 scheduling over SQLite, content from checksummed data packs. Its data lab builds the six-language lexical database in Python — about 8,900 word senses (October 2026) aligned on WordNet, illustrated with Tatoeba sentences, analysed with spaCy, every word-in-sentence link checked."
+    },
+    {
+      "summary": "Each of the 523 sources is a TOML file that Rust validates and compiles into static JSON, embedded at build time in a Cloudflare Worker: pure-Rust API logic, ETag and 304 responses, per-IP and API-key rate limits counted exactly by a Durable Object, BM25F ranking weighted by a six-criterion reliability score, and a gap analysis that matches needs to candidate sources."
+    },
+    {
+      "summary": "A Python library (DDD, hexagonal, test-first, mutation-tested, mypy strict) of the notions of maths, physics, electronics, signals and optimisation, computed with SymPy, NumPy and SciPy and injected through macros into 920 LaTeX documents; a pipeline converts course material to Markdown, LaTeX and XML, and Lean 4 proofs with Mathlib trace results back to the axioms."
+    },
+    {
+      "summary": "The AI writes operations, the engines compute: an LLM emits a strictly validated JSON part program; two independent kernels, OpenCASCADE (exact) and Manifold (mesh), must agree on volume and bounding box, and the assembly is checked for overlaps before any STEP, STL, 3MF or glTF export. A Rust core (hexagonal ports and adapters) drives a Python worker over JSON lines, and an NSGA-II search (Optuna) picks the components on a Pareto front, cross-checked by exact enumeration."
+    },
+    {
+      "summary": "A Python engine (DDD, hexagonal) weighs fifteen match-outcome strategies — Elo, Poisson attack/defence, form, head-to-head, squad value, rest days, bookmaker odds — adjusted for venue, and is ported to Rust/Dioxus apps for web (WebAssembly), desktop, mobile and terminal, kept at parity with it. A research lab backtests the strategies walk-forward, one tournament held out at a time, on 635 matches from ten tournaments (World Cups 2002–2022 and four continental cups of 2023–2024), and tunes the ensemble weights; out of sample, Elo alone scores best (55.6% accuracy)."
     },
     {
       "summary": "Internal platform that lets parliamentary staff search, explore and converse with the archives of the Belgian Federal Parliament, powered by a retrieval-augmented pipeline with bilingual FR/NL support."
@@ -338,16 +358,10 @@
       "summary": "Open, reproducible protocol that benchmarks retrieval strategies on the bilingual Senate corpus, measuring FR/NL robustness across the retrieval pipeline."
     },
     {
-      "summary": "Backend of the platform: a modular monolith in Rust, split into bounded contexts with a hexagonal architecture, CQRS and an event-driven core (event store, outbox/inbox), served over REST/JSON and gRPC streaming."
+      "summary": "Backend: a modular monolith in Rust, split into bounded contexts with a hexagonal architecture, CQRS and an event-driven core (event store, outbox/inbox), served over REST/JSON and gRPC streaming; a PostGIS pipeline turns OpenStreetMap data into routing graphs published to a CDN, and custom Dylint lints enforce the architecture in CI. App: an offline-first Flutter client for iOS, Android, web and desktop — a Melos monorepo with Riverpod over an encrypted local store (Drift, SQLCipher), end-to-end encryption through a Rust core (vodozemac via flutter_rust_bridge), Bluetooth peer-to-peer sync, MapLibre maps and LiveKit real-time media. Website: a React single-page application built with Vite and internationalised with i18next."
     },
     {
-      "summary": "Offline-first client for iOS, Android, web and desktop: a Melos monorepo of Flutter apps and shared packages, with Riverpod state over a local Drift/SQLite store, talking to the API over REST and gRPC."
-    },
-    {
-      "summary": "Public website of Acteble: a lightweight React single-page application built with Vite, internationalised with i18next."
-    },
-    {
-      "summary": "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. The R&D of Acteble's planning engine, written in Python."
+      "summary": "MSc dissertation « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », UMONS Service d'Algorithmique — the R&D of Acteble's planning engine. Multi-objective group formation under spatio-temporal constraints: NP-hard by reduction from k-CLIQUE; admissible groups enumerated as bicliques (Close-by-One); an iterative Pareto solver with termination and local-convergence guarantees; one DSL compiled to Python, MiniZinc and Rust that yield bit-identical fronts, the Rust output running in the Acteble API. Benchmarked against CP-SAT, NSGA-II, MOEA/D and SPEA2 (hypervolume, IGD, 30 seeds, Wilcoxon–Holm): significantly ahead of MOEA/D at every size, of NSGA-II and SPEA2 from 500 users."
     },
     {
       "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired."
@@ -965,6 +979,68 @@
     ]
   },
   "competitions": [
+    {
+      "key": "SoCraTesBE2026",
+      "title": "SoCraTes BE 2026",
+      "date": "2026-10-22",
+      "organizer": "SoCraTes BE",
+      "summary": "Unconference for software crafters, 22–25 October in La Roche-en-Ardenne: coding dojos, pair programming, workshops and discussions, with an agenda set by the participants.",
+      "url": "https://socratesbe.org"
+    },
+    {
+      "key": "SoCraTesBE2023",
+      "title": "SoCraTes BE 2023",
+      "date": "2023-11-10",
+      "organizer": "SoCraTes BE",
+      "summary": "Unconference for software crafters, November 2023: code katas, lightning talks and open-space sessions, with an agenda set by the participants.",
+      "url": "https://socratesbe.org"
+    },
+    {
+      "key": "VisugXL2023",
+      "title": "VisugXL 2023",
+      "date": "2023-11-30",
+      "organizer": "VISUG — Visual Studio User Group Belgium",
+      "summary": "Full-day conference of the Belgian .NET and Visual Studio community, at AP Hogeschool in Antwerp.",
+      "url": "https://www.visug.be"
+    },
+    {
+      "key": "VisugMeetup202311",
+      "title": "VISUG meetup — Mediator pattern and .NET 8",
+      "date": "2023-11-07",
+      "organizer": "VISUG — Visual Studio User Group Belgium",
+      "summary": "Evening in Mechelen: central error and validation handling with the Mediator pattern, and what is new in .NET 8, ASP.NET 8 and EF 8.",
+      "url": "https://www.visug.be"
+    },
+    {
+      "key": "TwentyKmMaredsousDinant2026",
+      "title": "20 km Maredsous–Dinant 2026",
+      "date": "2026-03",
+      "summary": "20 km race between Maredsous Abbey and Dinant."
+    },
+    {
+      "key": "TwentyKmBrussels2025",
+      "title": "20 km of Brussels 2025",
+      "date": "2025-05-25",
+      "summary": "20 km road race through the streets of Brussels."
+    },
+    {
+      "key": "TwentyKmMaredsousDinant2025",
+      "title": "20 km Maredsous–Dinant 2025",
+      "date": "2025-03-09",
+      "summary": "20 km race between Maredsous Abbey and Dinant."
+    },
+    {
+      "key": "TwentyKmBrussels2024",
+      "title": "20 km of Brussels 2024",
+      "date": "2024-05-26",
+      "summary": "20 km road race through the streets of Brussels."
+    },
+    {
+      "key": "TwentyKmBrussels2022",
+      "title": "20 km of Brussels 2022",
+      "date": "2022-05-29",
+      "summary": "20 km road race through the streets of Brussels."
+    },
     {
       "key": "HackathonCOW2024",
       "title": "Hackathon Citizens of Wallonia 2024",
