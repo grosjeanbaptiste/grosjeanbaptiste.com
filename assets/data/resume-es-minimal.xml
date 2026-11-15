@@ -148,7 +148,7 @@
     <tel>+32496289705</tel>
     <timeline>
       <title>Cronología</title>
-      <months>206</months>
+      <months>207</months>
       <legend>
         <evening>horario vespertino</evening>
       </legend>
@@ -1834,71 +1834,71 @@
       <ticks>
         <tick>
           <label>2010</label>
-          <left>1.94%</left>
+          <left>1.93%</left>
         </tick>
         <tick>
           <label>2011</label>
-          <left>7.77%</left>
+          <left>7.73%</left>
         </tick>
         <tick>
           <label>2012</label>
-          <left>13.59%</left>
+          <left>13.53%</left>
         </tick>
         <tick>
           <label>2013</label>
-          <left>19.42%</left>
+          <left>19.32%</left>
         </tick>
         <tick>
           <label>2014</label>
-          <left>25.24%</left>
+          <left>25.12%</left>
         </tick>
         <tick>
           <label>2015</label>
-          <left>31.07%</left>
+          <left>30.92%</left>
         </tick>
         <tick>
           <label>2016</label>
-          <left>36.89%</left>
+          <left>36.71%</left>
         </tick>
         <tick>
           <label>2017</label>
-          <left>42.72%</left>
+          <left>42.51%</left>
         </tick>
         <tick>
           <label>2018</label>
-          <left>48.54%</left>
+          <left>48.31%</left>
         </tick>
         <tick>
           <label>2019</label>
-          <left>54.37%</left>
+          <left>54.11%</left>
         </tick>
         <tick>
           <label>2020</label>
-          <left>60.19%</left>
+          <left>59.9%</left>
         </tick>
         <tick>
           <label>2021</label>
-          <left>66.02%</left>
+          <left>65.7%</left>
         </tick>
         <tick>
           <label>2022</label>
-          <left>71.84%</left>
+          <left>71.5%</left>
         </tick>
         <tick>
           <label>2023</label>
-          <left>77.67%</left>
+          <left>77.29%</left>
         </tick>
         <tick>
           <label>2024</label>
-          <left>83.5%</left>
+          <left>83.09%</left>
         </tick>
         <tick>
           <label>2025</label>
-          <left>89.32%</left>
+          <left>88.89%</left>
         </tick>
         <tick>
           <label>2026</label>
-          <left>95.15%</left>
+          <left>94.69%</left>
         </tick>
       </ticks>
       <lanes>
@@ -1909,72 +1909,72 @@
           <printRows>12</printRows>
           <groups>
             <group>
-              <left>70.87%</left>
-              <width>2.41%</width>
+              <left>70.53%</left>
+              <width>2.4%</width>
               <row>0</row>
               <rows>2</rows>
               <printRow>0</printRow>
               <printRows>2</printRows>
             </group>
             <group>
-              <left>77.18%</left>
-              <width>3.38%</width>
+              <left>76.81%</left>
+              <width>3.37%</width>
               <row>0</row>
               <rows>2</rows>
               <printRow>0</printRow>
               <printRows>2</printRows>
             </group>
             <group>
-              <left>81.55%</left>
-              <width>1.93%</width>
+              <left>81.16%</left>
+              <width>1.92%</width>
               <row>1</row>
               <rows>2</rows>
               <printRow>1</printRow>
               <printRows>2</printRows>
             </group>
             <group>
-              <left>83.5%</left>
-              <width>3.49%</width>
+              <left>83.09%</left>
+              <width>3.48%</width>
               <row>1</row>
               <rows>2</rows>
               <printRow>1</printRow>
               <printRows>2</printRows>
             </group>
             <group>
-              <left>84.47%</left>
-              <width>3.25%</width>
+              <left>84.06%</left>
+              <width>3.24%</width>
               <row>3</row>
               <rows>2</rows>
               <printRow>3</printRow>
               <printRows>2</printRows>
             </group>
             <group>
-              <left>87.86%</left>
-              <width>4.35%</width>
+              <left>87.44%</left>
+              <width>4.33%</width>
               <row>0</row>
               <rows>2</rows>
               <printRow>0</printRow>
               <printRows>2</printRows>
             </group>
             <group>
-              <left>88.83%</left>
-              <width>3.38%</width>
+              <left>88.41%</left>
+              <width>3.37%</width>
               <row>2</row>
               <rows>2</rows>
               <printRow>2</printRow>
               <printRows>2</printRows>
             </group>
             <group>
-              <left>92.23%</left>
-              <width>7.77%</width>
+              <left>91.79%</left>
+              <width>8.21%</width>
               <row>0</row>
               <rows>9</rows>
               <printRow>0</printRow>
               <printRows>9</printRows>
             </group>
             <group>
-              <left>94.21%</left>
-              <width>3.83%</width>
+              <left>93.75%</left>
+              <width>3.82%</width>
               <row>9</row>
               <rows>3</rows>
               <printRow>9</printRow>
@@ -1992,7 +1992,7 @@
               <caption>Quick Restaurant</caption>
               <period>sep 2017 – sep 2017</period>
               <label>Quick Restaurant — Trabajo de estudiante — sep 2017 – sep 2017</label>
-              <left>46.6%</left>
+              <left>46.38%</left>
               <width>0.47%</width>
               <row>0</row>
               <printRow>0</printRow>
@@ -2008,8 +2008,8 @@
               <uses>net flutter sql-server</uses>
               <period>nov 2021 – mar 2022</period>
               <label>RESTOMAX — Desarrollador Web Full Stack en prácticas — nov 2021 – mar 2022</label>
-              <left>70.87%</left>
-              <width>2.41%</width>
+              <left>70.53%</left>
+              <width>2.4%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -2024,8 +2024,8 @@
               <period>nov 2021 – mar 2022</period>
               <skills>.NET · Flutter · SQL Server · QRCode</skills>
               <label>WebMenu — nov 2021 – mar 2022</label>
-              <left>70.87%</left>
-              <width>2.41%</width>
+              <left>70.53%</left>
+              <width>2.4%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2039,7 +2039,7 @@
               <caption>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</caption>
               <period>mar 2022 – mar 2022</period>
               <label>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles — Trabajo de estudiante — mar 2022 – mar 2022</label>
-              <left>73.27%</left>
+              <left>72.92%</left>
               <width>0.02%</width>
               <row>2</row>
               <printRow>2</printRow>
@@ -2054,7 +2054,7 @@
               <caption>EDITx: IT Challenges, IT Jobs, Education in IT for X</caption>
               <period>abr 2022 – abr 2022</period>
               <label>EDITx: IT Challenges, IT Jobs, Education in IT for X — Desarrollador Web Full Stack en prácticas — abr 2022 – abr 2022</label>
-              <left>73.3%</left>
+              <left>72.95%</left>
               <width>0.47%</width>
               <row>0</row>
               <printRow>0</printRow>
@@ -2070,8 +2070,8 @@
               <uses>sql-server node-js express-js react angular typescript auth0 sequelize</uses>
               <period>dic 2022 – jun 2023</period>
               <label>Technofutur TIC — Desarrollador Web Full Stack en prácticas — dic 2022 – jun 2023</label>
-              <left>77.18%</left>
-              <width>3.38%</width>
+              <left>76.81%</left>
+              <width>3.37%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -2089,8 +2089,8 @@
               <summary>Gestor educativo para estudiantes. Sin mantenimiento; la base de datos y la autenticación no están disponibles.</summary>
               <skills>Angular · JavaScript · TypeScript · Express.js · API</skills>
               <label>MyWay — Aplicación web · Fundador — Freelance — ene 2023 – jun 2023</label>
-              <left>77.67%</left>
-              <width>2.9%</width>
+              <left>77.29%</left>
+              <width>2.88%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2105,8 +2105,8 @@
               <uses>net ddd cleancode cleanarchitecture</uses>
               <period>ago 2023 – sep 2024</period>
               <label>Xtrada — Software Crafter — ago 2023 – sep 2024</label>
-              <left>81.38%</left>
-              <width>6.34%</width>
+              <left>80.99%</left>
+              <width>6.31%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -2121,8 +2121,8 @@
               <uses>net blazor sql-server ddd entityframework xunit</uses>
               <period>sep 2023 – dic 2023</period>
               <label>Xtrada — Software Crafter .NET / Blazor — sep 2023 – dic 2023</label>
-              <left>81.55%</left>
-              <width>1.93%</width>
+              <left>81.16%</left>
+              <width>1.92%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2137,8 +2137,8 @@
               <period>sep 2023 – dic 2023</period>
               <skills>.NET · C# · Blazor · EntityFramework · xUnit</skills>
               <label>Kwalitijd — sep 2023 – dic 2023</label>
-              <left>81.55%</left>
-              <width>1.93%</width>
+              <left>81.16%</left>
+              <width>1.92%</width>
               <row>2</row>
               <printRow>2</printRow>
             </bar>
@@ -2153,8 +2153,8 @@
               <uses>net react sql-server typescript entityframework docker azure opentelemetry</uses>
               <period>ene 2024 – ago 2024</period>
               <label>Xtrada — Software Crafter .NET / React — ene 2024 – ago 2024</label>
-              <left>83.5%</left>
-              <width>3.49%</width>
+              <left>83.09%</left>
+              <width>3.48%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2169,8 +2169,8 @@
               <period>ene 2024 – feb 2024</period>
               <skills>.NET · C# · EntityFramework · React · TypeScript</skills>
               <label>VhAuctions — ene 2024 – feb 2024</label>
-              <left>83.5%</left>
-              <width>0.94%</width>
+              <left>83.09%</left>
+              <width>0.93%</width>
               <row>2</row>
               <printRow>2</printRow>
             </bar>
@@ -2185,8 +2185,8 @@
               <uses>python spacy pandas numpy net</uses>
               <period>mar 2024 – sep 2024</period>
               <label>Xtrada — Data Scientist — mar 2024 – sep 2024</label>
-              <left>84.47%</left>
-              <width>3.25%</width>
+              <left>84.06%</left>
+              <width>3.24%</width>
               <row>3</row>
               <printRow>3</printRow>
             </bar>
@@ -2201,8 +2201,8 @@
               <period>mar 2024 – ago 2024</period>
               <skills>Python · SpaCy · Pandas · NumPy · .NET</skills>
               <label>VhAuctions NER Inventory Model — mar 2024 – ago 2024</label>
-              <left>84.47%</left>
-              <width>2.52%</width>
+              <left>84.06%</left>
+              <width>2.51%</width>
               <row>4</row>
               <printRow>4</printRow>
             </bar>
@@ -2217,8 +2217,8 @@
               <uses>python whisper fastapi deepface openai postgresql sqlalchemy</uses>
               <period>oct 2024 – jun 2025</period>
               <label>Emvi.ai — AI Software Crafter — oct 2024 – jun 2025</label>
-              <left>87.86%</left>
-              <width>4.35%</width>
+              <left>87.44%</left>
+              <width>4.33%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -2235,8 +2235,8 @@
               <summary>Aplicación de reminiscencia para personas con problemas cognitivos.</summary>
               <skills>Python · FastAPI · OpenAI · Whisper · DeepFace</skills>
               <label>Remi — Aplicación de IA — oct 2024 – jun 2025</label>
-              <left>87.86%</left>
-              <width>4.35%</width>
+              <left>87.44%</left>
+              <width>4.33%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2251,8 +2251,8 @@
               <uses>dart flutter firebase openai valhalla</uses>
               <period>dic 2024 – jun 2025</period>
               <label>Emvi.ai — AI Software Crafter Lead — dic 2024 – jun 2025</label>
-              <left>88.83%</left>
-              <width>3.38%</width>
+              <left>88.41%</left>
+              <width>3.37%</width>
               <row>2</row>
               <printRow>2</printRow>
             </bar>
@@ -2269,8 +2269,8 @@
               <summary>Asistente visual con IA para personas con discapacidad visual.</summary>
               <skills>Flutter · Firebase · OpenAI · Valhalla · AI</skills>
               <label>Emvi App — Aplicación móvil — dic 2024 – jun 2025</label>
-              <left>88.83%</left>
-              <width>3.38%</width>
+              <left>88.41%</left>
+              <width>3.37%</width>
               <row>3</row>
               <printRow>3</printRow>
             </bar>
@@ -2285,8 +2285,8 @@
               <uses>rust flutter dart tokio docker ddd cleanarchitecture postgresql</uses>
               <period>jul 2025 – Actualidad</period>
               <label>Acteble — Fundador — jul 2025 – Actualidad</label>
-              <left>92.23%</left>
-              <width>7.77%</width>
+              <left>91.79%</left>
+              <width>8.21%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -2303,8 +2303,8 @@
               <summary>Plataforma social geolocalizada que reúne a personas en torno a actividades compartidas: un backend en Rust, una app Flutter offline-first y un sitio React.</summary>
               <skills>Rust · Tokio · Axum · Tonic · gRPC</skills>
               <label>Acteble — Plataforma · Fundador — abr 2025 – Actualidad</label>
-              <left>92.23%</left>
-              <width>7.77%</width>
+              <left>91.79%</left>
+              <width>8.21%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2322,8 +2322,8 @@
               <summary>Trabajo de fin de máster en la UMONS — la I+D del motor de planificación de Acteble.</summary>
               <skills>Python · Rust · LaTeX · MiniZinc · ORTools</skills>
               <label>Mémoire de master — Trabajo de fin de máster · Autor — UMONS — nov 2025 – sep 2026</label>
-              <left>94.37%</left>
-              <width>4.71%</width>
+              <left>93.91%</left>
+              <width>4.69%</width>
               <row>2</row>
               <printRow>2</printRow>
             </bar>
@@ -2340,8 +2340,8 @@
               <summary>Predicciones de la Copa Mundial de la FIFA 2026 mediante un conjunto de estrategias de valoración futbolística.</summary>
               <skills>Python · Pandas · NumPy · SciPy · DuckDB</skills>
               <label>Actrack — Motor de predicción · Autor — jun 2026 – Actualidad</label>
-              <left>98.01%</left>
-              <width>1.99%</width>
+              <left>97.54%</left>
+              <width>2.46%</width>
               <row>3</row>
               <printRow>3</printRow>
             </bar>
@@ -2358,8 +2358,8 @@
               <summary>CLI tipo shell consultada en inglés controlado mediante IA simbólica pura — sin LLM en el bucle.</summary>
               <skills>Rust · Prolog · LinkGrammar · SymbolicAI · NLP</skills>
               <label>Baba — CLI · Autor — jul 2026 – Actualidad</label>
-              <left>98.07%</left>
-              <width>1.93%</width>
+              <left>97.6%</left>
+              <width>2.4%</width>
               <row>4</row>
               <printRow>4</printRow>
             </bar>
@@ -2376,8 +2376,8 @@
               <summary>Entrenador de vocabulario con repetición espaciada para seis idiomas, cada palabra enseñada con una frase de ejemplo alineada en cada idioma.</summary>
               <skills>Rust · Dioxus · Ratatui · SQLite · iOS</skills>
               <label>LL — Aplicación · Autor — jul 2026 – Actualidad</label>
-              <left>98.09%</left>
-              <width>1.91%</width>
+              <left>97.62%</left>
+              <width>2.38%</width>
               <row>5</row>
               <printRow>5</printRow>
             </bar>
@@ -2394,8 +2394,8 @@
               <summary>Framework Rust puramente algorítmico que evalúa en BEIR componentes intercambiables de un pipeline RAG y entrega la mejor configuración medida como una CLI de preguntas y respuestas con fuentes citadas.</summary>
               <skills>Rust · RAG · InformationRetrieval · LearningToRank · BEIR</skills>
               <label>KAG — Framework · Autor — jul 2026 – Actualidad</label>
-              <left>98.12%</left>
-              <width>1.88%</width>
+              <left>97.65%</left>
+              <width>2.35%</width>
               <row>6</row>
               <printRow>6</printRow>
             </bar>
@@ -2412,8 +2412,8 @@
               <summary>Biblioteca de estudios de ingeniería que calcula cada número y cada expresión de soluciones redactadas en LaTeX, nada escrito a mano.</summary>
               <skills>Python · SymPy · NumPy · SciPy · LaTeX</skills>
               <label>Polytech — Biblioteca · Autor — sep 2026 – Actualidad</label>
-              <left>99.39%</left>
-              <width>0.61%</width>
+              <left>98.9%</left>
+              <width>1.1%</width>
               <row>2</row>
               <printRow>2</printRow>
             </bar>
@@ -2430,8 +2430,8 @@
               <summary>Índice curado de fuentes de datos externas, libros y paquetes de software, servido mediante una API pública de lectura.</summary>
               <skills>Rust · CloudflareWorkers · WebAssembly · DurableObjects · TOML</skills>
               <label>Indexer — API · Autor — oct 2026 – Actualidad</label>
-              <left>99.59%</left>
-              <width>0.41%</width>
+              <left>99.11%</left>
+              <width>0.89%</width>
               <row>7</row>
               <printRow>7</printRow>
             </bar>
@@ -2448,8 +2448,8 @@
               <summary>Plataforma de diseño mecánico 3D asistido por IA que orquesta motores de código abierto de geometría, mallado y simulación.</summary>
               <skills>Rust · Python · OpenCASCADE · Manifold · build123d</skills>
               <label>Converge — Plataforma · Autor — oct 2026 – Actualidad</label>
-              <left>99.81%</left>
-              <width>0.19%</width>
+              <left>99.33%</left>
+              <width>0.67%</width>
               <row>8</row>
               <printRow>8</printRow>
             </bar>
@@ -2464,8 +2464,8 @@
               <uses>python java net rag ocr sentencetransformers pandas</uses>
               <period>nov 2025 – jun 2026</period>
               <label>Senado belga — Investigador en IA — nov 2025 – jun 2026</label>
-              <left>94.21%</left>
-              <width>3.83%</width>
+              <left>93.75%</left>
+              <width>3.82%</width>
               <row>9</row>
               <printRow>9</printRow>
             </bar>
@@ -2482,8 +2482,8 @@
               <summary>Plataforma interna del Parlamento federal belga para buscar, explorar y conversar con los archivos parlamentarios.</summary>
               <skills>Python · Java · .NET · RAG · AI</skills>
               <label>Synergy — Plataforma · Autor — nov 2025 – jun 2026</label>
-              <left>94.21%</left>
-              <width>3.83%</width>
+              <left>93.75%</left>
+              <width>3.82%</width>
               <row>10</row>
               <printRow>10</printRow>
             </bar>
@@ -2500,8 +2500,8 @@
               <summary>Protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado belga, con énfasis en la robustez bilingüe FR/NL.</summary>
               <skills>RAG · Python · Evaluation · Benchmark · OCR</skills>
               <label>fedrag-be — Investigación · Autor — nov 2025 – jun 2026</label>
-              <left>94.21%</left>
-              <width>3.83%</width>
+              <left>93.75%</left>
+              <width>3.82%</width>
               <row>11</row>
               <printRow>11</printRow>
             </bar>
@@ -2514,24 +2514,24 @@
           <printRows>7</printRows>
           <groups>
             <group>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>0</row>
               <rows>10</rows>
               <printRow>0</printRow>
               <printRows>2</printRows>
             </group>
             <group>
-              <left>52.9%</left>
-              <width>23.54%</width>
+              <left>52.64%</left>
+              <width>23.42%</width>
               <row>0</row>
               <rows>13</rows>
               <printRow>0</printRow>
               <printRows>5</printRows>
             </group>
             <group>
-              <left>76.43%</left>
-              <width>22.64%</width>
+              <left>76.06%</left>
+              <width>22.54%</width>
               <row>0</row>
               <rows>13</rows>
               <printRow>0</printRow>
@@ -2551,7 +2551,7 @@
               <label>Lycée Mater Dei — Estudios generales — Latín y griego — sep 2009 – jun 2012</label>
               <schedule>day</schedule>
               <left>0.47%</left>
-              <width>16.02%</width>
+              <width>15.94%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -2566,8 +2566,8 @@
               <period>sep 2012 – jun 2015</period>
               <label>Centre Scolaire Saint-Adrien - Val Duchesse — C.E.S.S. — Estudios generales — Matemáticas y lenguas modernas — sep 2012 – jun 2015</label>
               <schedule>day</schedule>
-              <left>17.94%</left>
-              <width>16.02%</width>
+              <left>17.86%</left>
+              <width>15.94%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -2582,8 +2582,8 @@
               <period>sep 2014 – jun 2015</period>
               <label>UCLouvain - Université catholique de Louvain — Cursos preparatorios — Medicina y odontología — sep 2014 – jun 2015</label>
               <schedule>day</schedule>
-              <left>29.6%</left>
-              <width>4.37%</width>
+              <left>29.45%</left>
+              <width>4.35%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2598,8 +2598,8 @@
               <period>sep 2016 – jun 2017</period>
               <label>Université Saint-Louis - Bruxelles — Grado en Ciencias Políticas — Orientación general — sep 2016 – jun 2017</label>
               <schedule>day</schedule>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -2612,8 +2612,8 @@
               <period>sep 2016 – jun 2017</period>
               <label>16-17 — sep 2016 – jun 2017</label>
               <schedule>day</schedule>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2627,8 +2627,8 @@
               <uses>microeconomics competitivemarkets firmbehaviour marketfailure</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Économie I — sep 2016 – jun 2017</label>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -2641,8 +2641,8 @@
               <uses>imperfectcompetition macroeconomics nationalincome monetarymarket</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Économie II — sep 2016 – jun 2017</label>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -2655,8 +2655,8 @@
               <uses>politicalscience power state democracy</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Science politique — sep 2016 – jun 2017</label>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -2669,8 +2669,8 @@
               <uses>epistemology durkheim weber marx</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Séminaire : penser le social — sep 2016 – jun 2017</label>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>5</row>
             </bar>
             <bar>
@@ -2683,8 +2683,8 @@
               <uses>academicwriting citation epistemology</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Séminaire : principes et méthodes en sciences sociales — sep 2016 – jun 2017</label>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>6</row>
             </bar>
             <bar>
@@ -2697,8 +2697,8 @@
               <uses>mediaeconomics advertising mediaregulation webeconomy</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Socio-économie des médias — sep 2016 – jun 2017</label>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>7</row>
             </bar>
             <bar>
@@ -2711,8 +2711,8 @@
               <uses>english</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Anglais I (Saint-Louis) — sep 2016 – jun 2017</label>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>8</row>
             </bar>
             <bar>
@@ -2725,8 +2725,8 @@
               <uses>dutch</uses>
               <period>sep 2016 – jun 2017</period>
               <label>Néerlandais I — sep 2016 – jun 2017</label>
-              <left>41.25%</left>
-              <width>4.37%</width>
+              <left>41.05%</left>
+              <width>4.35%</width>
               <row>9</row>
             </bar>
             <bar>
@@ -2741,8 +2741,8 @@
               <period>sep 2018 – oct 2022</period>
               <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Bachelor profesional — Informática de gestión — sep 2018 – oct 2022 — horario vespertino</label>
               <schedule>evening</schedule>
-              <left>52.9%</left>
-              <width>23.54%</width>
+              <left>52.64%</left>
+              <width>23.42%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -2756,8 +2756,8 @@
               <period>sep 2018 – sep 2019</period>
               <label>18-19 — sep 2018 – sep 2019 — horario vespertino</label>
               <schedule>evening</schedule>
-              <left>52.9%</left>
-              <width>5.55%</width>
+              <left>52.64%</left>
+              <width>5.52%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2771,8 +2771,8 @@
               <period>sep 2019 – sep 2020</period>
               <label>19-20 — sep 2019 – sep 2020 — horario vespertino</label>
               <schedule>evening</schedule>
-              <left>58.46%</left>
-              <width>5.81%</width>
+              <left>58.18%</left>
+              <width>5.78%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2786,8 +2786,8 @@
               <period>sep 2020 – sep 2021</period>
               <label>20-21 — sep 2020 – sep 2021 — horario vespertino</label>
               <schedule>evening</schedule>
-              <left>64.29%</left>
-              <width>5.81%</width>
+              <left>63.98%</left>
+              <width>5.78%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2801,8 +2801,8 @@
               <period>sep 2021 – oct 2022</period>
               <label>21-22 — sep 2021 – oct 2022 — horario vespertino</label>
               <schedule>evening</schedule>
-              <left>70.11%</left>
-              <width>6.32%</width>
+              <left>69.77%</left>
+              <width>6.29%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -2816,8 +2816,8 @@
               <uses>computerarchitecture binary hexadecimal hardware</uses>
               <period>sep 2018 – sep 2019</period>
               <label>Structure des ordinateurs — sep 2018 – sep 2019</label>
-              <left>52.9%</left>
-              <width>5.55%</width>
+              <left>52.64%</left>
+              <width>5.52%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -2830,8 +2830,8 @@
               <uses>operatingsystems shellscripting systemadministration</uses>
               <period>sep 2018 – sep 2019</period>
               <label>Informatique - Système d'exploitation — sep 2018 – sep 2019</label>
-              <left>52.9%</left>
-              <width>5.55%</width>
+              <left>52.64%</left>
+              <width>5.52%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -2844,8 +2844,8 @@
               <uses>linearalgebra graphtheory settheory relationalalgebra mathematicallogic cryptography</uses>
               <period>sep 2018 – sep 2019</period>
               <label>Mathématique appliquée à l'informatique — sep 2018 – sep 2019</label>
-              <left>52.9%</left>
-              <width>5.55%</width>
+              <left>52.64%</left>
+              <width>5.52%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -2858,8 +2858,8 @@
               <uses>algorithms datatypes controlflow programming</uses>
               <period>sep 2018 – sep 2019</period>
               <label>Principes algorithmiques et programmation — sep 2018 – sep 2019</label>
-              <left>52.9%</left>
-              <width>5.55%</width>
+              <left>52.64%</left>
+              <width>5.52%</width>
               <row>5</row>
             </bar>
             <bar>
@@ -2872,8 +2872,8 @@
               <uses>uml entityrelationship systemsanalysis</uses>
               <period>sep 2018 – sep 2019</period>
               <label>Principes d'analyse informatique — sep 2018 – sep 2019</label>
-              <left>52.9%</left>
-              <width>5.55%</width>
+              <left>52.64%</left>
+              <width>5.52%</width>
               <row>6</row>
             </bar>
             <bar>
@@ -2886,8 +2886,8 @@
               <uses>ethernet mac tcp-ip networking</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Bases des réseaux — sep 2019 – sep 2020</label>
-              <left>58.46%</left>
-              <width>5.81%</width>
+              <left>58.18%</left>
+              <width>5.78%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -2900,8 +2900,8 @@
               <uses>triggers storedprocedures datawarehouse queryoptimization</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Gestion et exploitation de bases de données — sep 2019 – sep 2020</label>
-              <left>58.46%</left>
-              <width>5.81%</width>
+              <left>58.18%</left>
+              <width>5.78%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -2914,8 +2914,8 @@
               <uses>professionalcommunication</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Information et communication professionnelles — sep 2019 – sep 2020</label>
-              <left>58.46%</left>
-              <width>5.81%</width>
+              <left>58.18%</left>
+              <width>5.78%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -2928,8 +2928,8 @@
               <uses>sql relationalmodel joins indexing</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Initiation aux bases de données — sep 2019 – sep 2020</label>
-              <left>58.46%</left>
-              <width>5.81%</width>
+              <left>58.18%</left>
+              <width>5.78%</width>
               <row>5</row>
             </bar>
             <bar>
@@ -2942,8 +2942,8 @@
               <uses>ebusiness</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Notions de e-business — sep 2019 – sep 2020</label>
-              <left>58.46%</left>
-              <width>5.81%</width>
+              <left>58.18%</left>
+              <width>5.78%</width>
               <row>6</row>
             </bar>
             <bar>
@@ -2956,8 +2956,8 @@
               <uses>systemsanalysis softwaredesign modelling</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Projet d'analyse et de conception — sep 2019 – sep 2020</label>
-              <left>58.46%</left>
-              <width>5.81%</width>
+              <left>58.18%</left>
+              <width>5.78%</width>
               <row>7</row>
             </bar>
             <bar>
@@ -2970,8 +2970,8 @@
               <uses>projectmanagement</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Techniques de gestion de projet — sep 2019 – sep 2020</label>
-              <left>58.46%</left>
-              <width>5.81%</width>
+              <left>58.18%</left>
+              <width>5.78%</width>
               <row>8</row>
             </bar>
             <bar>
@@ -2984,8 +2984,8 @@
               <uses>html css url dns webhosting</uses>
               <period>sep 2019 – sep 2020</period>
               <label>Web : principes de base — sep 2019 – sep 2020</label>
-              <left>58.46%</left>
-              <width>5.81%</width>
+              <left>58.18%</left>
+              <width>5.78%</width>
               <row>9</row>
             </bar>
             <bar>
@@ -2998,8 +2998,8 @@
               <uses>statistics</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Éléments de statistique — sep 2020 – sep 2021</label>
-              <left>64.29%</left>
-              <width>5.81%</width>
+              <left>63.98%</left>
+              <width>5.78%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -3012,8 +3012,8 @@
               <uses>management</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Organisation des entreprises et éléments de management — sep 2020 – sep 2021</label>
-              <left>64.29%</left>
-              <width>5.81%</width>
+              <left>63.98%</left>
+              <width>5.78%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -3026,8 +3026,8 @@
               <uses>erp</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Produits logiciels de gestion intégrés — sep 2020 – sep 2021</label>
-              <left>64.29%</left>
-              <width>5.81%</width>
+              <left>63.98%</left>
+              <width>5.78%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -3040,8 +3040,8 @@
               <uses>oop inheritance polymorphism encapsulation overloading</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Programmation orientée objet — sep 2020 – sep 2021</label>
-              <left>64.29%</left>
-              <width>5.81%</width>
+              <left>63.98%</left>
+              <width>5.78%</width>
               <row>5</row>
             </bar>
             <bar>
@@ -3054,8 +3054,8 @@
               <uses>dataaccesslayer transactions databaseprogramming debugging</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Projet de développement SGBD — sep 2020 – sep 2021</label>
-              <left>64.29%</left>
-              <width>5.81%</width>
+              <left>63.98%</left>
+              <width>5.78%</width>
               <row>6</row>
             </bar>
             <bar>
@@ -3068,8 +3068,8 @@
               <uses>javascript ajax json xml clientsidescripting</uses>
               <period>sep 2020 – sep 2021</period>
               <label>Projet de développement web — sep 2020 – sep 2021</label>
-              <left>64.29%</left>
-              <width>5.81%</width>
+              <left>63.98%</left>
+              <width>5.78%</width>
               <row>7</row>
             </bar>
             <bar>
@@ -3082,8 +3082,8 @@
               <uses>networkadministration networksecurity applicationserver</uses>
               <period>sep 2021 – oct 2022</period>
               <label>Administration, gestion et sécurisation des réseaux — sep 2021 – oct 2022</label>
-              <left>70.11%</left>
-              <width>6.32%</width>
+              <left>69.77%</left>
+              <width>6.29%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -3096,8 +3096,8 @@
               <uses>ajax json xml sqlinjection xss caching urlrewriting</uses>
               <period>sep 2021 – oct 2022</period>
               <label>Projet d'intégration de développement — sep 2021 – oct 2022</label>
-              <left>70.11%</left>
-              <width>6.32%</width>
+              <left>69.77%</left>
+              <width>6.29%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -3110,8 +3110,8 @@
               <uses>techwatch</uses>
               <period>sep 2021 – oct 2022</period>
               <label>Veille technologique — sep 2021 – oct 2022</label>
-              <left>70.11%</left>
-              <width>6.32%</width>
+              <left>69.77%</left>
+              <width>6.29%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -3124,8 +3124,8 @@
               <caption>Delegado de estudiantes</caption>
               <period>sep 2019 – oct 2022</period>
               <label>Delegado de estudiantes — EPHEC École Supérieure de Promotion Sociale — sep 2019 – oct 2022</label>
-              <left>58.72%</left>
-              <width>17.71%</width>
+              <left>58.44%</left>
+              <width>17.63%</width>
               <row>10</row>
               <printRow>2</printRow>
             </bar>
@@ -3139,8 +3139,8 @@
               <caption>Tutor</caption>
               <period>sep 2019 – oct 2022</period>
               <label>Tutor — EPHEC École Supérieure de Promotion Sociale — sep 2019 – oct 2022</label>
-              <left>58.72%</left>
-              <width>17.71%</width>
+              <left>58.44%</left>
+              <width>17.63%</width>
               <row>11</row>
               <printRow>3</printRow>
             </bar>
@@ -3155,8 +3155,8 @@
               <period>nov 2021 – mar 2022</period>
               <skills>.NET · Flutter · SQL Server · QRCode</skills>
               <label>WebMenu — nov 2021 – mar 2022</label>
-              <left>70.87%</left>
-              <width>2.41%</width>
+              <left>70.53%</left>
+              <width>2.4%</width>
               <row>12</row>
               <printRow>4</printRow>
             </bar>
@@ -3171,8 +3171,8 @@
               <period>sep 2019 – jun 2020</period>
               <label>Institut Saint-Louis Bruxelles — Acreditación — 7e Spéciale Mathématiques — sep 2019 – jun 2020</label>
               <schedule>day</schedule>
-              <left>58.72%</left>
-              <width>4.37%</width>
+              <left>58.44%</left>
+              <width>4.35%</width>
               <row>13</row>
               <printRow>5</printRow>
             </bar>
@@ -3188,8 +3188,8 @@
               <period>oct 2022 – sep 2026</period>
               <label>UMons — Máster en Ciencias — Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS) — oct 2022 – sep 2026 — horario vespertino</label>
               <schedule>evening</schedule>
-              <left>76.43%</left>
-              <width>22.64%</width>
+              <left>76.06%</left>
+              <width>22.54%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -3204,8 +3204,8 @@
               <period>oct 2022 – sep 2023</period>
               <label>22-23 — Bloque complementario — oct 2022 – sep 2023 — horario vespertino</label>
               <schedule>evening</schedule>
-              <left>76.43%</left>
-              <width>5.31%</width>
+              <left>76.06%</left>
+              <width>5.29%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -3220,8 +3220,8 @@
               <period>sep 2023 – sep 2024</period>
               <label>23-24 — Bloque complementario — sep 2023 – sep 2024 — horario vespertino</label>
               <schedule>evening</schedule>
-              <left>81.76%</left>
-              <width>5.81%</width>
+              <left>81.37%</left>
+              <width>5.78%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -3236,8 +3236,8 @@
               <period>sep 2024 – sep 2025</period>
               <label>24-25 — Máster 1 — sep 2024 – sep 2025 — horario vespertino</label>
               <schedule>evening</schedule>
-              <left>87.59%</left>
-              <width>5.81%</width>
+              <left>87.17%</left>
+              <width>5.78%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -3252,8 +3252,8 @@
               <period>sep 2025 – sep 2026</period>
               <label>25-26 — Máster 2 — sep 2025 – sep 2026 — horario vespertino</label>
               <schedule>evening</schedule>
-              <left>93.41%</left>
-              <width>5.66%</width>
+              <left>92.96%</left>
+              <width>5.64%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -3267,8 +3267,8 @@
               <uses>sql relationalalgebra normalization indexing nosql bigdata</uses>
               <period>oct 2022 – sep 2023</period>
               <label>Bases de données I — oct 2022 – sep 2023</label>
-              <left>76.43%</left>
-              <width>5.31%</width>
+              <left>76.06%</left>
+              <width>5.29%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -3281,8 +3281,8 @@
               <uses>algorithms datastructures complexity trees</uses>
               <period>oct 2022 – sep 2023</period>
               <label>Algorithmique — oct 2022 – sep 2023</label>
-              <left>76.43%</left>
-              <width>5.31%</width>
+              <left>76.06%</left>
+              <width>5.29%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -3295,8 +3295,8 @@
               <uses>java uml designpatterns unittesting mocktesting bdd</uses>
               <period>oct 2022 – sep 2023</period>
               <label>Modélisation logicielle — oct 2022 – sep 2023</label>
-              <left>76.43%</left>
-              <width>5.31%</width>
+              <left>76.06%</left>
+              <width>5.29%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -3309,8 +3309,8 @@
               <uses>graphtheory combinatorics complexity propositionallogic predicatelogic</uses>
               <period>oct 2022 – sep 2023</period>
               <label>Mathématique — oct 2022 – sep 2023</label>
-              <left>76.43%</left>
-              <width>5.31%</width>
+              <left>76.06%</left>
+              <width>5.29%</width>
               <row>5</row>
             </bar>
             <bar>
@@ -3323,8 +3323,8 @@
               <uses>english</uses>
               <period>sep 2023 – sep 2024</period>
               <label>Anglais I — sep 2023 – sep 2024</label>
-              <left>81.76%</left>
-              <width>5.81%</width>
+              <left>81.37%</left>
+              <width>5.78%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -3337,8 +3337,8 @@
               <uses>scientificwriting literaturereview</uses>
               <period>sep 2023 – sep 2024</period>
               <label>Lecture et rédaction scientifique — sep 2023 – sep 2024</label>
-              <left>81.76%</left>
-              <width>5.81%</width>
+              <left>81.37%</left>
+              <width>5.78%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -3351,8 +3351,8 @@
               <uses>hrm</uses>
               <period>sep 2023 – sep 2024</period>
               <label>Stratégie et politiques en ressources humaines — sep 2023 – sep 2024</label>
-              <left>81.76%</left>
-              <width>5.81%</width>
+              <left>81.37%</left>
+              <width>5.78%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -3365,8 +3365,8 @@
               <uses>tcp-ip http dns ospf bgp ethernet</uses>
               <period>sep 2023 – sep 2024</period>
               <label>Réseaux — sep 2023 – sep 2024</label>
-              <left>81.76%</left>
-              <width>5.81%</width>
+              <left>81.37%</left>
+              <width>5.78%</width>
               <row>5</row>
             </bar>
             <bar>
@@ -3379,8 +3379,8 @@
               <uses>processes semaphores synchronization memorymanagement filesystems scheduling</uses>
               <period>sep 2023 – sep 2024</period>
               <label>Systèmes d'exploitation — sep 2023 – sep 2024</label>
-              <left>81.76%</left>
-              <width>5.81%</width>
+              <left>81.37%</left>
+              <width>5.78%</width>
               <row>6</row>
             </bar>
             <bar>
@@ -3393,8 +3393,8 @@
               <uses>english</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Anglais II — sep 2024 – sep 2025</label>
-              <left>87.59%</left>
-              <width>5.81%</width>
+              <left>87.17%</left>
+              <width>5.78%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -3407,8 +3407,8 @@
               <uses>xml xslt xquery xpath basex datamining weka</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Bases de données II — sep 2024 – sep 2025</label>
-              <left>87.59%</left>
-              <width>5.81%</width>
+              <left>87.17%</left>
+              <width>5.78%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -3421,8 +3421,8 @@
               <uses>agile scrum softwareengineering</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Ingénierie de logiciels et gestion de projets — sep 2024 – sep 2025</label>
-              <left>87.59%</left>
-              <width>5.81%</width>
+              <left>87.17%</left>
+              <width>5.78%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -3435,8 +3435,8 @@
               <uses>searchalgorithms metaheuristics firstorderlogic supervisedlearning</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Intelligence artificielle — sep 2024 – sep 2025</label>
-              <left>87.59%</left>
-              <width>5.81%</width>
+              <left>87.17%</left>
+              <width>5.78%</width>
               <row>5</row>
             </bar>
             <bar>
@@ -3449,8 +3449,8 @@
               <uses>operationsresearch linearprogramming integerprogramming duality</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Recherche opérationnelle et applications — sep 2024 – sep 2025</label>
-              <left>87.59%</left>
-              <width>5.81%</width>
+              <left>87.17%</left>
+              <width>5.78%</width>
               <row>6</row>
             </bar>
             <bar>
@@ -3463,8 +3463,8 @@
               <uses>avltrees btrees hashtables sorting complexity</uses>
               <period>sep 2024 – sep 2025</period>
               <label>Structures de données — sep 2024 – sep 2025</label>
-              <left>87.59%</left>
-              <width>5.81%</width>
+              <left>87.17%</left>
+              <width>5.78%</width>
               <row>7</row>
             </bar>
             <bar>
@@ -3477,8 +3477,8 @@
               <uses>techwatch</uses>
               <period>sep 2025 – sep 2026</period>
               <label>Séminaires d'informatique en veille technologique — sep 2025 – sep 2026</label>
-              <left>93.41%</left>
-              <width>5.66%</width>
+              <left>92.96%</left>
+              <width>5.64%</width>
               <row>2</row>
             </bar>
             <bar>
@@ -3491,8 +3491,8 @@
               <uses>cryptography unix networksecurity applicationsecurity</uses>
               <period>sep 2025 – sep 2026</period>
               <label>Cryptographie et sécurité des systèmes informatiques — sep 2025 – sep 2026</label>
-              <left>93.41%</left>
-              <width>5.66%</width>
+              <left>92.96%</left>
+              <width>5.64%</width>
               <row>3</row>
             </bar>
             <bar>
@@ -3505,8 +3505,8 @@
               <uses>intellectualproperty dataprotection gdpr</uses>
               <period>sep 2025 – sep 2026</period>
               <label>Éthique et droit de l'informatique — sep 2025 – sep 2026</label>
-              <left>93.41%</left>
-              <width>5.66%</width>
+              <left>92.96%</left>
+              <width>5.64%</width>
               <row>4</row>
             </bar>
             <bar>
@@ -3519,8 +3519,8 @@
               <caption>Delegado de estudiantes</caption>
               <period>nov 2023 – sep 2026</period>
               <label>Delegado de estudiantes — UMons — nov 2023 – sep 2026</label>
-              <left>82.99%</left>
-              <width>16.08%</width>
+              <left>82.59%</left>
+              <width>16.01%</width>
               <row>8</row>
               <printRow>2</printRow>
             </bar>
@@ -3534,8 +3534,8 @@
               <caption>Buddy TandeMons</caption>
               <period>nov 2023 – sep 2026</period>
               <label>Buddy TandeMons — UMons — nov 2023 – sep 2026</label>
-              <left>82.99%</left>
-              <width>16.08%</width>
+              <left>82.59%</left>
+              <width>16.01%</width>
               <row>9</row>
               <printRow>3</printRow>
             </bar>
@@ -3552,8 +3552,8 @@
               <summary>Aplicación de reminiscencia para personas con problemas cognitivos.</summary>
               <skills>Python · FastAPI · OpenAI · Whisper · DeepFace</skills>
               <label>Remi — Aplicación de IA — oct 2024 – jun 2025</label>
-              <left>87.86%</left>
-              <width>4.35%</width>
+              <left>87.44%</left>
+              <width>4.33%</width>
               <row>10</row>
               <printRow>4</printRow>
             </bar>
@@ -3570,8 +3570,8 @@
               <summary>Asistente visual con IA para personas con discapacidad visual.</summary>
               <skills>Flutter · Firebase · OpenAI · Valhalla · AI</skills>
               <label>Emvi App — Aplicación móvil — dic 2024 – jun 2025</label>
-              <left>88.83%</left>
-              <width>3.38%</width>
+              <left>88.41%</left>
+              <width>3.37%</width>
               <row>11</row>
               <printRow>5</printRow>
             </bar>
@@ -3588,8 +3588,8 @@
               <summary>Plataforma interna del Parlamento federal belga para buscar, explorar y conversar con los archivos parlamentarios.</summary>
               <skills>Python · Java · .NET · RAG · AI</skills>
               <label>Synergy — Plataforma · Autor — nov 2025 – jun 2026</label>
-              <left>94.21%</left>
-              <width>3.83%</width>
+              <left>93.75%</left>
+              <width>3.82%</width>
               <row>10</row>
               <printRow>4</printRow>
             </bar>
@@ -3606,8 +3606,8 @@
               <summary>Protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado belga, con énfasis en la robustez bilingüe FR/NL.</summary>
               <skills>RAG · Python · Evaluation · Benchmark · OCR</skills>
               <label>fedrag-be — Investigación · Autor — nov 2025 – jun 2026</label>
-              <left>94.21%</left>
-              <width>3.83%</width>
+              <left>93.75%</left>
+              <width>3.82%</width>
               <row>11</row>
               <printRow>5</printRow>
             </bar>
@@ -3625,8 +3625,8 @@
               <summary>Trabajo de fin de máster en la UMONS — la I+D del motor de planificación de Acteble.</summary>
               <skills>Python · Rust · LaTeX · MiniZinc · ORTools</skills>
               <label>Mémoire de master — Trabajo de fin de máster · Autor — UMONS — nov 2025 – sep 2026</label>
-              <left>94.37%</left>
-              <width>4.71%</width>
+              <left>93.91%</left>
+              <width>4.69%</width>
               <row>12</row>
               <printRow>6</printRow>
             </bar>
@@ -3639,8 +3639,8 @@
           <printRows>3</printRows>
           <groups>
             <group>
-              <left>84.47%</left>
-              <width>0.49%</width>
+              <left>84.06%</left>
+              <width>0.48%</width>
               <row>0</row>
               <rows>2</rows>
               <printRow>0</printRow>
@@ -3655,8 +3655,8 @@
               <caption>20 km de Bruselas 2022</caption>
               <period>may 2022 – may 2022</period>
               <label>20 km de Bruselas 2022 — may 2022 – may 2022</label>
-              <left>73.79%</left>
-              <width>0.49%</width>
+              <left>73.43%</left>
+              <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -3668,8 +3668,8 @@
               <caption>Hackathon Citizens of Wallonia 2023</caption>
               <period>mar 2023 – mar 2023</period>
               <label>Hackathon Citizens of Wallonia 2023 — Citizens of Wallonia — mar 2023 – mar 2023</label>
-              <left>78.64%</left>
-              <width>0.49%</width>
+              <left>78.26%</left>
+              <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -3681,8 +3681,8 @@
               <caption>SoCraTes BE 2023</caption>
               <period>nov 2023 – nov 2023</period>
               <label>SoCraTes BE 2023 — SoCraTes BE — nov 2023 – nov 2023</label>
-              <left>82.52%</left>
-              <width>0.49%</width>
+              <left>82.13%</left>
+              <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -3694,8 +3694,8 @@
               <caption>VisugXL 2023</caption>
               <period>nov 2023 – nov 2023</period>
               <label>VisugXL 2023 — VISUG — Visual Studio User Group Belgium — nov 2023 – nov 2023</label>
-              <left>82.52%</left>
-              <width>0.49%</width>
+              <left>82.13%</left>
+              <width>0.48%</width>
               <row>1</row>
               <printRow>1</printRow>
             </bar>
@@ -3707,8 +3707,8 @@
               <caption>Meetup VISUG — patrón Mediator y .NET 8</caption>
               <period>nov 2023 – nov 2023</period>
               <label>Meetup VISUG — patrón Mediator y .NET 8 — VISUG — Visual Studio User Group Belgium — nov 2023 – nov 2023</label>
-              <left>82.52%</left>
-              <width>0.49%</width>
+              <left>82.13%</left>
+              <width>0.48%</width>
               <row>2</row>
               <printRow>2</printRow>
             </bar>
@@ -3720,8 +3720,8 @@
               <caption>Hackathon Citizens of Wallonia 2024</caption>
               <period>mar 2024 – mar 2024</period>
               <label>Hackathon Citizens of Wallonia 2024 — Citizens of Wallonia — mar 2024 – mar 2024</label>
-              <left>84.47%</left>
-              <width>0.49%</width>
+              <left>84.06%</left>
+              <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -3735,7 +3735,7 @@
               <summary>Plataforma que permite a cualquiera adquirir nuevas competencias.</summary>
               <skills>PHP · API · UI/UX</skills>
               <label>EduCraft — mar 2024 – mar 2024</label>
-              <left>84.9%</left>
+              <left>84.49%</left>
               <width>0.03%</width>
               <row>1</row>
               <printRow>1</printRow>
@@ -3747,8 +3747,8 @@
               <caption>20 km de Bruselas 2024</caption>
               <period>may 2024 – may 2024</period>
               <label>20 km de Bruselas 2024 — may 2024 – may 2024</label>
-              <left>85.44%</left>
-              <width>0.49%</width>
+              <left>85.02%</left>
+              <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -3759,8 +3759,8 @@
               <caption>20 km Maredsous–Dinant 2025</caption>
               <period>mar 2025 – mar 2025</period>
               <label>20 km Maredsous–Dinant 2025 — mar 2025 – mar 2025</label>
-              <left>90.29%</left>
-              <width>0.49%</width>
+              <left>89.86%</left>
+              <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -3771,8 +3771,8 @@
               <caption>20 km de Bruselas 2025</caption>
               <period>may 2025 – may 2025</period>
               <label>20 km de Bruselas 2025 — may 2025 – may 2025</label>
-              <left>91.26%</left>
-              <width>0.49%</width>
+              <left>90.82%</left>
+              <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -3783,8 +3783,8 @@
               <caption>20 km Maredsous–Dinant 2026</caption>
               <period>mar 2026 – mar 2026</period>
               <label>20 km Maredsous–Dinant 2026 — mar 2026 – mar 2026</label>
-              <left>96.12%</left>
-              <width>0.49%</width>
+              <left>95.65%</left>
+              <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
@@ -3796,8 +3796,8 @@
               <caption>SoCraTes BE 2026</caption>
               <period>oct 2026 – oct 2026</period>
               <label>SoCraTes BE 2026 — SoCraTes BE — oct 2026 – oct 2026</label>
-              <left>99.51%</left>
-              <width>0.49%</width>
+              <left>99.03%</left>
+              <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
             </bar>
