@@ -71,7 +71,11 @@ const injected = (file, anchor, script) =>
 // each printing itself; /__xslt-probe/<lang> and /__xslt-probe-minimal/<lang>
 // are the same themes as a browser would draw them, with the caller's script
 // in their <head> — to check what their CSS does once laid out.
-function xsltPage(url, headScript) {
+// The page asking to be printed is for Firefox, which has no --print-to-pdf
+// switch. Chrome prints on its own, and from 157 on a page that calls print()
+// under --print-to-pdf exits without writing the file — so a caller printing
+// with Chrome serves the theme without the ask (`xsltAutoprint: false`).
+function xsltPage(url, headScript, autoprint = true) {
   const probed = /^\/__xslt-probe(-minimal)?\/([a-z-]+)$/.exec(url);
   if (probed && headScript)
     return renderXslt(probed[2], probed[1] || '').replace('</head>', `${headScript}</head>`);
@@ -81,17 +85,19 @@ function xsltPage(url, headScript) {
   if (printed)
     return renderXslt(printed[2], printed[1] || '').replace(
       '</body>',
-      `${autoprintScript(800)}</body>`,
+      `${autoprint ? autoprintScript(800) : ''}</body>`,
     );
   return undefined;
 }
 
-/** Serve the site. `headScript` enables the /__probe/ prefix described above. */
-function serve(headScript) {
+/** Serve the site. `headScript` enables the /__probe/ prefix described above;
+ * `xsltAutoprint: false` serves the XSLT themes without the print()-asking
+ * script, for a caller that prints with Chrome's --print-to-pdf. */
+function serve(headScript, { xsltAutoprint = true } = {}) {
   const server = http.createServer((req, res) => {
     const url = decodeURIComponent(req.url.split('?')[0]);
     // /__xslt/<lang> is the rich theme, /__xslt-minimal/<lang> the minimal one.
-    const theme = xsltPage(url, headScript);
+    const theme = xsltPage(url, headScript, xsltAutoprint);
     if (theme) {
       sendHtml(res, theme);
       return;

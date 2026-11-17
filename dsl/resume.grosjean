@@ -249,7 +249,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             // A school of "promotion sociale": evening classes.
             schedule "evening"
             studyType t{ en: "Professional Bachelor's degree", fr: "Bachelier professionnalisant", nl: "Professionele bachelor", es: "Bachelor profesional", de: "Professioneller Bachelor", zh: "职业学士" }
-            area t{ en: "Information Systems Management", fr: "Informatique de gestion", nl: "Bedrijfsinformatica", es: "Informática de gestión", de: "Wirtschaftsinformatik", zh: "管理信息学" }
+            area t{ en: "Business Computing", fr: "Informatique de gestion", nl: "Bedrijfsinformatica", es: "Informática de gestión", de: "Wirtschaftsinformatik", zh: "管理信息学" }
             period 2018-09-30..2022-10-15
             score t{ en: "62.8%, Satis Bene", fr: "62.8%, Satis Bene", nl: "62.8%, Satis Bene", es: "62.8%, Satis Bene", de: "62,8 %, Satis Bene", zh: "62.8%，Satis Bene" }
             note t{ en: """

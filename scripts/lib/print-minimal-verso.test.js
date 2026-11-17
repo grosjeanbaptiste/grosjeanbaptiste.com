@@ -12,6 +12,7 @@ const path = require('node:path');
 const { execFile, execFileSync } = require('node:child_process');
 const { promisify } = require('node:util');
 const { serve } = require('./print-fit-harness');
+const { printedWithRetry } = require('./print-fit-retry');
 const { orientations } = require('./print-orientation');
 
 const CANDIDATES = [
@@ -47,26 +48,36 @@ test.before(async () => {
       throw new Error('no Chrome on this runner, so the minimal theme went unprinted');
     return;
   }
-  const server = await serve();
+  // No print()-asking script on the page: Chrome prints by itself through
+  // --print-to-pdf, and from 157 on the page's own print() call makes it exit
+  // without writing the file. That ask is for Firefox, which prints this theme
+  // through print-fit-xslt.test.js.
+  const server = await serve(undefined, { xsltAutoprint: false });
   const out = fs.mkdtempSync(path.join(os.tmpdir(), 'cv-print-minimal-'));
   try {
     const pdf = path.join(out, 'minimal.pdf');
-    await promisify(execFile)(
-      chrome,
-      [
-        '--headless',
-        '--disable-gpu',
-        '--no-sandbox',
-        `--user-data-dir=${path.join(out, 'profile')}`,
-        '--virtual-time-budget=6000',
-        // As a reader in dark mode, on any machine: the theme follows it.
-        '--force-dark-mode',
-        '--no-pdf-header-footer',
-        `--print-to-pdf=${pdf}`,
-        `http://127.0.0.1:${server.address().port}/__xslt-minimal/en`,
-      ],
-      { timeout: 120000 },
-    );
+    // A launch that produced nothing is retried once, as the other print tests
+    // are; the sheet count below never is. See print-fit-retry.js.
+    await printedWithRetry('Chrome (minimal theme)', async (attempt) => {
+      fs.rmSync(pdf, { force: true });
+      await promisify(execFile)(
+        chrome,
+        [
+          '--headless',
+          '--disable-gpu',
+          '--no-sandbox',
+          `--user-data-dir=${path.join(out, `profile${attempt}`)}`,
+          '--virtual-time-budget=6000',
+          // As a reader in dark mode, on any machine: the theme follows it.
+          '--force-dark-mode',
+          '--no-pdf-header-footer',
+          `--print-to-pdf=${pdf}`,
+          `http://127.0.0.1:${server.address().port}/__xslt-minimal/en`,
+        ],
+        { timeout: 120000 },
+      );
+      return fs.existsSync(pdf) ? null : 'Chrome produced no PDF';
+    });
     const turned = orientations(pdf);
     sheets = {
       turned,
