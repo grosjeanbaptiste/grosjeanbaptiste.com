@@ -55,7 +55,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             period 2025-07-01..present
             summary t{ en: "Sole founder, architect and developer. Rust backend + Flutter mobile. The R&D layer also served as the dissertation for my MSc in Computer Science at UMons.", fr: "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.", nl: "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.", es: "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirvió como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.", de: "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.", zh: "唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。" }
             uses [Rust, Flutter, Dart, Tokio, Docker, DDD, CleanArchitecture, PostgreSQL]
-            projects [ref Acteble, ref MemoireMaster, ref Actrack, ref LL, ref Baba, ref KAG, ref Indexer, ref Polytech, ref Converge]
+            projects [ref Acteble, ref MemoireMaster, ref Actrack, ref LL, ref Baba, ref KAG, ref Indexer, ref Polytech, ref Converge, ref Actif, ref Servai, ref Polymath, ref ss, ref Actmorph, ref Actsessions, ref usext, ref Corpus, ref Actedu, ref Biorcrux, ref Repo]
         }
         AIResearchScientist {
             position t{ en: "AI Research Scientist", fr: "Chercheur en IA", nl: "AI-onderzoeker", es: "Investigador en IA", de: "KI-Forschungswissenschaftler", zh: "AI 研究员" }
@@ -443,11 +443,111 @@ TFE: WebMenu 2.0
         }
         Actrack {
             name "Actrack"
-            description t{ en: "Forecasts of the FIFA World Cup 2026 from an ensemble of football-rating strategies.", fr: "Prévisions de la Coupe du monde de la FIFA 2026 par un ensemble de stratégies de notation du football.", nl: "Voorspellingen van het FIFA WK 2026 met een ensemble van voetbalratingstrategieën.", es: "Predicciones de la Copa Mundial de la FIFA 2026 mediante un conjunto de estrategias de valoración futbolística.", de: "Prognosen zur FIFA-Weltmeisterschaft 2026 aus einem Ensemble von Fußball-Bewertungsstrategien.", zh: "基于多种足球评级策略集成的 2026 年 FIFA 世界杯预测。" }
+            description t{ en: "Multi-sport database and predictive modeling platform evaluating match outcomes across leagues and tournaments through ensemble rating strategies.", fr: "Base de données multi-sports et plateforme de modélisation prédictive évaluant les résultats de matchs entre ligues et tournois via des stratégies de notation d'ensemble.", nl: "Multi-sportdatabase en voorspellend modelleringsplatform dat wedstrijdresultaten in competities en toernooien evalueert via ensemble-ratingstrategieën.", es: "Base de datos multideporte y plataforma de modelado predictivo que evalúa los resultados de partidos en ligas y torneos mediante estrategias de puntuación por conjuntos.", de: "Multi-Sport-Datenbank und prädiktive Modellierungsplattform zur Bewertung von Spielergebnissen über Ligen und Turniere hinweg mittels Ensemble-Rating-Strategien.", zh: "多运动数据库与预测建模平台，通过集成评分策略评估各联赛和锦标赛的比赛结果。" }
             summary t{ en: "A Python engine (DDD, hexagonal) weighs fifteen match-outcome strategies — Elo, Poisson attack/defence, form, head-to-head, squad value, rest days, bookmaker odds — adjusted for venue, and is ported to Rust/Dioxus apps for web (WebAssembly), desktop, mobile and terminal, kept at parity with it. A research lab backtests the strategies walk-forward, one tournament held out at a time, on 635 matches from ten tournaments (World Cups 2002–2022 and four continental cups of 2023–2024), and tunes the ensemble weights; out of sample, Elo alone scores best (55.6% accuracy).", fr: "Un moteur Python (DDD, hexagonal) pondère quinze stratégies de pronostic — Elo, Poisson attaque/défense, forme, confrontations directes, valeur de l'effectif, jours de repos, cotes des bookmakers — ajustées au lieu du match, et il est porté dans des apps Rust/Dioxus pour le web (WebAssembly), le desktop, le mobile et le terminal, tenues à parité avec lui. Un laboratoire de recherche évalue les stratégies en walk-forward, un tournoi mis de côté à la fois, sur 635 matchs de dix tournois (Coupes du monde 2002–2022 et quatre coupes continentales de 2023–2024), et ajuste les poids de l'ensemble ; hors échantillon, Elo seul fait le mieux (55,6 % de bons pronostics).", nl: "Een Python-engine (DDD, hexagonaal) weegt vijftien strategieën voor wedstrijduitslagen — Elo, Poisson aanval/verdediging, vorm, onderlinge duels, waarde van de selectie, rustdagen, bookmakerquoteringen — aangepast aan de speellocatie, en is overgezet naar Rust/Dioxus-apps voor web (WebAssembly), desktop, mobiel en terminal, die er gelijk mee blijven. Een onderzoekslab backtest de strategieën walk-forward, telkens met één toernooi apart gehouden, op 635 wedstrijden uit tien toernooien (WK's 2002–2022 en vier continentale toernooien van 2023–2024) en stemt de ensemblegewichten af; buiten de steekproef scoort Elo alleen het best (55,6% juist).", es: "Un motor Python (DDD, hexagonal) pondera quince estrategias de resultado — Elo, Poisson ataque/defensa, forma, enfrentamientos directos, valor de la plantilla, días de descanso, cuotas de casas de apuestas — ajustadas a la sede, y está portado a apps Rust/Dioxus para web (WebAssembly), escritorio, móvil y terminal, mantenidas a la par. Un laboratorio de investigación evalúa las estrategias en walk-forward, dejando fuera un torneo cada vez, sobre 635 partidos de diez torneos (Mundiales 2002–2022 y cuatro copas continentales de 2023–2024), y ajusta los pesos del conjunto; fuera de muestra, Elo solo es el mejor (55,6 % de aciertos).", de: "Eine Python-Engine (DDD, hexagonal) gewichtet fünfzehn Strategien für Spielausgänge — Elo, Poisson-Angriff/-Abwehr, Form, direkte Duelle, Kaderwert, Ruhetage, Buchmacherquoten — an den Spielort angepasst, und ist in Rust/Dioxus-Apps für Web (WebAssembly), Desktop, Mobilgeräte und Terminal portiert, die mit ihr gleichauf gehalten werden. Ein Forschungslabor testet die Strategien walk-forward, jeweils ein Turnier zurückgehalten, an 635 Spielen aus zehn Turnieren (Weltmeisterschaften 2002–2022 und vier Kontinentalturniere 2023–2024) und stimmt die Ensemble-Gewichte ab; außerhalb der Stichprobe schneidet Elo allein am besten ab (55,6 % Trefferquote).", zh: "一个 Python 引擎（DDD、六边形架构）对十五种比赛结果策略加权——Elo、泊松攻防、近期状态、交锋记录、阵容身价、休息天数、博彩赔率——并按比赛场地进行调整；它被移植到 Web（WebAssembly）、桌面、移动端和终端的 Rust/Dioxus 应用中，并与之保持一致。研究实验室以逐届留出一项赛事的前向滚动方式，在十项赛事（2002–2022 年世界杯及 2023–2024 年四项洲际杯赛）的 635 场比赛上回测这些策略，并调整集成权重；在样本外，单独的 Elo 表现最好（准确率 55.6%）。" }
             keywords [Python, Pandas, NumPy, SciPy, DuckDB, Rust, Dioxus, WebAssembly, EloRating, PoissonModel, EnsembleModel, WalkForwardBacktest, BrierScore, HexagonalArchitecture, DDD, TDD]
             startDate 2026-06-28
+            url "https://github.com/grosjeanbaptiste/actrack"
             type t{ en: "Forecasting engine", fr: "Moteur de prévision", nl: "Voorspellingsengine", es: "Motor de predicción", de: "Prognose-Engine", zh: "预测引擎" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        Actif {
+            name "Actif"
+            description t{ en: "Desktop application and analytical engine for global financial markets (stocks, ETFs, bonds, FX, crypto, indices) with vectorized analytical storage and hexagonal architecture in TDD.", fr: "Application desktop et moteur analytique pour les marchés financiers mondiaux (actions, ETF, obligations, devises, crypto, indices) avec stockage analytique vectorisé et architecture hexagonale en TDD.", nl: "Desktopapplicatie en analytische engine voor wereldwijde financiële markten (aandelen, ETF's, obligaties, FX, crypto, indices) met gevectoriseerde analytische opslag en hexagonale architectuur in TDD.", es: "Aplicación de escritorio y motor analítico para mercados financieros globales (acciones, ETFs, bonos, divisas, cripto, índices) con almacenamiento analítico vectorizado y arquitectura hexagonal en TDD.", de: "Desktop-Anwendung und Analyse-Engine für globale Finanzmärkte (Aktien, ETFs, Anleihen, Devisen, Krypto, Indizes) mit vektorisiertem Analysespeicher und hexagonaler Architektur in TDD.", zh: "用于全球金融市场（股票、ETF、债券、外汇、加密货币、指数）的桌面应用与分析引擎，具备向量化分析存储与 TDD 六边形架构。" }
+            keywords [Rust, Dioxus, DuckDB, SQLite, Parquet, DDD, TDD, HexagonalArchitecture]
+            startDate 2026-10-30
+            url "https://github.com/grosjeanbaptiste/Actif"
+            type t{ en: "Desktop application", fr: "Application desktop", nl: "Desktopapplicatie", es: "Aplicación de escritorio", de: "Desktop-Anwendung", zh: "桌面应用" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        Actmorph {
+            name "Actmorph"
+            description t{ en: "Universal cataloging engine and format-agnostic file metadata extraction system.", fr: "Moteur de catalogage universel et système d'extraction de métadonnées de fichiers agnostique aux formats.", nl: "Universele catalogiseringsengine en formaat-agnostisch extractiesysteem voor bestandsmetadata.", es: "Motor de catalogación universal y sistema de extracción de metadatos de archivos agnóstico a formatos.", de: "Universelle Katalogisierungs-Engine und formatagnostisches System zur Extraktion von Dateimetadaten.", zh: "通用编目引擎与格式无关的文件元数据提取系统。" }
+            keywords [Rust, FileEngine, Metadata, TDD]
+            startDate 2026-11-05
+            url "https://github.com/grosjeanbaptiste/Actmorph"
+            type t{ en: "Engine", fr: "Moteur", nl: "Engine", es: "Motor", de: "Engine", zh: "引擎" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        Servai {
+            name "Servai"
+            description t{ en: "Universal orchestrator for full server and cloud administration (DNS zones, TLS Let's Encrypt certificates, WireGuard VPNs, OpenTofu, Ansible) with a reactive REST API powering Biorcrux UI.", fr: "Orchestrateur universel pour l'administration complète de serveurs et du cloud (zones DNS, certificats TLS Let's Encrypt, VPN WireGuard, OpenTofu, Ansible) avec une API REST réactive alimentant l'UI Biorcrux.", nl: "Universele orchestrator voor volledig server- en cloudbeheer (DNS-zones, TLS Let's Encrypt-certificaten, WireGuard-VPN's, OpenTofu, Ansible) met een reactieve REST-API die de Biorcrux-UI aanstuurt.", es: "Orquestador universal para la administración completa de servidores y nube (zonas DNS, certificados TLS Let's Encrypt, VPNs WireGuard, OpenTofu, Ansible) con una API REST reactiva que alimenta la interfaz Biorcrux.", de: "Universeller Orchestrator für die vollständige Server- und Cloud-Administration (DNS-Zonen, TLS Let's Encrypt-Zertifikate, WireGuard-VPNs, OpenTofu, Ansible) mit einer reaktiven REST-API für die Biorcrux-UI.", zh: "用于全服务器和云管理的通用编排器（DNS 区域、TLS Let's Encrypt 证书、WireGuard VPN、OpenTofu、Ansible），带有驱动 Biorcrux UI 的响应式 REST API。" }
+            keywords [Rust, Axum, OpenTofu, Ansible, WireGuard, TLS, DNS, HexagonalArchitecture, TDD]
+            startDate 2026-11-01
+            url "https://github.com/grosjeanbaptiste/servai"
+            type t{ en: "Orchestrator", fr: "Orchestrateur", nl: "Orchestrator", es: "Orquestador", de: "Orchestrator", zh: "编排器" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        ss {
+            name "ss"
+            description t{ en: "Modular system supervisor and diagnostic suite (processes, memory, storage volumes, network telemetry, power) driving CLI and Dioxus desktop interfaces.", fr: "Superviseur système modulaire et suite de diagnostic (processus, mémoire, volumes de stockage, télémétrie réseau, alimentation) pilotant des interfaces CLI et desktop Dioxus.", nl: "Modulaire systeemsupervisor en diagnostische suite (processen, geheugen, opslagvolumes, netwerktelemetrie, stroom) die CLI en Dioxus-desktopinterfaces aanstuurt.", es: "Supervisor de sistema modular y suite de diagnóstico (procesos, memoria, volúmenes de almacenamiento, telemetría de red, energía) que impulsa interfaces CLI y de escritorio Dioxus.", de: "Modularer System-Supervisor und Diagnosesuite (Prozesse, Speicher, Speichervolumen, Netzwerktelemetrie, Energie) für CLI und Dioxus-Desktop-Schnittstellen.", zh: "模块化系统监控器与诊断套件（进程、内存、存储卷、网络遥测、电源），驱动命令行与 Dioxus 桌面界面。" }
+            keywords [Rust, Dioxus, SystemsProgramming, Telemetry, CLI, TDD]
+            startDate 2026-11-02
+            url "https://github.com/grosjeanbaptiste/ss"
+            type t{ en: "Supervisor", fr: "Superviseur", nl: "Supervisor", es: "Supervisor", de: "Supervisor", zh: "监控器" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        Biorcrux {
+            name "Biorcrux"
+            description t{ en: "Modular library providing declarative UI components, persistence, charting, and internationalization for multiplatform desktop applications.", fr: "Bibliothèque modulaire fournissant des composants UI déclaratifs, persistance, graphiques et internationalisation pour applications desktop multiplateformes.", nl: "Modulaire bibliotheek met declaratieve UI-componenten, persistentie, grafieken en internationalisering voor multiplatform desktopapplicaties.", es: "Biblioteca modular que proporciona componentes de interfaz de usuario declarativos, persistencia, gráficos e internacionalización para aplicaciones de escritorio multiplataforma.", de: "Modulare Bibliothek mit deklarativen UI-Komponenten, Persistenz, Diagrammen und Internationalisierung für plattformübergreifende Desktop-Anwendungen.", zh: "模块化库，为多平台桌面应用程序提供声明式 UI 组件、持久化、图表绘制和国际化。" }
+            keywords [Rust, Dioxus, UI, Desktop, i18n, Charting, TDD]
+            startDate 2026-11-12
+            url "https://github.com/grosjeanbaptiste/biorcrux"
+            type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        Repo {
+            name "Repo"
+            description t{ en: "CLI tooling suite for semantic naming, collision detection, and declarative scaffolding of Git / GitHub repositories.", fr: "Suite d'outils CLI pour le nommage sémantique, la détection de collisions et l'échafaudage déclaratif de dépôts Git / GitHub.", nl: "CLI-toolsuite voor semantische naamgeving, collisiedetectie en declaratieve scaffolding van Git/GitHub-repositories.", es: "Suite de herramientas CLI para nombrado semántico, detección de colisiones y andamiaje declarativo de repositorios Git / GitHub.", de: "CLI-Toolsuite für semantische Benennung, Kollisionserkennung und deklaratives Scaffolding von Git-/GitHub-Repositories.", zh: "CLI 工具套件，用于语义命名、冲突检测以及 Git / GitHub 仓库的声明式脚手架生成。" }
+            keywords [Rust, CLI, Git, GitHub, Scaffolding, TDD]
+            startDate 2026-11-11
+            url "https://github.com/grosjeanbaptiste/repo"
+            type "CLI"
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        Actsessions {
+            name "Actsessions"
+            description t{ en: "Local discovery, session inventory, and telemetry for AI coding agents.", fr: "Découverte locale, inventaire de sessions et télémétrie pour agents de codage IA.", nl: "Lokale detectie, sessie-inventarisatie en telemetrie voor AI-codeeragenten.", es: "Descubrimiento local, inventario de sesiones y telemetría para agentes de programación con IA.", de: "Lokale Erkennung, Sitzungsinventar und Telemetrie für KI-Coding-Agenten.", zh: "AI 编程代理的本地发现、会话清点和遥测。" }
+            keywords [Rust, Agents, Observability, Telemetry, TDD]
+            startDate 2026-11-10
+            url "https://github.com/grosjeanbaptiste/actsessions"
+            type "CLI"
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        usext {
+            name "usext"
+            description t{ en: "Real-time quota tracking and usage forecasting for AI coding assistants.", fr: "Suivi des quotas en temps réel et prévision d'utilisation pour assistants de codage IA.", nl: "Realtime quotalogging en gebruiksvoorspelling voor AI-codeerassistenten.", es: "Seguimiento de cuotas en tiempo real y previsión de uso para asistentes de programación con IA.", de: "Echtzeit-Quotenverfolgung und Nutzungsprognosen für KI-Coding-Assistenten.", zh: "AI 编程助手的实时配额跟踪与使用预测。" }
+            keywords [Rust, CLI, Forecasting, Observability, TDD]
+            startDate 2026-11-11
+            url "https://github.com/grosjeanbaptiste/usext"
+            type "CLI"
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        Polymath {
+            name "Polymath"
+            description t{ en: "Universal graph of computation packages interconnecting scientific disciplines without redundancy via the Rust type system.", fr: "Graphe universel de paquets de calcul interconnectant les disciplines scientifiques sans redondance via le système de types de Rust.", nl: "Universele graaf van rekenpakketten die wetenschappelijke disciplines zonder redundantie verbindt via het Rust-typesysteem.", es: "Grafo universal de paquetes de cálculo que interconecta disciplinas científicas sin redundancia mediante el sistema de tipos de Rust.", de: "Universeller Graph von Berechnungspaketen, der wissenschaftliche Disziplinen ohne Redundanz über das Rust-Typsystem verbindet.", zh: "通用的计算包图，通过 Rust 类型系统在没有冗余的情况下连接各个科学学科。" }
+            keywords [Rust, DAG, ScientificComputing, Mathematics, TypeSystem, TDD]
+            startDate 2026-11-14
+            url "https://github.com/grosjeanbaptiste/polymath"
+            type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        Corpus {
+            name "Corpus"
+            description t{ en: "Aggregated repository of university course materials, lecture notes, and assignments sourced across Moodle platforms and academic portals, with exact worked solutions.", fr: "Dépôt agrégé de supports de cours universitaires, notes de cours et travaux dirigés collectés sur les plateformes Moodle et portails académiques, avec solutions détaillées exactes.", nl: "Geaggregeerde repository van universitair cursusmateriaal, collegedictaten en opdrachten verzameld via Moodle-platformen en academische portalen, met exacte uitgewerkte oplossingen.", es: "Repositorio agregado de materiales de cursos universitarios, notas de clase y tareas recopiladas en plataformas Moodle y portales académicos, con soluciones desarrolladas exactas.", de: "Aggregiertes Repository für universitäre Kursunterlagen, Vorlesungsskripte und Aufgaben aus Moodle-Plattformen und akademischen Portalen mit exakt ausgearbeiteten Lösungen.", zh: "大学课程材料、讲义和作业的聚合资源库，来源于 Moodle 平台和学术门户，配有精确的解答。" }
+            keywords [Python, LaTeX, KnowledgeBase, Education, Solver, TDD]
+            startDate 2026-11-11
+            url "https://github.com/grosjeanbaptiste/corpus"
+            type t{ en: "Knowledge base", fr: "Base de connaissances", nl: "Kennisbank", es: "Base de conocimientos", de: "Wissensdatenbank", zh: "知识库" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
+        Actedu {
+            name "Actedu"
+            description t{ en: "Global graph-based mapping and visualization of higher-education academic paths, prerequisite dependencies, course trajectories, and degree pathways.", fr: "Cartographie et visualisation sous forme de graphe global des parcours académiques de l'enseignement supérieur, des dépendances de prérequis, des trajectoires de cours et des filières de diplômes.", nl: "Wereldwijde graafgebaseerde mapping en visualisatie van academische trajecten in het hoger onderwijs, vereistevoorwaarden, cursustrajecten en diplomapaden.", es: "Mapeo y visualización global basados en grafos de itinerarios académicos de educación superior, dependencias de prerrequisitos, trayectorias de cursos y planes de estudio.", de: "Globale graphbasierte Abbildung und Visualisierung von akademischen Wegen im Hochschulbereich, Voraussetzungen, Kursverläufen und Studiengangspfaden.", zh: "高等教育学术路径、先修依赖关系、课程轨迹和学位路径的全局图映射与可视化。" }
+            keywords [Rust, KnowledgeGraph, GraphTheory, Education, Visualization, TDD]
+            startDate 2026-11-15
+            url "https://github.com/grosjeanbaptiste/actedu"
+            type t{ en: "Knowledge graph", fr: "Graphe de connaissances", nl: "Kennisgraaf", es: "Grafo de conocimiento", de: "Wissensgraph", zh: "知识图谱" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
         Synergy {

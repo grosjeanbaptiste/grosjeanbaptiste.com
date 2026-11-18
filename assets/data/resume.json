@@ -410,7 +410,7 @@
     },
     {
       "name": "Actrack",
-      "description": "Forecasts of the FIFA World Cup 2026 from an ensemble of football-rating strategies.",
+      "description": "Multi-sport database and predictive modeling platform evaluating match outcomes across leagues and tournaments through ensemble rating strategies.",
       "keywords": [
         "Python",
         "Pandas",
@@ -430,7 +430,208 @@
         "TDD"
       ],
       "startDate": "2026-06-28",
+      "url": "https://github.com/grosjeanbaptiste/actrack",
       "type": "Forecasting engine",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Actif",
+      "description": "Desktop application and analytical engine for global financial markets (stocks, ETFs, bonds, FX, crypto, indices) with vectorized analytical storage and hexagonal architecture in TDD.",
+      "keywords": [
+        "Rust",
+        "Dioxus",
+        "DuckDB",
+        "SQLite",
+        "Parquet",
+        "DDD",
+        "TDD",
+        "HexagonalArchitecture"
+      ],
+      "startDate": "2026-10-30",
+      "url": "https://github.com/grosjeanbaptiste/Actif",
+      "type": "Desktop application",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Actmorph",
+      "description": "Universal cataloging engine and format-agnostic file metadata extraction system.",
+      "keywords": [
+        "Rust",
+        "FileEngine",
+        "Metadata",
+        "TDD"
+      ],
+      "startDate": "2026-11-05",
+      "url": "https://github.com/grosjeanbaptiste/Actmorph",
+      "type": "Engine",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Servai",
+      "description": "Universal orchestrator for full server and cloud administration (DNS zones, TLS Let's Encrypt certificates, WireGuard VPNs, OpenTofu, Ansible) with a reactive REST API powering Biorcrux UI.",
+      "keywords": [
+        "Rust",
+        "Axum",
+        "OpenTofu",
+        "Ansible",
+        "WireGuard",
+        "TLS",
+        "DNS",
+        "HexagonalArchitecture",
+        "TDD"
+      ],
+      "startDate": "2026-11-01",
+      "url": "https://github.com/grosjeanbaptiste/servai",
+      "type": "Orchestrator",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "ss",
+      "description": "Modular system supervisor and diagnostic suite (processes, memory, storage volumes, network telemetry, power) driving CLI and Dioxus desktop interfaces.",
+      "keywords": [
+        "Rust",
+        "Dioxus",
+        "SystemsProgramming",
+        "Telemetry",
+        "CLI",
+        "TDD"
+      ],
+      "startDate": "2026-11-02",
+      "url": "https://github.com/grosjeanbaptiste/ss",
+      "type": "Supervisor",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Biorcrux",
+      "description": "Modular library providing declarative UI components, persistence, charting, and internationalization for multiplatform desktop applications.",
+      "keywords": [
+        "Rust",
+        "Dioxus",
+        "UI",
+        "Desktop",
+        "i18n",
+        "Charting",
+        "TDD"
+      ],
+      "startDate": "2026-11-12",
+      "url": "https://github.com/grosjeanbaptiste/biorcrux",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Repo",
+      "description": "CLI tooling suite for semantic naming, collision detection, and declarative scaffolding of Git / GitHub repositories.",
+      "keywords": [
+        "Rust",
+        "CLI",
+        "Git",
+        "GitHub",
+        "Scaffolding",
+        "TDD"
+      ],
+      "startDate": "2026-11-11",
+      "url": "https://github.com/grosjeanbaptiste/repo",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Actsessions",
+      "description": "Local discovery, session inventory, and telemetry for AI coding agents.",
+      "keywords": [
+        "Rust",
+        "Agents",
+        "Observability",
+        "Telemetry",
+        "TDD"
+      ],
+      "startDate": "2026-11-10",
+      "url": "https://github.com/grosjeanbaptiste/actsessions",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "usext",
+      "description": "Real-time quota tracking and usage forecasting for AI coding assistants.",
+      "keywords": [
+        "Rust",
+        "CLI",
+        "Forecasting",
+        "Observability",
+        "TDD"
+      ],
+      "startDate": "2026-11-11",
+      "url": "https://github.com/grosjeanbaptiste/usext",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Polymath",
+      "description": "Universal graph of computation packages interconnecting scientific disciplines without redundancy via the Rust type system.",
+      "keywords": [
+        "Rust",
+        "DAG",
+        "ScientificComputing",
+        "Mathematics",
+        "TypeSystem",
+        "TDD"
+      ],
+      "startDate": "2026-11-14",
+      "url": "https://github.com/grosjeanbaptiste/polymath",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Corpus",
+      "description": "Aggregated repository of university course materials, lecture notes, and assignments sourced across Moodle platforms and academic portals, with exact worked solutions.",
+      "keywords": [
+        "Python",
+        "LaTeX",
+        "KnowledgeBase",
+        "Education",
+        "Solver",
+        "TDD"
+      ],
+      "startDate": "2026-11-11",
+      "url": "https://github.com/grosjeanbaptiste/corpus",
+      "type": "Knowledge base",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "Actedu",
+      "description": "Global graph-based mapping and visualization of higher-education academic paths, prerequisite dependencies, course trajectories, and degree pathways.",
+      "keywords": [
+        "Rust",
+        "KnowledgeGraph",
+        "GraphTheory",
+        "Education",
+        "Visualization",
+        "TDD"
+      ],
+      "startDate": "2026-11-15",
+      "url": "https://github.com/grosjeanbaptiste/actedu",
+      "type": "Knowledge graph",
       "roles": [
         "Author"
       ]

@@ -178,9 +178,83 @@
       ]
     },
     {
-      "description": "Prognosen zur FIFA-Weltmeisterschaft 2026 aus einem Ensemble von Fußball-Bewertungsstrategien.",
+      "description": "Multi-Sport-Datenbank und prädiktive Modellierungsplattform zur Bewertung von Spielergebnissen über Ligen und Turniere hinweg mittels Ensemble-Rating-Strategien.",
       "summary": "Eine Python-Engine (DDD, hexagonal) gewichtet fünfzehn Strategien für Spielausgänge — Elo, Poisson-Angriff/-Abwehr, Form, direkte Duelle, Kaderwert, Ruhetage, Buchmacherquoten — an den Spielort angepasst, und ist in Rust/Dioxus-Apps für Web (WebAssembly), Desktop, Mobilgeräte und Terminal portiert, die mit ihr gleichauf gehalten werden. Ein Forschungslabor testet die Strategien walk-forward, jeweils ein Turnier zurückgehalten, an 635 Spielen aus zehn Turnieren (Weltmeisterschaften 2002–2022 und vier Kontinentalturniere 2023–2024) und stimmt die Ensemble-Gewichte ab; außerhalb der Stichprobe schneidet Elo allein am besten ab (55,6 % Trefferquote).",
       "type": "Prognose-Engine",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Desktop-Anwendung und Analyse-Engine für globale Finanzmärkte (Aktien, ETFs, Anleihen, Devisen, Krypto, Indizes) mit vektorisiertem Analysespeicher und hexagonaler Architektur in TDD.",
+      "type": "Desktop-Anwendung",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Universelle Katalogisierungs-Engine und formatagnostisches System zur Extraktion von Dateimetadaten.",
+      "type": "Engine",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Universeller Orchestrator für die vollständige Server- und Cloud-Administration (DNS-Zonen, TLS Let's Encrypt-Zertifikate, WireGuard-VPNs, OpenTofu, Ansible) mit einer reaktiven REST-API für die Biorcrux-UI.",
+      "type": "Orchestrator",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Modularer System-Supervisor und Diagnosesuite (Prozesse, Speicher, Speichervolumen, Netzwerktelemetrie, Energie) für CLI und Dioxus-Desktop-Schnittstellen.",
+      "type": "Supervisor",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Modulare Bibliothek mit deklarativen UI-Komponenten, Persistenz, Diagrammen und Internationalisierung für plattformübergreifende Desktop-Anwendungen.",
+      "type": "Bibliothek",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "CLI-Toolsuite für semantische Benennung, Kollisionserkennung und deklaratives Scaffolding von Git-/GitHub-Repositories.",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Lokale Erkennung, Sitzungsinventar und Telemetrie für KI-Coding-Agenten.",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Echtzeit-Quotenverfolgung und Nutzungsprognosen für KI-Coding-Assistenten.",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Universeller Graph von Berechnungspaketen, der wissenschaftliche Disziplinen ohne Redundanz über das Rust-Typsystem verbindet.",
+      "type": "Bibliothek",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Aggregiertes Repository für universitäre Kursunterlagen, Vorlesungsskripte und Aufgaben aus Moodle-Plattformen und akademischen Portalen mit exakt ausgearbeiteten Lösungen.",
+      "type": "Wissensdatenbank",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Globale graphbasierte Abbildung und Visualisierung von akademischen Wegen im Hochschulbereich, Voraussetzungen, Kursverläufen und Studiengangspfaden.",
+      "type": "Wissensgraph",
       "roles": [
         "Autor"
       ]

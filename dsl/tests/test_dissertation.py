@@ -33,6 +33,17 @@ def test_the_acteble_experience_holds_the_platform_the_dissertation_and_the_side
         "Indexer",
         "Polytech",
         "Converge",
+        "Actif",
+        "Servai",
+        "Polymath",
+        "ss",
+        "Actmorph",
+        "Actsessions",
+        "usext",
+        "Corpus",
+        "Actedu",
+        "Biorcrux",
+        "Repo",
     ]
 
 

@@ -21,7 +21,18 @@
         "KAG",
         "Indexer",
         "Polytech",
-        "Converge"
+        "Converge",
+        "Actif",
+        "Servai",
+        "Polymath",
+        "ss",
+        "Actmorph",
+        "Actsessions",
+        "usext",
+        "Corpus",
+        "Actedu",
+        "Biorcrux",
+        "Repo"
       ]
     },
     {
@@ -351,6 +362,17 @@
     {
       "summary": "A Python engine (DDD, hexagonal) weighs fifteen match-outcome strategies — Elo, Poisson attack/defence, form, head-to-head, squad value, rest days, bookmaker odds — adjusted for venue, and is ported to Rust/Dioxus apps for web (WebAssembly), desktop, mobile and terminal, kept at parity with it. A research lab backtests the strategies walk-forward, one tournament held out at a time, on 635 matches from ten tournaments (World Cups 2002–2022 and four continental cups of 2023–2024), and tunes the ensemble weights; out of sample, Elo alone scores best (55.6% accuracy)."
     },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
     {
       "summary": "Internal platform that lets parliamentary staff search, explore and converse with the archives of the Belgian Federal Parliament, powered by a retrieval-augmented pipeline with bilingual FR/NL support."
     },

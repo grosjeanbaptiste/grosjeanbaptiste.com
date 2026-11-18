@@ -178,9 +178,83 @@
       ]
     },
     {
-      "description": "Prévisions de la Coupe du monde de la FIFA 2026 par un ensemble de stratégies de notation du football.",
+      "description": "Base de données multi-sports et plateforme de modélisation prédictive évaluant les résultats de matchs entre ligues et tournois via des stratégies de notation d'ensemble.",
       "summary": "Un moteur Python (DDD, hexagonal) pondère quinze stratégies de pronostic — Elo, Poisson attaque/défense, forme, confrontations directes, valeur de l'effectif, jours de repos, cotes des bookmakers — ajustées au lieu du match, et il est porté dans des apps Rust/Dioxus pour le web (WebAssembly), le desktop, le mobile et le terminal, tenues à parité avec lui. Un laboratoire de recherche évalue les stratégies en walk-forward, un tournoi mis de côté à la fois, sur 635 matchs de dix tournois (Coupes du monde 2002–2022 et quatre coupes continentales de 2023–2024), et ajuste les poids de l'ensemble ; hors échantillon, Elo seul fait le mieux (55,6 % de bons pronostics).",
       "type": "Moteur de prévision",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Application desktop et moteur analytique pour les marchés financiers mondiaux (actions, ETF, obligations, devises, crypto, indices) avec stockage analytique vectorisé et architecture hexagonale en TDD.",
+      "type": "Application desktop",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Moteur de catalogage universel et système d'extraction de métadonnées de fichiers agnostique aux formats.",
+      "type": "Moteur",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Orchestrateur universel pour l'administration complète de serveurs et du cloud (zones DNS, certificats TLS Let's Encrypt, VPN WireGuard, OpenTofu, Ansible) avec une API REST réactive alimentant l'UI Biorcrux.",
+      "type": "Orchestrateur",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Superviseur système modulaire et suite de diagnostic (processus, mémoire, volumes de stockage, télémétrie réseau, alimentation) pilotant des interfaces CLI et desktop Dioxus.",
+      "type": "Superviseur",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Bibliothèque modulaire fournissant des composants UI déclaratifs, persistance, graphiques et internationalisation pour applications desktop multiplateformes.",
+      "type": "Bibliothèque",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Suite d'outils CLI pour le nommage sémantique, la détection de collisions et l'échafaudage déclaratif de dépôts Git / GitHub.",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Découverte locale, inventaire de sessions et télémétrie pour agents de codage IA.",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Suivi des quotas en temps réel et prévision d'utilisation pour assistants de codage IA.",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Graphe universel de paquets de calcul interconnectant les disciplines scientifiques sans redondance via le système de types de Rust.",
+      "type": "Bibliothèque",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Dépôt agrégé de supports de cours universitaires, notes de cours et travaux dirigés collectés sur les plateformes Moodle et portails académiques, avec solutions détaillées exactes.",
+      "type": "Base de connaissances",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
+      "description": "Cartographie et visualisation sous forme de graphe global des parcours académiques de l'enseignement supérieur, des dépendances de prérequis, des trajectoires de cours et des filières de diplômes.",
+      "type": "Graphe de connaissances",
       "roles": [
         "Auteur"
       ]

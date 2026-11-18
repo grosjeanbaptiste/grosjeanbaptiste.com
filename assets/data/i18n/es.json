@@ -178,9 +178,83 @@
       ]
     },
     {
-      "description": "Predicciones de la Copa Mundial de la FIFA 2026 mediante un conjunto de estrategias de valoración futbolística.",
+      "description": "Base de datos multideporte y plataforma de modelado predictivo que evalúa los resultados de partidos en ligas y torneos mediante estrategias de puntuación por conjuntos.",
       "summary": "Un motor Python (DDD, hexagonal) pondera quince estrategias de resultado — Elo, Poisson ataque/defensa, forma, enfrentamientos directos, valor de la plantilla, días de descanso, cuotas de casas de apuestas — ajustadas a la sede, y está portado a apps Rust/Dioxus para web (WebAssembly), escritorio, móvil y terminal, mantenidas a la par. Un laboratorio de investigación evalúa las estrategias en walk-forward, dejando fuera un torneo cada vez, sobre 635 partidos de diez torneos (Mundiales 2002–2022 y cuatro copas continentales de 2023–2024), y ajusta los pesos del conjunto; fuera de muestra, Elo solo es el mejor (55,6 % de aciertos).",
       "type": "Motor de predicción",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Aplicación de escritorio y motor analítico para mercados financieros globales (acciones, ETFs, bonos, divisas, cripto, índices) con almacenamiento analítico vectorizado y arquitectura hexagonal en TDD.",
+      "type": "Aplicación de escritorio",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Motor de catalogación universal y sistema de extracción de metadatos de archivos agnóstico a formatos.",
+      "type": "Motor",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Orquestador universal para la administración completa de servidores y nube (zonas DNS, certificados TLS Let's Encrypt, VPNs WireGuard, OpenTofu, Ansible) con una API REST reactiva que alimenta la interfaz Biorcrux.",
+      "type": "Orquestador",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Supervisor de sistema modular y suite de diagnóstico (procesos, memoria, volúmenes de almacenamiento, telemetría de red, energía) que impulsa interfaces CLI y de escritorio Dioxus.",
+      "type": "Supervisor",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Biblioteca modular que proporciona componentes de interfaz de usuario declarativos, persistencia, gráficos e internacionalización para aplicaciones de escritorio multiplataforma.",
+      "type": "Biblioteca",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Suite de herramientas CLI para nombrado semántico, detección de colisiones y andamiaje declarativo de repositorios Git / GitHub.",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Descubrimiento local, inventario de sesiones y telemetría para agentes de programación con IA.",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Seguimiento de cuotas en tiempo real y previsión de uso para asistentes de programación con IA.",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Grafo universal de paquetes de cálculo que interconecta disciplinas científicas sin redundancia mediante el sistema de tipos de Rust.",
+      "type": "Biblioteca",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Repositorio agregado de materiales de cursos universitarios, notas de clase y tareas recopiladas en plataformas Moodle y portales académicos, con soluciones desarrolladas exactas.",
+      "type": "Base de conocimientos",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
+      "description": "Mapeo y visualización global basados en grafos de itinerarios académicos de educación superior, dependencias de prerrequisitos, trayectorias de cursos y planes de estudio.",
+      "type": "Grafo de conocimiento",
       "roles": [
         "Autor"
       ]

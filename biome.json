@@ -14,6 +14,7 @@
       "**/_vendor/**",
       "**/dist/**",
       "**/build/**",
+      "graphify-out/**",
       "assets/cv/**",
       "assets/data/resume-*.xml",
       "assets/data/resume.xml",
