@@ -55,7 +55,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             period 2025-07-01..present
             summary t{ en: "Sole founder, architect and developer. Rust backend + Flutter mobile. The R&D layer also served as the dissertation for my MSc in Computer Science at UMons.", fr: "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.", nl: "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.", es: "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirvió como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.", de: "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.", zh: "唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。" }
             uses [Rust, Flutter, Dart, Tokio, Docker, DDD, CleanArchitecture, PostgreSQL]
-            projects [ref Acteble, ref MemoireMaster, ref Actrack, ref LL, ref Baba, ref KAG, ref Indexer, ref Polytech, ref Converge, ref Actif, ref Servai, ref Polymath, ref ss, ref Actmorph, ref Actsessions, ref usext, ref Corpus, ref Actedu, ref Biorcrux, ref Repo]
+            projects [ref Acteble, ref MemoireMaster, ref Actrack, ref LL, ref Baba, ref KAG, ref Indexer, ref Polytech, ref Converge, ref Actif, ref Actserve, ref Polymath, ref ss, ref Actmorph, ref Actsessions, ref usext, ref Corpus, ref Actedu, ref Biorcrux, ref Repo]
         }
         AIResearchScientist {
             position t{ en: "AI Research Scientist", fr: "Chercheur en IA", nl: "AI-onderzoeker", es: "Investigador en IA", de: "KI-Forschungswissenschaftler", zh: "AI 研究员" }
@@ -469,12 +469,12 @@ TFE: WebMenu 2.0
             type t{ en: "Engine", fr: "Moteur", nl: "Engine", es: "Motor", de: "Engine", zh: "引擎" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
-        Servai {
-            name "Servai"
+        Actserve {
+            name "Actserve"
             description t{ en: "Universal orchestrator for full server and cloud administration (DNS zones, TLS Let's Encrypt certificates, WireGuard VPNs, OpenTofu, Ansible) with a reactive REST API powering Biorcrux UI.", fr: "Orchestrateur universel pour l'administration complète de serveurs et du cloud (zones DNS, certificats TLS Let's Encrypt, VPN WireGuard, OpenTofu, Ansible) avec une API REST réactive alimentant l'UI Biorcrux.", nl: "Universele orchestrator voor volledig server- en cloudbeheer (DNS-zones, TLS Let's Encrypt-certificaten, WireGuard-VPN's, OpenTofu, Ansible) met een reactieve REST-API die de Biorcrux-UI aanstuurt.", es: "Orquestador universal para la administración completa de servidores y nube (zonas DNS, certificados TLS Let's Encrypt, VPNs WireGuard, OpenTofu, Ansible) con una API REST reactiva que alimenta la interfaz Biorcrux.", de: "Universeller Orchestrator für die vollständige Server- und Cloud-Administration (DNS-Zonen, TLS Let's Encrypt-Zertifikate, WireGuard-VPNs, OpenTofu, Ansible) mit einer reaktiven REST-API für die Biorcrux-UI.", zh: "用于全服务器和云管理的通用编排器（DNS 区域、TLS Let's Encrypt 证书、WireGuard VPN、OpenTofu、Ansible），带有驱动 Biorcrux UI 的响应式 REST API。" }
             keywords [Rust, Axum, OpenTofu, Ansible, WireGuard, TLS, DNS, HexagonalArchitecture, TDD]
             startDate 2026-11-01
-            url "https://github.com/grosjeanbaptiste/servai"
+            url "https://github.com/grosjeanbaptiste/actserve"
             type t{ en: "Orchestrator", fr: "Orchestrateur", nl: "Orchestrator", es: "Orquestador", de: "Orchestrator", zh: "编排器" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
