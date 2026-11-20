@@ -500,7 +500,7 @@
       ]
     },
     {
-      "name": "ss",
+      "name": "Actos",
       "description": "Modular system supervisor and diagnostic suite (processes, memory, storage volumes, network telemetry, power) driving CLI and Dioxus desktop interfaces.",
       "keywords": [
         "Rust",
@@ -511,7 +511,7 @@
         "TDD"
       ],
       "startDate": "2026-11-02",
-      "url": "https://github.com/grosjeanbaptiste/ss",
+      "url": "https://github.com/grosjeanbaptiste/actos",
       "type": "Supervisor",
       "roles": [
         "Author"
@@ -537,7 +537,7 @@
       ]
     },
     {
-      "name": "Repo",
+      "name": "Actrepo",
       "description": "CLI tooling suite for semantic naming, collision detection, and declarative scaffolding of Git / GitHub repositories.",
       "keywords": [
         "Rust",
@@ -548,7 +548,7 @@
         "TDD"
       ],
       "startDate": "2026-11-11",
-      "url": "https://github.com/grosjeanbaptiste/repo",
+      "url": "https://github.com/grosjeanbaptiste/actrepo",
       "type": "CLI",
       "roles": [
         "Author"
@@ -572,7 +572,7 @@
       ]
     },
     {
-      "name": "usext",
+      "name": "Actusext",
       "description": "Real-time quota tracking and usage forecasting for AI coding assistants.",
       "keywords": [
         "Rust",
@@ -582,7 +582,7 @@
         "TDD"
       ],
       "startDate": "2026-11-11",
-      "url": "https://github.com/grosjeanbaptiste/usext",
+      "url": "https://github.com/grosjeanbaptiste/actusext",
       "type": "CLI",
       "roles": [
         "Author"

@@ -55,7 +55,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             period 2025-07-01..present
             summary t{ en: "Sole founder, architect and developer. Rust backend + Flutter mobile. The R&D layer also served as the dissertation for my MSc in Computer Science at UMons.", fr: "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.", nl: "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.", es: "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirvió como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.", de: "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.", zh: "唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。" }
             uses [Rust, Flutter, Dart, Tokio, Docker, DDD, CleanArchitecture, PostgreSQL]
-            projects [ref Acteble, ref MemoireMaster, ref Actrack, ref LL, ref Baba, ref KAG, ref Indexer, ref Polytech, ref ActConverge, ref Actif, ref Actserve, ref Polymath, ref ss, ref Actmorph, ref Actsessions, ref usext, ref Corpus, ref Actedu, ref Biorcrux, ref Repo]
+            projects [ref Acteble, ref MemoireMaster, ref Actrack, ref LL, ref Baba, ref KAG, ref Indexer, ref Polytech, ref ActConverge, ref Actif, ref Actserve, ref Polymath, ref Actos, ref Actmorph, ref Actsessions, ref Actusext, ref Corpus, ref Actedu, ref Biorcrux, ref Actrepo]
         }
         AIResearchScientist {
             position t{ en: "AI Research Scientist", fr: "Chercheur en IA", nl: "AI-onderzoeker", es: "Investigador en IA", de: "KI-Forschungswissenschaftler", zh: "AI 研究员" }
@@ -483,12 +483,12 @@ TFE: WebMenu 2.0
             type t{ en: "Orchestrator", fr: "Orchestrateur", nl: "Orchestrator", es: "Orquestador", de: "Orchestrator", zh: "编排器" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
-        ss {
-            name "ss"
+        Actos {
+            name "Actos"
             description t{ en: "Modular system supervisor and diagnostic suite (processes, memory, storage volumes, network telemetry, power) driving CLI and Dioxus desktop interfaces.", fr: "Superviseur système modulaire et suite de diagnostic (processus, mémoire, volumes de stockage, télémétrie réseau, alimentation) pilotant des interfaces CLI et desktop Dioxus.", nl: "Modulaire systeemsupervisor en diagnostische suite (processen, geheugen, opslagvolumes, netwerktelemetrie, stroom) die CLI en Dioxus-desktopinterfaces aanstuurt.", es: "Supervisor de sistema modular y suite de diagnóstico (procesos, memoria, volúmenes de almacenamiento, telemetría de red, energía) que impulsa interfaces CLI y de escritorio Dioxus.", de: "Modularer System-Supervisor und Diagnosesuite (Prozesse, Speicher, Speichervolumen, Netzwerktelemetrie, Energie) für CLI und Dioxus-Desktop-Schnittstellen.", zh: "模块化系统监控器与诊断套件（进程、内存、存储卷、网络遥测、电源），驱动命令行与 Dioxus 桌面界面。" }
             keywords [Rust, Dioxus, SystemsProgramming, Telemetry, CLI, TDD]
             startDate 2026-11-02
-            url "https://github.com/grosjeanbaptiste/ss"
+            url "https://github.com/grosjeanbaptiste/actos"
             type t{ en: "Supervisor", fr: "Superviseur", nl: "Supervisor", es: "Supervisor", de: "Supervisor", zh: "监控器" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
@@ -501,12 +501,12 @@ TFE: WebMenu 2.0
             type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
-        Repo {
-            name "Repo"
+        Actrepo {
+            name "Actrepo"
             description t{ en: "CLI tooling suite for semantic naming, collision detection, and declarative scaffolding of Git / GitHub repositories.", fr: "Suite d'outils CLI pour le nommage sémantique, la détection de collisions et l'échafaudage déclaratif de dépôts Git / GitHub.", nl: "CLI-toolsuite voor semantische naamgeving, collisiedetectie en declaratieve scaffolding van Git/GitHub-repositories.", es: "Suite de herramientas CLI para nombrado semántico, detección de colisiones y andamiaje declarativo de repositorios Git / GitHub.", de: "CLI-Toolsuite für semantische Benennung, Kollisionserkennung und deklaratives Scaffolding von Git-/GitHub-Repositories.", zh: "CLI 工具套件，用于语义命名、冲突检测以及 Git / GitHub 仓库的声明式脚手架生成。" }
             keywords [Rust, CLI, Git, GitHub, Scaffolding, TDD]
             startDate 2026-11-11
-            url "https://github.com/grosjeanbaptiste/repo"
+            url "https://github.com/grosjeanbaptiste/actrepo"
             type "CLI"
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
@@ -519,12 +519,12 @@ TFE: WebMenu 2.0
             type "CLI"
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
-        usext {
-            name "usext"
+        Actusext {
+            name "Actusext"
             description t{ en: "Real-time quota tracking and usage forecasting for AI coding assistants.", fr: "Suivi des quotas en temps réel et prévision d'utilisation pour assistants de codage IA.", nl: "Realtime quotalogging en gebruiksvoorspelling voor AI-codeerassistenten.", es: "Seguimiento de cuotas en tiempo real y previsión de uso para asistentes de programación con IA.", de: "Echtzeit-Quotenverfolgung und Nutzungsprognosen für KI-Coding-Assistenten.", zh: "AI 编程助手的实时配额跟踪与使用预测。" }
             keywords [Rust, CLI, Forecasting, Observability, TDD]
             startDate 2026-11-11
-            url "https://github.com/grosjeanbaptiste/usext"
+            url "https://github.com/grosjeanbaptiste/actusext"
             type "CLI"
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
