@@ -559,7 +559,7 @@ TFE: WebMenu 2.0
             name "Synergy"
             description t{ en: "Internal platform for the Belgian Federal Parliament to search, explore and converse with the parliamentary archives.", fr: "Plateforme interne du Parlement fédéral belge pour chercher, explorer et converser avec les archives parlementaires.", nl: "Intern platform van het Belgisch federaal Parlement om de parlementaire archieven te doorzoeken, verkennen en bevragen.", es: "Plataforma interna del Parlamento federal belga para buscar, explorar y conversar con los archivos parlamentarios.", de: "Interne Plattform des belgischen Bundesparlaments zum Durchsuchen, Erkunden und Befragen der parlamentarischen Archive.", zh: "比利时联邦议会的内部平台，用于搜索、探索并与议会档案对话。" }
             summary t{ en: "Internal platform that lets parliamentary staff search, explore and converse with the archives of the Belgian Federal Parliament, powered by a retrieval-augmented pipeline with bilingual FR/NL support.", fr: "Plateforme interne permettant au personnel parlementaire de chercher, explorer et converser avec les archives du Parlement fédéral belge, portée par un pipeline de retrieval-augmented generation avec prise en charge bilingue FR/NL.", nl: "Intern platform waarmee parlementaire medewerkers de archieven van het Belgisch federaal Parlement kunnen doorzoeken, verkennen en bevragen, aangedreven door een retrieval-augmented pijplijn met tweetalige FR/NL-ondersteuning.", es: "Plataforma interna que permite al personal parlamentario buscar, explorar y conversar con los archivos del Parlamento federal belga, impulsada por un pipeline de retrieval-augmented generation con soporte bilingüe FR/NL.", de: "Interne Plattform, die parlamentarischen Mitarbeitern ermöglicht, die Archive des belgischen Bundesparlaments zu durchsuchen, zu erkunden und zu befragen — angetrieben von einer Retrieval-Augmented-Pipeline mit zweisprachiger FR/NL-Unterstützung.", zh: "内部平台，让议会工作人员可以搜索、探索并与比利时联邦议会的档案对话，由检索增强（RAG）管道驱动，支持法语/荷兰语双语。" }
-            keywords [Python, Java, RAG, AI]
+            keywords [Python, Java, "Spring Boot", RAG, AI]
             startDate 2025-11-03
             endDate 2026-06-30
             type t{ en: "Platform", fr: "Plateforme", es: "Plataforma", de: "Plattform", zh: "平台" }
@@ -625,8 +625,8 @@ TFE: WebMenu 2.0
             name "EduCraft"
             description t{ en: "Platform allowing users to get more skills.", fr: "Plateforme permettant à chacun d'acquérir de nouvelles compétences.", nl: "Platform waarmee iedereen nieuwe vaardigheden kan verwerven.", es: "Plataforma que permite a cualquiera adquirir nuevas competencias.", de: "Plattform für den Erwerb neuer Fähigkeiten.", zh: "让任何人都能获得新技能的平台。" }
             keywords [PHP, API, "UI/UX"]
-            startDate 2024-03-29
-            endDate 2024-03-31
+            startDate 2024-03-17
+            endDate 2024-03-17
         }
         MyWay {
             name "MyWay"
