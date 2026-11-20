@@ -25,7 +25,8 @@ function buildHeader(resume, t, lang, today, years) {
   const degree = formatDegreeLine(highestObtainedDegree(resume.education), lang);
   const contacts = [...main, ...profiles].join('\\quad ');
   return [
-    '\\noindent\\begin{minipage}[c]{17mm}\\includegraphics[height=17mm]{profil}\\end{minipage}\\hspace{4mm}%',
+    // The photo as the portrait CV sets it: round, in the theme's rule colour.
+    '\\noindent\\makeatletter\\@makeaphoto{17mm}{profil}\\makeatother\\hspace{4mm}%',
     '\\begin{minipage}[c]{\\dimexpr\\linewidth-21mm\\relax}',
     `{\\color{name}\\namefont ${tex(b.name)}}\\hfill{\\color{heading}\\LARGE\\rmfamily\\bfseries\\MakeUppercase{${tex(t.timeline)}}}\\par`,
     `{\\color{tagline}\\large\\bfseries ${tex(b.label)}}${degree ? `\\quad{\\color{body}\\footnotesize\\faGraduationCap\\ ${tex(degree)}}` : ''}\\hfill{\\color{body}\\small ${span}${tex(t.updated)} ${tex(formatLongDate(today, lang))}}\\par`,

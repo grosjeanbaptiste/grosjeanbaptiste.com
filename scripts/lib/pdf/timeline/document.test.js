@@ -58,7 +58,7 @@ test('the header carries the photo, the contacts and the highest degree', () => 
     ],
   };
   const tex = generateTimelineLatex(cv, 'fr', TODAY);
-  assert.match(tex, /\\includegraphics\[height=17mm\]\{profil\}/);
+  assert.match(tex, /\\@makeaphoto\{17mm\}\{profil\}/);
   assert.match(tex, /\\email\{a@b\.c\}/);
   assert.match(tex, /faGraduationCap[^\n]*Informatique/);
 });
