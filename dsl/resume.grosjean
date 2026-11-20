@@ -368,13 +368,13 @@ TFE: WebMenu 2.0
         CentreScolaireSaintAdrienValDuchesse {
             institution "Centre Scolaire Saint-Adrien - Val Duchesse"
             studyType t{ en: "C.E.S.S.", fr: "C.E.S.S.", nl: "C.E.S.S.", es: "C.E.S.S.", de: "C.E.S.S.", zh: "C.E.S.S." }
-            area t{ en: "General Studies — Maths 6h, Modern languages 8h", fr: "Études générales — Mathématiques 6h, Langues modernes 8h", nl: "Algemene studies — Wiskunde 6u, Moderne talen 8u", es: "Estudios generales — Matemáticas 6h, Lenguas modernas 8h", de: "Allgemeine Studien — Mathematik 6 Std., Moderne Sprachen 8 Std.", zh: "通识学习 — 数学 6 小时，现代语言 8 小时" }
+            area t{ en: "General Studies — Maths, Modern languages", fr: "Études générales — Mathématiques, Langues modernes", nl: "Algemene studies — Wiskunde, Moderne talen", es: "Estudios generales — Matemáticas, Lenguas modernas", de: "Allgemeine Studien — Mathematik, Moderne Sprachen", zh: "通识学习 — 数学，现代语言" }
             period 2013-09-30..2015-06-30
             score t{ en: "Satis bene", fr: "Satis bene", nl: "Satis bene", es: "Satis bene", de: "Satis bene", zh: "Satis bene" }
         }
         CentreScolaireSaintAdrienValDuchesse4e {
             institution "Centre Scolaire Saint-Adrien - Val Duchesse"
-            area t{ en: "Technical transition — Sciences 8h, Modern languages 8h", fr: "Transition technique — Sciences 8h, Langues modernes 8h", nl: "Technische overgang — Wetenschappen 8u, Moderne talen 8u", es: "Transición técnica — Ciencias 8h, Lenguas modernas 8h", de: "Technischer Übergang — Naturwissenschaften 8 Std., Moderne Sprachen 8 Std.", zh: "技术过渡 — 科学 8 小时，现代语言 8 小时" }
+            area t{ en: "Technical transition — Sciences, Modern languages", fr: "Transition technique — Sciences, Langues modernes", nl: "Technische overgang — Wetenschappen, Moderne talen", es: "Transición técnica — Ciencias, Lenguas modernas", de: "Technischer Übergang — Naturwissenschaften, Moderne Sprachen", zh: "技术过渡 — 科学，现代语言" }
             period 2012-09-30..2013-06-30
         }
         LyceeMaterDei {
