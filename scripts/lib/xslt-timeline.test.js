@@ -150,8 +150,10 @@ test('the rich theme loads the classic page’s timeline script and styles', () 
   assert.match(html, /<link[^>]*href="\/css\/timeline\.css"/);
 });
 
-test('the zoom waits for the script, hidden until it runs', () => {
-  assert.match(render('fr'), /<div class="tl-zoom"[^>]*hidden/);
+test('the zoom does not wait for a script: radios, not hidden buttons', () => {
+  const group = render('fr').match(/<div class="tl-zoom"[^>]*>[\s\S]*?<\/div>/)[0];
+  assert.match(group, /<input type="radio"/);
+  assert.doesNotMatch(group, /<button|hidden/);
 });
 
 test('the minimal theme stays static: styles, no script', () => {

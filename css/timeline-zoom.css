@@ -1,0 +1,39 @@
+/* The timeline's zoom, drawn from radios (the rich XSLT theme: no script). The
+   rules that set the scale are written by the stylesheet, which alone has the
+   length of the career at hand; this holds the rest. The radios are out of
+   sight but stay in the tab order, and their labels are the buttons. */
+.tl-zoom { position: relative; }
+
+.tl-zoom-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.tl-zoom label {
+  font-size: 0.85em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999rem;
+  color: var(--muted-color);
+  cursor: pointer;
+}
+
+.tl-zoom-input:checked + label {
+  background: var(--primary-color);
+  color: var(--on-accent-color);
+}
+
+.tl-zoom-input:focus-visible + label {
+  outline: 0.125rem solid var(--primary-color);
+  outline-offset: 0.125rem;
+}
+
+/* One PDF of the timeline is on offer: the one of the zoom chosen. */
+body:has(#tl-z-2:checked) a[data-timeline-pdf]:not([data-zoom="2"]),
+body:has(#tl-z-5:checked) a[data-timeline-pdf]:not([data-zoom="5"]),
+body:has(#tl-z-all:checked) a[data-timeline-pdf]:not([data-zoom="all"]) {
+  display: none;
+}

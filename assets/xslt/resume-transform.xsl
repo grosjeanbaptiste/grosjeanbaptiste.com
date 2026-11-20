@@ -676,6 +676,8 @@
         <!-- The classic page's timeline, as is: its styles and its script (zoom,
              arrow keys, preview). -->
         <link rel="stylesheet" href="/css/timeline.css"/>
+        <link rel="stylesheet" href="/css/timeline-zoom.css"/>
+        <xsl:call-template name="timeline-zoom-css"/>
         <link rel="stylesheet" href="/css/timeline-entries.css"/>
         <link rel="stylesheet" href="/css/timeline-scroll.css"/>
         <!-- The classic page's search, as is (before the theme's filter
@@ -727,16 +729,17 @@
             ⬇ <xsl:call-template name="t"><xsl:with-param name="k" select="'downloadCV'"/></xsl:call-template>
           </a>
 
-          <!-- The timeline's PDF: /js/timeline.js hands out the one of the zoom
-               on screen, from data-pdf-*; the whole career without it. -->
+          <!-- The timeline's PDF: one link per zoom; css/timeline-zoom.css shows
+               the one of the zoom chosen. -->
           <xsl:for-each select="meta/timeline/pdf">
-            <a class="download" data-timeline-pdf="" download="">
-              <xsl:attribute name="href"><xsl:value-of select="all"/></xsl:attribute>
-              <xsl:attribute name="data-pdf-2"><xsl:value-of select="two"/></xsl:attribute>
-              <xsl:attribute name="data-pdf-5"><xsl:value-of select="five"/></xsl:attribute>
-              <xsl:attribute name="data-pdf-all"><xsl:value-of select="all"/></xsl:attribute>
-              ⬇ <xsl:value-of select="label"/>
-            </a>
+            <xsl:variable name="label" select="label"/>
+            <xsl:for-each select="two | five | all">
+              <a class="download" data-timeline-pdf="" download="">
+                <xsl:attribute name="data-zoom"><xsl:choose><xsl:when test="name() = 'two'">2</xsl:when><xsl:when test="name() = 'five'">5</xsl:when><xsl:otherwise>all</xsl:otherwise></xsl:choose></xsl:attribute>
+                <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+                ⬇ <xsl:value-of select="$label"/>
+              </a>
+            </xsl:for-each>
           </xsl:for-each>
 
           <!-- Live PDF: print this XSLT-rendered view straight from the
@@ -1076,13 +1079,19 @@
         <xsl:call-template name="skill-targets"/>
         <div class="tl-head">
           <h2 id="timeline-title"><xsl:value-of select="$tl/title"/></h2>
-          <div class="tl-zoom" role="group" hidden="hidden">
+          <!-- The zoom is a radio per zoom (css/timeline-zoom.css draws them as
+               buttons, the rules in the head set the scale): no script. -->
+          <div class="tl-zoom" role="group">
             <xsl:attribute name="aria-label"><xsl:value-of select="$tl/title"/></xsl:attribute>
             <xsl:for-each select="$tl/zooms/zoom">
-              <button type="button">
-                <xsl:attribute name="data-years"><xsl:value-of select="years"/></xsl:attribute>
+              <input type="radio" name="tl-zoom" class="tl-zoom-input">
+                <xsl:attribute name="id">tl-z-<xsl:value-of select="years"/></xsl:attribute>
+                <xsl:if test="years = '5'"><xsl:attribute name="checked">checked</xsl:attribute></xsl:if>
+              </input>
+              <label>
+                <xsl:attribute name="for">tl-z-<xsl:value-of select="years"/></xsl:attribute>
                 <xsl:value-of select="label"/>
-              </button>
+              </label>
             </xsl:for-each>
           </div>
           <!-- Opens the search; /js/search.js shows it, with ⌘K / Ctrl+K. -->
@@ -1200,6 +1209,26 @@
        (:target, no script); this is the way out of it, back to the timeline. -->
   <xsl:template name="entry-close">
     <a class="entry-close" href="#timeline" aria-label="×">×</a>
+  </xsl:template>
+
+  <!-- The scale each zoom sets: how many times the axis is stretched so that
+       exactly that many years show — the length of the career over the years,
+       never under 1. Only XSLT has the length at hand, so the rules are
+       written here; css/timeline-zoom.css holds the rest. -->
+  <xsl:template name="timeline-zoom-css">
+    <xsl:variable name="months" select="/resume/meta/timeline/months"/>
+    <xsl:if test="$months">
+      <style>
+        <xsl:for-each select="/resume/meta/timeline/zooms/zoom">
+          <xsl:text>#timeline:has(#tl-z-</xsl:text><xsl:value-of select="years"/><xsl:text>:checked) .tl-grid { --stretch: </xsl:text>
+          <xsl:choose>
+            <xsl:when test="years != 'all' and $months div (years * 12) &gt; 1"><xsl:value-of select="$months div (years * 12)"/></xsl:when>
+            <xsl:otherwise>1</xsl:otherwise>
+          </xsl:choose>
+          <xsl:text>; }&#10;</xsl:text>
+        </xsl:for-each>
+      </style>
+    </xsl:if>
   </xsl:template>
 
   <!-- The PDFs, read in the page: one <details> each, all of one named group,

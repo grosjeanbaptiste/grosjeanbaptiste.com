@@ -91,10 +91,19 @@ for (const lang of LANGS) {
   });
 
   test(`${lang}: the timeline's PDF is offered for each zoom`, () => {
-    const pdfs = (html) => all(html, /(data-pdf-(?:2|5|all)="[^"]+")/g).sort();
-    assert.equal(pdfs(page).length, 3);
-    assert.deepEqual(pdfs(rich), pdfs(page));
-    assert.match(rich, /<a [^>]*data-timeline-pdf/);
+    // The classic page hands one link the PDF of the zoom on screen (data-pdf-*);
+    // the theme writes a link per zoom and shows the one chosen.
+    const classicPdfs = Object.fromEntries(
+      [...page.matchAll(/data-pdf-(2|5|all)="([^"]+)"/g)].map((m) => [m[1], m[2]]),
+    );
+    assert.equal(Object.keys(classicPdfs).length, 3);
+    const themePdfs = Object.fromEntries(
+      [...rich.matchAll(/<a class="download" data-timeline-pdf=""([^>]*)>/g)].map((m) => [
+        m[1].match(/data-zoom="([^"]+)"/)[1],
+        m[1].match(/href="([^"]+)"/)[1],
+      ]),
+    );
+    assert.deepEqual(themePdfs, classicPdfs);
   });
 
   test(`${lang}: the filter counts each skill as the classic page does`, () => {

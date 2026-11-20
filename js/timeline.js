@@ -10,12 +10,15 @@
   const zoom = section.querySelector('.tl-zoom');
   const bars = [...section.querySelectorAll('.tl-bar')];
   const months = Number(grid.dataset.months);
-  if (!scroller || !zoom || !months) {
+  if (!scroller || !months) {
     console.warn('timeline.js: the timeline markup is not the one this script knows; left static.');
     return;
   }
 
   // Zoom: the scale only — the whole career stays drawn, scrolled to today.
+  // A page whose zoom is radios (the rich XSLT theme) does it in CSS, and this
+  // leaves it alone.
+  const scripted = !!zoom?.querySelector('button');
   const setZoom = (years) => {
     // How far the time axis is stretched: 1 fits the whole career in the frame,
     // more shows exactly that many years (css/timeline.css keeps the lane
@@ -32,11 +35,13 @@
     if (current) current.scrollIntoView({ block: 'nearest', inline: 'center' });
     else scroller.scrollLeft = scroller.scrollWidth;
   };
-  zoom.addEventListener('click', (event) => {
-    const button = event.target.closest('button[data-years]');
-    if (button) setZoom(button.dataset.years);
-  });
-  zoom.hidden = false;
+  if (scripted) {
+    zoom.addEventListener('click', (event) => {
+      const button = event.target.closest('button[data-years]');
+      if (button) setZoom(button.dataset.years);
+    });
+    zoom.hidden = false;
+  }
 
   // The entry a bar leads to: its bar marked, the entry set apart, the URL
   // naming it. Done here, not with :target — nav.js takes the click over to
@@ -78,7 +83,7 @@
     );
     if (bar) reveal(bar);
   });
-  setZoom('5');
+  if (scripted) setZoom('5');
 
   // Arrow keys: along a lane in time order, across lanes to the closest in time.
   const centre = (bar) => bar.offsetLeft + bar.offsetWidth / 2;
