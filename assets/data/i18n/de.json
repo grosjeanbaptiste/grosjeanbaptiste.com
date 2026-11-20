@@ -123,8 +123,11 @@
     },
     {
       "studyType": "C.E.S.S.",
-      "area": "Allgemeine Studien — Mathematik und moderne Sprachen",
+      "area": "Allgemeine Studien — Mathematik 6 Std., Moderne Sprachen 8 Std.",
       "gpa": "Satis bene"
+    },
+    {
+      "area": "Technischer Übergang — Naturwissenschaften 8 Std., Moderne Sprachen 8 Std."
     },
     {
       "area": "Allgemeine Studien — Latein und Griechisch"
@@ -510,11 +513,6 @@
     }
   ],
   "competitions": [
-    {
-      "title": "SoCraTes BE 2026",
-      "organizer": "SoCraTes BE",
-      "summary": "Unkonferenz für Software Crafters, 22.–25. Oktober in La Roche-en-Ardenne: Coding Dojos, Pair Programming, Workshops und Diskussionen, mit einer von den Teilnehmenden gestalteten Agenda."
-    },
     {
       "title": "SoCraTes BE 2023",
       "organizer": "SoCraTes BE",

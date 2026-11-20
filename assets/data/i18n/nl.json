@@ -123,8 +123,11 @@
     },
     {
       "studyType": "C.E.S.S.",
-      "area": "Algemene studies — Wiskunde en moderne talen",
+      "area": "Algemene studies — Wiskunde 6u, Moderne talen 8u",
       "gpa": "Satis bene"
+    },
+    {
+      "area": "Technische overgang — Wetenschappen 8u, Moderne talen 8u"
     },
     {
       "area": "Algemene studies — Latijn en Grieks"
@@ -507,11 +510,6 @@
     }
   ],
   "competitions": [
-    {
-      "title": "SoCraTes BE 2026",
-      "organizer": "SoCraTes BE",
-      "summary": "Unconference voor software crafters, 22–25 oktober in La Roche-en-Ardenne: coding dojo's, pair programming, workshops en discussies, met een agenda die de deelnemers zelf bepalen."
-    },
     {
       "title": "SoCraTes BE 2023",
       "organizer": "SoCraTes BE",

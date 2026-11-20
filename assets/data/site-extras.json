@@ -39,7 +39,6 @@
       "skills": [
         "Python",
         "Java",
-        ".NET",
         "RAG",
         "OCR",
         "SentenceTransformers",
@@ -334,6 +333,9 @@
     },
     {
       "gpa": "Satis bene",
+      "schedule": "day"
+    },
+    {
       "schedule": "day"
     },
     {
@@ -1001,14 +1003,6 @@
     ]
   },
   "competitions": [
-    {
-      "key": "SoCraTesBE2026",
-      "title": "SoCraTes BE 2026",
-      "date": "2026-10-22",
-      "organizer": "SoCraTes BE",
-      "summary": "Unconference for software crafters, 22–25 October in La Roche-en-Ardenne: coding dojos, pair programming, workshops and discussions, with an agenda set by the participants.",
-      "url": "https://socratesbe.org"
-    },
     {
       "key": "SoCraTesBE2023",
       "title": "SoCraTes BE 2023",

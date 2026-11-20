@@ -123,8 +123,11 @@
     },
     {
       "studyType": "C.E.S.S.",
-      "area": "Estudios generales — Matemáticas y lenguas modernas",
+      "area": "Estudios generales — Matemáticas 6h, Lenguas modernas 8h",
       "gpa": "Satis bene"
+    },
+    {
+      "area": "Transición técnica — Ciencias 8h, Lenguas modernas 8h"
     },
     {
       "area": "Estudios generales — Latín y griego"
@@ -510,11 +513,6 @@
     }
   ],
   "competitions": [
-    {
-      "title": "SoCraTes BE 2026",
-      "organizer": "SoCraTes BE",
-      "summary": "Unconference para software crafters, del 22 al 25 de octubre en La Roche-en-Ardenne: coding dojos, pair programming, talleres y debates, con un programa fijado por los participantes."
-    },
     {
       "title": "SoCraTes BE 2023",
       "organizer": "SoCraTes BE",

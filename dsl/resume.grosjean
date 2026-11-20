@@ -64,7 +64,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             location t{ en: "Brussels, Belgium", fr: "Bruxelles, Belgique", nl: "Brussel, België", es: "Bruselas, Bélgica", de: "Brüssel, Belgien", zh: "布鲁塞尔，比利时" }
             period 2025-11-03..2026-06-30
             summary t{ en: "AI research and engineering for the Belgian Federal Parliament. Designed an internal platform that lets staff search, explore and converse with the parliamentary archives. Authored an open evaluation protocol that compares retrieval strategies on the Senate corpus, with a focus on bilingual FR/NL robustness.", fr: "Recherche et ingénierie IA pour le Parlement fédéral belge. Conception d'une plateforme interne permettant au personnel de chercher, explorer et converser avec les archives parlementaires. Auteur d'un protocole d'évaluation ouvert qui compare les stratégies de retrieval sur le corpus du Sénat, avec un focus sur la robustesse bilingue FR/NL.", nl: "AI-onderzoek en engineering voor het Belgisch federaal Parlement. Ontwerp van een intern platform waarmee medewerkers de parlementaire archieven kunnen doorzoeken, verkennen en bevragen. Auteur van een open evaluatieprotocol dat retrieval-strategieën vergelijkt op het Senaat-corpus, met focus op tweetalige FR/NL-robuustheid.", es: "Investigación e ingeniería de IA para el Parlamento federal belga. Diseño de una plataforma interna que permite al personal buscar, explorar y conversar con los archivos parlamentarios. Autor de un protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado, con énfasis en la robustez bilingüe FR/NL.", de: "KI-Forschung und Engineering für das belgische Bundesparlament. Entwurf einer internen Plattform, die Mitarbeitern erlaubt, parlamentarische Archive zu durchsuchen, zu erkunden und zu befragen. Autor eines offenen Bewertungsprotokolls, das Retrieval-Strategien auf dem Senatskorpus mit Fokus auf zweisprachige FR/NL-Robustheit vergleicht.", zh: "为比利时联邦议会进行 AI 研究和工程。设计了一个内部平台，让工作人员可以搜索、探索和与议会档案对话。撰写了一个开源评估协议，比较参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。" }
-            uses [Python, Java, ".NET", RAG, OCR, SentenceTransformers, Pandas]
+            uses [Python, Java, RAG, OCR, SentenceTransformers, Pandas]
             projects [ref Synergy, ref FedRAGBE]
         }
         AISoftwareCrafterLead {
@@ -368,9 +368,14 @@ TFE: WebMenu 2.0
         CentreScolaireSaintAdrienValDuchesse {
             institution "Centre Scolaire Saint-Adrien - Val Duchesse"
             studyType t{ en: "C.E.S.S.", fr: "C.E.S.S.", nl: "C.E.S.S.", es: "C.E.S.S.", de: "C.E.S.S.", zh: "C.E.S.S." }
-            area t{ en: "General Studies Maths & Modern languages", fr: "Études générales — Mathématiques et langues modernes", nl: "Algemene studies — Wiskunde en moderne talen", es: "Estudios generales — Matemáticas y lenguas modernas", de: "Allgemeine Studien — Mathematik und moderne Sprachen", zh: "通识学习 — 数学和现代语言" }
-            period 2012-09-30..2015-06-30
+            area t{ en: "General Studies — Maths 6h, Modern languages 8h", fr: "Études générales — Mathématiques 6h, Langues modernes 8h", nl: "Algemene studies — Wiskunde 6u, Moderne talen 8u", es: "Estudios generales — Matemáticas 6h, Lenguas modernas 8h", de: "Allgemeine Studien — Mathematik 6 Std., Moderne Sprachen 8 Std.", zh: "通识学习 — 数学 6 小时，现代语言 8 小时" }
+            period 2013-09-30..2015-06-30
             score t{ en: "Satis bene", fr: "Satis bene", nl: "Satis bene", es: "Satis bene", de: "Satis bene", zh: "Satis bene" }
+        }
+        CentreScolaireSaintAdrienValDuchesse4e {
+            institution "Centre Scolaire Saint-Adrien - Val Duchesse"
+            area t{ en: "Technical transition — Sciences 8h, Modern languages 8h", fr: "Transition technique — Sciences 8h, Langues modernes 8h", nl: "Technische overgang — Wetenschappen 8u, Moderne talen 8u", es: "Transición técnica — Ciencias 8h, Lenguas modernas 8h", de: "Technischer Übergang — Naturwissenschaften 8 Std., Moderne Sprachen 8 Std.", zh: "技术过渡 — 科学 8 小时，现代语言 8 小时" }
+            period 2012-09-30..2013-06-30
         }
         LyceeMaterDei {
             institution "Lycée Mater Dei"
@@ -554,7 +559,7 @@ TFE: WebMenu 2.0
             name "Synergy"
             description t{ en: "Internal platform for the Belgian Federal Parliament to search, explore and converse with the parliamentary archives.", fr: "Plateforme interne du Parlement fédéral belge pour chercher, explorer et converser avec les archives parlementaires.", nl: "Intern platform van het Belgisch federaal Parlement om de parlementaire archieven te doorzoeken, verkennen en bevragen.", es: "Plataforma interna del Parlamento federal belga para buscar, explorar y conversar con los archivos parlamentarios.", de: "Interne Plattform des belgischen Bundesparlaments zum Durchsuchen, Erkunden und Befragen der parlamentarischen Archive.", zh: "比利时联邦议会的内部平台，用于搜索、探索并与议会档案对话。" }
             summary t{ en: "Internal platform that lets parliamentary staff search, explore and converse with the archives of the Belgian Federal Parliament, powered by a retrieval-augmented pipeline with bilingual FR/NL support.", fr: "Plateforme interne permettant au personnel parlementaire de chercher, explorer et converser avec les archives du Parlement fédéral belge, portée par un pipeline de retrieval-augmented generation avec prise en charge bilingue FR/NL.", nl: "Intern platform waarmee parlementaire medewerkers de archieven van het Belgisch federaal Parlement kunnen doorzoeken, verkennen en bevragen, aangedreven door een retrieval-augmented pijplijn met tweetalige FR/NL-ondersteuning.", es: "Plataforma interna que permite al personal parlamentario buscar, explorar y conversar con los archivos del Parlamento federal belga, impulsada por un pipeline de retrieval-augmented generation con soporte bilingüe FR/NL.", de: "Interne Plattform, die parlamentarischen Mitarbeitern ermöglicht, die Archive des belgischen Bundesparlaments zu durchsuchen, zu erkunden und zu befragen — angetrieben von einer Retrieval-Augmented-Pipeline mit zweisprachiger FR/NL-Unterstützung.", zh: "内部平台，让议会工作人员可以搜索、探索并与比利时联邦议会的档案对话，由检索增强（RAG）管道驱动，支持法语/荷兰语双语。" }
-            keywords [Python, Java, ".NET", RAG, AI]
+            keywords [Python, Java, RAG, AI]
             startDate 2025-11-03
             endDate 2026-06-30
             type t{ en: "Platform", fr: "Plateforme", es: "Plataforma", de: "Plattform", zh: "平台" }
@@ -1164,13 +1169,6 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
 
     // ---------- competitions ----------
     competitions {
-        SoCraTesBE2026 {
-            title t{ en: "SoCraTes BE 2026", fr: "SoCraTes BE 2026", nl: "SoCraTes BE 2026", es: "SoCraTes BE 2026", de: "SoCraTes BE 2026", zh: "SoCraTes BE 2026" }
-            date 2026-10-22
-            organizer t{ en: "SoCraTes BE", fr: "SoCraTes BE", nl: "SoCraTes BE", es: "SoCraTes BE", de: "SoCraTes BE", zh: "SoCraTes BE" }
-            url "https://socratesbe.org"
-            summary t{ en: "Unconference for software crafters, 22–25 October in La Roche-en-Ardenne: coding dojos, pair programming, workshops and discussions, with an agenda set by the participants.", fr: "Non-conférence pour software crafters, du 22 au 25 octobre à La Roche-en-Ardenne : coding dojos, pair programming, ateliers et discussions, au programme fixé par les participants.", nl: "Unconference voor software crafters, 22–25 oktober in La Roche-en-Ardenne: coding dojo's, pair programming, workshops en discussies, met een agenda die de deelnemers zelf bepalen.", es: "Unconference para software crafters, del 22 al 25 de octubre en La Roche-en-Ardenne: coding dojos, pair programming, talleres y debates, con un programa fijado por los participantes.", de: "Unkonferenz für Software Crafters, 22.–25. Oktober in La Roche-en-Ardenne: Coding Dojos, Pair Programming, Workshops und Diskussionen, mit einer von den Teilnehmenden gestalteten Agenda.", zh: "面向软件工匠（software crafters）的非会议活动，10 月 22–25 日于 La Roche-en-Ardenne 举行：编程道场、结对编程、工作坊和讨论，议程由参与者共同决定。" }
-        }
         SoCraTesBE2023 {
             title t{ en: "SoCraTes BE 2023", fr: "SoCraTes BE 2023", nl: "SoCraTes BE 2023", es: "SoCraTes BE 2023", de: "SoCraTes BE 2023", zh: "SoCraTes BE 2023" }
             date 2023-11-10

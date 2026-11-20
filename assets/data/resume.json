@@ -266,9 +266,15 @@
     {
       "institution": "Centre Scolaire Saint-Adrien - Val Duchesse",
       "studyType": "C.E.S.S.",
-      "area": "General Studies Maths & Modern languages",
-      "startDate": "2012-09-30",
+      "area": "General Studies — Maths 6h, Modern languages 8h",
+      "startDate": "2013-09-30",
       "endDate": "2015-06-30"
+    },
+    {
+      "institution": "Centre Scolaire Saint-Adrien - Val Duchesse",
+      "area": "Technical transition — Sciences 8h, Modern languages 8h",
+      "startDate": "2012-09-30",
+      "endDate": "2013-06-30"
     },
     {
       "institution": "Lycée Mater Dei",
@@ -642,7 +648,6 @@
       "keywords": [
         "Python",
         "Java",
-        ".NET",
         "RAG",
         "AI"
       ],

@@ -123,8 +123,11 @@
     },
     {
       "studyType": "C.E.S.S.",
-      "area": "通识学习 — 数学和现代语言",
+      "area": "通识学习 — 数学 6 小时，现代语言 8 小时",
       "gpa": "Satis bene"
+    },
+    {
+      "area": "技术过渡 — 科学 8 小时，现代语言 8 小时"
     },
     {
       "area": "通识学习 — 拉丁语和希腊语"
@@ -512,11 +515,6 @@
     }
   ],
   "competitions": [
-    {
-      "title": "SoCraTes BE 2026",
-      "organizer": "SoCraTes BE",
-      "summary": "面向软件工匠（software crafters）的非会议活动，10 月 22–25 日于 La Roche-en-Ardenne 举行：编程道场、结对编程、工作坊和讨论，议程由参与者共同决定。"
-    },
     {
       "title": "SoCraTes BE 2023",
       "organizer": "SoCraTes BE",
