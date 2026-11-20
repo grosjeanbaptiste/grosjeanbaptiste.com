@@ -817,7 +817,7 @@
 
   /* !important: the zoom writes the grid's width inline. */
   #print-verso .tl-grid {
-    --row-height: 11pt;
+    --row-height: 9pt;
     --lane-label: 2.6cm;
     width: 100% !important;
     min-width: 0;

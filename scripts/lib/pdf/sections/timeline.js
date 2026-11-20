@@ -13,7 +13,7 @@ const TITLES = { x: -23, width: 21, size: 7.5 };
 const TRACK = 257;
 // A row. The landscape page is 192 mm tall for the timeline and the
 // references under it.
-const PITCH = 3.6;
+const PITCH = 3;
 const FONT = 6.5;
 // The busy years of the career get the width the quiet ones can spare.
 const DENSITY = 0.6;
