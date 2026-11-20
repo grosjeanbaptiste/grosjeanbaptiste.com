@@ -1,9 +1,11 @@
 /* The open entry, shown over the page. No script: an entry the URL points at
    (a bar of the timeline, a search result, a shared link) is lifted out of the
-   flow, so the timeline stays where it is. */
+   flow, so the timeline stays where it is. A project, course unit or
+   volunteering row is pointed at by the empty span at its end. */
 .entry-close { display: none; }
 
-.item:target {
+.item:target,
+li:has(> .tl-anchor:target) {
   position: fixed;
   left: 50%;
   bottom: 1rem;
@@ -20,7 +22,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.item:target .entry-close {
+.item:target .entry-close,
+li:has(> .tl-anchor:target) > .entry-close {
   position: sticky;
   top: 0;
   float: right;
@@ -35,13 +38,25 @@
   border-radius: 50%;
 }
 
+/* The link of a row comes last in it, so it is placed at the panel's corner. */
+li:has(> .tl-anchor:target) > .entry-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  float: none;
+}
+
 .item:target .entry-close:hover,
-.item:target .entry-close:focus-visible {
+.item:target .entry-close:focus-visible,
+li:has(> .tl-anchor:target) > .entry-close:hover,
+li:has(> .tl-anchor:target) > .entry-close:focus-visible {
   color: var(--text-color);
   background: var(--border-color);
 }
 
 @media print {
-  .item:target { position: static; transform: none; width: auto; max-height: none; box-shadow: none; }
-  .item:target .entry-close { display: none; }
+  .item:target,
+li:has(> .tl-anchor:target) { position: static; transform: none; width: auto; max-height: none; box-shadow: none; }
+  .item:target .entry-close,
+li:has(> .tl-anchor:target) > .entry-close { display: none; }
 }

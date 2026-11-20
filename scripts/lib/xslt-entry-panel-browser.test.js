@@ -31,7 +31,25 @@ addEventListener('load', () => setTimeout(() => {
     setTimeout(() => {
       seen.afterClose = [pos(item), location.hash];
       seen.scripts = all('script[src]').map((s) => s.getAttribute('src')).filter((src) => /entry|drawer/.test(src));
-      document.documentElement.setAttribute('data-entry-panel', JSON.stringify(seen));
+      // A project, a course unit or a volunteering row: its bar leads to an
+      // empty span at the row's end, and the row is what becomes the panel.
+      const anchor = $('li > .tl-anchor[id]');
+      const row = anchor.parentElement;
+      seen.rows = all('li > .tl-anchor[id]').length;
+      seen.rowBefore = [pos(row), !!row.querySelector(':scope > .entry-close')];
+      const rowTop = $('#timeline').getBoundingClientRect().top;
+      location.hash = anchor.id;
+      setTimeout(() => {
+        const rclose = row.querySelector(':scope > .entry-close');
+        seen.row = [pos(row), !!rclose && rclose.checkVisibility(), row.getBoundingClientRect().bottom <= innerHeight + 1];
+        seen.rowTimelineStays = $('#timeline').getBoundingClientRect().top === rowTop;
+        seen.rowOthers = all('li').filter((l) => l !== row && !l.contains(row)).every((l) => pos(l) === 'static');
+        rclose?.click();
+        setTimeout(() => {
+          seen.rowAfter = [pos(row), location.hash];
+          document.documentElement.setAttribute('data-entry-panel', JSON.stringify(seen));
+        }, 150);
+      }, 150);
     }, 150);
   }, 150);
 }, 900));
@@ -65,3 +83,16 @@ check('closing leaves the timeline in the URL and the entry in the flow', () =>
   assert.deepEqual(seen.afterClose, ['static', '#timeline']),
 );
 check('none of it needs a script', () => assert.deepEqual(seen.scripts, []));
+
+check('every project, course unit and volunteering row has a way out of its panel', () => {
+  assert.ok(seen.rows > 0);
+  assert.deepEqual(seen.rowBefore, ['static', true]);
+});
+check('the row a bar leads to becomes a panel too, on screen, the timeline unmoved', () => {
+  assert.deepEqual(seen.row, ['fixed', true, true]);
+  assert.equal(seen.rowTimelineStays, true);
+});
+check('the other rows stay in the flow', () => assert.equal(seen.rowOthers, true));
+check('closing a row leaves the timeline in the URL and the row in the flow', () =>
+  assert.deepEqual(seen.rowAfter, ['static', '#timeline']),
+);

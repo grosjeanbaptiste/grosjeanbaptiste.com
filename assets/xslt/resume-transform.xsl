@@ -1012,6 +1012,7 @@
     <xsl:param name="host"/>
     <xsl:if test="anchoredIn and anchoredIn = $host">
       <span class="tl-anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></span>
+      <xsl:call-template name="entry-close"/>
     </xsl:if>
   </xsl:template>
 
