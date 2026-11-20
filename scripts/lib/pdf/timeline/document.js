@@ -7,20 +7,31 @@ const { tex } = require('../tex');
 const { formatLongDate } = require('../today');
 const { timelineBars } = require('./bars');
 const { layOut, TimelineOverflow } = require('./page');
+const { contactItems } = require('../sections/header');
+const { highestObtainedDegree, formatDegreeLine } = require('../../degrees');
 const { gatherNewest } = require('./gather');
 const { buildPicture } = require('./picture');
 
 // The busy years of the career get the width the quiet ones can spare.
 const DENSITY = 0.6;
 
+// Photo, then the name, the contacts and the highest degree, with the title
+// and the date flush right. ~22 mm: HEIGHT in ./page.js is what is left under it.
 function buildHeader(resume, t, lang, today, years) {
   const b = resume.basics || {};
   // The 2- and 5-year PDFs say so beside the date; the whole career needs no note.
   const span = years === null ? '' : `${tex(t.timelineSpan(years))} · `;
+  const { main, profiles } = contactItems(b);
+  const degree = formatDegreeLine(highestObtainedDegree(resume.education), lang);
+  const contacts = [...main, ...profiles].join('\\quad ');
   return [
-    `\\noindent{\\color{name}\\namefont ${tex(b.name)}}\\hfill{\\color{heading}\\LARGE\\rmfamily\\bfseries\\MakeUppercase{${tex(t.timeline)}}}\\par`,
-    `\\noindent{\\color{tagline}\\large\\bfseries ${tex(b.label)}}\\hfill{\\color{body}\\small ${span}${tex(t.updated)} ${tex(formatLongDate(today, lang))}}\\par`,
-    '\\vspace{1mm}{\\color{headingrule}\\rule{\\linewidth}{1.5pt}}\\par\\vspace{4mm}',
+    '\\noindent\\begin{minipage}[c]{17mm}\\includegraphics[height=17mm]{profil}\\end{minipage}\\hspace{4mm}%',
+    '\\begin{minipage}[c]{\\dimexpr\\linewidth-21mm\\relax}',
+    `{\\color{name}\\namefont ${tex(b.name)}}\\hfill{\\color{heading}\\LARGE\\rmfamily\\bfseries\\MakeUppercase{${tex(t.timeline)}}}\\par`,
+    `{\\color{tagline}\\large\\bfseries ${tex(b.label)}}${degree ? `\\quad{\\color{body}\\footnotesize\\faGraduationCap\\ ${tex(degree)}}` : ''}\\hfill{\\color{body}\\small ${span}${tex(t.updated)} ${tex(formatLongDate(today, lang))}}\\par`,
+    `{\\footnotesize ${contacts}}\\par`,
+    '\\end{minipage}\\par',
+    '\\vspace{1mm}{\\color{headingrule}\\rule{\\linewidth}{1.5pt}}\\par\\vspace{3mm}',
   ].join('\n');
 }
 

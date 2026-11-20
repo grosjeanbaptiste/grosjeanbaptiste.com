@@ -48,3 +48,17 @@ test('a bar cut by the span points left, past the start of the axis', () => {
     /\(-0\.20,[^)]*\) -- \(-1\.60,[^)]*\) -- \(-0\.20,[^)]*\) -- cycle/,
   );
 });
+
+test('the header carries the photo, the contacts and the highest degree', () => {
+  const cv = {
+    ...resume,
+    basics: { ...resume.basics, email: 'a@b.c', phone: '+32 1' },
+    education: [
+      { institution: 'UMons', studyType: 'Master', area: 'Informatique', startDate: '2022-10', endDate: '2026-09' },
+    ],
+  };
+  const tex = generateTimelineLatex(cv, 'fr', TODAY);
+  assert.match(tex, /\\includegraphics\[height=17mm\]\{profil\}/);
+  assert.match(tex, /\\email\{a@b\.c\}/);
+  assert.match(tex, /faGraduationCap[^\n]*Informatique/);
+});
