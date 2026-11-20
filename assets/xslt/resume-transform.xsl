@@ -456,6 +456,9 @@
           }
           @page { size: A4; margin: 0.8cm 0.9cm; } /* \geometry of the LaTeX CV */
           @page verso { size: A4 landscape; margin: 0.8cm 0.9cm; } /* \begin{landscape} */
+          /* The PDFs are read on screen; the sheet is the CV itself. */
+          @media print { #pdf { display: none; } }
+
           @media print {
             .toolbar { display: none; }
             /* Force the light palette so a dark-mode reader still prints a
@@ -816,7 +819,7 @@
             <xsl:for-each select="meta/sectionOrder/section">
               <xsl:variable name="name" select="."/>
               <xsl:choose>
-                <xsl:when test="$name='about'"><xsl:call-template name="main-about"/><xsl:call-template name="timeline"/></xsl:when>
+                <xsl:when test="$name='about'"><xsl:call-template name="main-about"/><xsl:call-template name="timeline"/><xsl:call-template name="pdf-reader"/></xsl:when>
                 <xsl:when test="$name='work'"><xsl:call-template name="main-work"/></xsl:when>
                 <xsl:when test="$name='education'"><xsl:call-template name="main-education"/></xsl:when>
                 <xsl:when test="$name='awards'"><xsl:call-template name="main-awards"/></xsl:when>
@@ -1197,6 +1200,47 @@
        (:target, no script); this is the way out of it, back to the timeline. -->
   <xsl:template name="entry-close">
     <a class="entry-close" href="#timeline" aria-label="×">×</a>
+  </xsl:template>
+
+  <!-- The PDFs, read in the page: one <details> each, all of one named group,
+       so the browser keeps one open — the tabs of a reader, with no script and
+       no sheet. The browser's own viewer in the <object> zooms and downloads;
+       one that cannot show a PDF hands the file over. -->
+  <xsl:template name="pdf-reader">
+    <section id="pdf">
+      <h2><xsl:value-of select="/resume/meta/views/view[id='pdf']/label"/></h2>
+      <xsl:call-template name="pdf-panel">
+        <xsl:with-param name="summary" select="/resume/meta/views/view[id='pdf']/label"/>
+        <xsl:with-param name="file" select="concat('/assets/cv/cv_grosjean_baptiste_', $lang, '.pdf')"/>
+      </xsl:call-template>
+      <xsl:for-each select="/resume/meta/timeline/pdf">
+        <xsl:variable name="label" select="label"/>
+        <xsl:call-template name="pdf-panel">
+          <xsl:with-param name="summary" select="concat($label, ' · ', ../zooms/zoom[years = 2]/label)"/>
+          <xsl:with-param name="file" select="two"/>
+        </xsl:call-template>
+        <xsl:call-template name="pdf-panel">
+          <xsl:with-param name="summary" select="concat($label, ' · ', ../zooms/zoom[years = 5]/label)"/>
+          <xsl:with-param name="file" select="five"/>
+        </xsl:call-template>
+        <xsl:call-template name="pdf-panel">
+          <xsl:with-param name="summary" select="concat($label, ' · ', ../zooms/zoom[years = 'all']/label)"/>
+          <xsl:with-param name="file" select="all"/>
+        </xsl:call-template>
+      </xsl:for-each>
+    </section>
+  </xsl:template>
+
+  <xsl:template name="pdf-panel">
+    <xsl:param name="summary"/>
+    <xsl:param name="file"/>
+    <details name="cv-reader">
+      <summary><xsl:value-of select="$summary"/></summary>
+      <object type="application/pdf" width="100%" height="800">
+        <xsl:attribute name="data"><xsl:value-of select="$file"/></xsl:attribute>
+        <a><xsl:attribute name="href"><xsl:value-of select="$file"/></xsl:attribute><xsl:value-of select="$summary"/></a>
+      </object>
+    </details>
   </xsl:template>
 
   <xsl:template name="main-work">
