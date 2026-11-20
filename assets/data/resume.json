@@ -391,7 +391,7 @@
       ]
     },
     {
-      "name": "Converge",
+      "name": "ActConverge",
       "description": "AI-assisted 3D mechanical design platform that orchestrates open-source geometry, meshing and simulation engines.",
       "keywords": [
         "Rust",
