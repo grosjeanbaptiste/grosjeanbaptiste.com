@@ -170,7 +170,7 @@ function generateMain(resume, lang, today = new Date()) {
   const onPage = idsOf(sections);
   const { timeline, search } = generateBrowsing(resume, lang, today, onPage);
   const at = sections.findIndex(([name]) => name === 'about') + 1;
-  sections.splice(at, 0, ['timeline', timeline]);
+  sections.splice(at, 0, ['timeline', `${timeline}\n<div id="entry-panel-slot"></div>`]);
   sections.push(['search', search]);
   return sections.map(([, html]) => html).join('\n\n');
 }
