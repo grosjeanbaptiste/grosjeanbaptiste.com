@@ -679,6 +679,7 @@
              styles, which keep the last word on the chips). -->
         <link rel="stylesheet" href="/css/browse.css"/>
         <link rel="stylesheet" href="/css/skill-links.css"/>
+        <link rel="stylesheet" href="/css/entry-panel.css"/>
         <script src="/js/timeline.js" defer="defer"></script>
         <script src="/js/search-rank.js" defer="defer"></script>
         <script src="/js/search.js" defer="defer"></script>
@@ -1191,6 +1192,12 @@
     </xsl:if>
   </xsl:template>
 
+  <!-- The entry the URL points at is lifted into a panel by css/entry-panel.css
+       (:target, no script); this is the way out of it, back to the timeline. -->
+  <xsl:template name="entry-close">
+    <a class="entry-close" href="#timeline" aria-label="×">×</a>
+  </xsl:template>
+
   <xsl:template name="main-work">
     <xsl:if test="/resume/work/job">
               <section id="experience">
@@ -1202,6 +1209,7 @@
                        history, only the sheet is trimmed. -->
                   <xsl:attribute name="class">item<xsl:if test="position() &gt; 8"> print-hidden</xsl:if></xsl:attribute>
                   <xsl:if test="anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></xsl:if>
+                  <xsl:call-template name="entry-close"/>
                   <h3>
                     <xsl:value-of select="position"/>
                     <xsl:if test="client"> · <xsl:value-of select="client"/></xsl:if>
@@ -1310,6 +1318,7 @@
                        degrees summary, so the sheet shows the top two only. -->
                   <xsl:attribute name="class">item<xsl:if test="position() &gt; 2"> print-hidden</xsl:if></xsl:attribute>
                   <xsl:if test="anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></xsl:if>
+                  <xsl:call-template name="entry-close"/>
                   <h3>
                     <xsl:value-of select="studyType"/>
                     <xsl:if test="area"> — <xsl:value-of select="area"/></xsl:if>

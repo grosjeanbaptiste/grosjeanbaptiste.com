@@ -1,0 +1,47 @@
+/* The open entry, shown over the page. No script: an entry the URL points at
+   (a bar of the timeline, a search result, a shared link) is lifted out of the
+   flow, so the timeline stays where it is. */
+.entry-close { display: none; }
+
+.item:target {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  width: min(720px, calc(100vw - 2rem));
+  max-height: 55vh;
+  overflow-y: auto;
+  z-index: 30;
+  box-sizing: border-box;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.item:target .entry-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--muted-color);
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.item:target .entry-close:hover,
+.item:target .entry-close:focus-visible {
+  color: var(--text-color);
+  background: var(--border-color);
+}
+
+@media print {
+  .item:target { position: static; transform: none; width: auto; max-height: none; box-shadow: none; }
+  .item:target .entry-close { display: none; }
+}
