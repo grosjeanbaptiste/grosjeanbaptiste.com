@@ -460,6 +460,26 @@
             #profile-picture { max-width: 160px; }
             blockquote { font-size: 0.88em; padding: 6px 12px; }
           }
+          @media screen and (max-width: 820px) {
+            /* The identity, then the CV; the long lists of the sidebar (projects,
+               skills, a typical day) come after it, not before the first line of it. */
+            .container { gap: 0; }
+            .sidebar { display: contents; }
+            .sidebar > * {
+              background: var(--bg-sidebar);
+              margin-block: 0 !important;
+              padding: 3px 18px;
+            }
+            .sidebar > #profile-picture { padding: 18px 0 0; }
+            .sidebar > .lang-item:last-of-type { padding-bottom: 14px; }
+            .main { order: 1; margin-top: 14px; }
+            .sidebar > .print-drop, .sidebar > .skill-tags,
+            .sidebar > h2:nth-of-type(n+2), .sidebar > .day-list { order: 2; }
+            .sidebar > h2:nth-of-type(2) { margin-top: 14px; padding-top: 14px; }
+          }
+          @media screen and (max-width: 480px) {
+            .container { gap: 0; }
+          }
           @page { size: A4; margin: 0.8cm 0.9cm; } /* \geometry of the LaTeX CV */
           @page verso { size: A4 landscape; margin: 0.8cm 0.9cm; } /* \begin{landscape} */
           /* The PDFs are read on screen; the sheet is the CV itself. */
