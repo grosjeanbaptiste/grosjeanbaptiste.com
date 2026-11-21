@@ -356,14 +356,14 @@
         "Rust",
         "OpenSource"
       ],
-      "startDate": "2026-09-23",
+      "startDate": "2026-11-02",
       "type": "Project family",
       "roles": [
         "Author"
       ]
     },
     {
-      "name": "Indexer",
+      "name": "Actindexer",
       "description": "Curated index of external data sources, books and software packages, served as a public read API.",
       "keywords": [
         "Rust",
@@ -379,8 +379,7 @@
       "type": "API",
       "roles": [
         "Author"
-      ],
-      "partOf": "OpenActe"
+      ]
     },
     {
       "name": "Polytech",
@@ -398,12 +397,11 @@
         "TDD",
         "MutationTesting"
       ],
-      "startDate": "2026-09-23",
+      "startDate": "2026-11-02",
       "type": "Library",
       "roles": [
         "Author"
-      ],
-      "partOf": "OpenActe"
+      ]
     },
     {
       "name": "ActConverge",
@@ -427,8 +425,7 @@
       "type": "Platform",
       "roles": [
         "Author"
-      ],
-      "partOf": "OpenActe"
+      ]
     },
     {
       "name": "Actrack",
@@ -476,8 +473,7 @@
       "type": "Desktop application",
       "roles": [
         "Author"
-      ],
-      "partOf": "OpenActe"
+      ]
     },
     {
       "name": "Actmorph",
@@ -515,8 +511,7 @@
       "type": "Orchestrator",
       "roles": [
         "Author"
-      ],
-      "partOf": "OpenActe"
+      ]
     },
     {
       "name": "Actos",

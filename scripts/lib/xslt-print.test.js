@@ -87,7 +87,7 @@ test('a long project list carries each project kind, for the sheet', () => {
   const html = render('en');
   assert.match(
     html,
-    /<div class="embedded-projects many">(?:(?!<\/div>).)*Indexer<\/strong>(?:(?!<\/li>).)*<span class="project-kind"> · API<\/span>/s,
+    /<div class="embedded-projects many">(?:(?!<\/div>).)*Actindexer<\/strong>(?:(?!<\/li>).)*<span class="project-kind"> · API<\/span>/s,
     'the Acteble projects are not marked as a long list with their kinds',
   );
 });

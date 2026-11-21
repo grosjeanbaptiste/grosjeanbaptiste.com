@@ -316,8 +316,9 @@
           }
           .toolbar .download:hover { background: var(--primary); border-color: var(--primary); }
 
-          /* The type grows with the screen past 1540px, so the page keeps its proportions. */
-          html { font-size: max(16px, 1.04vw); }
+          /* The type grows with the screen past 1540px, up to 20px (1920px): beyond
+             that the page keeps filling the width but the elements stop growing. */
+          html { font-size: clamp(16px, 1.04vw, 20px); }
           .container {
             display: flex;
             flex-direction: row;
