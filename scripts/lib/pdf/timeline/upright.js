@@ -160,7 +160,10 @@ function texOf(line) {
     if (run && run.bold === bold) run.text += ` ${tex(w)}`;
     else runs.push({ bold, text: tex(w) });
   }
-  return runs.map((r) => (r.bold ? `\\textbf{${r.text}}` : r.text)).join(' ');
+  // The name in bold, what follows it (the role, a degree's title) in the grey of body text.
+  return runs
+    .map((r) => (r.bold ? `\\textbf{${r.text}}` : `{\\color{BodyColor}${r.text}}`))
+    .join(' ');
 }
 
 // Labels in order of date, newest first, each as near its bar's top as the ones
