@@ -10,14 +10,15 @@
 li:has(> .tl-anchor:target) {
   position: fixed;
   left: 50%;
-  bottom: 1rem;
+  bottom: 0.5rem;
   transform: translateX(-50%);
-  width: min(720px, calc(100vw - 2rem));
-  max-height: 55vh;
+  width: min(560px, calc(100vw - 1rem));
+  max-height: 30vh;
   overflow-y: auto;
   z-index: 30;
   box-sizing: border-box;
-  padding: clamp(1.25rem, 3vw, 2rem);
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
   background: var(--card-background);
   border: 1px solid var(--border-color);
   border-radius: 8px;
