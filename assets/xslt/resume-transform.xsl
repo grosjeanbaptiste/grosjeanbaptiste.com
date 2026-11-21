@@ -325,12 +325,13 @@
             gap: 20px;
           }
           .sidebar {
-            width: 28%;
+            flex: 0 0 auto;
+            width: clamp(240px, 24vw, 380px);
             background: var(--bg-sidebar);
             padding: 24px 20px;
             border-radius: 8px;
           }
-          .main { width: 72%; padding: 20px; }
+          .main { flex: 1 1 0; min-width: 0; padding: 20px; }
           #profile-picture {
             width: 100%;
             border-radius: 50%;
@@ -422,7 +423,7 @@
               padding: 14px;
               gap: 14px;
             }
-            .sidebar, .main { width: 100%; padding: 18px; }
+            .sidebar, .main { flex: none; width: 100%; padding: 18px; }
             #profile-picture { max-width: 220px; margin: 0 auto 16px; }
             .toolbar { padding: 8px 12px; font-size: 0.8em; gap: 8px; }
             .toolbar a, .toolbar button { padding: 3px 7px; font-size: 0.85em; }
