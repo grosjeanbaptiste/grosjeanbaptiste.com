@@ -11,7 +11,7 @@ const { schoolYears } = require('./page');
 const { LANE_TITLE, MOON, fillOf, isEvening } = require('./picture');
 
 const WIDTH = 190; // what the page leaves between its margins
-const HEIGHT = 261; // the time axis
+const HEIGHT = 236; // the time axis
 const AXIS = 8; // the years, left of the lanes
 const LANE_GAP = 3.5;
 const BAR = 1.5; // a bar's width, and the gap beside it

@@ -73,6 +73,8 @@ function buildTimelineDocument(resume, lang, today, years = null) {
     buildHeader(resume, t, lang, today, years),
     buildPicture(sheet, t),
     '\\end{landscape}',
+    // The same header, then the timeline upright under it.
+    buildHeader(resume, t, lang, today, years),
     buildUpright(upright, t),
     '\\end{document}',
     '',
