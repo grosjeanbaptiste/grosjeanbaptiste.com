@@ -1,0 +1,51 @@
+/* What the classic page does with a few lines of CSS and the XSLT themes did
+ * not: eased colour changes, a lifted photo, visible keyboard focus, and
+ * smooth jumps to a section. Both themes load it; no script. */
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+a,
+button,
+.skill-tag,
+.toolbar a,
+.toolbar button {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#profile-picture {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#profile-picture:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent, currentColor);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+
+@media print {
+  #profile-picture:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

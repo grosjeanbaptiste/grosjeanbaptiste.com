@@ -505,6 +505,7 @@
              (and re-paginate) the page wherever -apple-system is missing. -->
         <link rel="stylesheet" href="/css/variables.css"/>
         <link rel="stylesheet" href="/css/views-bar.css"/>
+        <link rel="stylesheet" href="/css/xslt-polish.css"/>
         <!-- The timeline's styles. No timeline script here: this theme stays static, the
              whole career in the frame, bars as plain links. -->
         <link rel="stylesheet" href="/css/timeline.css"/>

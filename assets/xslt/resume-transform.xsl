@@ -678,6 +678,7 @@
              (and re-paginate) the page wherever -apple-system is missing. -->
         <link rel="stylesheet" href="/css/variables.css"/>
         <link rel="stylesheet" href="/css/views-bar.css"/>
+        <link rel="stylesheet" href="/css/xslt-polish.css"/>
         <!-- The classic page's timeline, as is: its styles and its script (zoom,
              arrow keys, preview). -->
         <link rel="stylesheet" href="/css/timeline.css"/>
