@@ -319,7 +319,7 @@
           .container {
             display: flex;
             flex-direction: row;
-            max-width: 1180px;
+            max-width: none;
             margin: 0 auto;
             padding: 20px;
             gap: 20px;
