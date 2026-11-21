@@ -19,13 +19,16 @@ const BAR = 1.3; // a bar's width, and the gap beside it
 const GAP = 0.3;
 const MIN_BAR = 0.9;
 const FONT = 5.5;
-const LINE = 2.6; // between two lines of a label (5.5 pt: poppler boxes a line 1.33 em tall)
+const LINE = 2.7; // between two lines of a label (5.5 pt: poppler boxes a line, accents included, 1.4 em tall)
 const BETWEEN = 0.3; // between two labels
 const MARK = 1.6; // the colour square before a label
 const GUTTER = 1.2;
 const MIN_ROOM = 18; // the least a lane's labels may be given
 const STEP = 2; // what moves from one lane to another while sharing the width
 const MOON_ROOM = 3;
+// A line is set on its baseline — a node centred on its box moves with the
+// accents in it — this far under the line's middle.
+const BASE = 0.7;
 const CEILING = 1.5; // the highest a label may reach: the lane's rule is above
 
 const mm = (n) => n.toFixed(2);
@@ -195,7 +198,9 @@ const costOf = (lanes, rooms, names, height) =>
 
 // Moves width between lanes while that makes the page cost less.
 function shareWidth(lanes, free, names, height) {
-  const rooms = lanes.map(() => free / lanes.length);
+  // Start from each lane's share of the labels: the busiest has the most to say.
+  const labels = lanes.reduce((sum, l) => sum + l.labelled.length, 0);
+  const rooms = lanes.map((l) => Math.max(MIN_ROOM, (free * l.labelled.length) / labels));
   let cost = costOf(lanes, rooms, names, height);
   for (let improved = true; improved; ) {
     improved = false;
@@ -244,7 +249,7 @@ function layOut(timeline, { width = WIDTH, height = HEIGHT } = {}) {
         bars,
         labelled: bars
           .filter((b) => b.labelled && b.strong)
-          .toSorted((a, b) => b.y0 - a.y0 || a.depth - b.depth),
+          .toSorted((a, b) => b.y0 - a.y0 || b.dx - a.dx || a.depth - b.depth),
         barsWidth,
       };
     });
@@ -342,7 +347,7 @@ function laneLines(lane, t) {
     lines.forEach((line, i) => {
       const moon = i === 0 && isEvening(bar) ? MOON : '';
       out.push(
-        `\\node[anchor=west,text=EmphasisColor] at (${mm(lane.labelX + MARK + 0.8)},${mm(y - i * LINE)}) {${moon}${texOf(line)}};`,
+        `\\node[anchor=base west,text=EmphasisColor] at (${mm(lane.labelX + MARK + 0.8)},${mm(y - i * LINE - BASE)}) {${moon}${texOf(line)}};`,
       );
     });
     return out;
