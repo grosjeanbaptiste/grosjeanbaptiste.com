@@ -316,6 +316,8 @@
           }
           .toolbar .download:hover { background: var(--primary); border-color: var(--primary); }
 
+          /* The type grows with the screen past 1540px, so the page keeps its proportions. */
+          html { font-size: max(16px, 1.04vw); }
           .container {
             display: flex;
             flex-direction: row;
@@ -326,7 +328,7 @@
           }
           .sidebar {
             flex: 0 0 auto;
-            width: clamp(240px, 24vw, 380px);
+            width: clamp(15rem, 22vw, 24rem);
             background: var(--bg-sidebar);
             padding: 24px 20px;
             border-radius: 8px;
@@ -334,6 +336,8 @@
           .main { flex: 1 1 0; min-width: 0; padding: 20px; }
           #profile-picture {
             width: 100%;
+            max-width: 14rem;
+            margin-inline: auto;
             border-radius: 50%;
             margin-bottom: 16px;
             display: block;
