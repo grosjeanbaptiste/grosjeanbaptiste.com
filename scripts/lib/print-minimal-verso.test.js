@@ -47,7 +47,7 @@ test.before(async () => {
       throw new Error('no Chrome on this runner, so the minimal theme went unprinted');
     return;
   }
-  const server = await serve();
+  const server = await serve('<!-- no autoprint: --print-to-pdf prints by itself -->');
   const out = fs.mkdtempSync(path.join(os.tmpdir(), 'cv-print-minimal-'));
   try {
     const pdf = path.join(out, 'minimal.pdf');
@@ -63,7 +63,7 @@ test.before(async () => {
         '--force-dark-mode',
         '--no-pdf-header-footer',
         `--print-to-pdf=${pdf}`,
-        `http://127.0.0.1:${server.address().port}/__xslt-minimal/en`,
+        `http://127.0.0.1:${server.address().port}/__xslt-probe-minimal/en`,
       ],
       { timeout: 120000 },
     );
