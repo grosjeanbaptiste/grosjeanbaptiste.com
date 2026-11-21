@@ -54,9 +54,9 @@ for (const lang of LANGS) {
   });
 
   test(`${lang}: the tabs read as the page words them`, () => {
-    const zooms = [...src.matchAll(/<zoom>\s*<years>[^<]+<\/years>\s*<label>([^<]*)<\/label>/g)].map(
-      (m) => m[1],
-    );
+    const zooms = [
+      ...src.matchAll(/<zoom>\s*<years>[^<]+<\/years>\s*<label>([^<]*)<\/label>/g),
+    ].map((m) => m[1]);
     assert.equal(zooms.length, 3);
     const label = tag(timeline, 'label');
     assert.equal(found[1].summary, `${label} · ${zooms[0]}`);

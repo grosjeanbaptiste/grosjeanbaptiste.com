@@ -2,7 +2,9 @@
    (a bar of the timeline, a search result, a shared link) is lifted out of the
    flow, so the timeline stays where it is. A project, course unit or
    volunteering row is pointed at by the empty span at its end. */
-.entry-close { display: none; }
+.entry-close {
+  display: none;
+}
 
 .item:target,
 li:has(> .tl-anchor:target) {
@@ -56,7 +58,15 @@ li:has(> .tl-anchor:target) > .entry-close:focus-visible {
 
 @media print {
   .item:target,
-li:has(> .tl-anchor:target) { position: static; transform: none; width: auto; max-height: none; box-shadow: none; }
+  li:has(> .tl-anchor:target) {
+    position: static;
+    transform: none;
+    width: auto;
+    max-height: none;
+    box-shadow: none;
+  }
   .item:target .entry-close,
-li:has(> .tl-anchor:target) > .entry-close { display: none; }
+  li:has(> .tl-anchor:target) > .entry-close {
+    display: none;
+  }
 }

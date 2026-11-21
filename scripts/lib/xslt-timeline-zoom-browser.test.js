@@ -62,7 +62,12 @@ check('all shows the whole career in the frame', () => {
 });
 check('the timeline PDF on offer is the one of the zoom chosen', () => {
   const zoomOf = (href) => (/_2y_/.test(href) ? '2' : /_5y_/.test(href) ? '5' : 'all');
-  for (const [name, wanted] of [['start', '5'], ['two', '2'], ['all', 'all'], ['five', '5']])
+  for (const [name, wanted] of [
+    ['start', '5'],
+    ['two', '2'],
+    ['all', 'all'],
+    ['five', '5'],
+  ])
     assert.deepEqual(seen[name][1].map(zoomOf), [wanted], name);
 });
 check('one zoom is chosen at a time, and reads as chosen', () => {

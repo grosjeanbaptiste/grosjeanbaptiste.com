@@ -32,18 +32,18 @@ def test_the_acteble_experience_holds_the_platform_the_dissertation_and_the_side
         "KAG",
         "Indexer",
         "Polytech",
-        "Converge",
+        "ActConverge",
         "Actif",
         "Actserve",
         "Polymath",
-        "ss",
+        "Actos",
         "Actmorph",
         "Actsessions",
-        "usext",
+        "Actusext",
         "Corpus",
         "Actedu",
         "Biorcrux",
-        "Repo",
+        "Actrepo",
     ]
 
 

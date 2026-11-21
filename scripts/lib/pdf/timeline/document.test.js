@@ -54,7 +54,13 @@ test('the header carries the photo, the contacts and the highest degree', () => 
     ...resume,
     basics: { ...resume.basics, email: 'a@b.c', phone: '+32 1' },
     education: [
-      { institution: 'UMons', studyType: 'Master', area: 'Informatique', startDate: '2022-10', endDate: '2026-09' },
+      {
+        institution: 'UMons',
+        studyType: 'Master',
+        area: 'Informatique',
+        startDate: '2022-10',
+        endDate: '2026-09',
+      },
     ],
   };
   const tex = generateTimelineLatex(cv, 'fr', TODAY);

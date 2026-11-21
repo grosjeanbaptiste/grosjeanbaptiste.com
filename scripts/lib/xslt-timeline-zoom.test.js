@@ -25,9 +25,9 @@ const tag = (src, name) => (src.match(new RegExp(`<${name}>([^<]*)</${name}>`)) 
 for (const lang of LANGS) {
   const html = render(lang);
   const src = xml(lang);
-  const zooms = [...src.matchAll(/<zoom>\s*<years>([^<]+)<\/years>\s*<label>([^<]*)<\/label>/g)].map(
-    (m) => ({ years: m[1], label: m[2] }),
-  );
+  const zooms = [
+    ...src.matchAll(/<zoom>\s*<years>([^<]+)<\/years>\s*<label>([^<]*)<\/label>/g),
+  ].map((m) => ({ years: m[1], label: m[2] }));
   const months = Number(tag(src, 'months'));
   const group = (html.match(/<div class="tl-zoom"[^>]*>[\s\S]*?<\/div>/) || [''])[0];
 
@@ -36,7 +36,7 @@ for (const lang of LANGS) {
     const radios = [...group.matchAll(/<input type="radio"([^>]*)>/g)].map((m) => m[1]);
     assert.equal(radios.length, 3);
     for (const [i, { years }] of zooms.entries()) {
-      assert.match(radios[i], new RegExp(`name="tl-zoom"`));
+      assert.match(radios[i], /name="tl-zoom"/);
       assert.match(radios[i], new RegExp(`id="tl-z-${years}"`));
     }
     assert.deepEqual(
@@ -58,7 +58,9 @@ for (const lang of LANGS) {
     for (const { years } of zooms) {
       const wanted = years === 'all' ? 1 : Math.max(1, months / (Number(years) * 12));
       const rule = html.match(
-        new RegExp(`#timeline:has\\(#tl-z-${years}:checked\\) \\.tl-grid\\s*\\{\\s*--stretch:\\s*([\\d.]+)`),
+        new RegExp(
+          `#timeline:has\\(#tl-z-${years}:checked\\) \\.tl-grid\\s*\\{\\s*--stretch:\\s*([\\d.]+)`,
+        ),
       );
       assert.ok(rule, `no rule for ${years}`);
       assert.ok(Math.abs(Number(rule[1]) - wanted) < 0.001, `${years}: ${rule[1]} != ${wanted}`);

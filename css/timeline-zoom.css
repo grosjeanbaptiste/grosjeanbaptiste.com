@@ -2,7 +2,9 @@
    rules that set the scale are written by the stylesheet, which alone has the
    length of the career at hand; this holds the rest. The radios are out of
    sight but stay in the tab order, and their labels are the buttons. */
-.tl-zoom { position: relative; }
+.tl-zoom {
+  position: relative;
+}
 
 .tl-zoom-input {
   position: absolute;
