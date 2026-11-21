@@ -61,7 +61,7 @@ test('what the degree carried sits lower on screen than on paper', () => {
 });
 
 test('the lane carries its height on paper', () => {
-  assert.match(html, /class="tl-track" style="--rows:5;--print-rows:3"/);
+  assert.match(html, /class="tl-track" style="--rows:5;--print-rows:3[;"]/);
 });
 
 test('the outline carries its height on paper', () => {

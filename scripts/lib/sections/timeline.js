@@ -24,7 +24,9 @@ function renderBar(bar, timeline, lang, onPage, t) {
   const label = labelOf(bar, period, t);
   // --print-row: the row once the course units are left out, on paper.
   const printed = bar.printRow === undefined ? '' : `;--print-row:${bar.printRow}`;
-  const style = `left:${pct(bar.start - timeline.from, timeline.months)};width:${pct(bar.end + 1 - bar.start, timeline.months)};--row:${bar.row}${printed}`;
+  // --fold-row: the row once a family's parts are folded, on a phone.
+  const folded = bar.foldRow === undefined ? '' : `;--fold-row:${bar.foldRow}`;
+  const style = `left:${pct(bar.start - timeline.from, timeline.months)};width:${pct(bar.end + 1 - bar.start, timeline.months)};--row:${bar.row}${printed}${folded}`;
   // What the preview adds for a bar that tells more: a project's kind and
   // roles, what it was, what it was built with.
   const told = toldBy(bar).map(([key, text]) => ` data-${key}="${escapeHtml(text)}"`);
@@ -34,7 +36,8 @@ function renderBar(bar, timeline, lang, onPage, t) {
   // crescent moon before its name.
   const evening = bar.schedule === 'evening' ? ' data-schedule="evening"' : '';
   // data-entry: the entry the bar stands for, which the skill filter lights or dims.
-  const nesting = `data-kind="${bar.kind}" data-depth="${bar.depth}" data-entry="${escapeHtml(standsFor(bar))}"${evening}`;
+  const part = bar.part ? ' data-part' : '';
+  const nesting = `data-kind="${bar.kind}" data-depth="${bar.depth}" data-entry="${escapeHtml(standsFor(bar))}"${evening}${part}`;
   const common = `class="tl-bar" style="${style}" aria-label="${escapeHtml(label)}" ${nesting} ${data}`;
   const text = `<span>${escapeHtml(bar.caption)}</span>`;
   return onPage.has(bar.anchor)
@@ -59,11 +62,11 @@ function generateTimeline(resume, lang, today, onPage, { head = [], under = [] }
     [
       `<div class="tl-lane" data-kind="${lane.kind}">`,
       `  <span class="tl-lane-label">${escapeHtml(t[LANE_LABEL[lane.kind]])}</span>`,
-      `  <div class="tl-track" style="--rows:${lane.rows};--print-rows:${lane.printRows}">`,
+      `  <div class="tl-track" style="--rows:${lane.rows};--print-rows:${lane.printRows}${lane.foldRows === undefined ? '' : `;--fold-rows:${lane.foldRows}`}">`,
       // Behind the bars: the outline of each entry that carried something.
       ...lane.groups.map(
         (g) =>
-          `    <span class="tl-group" aria-hidden="true" style="left:${pct(g.start - timeline.from, timeline.months)};width:${pct(g.end + 1 - g.start, timeline.months)};--row:${g.row};--group-rows:${g.rows};--print-row:${g.printRow};--print-group-rows:${g.printRows}"></span>`,
+          `    <span class="tl-group" aria-hidden="true" style="left:${pct(g.start - timeline.from, timeline.months)};width:${pct(g.end + 1 - g.start, timeline.months)};--row:${g.row};--group-rows:${g.rows};--print-row:${g.printRow};--print-group-rows:${g.printRows}${g.foldRow === undefined ? '' : `;--fold-row:${g.foldRow};--fold-group-rows:${g.foldRows}`}"></span>`,
       ),
       ...lane.bars.map((bar) => `    ${renderBar(bar, timeline, lang, onPage, t)}`),
       '  </div>',

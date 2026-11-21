@@ -73,3 +73,32 @@ test('a lane with no unit prints as it shows', () => {
   assert.equal(work.printRows, work.rows);
   assert.ok(work.bars.every((b) => b.printRow === b.row));
 });
+
+// On a phone the parts of a family of projects (OpenActe) are folded into its bar.
+test('a phone folds the parts of a family into its bar and closes the rows up', () => {
+  const base = resume();
+  const host = base.work[0];
+  const project = (name, extra = {}) => ({
+    name,
+    startDate: '2023-03-01',
+    description: name,
+    ...extra,
+  });
+  const family = {
+    ...base,
+    work: [{ ...host, projects: [host.name, 'Family', 'A', 'B'].slice(1) }, ...base.work.slice(1)],
+    projects: [
+      project('Family'),
+      project('A', { partOf: 'Family' }),
+      project('B', { partOf: 'Family' }),
+    ],
+  };
+  const folded = withPrintRows(family, TODAY).lanes.find((l) => l.bars.some((b) => b.part));
+  assert.ok(folded, 'no bar was folded');
+  assert.deepEqual(
+    folded.bars.filter((b) => b.part).map((b) => b.name),
+    ['A', 'B'],
+  );
+  assert.ok(folded.foldRows < folded.rows, 'the rows did not close up');
+  assert.ok(folded.bars.filter((b) => !b.part).every((b) => b.foldRow !== undefined));
+});

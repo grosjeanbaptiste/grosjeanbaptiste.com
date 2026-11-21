@@ -67,6 +67,8 @@ function timelineForXml(resume, lang, today, onPage = onPageOf(resume, lang)) {
       rows: lane.rows,
       // On paper the course units are left out and the rows close up.
       printRows: lane.printRows,
+      // On a phone the parts of a family of projects are folded into its bar.
+      foldRows: lane.foldRows,
       // The outline of each entry that carried something, behind its bars.
       groups: lane.groups.map((g) => ({
         left: pct(g.start - timeline.from, timeline.months),
@@ -75,6 +77,8 @@ function timelineForXml(resume, lang, today, onPage = onPageOf(resume, lang)) {
         rows: g.rows,
         printRow: g.printRow,
         printRows: g.printRows,
+        foldRow: g.foldRow,
+        foldRows: g.foldRows,
       })),
       bars: lane.bars.map((bar) => {
         const period = periodOf(bar.record, lang);
@@ -98,6 +102,8 @@ function timelineForXml(resume, lang, today, onPage = onPageOf(resume, lang)) {
           width: pct(bar.end + 1 - bar.start, timeline.months),
           row: bar.row,
           printRow: bar.printRow,
+          foldRow: bar.foldRow,
+          part: bar.part ? 'true' : undefined,
         };
       }),
     })),

@@ -1233,6 +1233,28 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   }
 }
 
+/* The parts of a family of projects (OpenActe) are folded into the family's
+   bar, and the rows close up to the generator's folded layout. !important: the
+   screen's rows are written inline. */
+@media screen and (max-width: 48rem) {
+  .tl-bar[data-part] {
+    display: none;
+  }
+
+  .tl-track {
+    --rows: var(--fold-rows) !important;
+  }
+
+  .tl-bar,
+  .tl-group {
+    --row: var(--fold-row) !important;
+  }
+
+  .tl-group {
+    --group-rows: var(--fold-group-rows) !important;
+  }
+}
+
 /* On paper the timeline is hidden where it sits on screen: left in the page's
  * flow it would push the CV onto a third sheet. Each display then prints it
  * from a place of its own — the classic page on its verso

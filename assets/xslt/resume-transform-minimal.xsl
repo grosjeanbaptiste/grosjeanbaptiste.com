@@ -664,12 +664,12 @@
                 <xsl:attribute name="data-kind"><xsl:value-of select="kind"/></xsl:attribute>
                 <span class="tl-lane-label"><xsl:value-of select="label"/></span>
                 <div class="tl-track">
-                  <xsl:attribute name="style">--rows:<xsl:value-of select="rows"/>;--print-rows:<xsl:value-of select="printRows"/></xsl:attribute>
+                  <xsl:attribute name="style">--rows:<xsl:value-of select="rows"/>;--print-rows:<xsl:value-of select="printRows"/><xsl:if test="foldRows">;--fold-rows:<xsl:value-of select="foldRows"/></xsl:if></xsl:attribute>
                   <!-- Behind the bars: the outline of each entry that carried
                        something, as on the classic page. -->
                   <xsl:for-each select="groups/group">
                     <span class="tl-group" aria-hidden="true">
-                      <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/>;--group-rows:<xsl:value-of select="rows"/>;--print-row:<xsl:value-of select="printRow"/>;--print-group-rows:<xsl:value-of select="printRows"/></xsl:attribute>
+                      <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/>;--group-rows:<xsl:value-of select="rows"/>;--print-row:<xsl:value-of select="printRow"/>;--print-group-rows:<xsl:value-of select="printRows"/><xsl:if test="foldRow">;--fold-row:<xsl:value-of select="foldRow"/>;--fold-group-rows:<xsl:value-of select="foldRows"/></xsl:if></xsl:attribute>
                     </span>
                   </xsl:for-each>
                   <xsl:for-each select="bars/bar">
@@ -710,7 +710,8 @@
   <!-- What every bar carries, linked or not: its place, its name for assistive
        technology, and what the preview shows. -->
   <xsl:template name="timeline-bar">
-    <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/><xsl:if test="printRow">;--print-row:<xsl:value-of select="printRow"/></xsl:if></xsl:attribute>
+    <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/><xsl:if test="printRow">;--print-row:<xsl:value-of select="printRow"/></xsl:if><xsl:if test="foldRow">;--fold-row:<xsl:value-of select="foldRow"/></xsl:if></xsl:attribute>
+    <xsl:if test="part"><xsl:attribute name="data-part"></xsl:attribute></xsl:if>
     <xsl:attribute name="data-kind"><xsl:value-of select="kind"/></xsl:attribute>
     <xsl:attribute name="data-depth"><xsl:value-of select="depth"/></xsl:attribute>
     <xsl:attribute name="aria-label"><xsl:value-of select="label"/></xsl:attribute>

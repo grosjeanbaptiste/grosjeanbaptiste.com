@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=3d6e3109"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=51e5aaf9"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -2093,6 +2093,7 @@
           <label>工作经验</label>
           <rows>24</rows>
           <printRows>24</printRows>
+          <foldRows>15</foldRows>
           <groups>
             <group>
               <left>70.53%</left>
@@ -2101,6 +2102,8 @@
               <rows>2</rows>
               <printRow>0</printRow>
               <printRows>2</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>2</foldRows>
             </group>
             <group>
               <left>76.81%</left>
@@ -2109,6 +2112,8 @@
               <rows>2</rows>
               <printRow>0</printRow>
               <printRows>2</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>2</foldRows>
             </group>
             <group>
               <left>81.16%</left>
@@ -2117,6 +2122,8 @@
               <rows>2</rows>
               <printRow>1</printRow>
               <printRows>2</printRows>
+              <foldRow>1</foldRow>
+              <foldRows>2</foldRows>
             </group>
             <group>
               <left>83.09%</left>
@@ -2125,6 +2132,8 @@
               <rows>2</rows>
               <printRow>1</printRow>
               <printRows>2</printRows>
+              <foldRow>1</foldRow>
+              <foldRows>2</foldRows>
             </group>
             <group>
               <left>84.06%</left>
@@ -2133,6 +2142,8 @@
               <rows>2</rows>
               <printRow>3</printRow>
               <printRows>2</printRows>
+              <foldRow>3</foldRow>
+              <foldRows>2</foldRows>
             </group>
             <group>
               <left>87.44%</left>
@@ -2141,6 +2152,8 @@
               <rows>2</rows>
               <printRow>0</printRow>
               <printRows>2</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>2</foldRows>
             </group>
             <group>
               <left>88.41%</left>
@@ -2149,6 +2162,8 @@
               <rows>2</rows>
               <printRow>2</printRow>
               <printRows>2</printRows>
+              <foldRow>2</foldRow>
+              <foldRows>2</foldRows>
             </group>
             <group>
               <left>91.79%</left>
@@ -2157,6 +2172,8 @@
               <rows>21</rows>
               <printRow>0</printRow>
               <printRows>21</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>12</foldRows>
             </group>
             <group>
               <left>93.75%</left>
@@ -2165,6 +2182,8 @@
               <rows>3</rows>
               <printRow>21</printRow>
               <printRows>3</printRows>
+              <foldRow>12</foldRow>
+              <foldRows>3</foldRows>
             </group>
           </groups>
           <bars>
@@ -2182,6 +2201,7 @@
               <width>0.47%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>work-restomax-全栈-web-开发实习生</target>
@@ -2198,6 +2218,7 @@
               <width>2.4%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>work-restomax-全栈-web-开发实习生</target>
@@ -2214,6 +2235,7 @@
               <width>2.4%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>work-les-auberges-de-jeunesse-wallonie-bruxelles-学生工</target>
@@ -2229,6 +2251,7 @@
               <width>0.02%</width>
               <row>2</row>
               <printRow>2</printRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>work-editx-it-challenges-it-jobs-education-in-it-for-x-全栈-web-开发实习生</target>
@@ -2244,6 +2267,7 @@
               <width>0.47%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>work-technofutur-tic-全栈-web-开发实习生</target>
@@ -2260,6 +2284,7 @@
               <width>3.37%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>work-technofutur-tic-全栈-web-开发实习生</target>
@@ -2279,6 +2304,7 @@
               <width>2.88%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>work-xtrada-软件工艺师</target>
@@ -2295,6 +2321,7 @@
               <width>6.31%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-软件工艺师</target>
@@ -2311,6 +2338,7 @@
               <width>1.92%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>work-xtrada-net-blazor-软件工艺师</target>
@@ -2327,6 +2355,7 @@
               <width>1.92%</width>
               <row>2</row>
               <printRow>2</printRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>work-xtrada-net-react-软件工艺师</target>
@@ -2343,6 +2372,7 @@
               <width>3.48%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>work-xtrada-net-react-软件工艺师</target>
@@ -2359,6 +2389,7 @@
               <width>0.93%</width>
               <row>2</row>
               <printRow>2</printRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>work-xtrada-数据科学家</target>
@@ -2375,6 +2406,7 @@
               <width>3.24%</width>
               <row>3</row>
               <printRow>3</printRow>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>work-xtrada-数据科学家</target>
@@ -2391,6 +2423,7 @@
               <width>2.51%</width>
               <row>4</row>
               <printRow>4</printRow>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺师</target>
@@ -2407,6 +2440,7 @@
               <width>4.33%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺师</target>
@@ -2425,6 +2459,7 @@
               <width>4.33%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺负责人</target>
@@ -2441,6 +2476,7 @@
               <width>3.37%</width>
               <row>2</row>
               <printRow>2</printRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-软件工艺负责人</target>
@@ -2459,6 +2495,7 @@
               <width>3.37%</width>
               <row>3</row>
               <printRow>3</printRow>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2475,6 +2512,7 @@
               <width>8.21%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2493,6 +2531,7 @@
               <width>8.21%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2512,6 +2551,7 @@
               <width>4.69%</width>
               <row>2</row>
               <printRow>2</printRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2530,6 +2570,7 @@
               <width>2.46%</width>
               <row>3</row>
               <printRow>3</printRow>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2548,6 +2589,7 @@
               <width>2.4%</width>
               <row>4</row>
               <printRow>4</printRow>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2566,6 +2608,7 @@
               <width>2.38%</width>
               <row>5</row>
               <printRow>5</printRow>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2584,6 +2627,7 @@
               <width>2.35%</width>
               <row>6</row>
               <printRow>6</printRow>
+              <foldRow>6</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2602,6 +2646,7 @@
               <width>0.89%</width>
               <row>2</row>
               <printRow>2</printRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2620,6 +2665,7 @@
               <width>0.67%</width>
               <row>7</row>
               <printRow>7</printRow>
+              <foldRow>7</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2638,6 +2684,7 @@
               <width>0.51%</width>
               <row>8</row>
               <printRow>8</printRow>
+              <foldRow>8</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2656,6 +2703,7 @@
               <width>0.48%</width>
               <row>9</row>
               <printRow>9</printRow>
+              <foldRow>9</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2674,6 +2722,7 @@
               <width>0.47%</width>
               <row>10</row>
               <printRow>10</printRow>
+              <foldRow>10</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2692,6 +2741,7 @@
               <width>0.47%</width>
               <row>11</row>
               <printRow>11</printRow>
+              <foldRow>11</foldRow>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2710,6 +2760,7 @@
               <width>0.47%</width>
               <row>12</row>
               <printRow>12</printRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2728,6 +2779,7 @@
               <width>0.42%</width>
               <row>13</row>
               <printRow>13</printRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2746,6 +2798,7 @@
               <width>0.34%</width>
               <row>14</row>
               <printRow>14</printRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2764,6 +2817,7 @@
               <width>0.32%</width>
               <row>15</row>
               <printRow>15</printRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2782,6 +2836,7 @@
               <width>0.32%</width>
               <row>16</row>
               <printRow>16</printRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2800,6 +2855,7 @@
               <width>0.32%</width>
               <row>17</row>
               <printRow>17</printRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2818,6 +2874,7 @@
               <width>0.31%</width>
               <row>18</row>
               <printRow>18</printRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2836,6 +2893,7 @@
               <width>0.27%</width>
               <row>19</row>
               <printRow>19</printRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>work-acteble-创始人</target>
@@ -2854,6 +2912,7 @@
               <width>0.26%</width>
               <row>20</row>
               <printRow>20</printRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -2870,6 +2929,7 @@
               <width>3.82%</width>
               <row>21</row>
               <printRow>21</printRow>
+              <foldRow>12</foldRow>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -2888,6 +2948,7 @@
               <width>3.82%</width>
               <row>22</row>
               <printRow>22</printRow>
+              <foldRow>13</foldRow>
             </bar>
             <bar>
               <target>work-比利时参议院-ai-研究员</target>
@@ -2906,6 +2967,7 @@
               <width>3.82%</width>
               <row>23</row>
               <printRow>23</printRow>
+              <foldRow>14</foldRow>
             </bar>
           </bars>
         </lane>
@@ -2914,6 +2976,7 @@
           <label>教育</label>
           <rows>14</rows>
           <printRows>7</printRows>
+          <foldRows>14</foldRows>
           <groups>
             <group>
               <left>41.05%</left>
@@ -2922,6 +2985,8 @@
               <rows>10</rows>
               <printRow>0</printRow>
               <printRows>2</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>10</foldRows>
             </group>
             <group>
               <left>52.64%</left>
@@ -2930,6 +2995,8 @@
               <rows>13</rows>
               <printRow>0</printRow>
               <printRows>5</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>13</foldRows>
             </group>
             <group>
               <left>76.06%</left>
@@ -2938,6 +3005,8 @@
               <rows>13</rows>
               <printRow>0</printRow>
               <printRows>7</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>13</foldRows>
             </group>
           </groups>
           <bars>
@@ -2956,6 +3025,7 @@
               <width>15.94%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>education-centre-scolaire-saint-adrien-val-duchesse</target>
@@ -2972,6 +3042,7 @@
               <width>4.35%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</target>
@@ -2988,6 +3059,7 @@
               <width>10.14%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>education-uclouvain-universite-catholique-de-louvain-预科课程</target>
@@ -3004,6 +3076,7 @@
               <width>4.35%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -3020,6 +3093,7 @@
               <width>4.35%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -3034,6 +3108,7 @@
               <width>4.35%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -3048,6 +3123,7 @@
               <left>41.05%</left>
               <width>4.35%</width>
               <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -3062,6 +3138,7 @@
               <left>41.05%</left>
               <width>4.35%</width>
               <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -3076,6 +3153,7 @@
               <left>41.05%</left>
               <width>4.35%</width>
               <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -3090,6 +3168,7 @@
               <left>41.05%</left>
               <width>4.35%</width>
               <row>5</row>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -3104,6 +3183,7 @@
               <left>41.05%</left>
               <width>4.35%</width>
               <row>6</row>
+              <foldRow>6</foldRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -3118,6 +3198,7 @@
               <left>41.05%</left>
               <width>4.35%</width>
               <row>7</row>
+              <foldRow>7</foldRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -3132,6 +3213,7 @@
               <left>41.05%</left>
               <width>4.35%</width>
               <row>8</row>
+              <foldRow>8</foldRow>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-政治学学士</target>
@@ -3146,6 +3228,7 @@
               <left>41.05%</left>
               <width>4.35%</width>
               <row>9</row>
+              <foldRow>9</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3163,6 +3246,7 @@
               <width>23.42%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3178,6 +3262,7 @@
               <width>5.52%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3193,6 +3278,7 @@
               <width>5.78%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3208,6 +3294,7 @@
               <width>5.78%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3223,6 +3310,7 @@
               <width>6.29%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3237,6 +3325,7 @@
               <left>52.64%</left>
               <width>5.52%</width>
               <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3251,6 +3340,7 @@
               <left>52.64%</left>
               <width>5.52%</width>
               <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3265,6 +3355,7 @@
               <left>52.64%</left>
               <width>5.52%</width>
               <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3279,6 +3370,7 @@
               <left>52.64%</left>
               <width>5.52%</width>
               <row>5</row>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3293,6 +3385,7 @@
               <left>52.64%</left>
               <width>5.52%</width>
               <row>6</row>
+              <foldRow>6</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3307,6 +3400,7 @@
               <left>58.18%</left>
               <width>5.78%</width>
               <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3321,6 +3415,7 @@
               <left>58.18%</left>
               <width>5.78%</width>
               <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3335,6 +3430,7 @@
               <left>58.18%</left>
               <width>5.78%</width>
               <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3349,6 +3445,7 @@
               <left>58.18%</left>
               <width>5.78%</width>
               <row>5</row>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3363,6 +3460,7 @@
               <left>58.18%</left>
               <width>5.78%</width>
               <row>6</row>
+              <foldRow>6</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3377,6 +3475,7 @@
               <left>58.18%</left>
               <width>5.78%</width>
               <row>7</row>
+              <foldRow>7</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3391,6 +3490,7 @@
               <left>58.18%</left>
               <width>5.78%</width>
               <row>8</row>
+              <foldRow>8</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3405,6 +3505,7 @@
               <left>58.18%</left>
               <width>5.78%</width>
               <row>9</row>
+              <foldRow>9</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3419,6 +3520,7 @@
               <left>63.98%</left>
               <width>5.78%</width>
               <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3433,6 +3535,7 @@
               <left>63.98%</left>
               <width>5.78%</width>
               <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3447,6 +3550,7 @@
               <left>63.98%</left>
               <width>5.78%</width>
               <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3461,6 +3565,7 @@
               <left>63.98%</left>
               <width>5.78%</width>
               <row>5</row>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3475,6 +3580,7 @@
               <left>63.98%</left>
               <width>5.78%</width>
               <row>6</row>
+              <foldRow>6</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3489,6 +3595,7 @@
               <left>63.98%</left>
               <width>5.78%</width>
               <row>7</row>
+              <foldRow>7</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3503,6 +3610,7 @@
               <left>69.77%</left>
               <width>6.29%</width>
               <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3517,6 +3625,7 @@
               <left>69.77%</left>
               <width>6.29%</width>
               <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3531,6 +3640,7 @@
               <left>69.77%</left>
               <width>6.29%</width>
               <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3546,6 +3656,7 @@
               <width>17.63%</width>
               <row>10</row>
               <printRow>2</printRow>
+              <foldRow>10</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3561,6 +3672,7 @@
               <width>17.63%</width>
               <row>11</row>
               <printRow>3</printRow>
+              <foldRow>11</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</target>
@@ -3577,6 +3689,7 @@
               <width>2.4%</width>
               <row>12</row>
               <printRow>4</printRow>
+              <foldRow>12</foldRow>
             </bar>
             <bar>
               <target>education-institut-saint-louis-bruxelles-证书</target>
@@ -3593,6 +3706,7 @@
               <width>4.35%</width>
               <row>13</row>
               <printRow>5</printRow>
+              <foldRow>13</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3610,6 +3724,7 @@
               <width>22.54%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3626,6 +3741,7 @@
               <width>5.29%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3642,6 +3758,7 @@
               <width>5.78%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3658,6 +3775,7 @@
               <width>5.78%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3674,6 +3792,7 @@
               <width>5.64%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3688,6 +3807,7 @@
               <left>76.06%</left>
               <width>5.29%</width>
               <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3702,6 +3822,7 @@
               <left>76.06%</left>
               <width>5.29%</width>
               <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3716,6 +3837,7 @@
               <left>76.06%</left>
               <width>5.29%</width>
               <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3730,6 +3852,7 @@
               <left>76.06%</left>
               <width>5.29%</width>
               <row>5</row>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3744,6 +3867,7 @@
               <left>81.37%</left>
               <width>5.78%</width>
               <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3758,6 +3882,7 @@
               <left>81.37%</left>
               <width>5.78%</width>
               <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3772,6 +3897,7 @@
               <left>81.37%</left>
               <width>5.78%</width>
               <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3786,6 +3912,7 @@
               <left>81.37%</left>
               <width>5.78%</width>
               <row>5</row>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3800,6 +3927,7 @@
               <left>81.37%</left>
               <width>5.78%</width>
               <row>6</row>
+              <foldRow>6</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3814,6 +3942,7 @@
               <left>87.17%</left>
               <width>5.78%</width>
               <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3828,6 +3957,7 @@
               <left>87.17%</left>
               <width>5.78%</width>
               <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3842,6 +3972,7 @@
               <left>87.17%</left>
               <width>5.78%</width>
               <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3856,6 +3987,7 @@
               <left>87.17%</left>
               <width>5.78%</width>
               <row>5</row>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3870,6 +4002,7 @@
               <left>87.17%</left>
               <width>5.78%</width>
               <row>6</row>
+              <foldRow>6</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3884,6 +4017,7 @@
               <left>87.17%</left>
               <width>5.78%</width>
               <row>7</row>
+              <foldRow>7</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3898,6 +4032,7 @@
               <left>92.96%</left>
               <width>5.64%</width>
               <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3912,6 +4047,7 @@
               <left>92.96%</left>
               <width>5.64%</width>
               <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3926,6 +4062,7 @@
               <left>92.96%</left>
               <width>5.64%</width>
               <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3941,6 +4078,7 @@
               <width>16.01%</width>
               <row>8</row>
               <printRow>2</printRow>
+              <foldRow>8</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3956,6 +4094,7 @@
               <width>16.01%</width>
               <row>9</row>
               <printRow>3</printRow>
+              <foldRow>9</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3974,6 +4113,7 @@
               <width>4.33%</width>
               <row>10</row>
               <printRow>4</printRow>
+              <foldRow>10</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -3992,6 +4132,7 @@
               <width>3.37%</width>
               <row>11</row>
               <printRow>5</printRow>
+              <foldRow>11</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -4010,6 +4151,7 @@
               <width>3.82%</width>
               <row>10</row>
               <printRow>4</printRow>
+              <foldRow>10</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -4028,6 +4170,7 @@
               <width>3.82%</width>
               <row>11</row>
               <printRow>5</printRow>
+              <foldRow>11</foldRow>
             </bar>
             <bar>
               <target>education-umons-理学硕士</target>
@@ -4047,6 +4190,7 @@
               <width>4.69%</width>
               <row>12</row>
               <printRow>6</printRow>
+              <foldRow>12</foldRow>
             </bar>
           </bars>
         </lane>
@@ -4055,6 +4199,7 @@
           <label>活动</label>
           <rows>3</rows>
           <printRows>3</printRows>
+          <foldRows>3</foldRows>
           <groups>
             <group>
               <left>84.06%</left>
@@ -4063,6 +4208,8 @@
               <rows>2</rows>
               <printRow>0</printRow>
               <printRows>2</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>2</foldRows>
             </group>
           </groups>
           <bars>
@@ -4077,6 +4224,7 @@
               <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -4090,6 +4238,7 @@
               <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -4103,6 +4252,7 @@
               <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -4116,6 +4266,7 @@
               <width>0.48%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -4129,6 +4280,7 @@
               <width>0.48%</width>
               <row>2</row>
               <printRow>2</printRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -4142,6 +4294,7 @@
               <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <kind>project</kind>
@@ -4157,6 +4310,7 @@
               <width>0.02%</width>
               <row>1</row>
               <printRow>1</printRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -4169,6 +4323,7 @@
               <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -4181,6 +4336,7 @@
               <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -4193,6 +4349,7 @@
               <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <kind>competition</kind>
@@ -4205,6 +4362,7 @@
               <width>0.48%</width>
               <row>0</row>
               <printRow>0</printRow>
+              <foldRow>0</foldRow>
             </bar>
           </bars>
         </lane>
