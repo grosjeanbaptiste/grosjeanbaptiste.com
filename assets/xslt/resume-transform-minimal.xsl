@@ -427,16 +427,16 @@
                turned to landscape as in the PDF — the timeline needs the
                width. The script below sets the two there; the references run
                in four columns, as \begin{multicols}{4} sets them. */
-            #print-verso { break-before: page; page: verso; font-size: 7.5pt; line-height: 1.2; }
+            #print-verso { break-before: page; page: verso; font-size: 7pt; line-height: 1.15; }
             #print-verso .refs { columns: 4; column-gap: 0.6cm; }
             #print-verso h2 { column-span: all; margin: 6pt 0 3pt; }
-            #print-verso .row { margin-bottom: 4pt; }
+            #print-verso .row { margin-bottom: 3pt; }
             #print-verso .ref-author { margin: 0 0 1pt; }
             #print-verso blockquote { margin: 0 0 3pt; padding-left: 4pt; }
             /* One sheet, so the timeline is set as tightly as the classic
                theme prints it. !important: the zoom writes the width inline. */
             #print-verso .tl-scroll { padding: 0; }
-            #print-verso .tl-grid { --row-height: 10pt; --lane-label: 2.2cm; gap: 3pt; }
+            #print-verso .tl-grid { --row-height: 8pt; --lane-label: 2.2cm; gap: 3pt; }
             #print-verso .tl-years { height: 8pt; font-size: 6pt; }
             #print-verso .tl-legend { margin: 2pt 0 0; font-size: 6pt; }
             #print-verso .tl-lane-label {
