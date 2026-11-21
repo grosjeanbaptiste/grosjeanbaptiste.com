@@ -18,7 +18,7 @@ const DENSITY = 0.6;
 
 // Photo, then the name, the contacts and the highest degree, with the title
 // and the date flush right. ~22 mm: HEIGHT in ./page.js is what is left under it.
-function buildHeader(resume, t, lang, today, years) {
+function buildHeader(resume, t, lang, today, years, { narrow = false } = {}) {
   const b = resume.basics || {};
   // The 2- and 5-year PDFs say so beside the date; the whole career needs no note.
   const span = years === null ? '' : `${tex(t.timelineSpan(years))} · `;
@@ -30,7 +30,7 @@ function buildHeader(resume, t, lang, today, years) {
     '\\noindent\\makeatletter\\@makeaphoto{17mm}{profil}\\makeatother\\hspace{4mm}%',
     '\\begin{minipage}[c]{\\dimexpr\\linewidth-21mm\\relax}',
     `{\\color{name}\\namefont ${tex(b.name)}}\\hfill{\\color{heading}\\LARGE\\rmfamily\\bfseries\\MakeUppercase{${tex(t.timeline)}}}\\par`,
-    `{\\color{tagline}\\large\\bfseries ${tex(b.label)}}${degree ? `\\quad{\\color{body}\\footnotesize\\faGraduationCap\\ ${tex(degree)}}` : ''}\\hfill{\\color{body}\\small ${span}${tex(t.updated)} ${tex(formatLongDate(today, lang))}}\\par`,
+    `{\\color{tagline}\\large\\bfseries ${tex(b.label)}}${degree ? `\\quad{\\color{body}${narrow ? '\\scriptsize' : '\\footnotesize'}\\faGraduationCap\\ ${tex(degree)}}` : ''}\\hfill{\\color{body}${narrow ? '\\footnotesize' : '\\small'} ${span}${tex(t.updated)} ${tex(formatLongDate(today, lang))}}\\par`,
     `{\\footnotesize ${contacts}}\\par`,
     '\\end{minipage}\\par',
     '\\vspace{1mm}{\\color{headingrule}\\rule{\\linewidth}{1.5pt}}\\par\\vspace{3mm}',
@@ -74,7 +74,7 @@ function buildTimelineDocument(resume, lang, today, years = null) {
     buildPicture(sheet, t),
     '\\end{landscape}',
     // The same header, then the timeline upright under it.
-    buildHeader(resume, t, lang, today, years),
+    buildHeader(resume, t, lang, today, years, { narrow: true }),
     buildUpright(upright, t),
     '\\end{document}',
     '',

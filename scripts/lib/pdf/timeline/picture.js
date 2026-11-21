@@ -134,4 +134,4 @@ function buildPicture(sheet, t) {
   ].join('\n');
 }
 
-module.exports = { buildPicture, FILL, LANE_TITLE, MOON, fillOf, isEvening };
+module.exports = { buildPicture, LANE_TITLE, MOON, OUTLINE, fillOf, isEvening };
