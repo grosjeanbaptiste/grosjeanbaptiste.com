@@ -153,4 +153,4 @@ function layOut(
   );
 }
 
-module.exports = { layOut, TRACK, TimelineOverflow };
+module.exports = { layOut, schoolYears, TRACK, TimelineOverflow };

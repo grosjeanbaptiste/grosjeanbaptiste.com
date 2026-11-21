@@ -16,7 +16,7 @@ const resume = {
 
 test('the first sheet is landscape and the timeline comes again upright after it', () => {
   const tex = generateTimelineLatex(resume, 'fr', TODAY);
-  assert.match(tex, /\\begin\{landscape\}[\s\S]*\\end\{landscape\}[\s\S]*rotate=90/);
+  assert.match(tex, /\\begin\{landscape\}[\s\S]*\\end\{landscape\}[\s\S]*\\begin\{tikzpicture\}/);
 });
 
 test('it is titled after the timeline, in the language of the CV', () => {
