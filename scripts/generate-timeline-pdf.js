@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Render and compile, for every language, the CV's timeline alone on one A4
- * landscape page, next to the vertical CV that scripts/generate-pdf.js builds:
+ * Render and compile, for every language, the CV's timeline alone: an A4
+ * landscape page, then the same timeline upright on an A4 portrait one, next to
+ * the vertical CV that scripts/generate-pdf.js builds:
  *   assets/cv/cv_grosjean_baptiste_timeline_<lang>.pdf     — the whole career
  *   assets/cv/cv_grosjean_baptiste_timeline_5y_<lang>.pdf  — the last five years
  *   assets/cv/cv_grosjean_baptiste_timeline_2y_<lang>.pdf  — the last two years

@@ -14,6 +14,9 @@ const { buildPicture } = require('./picture');
 
 // The busy years of the career get the width the quiet ones can spare.
 const DENSITY = 0.6;
+// The portrait page: 297 mm less margins, less the 27 mm of lane titles; 210 mm less margins.
+const UPRIGHT_TRACK = 225;
+const UPRIGHT_HEIGHT = 185;
 
 // Photo, then the name, the contacts and the highest degree, with the title
 // and the date flush right. ~22 mm: HEIGHT in ./page.js is what is left under it.
@@ -39,10 +42,10 @@ function buildHeader(resume, t, lang, today, years) {
 // The sheet of the timeline, gathering the newest projects still running two
 // by two (./gather.js) while the page cannot hold them; loud once nothing is
 // left to gather.
-function fitted(timeline) {
+function fitted(timeline, room = {}) {
   for (let bars = timeline; ; ) {
     try {
-      return layOut(bars, { density: DENSITY });
+      return layOut(bars, { density: DENSITY, ...room });
     } catch (err) {
       const fewer = err instanceof TimelineOverflow ? gatherNewest(bars) : null;
       if (!fewer) throw err;
@@ -56,15 +59,25 @@ function fitted(timeline) {
 // whether it had room for the course units ('drawn', 'dropped' or 'none').
 function buildTimelineDocument(resume, lang, today, years = null) {
   const t = I18N[lang];
-  const sheet = fitted(timelineBars(resume, today, years));
+  const bars = timelineBars(resume, today, years);
+  const sheet = fitted(bars);
+  // The same timeline on a portrait page: time runs up it, so its track is the
+  // page's height (less the lane titles, left of the axis) and its height the
+  // page's width.
+  const upright = fitted(bars, { track: UPRIGHT_TRACK, height: UPRIGHT_HEIGHT });
   const tex = [
     buildPreamble(lang),
-    '\\geometry{landscape,left=10mm,right=10mm,top=10mm,bottom=8mm}',
+    // A portrait document: its first sheet is turned by pdflscape, which swaps the
+    // text area (277 x 192 mm, as the landscape sheet always had: the sides are the sheet's height).
+    '\\geometry{a4paper,left=10mm,right=8mm,top=10mm,bottom=10mm}',
     '\\pagestyle{empty}',
     '\\begin{document}',
     `\\selectlanguage{${BABEL[lang]}}`,
+    '\\begin{landscape}',
     buildHeader(resume, t, lang, today, years),
     buildPicture(sheet, t),
+    '\\end{landscape}',
+    buildPicture(upright, t, { upright: true }),
     '\\end{document}',
     '',
   ].join('\n');

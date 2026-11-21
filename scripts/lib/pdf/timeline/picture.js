@@ -125,9 +125,13 @@ function laneLines(lane, sheet, t) {
   ];
 }
 
-function buildPicture(sheet, t) {
+// `upright`: the sheet turned a quarter, for a portrait page — time runs up it,
+// the lanes side by side, and what reads left to right on the landscape sheet
+// reads bottom to top.
+function buildPicture(sheet, t, { upright = false } = {}) {
+  const turn = upright ? 'rotate=90,transform shape,' : '';
   return [
-    `\\begin{tikzpicture}[x=1mm,y=1mm,every node/.style={inner sep=0pt},font=\\fontsize{${sheet.font}}{${sheet.font + 1}}\\selectfont]`,
+    `\\begin{tikzpicture}[${turn}x=1mm,y=1mm,every node/.style={inner sep=0pt},font=\\fontsize{${sheet.font}}{${sheet.font + 1}}\\selectfont]`,
     ...yearLines(sheet),
     ...sheet.lanes.flatMap((lane) => laneLines(lane, sheet, t)),
     '\\end{tikzpicture}',

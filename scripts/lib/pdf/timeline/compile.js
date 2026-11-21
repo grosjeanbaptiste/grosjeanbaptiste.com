@@ -1,5 +1,5 @@
-// Compiles one language's landscape timeline PDF. It must come out on a single
-// page; layOut already refuses a picture taller than the sheet, and this is the
+// Compiles one language's timeline PDF. It must come out on two
+// pages (landscape, then portrait); layOut already refuses a picture taller than the sheet, and this is the
 // check on what TeX actually produced.
 const I18N = require('../i18n');
 const { compileOnce } = require('../compile');
@@ -26,9 +26,9 @@ function compileTimeline(resume, lang, outPath, today = new Date(), years = null
   }
   const { ok, pages } = compile(tex, xmp, outPath, lang);
   if (!ok) return { ok: false };
-  if (pages !== 1) {
+  if (pages !== 2) {
     console.error(
-      `  ${lang}: the timeline PDF came out on ${pages} pages; it must fit one landscape page.`,
+      `  ${lang}: the timeline PDF came out on ${pages} pages; it must be two: the landscape sheet, then the portrait one.`,
     );
     return { ok: false };
   }

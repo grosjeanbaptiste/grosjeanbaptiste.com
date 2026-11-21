@@ -7,7 +7,7 @@ const { compileTimeline } = require('./compile');
 const RESUME = { basics: { name: 'Baptiste Grosjean' } };
 const TODAY = new Date(Date.UTC(2026, 9, 5));
 
-function run({ labels = 'full', pages = 1, ok = true } = {}) {
+function run({ labels = 'full', pages = 2, ok = true } = {}) {
   const warnings = [];
   const result = compileTimeline(RESUME, 'de', '/nowhere/out.pdf', TODAY, null, {
     document: () => ({ tex: '', labels }),
@@ -17,8 +17,8 @@ function run({ labels = 'full', pages = 1, ok = true } = {}) {
   return { result, warnings };
 }
 
-test('a timeline compiled on one page succeeds', () => {
-  assert.deepEqual(run().result, { ok: true, pages: 1 });
+test('a timeline compiled on two pages succeeds', () => {
+  assert.deepEqual(run().result, { ok: true, pages: 2 });
 });
 
 test('a timeline in full says nothing', () => {
@@ -28,6 +28,10 @@ test('a timeline in full says nothing', () => {
 test('a timeline reduced to its names says so, naming the language', () => {
   const [warning] = run({ labels: 'names' }).warnings;
   assert.match(warning, /de: .*names only/);
+});
+
+test('a timeline that came out on one page is reported as failed', () => {
+  assert.deepEqual(run({ pages: 1 }).result, { ok: false });
 });
 
 test('a timeline that TeX failed to compile is reported as failed', () => {
