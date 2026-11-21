@@ -272,7 +272,7 @@ function layOut(timeline, { width = WIDTH, height = HEIGHT } = {}) {
     return plan ? { lanes, plan, k } : null;
   };
   const made = [1, 0.8, 0.65, 0.5].map(attempt).find(Boolean);
-  if (!made) throw new Error(`the upright timeline does not fit its page`);
+  if (!made) throw new Error('the upright timeline does not fit its page');
   const { lanes, plan, k } = made;
   let x = AXIS;
   const placed = lanes.map((lane, i) => {
