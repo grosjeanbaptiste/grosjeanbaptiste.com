@@ -884,7 +884,13 @@
     <xsl:if test="$hard/keywords/keyword">
       <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'technicalSkills'"/></xsl:call-template></h2>
       <div class="skill-tags">
-        <xsl:for-each select="$hard/keywords/keyword">
+        <xsl:for-each select="$hard/keywords/keyword[position() &lt;= 71]">
+          <xsl:call-template name="skill-tag"/>
+        </xsl:for-each>
+      </div>
+      <!-- The sheet holds the first 71, as the LaTeX CV does; the screen all. -->
+      <div class="skill-tags print-hidden">
+        <xsl:for-each select="$hard/keywords/keyword[position() &gt; 71]">
           <xsl:call-template name="skill-tag"/>
         </xsl:for-each>
       </div>

@@ -5,6 +5,11 @@ const {
   formatDegreeLine,
 } = require('../../degrees');
 
+// The site lists every skill the entries use; the narrow column of a sheet that
+// must stay one recto holds the first of them, which the DSL puts in order of
+// weight (the rest follow, by entry).
+const SIDEBAR_SKILLS = 71;
+
 function buildSkillsBlock(resume, t) {
   // The "Currently Learning" sidebar block is intentionally omitted in the
   // PDF (kept in the HTML site, available in resume.json). Saves vertical
@@ -21,7 +26,7 @@ function buildSkillsBlock(resume, t) {
     `\\noindent\\raggedright{\\footnotesize ${kw.map((k) => `\\cvtag{${tagText(k)}}`).join(' ')}}\\par`;
   if (hard?.keywords?.length) {
     parts.push(`\\cvsectionsidebar{${nohyphen(t.technicalSkills)}}`);
-    parts.push(tagLine(hard.keywords));
+    parts.push(tagLine(hard.keywords.slice(0, SIDEBAR_SKILLS)));
   }
   if (soft?.keywords?.length) {
     parts.push(`\\cvsectionsidebar{${nohyphen(t.softSkills)}}`);

@@ -38,11 +38,21 @@ const mm = (n) => n.toFixed(2);
 // Where the lane titles go, left of the axis (mm), unless the sheet says.
 const TITLES = { x: -27, width: 24, size: 8 };
 
+// A year's number takes about 7 mm: one closer than that to the last number
+// drawn keeps its line and leaves its number out, as the years of school are
+// squeezed.
+const LABEL_GAP = 7;
 function yearLines(sheet) {
-  return sheet.years.flatMap(({ year, x }) => [
-    `\\draw[BodyColor!45,dashed,line width=0.3pt] (${mm(x)},${mm(-sheet.axis + 1)}) -- (${mm(x)},${mm(-sheet.height)});`,
-    `\\node[anchor=south,text=BodyColor,font=\\fontsize{7}{8}\\selectfont] at (${mm(x)},${mm(-sheet.axis + 1.4)}) {${year}};`,
-  ]);
+  let last = Number.NEGATIVE_INFINITY;
+  return sheet.years.flatMap(({ year, x }) => {
+    const line = `\\draw[BodyColor!45,dashed,line width=0.3pt] (${mm(x)},${mm(-sheet.axis + 1)}) -- (${mm(x)},${mm(-sheet.height)});`;
+    if (x - last < LABEL_GAP) return [line];
+    last = x;
+    return [
+      line,
+      `\\node[anchor=south,text=BodyColor,font=\\fontsize{7}{8}\\selectfont] at (${mm(x)},${mm(-sheet.axis + 1.4)}) {${year}};`,
+    ];
+  });
 }
 
 // A degree followed on an evening schedule ("horaire décalé") is named with a

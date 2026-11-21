@@ -115,6 +115,19 @@ function fitted(plan, timeline, { x, measure, track, room }) {
 // What no plan could fit: the caller may gather bars and try again.
 class TimelineOverflow extends Error {}
 
+// The years before university are squeezed to leave the page to the rest: a
+// school is named "Lycée…", "Centre Scolaire…" or "Institut…" in every language.
+const SCHOOL = /^(Lycée|Centre Scolaire|Institut)\b/i;
+const SCHOOL_WIDTH = 0.6;
+function schoolYears(timeline) {
+  const starts = timeline.lanes
+    .filter((lane) => lane.kind === 'education')
+    .flatMap((lane) => lane.groups.map((g) => g.head))
+    .filter((head) => !SCHOOL.test(head.strong))
+    .map((head) => head.start);
+  return starts.length ? { before: Math.min(...starts), factor: SCHOOL_WIDTH } : undefined;
+}
+
 function layOut(
   timeline,
   { measure = labelWidth, track = TRACK, height = HEIGHT, density = 0 } = {},
@@ -122,7 +135,14 @@ function layOut(
   const spans = timeline.lanes.flatMap((lane) =>
     lane.groups.flatMap((g) => [g.head, ...(g.bands ?? []), ...g.children]),
   );
-  const x = timeScale({ from: timeline.from, to: timeline.to, track, spans, density });
+  const x = timeScale({
+    from: timeline.from,
+    to: timeline.to,
+    track,
+    spans,
+    density,
+    squeeze: schoolYears(timeline),
+  });
   const room = height - AXIS - LANE_GAP * timeline.lanes.length;
   for (const plan of PLANS) {
     const sheet = fitted(plan, timeline, { x, measure, track, room });

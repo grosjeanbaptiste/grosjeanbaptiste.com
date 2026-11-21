@@ -21,7 +21,10 @@ function segmentsOf(from, until) {
 const held = (segment, span) =>
   Math.max(0, Math.min(segment.end, span.end + 1) - Math.max(segment.start, span.start));
 
-function timeScale({ from, to, track, spans, density }) {
+// `squeeze` ({ before, factor }): the calendar years that end by month `before`
+// — the years of school, before university — keep only `factor` of the width
+// they would get, and the rest of the axis takes it.
+function timeScale({ from, to, track, spans, density, squeeze }) {
   const until = to + 1;
   const segments = segmentsOf(from, until).map((s) => ({
     ...s,
@@ -38,6 +41,18 @@ function timeScale({ from, to, track, spans, density }) {
       track *
       ((1 - byLoad) * ((s.end - s.start) / months) + (load > 0 ? byLoad * (s.load / load) : 0));
     x += s.width;
+  }
+  if (squeeze) {
+    const early = segments.filter((s) => s.end <= squeeze.before);
+    const kept = early.reduce((sum, s) => sum + s.width * squeeze.factor, 0);
+    const rest = track - early.reduce((sum, s) => sum + s.width, 0);
+    const grow = rest > 0 ? (track - kept) / rest : 1;
+    x = 0;
+    for (const s of segments) {
+      s.x = x;
+      s.width *= s.end <= squeeze.before ? squeeze.factor : grow;
+      x += s.width;
+    }
   }
   return (month) => {
     if (month <= from) return ((month - from) / months) * track;

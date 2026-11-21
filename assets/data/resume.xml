@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=a5674ce4"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=638b09a6"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -5564,6 +5564,133 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
         <keyword>CleanArchitecture</keyword>
         <keyword>DDD</keyword>
         <keyword>CQRS</keyword>
+        <keyword>PostgreSQL</keyword>
+        <keyword>Firebase</keyword>
+        <keyword>Valhalla</keyword>
+        <keyword>FastAPI</keyword>
+        <keyword>DeepFace</keyword>
+        <keyword>SQLAlchemy</keyword>
+        <keyword>TypeScript</keyword>
+        <keyword>EntityFramework</keyword>
+        <keyword>Azure</keyword>
+        <keyword>OpenTelemetry</keyword>
+        <keyword>xUnit</keyword>
+        <keyword>Sequelize</keyword>
+        <keyword>Prolog</keyword>
+        <keyword>LinkGrammar</keyword>
+        <keyword>SymbolicAI</keyword>
+        <keyword>NLP</keyword>
+        <keyword>MutationTesting</keyword>
+        <keyword>InformationRetrieval</keyword>
+        <keyword>LearningToRank</keyword>
+        <keyword>BEIR</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>Dioxus</keyword>
+        <keyword>Ratatui</keyword>
+        <keyword>SQLite</keyword>
+        <keyword>iOS</keyword>
+        <keyword>SpacedRepetition</keyword>
+        <keyword>Leitner</keyword>
+        <keyword>SM2</keyword>
+        <keyword>WordNet</keyword>
+        <keyword>Tatoeba</keyword>
+        <keyword>CloudflareWorkers</keyword>
+        <keyword>WebAssembly</keyword>
+        <keyword>DurableObjects</keyword>
+        <keyword>TOML</keyword>
+        <keyword>BM25F</keyword>
+        <keyword>SymPy</keyword>
+        <keyword>SciPy</keyword>
+        <keyword>Lean4</keyword>
+        <keyword>Mathlib</keyword>
+        <keyword>OpenCASCADE</keyword>
+        <keyword>Manifold</keyword>
+        <keyword>build123d</keyword>
+        <keyword>Gmsh</keyword>
+        <keyword>Optuna</keyword>
+        <keyword>NSGA2</keyword>
+        <keyword>MultiObjectiveOptimization</keyword>
+        <keyword>ThreeJS</keyword>
+        <keyword>DuckDB</keyword>
+        <keyword>EloRating</keyword>
+        <keyword>PoissonModel</keyword>
+        <keyword>EnsembleModel</keyword>
+        <keyword>WalkForwardBacktest</keyword>
+        <keyword>BrierScore</keyword>
+        <keyword>Parquet</keyword>
+        <keyword>FileEngine</keyword>
+        <keyword>Metadata</keyword>
+        <keyword>OpenTofu</keyword>
+        <keyword>Ansible</keyword>
+        <keyword>WireGuard</keyword>
+        <keyword>TLS</keyword>
+        <keyword>DNS</keyword>
+        <keyword>SystemsProgramming</keyword>
+        <keyword>Telemetry</keyword>
+        <keyword>CLI</keyword>
+        <keyword>UI</keyword>
+        <keyword>Desktop</keyword>
+        <keyword>i18n</keyword>
+        <keyword>Charting</keyword>
+        <keyword>Git</keyword>
+        <keyword>GitHub</keyword>
+        <keyword>Scaffolding</keyword>
+        <keyword>Agents</keyword>
+        <keyword>Observability</keyword>
+        <keyword>Forecasting</keyword>
+        <keyword>DAG</keyword>
+        <keyword>ScientificComputing</keyword>
+        <keyword>Mathematics</keyword>
+        <keyword>TypeSystem</keyword>
+        <keyword>KnowledgeBase</keyword>
+        <keyword>Education</keyword>
+        <keyword>Solver</keyword>
+        <keyword>KnowledgeGraph</keyword>
+        <keyword>GraphTheory</keyword>
+        <keyword>Visualization</keyword>
+        <keyword>Spring Boot</keyword>
+        <keyword>AI</keyword>
+        <keyword>Evaluation</keyword>
+        <keyword>Benchmark</keyword>
+        <keyword>Tonic</keyword>
+        <keyword>gRPC</keyword>
+        <keyword>Protobuf</keyword>
+        <keyword>SQLx</keyword>
+        <keyword>PostGIS</keyword>
+        <keyword>Redis</keyword>
+        <keyword>MinIO</keyword>
+        <keyword>LiveKit</keyword>
+        <keyword>OpenBao</keyword>
+        <keyword>Prometheus</keyword>
+        <keyword>Testcontainers</keyword>
+        <keyword>OpenStreetMap</keyword>
+        <keyword>Caddy</keyword>
+        <keyword>Dylint</keyword>
+        <keyword>EventDriven</keyword>
+        <keyword>Melos</keyword>
+        <keyword>Riverpod</keyword>
+        <keyword>Drift</keyword>
+        <keyword>SQLCipher</keyword>
+        <keyword>Dio</keyword>
+        <keyword>FlutterRustBridge</keyword>
+        <keyword>MapLibre</keyword>
+        <keyword>FlutterMap</keyword>
+        <keyword>OfflineFirst</keyword>
+        <keyword>E2EE</keyword>
+        <keyword>Mobile</keyword>
+        <keyword>Vite</keyword>
+        <keyword>JavaScript</keyword>
+        <keyword>i18next</keyword>
+        <keyword>ReactRouter</keyword>
+        <keyword>ESLint</keyword>
+        <keyword>Vercel</keyword>
+        <keyword>ORTools</keyword>
+        <keyword>PHP</keyword>
+        <keyword>API</keyword>
+        <keyword>UI/UX</keyword>
+        <keyword>PayPal</keyword>
+        <keyword>NER</keyword>
+        <keyword>QRCode</keyword>
       </keywords>
     </skill>
     <skill>

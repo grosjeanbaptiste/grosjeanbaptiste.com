@@ -161,3 +161,15 @@ test('without density, the years are drawn to scale', () => {
   const x = Object.fromEntries(sheet.years.map((y) => [y.year, y.x]));
   assert.ok(Math.abs(x[2023] - x[2022] - (x[2022] - x[2021])) < 1e-9);
 });
+
+test('the years of school are drawn narrower than the years after them', () => {
+  const school = bar('Lycée Mater Dei', at(2010, 1), at(2012, 12));
+  const uni = bar('UMons', at(2013, 1), at(2015, 12));
+  const sheet = layOut({
+    ...timeline([{ kind: 'education', bars: [school, uni] }]),
+    from: at(2010, 1),
+    to: at(2015, 12),
+  });
+  const x = Object.fromEntries(sheet.years.map((y) => [y.year, y.x]));
+  assert.ok(x[2012] - x[2011] < 0.6 * (x[2014] - x[2013]));
+});

@@ -3,6 +3,8 @@
 // meta.sidebarOrder orchestration.
 const { escapeHtml } = require('../format');
 
+const PRINTED_SKILLS = 71;
+
 function renderSkillsBlocks(resume, t) {
   // "Currently Learning" stays in resume.json (JSON Resume schema compliance +
   // LLM ingestion) but is intentionally hidden from the visible CV.
@@ -14,8 +16,13 @@ function renderSkillsBlocks(resume, t) {
     .map(({ name, title }) => {
       const cat = (resume.skills || []).find((s) => s.name === name);
       if (!cat || !cat.keywords?.length) return null;
+      // The sheet holds the first PRINTED_SKILLS of the technical ones, as the
+      // LaTeX CV does (pdf/sections/sidebar.js); the page lists them all.
       const tags = cat.keywords
-        .map((k) => `      <span class="skill-tag">${escapeHtml(k)}</span>`)
+        .map((k, i) => {
+          const hidden = name === 'HardSkills' && i >= PRINTED_SKILLS ? ' print-hidden' : '';
+          return `      <span class="skill-tag${hidden}">${escapeHtml(k)}</span>`;
+        })
         .join('\n');
       return [
         '<div class="skills">',
