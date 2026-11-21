@@ -551,7 +551,7 @@
             html .refs .tl-zoom, html .refs .tl-preview { display: none !important; }
             html .refs .tl-scroll { overflow: visible; padding: 0; }
             html .refs .tl-grid {
-              --row-height: 10pt; --lane-label: 2.2cm;
+              --row-height: 8pt; --lane-label: 2.2cm;
               width: 100% !important; min-width: 0; gap: 3pt;
             }
             html .refs .tl-years { height: 8pt; font-size: 6pt; }
