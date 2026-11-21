@@ -84,10 +84,20 @@ const laneOf = (options) =>
     return { kind, rows: packed.rows, bars, groups: outlines };
   };
 
+// `fold: true` leaves out the parts of a family of projects (OpenActe) whose
+// family is on the same entry: one bar says it, for a page with no room for each.
+const folded = (groups) =>
+  groups.map((g) => ({
+    ...g,
+    children: g.children.filter((c) => !g.children.some((f) => f.name === c.partOf)),
+  }));
+
 // `units: false` leaves the course units out, for a page with no room for them.
 function timelineOf(resume, today, options = {}) {
   const now = monthNow(today);
-  const lanes = entryGroups(resume, now).map(laneOf(options));
+  const lanes = entryGroups(resume, now).map((l) =>
+    laneOf(options)(options.fold ? { ...l, groups: folded(l.groups) } : l),
+  );
   // The axis starts with the month of the earliest bar, which may start mid-month.
   const from = Math.floor(Math.min(now, ...lanes.flatMap((l) => l.bars.map((b) => b.start))));
   const years = [];

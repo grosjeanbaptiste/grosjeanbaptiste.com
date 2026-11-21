@@ -159,6 +159,13 @@
       ]
     },
     {
+      "description": "围绕 Acteble 构建的小型开放项目家族：库、命令行工具、引擎和知识库，各自只做一件事——就像平台的微服务。",
+      "type": "项目家族",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
       "description": "精选的外部数据源、书籍和软件包索引，通过公开的只读 API 提供。",
       "summary": "523 个数据源各为一个 TOML 文件，由 Rust 校验并编译为静态 JSON，在构建时嵌入 Cloudflare Worker：纯 Rust 的 API 逻辑、ETag 与 304 响应、由 Durable Object 精确计数的按 IP 和 API 密钥限流、按六项可靠性指标加权的 BM25F 排序，以及将需求与候选数据源匹配的缺口分析。",
       "type": "API",

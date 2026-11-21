@@ -31,6 +31,8 @@ const worded = (bar, nested) => ({
   // The label in full, for a bar wide enough to hold it (./rows.js): there a
   // project under its host reads its kind too.
   full: { strong: bar.name, rest: nested ? bar.type || '' : afterName(bar) },
+  // The project a small project is a part of.
+  ...(bar.partOf ? { partOf: bar.partOf } : {}),
   // 'evening' for a degree followed on an evening schedule, and its blocks.
   ...(bar.schedule ? { schedule: bar.schedule } : {}),
 });

@@ -149,6 +149,8 @@ def _project_entry(p) -> dict[str, Any]:
         entry["roles"] = [_text(r) for r in p.roles]
     if p.entity:
         entry["entity"] = p.entity
+    if p.part_of:
+        entry["partOf"] = p.part_of
     return entry
 
 

@@ -24,7 +24,7 @@ const described = (p, limits) => {
 };
 // The dot as a command: under xeCJK (zh) the character went to the CJK font.
 const kinded = (p) =>
-  `    \\item \\textbf{${tex(p.name)}}${p.type ? ` \\textperiodcentered{} ${tex(p.type)}` : ''}`;
+  `    \\item \\textbf{${tex(p.name)}}${p.type ? ` \\textperiodcentered{} ${tex(p.type)}` : ''}${p.parts ? ` (${p.parts})` : ''}`;
 
 const itemize = (items) => ['\\begin{itemize}\\itemsep=0pt', ...items, '\\end{itemize}'];
 // Three top-aligned minipages, filled column by column (the recto is set with
@@ -47,9 +47,16 @@ function thirds(items) {
 // `columns`: false where the list shares the line with another (a minipage,
 // where multicols cannot go).
 function renderProjectList(projectNames, resume, t, limits, { columns = true } = {}) {
-  const projs = (projectNames || []).map((n) => findProject(resume, n)).filter(Boolean);
+  const found = (projectNames || []).map((n) => findProject(resume, n)).filter(Boolean);
+  // The parts of a family of projects (OpenActe) are told by the family's own
+  // line, with how many there are, not one by one.
+  const partsOf = (family) => found.filter((p) => p.partOf === family.name);
+  const projs = found
+    .filter((p) => !found.some((f) => f.name === p.partOf))
+    .map((p) => (partsOf(p).length ? { ...p, parts: partsOf(p).length } : p));
   if (!projs.length) return null;
-  const inColumns = columns && projs.length >= COLUMNS_FROM;
+  // Columns are decided by what the entry carried, families unfolded.
+  const inColumns = columns && found.length >= COLUMNS_FROM;
   return [
     `\\par\\nobreak\\noindent{\\footnotesize\\textbf{${tex(t.projects)}:}`,
     ...(inColumns ? thirds(projs.map(kinded)) : itemize(projs.map((p) => described(p, limits)))),

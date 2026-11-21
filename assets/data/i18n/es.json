@@ -157,6 +157,13 @@
       ]
     },
     {
+      "description": "La familia de pequeños proyectos abiertos construidos en torno a Acteble: bibliotecas, CLI, motores y bases de conocimiento, cada uno con una sola función — como los microservicios de una plataforma.",
+      "type": "Familia de proyectos",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
       "description": "Índice curado de fuentes de datos externas, libros y paquetes de software, servido mediante una API pública de lectura.",
       "summary": "Cada una de las 523 fuentes es un archivo TOML que Rust valida y compila en JSON estático, incrustado al compilar en un Cloudflare Worker: lógica de API en Rust puro, respuestas ETag y 304, límites de tasa por IP y por clave de API contados con exactitud por un Durable Object, clasificación BM25F ponderada por una puntuación de fiabilidad de seis criterios y un análisis de carencias que asocia cada necesidad con fuentes candidatas.",
       "type": "API",

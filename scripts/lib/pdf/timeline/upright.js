@@ -67,10 +67,30 @@ function inGroups(groups, yOf, k) {
       return { ...b, y0, y1: Math.min(y0 - MIN_BAR, yOf(b.start)) };
     });
     const [head, ...carried] = bars;
-    const inside = inTracks(carried).map((b) => ({ ...b, track: b.track + 1 }));
+    // A family of small projects (OpenActe) stands as one bar with its parts in
+    // tracks of their own beside it, outlined together.
+    const named = (bar) => bar.full?.strong ?? bar.strong;
+    const family = carried.find((bar) => carried.some((c) => c.partOf === named(bar)));
+    const parts = family ? carried.filter((c) => c.partOf === named(family)) : [];
+    const others = carried.filter((c) => c !== family && !parts.includes(c));
+    const beside = inTracks(others).map((b) => ({ ...b, track: b.track + 1 }));
+    const first = 1 + Math.max(0, ...beside.map((c) => c.track));
+    const members = family
+      ? [
+          { ...family, track: first, umbrella: true },
+          ...inTracks(parts).map((b) => ({ ...b, track: first + 1 + b.track })),
+        ]
+      : [];
+    const inside = [...beside, ...members];
     const all = [{ ...head, track: 0 }, ...inside];
     return {
       bars: all,
+      family: family && {
+        first,
+        last: Math.max(...members.map((m) => m.track)),
+        top: Math.max(...members.map((m) => m.y0)),
+        bottom: Math.min(...members.map((m) => m.y1)),
+      },
       outlined: carried.length > 0,
       top: Math.max(...all.map((b) => b.y0)),
       bottom: Math.min(...all.map((b) => b.y1)),
@@ -98,6 +118,10 @@ function inGroups(groups, yOf, k) {
     for (const bar of group.bars) bar.dx = left + PAD + bar.track * pitch;
     group.x0 = left;
     group.x1 = left + group.width;
+    if (group.family) {
+      group.family.x0 = left + PAD + group.family.first * pitch - 0.3;
+      group.family.x1 = left + PAD + (group.family.last + 1) * pitch - GAP * k + 0.3;
+    }
   }
   return { groups: placed, width: x };
 }
@@ -252,7 +276,13 @@ function layOut(timeline, { width = WIDTH, height = HEIGHT } = {}) {
         bars,
         labelled: bars
           .filter((b) => b.labelled && b.strong)
-          .toSorted((a, b) => b.y0 - a.y0 || b.dx - a.dx || a.depth - b.depth),
+          .toSorted(
+            (a, b) =>
+              b.y0 - a.y0 ||
+              (b.umbrella ? 1 : 0) - (a.umbrella ? 1 : 0) ||
+              b.dx - a.dx ||
+              a.depth - b.depth,
+          ),
         barsWidth,
       };
     });
@@ -332,6 +362,13 @@ function laneLines(lane, t) {
       (g) =>
         `\\filldraw[draw=${colour}!55,fill=${colour}!10,line width=0.3pt,rounded corners=0.6mm] (${mm(lane.x + g.x0)},${mm(g.top + 0.4)}) rectangle (${mm(lane.x + g.x1 - 0.2)},${mm(g.bottom - 0.4)});`,
     );
+  // A family of projects is outlined inside its entry's outline, a tint darker.
+  const families = lane.groups
+    .filter((g) => g.family)
+    .map(
+      ({ family: f }) =>
+        `\\filldraw[draw=${colour}!70,fill=${colour}!22,line width=0.3pt,rounded corners=0.5mm] (${mm(lane.x + f.x0)},${mm(f.top + 0.3)}) rectangle (${mm(lane.x + f.x1)},${mm(f.bottom - 0.3)});`,
+    );
   const bars = lane.bars.map((b) => {
     const x0 = lane.x + b.dx;
     return `\\fill[${fillOf(b)},rounded corners=0.4mm] (${mm(x0)},${mm(b.y0)}) rectangle (${mm(x0 + lane.bar)},${mm(b.y1)});`;
@@ -355,7 +392,7 @@ function laneLines(lane, t) {
     });
     return out;
   });
-  return [...heading, ...outlines, ...bars, ...labels];
+  return [...heading, ...outlines, ...families, ...bars, ...labels];
 }
 
 function buildUpright(sheet, t) {

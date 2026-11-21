@@ -55,7 +55,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             period 2025-07-01..present
             summary t{ en: "Sole founder, architect and developer. Rust backend + Flutter mobile. The R&D layer also served as the dissertation for my MSc in Computer Science at UMons.", fr: "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.", nl: "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.", es: "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirvió como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.", de: "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.", zh: "唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。" }
             uses [Rust, Flutter, Dart, Tokio, Docker, DDD, CleanArchitecture, PostgreSQL]
-            projects [ref Acteble, ref MemoireMaster, ref Actrack, ref LL, ref Baba, ref KAG, ref Indexer, ref Polytech, ref ActConverge, ref Actif, ref Actserve, ref Polymath, ref Actos, ref Actmorph, ref Actsessions, ref Actusext, ref Corpus, ref Actedu, ref Biorcrux, ref Actrepo]
+            projects [ref Acteble, ref MemoireMaster, ref Actrack, ref LL, ref Baba, ref KAG, ref Indexer, ref Polytech, ref ActConverge, ref Actif, ref Actserve, ref Polymath, ref Actos, ref Actmorph, ref Actsessions, ref Actusext, ref Corpus, ref Actedu, ref Biorcrux, ref Actrepo, ref OpenActe]
         }
         AIResearchScientist {
             position t{ en: "AI Research Scientist", fr: "Chercheur en IA", nl: "AI-onderzoeker", es: "Investigador en IA", de: "KI-Forschungswissenschaftler", zh: "AI 研究员" }
@@ -249,7 +249,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             // A school of "promotion sociale": evening classes.
             schedule "evening"
             studyType t{ en: "Professional Bachelor's degree", fr: "Bachelier professionnalisant", nl: "Professionele bachelor", es: "Bachelor profesional", de: "Professioneller Bachelor", zh: "职业学士" }
-            area t{ en: "Information Systems Management", fr: "Informatique de gestion", nl: "Bedrijfsinformatica", es: "Informática de gestión", de: "Wirtschaftsinformatik", zh: "管理信息学" }
+            area t{ en: "Business Computing", fr: "Informatique de gestion", nl: "Bedrijfsinformatica", es: "Informática de gestión", de: "Wirtschaftsinformatik", zh: "管理信息学" }
             period 2018-09-30..2022-10-15
             score t{ en: "62.8%, Satis Bene", fr: "62.8%, Satis Bene", nl: "62.8%, Satis Bene", es: "62.8%, Satis Bene", de: "62,8 %, Satis Bene", zh: "62.8%，Satis Bene" }
             note t{ en: """
@@ -419,6 +419,17 @@ TFE: WebMenu 2.0
             type t{ en: "Application", fr: "Application", nl: "Applicatie", es: "Aplicación", de: "Anwendung", zh: "应用" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
         }
+        // OpenActe: the small projects built around Acteble are its family, as the
+        // microservices are the parts of a platform. They are listed with the
+        // experience, each under this one (partOf).
+        OpenActe {
+            name "OpenActe"
+            description t{ en: "The family of small open projects built around Acteble: libraries, CLIs, engines and knowledge bases, each one doing one thing — like the microservices of a platform.", fr: "La famille des petits projets ouverts construits autour d'Acteble : bibliothèques, CLI, moteurs et bases de connaissances, chacun faisant une seule chose — comme les microservices d'une plateforme.", nl: "De familie van kleine open projecten rond Acteble: bibliotheken, CLI's, engines en kennisbanken, elk met één taak — zoals de microservices van een platform.", es: "La familia de pequeños proyectos abiertos construidos en torno a Acteble: bibliotecas, CLI, motores y bases de conocimiento, cada uno con una sola función — como los microservicios de una plataforma.", de: "Die Familie kleiner offener Projekte rund um Acteble: Bibliotheken, CLIs, Engines und Wissensbasen, jedes mit genau einer Aufgabe — wie die Microservices einer Plattform.", zh: "围绕 Acteble 构建的小型开放项目家族：库、命令行工具、引擎和知识库，各自只做一件事——就像平台的微服务。" }
+            keywords [Rust, OpenSource]
+            startDate 2026-09-23
+            type t{ en: "Project family", fr: "Famille de projets", nl: "Projectfamilie", es: "Familia de proyectos", de: "Projektfamilie", zh: "项目家族" }
+            roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+        }
         Indexer {
             name "Indexer"
             description t{ en: "Curated index of external data sources, books and software packages, served as a public read API.", fr: "Index curé de sources de données externes, de livres et de paquets logiciels, servi par une API publique en lecture.", nl: "Gecureerde index van externe databronnen, boeken en softwarepakketten, aangeboden via een openbare lees-API.", es: "Índice curado de fuentes de datos externas, libros y paquetes de software, servido mediante una API pública de lectura.", de: "Kuratierter Index externer Datenquellen, Bücher und Softwarepakete, bereitgestellt über eine öffentliche Lese-API.", zh: "精选的外部数据源、书籍和软件包索引，通过公开的只读 API 提供。" }
@@ -427,6 +438,7 @@ TFE: WebMenu 2.0
             startDate 2026-10-06
             type t{ en: "API", fr: "API", nl: "API", es: "API", de: "API", zh: "API" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Polytech {
             name "Polytech"
@@ -436,6 +448,7 @@ TFE: WebMenu 2.0
             startDate 2026-09-23
             type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         ActConverge {
             name "ActConverge"
@@ -445,6 +458,7 @@ TFE: WebMenu 2.0
             startDate 2026-10-20
             type t{ en: "Platform", fr: "Plateforme", nl: "Platform", es: "Plataforma", de: "Plattform", zh: "平台" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Actrack {
             name "Actrack"
@@ -464,6 +478,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/Actif"
             type t{ en: "Desktop application", fr: "Application desktop", nl: "Desktopapplicatie", es: "Aplicación de escritorio", de: "Desktop-Anwendung", zh: "桌面应用" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Actmorph {
             name "Actmorph"
@@ -473,6 +488,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/Actmorph"
             type t{ en: "Engine", fr: "Moteur", nl: "Engine", es: "Motor", de: "Engine", zh: "引擎" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Actserve {
             name "Actserve"
@@ -482,6 +498,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/actserve"
             type t{ en: "Orchestrator", fr: "Orchestrateur", nl: "Orchestrator", es: "Orquestador", de: "Orchestrator", zh: "编排器" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Actos {
             name "Actos"
@@ -491,6 +508,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/actos"
             type t{ en: "Supervisor", fr: "Superviseur", nl: "Supervisor", es: "Supervisor", de: "Supervisor", zh: "监控器" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Biorcrux {
             name "Biorcrux"
@@ -500,6 +518,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/biorcrux"
             type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Actrepo {
             name "Actrepo"
@@ -509,6 +528,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/actrepo"
             type "CLI"
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Actsessions {
             name "Actsessions"
@@ -518,6 +538,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/actsessions"
             type "CLI"
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Actusext {
             name "Actusext"
@@ -527,6 +548,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/actusext"
             type "CLI"
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Polymath {
             name "Polymath"
@@ -536,6 +558,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/polymath"
             type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Corpus {
             name "Corpus"
@@ -545,6 +568,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/corpus"
             type t{ en: "Knowledge base", fr: "Base de connaissances", nl: "Kennisbank", es: "Base de conocimientos", de: "Wissensdatenbank", zh: "知识库" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Actedu {
             name "Actedu"
@@ -554,6 +578,7 @@ TFE: WebMenu 2.0
             url "https://github.com/grosjeanbaptiste/actedu"
             type t{ en: "Knowledge graph", fr: "Graphe de connaissances", nl: "Kennisgraaf", es: "Grafo de conocimiento", de: "Wissensgraph", zh: "知识图谱" }
             roles [t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }]
+            partOf "OpenActe"
         }
         Synergy {
             name "Synergy"

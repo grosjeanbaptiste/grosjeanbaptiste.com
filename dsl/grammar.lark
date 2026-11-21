@@ -127,6 +127,7 @@ project_field: "name" value          -> proj_name
              | "type" value          -> proj_type
              | "roles" array         -> proj_roles
              | "entity" value        -> proj_entity
+             | "partOf" value        -> proj_part_of
 
 // ---------------------------------------------------------------------------
 // courses

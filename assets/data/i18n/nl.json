@@ -157,6 +157,13 @@
       ]
     },
     {
+      "description": "De familie van kleine open projecten rond Acteble: bibliotheken, CLI's, engines en kennisbanken, elk met één taak — zoals de microservices van een platform.",
+      "type": "Projectfamilie",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
       "description": "Gecureerde index van externe databronnen, boeken en softwarepakketten, aangeboden via een openbare lees-API.",
       "summary": "Elk van de 523 bronnen is een TOML-bestand dat Rust valideert en compileert tot statische JSON, bij het bouwen ingebed in een Cloudflare Worker: API-logica in puur Rust, ETag- en 304-antwoorden, snelheidslimieten per IP en per API-sleutel, exact geteld door een Durable Object, BM25F-rangschikking gewogen met een betrouwbaarheidsscore op zes criteria, en een hiaatanalyse die behoeften aan kandidaat-bronnen koppelt.",
       "type": "API",

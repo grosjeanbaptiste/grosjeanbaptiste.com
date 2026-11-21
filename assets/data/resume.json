@@ -188,7 +188,7 @@
     {
       "institution": "Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)",
       "studyType": "Professional Bachelor's degree",
-      "area": "Information Systems Management",
+      "area": "Business Computing",
       "startDate": "2018-09-30",
       "endDate": "2022-10-15",
       "courses": [
@@ -350,6 +350,19 @@
       ]
     },
     {
+      "name": "OpenActe",
+      "description": "The family of small open projects built around Acteble: libraries, CLIs, engines and knowledge bases, each one doing one thing — like the microservices of a platform.",
+      "keywords": [
+        "Rust",
+        "OpenSource"
+      ],
+      "startDate": "2026-09-23",
+      "type": "Project family",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
       "name": "Indexer",
       "description": "Curated index of external data sources, books and software packages, served as a public read API.",
       "keywords": [
@@ -366,7 +379,8 @@
       "type": "API",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Polytech",
@@ -388,7 +402,8 @@
       "type": "Library",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "ActConverge",
@@ -412,7 +427,8 @@
       "type": "Platform",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Actrack",
@@ -460,7 +476,8 @@
       "type": "Desktop application",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Actmorph",
@@ -476,7 +493,8 @@
       "type": "Engine",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Actserve",
@@ -497,7 +515,8 @@
       "type": "Orchestrator",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Actos",
@@ -515,7 +534,8 @@
       "type": "Supervisor",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Biorcrux",
@@ -534,7 +554,8 @@
       "type": "Library",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Actrepo",
@@ -552,7 +573,8 @@
       "type": "CLI",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Actsessions",
@@ -569,7 +591,8 @@
       "type": "CLI",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Actusext",
@@ -586,7 +609,8 @@
       "type": "CLI",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Polymath",
@@ -604,7 +628,8 @@
       "type": "Library",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Corpus",
@@ -622,7 +647,8 @@
       "type": "Knowledge base",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Actedu",
@@ -640,7 +666,8 @@
       "type": "Knowledge graph",
       "roles": [
         "Author"
-      ]
+      ],
+      "partOf": "OpenActe"
     },
     {
       "name": "Synergy",

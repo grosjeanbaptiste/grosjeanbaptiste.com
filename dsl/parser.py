@@ -368,6 +368,9 @@ class _Builder(Transformer):
     def proj_entity(self, meta, children):
         return ("entity", children[0])
 
+    def proj_part_of(self, meta, children):
+        return ("part_of", children[0])
+
     # -----------------------------------------------------------------
     # courses
     # -----------------------------------------------------------------

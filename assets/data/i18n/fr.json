@@ -157,6 +157,13 @@
       ]
     },
     {
+      "description": "La famille des petits projets ouverts construits autour d'Acteble : bibliothèques, CLI, moteurs et bases de connaissances, chacun faisant une seule chose — comme les microservices d'une plateforme.",
+      "type": "Famille de projets",
+      "roles": [
+        "Auteur"
+      ]
+    },
+    {
       "description": "Index curé de sources de données externes, de livres et de paquets logiciels, servi par une API publique en lecture.",
       "summary": "Chacune des 523 sources est un fichier TOML que Rust valide et compile en JSON statique, embarqué à la compilation dans un Cloudflare Worker : logique d'API en Rust pur, réponses ETag et 304, limites de débit par IP et par clé d'API comptées exactement par un Durable Object, classement BM25F pondéré par un score de fiabilité à six critères, et une analyse des manques qui associe chaque besoin aux sources candidates.",
       "type": "API",

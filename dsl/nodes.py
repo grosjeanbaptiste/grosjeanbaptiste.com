@@ -188,6 +188,9 @@ class ProjectEntry(Node):
     type: Value | None = None  # noqa: A003 — schema name
     roles: tuple[Value, ...] = ()
     entity: str | None = None
+    # The project this one is a part of, by name: the small projects of a
+    # family (OpenActe) are parts of it, as the microservices of a platform.
+    part_of: str | None = None
     # A side project the author keeps out of some or all displays.
     hide_on: HideTarget | None = None
 

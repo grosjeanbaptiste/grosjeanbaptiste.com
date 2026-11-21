@@ -42,6 +42,8 @@ function barOf(kind, record, now) {
     title: SHAPES[kind].title(record) || '',
     // What it tells beyond that: a project its kind, its roles, its stack.
     ...detailsOf(kind, record),
+    // A small project names the project it is a part of (OpenActe).
+    ...(record.partOf ? { partOf: record.partOf } : {}),
     // A degree is followed by day or on an evening schedule; nothing else has one.
     ...(kind === 'education' ? { schedule: record.schedule || 'day' } : {}),
   };

@@ -157,6 +157,13 @@
       ]
     },
     {
+      "description": "Die Familie kleiner offener Projekte rund um Acteble: Bibliotheken, CLIs, Engines und Wissensbasen, jedes mit genau einer Aufgabe — wie die Microservices einer Plattform.",
+      "type": "Projektfamilie",
+      "roles": [
+        "Autor"
+      ]
+    },
+    {
       "description": "Kuratierter Index externer Datenquellen, Bücher und Softwarepakete, bereitgestellt über eine öffentliche Lese-API.",
       "summary": "Jede der 523 Quellen ist eine TOML-Datei, die Rust validiert und zu statischem JSON kompiliert, beim Build in einen Cloudflare Worker eingebettet: API-Logik in reinem Rust, ETag- und 304-Antworten, Ratenbegrenzung pro IP und API-Schlüssel, exakt gezählt von einem Durable Object, BM25F-Ranking gewichtet mit einem Zuverlässigkeitswert aus sechs Kriterien und eine Lückenanalyse, die Bedarfe passenden Quellen zuordnet.",
       "type": "API",
