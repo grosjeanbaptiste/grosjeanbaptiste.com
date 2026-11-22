@@ -67,13 +67,7 @@ for (const lang of LANGS) {
 // Firefox caches XSLT stylesheets very aggressively — bypass the
 // disk cache by suffixing the href with a short content hash so the
 // URL changes whenever the XSLT does.
-const crypto = require('node:crypto');
-const xsltHash = (rel) =>
-  crypto
-    .createHash('sha1')
-    .update(fs.readFileSync(path.join(ROOT, 'assets/xslt', path.basename(rel))))
-    .digest('hex')
-    .slice(0, 8);
+const { xsltHash } = require('./lib/xslt-hash');
 const RICH = `../xslt/resume-transform.xsl?h=${xsltHash('resume-transform.xsl')}`;
 const MINIMAL = `../xslt/resume-transform-minimal.xsl?h=${xsltHash('resume-transform-minimal.xsl')}`;
 const xmlOutputs = [

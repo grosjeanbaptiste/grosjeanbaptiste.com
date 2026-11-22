@@ -3,9 +3,9 @@
 // it announces — scripts, styles, preloads, and the list a reader page keeps for
 // us — so the first click on a display
 // finds its files in the HTTP cache instead of paying for them then. Loaded by
-// the classic page and by the app. Plain fetch(), because Safari has no
-// <link rel="prefetch">. Nothing under Save-Data or on 2G; XSLT displays are
-// left alone (one XML file each, and only Firefox renders them).
+// the classic page, the app and both XSLT themes. Plain fetch(), because Safari has no
+// <link rel="prefetch">. Nothing under Save-Data or on 2G; an XSLT display is
+// not warmed itself (one XML file, and not every browser renders it).
 (() => {
   const connection = navigator.connection;
   if (connection?.saveData || /2g$/.test(connection?.effectiveType ?? '')) return;

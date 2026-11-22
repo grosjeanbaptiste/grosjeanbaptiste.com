@@ -4,6 +4,8 @@ const { onPageOf } = require('./sections/main');
 const { navItemsOf } = require('./sections/nav');
 const { telOf } = require('./sections/sidebar');
 const { timelineForXml } = require('./xml-timeline');
+const { headForXml } = require('./xml-head');
+const { picturesForXml } = require('./xml-pictures');
 const I18N = require('./i18n');
 const { highestObtainedDegree, highestInProgressDegree, formatDegreeLine } = require('./degrees');
 
@@ -27,6 +29,10 @@ const XML_ITEM_NAMES = {
   views: 'view',
   nav: 'link',
   zooms: 'zoom',
+  alternates: 'alternate',
+  pictures: 'picture',
+  pages: 'page',
+  localeAlternates: 'locale',
   ticks: 'tick',
   lanes: 'lane',
   bars: 'bar',
@@ -86,6 +92,8 @@ function generateXml(
   const meta = {
     ...(resume.meta || {}),
     lang,
+    head: headForXml(resume, lang),
+    pictures: picturesForXml(lang),
     viewsTitle: I18N[lang].views.title,
     views: viewsOf(lang),
     // The classic page's menu, and its phone link: XSLT 1.0 cannot strip
@@ -99,7 +107,7 @@ function generateXml(
   if (Object.keys(degrees).length) meta.degrees = degrees;
   // Each entry carries the id the classic page gives it (xml-anchors.js), for
   // the timeline's bars to link to.
-  const tagged = { ...anchoredResume(resume), meta };
+  const tagged = { ...anchoredResume(resume, lang), meta };
   const body = emitXml('resume', tagged, 0);
   return `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="${themePath}"?>\n${body}\n`;
 }

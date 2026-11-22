@@ -12,6 +12,11 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <!-- The skill filter, shared by the two themes. -->
   <xsl:include href="skill-filter.xsl"/>
+  <xsl:include href="head-meta.xsl"/>
+  <xsl:include href="entry-panel.xsl"/>
+  <xsl:include href="timeline-zoom.xsl"/>
+  <xsl:include href="search.xsl"/>
+  <xsl:include href="pdf-reader.xsl"/>
   <xsl:output method="html" indent="yes"/>
 
   <xsl:key name="project-by-name" match="/resume/projects/project[name]" use="name"/>
@@ -237,6 +242,7 @@
       <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <xsl:call-template name="head-meta"/>
         <title><xsl:value-of select="basics/name"/></title>
         <style>
           :root {
@@ -1118,25 +1124,8 @@
         <xsl:call-template name="skill-targets"/>
         <div class="tl-head">
           <h2 id="timeline-title"><xsl:value-of select="$tl/title"/></h2>
-          <!-- The zoom is a radio per zoom (css/timeline-zoom.css draws them as
-               buttons, the rules in the head set the scale): no script. -->
-          <div class="tl-zoom" role="group">
-            <xsl:attribute name="aria-label"><xsl:value-of select="$tl/title"/></xsl:attribute>
-            <xsl:for-each select="$tl/zooms/zoom">
-              <input type="radio" name="tl-zoom" class="tl-zoom-input">
-                <xsl:attribute name="id">tl-z-<xsl:value-of select="years"/></xsl:attribute>
-                <xsl:if test="years = '5'"><xsl:attribute name="checked">checked</xsl:attribute></xsl:if>
-              </input>
-              <label>
-                <xsl:attribute name="for">tl-z-<xsl:value-of select="years"/></xsl:attribute>
-                <xsl:value-of select="label"/>
-              </label>
-            </xsl:for-each>
-          </div>
-          <!-- Opens the search; /js/search.js shows it, with ⌘K / Ctrl+K. -->
-          <xsl:for-each select="$tl/search">
-            <button type="button" class="tl-search-open" aria-haspopup="dialog" aria-controls="cv-search" hidden="hidden"><xsl:value-of select="label"/></button>
-          </xsl:for-each>
+          <xsl:call-template name="timeline-zoom"/>
+          <xsl:call-template name="search-open"/>
         </div>
         <div class="tl-scroll">
           <div class="tl-grid">
@@ -1197,23 +1186,6 @@
     </xsl:if>
   </xsl:template>
 
-  <!-- The classic page's search dialog (scripts/lib/sections/search.js), run
-       by /js/search.js over the index the generator wrote (meta/timeline/
-       search — scripts/lib/xml-search.js), inert JSON. Closed. -->
-  <xsl:template name="search">
-    <xsl:for-each select="/resume/meta/timeline/search">
-      <dialog id="cv-search">
-        <xsl:attribute name="aria-label"><xsl:value-of select="label"/></xsl:attribute>
-        <input type="search" class="cv-search-input" autocomplete="off" aria-controls="cv-search-results">
-          <xsl:attribute name="aria-label"><xsl:value-of select="label"/></xsl:attribute>
-          <xsl:attribute name="placeholder"><xsl:value-of select="placeholder"/></xsl:attribute>
-        </input>
-        <ul id="cv-search-results" class="cv-search-results" role="listbox"></ul>
-        <p class="cv-search-empty" hidden="hidden"><xsl:value-of select="empty"/></p>
-        <script type="application/json" id="cv-index"><xsl:value-of select="index"/></script>
-      </dialog>
-    </xsl:for-each>
-  </xsl:template>
 
   <!-- What every bar carries, linked or not: its place, its name for assistive
        technology, and what the preview shows. -->
@@ -1243,73 +1215,6 @@
       <p><xsl:value-of select="/resume/basics/summary"/></p>
       </section>
     </xsl:if>
-  </xsl:template>
-
-  <!-- The entry the URL points at is lifted into a panel by css/entry-panel.css
-       (:target, no script); this is the way out of it, back to the timeline. -->
-  <xsl:template name="entry-close">
-    <a class="entry-close" href="#timeline" aria-label="×">×</a>
-  </xsl:template>
-
-  <!-- The scale each zoom sets: how many times the axis is stretched so that
-       exactly that many years show — the length of the career over the years,
-       never under 1. Only XSLT has the length at hand, so the rules are
-       written here; css/timeline-zoom.css holds the rest. -->
-  <xsl:template name="timeline-zoom-css">
-    <xsl:variable name="months" select="/resume/meta/timeline/months"/>
-    <xsl:if test="$months">
-      <style>
-        <xsl:for-each select="/resume/meta/timeline/zooms/zoom">
-          <xsl:text>#timeline:has(#tl-z-</xsl:text><xsl:value-of select="years"/><xsl:text>:checked) .tl-grid { --stretch: </xsl:text>
-          <xsl:choose>
-            <xsl:when test="years != 'all' and $months div (years * 12) &gt; 1"><xsl:value-of select="$months div (years * 12)"/></xsl:when>
-            <xsl:otherwise>1</xsl:otherwise>
-          </xsl:choose>
-          <xsl:text>; }&#10;</xsl:text>
-        </xsl:for-each>
-      </style>
-    </xsl:if>
-  </xsl:template>
-
-  <!-- The PDFs, read in the page: one <details> each, all of one named group,
-       so the browser keeps one open — the tabs of a reader, with no script and
-       no sheet. The browser's own viewer in the <object> zooms and downloads;
-       one that cannot show a PDF hands the file over. -->
-  <xsl:template name="pdf-reader">
-    <section id="pdf">
-      <h2><xsl:value-of select="/resume/meta/views/view[id='pdf']/label"/></h2>
-      <xsl:call-template name="pdf-panel">
-        <xsl:with-param name="summary" select="/resume/meta/views/view[id='pdf']/label"/>
-        <xsl:with-param name="file" select="concat('/assets/cv/cv_grosjean_baptiste_', $lang, '.pdf')"/>
-      </xsl:call-template>
-      <xsl:for-each select="/resume/meta/timeline/pdf">
-        <xsl:variable name="label" select="label"/>
-        <xsl:call-template name="pdf-panel">
-          <xsl:with-param name="summary" select="concat($label, ' · ', ../zooms/zoom[years = 2]/label)"/>
-          <xsl:with-param name="file" select="two"/>
-        </xsl:call-template>
-        <xsl:call-template name="pdf-panel">
-          <xsl:with-param name="summary" select="concat($label, ' · ', ../zooms/zoom[years = 5]/label)"/>
-          <xsl:with-param name="file" select="five"/>
-        </xsl:call-template>
-        <xsl:call-template name="pdf-panel">
-          <xsl:with-param name="summary" select="concat($label, ' · ', ../zooms/zoom[years = 'all']/label)"/>
-          <xsl:with-param name="file" select="all"/>
-        </xsl:call-template>
-      </xsl:for-each>
-    </section>
-  </xsl:template>
-
-  <xsl:template name="pdf-panel">
-    <xsl:param name="summary"/>
-    <xsl:param name="file"/>
-    <details name="cv-reader">
-      <summary><xsl:value-of select="$summary"/></summary>
-      <object type="application/pdf" width="100%" height="800">
-        <xsl:attribute name="data"><xsl:value-of select="$file"/></xsl:attribute>
-        <a><xsl:attribute name="href"><xsl:value-of select="$file"/></xsl:attribute><xsl:value-of select="$summary"/></a>
-      </object>
-    </details>
   </xsl:template>
 
   <xsl:template name="main-work">

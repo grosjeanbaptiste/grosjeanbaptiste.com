@@ -19,7 +19,6 @@ const render = (minimal) =>
     ],
     { encoding: 'utf8', maxBuffer: 1 << 26 },
   );
-const scripts = (html) => (html.match(/<script\b/g) || []).length;
 
 for (const [theme, minimal] of [
   ['rich', false],
@@ -87,12 +86,16 @@ for (const [theme, minimal] of [
 
 test('the filter adds no script to the minimal theme', () => {
   const html = render(true);
-  assert.doesNotMatch(html, /skill-filter\.js|search\.js/);
-  // Its scripts are the ones it had: theme, language, print layout.
-  assert.equal(scripts(html), 3);
+  assert.doesNotMatch(html, /skill-filter\.js/);
+  // The files it loads are the ones it shares with the rich theme (the
+  // address, the search, the warming of the other displays). None filters.
+  assert.deepEqual(
+    [...html.matchAll(/<script src="([^"]+)"/g)].map((m) => m[1]),
+    ['/js/views-ahead.js', '/js/xslt-links.js', '/js/search-rank.js', '/js/search.js'],
+  );
 });
 
-// The search is the rich theme's one script by design (it cannot be done in
+// The search is a script by design (it cannot be done in
 // CSS); the filter must still need none.
 test('the filter adds no script to the rich theme either', () => {
   assert.doesNotMatch(render(false), /skill-filter\.js/);

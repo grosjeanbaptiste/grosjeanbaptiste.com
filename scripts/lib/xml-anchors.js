@@ -4,7 +4,39 @@
 // whose row keeps the id. A row is listed under every entry that names it, and
 // only its first appearance in the page keeps the id — as sections/main.js
 // does — which XSLT 1.0 cannot find out by itself.
+// Each entry also carries `app`, where the interactive view shows it
+// (/app/{lang}/{kind}/{id}/). The ids are the app's own (react/scripts/
+// export-lib.mjs), read from the data its build exported, the English entry's
+// slug in every language; only the list's length is checked here, and
+// xslt-app-links.test.js holds the rest.
+const fs = require('node:fs');
+const path = require('node:path');
+const { ROOT } = require('./config');
 const { anchorOf } = require('./anchors');
+
+const APP_KINDS = {
+  work: 'work',
+  education: 'education',
+  projects: 'project',
+  courses: 'course',
+  volunteer: 'volunteer',
+};
+
+function appIds() {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, 'app/data/en.json'), 'utf8')).resume;
+  } catch {
+    return {};
+  }
+}
+
+// `section`'s entries with the interactive view's path, when the app's data
+// lists the same entries.
+function withApp(section, entries, lang, ids) {
+  const known = ids[section];
+  if (!entries || known?.length !== entries.length) return entries;
+  return entries.map((e, i) => ({ ...e, app: `/app/${lang}/${APP_KINDS[section]}/${known[i].id}/` }));
+}
 
 const HOSTS = { work: 'company', education: 'institution' };
 
@@ -36,29 +68,46 @@ function firstHosts(resume) {
   return hosts;
 }
 
-function anchoredResume(resume) {
+function anchoredResume(resume, lang) {
   const hosts = firstHosts(resume);
+  const ids = appIds();
   const own = (kind, key) => (r) => ({
     ...r,
     anchor: anchorOf(kind, r),
     anchoredIn: hosts.get(`${kind}:${key(r)}`),
   });
   const each = (entries, tag) => (entries ? entries.map(tag) : entries);
+  const linked = (section, entries) => withApp(section, entries, lang, ids);
   return {
     ...resume,
-    work: each(resume.work, (e) => ({ ...e, anchor: anchorOf('work', e) })),
-    education: each(resume.education, (e) => ({ ...e, anchor: anchorOf('education', e) })),
-    projects: each(
-      resume.projects,
-      own('project', (p) => p.name),
+    work: linked(
+      'work',
+      each(resume.work, (e) => ({ ...e, anchor: anchorOf('work', e) })),
     ),
-    courses: each(
-      resume.courses,
-      own('course', (c) => c.name),
+    education: linked(
+      'education',
+      each(resume.education, (e) => ({ ...e, anchor: anchorOf('education', e) })),
     ),
-    volunteer: each(
-      resume.volunteer,
-      own('volunteer', (v) => anchorOf('volunteer', v)),
+    projects: linked(
+      'projects',
+      each(
+        resume.projects,
+        own('project', (p) => p.name),
+      ),
+    ),
+    courses: linked(
+      'courses',
+      each(
+        resume.courses,
+        own('course', (c) => c.name),
+      ),
+    ),
+    volunteer: linked(
+      'volunteer',
+      each(
+        resume.volunteer,
+        own('volunteer', (v) => anchorOf('volunteer', v)),
+      ),
     ),
   };
 }

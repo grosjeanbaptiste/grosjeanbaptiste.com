@@ -150,4 +150,4 @@ function generateHead(resume, lang) {
   ].join('\n');
 }
 
-module.exports = { generateHead };
+module.exports = { generateHead, buildJsonLd };

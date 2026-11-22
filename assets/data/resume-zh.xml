@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=03124113"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=6dfedb80"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -92,6 +92,178 @@
       <section>dailyLife</section>
     </sidebarOrder>
     <lang>zh</lang>
+    <head>
+      <description>计算机科学家 —— 蒙斯大学 (UMons) 计算机科学硕士 —— 正在构建 Acteble。 工作聚焦于 AI 时代的软件工程交汇点 —— Claude Code 工作流、自主智能体、RAG 管道、移动开发 —— 以软件工艺为根基：整洁代码、整洁架构、六边形架构、领域驱动设计（DDD）、测试驱动开发（TDD）。</description>
+      <author>Baptiste Grosjean</author>
+      <keywords>SQL, C#, Java, Python, JS, TS, XML, JSON, HTML, CSS, Zsh, Dart, Rust, LaTeX, SQL Server, EF, .NET, Pandas</keywords>
+      <ogTitle>Baptiste Grosjean — 计算机科学家</ogTitle>
+      <canonical>https://www.grosjeanbaptiste.com/zh/</canonical>
+      <image>https://www.grosjeanbaptiste.com/assets/images/profil.jpeg</image>
+      <locale>zh_CN</locale>
+      <localeAlternates>
+        <locale>en_US</locale>
+        <locale>fr_FR</locale>
+        <locale>nl_BE</locale>
+        <locale>es_ES</locale>
+        <locale>de_DE</locale>
+      </localeAlternates>
+      <givenName>Baptiste</givenName>
+      <familyName>Grosjean</familyName>
+      <jsonld>{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Baptiste Grosjean",
+  "givenName": "Baptiste",
+  "familyName": "Grosjean",
+  "jobTitle": "计算机科学家",
+  "description": "计算机科学家 —— 蒙斯大学 (UMons) 计算机科学硕士 —— 正在构建 Acteble。 工作聚焦于 AI 时代的软件工程交汇点 —— Claude Code 工作流、自主智能体、RAG 管道、移动开发 —— 以软件工艺为根基：整洁代码、整洁架构、六边形架构、领域驱动设计（DDD）、测试驱动开发（TDD）。",
+  "url": "https://www.grosjeanbaptiste.com/zh/",
+  "image": "https://www.grosjeanbaptiste.com/assets/images/profil.jpeg",
+  "email": "mailto:grosjeanbaptiste@outlook.com",
+  "telephone": "+32 496 28 97 05",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kraainem",
+    "addressRegion": "比利时",
+    "addressCountry": "BE"
+  },
+  "nationality": {
+    "@type": "Country",
+    "name": "Belgium"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/grosjeanbaptiste",
+    "https://github.com/grosjeanbaptiste",
+    "https://npm.com/grosjeanbaptiste"
+  ],
+  "alumniOf": [],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Acteble",
+    "url": "https://www.acteble.com"
+  },
+  "knowsLanguage": [
+    "法语",
+    "英语",
+    "荷兰语"
+  ],
+  "knowsAbout": [
+    "SQL",
+    "C#",
+    "Java",
+    "Python",
+    "JS",
+    "TS",
+    "XML",
+    "JSON",
+    "HTML",
+    "CSS",
+    "Zsh",
+    "Dart",
+    "Rust",
+    "LaTeX",
+    "SQL Server",
+    "EF",
+    ".NET",
+    "Pandas",
+    "NumPy",
+    "Whisper"
+  ],
+  "inLanguage": "zh"
+}</jsonld>
+      <alternates>
+        <alternate>
+          <lang>en</lang>
+          <href>https://www.grosjeanbaptiste.com/</href>
+        </alternate>
+        <alternate>
+          <lang>fr</lang>
+          <href>https://www.grosjeanbaptiste.com/fr/</href>
+        </alternate>
+        <alternate>
+          <lang>nl</lang>
+          <href>https://www.grosjeanbaptiste.com/nl/</href>
+        </alternate>
+        <alternate>
+          <lang>es</lang>
+          <href>https://www.grosjeanbaptiste.com/es/</href>
+        </alternate>
+        <alternate>
+          <lang>de</lang>
+          <href>https://www.grosjeanbaptiste.com/de/</href>
+        </alternate>
+        <alternate>
+          <lang>zh</lang>
+          <href>https://www.grosjeanbaptiste.com/zh/</href>
+        </alternate>
+        <alternate>
+          <lang>x-default</lang>
+          <href>https://www.grosjeanbaptiste.com/</href>
+        </alternate>
+      </alternates>
+    </head>
+    <pictures>
+      <picture>
+        <file>/assets/cv/cv_grosjean_baptiste_timeline_2y_zh.pdf</file>
+        <pages>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_2y_zh-1.webp</src>
+            <width>1415</width>
+            <height>1000</height>
+          </page>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_2y_zh-2.webp</src>
+            <width>1000</width>
+            <height>1415</height>
+          </page>
+        </pages>
+      </picture>
+      <picture>
+        <file>/assets/cv/cv_grosjean_baptiste_timeline_5y_zh.pdf</file>
+        <pages>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_5y_zh-1.webp</src>
+            <width>1415</width>
+            <height>1000</height>
+          </page>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_5y_zh-2.webp</src>
+            <width>1000</width>
+            <height>1415</height>
+          </page>
+        </pages>
+      </picture>
+      <picture>
+        <file>/assets/cv/cv_grosjean_baptiste_timeline_zh.pdf</file>
+        <pages>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_zh-1.webp</src>
+            <width>1415</width>
+            <height>1000</height>
+          </page>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_zh-2.webp</src>
+            <width>1000</width>
+            <height>1415</height>
+          </page>
+        </pages>
+      </picture>
+      <picture>
+        <file>/assets/cv/cv_grosjean_baptiste_zh.pdf</file>
+        <pages>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_zh-1.webp</src>
+            <width>1000</width>
+            <height>1415</height>
+          </page>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_zh-2.webp</src>
+            <width>1415</width>
+            <height>1000</height>
+          </page>
+        </pages>
+      </picture>
+    </pictures>
     <viewsTitle>视图</viewsTitle>
     <views>
       <view>
@@ -4449,6 +4621,7 @@
         <project>OpenActe</project>
       </projects>
       <anchor>work-acteble-创始人</anchor>
+      <app>/app/zh/work/acteble-founder/</app>
     </job>
     <job>
       <company>比利时参议院</company>
@@ -4471,6 +4644,7 @@
         <project>fedrag-be</project>
       </projects>
       <anchor>work-比利时参议院-ai-研究员</anchor>
+      <app>/app/zh/work/belgian-senate-ai-research-scientist/</app>
     </job>
     <job>
       <company>Emvi.ai</company>
@@ -4494,6 +4668,7 @@
         <project>Emvi App</project>
       </projects>
       <anchor>work-emvi-ai-ai-软件工艺负责人</anchor>
+      <app>/app/zh/work/emvi-ai-ai-software-crafter-lead/</app>
     </job>
     <job>
       <company>Emvi.ai</company>
@@ -4519,6 +4694,7 @@
         <project>Remi</project>
       </projects>
       <anchor>work-emvi-ai-ai-软件工艺师</anchor>
+      <app>/app/zh/work/emvi-ai-ai-software-crafter/</app>
     </job>
     <job>
       <company>Xtrada</company>
@@ -4539,6 +4715,7 @@
         <project>VhAuctions NER Inventory Model</project>
       </projects>
       <anchor>work-xtrada-数据科学家</anchor>
+      <app>/app/zh/work/xtrada-data-scientist/</app>
     </job>
     <job>
       <company>Xtrada</company>
@@ -4555,6 +4732,7 @@
         <skill>CleanArchitecture</skill>
       </skills>
       <anchor>work-xtrada-软件工艺师</anchor>
+      <app>/app/zh/work/xtrada-software-crafter/</app>
     </job>
     <job>
       <company>Xtrada</company>
@@ -4578,6 +4756,7 @@
       </projects>
       <client>VhAuctions</client>
       <anchor>work-xtrada-net-react-软件工艺师</anchor>
+      <app>/app/zh/work/xtrada-net-react-software-crafter/</app>
     </job>
     <job>
       <company>Xtrada</company>
@@ -4600,6 +4779,7 @@
       </projects>
       <client>aXinco</client>
       <anchor>work-xtrada-net-blazor-软件工艺师</anchor>
+      <app>/app/zh/work/xtrada-net-blazor-software-crafter/</app>
     </job>
     <job>
       <company>Technofutur TIC</company>
@@ -4625,6 +4805,7 @@
         <project>MyWay</project>
       </projects>
       <anchor>work-technofutur-tic-全栈-web-开发实习生</anchor>
+      <app>/app/zh/work/technofutur-tic-full-stack-developer-web-intern/</app>
     </job>
     <job>
       <company>EDITx: IT Challenges, IT Jobs, Education in IT for X</company>
@@ -4634,6 +4815,7 @@
       <startDate>2022-04-01</startDate>
       <endDate>2022-04-30</endDate>
       <anchor>work-editx-it-challenges-it-jobs-education-in-it-for-x-全栈-web-开发实习生</anchor>
+      <app>/app/zh/work/editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-developer-web-intern/</app>
     </job>
     <job>
       <company>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</company>
@@ -4643,6 +4825,7 @@
       <startDate>2022-03-30</startDate>
       <endDate>2022-03-31</endDate>
       <anchor>work-les-auberges-de-jeunesse-wallonie-bruxelles-学生工</anchor>
+      <app>/app/zh/work/les-auberges-de-jeunesse-wallonie-bruxelles-student-job/</app>
     </job>
     <job>
       <company>RESTOMAX</company>
@@ -4660,6 +4843,7 @@
         <project>WebMenu</project>
       </projects>
       <anchor>work-restomax-全栈-web-开发实习生</anchor>
+      <app>/app/zh/work/restomax-full-stack-developer-web-intern/</app>
     </job>
     <job>
       <company>Quick Restaurant</company>
@@ -4669,6 +4853,7 @@
       <startDate>2017-09-01</startDate>
       <endDate>2017-09-30</endDate>
       <anchor>work-quick-restaurant-学生工</anchor>
+      <app>/app/zh/work/quick-restaurant-student-job/</app>
     </job>
   </work>
   <education>
@@ -4767,6 +4952,7 @@
         </block>
       </blocks>
       <anchor>education-umons-理学硕士</anchor>
+      <app>/app/zh/education/umons-master-of-science-msc/</app>
     </school>
     <school>
       <institution>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</institution>
@@ -4873,6 +5059,7 @@ TFE: WebMenu 2.0
         </block>
       </blocks>
       <anchor>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchor>
+      <app>/app/zh/education/ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree/</app>
     </school>
     <school>
       <institution>Institut Saint-Louis Bruxelles</institution>
@@ -4883,6 +5070,7 @@ TFE: WebMenu 2.0
       <gpa>证书</gpa>
       <schedule>day</schedule>
       <anchor>education-institut-saint-louis-bruxelles-证书</anchor>
+      <app>/app/zh/education/institut-saint-louis-bruxelles-attestation/</app>
     </school>
     <school>
       <institution>Université Saint-Louis - Bruxelles</institution>
@@ -4920,6 +5108,7 @@ TFE: WebMenu 2.0
         </block>
       </blocks>
       <anchor>education-universite-saint-louis-bruxelles-政治学学士</anchor>
+      <app>/app/zh/education/universite-saint-louis-bruxelles-bachelor-in-political-sciences/</app>
     </school>
     <school>
       <institution>UCLouvain - Université catholique de Louvain</institution>
@@ -4930,6 +5119,7 @@ TFE: WebMenu 2.0
       <gpa>证书</gpa>
       <schedule>day</schedule>
       <anchor>education-uclouvain-universite-catholique-de-louvain-预科课程</anchor>
+      <app>/app/zh/education/uclouvain-universite-catholique-de-louvain-cours-preparatoires/</app>
     </school>
     <school>
       <institution>Centre Scolaire Saint-Adrien - Val Duchesse</institution>
@@ -4940,6 +5130,7 @@ TFE: WebMenu 2.0
       <gpa>Satis bene</gpa>
       <schedule>day</schedule>
       <anchor>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</anchor>
+      <app>/app/zh/education/centre-scolaire-saint-adrien-val-duchesse-c-e-s-s/</app>
     </school>
     <school>
       <institution>Centre Scolaire Saint-Adrien - Val Duchesse</institution>
@@ -4948,6 +5139,7 @@ TFE: WebMenu 2.0
       <endDate>2013-06-30</endDate>
       <schedule>day</schedule>
       <anchor>education-centre-scolaire-saint-adrien-val-duchesse</anchor>
+      <app>/app/zh/education/centre-scolaire-saint-adrien-val-duchesse/</app>
     </school>
     <school>
       <institution>Lycée Mater Dei</institution>
@@ -4956,6 +5148,7 @@ TFE: WebMenu 2.0
       <endDate>2012-06-30</endDate>
       <schedule>day</schedule>
       <anchor>education-lycee-mater-dei</anchor>
+      <app>/app/zh/education/lycee-mater-dei/</app>
     </school>
   </education>
   <projects>
@@ -4980,6 +5173,7 @@ TFE: WebMenu 2.0
       <summary>五层结构：负责全部 I/O 的 Rust CLI、link-grammar 句法解析器、不含 I/O 的 SWI-Prolog 符号引擎、以数据形式保存的领域词汇包，以及约五十个 Rust 动作程序——新增一个动词只需一条词汇包事实和一个程序。经过变异测试，配有回归句子语料库，冷启动约 120 毫秒。</summary>
       <anchor>project-baba</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/baba/</app>
     </project>
     <project>
       <name>KAG</name>
@@ -5002,6 +5196,7 @@ TFE: WebMenu 2.0
       <summary>九个管道阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate），每个阶段都是一个端口，其算法按标签选择（BM25F、RM3、MMR、LambdaMART、TextRank…）；六边形架构 + DDD + TDD，核心仅使用标准库，不用 LLM。评测指标与 pytrec_eval 完全一致。在六个 BEIR 数据集上没有一种检索器处处最优（SciFact 上 BM25F 的 ndcg@10 为 0.668）；LambdaMART 重排序器在 5 折交叉验证中把 ArguAna 从 0.301 提升到 0.527。</summary>
       <anchor>project-kag</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/kag/</app>
     </project>
     <project>
       <name>LL</name>
@@ -5032,6 +5227,7 @@ TFE: WebMenu 2.0
       <summary>一个 Rust 工作区，其纯领域核心（六边形架构、DDD、测试先行）驱动终端界面（ratatui）以及 Dioxus 桌面和 iOS 应用：基于 SQLite 的 Leitner 盒子与 SM-2 调度，内容来自带校验和的数据包。其数据实验室用 Python 构建六语种词汇数据库——约 8,900 个词义（2026 年 10 月），与 WordNet 对齐，配有 Tatoeba 例句，经 spaCy 分析，每个词与句子的关联都经过校验。</summary>
       <anchor>project-ll</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/ll/</app>
     </project>
     <project>
       <name>OpenActe</name>
@@ -5047,6 +5243,7 @@ TFE: WebMenu 2.0
       </roles>
       <anchor>project-openacte</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/openacte/</app>
     </project>
     <project>
       <name>Actindexer</name>
@@ -5069,6 +5266,7 @@ TFE: WebMenu 2.0
       <summary>523 个数据源各为一个 TOML 文件，由 Rust 校验并编译为静态 JSON，在构建时嵌入 Cloudflare Worker：纯 Rust 的 API 逻辑、ETag 与 304 响应、由 Durable Object 精确计数的按 IP 和 API 密钥限流、按六项可靠性指标加权的 BM25F 排序，以及将需求与候选数据源匹配的缺口分析。</summary>
       <anchor>project-actindexer</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actindexer/</app>
     </project>
     <project>
       <name>Polytech</name>
@@ -5094,6 +5292,7 @@ TFE: WebMenu 2.0
       <summary>一个 Python 库（DDD、六边形架构、测试先行、变异测试、mypy strict），涵盖数学、物理、电子、信号与优化的概念，用 SymPy、NumPy 和 SciPy 计算，并通过宏注入 920 份 LaTeX 文档；一条流水线将课程资料转换为 Markdown、LaTeX 和 XML，基于 Mathlib 的 Lean 4 证明把结论追溯到公理。</summary>
       <anchor>project-polytech</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/polytech/</app>
     </project>
     <project>
       <name>ActConverge</name>
@@ -5121,6 +5320,7 @@ TFE: WebMenu 2.0
       <summary>AI 编写操作，引擎负责计算：LLM 生成经严格校验的 JSON 零件程序；两个独立内核 OpenCASCADE（精确）与 Manifold（网格）必须在体积和包围盒上一致，装配体在导出 STEP、STL、3MF 或 glTF 之前要通过重叠检查。Rust 核心（六边形端口与适配器）通过 JSON 行驱动 Python 工作进程，NSGA-II 搜索（Optuna）在帕累托前沿上选择元器件，并以精确枚举交叉验证。</summary>
       <anchor>project-actconverge</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actconverge/</app>
     </project>
     <project>
       <name>Actrack</name>
@@ -5152,6 +5352,7 @@ TFE: WebMenu 2.0
       <summary>一个 Python 引擎（DDD、六边形架构）对十五种比赛结果策略加权——Elo、泊松攻防、近期状态、交锋记录、阵容身价、休息天数、博彩赔率——并按比赛场地进行调整；它被移植到 Web（WebAssembly）、桌面、移动端和终端的 Rust/Dioxus 应用中，并与之保持一致。研究实验室以逐届留出一项赛事的前向滚动方式，在十项赛事（2002–2022 年世界杯及 2023–2024 年四项洲际杯赛）的 635 场比赛上回测这些策略，并调整集成权重；在样本外，单独的 Elo 表现最好（准确率 55.6%）。</summary>
       <anchor>project-actrack</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actrack/</app>
     </project>
     <project>
       <name>Actif</name>
@@ -5174,6 +5375,7 @@ TFE: WebMenu 2.0
       </roles>
       <anchor>project-actif</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actif/</app>
     </project>
     <project>
       <name>Actmorph</name>
@@ -5193,6 +5395,7 @@ TFE: WebMenu 2.0
       <partOf>OpenActe</partOf>
       <anchor>project-actmorph</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actmorph/</app>
     </project>
     <project>
       <name>Actserve</name>
@@ -5216,6 +5419,7 @@ TFE: WebMenu 2.0
       </roles>
       <anchor>project-actserve</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actserve/</app>
     </project>
     <project>
       <name>Actos</name>
@@ -5237,6 +5441,7 @@ TFE: WebMenu 2.0
       <partOf>OpenActe</partOf>
       <anchor>project-actos</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actos/</app>
     </project>
     <project>
       <name>Biorcrux</name>
@@ -5259,6 +5464,7 @@ TFE: WebMenu 2.0
       <partOf>OpenActe</partOf>
       <anchor>project-biorcrux</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/biorcrux/</app>
     </project>
     <project>
       <name>Actrepo</name>
@@ -5280,6 +5486,7 @@ TFE: WebMenu 2.0
       <partOf>OpenActe</partOf>
       <anchor>project-actrepo</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actrepo/</app>
     </project>
     <project>
       <name>Actsessions</name>
@@ -5300,6 +5507,7 @@ TFE: WebMenu 2.0
       <partOf>OpenActe</partOf>
       <anchor>project-actsessions</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actsessions/</app>
     </project>
     <project>
       <name>Actusext</name>
@@ -5320,6 +5528,7 @@ TFE: WebMenu 2.0
       <partOf>OpenActe</partOf>
       <anchor>project-actusext</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actusext/</app>
     </project>
     <project>
       <name>Polymath</name>
@@ -5341,6 +5550,7 @@ TFE: WebMenu 2.0
       <partOf>OpenActe</partOf>
       <anchor>project-polymath</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/polymath/</app>
     </project>
     <project>
       <name>Corpus</name>
@@ -5362,6 +5572,7 @@ TFE: WebMenu 2.0
       <partOf>OpenActe</partOf>
       <anchor>project-corpus</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/corpus/</app>
     </project>
     <project>
       <name>Actedu</name>
@@ -5383,6 +5594,7 @@ TFE: WebMenu 2.0
       <partOf>OpenActe</partOf>
       <anchor>project-actedu</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/actedu/</app>
     </project>
     <project>
       <name>Synergy</name>
@@ -5403,6 +5615,7 @@ TFE: WebMenu 2.0
       <summary>内部平台，让议会工作人员可以搜索、探索并与比利时联邦议会的档案对话，由检索增强（RAG）管道驱动，支持法语/荷兰语双语。</summary>
       <anchor>project-synergy</anchor>
       <anchoredIn>work-比利时参议院-ai-研究员</anchoredIn>
+      <app>/app/zh/project/synergy/</app>
     </project>
     <project>
       <name>fedrag-be</name>
@@ -5425,6 +5638,7 @@ TFE: WebMenu 2.0
       <summary>开源、可复现的协议，在双语参议院语料库上对检索策略进行基准测试，衡量整个检索管道的法语/荷兰语鲁棒性。</summary>
       <anchor>project-fedrag-be</anchor>
       <anchoredIn>work-比利时参议院-ai-研究员</anchoredIn>
+      <app>/app/zh/project/fedrag-be/</app>
     </project>
     <project>
       <name>Acteble</name>
@@ -5485,6 +5699,7 @@ TFE: WebMenu 2.0
       <summary>后端：用 Rust 编写的模块化单体，按限界上下文划分，采用六边形架构、CQRS 和事件驱动核心（事件存储、outbox/inbox），通过 REST/JSON 和 gRPC 流式接口提供服务；PostGIS 管道将 OpenStreetMap 数据转换为发布到 CDN 的路由图，自定义 Dylint lint 在 CI 中强制执行架构规则。应用：面向 iOS、Android、Web 和桌面的离线优先 Flutter 客户端——Melos 单仓库，基于加密本地存储（Drift、SQLCipher）的 Riverpod 状态管理，通过 Rust 核心实现端到端加密（经 flutter_rust_bridge 调用 vodozemac），支持蓝牙点对点同步、MapLibre 地图和 LiveKit 实时媒体。网站：使用 Vite 构建、通过 i18next 实现国际化的 React 单页应用。</summary>
       <anchor>project-acteble</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/acteble/</app>
     </project>
     <project>
       <name>Mémoire de master</name>
@@ -5512,6 +5727,7 @@ TFE: WebMenu 2.0
       <summary>硕士论文 « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes »，UMONS 算法研究部——Acteble 规划引擎的研发。时空约束下的多目标分组：经由 k-CLIQUE 归约证明为 NP 难；以二分团（Close-by-One）枚举可行分组；具备终止性和局部收敛保证的迭代 Pareto 求解器；同一 DSL 编译为 Python、MiniZinc 和 Rust，得到逐位一致的前沿，其 Rust 输出运行于 Acteble API 中。与 CP-SAT、NSGA-II、MOEA/D 和 SPEA2 对比（超体积、IGD、30 个随机种子、Wilcoxon–Holm 检验）：在所有规模上显著优于 MOEA/D，从 500 名用户起显著优于 NSGA-II 和 SPEA2。</summary>
       <anchor>project-memoire-de-master</anchor>
       <anchoredIn>work-acteble-创始人</anchoredIn>
+      <app>/app/zh/project/memoire-de-master/</app>
     </project>
     <project>
       <name>Emvi App</name>
@@ -5531,6 +5747,7 @@ TFE: WebMenu 2.0
       <summary>为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描（二维码和条形码）以及适配的 Valhalla 路线规划系统。</summary>
       <anchor>project-emvi-app</anchor>
       <anchoredIn>work-emvi-ai-ai-软件工艺负责人</anchoredIn>
+      <app>/app/zh/project/emvi-app/</app>
     </project>
     <project>
       <name>Remi</name>
@@ -5550,6 +5767,7 @@ TFE: WebMenu 2.0
       <summary>追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。DeepFace (Serengil) 管道。</summary>
       <anchor>project-remi</anchor>
       <anchoredIn>work-emvi-ai-ai-软件工艺师</anchoredIn>
+      <app>/app/zh/project/remi/</app>
     </project>
     <project>
       <name>EduCraft</name>
@@ -5562,6 +5780,7 @@ TFE: WebMenu 2.0
       <startDate>2024-03-17</startDate>
       <endDate>2024-03-17</endDate>
       <anchor>project-educraft</anchor>
+      <app>/app/zh/project/educraft/</app>
     </project>
     <project>
       <name>MyWay</name>
@@ -5590,6 +5809,7 @@ TFE: WebMenu 2.0
       <entity>Freelance</entity>
       <anchor>project-myway</anchor>
       <anchoredIn>work-technofutur-tic-全栈-web-开发实习生</anchoredIn>
+      <app>/app/zh/project/myway/</app>
     </project>
     <project>
       <name>VhAuctions NER Inventory Model</name>
@@ -5606,6 +5826,7 @@ TFE: WebMenu 2.0
       <summary>用于从音频转录中提取库存项目的命名实体识别机器学习模型。</summary>
       <anchor>project-vhauctions-ner-inventory-model</anchor>
       <anchoredIn>work-xtrada-数据科学家</anchoredIn>
+      <app>/app/zh/project/vhauctions-ner-inventory-model/</app>
     </project>
     <project>
       <name>VhAuctions</name>
@@ -5625,6 +5846,7 @@ TFE: WebMenu 2.0
       <summary>拍卖车队管理器。</summary>
       <anchor>project-vhauctions</anchor>
       <anchoredIn>work-xtrada-net-react-软件工艺师</anchoredIn>
+      <app>/app/zh/project/vhauctions/</app>
     </project>
     <project>
       <name>Kwalitijd</name>
@@ -5642,6 +5864,7 @@ TFE: WebMenu 2.0
       <summary>体育俱乐部和联合会的调查管理器。</summary>
       <anchor>project-kwalitijd</anchor>
       <anchoredIn>work-xtrada-net-blazor-软件工艺师</anchoredIn>
+      <app>/app/zh/project/kwalitijd/</app>
     </project>
     <project>
       <name>WebMenu</name>
@@ -5656,6 +5879,7 @@ TFE: WebMenu 2.0
       <summary>基于二维码的酒店、餐厅、咖啡馆 (HoReCa) 收银机。</summary>
       <anchor>project-webmenu</anchor>
       <anchoredIn>work-restomax-全栈-web-开发实习生</anchoredIn>
+      <app>/app/zh/project/webmenu/</app>
     </project>
   </projects>
   <references>
@@ -5970,6 +6194,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <endDate>2026-09-04</endDate>
       <anchor>volunteer-umons-学生代表</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/volunteer/umons-student-representative/</app>
     </volunteer-item>
     <volunteer-item>
       <organization>UMons</organization>
@@ -5979,6 +6204,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <endDate>2026-09-04</endDate>
       <anchor>volunteer-umons-buddy-tandemons</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/volunteer/umons-buddy-tandemons/</app>
     </volunteer-item>
     <volunteer-item>
       <organization>EPHEC École Supérieure de Promotion Sociale</organization>
@@ -5988,6 +6214,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <endDate>2022-10-15</endDate>
       <anchor>volunteer-ephec-ecole-superieure-de-promotion-sociale-学生代表</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/volunteer/ephec-ecole-superieure-de-promotion-sociale-student-representative/</app>
     </volunteer-item>
     <volunteer-item>
       <organization>EPHEC École Supérieure de Promotion Sociale</organization>
@@ -5997,6 +6224,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <endDate>2022-10-15</endDate>
       <anchor>volunteer-ephec-ecole-superieure-de-promotion-sociale-辅导员</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/volunteer/ephec-ecole-superieure-de-promotion-sociale-tutor/</app>
     </volunteer-item>
   </volunteer>
   <courses>
@@ -6013,6 +6241,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>算法</summary>
       <anchor>course-algorithmique</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/algorithmique/</app>
     </course>
     <course>
       <name>Anglais I</name>
@@ -6024,6 +6253,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>英语 I</summary>
       <anchor>course-anglais-i</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/anglais-i/</app>
     </course>
     <course>
       <name>Bases de données I</name>
@@ -6040,6 +6270,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>数据库 I</summary>
       <anchor>course-bases-de-donnees-i</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/bases-de-donnees-i/</app>
     </course>
     <course>
       <name>Lecture et rédaction scientifique</name>
@@ -6052,6 +6283,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>科学阅读与写作</summary>
       <anchor>course-lecture-et-redaction-scientifique</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/lecture-et-redaction-scientifique/</app>
     </course>
     <course>
       <name>Mathématique</name>
@@ -6067,6 +6299,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>数学</summary>
       <anchor>course-mathematique</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/mathematique/</app>
     </course>
     <course>
       <name>Modélisation logicielle</name>
@@ -6083,6 +6316,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>软件建模</summary>
       <anchor>course-modelisation-logicielle</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/modelisation-logicielle/</app>
     </course>
     <course>
       <name>Réseaux</name>
@@ -6099,6 +6333,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>计算机网络</summary>
       <anchor>course-reseaux</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/reseaux/</app>
     </course>
     <course>
       <name>Stratégie et politiques en ressources humaines</name>
@@ -6110,6 +6345,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>人力资源战略与政策</summary>
       <anchor>course-strategie-et-politiques-en-ressources-humaines</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/strategie-et-politiques-en-ressources-humaines/</app>
     </course>
     <course>
       <name>Systèmes d'exploitation</name>
@@ -6126,6 +6362,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>操作系统</summary>
       <anchor>course-systemes-d-exploitation</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/systemes-d-exploitation/</app>
     </course>
     <course>
       <name>Anglais II</name>
@@ -6137,6 +6374,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>英语 II</summary>
       <anchor>course-anglais-ii</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/anglais-ii/</app>
     </course>
     <course>
       <name>Bases de données II</name>
@@ -6154,6 +6392,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>数据库 II</summary>
       <anchor>course-bases-de-donnees-ii</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/bases-de-donnees-ii/</app>
     </course>
     <course>
       <name>Ingénierie de logiciels et gestion de projets</name>
@@ -6167,6 +6406,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>软件工程与项目管理</summary>
       <anchor>course-ingenierie-de-logiciels-et-gestion-de-projets</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/ingenierie-de-logiciels-et-gestion-de-projets/</app>
     </course>
     <course>
       <name>Intelligence artificielle</name>
@@ -6181,6 +6421,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>人工智能</summary>
       <anchor>course-intelligence-artificielle</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/intelligence-artificielle/</app>
     </course>
     <course>
       <name>Recherche opérationnelle et applications</name>
@@ -6195,6 +6436,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>运筹学及其应用</summary>
       <anchor>course-recherche-operationnelle-et-applications</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/recherche-operationnelle-et-applications/</app>
     </course>
     <course>
       <name>Structures de données</name>
@@ -6210,6 +6452,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>数据结构</summary>
       <anchor>course-structures-de-donnees</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/structures-de-donnees/</app>
     </course>
     <course>
       <name>Séminaires d'informatique en veille technologique</name>
@@ -6221,6 +6464,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>技术观察信息学研讨会</summary>
       <anchor>course-seminaires-d-informatique-en-veille-technologique</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/seminaires-d-informatique-en-veille-technologique/</app>
     </course>
     <course>
       <name>Cryptographie et sécurité des systèmes informatiques</name>
@@ -6235,6 +6479,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>密码学与系统安全</summary>
       <anchor>course-cryptographie-et-securite-des-systemes-informatiques</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/cryptographie-et-securite-des-systemes-informatiques/</app>
     </course>
     <course>
       <name>Éthique et droit de l'informatique</name>
@@ -6248,6 +6493,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>信息伦理与法律</summary>
       <anchor>course-ethique-et-droit-de-l-informatique</anchor>
       <anchoredIn>education-umons-理学硕士</anchoredIn>
+      <app>/app/zh/course/ethique-et-droit-de-l-informatique/</app>
     </course>
     <course>
       <name>Structure des ordinateurs</name>
@@ -6262,6 +6508,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>计算机结构</summary>
       <anchor>course-structure-des-ordinateurs</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/structure-des-ordinateurs/</app>
     </course>
     <course>
       <name>Informatique - Système d'exploitation</name>
@@ -6275,6 +6522,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>操作系统</summary>
       <anchor>course-informatique-systeme-d-exploitation</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/informatique-systeme-d-exploitation/</app>
     </course>
     <course>
       <name>Mathématique appliquée à l'informatique</name>
@@ -6291,6 +6539,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>应用于信息学的数学</summary>
       <anchor>course-mathematique-appliquee-a-l-informatique</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/mathematique-appliquee-a-l-informatique/</app>
     </course>
     <course>
       <name>Principes algorithmiques et programmation</name>
@@ -6305,6 +6554,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>算法原理与编程</summary>
       <anchor>course-principes-algorithmiques-et-programmation</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/principes-algorithmiques-et-programmation/</app>
     </course>
     <course>
       <name>Principes d'analyse informatique</name>
@@ -6318,6 +6568,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>信息分析原理</summary>
       <anchor>course-principes-d-analyse-informatique</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/principes-d-analyse-informatique/</app>
     </course>
     <course>
       <name>Information et communication professionnelles</name>
@@ -6329,6 +6580,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>专业信息与沟通</summary>
       <anchor>course-information-et-communication-professionnelles</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/information-et-communication-professionnelles/</app>
     </course>
     <course>
       <name>Web : principes de base</name>
@@ -6344,6 +6596,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>Web 基础</summary>
       <anchor>course-web-principes-de-base</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/web-principes-de-base/</app>
     </course>
     <course>
       <name>Initiation aux bases de données</name>
@@ -6358,6 +6611,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>数据库入门</summary>
       <anchor>course-initiation-aux-bases-de-donnees</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/initiation-aux-bases-de-donnees/</app>
     </course>
     <course>
       <name>Gestion et exploitation de bases de données</name>
@@ -6372,6 +6626,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>数据库管理与运维</summary>
       <anchor>course-gestion-et-exploitation-de-bases-de-donnees</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/gestion-et-exploitation-de-bases-de-donnees/</app>
     </course>
     <course>
       <name>Programmation orientée objet</name>
@@ -6387,6 +6642,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>面向对象编程</summary>
       <anchor>course-programmation-orientee-objet</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/programmation-orientee-objet/</app>
     </course>
     <course>
       <name>Projet d'analyse et de conception</name>
@@ -6400,6 +6656,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>分析与设计项目</summary>
       <anchor>course-projet-d-analyse-et-de-conception</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/projet-d-analyse-et-de-conception/</app>
     </course>
     <course>
       <name>Techniques de gestion de projet</name>
@@ -6411,6 +6668,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>项目管理技术</summary>
       <anchor>course-techniques-de-gestion-de-projet</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/techniques-de-gestion-de-projet/</app>
     </course>
     <course>
       <name>Éléments de statistique</name>
@@ -6422,6 +6680,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>统计学基础</summary>
       <anchor>course-elements-de-statistique</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/elements-de-statistique/</app>
     </course>
     <course>
       <name>Projet de développement web</name>
@@ -6437,6 +6696,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>Web 开发项目</summary>
       <anchor>course-projet-de-developpement-web</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/projet-de-developpement-web/</app>
     </course>
     <course>
       <name>Notions de e-business</name>
@@ -6448,6 +6708,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>电子商务概念</summary>
       <anchor>course-notions-de-e-business</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/notions-de-e-business/</app>
     </course>
     <course>
       <name>Projet de développement SGBD</name>
@@ -6462,6 +6723,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>数据库系统开发项目</summary>
       <anchor>course-projet-de-developpement-sgbd</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/projet-de-developpement-sgbd/</app>
     </course>
     <course>
       <name>Bases des réseaux</name>
@@ -6476,6 +6738,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>网络基础</summary>
       <anchor>course-bases-des-reseaux</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/bases-des-reseaux/</app>
     </course>
     <course>
       <name>Organisation des entreprises et éléments de management</name>
@@ -6487,6 +6750,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>企业组织与管理</summary>
       <anchor>course-organisation-des-entreprises-et-elements-de-management</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/organisation-des-entreprises-et-elements-de-management/</app>
     </course>
     <course>
       <name>Produits logiciels de gestion intégrés</name>
@@ -6498,6 +6762,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>集成管理软件</summary>
       <anchor>course-produits-logiciels-de-gestion-integres</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/produits-logiciels-de-gestion-integres/</app>
     </course>
     <course>
       <name>Projet d'intégration de développement</name>
@@ -6515,6 +6780,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>开发集成项目</summary>
       <anchor>course-projet-d-integration-de-developpement</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/projet-d-integration-de-developpement/</app>
     </course>
     <course>
       <name>Veille technologique</name>
@@ -6526,6 +6792,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>技术观察</summary>
       <anchor>course-veille-technologique</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/veille-technologique/</app>
     </course>
     <course>
       <name>Administration, gestion et sécurisation des réseaux</name>
@@ -6539,6 +6806,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>网络管理与安全</summary>
       <anchor>course-administration-gestion-et-securisation-des-reseaux</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/administration-gestion-et-securisation-des-reseaux/</app>
     </course>
     <course>
       <name>Langue en situation appliquée à l'enseignement supérieur UE1</name>
@@ -6549,6 +6817,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>高等教育应用语言 UE1</summary>
       <anchor>course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue1</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/langue-en-situation-appliquee-a-l-enseignement-superieur-ue1/</app>
     </course>
     <course>
       <name>Langue en situation appliquée à l'enseignement supérieur UE2</name>
@@ -6560,6 +6829,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>高等教育应用语言 UE2</summary>
       <anchor>course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue2</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-职业学士</anchoredIn>
+      <app>/app/zh/course/langue-en-situation-appliquee-a-l-enseignement-superieur-ue2/</app>
     </course>
     <course>
       <name>Économie I</name>
@@ -6573,6 +6843,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>经济学 I</summary>
       <anchor>course-economie-i</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
+      <app>/app/zh/course/economie-i/</app>
     </course>
     <course>
       <name>Économie II</name>
@@ -6586,6 +6857,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>经济学 II</summary>
       <anchor>course-economie-ii</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
+      <app>/app/zh/course/economie-ii/</app>
     </course>
     <course>
       <name>Science politique</name>
@@ -6599,6 +6871,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>政治学</summary>
       <anchor>course-science-politique</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
+      <app>/app/zh/course/science-politique/</app>
     </course>
     <course>
       <name>Séminaire : penser le social</name>
@@ -6612,6 +6885,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>研讨课：思考社会</summary>
       <anchor>course-seminaire-penser-le-social</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
+      <app>/app/zh/course/seminaire-penser-le-social/</app>
     </course>
     <course>
       <name>Séminaire : principes et méthodes en sciences sociales</name>
@@ -6624,6 +6898,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>研讨课：社会科学的原则与方法</summary>
       <anchor>course-seminaire-principes-et-methodes-en-sciences-sociales</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
+      <app>/app/zh/course/seminaire-principes-et-methodes-en-sciences-sociales/</app>
     </course>
     <course>
       <name>Socio-économie des médias</name>
@@ -6637,6 +6912,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>媒体社会经济学</summary>
       <anchor>course-socio-economie-des-medias</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
+      <app>/app/zh/course/socio-economie-des-medias/</app>
     </course>
     <course>
       <name>Anglais I (Saint-Louis)</name>
@@ -6647,6 +6923,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>英语 I</summary>
       <anchor>course-anglais-i-saint-louis</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
+      <app>/app/zh/course/anglais-i-saint-louis/</app>
     </course>
     <course>
       <name>Néerlandais I</name>
@@ -6657,6 +6934,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <summary>荷兰语 I</summary>
       <anchor>course-neerlandais-i</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-政治学学士</anchoredIn>
+      <app>/app/zh/course/neerlandais-i/</app>
     </course>
   </courses>
   <competitions>

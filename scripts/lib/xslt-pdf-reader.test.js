@@ -79,3 +79,31 @@ for (const lang of LANGS) {
     assert.doesNotMatch(html, /pdf-preview-reader|pdf-reader\.css|cv-reader-view/);
   });
 }
+
+for (const lang of LANGS) {
+  test(`${lang}: where a browser cannot show a PDF, its pages are pictures that exist`, () => {
+    const html = render(lang);
+    const pictures = [...html.matchAll(/<a class="pdf-page" href="[^"]+"><img[^>]* src="([^"]+)"/g)];
+    // The CV (two sheets) and the timeline at three zooms (two each).
+    assert.equal(pictures.length, 8);
+    for (const [, src] of pictures) assert.ok(fs.existsSync(path.join(ROOT, src)), `no ${src}`);
+  });
+}
+
+// The minimal theme reads the PDFs the same way: the same panels, the same
+// pictures, and none of it on paper.
+for (const lang of LANGS) {
+  test(`${lang}: the minimal theme has the same reader`, () => {
+    const minimal = execFileSync(
+      'xsltproc',
+      [
+        path.join(ROOT, 'assets/xslt/resume-transform-minimal.xsl'),
+        path.join(ROOT, `assets/data/resume-${lang}-minimal.xml`),
+      ],
+      { encoding: 'utf8' },
+    );
+    assert.deepEqual(panels(minimal), panels(render(lang)));
+    assert.equal(minimal.match(/class="pdf-page"/g).length, 8);
+    assert.match(minimal, /@media print \{ #pdf \{ display: none; \} \}/);
+  });
+}

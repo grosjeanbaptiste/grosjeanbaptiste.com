@@ -9,6 +9,11 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <!-- The skill filter, shared by the two themes. -->
   <xsl:include href="skill-filter.xsl"/>
+  <xsl:include href="head-meta.xsl"/>
+  <xsl:include href="entry-panel.xsl"/>
+  <xsl:include href="timeline-zoom.xsl"/>
+  <xsl:include href="search.xsl"/>
+  <xsl:include href="pdf-reader.xsl"/>
   <xsl:output method="html" indent="yes"/>
 
   <xsl:key name="project-by-name" match="/resume/projects/project[name]" use="name"/>
@@ -245,6 +250,7 @@
       <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <xsl:call-template name="head-meta"/>
         <title><xsl:value-of select="basics/name"/> — Resume</title>
         <style>
           :root {
@@ -336,7 +342,7 @@
           .meta-bar span { margin-right: 14px; white-space: nowrap; }
           .muted { color: var(--muted); font-size: 0.9em; }
           .row { margin-bottom: 14px; }
-          .tag {
+          .tag, a.skill-tag, span.skill-tag {
             display: inline-block;
             background: var(--accent);
             color: #fff;
@@ -345,6 +351,8 @@
             font-size: 0.85em;
             margin: 2px;
           }
+          a.skill-tag { text-decoration: none; }
+          a.skill-tag:hover { background: var(--primary); }
           ul { padding-left: 20px; margin: 6px 0; }
           a { color: var(--accent); text-decoration: none; }
           a:hover { text-decoration: underline; }
@@ -357,6 +365,10 @@
             font-size: 0.95em;
           }
           .ref-author { font-weight: 600; margin: 12px 0 4px; }
+          /* The PDFs are read on screen; the sheet is the CV itself. */
+          @media print { #pdf { display: none; } }
+          #pdf details { margin: 6px 0; }
+          #pdf summary { cursor: pointer; padding: 4px 0; }
           .stylesheet-note {
             margin-top: 40px;
             padding-top: 12px;
@@ -510,16 +522,31 @@
              whole career in the frame, bars as plain links. -->
         <link rel="stylesheet" href="/css/timeline.css"/>
         <link rel="stylesheet" href="/css/timeline-phone.css"/>
-        <xsl:call-template name="timeline-phone-css"/>
+        <link rel="stylesheet" href="/css/timeline-zoom.css"/>
+        <xsl:call-template name="timeline-zoom-css"/>
         <link rel="stylesheet" href="/css/timeline-entries.css"/>
         <link rel="stylesheet" href="/css/timeline-scroll.css"/>
         <link rel="stylesheet" href="/css/skill-links.css"/>
+        <link rel="stylesheet" href="/css/entry-panel.css"/>
+        <link rel="stylesheet" href="/css/browse.css"/>
+        <script src="/js/xslt-links.js" defer="defer"></script>
+        <script src="/js/search-rank.js" defer="defer"></script>
+        <script src="/js/search.js" defer="defer"></script>
       </head>
       <body>
         <xsl:call-template name="views-bar"><xsl:with-param name="current" select="'xsltMinimal'"/></xsl:call-template>
 
         <!-- TOOLBAR -->
         <div class="toolbar">
+          <!-- The classic page's menu: its four sections. -->
+          <nav class="group">
+            <xsl:for-each select="meta/nav/link">
+              <a class="nav-link">
+                <xsl:attribute name="href">#<xsl:value-of select="id"/></xsl:attribute>
+                <xsl:value-of select="label"/>
+              </a>
+            </xsl:for-each>
+          </nav>
           <div class="group">
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'en'"/></xsl:call-template>
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'fr'"/></xsl:call-template>
@@ -538,6 +565,17 @@
             <xsl:attribute name="download">cv_grosjean_baptiste_<xsl:value-of select="$lang"/>.pdf</xsl:attribute>
             ⬇ <xsl:call-template name="t"><xsl:with-param name="k" select="'downloadCV'"/></xsl:call-template>
           </a>
+          <!-- The timeline's PDF: the one of the zoom chosen (css/timeline-zoom.css). -->
+          <xsl:for-each select="meta/timeline/pdf">
+            <xsl:variable name="label" select="label"/>
+            <xsl:for-each select="two | five | all">
+              <a class="download" data-timeline-pdf="" download="">
+                <xsl:attribute name="data-zoom"><xsl:choose><xsl:when test="name() = 'two'">2</xsl:when><xsl:when test="name() = 'five'">5</xsl:when><xsl:otherwise>all</xsl:otherwise></xsl:choose></xsl:attribute>
+                <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+                ⬇ <xsl:value-of select="$label"/>
+              </a>
+            </xsl:for-each>
+          </xsl:for-each>
         </div>
 
         <h1><xsl:value-of select="basics/name"/></h1>
@@ -578,7 +616,7 @@
         <xsl:for-each select="meta/sectionOrder/section">
           <xsl:variable name="name" select="."/>
           <xsl:choose>
-            <xsl:when test="$name='about'"><xsl:call-template name="section-about"/><xsl:call-template name="timeline"/></xsl:when>
+            <xsl:when test="$name='about'"><xsl:call-template name="section-about"/><xsl:call-template name="timeline"/><xsl:call-template name="pdf-reader"/></xsl:when>
             <xsl:when test="$name='work'"><xsl:call-template name="section-work"/></xsl:when>
             <xsl:when test="$name='education'"><xsl:call-template name="section-education"/></xsl:when>
             <xsl:when test="$name='skills'"><xsl:call-template name="section-skills"/></xsl:when>
@@ -589,6 +627,8 @@
             <xsl:when test="$name='references'"><xsl:call-template name="section-references"/></xsl:when>
           </xsl:choose>
         </xsl:for-each>
+
+        <xsl:call-template name="search"/>
 
         <div class="stylesheet-note">
           <xsl:call-template name="t"><xsl:with-param name="k" select="'note'"/></xsl:call-template>
@@ -640,15 +680,8 @@
         <xsl:call-template name="skill-targets"/>
         <div class="tl-head">
           <h2 id="timeline-title"><xsl:value-of select="$tl/title"/></h2>
-          <div class="tl-zoom" role="group" hidden="hidden">
-            <xsl:attribute name="aria-label"><xsl:value-of select="$tl/title"/></xsl:attribute>
-            <xsl:for-each select="$tl/zooms/zoom">
-              <button type="button">
-                <xsl:attribute name="data-years"><xsl:value-of select="years"/></xsl:attribute>
-                <xsl:value-of select="label"/>
-              </button>
-            </xsl:for-each>
-          </div>
+          <xsl:call-template name="timeline-zoom"/>
+          <xsl:call-template name="search-open"/>
         </div>
         <div class="tl-scroll">
           <div class="tl-grid">
@@ -727,17 +760,18 @@
 
   <xsl:template name="section-about">
     <xsl:if test="/resume/basics/summary">
-      <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
+      <h2 id="about"><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
       <p><xsl:value-of select="/resume/basics/summary"/></p>
     </xsl:if>
   </xsl:template>
 
   <xsl:template name="section-work">
     <xsl:if test="/resume/work/job">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'experience'"/></xsl:call-template></h2>
+          <h2 id="experience"><xsl:call-template name="t"><xsl:with-param name="k" select="'experience'"/></xsl:call-template></h2>
           <xsl:for-each select="/resume/work/job">
-            <div class="row">
+            <div class="row item">
               <xsl:if test="anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></xsl:if>
+              <xsl:call-template name="entry-close"/>
               <h3>
                 <xsl:value-of select="position"/>
                 <xsl:if test="client"> · <xsl:value-of select="client"/></xsl:if>
@@ -803,10 +837,11 @@
 
   <xsl:template name="section-education">
     <xsl:if test="/resume/education/school">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'education'"/></xsl:call-template></h2>
+          <h2 id="education"><xsl:call-template name="t"><xsl:with-param name="k" select="'education'"/></xsl:call-template></h2>
           <xsl:for-each select="/resume/education/school">
-            <div class="row">
+            <div class="row item">
               <xsl:if test="anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></xsl:if>
+              <xsl:call-template name="entry-close"/>
               <h3>
                 <xsl:value-of select="studyType"/>
                 <xsl:if test="area"> — <xsl:value-of select="area"/></xsl:if>
@@ -877,7 +912,7 @@
             <xsl:if test="keywords/keyword">
               <div>
                 <xsl:for-each select="keywords/keyword">
-                  <span class="tag"><xsl:value-of select="."/></span>
+                  <xsl:call-template name="skill-tag"/>
                 </xsl:for-each>
               </div>
             </xsl:if>
@@ -951,7 +986,7 @@
     <xsl:if test="/resume/references/reference">
           <!-- One block, so that the print can set it on the verso. -->
           <section class="refs">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
+          <h2 id="references"><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
           <xsl:for-each select="/resume/references/reference">
             <div class="row">
               <xsl:attribute name="id"><xsl:value-of select="generate-id(.)"/></xsl:attribute>
@@ -978,15 +1013,5 @@
   <!-- This theme has no zoom: on a phone the career would be squeezed into the
        frame (the years run into one another), so it opens on its last five
        years, the rich theme's default, and the frame scrolls back from there. -->
-  <xsl:template name="timeline-phone-css">
-    <xsl:variable name="months" select="/resume/meta/timeline/months"/>
-    <xsl:if test="$months and $months &gt; 60">
-      <style>
-        <xsl:text>@media screen and (max-width: 48rem) { #timeline .tl-grid { --stretch: </xsl:text>
-        <xsl:value-of select="$months div 60"/>
-        <xsl:text>; } }</xsl:text>
-      </style>
-    </xsl:if>
-  </xsl:template>
 
 </xsl:stylesheet>

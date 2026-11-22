@@ -4,7 +4,8 @@
 // lead to the ids the theme shares with the classic page, a skill to the
 // theme's filter (#skill-…, pure CSS), an action to another XSLT display or a
 // file. Without a script everything stays hidden, as on the classic page. The
-// minimal theme has no search: it has no script. Rendered with xsltproc.
+// minimal theme carries the very same dialog, index and scripts. Rendered with
+// xsltproc.
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -99,8 +100,13 @@ for (const lang of LANGS) {
     );
   });
 
-  test(`${lang}: the minimal theme has no search`, () => {
+  test(`${lang}: the minimal theme has the same search`, () => {
     const minimal = render(lang, true);
-    assert.doesNotMatch(minimal, /cv-search|search\.js/);
+    assert.equal(indexOf(minimal).actions.length, indexOf(rich).actions.length);
+    assert.match(minimal, /id="cv-search"/);
+    assert.match(minimal, /class="tl-search-open"/);
+    for (const file of ['search-rank.js', 'search.js'])
+      assert.match(minimal, new RegExp(`<script src="/js/${file}"`));
+    assert.match(minimal, /<link[^>]*href="\/css\/browse\.css"/);
   });
 }

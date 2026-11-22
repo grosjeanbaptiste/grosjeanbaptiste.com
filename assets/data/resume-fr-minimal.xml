@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=30008ddf"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=f2f819ab"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -92,6 +92,191 @@
       <section>dailyLife</section>
     </sidebarOrder>
     <lang>fr</lang>
+    <head>
+      <description>Informaticien — Master en sciences informatiques de l'UMons — construisant Acteble. Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude Code, agents autonomes, pipelines RAG…</description>
+      <author>Baptiste Grosjean</author>
+      <keywords>SQL, C#, Java, Python, JS, TS, XML, JSON, HTML, CSS, Zsh, Dart, Rust, LaTeX, SQL Server, EF, .NET, Pandas</keywords>
+      <ogTitle>Baptiste Grosjean — Informaticien</ogTitle>
+      <canonical>https://www.grosjeanbaptiste.com/fr/</canonical>
+      <image>https://www.grosjeanbaptiste.com/assets/images/profil.jpeg</image>
+      <locale>fr_FR</locale>
+      <localeAlternates>
+        <locale>en_US</locale>
+        <locale>nl_BE</locale>
+        <locale>es_ES</locale>
+        <locale>de_DE</locale>
+        <locale>zh_CN</locale>
+      </localeAlternates>
+      <givenName>Baptiste</givenName>
+      <familyName>Grosjean</familyName>
+      <jsonld>{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Baptiste Grosjean",
+  "givenName": "Baptiste",
+  "familyName": "Grosjean",
+  "jobTitle": "Informaticien",
+  "description": "Informaticien — Master en sciences informatiques de l'UMons — construisant Acteble. Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude Code, agents autonomes, pipelines RAG, développement mobile — ancré dans le Software Craftsmanship : clean code, clean architecture, architecture hexagonale, DDD, TDD.",
+  "url": "https://www.grosjeanbaptiste.com/fr/",
+  "image": "https://www.grosjeanbaptiste.com/assets/images/profil.jpeg",
+  "email": "mailto:grosjeanbaptiste@outlook.com",
+  "telephone": "+32 496 28 97 05",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kraainem",
+    "addressRegion": "Belgique",
+    "addressCountry": "BE"
+  },
+  "nationality": {
+    "@type": "Country",
+    "name": "Belgium"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/grosjeanbaptiste",
+    "https://github.com/grosjeanbaptiste",
+    "https://npm.com/grosjeanbaptiste"
+  ],
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "UMons"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Université Saint-Louis - Bruxelles"
+    }
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Acteble",
+    "url": "https://www.acteble.com"
+  },
+  "knowsLanguage": [
+    "Français",
+    "Anglais",
+    "Néerlandais"
+  ],
+  "knowsAbout": [
+    "SQL",
+    "C#",
+    "Java",
+    "Python",
+    "JS",
+    "TS",
+    "XML",
+    "JSON",
+    "HTML",
+    "CSS",
+    "Zsh",
+    "Dart",
+    "Rust",
+    "LaTeX",
+    "SQL Server",
+    "EF",
+    ".NET",
+    "Pandas",
+    "NumPy",
+    "Whisper"
+  ],
+  "inLanguage": "fr"
+}</jsonld>
+      <alternates>
+        <alternate>
+          <lang>en</lang>
+          <href>https://www.grosjeanbaptiste.com/</href>
+        </alternate>
+        <alternate>
+          <lang>fr</lang>
+          <href>https://www.grosjeanbaptiste.com/fr/</href>
+        </alternate>
+        <alternate>
+          <lang>nl</lang>
+          <href>https://www.grosjeanbaptiste.com/nl/</href>
+        </alternate>
+        <alternate>
+          <lang>es</lang>
+          <href>https://www.grosjeanbaptiste.com/es/</href>
+        </alternate>
+        <alternate>
+          <lang>de</lang>
+          <href>https://www.grosjeanbaptiste.com/de/</href>
+        </alternate>
+        <alternate>
+          <lang>zh</lang>
+          <href>https://www.grosjeanbaptiste.com/zh/</href>
+        </alternate>
+        <alternate>
+          <lang>x-default</lang>
+          <href>https://www.grosjeanbaptiste.com/</href>
+        </alternate>
+      </alternates>
+    </head>
+    <pictures>
+      <picture>
+        <file>/assets/cv/cv_grosjean_baptiste_fr.pdf</file>
+        <pages>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_fr-1.webp</src>
+            <width>1000</width>
+            <height>1415</height>
+          </page>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_fr-2.webp</src>
+            <width>1415</width>
+            <height>1000</height>
+          </page>
+        </pages>
+      </picture>
+      <picture>
+        <file>/assets/cv/cv_grosjean_baptiste_timeline_2y_fr.pdf</file>
+        <pages>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_2y_fr-1.webp</src>
+            <width>1415</width>
+            <height>1000</height>
+          </page>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_2y_fr-2.webp</src>
+            <width>1000</width>
+            <height>1415</height>
+          </page>
+        </pages>
+      </picture>
+      <picture>
+        <file>/assets/cv/cv_grosjean_baptiste_timeline_5y_fr.pdf</file>
+        <pages>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_5y_fr-1.webp</src>
+            <width>1415</width>
+            <height>1000</height>
+          </page>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_5y_fr-2.webp</src>
+            <width>1000</width>
+            <height>1415</height>
+          </page>
+        </pages>
+      </picture>
+      <picture>
+        <file>/assets/cv/cv_grosjean_baptiste_timeline_fr.pdf</file>
+        <pages>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_fr-1.webp</src>
+            <width>1415</width>
+            <height>1000</height>
+          </page>
+          <page>
+            <src>/assets/cv/previews/cv_grosjean_baptiste_timeline_fr-2.webp</src>
+            <width>1000</width>
+            <height>1415</height>
+          </page>
+        </pages>
+      </picture>
+    </pictures>
     <viewsTitle>Affichages</viewsTitle>
     <views>
       <view>
@@ -4449,6 +4634,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
         <project>OpenActe</project>
       </projects>
       <anchor>work-acteble-fondateur</anchor>
+      <app>/app/fr/work/acteble-founder/</app>
     </job>
     <job>
       <company>Sénat belge</company>
@@ -4471,6 +4657,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
         <project>fedrag-be</project>
       </projects>
       <anchor>work-senat-belge-chercheur-en-ia</anchor>
+      <app>/app/fr/work/belgian-senate-ai-research-scientist/</app>
     </job>
     <job>
       <company>Emvi.ai</company>
@@ -4494,6 +4681,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
         <project>Emvi App</project>
       </projects>
       <anchor>work-emvi-ai-ai-software-crafter-lead</anchor>
+      <app>/app/fr/work/emvi-ai-ai-software-crafter-lead/</app>
     </job>
     <job>
       <company>Emvi.ai</company>
@@ -4519,6 +4707,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
         <project>Remi</project>
       </projects>
       <anchor>work-emvi-ai-ai-software-crafter</anchor>
+      <app>/app/fr/work/emvi-ai-ai-software-crafter/</app>
     </job>
     <job>
       <company>Xtrada</company>
@@ -4539,6 +4728,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
         <project>VhAuctions NER Inventory Model</project>
       </projects>
       <anchor>work-xtrada-data-scientist</anchor>
+      <app>/app/fr/work/xtrada-data-scientist/</app>
     </job>
     <job>
       <company>Xtrada</company>
@@ -4555,6 +4745,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
         <skill>CleanArchitecture</skill>
       </skills>
       <anchor>work-xtrada-software-crafter</anchor>
+      <app>/app/fr/work/xtrada-software-crafter/</app>
     </job>
     <job>
       <company>Xtrada</company>
@@ -4578,6 +4769,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
       </projects>
       <client>VhAuctions</client>
       <anchor>work-xtrada-software-crafter-net-react</anchor>
+      <app>/app/fr/work/xtrada-net-react-software-crafter/</app>
     </job>
     <job>
       <company>Xtrada</company>
@@ -4600,6 +4792,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
       </projects>
       <client>aXinco</client>
       <anchor>work-xtrada-software-crafter-net-blazor</anchor>
+      <app>/app/fr/work/xtrada-net-blazor-software-crafter/</app>
     </job>
     <job>
       <company>Technofutur TIC</company>
@@ -4625,6 +4818,7 @@ Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du dévelo
         <project>MyWay</project>
       </projects>
       <anchor>work-technofutur-tic-stagiaire-developpeur-full-stack-web</anchor>
+      <app>/app/fr/work/technofutur-tic-full-stack-developer-web-intern/</app>
     </job>
     <job>
       <company>EDITx: IT Challenges, IT Jobs, Education in IT for X</company>
@@ -4634,6 +4828,7 @@ Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du dévelo
       <startDate>2022-04-01</startDate>
       <endDate>2022-04-30</endDate>
       <anchor>work-editx-it-challenges-it-jobs-education-in-it-for-x-stagiaire-developpeur-full-stack-web</anchor>
+      <app>/app/fr/work/editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-developer-web-intern/</app>
     </job>
     <job>
       <company>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</company>
@@ -4643,6 +4838,7 @@ Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du dévelo
       <startDate>2022-03-30</startDate>
       <endDate>2022-03-31</endDate>
       <anchor>work-les-auberges-de-jeunesse-wallonie-bruxelles-job-etudiant</anchor>
+      <app>/app/fr/work/les-auberges-de-jeunesse-wallonie-bruxelles-student-job/</app>
     </job>
     <job>
       <company>RESTOMAX</company>
@@ -4660,6 +4856,7 @@ Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du dévelo
         <project>WebMenu</project>
       </projects>
       <anchor>work-restomax-stagiaire-developpeur-full-stack-web</anchor>
+      <app>/app/fr/work/restomax-full-stack-developer-web-intern/</app>
     </job>
     <job>
       <company>Quick Restaurant</company>
@@ -4669,6 +4866,7 @@ Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du dévelo
       <startDate>2017-09-01</startDate>
       <endDate>2017-09-30</endDate>
       <anchor>work-quick-restaurant-job-etudiant</anchor>
+      <app>/app/fr/work/quick-restaurant-student-job/</app>
     </job>
   </work>
   <education>
@@ -4767,6 +4965,7 @@ Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du dévelo
         </block>
       </blocks>
       <anchor>education-umons-master-en-sciences</anchor>
+      <app>/app/fr/education/umons-master-of-science-msc/</app>
     </school>
     <school>
       <institution>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</institution>
@@ -4873,6 +5072,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         </block>
       </blocks>
       <anchor>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchor>
+      <app>/app/fr/education/ecole-pratique-hautes-etudes-commerciales-ephec-eps-professional-bachelor-s-degree/</app>
     </school>
     <school>
       <institution>Institut Saint-Louis Bruxelles</institution>
@@ -4883,6 +5083,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <gpa>Attestation</gpa>
       <schedule>day</schedule>
       <anchor>education-institut-saint-louis-bruxelles-attestation</anchor>
+      <app>/app/fr/education/institut-saint-louis-bruxelles-attestation/</app>
     </school>
     <school>
       <institution>Université Saint-Louis - Bruxelles</institution>
@@ -4920,6 +5121,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
         </block>
       </blocks>
       <anchor>education-universite-saint-louis-bruxelles-bachelier-en-sciences-politiques</anchor>
+      <app>/app/fr/education/universite-saint-louis-bruxelles-bachelor-in-political-sciences/</app>
     </school>
     <school>
       <institution>UCLouvain - Université catholique de Louvain</institution>
@@ -4930,6 +5132,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <gpa>Attestation</gpa>
       <schedule>day</schedule>
       <anchor>education-uclouvain-universite-catholique-de-louvain-cours-preparatoires</anchor>
+      <app>/app/fr/education/uclouvain-universite-catholique-de-louvain-cours-preparatoires/</app>
     </school>
     <school>
       <institution>Centre Scolaire Saint-Adrien - Val Duchesse</institution>
@@ -4940,6 +5143,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <gpa>Satis bene</gpa>
       <schedule>day</schedule>
       <anchor>education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s</anchor>
+      <app>/app/fr/education/centre-scolaire-saint-adrien-val-duchesse-c-e-s-s/</app>
     </school>
     <school>
       <institution>Centre Scolaire Saint-Adrien - Val Duchesse</institution>
@@ -4948,6 +5152,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <endDate>2013-06-30</endDate>
       <schedule>day</schedule>
       <anchor>education-centre-scolaire-saint-adrien-val-duchesse</anchor>
+      <app>/app/fr/education/centre-scolaire-saint-adrien-val-duchesse/</app>
     </school>
     <school>
       <institution>Lycée Mater Dei</institution>
@@ -4956,6 +5161,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <endDate>2012-06-30</endDate>
       <schedule>day</schedule>
       <anchor>education-lycee-mater-dei</anchor>
+      <app>/app/fr/education/lycee-mater-dei/</app>
     </school>
   </education>
   <projects>
@@ -4980,6 +5186,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Cinq couches : un CLI Rust qui fait toutes les entrées-sorties, un parseur syntaxique link-grammar, un moteur symbolique SWI-Prolog sans entrées-sorties, des packs de vocabulaire de domaine tenus comme données, et une cinquantaine d'exécutables d'action en Rust — un nouveau verbe, c'est un fait de pack et un exécutable. Testé par mutation, avec un corpus de phrases de non-régression et un démarrage à froid d'environ 120 ms.</summary>
       <anchor>project-baba</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/baba/</app>
     </project>
     <project>
       <name>KAG</name>
@@ -5002,6 +5209,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Neuf étapes de pipeline (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), chacune un port dont l'algorithme se choisit par label (BM25F, RM3, MMR, LambdaMART, TextRank…) ; hexagonal + DDD + TDD, bibliothèque standard seule dans le core, aucun LLM. Les métriques concordent exactement avec pytrec_eval. Sur six jeux BEIR, aucun retriever ne gagne partout (ndcg@10 de 0,668 sur SciFact avec BM25F) ; un reranker LambdaMART fait passer ArguAna de 0,301 à 0,527 en validation croisée à 5 plis.</summary>
       <anchor>project-kag</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/kag/</app>
     </project>
     <project>
       <name>LL</name>
@@ -5032,6 +5240,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Un workspace Rust dont le cœur de domaine pur (hexagonal, DDD, tests d'abord) anime une interface terminal (ratatui) et des apps Dioxus desktop et iOS : boîtes de Leitner avec planification SM-2 sur SQLite, contenu tiré de packs de données à empreinte vérifiée. Son laboratoire de données construit en Python la base lexicale en six langues — environ 8 900 sens (octobre 2026) alignés sur WordNet, illustrés de phrases Tatoeba, analysés avec spaCy, chaque lien mot-phrase vérifié.</summary>
       <anchor>project-ll</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/ll/</app>
     </project>
     <project>
       <name>OpenActe</name>
@@ -5047,6 +5256,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       </roles>
       <anchor>project-openacte</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/openacte/</app>
     </project>
     <project>
       <name>Actindexer</name>
@@ -5069,6 +5279,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Chacune des 523 sources est un fichier TOML que Rust valide et compile en JSON statique, embarqué à la compilation dans un Cloudflare Worker : logique d'API en Rust pur, réponses ETag et 304, limites de débit par IP et par clé d'API comptées exactement par un Durable Object, classement BM25F pondéré par un score de fiabilité à six critères, et une analyse des manques qui associe chaque besoin aux sources candidates.</summary>
       <anchor>project-actindexer</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actindexer/</app>
     </project>
     <project>
       <name>Polytech</name>
@@ -5094,6 +5305,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Une bibliothèque Python (DDD, hexagonale, test-first, testée par mutation, mypy strict) des notions de mathématiques, de physique, d'électronique, de signaux et d'optimisation, calculées avec SymPy, NumPy et SciPy et injectées par macros dans 920 documents LaTeX ; un pipeline convertit les supports de cours en Markdown, LaTeX et XML, et des preuves Lean 4 avec Mathlib remontent les résultats jusqu'aux axiomes.</summary>
       <anchor>project-polytech</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/polytech/</app>
     </project>
     <project>
       <name>ActConverge</name>
@@ -5121,6 +5333,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>L'IA écrit les opérations, les moteurs calculent : un LLM produit un programme de pièce en JSON strictement validé ; deux noyaux indépendants, OpenCASCADE (exact) et Manifold (maillage), doivent s'accorder sur le volume et la boîte englobante, et l'assemblage est contrôlé contre les chevauchements avant tout export STEP, STL, 3MF ou glTF. Un cœur Rust (ports et adaptateurs hexagonaux) pilote un worker Python en lignes JSON, et une recherche NSGA-II (Optuna) choisit les composants sur un front de Pareto, recoupé par énumération exacte.</summary>
       <anchor>project-actconverge</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actconverge/</app>
     </project>
     <project>
       <name>Actrack</name>
@@ -5152,6 +5365,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Un moteur Python (DDD, hexagonal) pondère quinze stratégies de pronostic — Elo, Poisson attaque/défense, forme, confrontations directes, valeur de l'effectif, jours de repos, cotes des bookmakers — ajustées au lieu du match, et il est porté dans des apps Rust/Dioxus pour le web (WebAssembly), le desktop, le mobile et le terminal, tenues à parité avec lui. Un laboratoire de recherche évalue les stratégies en walk-forward, un tournoi mis de côté à la fois, sur 635 matchs de dix tournois (Coupes du monde 2002–2022 et quatre coupes continentales de 2023–2024), et ajuste les poids de l'ensemble ; hors échantillon, Elo seul fait le mieux (55,6 % de bons pronostics).</summary>
       <anchor>project-actrack</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actrack/</app>
     </project>
     <project>
       <name>Actif</name>
@@ -5174,6 +5388,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       </roles>
       <anchor>project-actif</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actif/</app>
     </project>
     <project>
       <name>Actmorph</name>
@@ -5193,6 +5408,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <partOf>OpenActe</partOf>
       <anchor>project-actmorph</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actmorph/</app>
     </project>
     <project>
       <name>Actserve</name>
@@ -5216,6 +5432,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       </roles>
       <anchor>project-actserve</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actserve/</app>
     </project>
     <project>
       <name>Actos</name>
@@ -5237,6 +5454,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <partOf>OpenActe</partOf>
       <anchor>project-actos</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actos/</app>
     </project>
     <project>
       <name>Biorcrux</name>
@@ -5259,6 +5477,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <partOf>OpenActe</partOf>
       <anchor>project-biorcrux</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/biorcrux/</app>
     </project>
     <project>
       <name>Actrepo</name>
@@ -5280,6 +5499,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <partOf>OpenActe</partOf>
       <anchor>project-actrepo</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actrepo/</app>
     </project>
     <project>
       <name>Actsessions</name>
@@ -5300,6 +5520,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <partOf>OpenActe</partOf>
       <anchor>project-actsessions</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actsessions/</app>
     </project>
     <project>
       <name>Actusext</name>
@@ -5320,6 +5541,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <partOf>OpenActe</partOf>
       <anchor>project-actusext</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actusext/</app>
     </project>
     <project>
       <name>Polymath</name>
@@ -5341,6 +5563,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <partOf>OpenActe</partOf>
       <anchor>project-polymath</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/polymath/</app>
     </project>
     <project>
       <name>Corpus</name>
@@ -5362,6 +5585,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <partOf>OpenActe</partOf>
       <anchor>project-corpus</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/corpus/</app>
     </project>
     <project>
       <name>Actedu</name>
@@ -5383,6 +5607,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <partOf>OpenActe</partOf>
       <anchor>project-actedu</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/actedu/</app>
     </project>
     <project>
       <name>Synergy</name>
@@ -5403,6 +5628,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Plateforme interne permettant au personnel parlementaire de chercher, explorer et converser avec les archives du Parlement fédéral belge, portée par un pipeline de retrieval-augmented generation avec prise en charge bilingue FR/NL.</summary>
       <anchor>project-synergy</anchor>
       <anchoredIn>work-senat-belge-chercheur-en-ia</anchoredIn>
+      <app>/app/fr/project/synergy/</app>
     </project>
     <project>
       <name>fedrag-be</name>
@@ -5425,6 +5651,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Protocole ouvert et reproductible qui évalue les stratégies de retrieval sur le corpus bilingue du Sénat, en mesurant la robustesse FR/NL tout au long du pipeline de retrieval.</summary>
       <anchor>project-fedrag-be</anchor>
       <anchoredIn>work-senat-belge-chercheur-en-ia</anchoredIn>
+      <app>/app/fr/project/fedrag-be/</app>
     </project>
     <project>
       <name>Acteble</name>
@@ -5485,6 +5712,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Backend : monolithe modulaire en Rust, découpé en contextes métier à architecture hexagonale, CQRS et cœur piloté par événements (event store, outbox/inbox), exposé en REST/JSON et en gRPC streaming ; un pipeline PostGIS transforme les données OpenStreetMap en graphes de routage publiés sur un CDN, et des lints Dylint maison font respecter l'architecture en CI. App : client Flutter offline-first pour iOS, Android, web et desktop — monorepo Melos, état Riverpod au-dessus d'un stockage local chiffré (Drift, SQLCipher), chiffrement de bout en bout par un cœur Rust (vodozemac via flutter_rust_bridge), synchronisation pair-à-pair en Bluetooth, cartes MapLibre et médias temps réel LiveKit. Site : application React monopage, construite avec Vite et internationalisée avec i18next.</summary>
       <anchor>project-acteble</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/acteble/</app>
     </project>
     <project>
       <name>Mémoire de master</name>
@@ -5512,6 +5740,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Mémoire de fin de master « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », Service d'Algorithmique de l'UMONS — la R&amp;D du moteur de planification d'Acteble. Formation de groupes multi-objectif sous contraintes spatio-temporelles : NP-difficile par réduction depuis k-CLIQUE ; groupes admissibles énumérés comme bicliques (Close-by-One) ; solveur de Pareto itératif avec garanties de terminaison et de convergence locale ; un seul DSL compilé vers Python, MiniZinc et Rust, aux fronts identiques bit à bit, la sortie Rust tournant dans l'API d'Acteble. Comparé à CP-SAT, NSGA-II, MOEA/D et SPEA2 (hypervolume, IGD, 30 graines, Wilcoxon–Holm) : significativement devant MOEA/D à toutes les tailles, devant NSGA-II et SPEA2 dès 500 utilisateurs.</summary>
       <anchor>project-memoire-de-master</anchor>
       <anchoredIn>work-acteble-fondateur</anchoredIn>
+      <app>/app/fr/project/memoire-de-master/</app>
     </project>
     <project>
       <name>Emvi App</name>
@@ -5531,6 +5760,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR &amp; barres) et système de routage Valhalla adapté.</summary>
       <anchor>project-emvi-app</anchor>
       <anchoredIn>work-emvi-ai-ai-software-crafter-lead</anchoredIn>
+      <app>/app/fr/project/emvi-app/</app>
     </project>
     <project>
       <name>Remi</name>
@@ -5550,6 +5780,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil).</summary>
       <anchor>project-remi</anchor>
       <anchoredIn>work-emvi-ai-ai-software-crafter</anchoredIn>
+      <app>/app/fr/project/remi/</app>
     </project>
     <project>
       <name>EduCraft</name>
@@ -5562,6 +5793,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <startDate>2024-03-17</startDate>
       <endDate>2024-03-17</endDate>
       <anchor>project-educraft</anchor>
+      <app>/app/fr/project/educraft/</app>
     </project>
     <project>
       <name>MyWay</name>
@@ -5590,6 +5822,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <entity>Freelance</entity>
       <anchor>project-myway</anchor>
       <anchoredIn>work-technofutur-tic-stagiaire-developpeur-full-stack-web</anchoredIn>
+      <app>/app/fr/project/myway/</app>
     </project>
     <project>
       <name>VhAuctions NER Inventory Model</name>
@@ -5606,6 +5839,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Modèle de Named Entity Recognition extrayant des éléments d'inventaire à partir d'une transcription audio.</summary>
       <anchor>project-vhauctions-ner-inventory-model</anchor>
       <anchoredIn>work-xtrada-data-scientist</anchoredIn>
+      <app>/app/fr/project/vhauctions-ner-inventory-model/</app>
     </project>
     <project>
       <name>VhAuctions</name>
@@ -5625,6 +5859,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Gestionnaire de parc pour ventes aux enchères.</summary>
       <anchor>project-vhauctions</anchor>
       <anchoredIn>work-xtrada-software-crafter-net-react</anchoredIn>
+      <app>/app/fr/project/vhauctions/</app>
     </project>
     <project>
       <name>Kwalitijd</name>
@@ -5642,6 +5877,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Gestionnaire d'enquêtes pour clubs sportifs et fédérations.</summary>
       <anchor>project-kwalitijd</anchor>
       <anchoredIn>work-xtrada-software-crafter-net-blazor</anchoredIn>
+      <app>/app/fr/project/kwalitijd/</app>
     </project>
     <project>
       <name>WebMenu</name>
@@ -5656,6 +5892,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       <summary>Caisse enregistreuse à base de QR codes pour les établissements HoReCa (Hôtel/Restaurant/Café).</summary>
       <anchor>project-webmenu</anchor>
       <anchoredIn>work-restomax-stagiaire-developpeur-full-stack-web</anchoredIn>
+      <app>/app/fr/project/webmenu/</app>
     </project>
   </projects>
   <references>
@@ -5970,6 +6207,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <endDate>2026-09-04</endDate>
       <anchor>volunteer-umons-delegue-etudiant</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/volunteer/umons-student-representative/</app>
     </volunteer-item>
     <volunteer-item>
       <organization>UMons</organization>
@@ -5979,6 +6217,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <endDate>2026-09-04</endDate>
       <anchor>volunteer-umons-buddy-tandemons</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/volunteer/umons-buddy-tandemons/</app>
     </volunteer-item>
     <volunteer-item>
       <organization>EPHEC École Supérieure de Promotion Sociale</organization>
@@ -5988,6 +6227,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <endDate>2022-10-15</endDate>
       <anchor>volunteer-ephec-ecole-superieure-de-promotion-sociale-delegue-etudiant</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/volunteer/ephec-ecole-superieure-de-promotion-sociale-student-representative/</app>
     </volunteer-item>
     <volunteer-item>
       <organization>EPHEC École Supérieure de Promotion Sociale</organization>
@@ -5997,6 +6237,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <endDate>2022-10-15</endDate>
       <anchor>volunteer-ephec-ecole-superieure-de-promotion-sociale-tuteur</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/volunteer/ephec-ecole-superieure-de-promotion-sociale-tutor/</app>
     </volunteer-item>
   </volunteer>
   <courses>
@@ -6013,6 +6254,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Algorithmique</summary>
       <anchor>course-algorithmique</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/algorithmique/</app>
     </course>
     <course>
       <name>Anglais I</name>
@@ -6024,6 +6266,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Anglais I</summary>
       <anchor>course-anglais-i</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/anglais-i/</app>
     </course>
     <course>
       <name>Bases de données I</name>
@@ -6040,6 +6283,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Bases de données I</summary>
       <anchor>course-bases-de-donnees-i</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/bases-de-donnees-i/</app>
     </course>
     <course>
       <name>Lecture et rédaction scientifique</name>
@@ -6052,6 +6296,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Lecture et rédaction scientifique</summary>
       <anchor>course-lecture-et-redaction-scientifique</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/lecture-et-redaction-scientifique/</app>
     </course>
     <course>
       <name>Mathématique</name>
@@ -6067,6 +6312,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Mathématique</summary>
       <anchor>course-mathematique</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/mathematique/</app>
     </course>
     <course>
       <name>Modélisation logicielle</name>
@@ -6083,6 +6329,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Modélisation logicielle</summary>
       <anchor>course-modelisation-logicielle</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/modelisation-logicielle/</app>
     </course>
     <course>
       <name>Réseaux</name>
@@ -6099,6 +6346,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Réseaux</summary>
       <anchor>course-reseaux</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/reseaux/</app>
     </course>
     <course>
       <name>Stratégie et politiques en ressources humaines</name>
@@ -6110,6 +6358,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Stratégie et politiques en ressources humaines</summary>
       <anchor>course-strategie-et-politiques-en-ressources-humaines</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/strategie-et-politiques-en-ressources-humaines/</app>
     </course>
     <course>
       <name>Systèmes d'exploitation</name>
@@ -6126,6 +6375,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Systèmes d'exploitation</summary>
       <anchor>course-systemes-d-exploitation</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/systemes-d-exploitation/</app>
     </course>
     <course>
       <name>Anglais II</name>
@@ -6137,6 +6387,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Anglais II</summary>
       <anchor>course-anglais-ii</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/anglais-ii/</app>
     </course>
     <course>
       <name>Bases de données II</name>
@@ -6154,6 +6405,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Bases de données II</summary>
       <anchor>course-bases-de-donnees-ii</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/bases-de-donnees-ii/</app>
     </course>
     <course>
       <name>Ingénierie de logiciels et gestion de projets</name>
@@ -6167,6 +6419,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Ingénierie de logiciels et gestion de projets</summary>
       <anchor>course-ingenierie-de-logiciels-et-gestion-de-projets</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/ingenierie-de-logiciels-et-gestion-de-projets/</app>
     </course>
     <course>
       <name>Intelligence artificielle</name>
@@ -6181,6 +6434,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Intelligence artificielle</summary>
       <anchor>course-intelligence-artificielle</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/intelligence-artificielle/</app>
     </course>
     <course>
       <name>Recherche opérationnelle et applications</name>
@@ -6195,6 +6449,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Recherche opérationnelle et applications</summary>
       <anchor>course-recherche-operationnelle-et-applications</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/recherche-operationnelle-et-applications/</app>
     </course>
     <course>
       <name>Structures de données</name>
@@ -6210,6 +6465,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Structures de données</summary>
       <anchor>course-structures-de-donnees</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/structures-de-donnees/</app>
     </course>
     <course>
       <name>Séminaires d'informatique en veille technologique</name>
@@ -6221,6 +6477,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Séminaires d'informatique en veille technologique</summary>
       <anchor>course-seminaires-d-informatique-en-veille-technologique</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/seminaires-d-informatique-en-veille-technologique/</app>
     </course>
     <course>
       <name>Cryptographie et sécurité des systèmes informatiques</name>
@@ -6235,6 +6492,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Cryptographie et sécurité des systèmes informatiques</summary>
       <anchor>course-cryptographie-et-securite-des-systemes-informatiques</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/cryptographie-et-securite-des-systemes-informatiques/</app>
     </course>
     <course>
       <name>Éthique et droit de l'informatique</name>
@@ -6248,6 +6506,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Éthique et droit de l'informatique</summary>
       <anchor>course-ethique-et-droit-de-l-informatique</anchor>
       <anchoredIn>education-umons-master-en-sciences</anchoredIn>
+      <app>/app/fr/course/ethique-et-droit-de-l-informatique/</app>
     </course>
     <course>
       <name>Structure des ordinateurs</name>
@@ -6262,6 +6521,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Structure des ordinateurs</summary>
       <anchor>course-structure-des-ordinateurs</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/structure-des-ordinateurs/</app>
     </course>
     <course>
       <name>Informatique - Système d'exploitation</name>
@@ -6275,6 +6535,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Informatique - Système d'exploitation</summary>
       <anchor>course-informatique-systeme-d-exploitation</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/informatique-systeme-d-exploitation/</app>
     </course>
     <course>
       <name>Mathématique appliquée à l'informatique</name>
@@ -6291,6 +6552,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Mathématique appliquée à l'informatique</summary>
       <anchor>course-mathematique-appliquee-a-l-informatique</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/mathematique-appliquee-a-l-informatique/</app>
     </course>
     <course>
       <name>Principes algorithmiques et programmation</name>
@@ -6305,6 +6567,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Principes algorithmiques et programmation</summary>
       <anchor>course-principes-algorithmiques-et-programmation</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/principes-algorithmiques-et-programmation/</app>
     </course>
     <course>
       <name>Principes d'analyse informatique</name>
@@ -6318,6 +6581,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Principes d'analyse informatique</summary>
       <anchor>course-principes-d-analyse-informatique</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/principes-d-analyse-informatique/</app>
     </course>
     <course>
       <name>Information et communication professionnelles</name>
@@ -6329,6 +6593,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Information et communication professionnelles</summary>
       <anchor>course-information-et-communication-professionnelles</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/information-et-communication-professionnelles/</app>
     </course>
     <course>
       <name>Web : principes de base</name>
@@ -6344,6 +6609,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Web : principes de base</summary>
       <anchor>course-web-principes-de-base</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/web-principes-de-base/</app>
     </course>
     <course>
       <name>Initiation aux bases de données</name>
@@ -6358,6 +6624,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Initiation aux bases de données</summary>
       <anchor>course-initiation-aux-bases-de-donnees</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/initiation-aux-bases-de-donnees/</app>
     </course>
     <course>
       <name>Gestion et exploitation de bases de données</name>
@@ -6372,6 +6639,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Gestion et exploitation de bases de données</summary>
       <anchor>course-gestion-et-exploitation-de-bases-de-donnees</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/gestion-et-exploitation-de-bases-de-donnees/</app>
     </course>
     <course>
       <name>Programmation orientée objet</name>
@@ -6387,6 +6655,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Programmation orientée objet</summary>
       <anchor>course-programmation-orientee-objet</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/programmation-orientee-objet/</app>
     </course>
     <course>
       <name>Projet d'analyse et de conception</name>
@@ -6400,6 +6669,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Projet d'analyse et de conception</summary>
       <anchor>course-projet-d-analyse-et-de-conception</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/projet-d-analyse-et-de-conception/</app>
     </course>
     <course>
       <name>Techniques de gestion de projet</name>
@@ -6411,6 +6681,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Techniques de gestion de projet</summary>
       <anchor>course-techniques-de-gestion-de-projet</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/techniques-de-gestion-de-projet/</app>
     </course>
     <course>
       <name>Éléments de statistique</name>
@@ -6422,6 +6693,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Éléments de statistique</summary>
       <anchor>course-elements-de-statistique</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/elements-de-statistique/</app>
     </course>
     <course>
       <name>Projet de développement web</name>
@@ -6437,6 +6709,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Projet de développement web</summary>
       <anchor>course-projet-de-developpement-web</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/projet-de-developpement-web/</app>
     </course>
     <course>
       <name>Notions de e-business</name>
@@ -6448,6 +6721,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Notions de e-business</summary>
       <anchor>course-notions-de-e-business</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/notions-de-e-business/</app>
     </course>
     <course>
       <name>Projet de développement SGBD</name>
@@ -6462,6 +6736,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Projet de développement SGBD</summary>
       <anchor>course-projet-de-developpement-sgbd</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/projet-de-developpement-sgbd/</app>
     </course>
     <course>
       <name>Bases des réseaux</name>
@@ -6476,6 +6751,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Bases des réseaux</summary>
       <anchor>course-bases-des-reseaux</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/bases-des-reseaux/</app>
     </course>
     <course>
       <name>Organisation des entreprises et éléments de management</name>
@@ -6487,6 +6763,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Organisation des entreprises et éléments de management</summary>
       <anchor>course-organisation-des-entreprises-et-elements-de-management</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/organisation-des-entreprises-et-elements-de-management/</app>
     </course>
     <course>
       <name>Produits logiciels de gestion intégrés</name>
@@ -6498,6 +6775,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Produits logiciels de gestion intégrés</summary>
       <anchor>course-produits-logiciels-de-gestion-integres</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/produits-logiciels-de-gestion-integres/</app>
     </course>
     <course>
       <name>Projet d'intégration de développement</name>
@@ -6515,6 +6793,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Projet d'intégration de développement</summary>
       <anchor>course-projet-d-integration-de-developpement</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/projet-d-integration-de-developpement/</app>
     </course>
     <course>
       <name>Veille technologique</name>
@@ -6526,6 +6805,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Veille technologique</summary>
       <anchor>course-veille-technologique</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/veille-technologique/</app>
     </course>
     <course>
       <name>Administration, gestion et sécurisation des réseaux</name>
@@ -6539,6 +6819,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Administration, gestion et sécurisation des réseaux</summary>
       <anchor>course-administration-gestion-et-securisation-des-reseaux</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/administration-gestion-et-securisation-des-reseaux/</app>
     </course>
     <course>
       <name>Langue en situation appliquée à l'enseignement supérieur UE1</name>
@@ -6549,6 +6830,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Langue en situation appliquée à l'enseignement supérieur UE1</summary>
       <anchor>course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue1</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/langue-en-situation-appliquee-a-l-enseignement-superieur-ue1/</app>
     </course>
     <course>
       <name>Langue en situation appliquée à l'enseignement supérieur UE2</name>
@@ -6560,6 +6842,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Langue en situation appliquée à l'enseignement supérieur UE2</summary>
       <anchor>course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue2</anchor>
       <anchoredIn>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-bachelier-professionnalisant</anchoredIn>
+      <app>/app/fr/course/langue-en-situation-appliquee-a-l-enseignement-superieur-ue2/</app>
     </course>
     <course>
       <name>Économie I</name>
@@ -6573,6 +6856,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Économie I</summary>
       <anchor>course-economie-i</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-bachelier-en-sciences-politiques</anchoredIn>
+      <app>/app/fr/course/economie-i/</app>
     </course>
     <course>
       <name>Économie II</name>
@@ -6586,6 +6870,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Économie II</summary>
       <anchor>course-economie-ii</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-bachelier-en-sciences-politiques</anchoredIn>
+      <app>/app/fr/course/economie-ii/</app>
     </course>
     <course>
       <name>Science politique</name>
@@ -6599,6 +6884,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Science politique</summary>
       <anchor>course-science-politique</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-bachelier-en-sciences-politiques</anchoredIn>
+      <app>/app/fr/course/science-politique/</app>
     </course>
     <course>
       <name>Séminaire : penser le social</name>
@@ -6612,6 +6898,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Séminaire : penser le social</summary>
       <anchor>course-seminaire-penser-le-social</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-bachelier-en-sciences-politiques</anchoredIn>
+      <app>/app/fr/course/seminaire-penser-le-social/</app>
     </course>
     <course>
       <name>Séminaire : principes et méthodes en sciences sociales</name>
@@ -6624,6 +6911,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Séminaire : principes et méthodes en sciences sociales</summary>
       <anchor>course-seminaire-principes-et-methodes-en-sciences-sociales</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-bachelier-en-sciences-politiques</anchoredIn>
+      <app>/app/fr/course/seminaire-principes-et-methodes-en-sciences-sociales/</app>
     </course>
     <course>
       <name>Socio-économie des médias</name>
@@ -6637,6 +6925,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Socio-économie des médias</summary>
       <anchor>course-socio-economie-des-medias</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-bachelier-en-sciences-politiques</anchoredIn>
+      <app>/app/fr/course/socio-economie-des-medias/</app>
     </course>
     <course>
       <name>Anglais I (Saint-Louis)</name>
@@ -6647,6 +6936,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Anglais I</summary>
       <anchor>course-anglais-i-saint-louis</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-bachelier-en-sciences-politiques</anchoredIn>
+      <app>/app/fr/course/anglais-i-saint-louis/</app>
     </course>
     <course>
       <name>Néerlandais I</name>
@@ -6657,6 +6947,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
       <summary>Néerlandais I</summary>
       <anchor>course-neerlandais-i</anchor>
       <anchoredIn>education-universite-saint-louis-bruxelles-bachelier-en-sciences-politiques</anchoredIn>
+      <app>/app/fr/course/neerlandais-i/</app>
     </course>
   </courses>
   <competitions>
