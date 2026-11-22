@@ -145,3 +145,10 @@ for (const lang of LANGS) {
     assert.equal(html.match(/class="pdf-pages"/g).length, 4);
   });
 }
+
+// GitHub Pages runs the repository through Jekyll, which drops every path that
+// starts with an underscore (assets/_vendor/ was a 404 online): .nojekyll turns
+// that off, and the reader's engine is only served with it.
+test('the vendored PDF.js is published: .nojekyll is there', () => {
+  assert.ok(fs.existsSync(path.join(ROOT, '.nojekyll')));
+});
