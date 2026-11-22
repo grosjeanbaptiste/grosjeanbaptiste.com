@@ -35,7 +35,10 @@ function appIds() {
 function withApp(section, entries, lang, ids) {
   const known = ids[section];
   if (!entries || known?.length !== entries.length) return entries;
-  return entries.map((e, i) => ({ ...e, app: `/app/${lang}/${APP_KINDS[section]}/${known[i].id}/` }));
+  return entries.map((e, i) => ({
+    ...e,
+    app: `/app/${lang}/${APP_KINDS[section]}/${known[i].id}/`,
+  }));
 }
 
 const HOSTS = { work: 'company', education: 'institution' };

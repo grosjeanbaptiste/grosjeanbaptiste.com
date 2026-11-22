@@ -20,11 +20,16 @@ const render = (lang, minimal) =>
 const classic = (lang) =>
   fs.readFileSync(path.join(ROOT, `${langPath(lang).replace(/^\//, '')}index.html`), 'utf8');
 
-const unescape = (s) =>
-  s.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+const decodeEntities = (s) =>
+  s
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
 const metaOf = (html, attr, key) => {
   const m = html.match(new RegExp(`<meta ${attr}="${key}" content="([^"]*)"`));
-  return m && unescape(m[1]);
+  return m && decodeEntities(m[1]);
 };
 const hreflangs = (html) =>
   [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map(
