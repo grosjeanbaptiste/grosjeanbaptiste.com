@@ -6,6 +6,8 @@ theme and the PDFs. Last checked: 2026-11-22, by reading the code and rendering 
 (`index.html`, `assets/xslt/resume-transform*.xsl`, `react/src/ui/`); the
 behaviour was not re-tested in a browser for this file.
 
+The XSLT themes are served as plain HTML pages (`assets/data/resume-{lang}[-minimal].html`, drawn by `xsltproc` at generation) so that they show in Chrome and Safari, which no longer apply client-side XSLT; the XML mirrors still carry their stylesheet.
+
 Legend: **yes** = present, **css** = done with markup and CSS only (no script),
 **no** = absent, **n/a** = does not apply.
 

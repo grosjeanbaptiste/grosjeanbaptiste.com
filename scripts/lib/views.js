@@ -14,11 +14,10 @@ const I18N = require('./i18n');
 const VIEWS = [
   { id: 'classic', href: (lang) => langPath(lang) },
   { id: 'interactive', href: (lang) => `/app/${lang}/` },
-  { id: 'xsltRich', href: (lang) => `/assets/data/resume-${lang}.xml`, firefoxOnly: true },
+  { id: 'xsltRich', href: (lang) => `/assets/data/resume-${lang}.html` },
   {
     id: 'xsltMinimal',
-    href: (lang) => `/assets/data/resume-${lang}-minimal.xml`,
-    firefoxOnly: true,
+    href: (lang) => `/assets/data/resume-${lang}-minimal.html`,
   },
   // The reader page (react/), which shows the LaTeX PDF inside the site.
   { id: 'pdf', href: (lang) => `/app/${lang}/pdf/` },
@@ -26,15 +25,10 @@ const VIEWS = [
   { id: 'timeline', href: (lang) => `/app/${lang}/pdf/timeline/` },
 ];
 
-// The displays as one language shows them: { id, href, label, note? }.
+// The displays as one language shows them: { id, href, label }.
 function viewsOf(lang) {
   const t = I18N[lang];
-  return VIEWS.map((view) => {
-    const out = { id: view.id, href: view.href(lang), label: t.views[view.id] };
-    // Chrome and Safari no longer apply client-side XSLT; say so on hover.
-    if (view.firefoxOnly) out.note = t.firefoxNote;
-    return out;
-  });
+  return VIEWS.map((view) => ({ id: view.id, href: view.href(lang), label: t.views[view.id] }));
 }
 
 // The bar as HTML, `current` being the display it is rendered into.
@@ -42,8 +36,7 @@ function renderViewsBar(lang, current) {
   const title = escapeHtml(I18N[lang].views.title);
   const items = viewsOf(lang).map((view) => {
     const aria = view.id === current ? ' aria-current="page"' : '';
-    const note = view.note ? ` title="${escapeHtml(view.note)}"` : '';
-    return `      <li><a class="views-bar-link" href="${view.href}"${aria}${note}>${escapeHtml(view.label)}</a></li>`;
+    return `      <li><a class="views-bar-link" href="${view.href}"${aria}>${escapeHtml(view.label)}</a></li>`;
   });
   return [
     `  <nav class="views-bar" aria-label="${title}">`,

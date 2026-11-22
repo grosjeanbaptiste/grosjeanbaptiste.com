@@ -11,7 +11,7 @@ const actionsOf = (lang, t) => [
   ...LANGS.filter((other) => other !== lang).map((other) => ({
     label: LANG_NAMES[other],
     hint: t.langMenuLabel,
-    href: `/assets/data/resume-${other}.xml`,
+    href: `/assets/data/resume-${other}.html`,
   })),
   { label: t.themeLabel, press: '#theme-toggle' },
   { label: t.downloadCV, hint: 'PDF', href: `/assets/cv/cv_grosjean_baptiste_${lang}.pdf` },

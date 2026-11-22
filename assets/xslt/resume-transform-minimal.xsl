@@ -1019,7 +1019,7 @@
   <xsl:template name="lang-link">
     <xsl:param name="code"/>
     <a>
-      <xsl:attribute name="href">/assets/data/resume-<xsl:value-of select="$code"/>-minimal.xml</xsl:attribute>
+      <xsl:attribute name="href">/assets/data/resume-<xsl:value-of select="$code"/>-minimal.html</xsl:attribute>
       <xsl:attribute name="hreflang"><xsl:value-of select="$code"/></xsl:attribute>
       <xsl:if test="$code = $lang">
         <xsl:attribute name="class">active</xsl:attribute>

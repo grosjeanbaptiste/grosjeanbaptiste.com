@@ -27,6 +27,10 @@ jobs:
         with:
           node-version: '20'
 
+      # The XSLT themes are also written as plain HTML (assets/data/*.html).
+      - name: Install xsltproc
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq xsltproc
+
       - name: Regenerate
         run: node scripts/generate-from-resume.js
 
@@ -42,7 +46,7 @@ jobs:
 
       - name: Commit changes if any
         run: |
-          PATHS="index.html fr/ nl/ es/ de/ zh/ assets/data/*.xml sitemap.xml app/"
+          PATHS="index.html fr/ nl/ es/ de/ zh/ assets/data/*.xml assets/data/*.html sitemap.xml app/"
           if [[ -z "$(git status --porcelain $PATHS)" ]]; then
             echo "No changes to commit."
             exit 0

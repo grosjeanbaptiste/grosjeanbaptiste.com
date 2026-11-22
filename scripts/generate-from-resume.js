@@ -31,6 +31,7 @@ const { generateCvDownload } = require('./lib/sections/cv-download');
 const { generateDailyLife } = require('./lib/sections/daily-life');
 const { generateSitemap } = require('./lib/sections/sitemap');
 const { generateXml } = require('./lib/xml');
+const { renderPage } = require('./lib/xslt-pages');
 
 function writeIfChanged(filePath, content) {
   const previous = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : '';
@@ -85,8 +86,13 @@ for (const v of xmlOutputs) {
   // static HTML consumers see so both stay in sync.
   const xmlResume = applyHtmlOverrides(loadResume(v.lang));
   if (writeIfChanged(xmlPath, generateXml(xmlResume, v.theme, v.lang))) wrote += 1;
+  // And the same theme drawn as a page, for the browsers that do not apply XSLT.
+  const page = renderPage(v.theme === RICH ? 'rich' : 'minimal', xmlPath);
+  if (writeIfChanged(xmlPath.replace(/\.xml$/, '.html'), page)) wrote += 1;
 }
-console.log(`xml: assets/data/resume{,-minimal,-<lang>{,-minimal}}.xml × ${xmlOutputs.length}`);
+console.log(
+  `xml: assets/data/resume{,-minimal,-<lang>{,-minimal}}.{xml,html} × ${xmlOutputs.length}`,
+);
 
 // The classic page's stylesheets, written out from css/style.css's list.
 const { bundlesOf } = require('./lib/css-bundle');

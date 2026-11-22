@@ -84,9 +84,9 @@ for (const lang of LANGS) {
 
   test(`${lang}: its actions lead to the other XSLT displays, the theme button and the PDFs`, () => {
     const actions = indexOf(rich).actions;
-    const others = LANGS.filter((l) => l !== lang).map((l) => `/assets/data/resume-${l}.xml`);
+    const others = LANGS.filter((l) => l !== lang).map((l) => `/assets/data/resume-${l}.html`);
     assert.deepEqual(
-      actions.filter((a) => a.href?.endsWith('.xml')).map((a) => a.href),
+      actions.filter((a) => a.href?.endsWith('.html')).map((a) => a.href),
       others,
     );
     assert.ok(actions.some((a) => a.press === '#theme-toggle'));

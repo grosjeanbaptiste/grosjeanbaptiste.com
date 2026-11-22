@@ -61,7 +61,7 @@ Those four are **generated output that happens to be committed**. Editing one di
 - `/index.html` (English, canonical at root)
 - `/fr/index.html`, `/nl/index.html`, `/es/index.html`, `/de/index.html`, `/zh/index.html`
 
-It also writes the fourteen XML mirrors under `assets/data/` (read by the XSLT themes) and `sitemap.xml`. `llms.txt` and `llms-full.txt` are **not** generated — they are hand-maintained and drift silently; `scripts/lib/volunteer-dates.test.js` is an example of pinning one against the data.
+It also writes the fourteen XML mirrors under `assets/data/` (read by the XSLT themes), the same fourteen drawn as plain pages (`resume-{lang}[-minimal].html`, `scripts/lib/xslt-pages.js`, which runs `xsltproc` — the regeneration workflow installs it) and `sitemap.xml`. The views bar and the XSLT themes' language switchers lead to the **pages**, not the XML: Chrome 157 no longer applies client-side XSLT and shows an empty document. The XML keeps its `<?xml-stylesheet?>` for the browsers that still do (`xslt-pages.test.js` holds each page to its XML). `llms.txt` and `llms-full.txt` are **not** generated — they are hand-maintained and drift silently; `scripts/lib/volunteer-dates.test.js` is an example of pinning one against the data.
 
 Each variant has six marker blocks replaced from data:
 
