@@ -16,6 +16,8 @@ addEventListener('load', () => setTimeout(() => {
   const chip = $('.tl-chip[href="#skill-rust"]');
   const other = all('.tl-skills > .tl-chips .tl-chip').find((c) => c !== chip);
   const seen = {};
+  // Colours ease over 0.3s (css/xslt-polish.css): read them once settled.
+  document.getAnimations().forEach((a) => a.finish());
   // Opened on #skill-rust.
   seen.fadedOnlyOthers = faded().length > 0 && faded().every((b) => !uses(b));
   seen.litAllUsers = all('#timeline .tl-bar').filter(uses).every((b) => getComputedStyle(b).opacity === '1');

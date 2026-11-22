@@ -20,6 +20,7 @@ addEventListener('load', () => setTimeout(() => {
   // A headless page paints no frames, so no scroll event comes by itself.
   dispatchEvent(new Event('scroll'));
   setTimeout(() => {
+    seen.toolbar = [getComputedStyle($('.toolbar')).position, Math.round($('.toolbar').getBoundingClientRect().top)];
     seen.atExperience = [...document.querySelectorAll('.toolbar a.nav-link.active')].map((a) => a.getAttribute('href'));
     document.documentElement.setAttribute('data-xslt-links', JSON.stringify(seen));
   }, 800);
@@ -51,4 +52,10 @@ check('?skill= sets the filter target and stays in the address', () => {
 
 check('the menu marks the section on screen', () => {
   assert.deepEqual(seen.atExperience, ['#experience']);
+});
+
+check('the toolbar stays at the top of the screen, under the views bar', () => {
+  assert.equal(seen.toolbar[0], 'sticky');
+  // The views bar is 2.25rem (36px) high.
+  assert.ok(seen.toolbar[1] >= 0 && seen.toolbar[1] <= 40, `top at ${seen.toolbar[1]}px`);
 });
