@@ -120,17 +120,37 @@
 }
 
 @media (max-width: 768px) {
+  /* A strip along the foot of the screen, the three actions side by side: a
+   * column of them hid the lists and the timeline behind it. The page keeps
+   * room under its last line. */
   .cv-actions {
     top: auto;
-    bottom: 1.25rem;
-    right: 1.25rem;
-    left: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: 0.375rem;
+    padding: 0.375rem;
+    background: var(--card-background);
+    border-top: 0.0625rem solid var(--border-color);
+  }
+
+  body {
+    padding-bottom: 3.75rem;
   }
 
   .cv-download-button,
   .cv-print-button {
+    flex: 1 1 0;
+    min-width: 0;
     min-height: 2.75rem;
-    min-width: 2.75rem;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 0.375rem 0.4rem;
+    font-size: 0.72rem;
+    line-height: 1.15;
+    text-align: center;
   }
 
   .daily-life {

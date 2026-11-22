@@ -335,6 +335,7 @@
             border-radius: 8px;
           }
           .main { flex: 1 1 0; min-width: 0; padding: 20px; }
+          .profile { display: contents; }
           #profile-picture {
             width: 100%;
             max-width: 14rem;
@@ -470,7 +471,7 @@
               margin-block: 0 !important;
               padding: 3px 18px;
             }
-            .sidebar > #profile-picture { padding: 18px 0 0; }
+            .sidebar > .profile { display: block; padding: 18px 18px 0; }
             .sidebar > .lang-item:last-of-type { padding-bottom: 14px; }
             .main { order: 1; margin-top: 14px; }
             .sidebar > .print-drop, .sidebar > .skill-tags,
@@ -785,9 +786,12 @@
           <!-- ============== SIDEBAR ============== -->
           <aside class="sidebar">
 
-            <img src="/assets/images/profil.jpeg" srcset="/assets/images/profil-160.webp 160w, /assets/images/profil-320.webp 320w, /assets/images/profil-500.webp 500w" sizes="220px" id="profile-picture">
-              <xsl:attribute name="alt"><xsl:value-of select="basics/name"/></xsl:attribute>
-            </img>
+            <!-- The photo's box: on a phone it carries the card's background behind the round photo. -->
+            <div class="profile">
+              <img src="/assets/images/profil.jpeg" srcset="/assets/images/profil-160.webp 160w, /assets/images/profil-320.webp 320w, /assets/images/profil-500.webp 500w" sizes="220px" id="profile-picture">
+                <xsl:attribute name="alt"><xsl:value-of select="basics/name"/></xsl:attribute>
+              </img>
+            </div>
 
             <h1><xsl:value-of select="basics/name"/></h1>
             <div class="label"><xsl:value-of select="basics/label"/></div>

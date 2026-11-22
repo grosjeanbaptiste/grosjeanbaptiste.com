@@ -510,6 +510,7 @@
              whole career in the frame, bars as plain links. -->
         <link rel="stylesheet" href="/css/timeline.css"/>
         <link rel="stylesheet" href="/css/timeline-phone.css"/>
+        <xsl:call-template name="timeline-phone-css"/>
         <link rel="stylesheet" href="/css/timeline-entries.css"/>
         <link rel="stylesheet" href="/css/timeline-scroll.css"/>
         <link rel="stylesheet" href="/css/skill-links.css"/>
@@ -972,6 +973,20 @@
       </xsl:if>
       <xsl:value-of select="translate($code, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
     </a>
+  </xsl:template>
+
+  <!-- This theme has no zoom: on a phone the career would be squeezed into the
+       frame (the years run into one another), so it opens on its last five
+       years, the rich theme's default, and the frame scrolls back from there. -->
+  <xsl:template name="timeline-phone-css">
+    <xsl:variable name="months" select="/resume/meta/timeline/months"/>
+    <xsl:if test="$months and $months &gt; 60">
+      <style>
+        <xsl:text>@media screen and (max-width: 48rem) { #timeline .tl-grid { --stretch: </xsl:text>
+        <xsl:value-of select="$months div 60"/>
+        <xsl:text>; } }</xsl:text>
+      </style>
+    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>

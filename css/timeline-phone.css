@@ -13,6 +13,14 @@
   .tl-bar {
     font-size: 0.8em;
   }
+
+  /* "professionnelle" is wider than the column: it breaks rather than running
+     under the first bars. */
+  .tl-lane-label {
+    font-size: 0.68em;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
 }
 
 /* The parts of a family of projects (OpenActe) are folded into the family's
