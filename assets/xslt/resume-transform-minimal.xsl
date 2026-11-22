@@ -448,6 +448,8 @@
             /* One sheet, so the timeline is set as tightly as the classic
                theme prints it. !important: the zoom writes the width inline. */
             #print-verso .tl-scroll { padding: 0; }
+            #print-verso .tl-zoom, #print-verso .tl-search-open,
+            #print-verso a[data-timeline-pdf] { display: none; }
             #print-verso .tl-grid { --row-height: 8pt; --lane-label: 2.2cm; gap: 3pt; }
             #print-verso .tl-years { height: 8pt; font-size: 6pt; }
             #print-verso .tl-legend { margin: 2pt 0 0; font-size: 6pt; }
