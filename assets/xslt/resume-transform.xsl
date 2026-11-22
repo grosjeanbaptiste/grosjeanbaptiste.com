@@ -335,6 +335,7 @@
           }
           .sidebar {
             flex: 0 0 auto;
+            align-self: flex-start;
             width: clamp(15rem, 22vw, 24rem);
             background: var(--bg-sidebar);
             padding: 24px 20px;
