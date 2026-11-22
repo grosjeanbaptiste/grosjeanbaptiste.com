@@ -23,8 +23,8 @@ Legend: **yes** = present, **css** = done with markup and CSS only (no script),
 | Search (⌘K / Ctrl+K) | yes (`js/search.js`) | yes (palette) | yes (same script as classic) | yes (same) |
 | Palette actions (languages, theme, PDFs) | yes (in the search) | yes | yes (in the search) | yes (same) |
 | Skill tags on entries lead into the filter | yes | yes | yes | yes (the skills section) |
-| Entry opened from a timeline bar | scrolls to the entry | panel under the timeline | css panel (`:target`) | css panel (jobs and degrees) |
-| Deep link to one entry in a given language | anchor `#…` | `/app/{lang}/{kind}/{id}` | anchor `#…`, and a link on to the interactive entry | anchor `#…`, and the same link (jobs and degrees) |
+| Entry opened from a timeline bar | scrolls to the entry | panel under the timeline | css panel (`:target`) | css panel (same) |
+| Deep link to one entry in a given language | anchor `#…` | `/app/{lang}/{kind}/{id}` | anchor `#…`, and a link on to the interactive entry | anchor `#…`, and the same link |
 | Course units, one page each | no | yes | rows with ids | rows with ids |
 | Section menu with the active section marked | yes (`js/nav.js`) | n/a | yes (`js/xslt-links.js`) | yes (same) |
 | Sticky toolbar, animated jumps between sections | yes | n/a | yes | yes (`css/xslt-polish.css`) |
@@ -43,9 +43,6 @@ Legend: **yes** = present, **css** = done with markup and CSS only (no script),
 
 ## What the XSLT displays still lack
 
-- Deep links that survive a change of language to rows with no page of their
-  own in the app (projects, course units and volunteering on the minimal
-  theme, which gives ids to jobs and degrees only).
 - The classic print layout script (`js/print-layout.js`) in the rich theme;
   both themes keep their own print scripts, which a test holds to one sheet.
 - Font preload: the themes use their own font stack, not Roboto, so there is

@@ -14,4 +14,16 @@
     </xsl:if>
   </xsl:template>
 
+  <!-- The id of a project, course unit or volunteering row, which its timeline
+       bar leads to: on the row of the entry that lists it first, as on the
+       classic page (scripts/lib/xml-anchors.js). An empty span at the row's
+       end, which /css/timeline.css pins to the row's top. -->
+  <xsl:template name="row-anchor">
+    <xsl:param name="host"/>
+    <xsl:if test="anchoredIn and anchoredIn = $host">
+      <span class="tl-anchor"><xsl:attribute name="id"><xsl:value-of select="anchor"/></xsl:attribute></span>
+      <xsl:call-template name="entry-close"/>
+    </xsl:if>
+  </xsl:template>
+
 </xsl:stylesheet>

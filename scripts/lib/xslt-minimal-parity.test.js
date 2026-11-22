@@ -47,10 +47,11 @@ for (const lang of LANGS) {
     assert.deepEqual(pdfZooms(minimal), pdfZooms(rich));
   });
 
-  test(`${lang}: each job and degree has a panel with a way on to the interactive view`, () => {
+  test(`${lang}: each entry and each row has a panel with a way on to the interactive view`, () => {
     const opens = all(minimal, /<a class="entry-open" href="([^"]+)"/g);
     assert.ok(opens.length > 10, `${opens.length} links`);
-    for (const href of opens) assert.match(href, new RegExp(`^/app/${lang}/(work|education)/`));
+    for (const href of opens)
+      assert.match(href, new RegExp(`^/app/${lang}/(work|education|project|course|volunteer)/`));
     assert.equal(all(minimal, /class="(entry-close)"/g).length, opens.length);
     assert.match(minimal, /<link[^>]*href="\/css\/entry-panel\.css"/);
   });

@@ -110,10 +110,12 @@ for (const lang of LANGS) {
     assert.deepEqual(themeCounts(rich), classicCounts(page));
   });
 
-  test(`${lang}: in the minimal theme every bar still leads to an entry of its page`, () => {
+  test(`${lang}: in the minimal theme every bar leads to an entry of its page, rows included`, () => {
     const minimal = render(lang, true);
     const hrefs = barHrefs(minimal);
     assert.ok(hrefs.length > 0);
     for (const id of hrefs) assert.ok(ids(minimal).has(id), `no #${id}`);
+    // Every row the rich theme's bars lead to is a row of the minimal one's too.
+    for (const id of barHrefs(render(lang))) assert.ok(hrefs.includes(id), `no bar to #${id}`);
   });
 }

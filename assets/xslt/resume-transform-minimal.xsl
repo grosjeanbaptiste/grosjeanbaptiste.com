@@ -215,6 +215,9 @@
               <xsl:when test="$proj/summary"> — <xsl:value-of select="$proj/summary"/></xsl:when>
               <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
             </xsl:choose>
+            <xsl:for-each select="$proj">
+              <xsl:call-template name="row-anchor"><xsl:with-param name="host" select="$ref/../../anchor"/></xsl:call-template>
+            </xsl:for-each>
           </li>
         </xsl:for-each>
       </ul>
@@ -714,6 +717,13 @@
                   <xsl:for-each select="bars/bar">
                     <xsl:choose>
                       <!-- A bar leads to the entry that carries it on this page. -->
+                      <xsl:when test="entry">
+                        <a class="tl-bar">
+                          <xsl:call-template name="timeline-bar"/>
+                          <xsl:attribute name="href">#<xsl:value-of select="entry"/></xsl:attribute>
+                          <span><xsl:value-of select="caption"/></span>
+                        </a>
+                      </xsl:when>
                       <xsl:when test="target">
                         <a class="tl-bar">
                           <xsl:call-template name="timeline-bar"/>
@@ -802,6 +812,7 @@
                 <xsl:with-param name="k" select="'projects'"/>
               </xsl:call-template>
               <xsl:variable name="workOrg" select="company"/>
+              <xsl:variable name="workHost" select="anchor"/>
               <xsl:variable name="workVols" select="/resume/volunteer/volunteer-item[$workOrg and contains($workOrg, substring-before(concat(organization, ' '), ' '))]"/>
               <xsl:if test="$workVols">
                 <div class="muted"><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template>:</div>
@@ -816,6 +827,7 @@
                         <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
                         <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
                       </xsl:choose>
+                      <xsl:call-template name="row-anchor"><xsl:with-param name="host" select="$workHost"/></xsl:call-template>
                     </li>
                   </xsl:for-each>
                 </ul>
@@ -871,6 +883,7 @@
                 <xsl:with-param name="k" select="'courseUnits'"/>
               </xsl:call-template>
               <xsl:variable name="eduInst" select="institution"/>
+              <xsl:variable name="eduHost" select="anchor"/>
               <xsl:variable name="eduVols" select="/resume/volunteer/volunteer-item[$eduInst and contains($eduInst, substring-before(concat(organization, ' '), ' '))]"/>
               <xsl:if test="$eduVols">
                 <div class="muted"><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template>:</div>
@@ -885,6 +898,7 @@
                         <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
                         <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
                       </xsl:choose>
+                      <xsl:call-template name="row-anchor"><xsl:with-param name="host" select="$eduHost"/></xsl:call-template>
                     </li>
                   </xsl:for-each>
                 </ul>

@@ -161,7 +161,7 @@ Both XSLT themes include the same small stylesheets from `assets/xslt/`, so that
 
 What the XML mirrors carry for them: `meta/head` (`scripts/lib/xml-head.js`, reusing `buildJsonLd` of `sections/head.js`), `meta/pictures` (`xml-pictures.js`, from `assets/cv/previews/manifest.json`), and an `app` path on every job, degree, project, course unit and volunteering role (`xml-anchors.js`), the interactive view's page for it. The ids are the React export's own, read from `app/data/en.json`: **rebuild the app (`cd react && npm run build`) before the generator when an entry is added or renamed**, or the link is left out; `xslt-app-links.test.js` fails when one leads to no page. `docs/features-by-view.md` lists what each display has; keep it in step. Tests: `xslt-head-meta.test.js`, `xslt-minimal-parity.test.js`, `xslt-app-links.test.js`, `xslt-pdf-reader.test.js`.
 
-The minimal theme gives ids to its sections (`#about`, `#experience`, `#education`, `#references`) for the menu and the search; a project, course unit or volunteering row has none there, so its bar still leads to the job or degree that hosts it.
+The minimal theme gives ids to its sections (`#about`, `#experience`, `#education`, `#references`) for the menu and the search, and to every job, degree, project, course unit and volunteering row, as the rich one does (`row-anchor`, in `entry-panel.xsl`): a bar leads to its own entry (`entry`), falling back to the job or degree that hosts it (`target`).
 
 ### The views bar
 
