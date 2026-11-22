@@ -25,7 +25,15 @@ export class Catalogue {
 
   static from(document: ResumeDocument): Catalogue {
     const { lang, ui, resume, viewsTitle, views, pictures } = document;
-    return new Catalogue(lang, ui, resume, entriesOf(resume), viewsTitle, views, pictures);
+    return new Catalogue(
+      lang,
+      ui,
+      resume,
+      entriesOf(resume),
+      viewsTitle,
+      views.filter((view) => !view.hidden),
+      pictures,
+    );
   }
 
   // The pictures of a PDF's pages; none — said out loud — when the export has none.

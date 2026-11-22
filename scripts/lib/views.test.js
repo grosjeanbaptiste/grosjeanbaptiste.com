@@ -29,7 +29,9 @@ function barOf(html) {
 }
 
 const expected = (lang, current) =>
-  viewsOf(lang).map((v) => ({ href: v.href, label: v.label, current: v.id === current }));
+  viewsOf(lang)
+    .filter((v) => !v.hidden)
+    .map((v) => ({ href: v.href, label: v.label, current: v.id === current }));
 
 const xslt = (theme, lang) => {
   const xsl = path.join(

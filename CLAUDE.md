@@ -165,6 +165,8 @@ The minimal theme gives ids to its sections (`#about`, `#experience`, `#educatio
 
 ### The views bar
 
+**The classic page and the interactive view are `hidden` in the registry**: they stay online (the classic page is the site's root and every page's canonical address) but the bar, the palette and the read-ahead no longer offer them, so what a visitor is offered is the two XSLT displays and the PDFs. Remove `hidden` from the entry in `scripts/lib/views.js` to offer one again; the registry keeps their labels, which the XSLT themes still use (`entry-open`'s « Interactive ↗ »).
+
 The classic site, the interactive view, both XSLT themes and the PDF are all *displays* of one CV, so every HTML display carries the same bar at the very top, listing them in the same order with the same localized labels, the current one marked `aria-current="page"`. One registry, `scripts/lib/views.js` (labels under `views` in `scripts/lib/i18n/*.js`), feeds three renderers: `renderViewsBar()` in the static generator's NAV block, `<meta><views>` in the XML mirrors for the `views-bar` template of each XSLT theme, and the `views` field of the React export. One stylesheet, `css/views-bar.css`, styles it everywhere (each display also loads `css/variables.css` for the DSL palette); it is fixed, and each display makes room with `--views-bar-h`. `scripts/lib/views.test.js` holds the classic page and both XSLT themes to the registry, `react/src/ui/views-bar.spec.tsx` the React side. Links to another display belong in the registry, not scattered in a view's own toolbar.
 
 ### The React view (`/app/`)

@@ -111,6 +111,8 @@ export interface ViewLink {
   readonly href: string;
   readonly label: string;
   readonly note?: string;
+  // Not offered in the bar or the palette (the page stays online).
+  readonly hidden?: boolean;
 }
 
 // A picture of one page of a shipped PDF, shown while PDF.js draws the page.

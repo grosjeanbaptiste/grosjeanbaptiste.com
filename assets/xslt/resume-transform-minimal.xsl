@@ -233,7 +233,7 @@
       <xsl:attribute name="aria-label"><xsl:value-of select="meta/viewsTitle"/></xsl:attribute>
       <span class="views-bar-title"><xsl:value-of select="meta/viewsTitle"/></span>
       <ul>
-        <xsl:for-each select="meta/views/view">
+        <xsl:for-each select="meta/views/view[not(hidden)]">
           <li>
             <a class="views-bar-link">
               <xsl:attribute name="href"><xsl:value-of select="href"/></xsl:attribute>

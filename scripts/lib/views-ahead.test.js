@@ -74,8 +74,10 @@ const check = (name, fn) =>
   });
 const some = (pattern) => fetched.some((p) => pattern.test(p));
 
-check('the classic page reads the interactive display ahead', () =>
-  assert.ok(some(/^\/app\/fr\/$/)),
+// The interactive view is not offered in the bar (views.js, `hidden`), so
+// nothing leads to it to be warmed; the PDF readers, which are in the bar, are.
+check('the classic page does not read the hidden interactive display ahead', () =>
+  assert.ok(!some(/^\/app\/fr\/$/)),
 );
 check('it warms the app’s script', () => assert.ok(some(/^\/app\/assets\/index-[\w-]+\.js$/)));
 check('it warms the language’s data', () => assert.ok(some(/^\/app\/data\/fr\.json$/)));
