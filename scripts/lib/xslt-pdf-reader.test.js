@@ -127,8 +127,21 @@ for (const lang of LANGS) {
     const html = render(lang);
     const words = (name) => tag(xml(lang), name);
     assert.equal(html.match(/<div class="pdf-toolbar" hidden="hidden">/g).length, 4);
-    for (const name of ['zoomIn', 'zoomOut', 'fitWidth', 'openFile', 'failed'])
+    for (const name of [
+      'zoomIn',
+      'zoomOut',
+      'fitWidth',
+      'openFile',
+      'failed',
+      'pageOne',
+      'pageMany',
+      'downloadCV',
+      'downloadTimeline',
+    ])
       assert.ok(words(name), `meta/pdfReader/${name} is empty`);
     assert.ok(html.includes(`aria-label="${words('zoomIn')}"`));
+    assert.equal(html.match(/<a class="pdf-download" download="download"/g).length, 4);
+    assert.ok(html.includes(`>${words('downloadCV')}</a>`));
+    assert.equal(html.match(/class="pdf-pages"/g).length, 4);
   });
 }

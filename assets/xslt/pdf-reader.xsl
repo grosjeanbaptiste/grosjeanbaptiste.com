@@ -14,6 +14,7 @@
       <xsl:call-template name="pdf-panel">
         <xsl:with-param name="summary" select="/resume/meta/views/view[id='pdf']/label"/>
         <xsl:with-param name="file" select="concat('/assets/cv/cv_grosjean_baptiste_', $lang, '.pdf')"/>
+        <xsl:with-param name="download" select="/resume/meta/pdfReader/downloadCV"/>
       </xsl:call-template>
       <xsl:for-each select="/resume/meta/timeline/pdf">
         <xsl:variable name="label" select="label"/>
@@ -36,6 +37,7 @@
   <xsl:template name="pdf-panel">
     <xsl:param name="summary"/>
     <xsl:param name="file"/>
+    <xsl:param name="download" select="/resume/meta/pdfReader/downloadTimeline"/>
     <details name="cv-reader">
       <xsl:attribute name="data-file"><xsl:value-of select="$file"/></xsl:attribute>
       <summary><xsl:value-of select="$summary"/></summary>
@@ -44,6 +46,8 @@
         <button type="button" data-pdf="out"><xsl:attribute name="aria-label"><xsl:value-of select="/resume/meta/pdfReader/zoomOut"/></xsl:attribute>−</button>
         <button type="button" data-pdf="in"><xsl:attribute name="aria-label"><xsl:value-of select="/resume/meta/pdfReader/zoomIn"/></xsl:attribute>+</button>
         <button type="button" data-pdf="fit"><xsl:value-of select="/resume/meta/pdfReader/fitWidth"/></button>
+        <span class="pdf-pages" data-one="{/resume/meta/pdfReader/pageOne}" data-many="{/resume/meta/pdfReader/pageMany}"/>
+        <a class="pdf-download" download="download"><xsl:attribute name="href"><xsl:value-of select="$file"/></xsl:attribute><xsl:value-of select="$download"/></a>
         <a class="pdf-open" target="_blank" rel="noopener noreferrer"><xsl:attribute name="href"><xsl:value-of select="$file"/></xsl:attribute><xsl:value-of select="/resume/meta/pdfReader/openFile"/></a>
       </div>
       <p class="pdf-failed" role="alert" hidden="hidden"><xsl:value-of select="/resume/meta/pdfReader/failed"/></p>

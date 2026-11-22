@@ -28,7 +28,7 @@ Legend: **yes** = present, **css** = done with markup and CSS only (no script),
 | Course units, one page each | no | yes | rows with ids | rows with ids |
 | Section menu with the active section marked | yes (`js/nav.js`) | n/a | yes (`js/xslt-links.js`) | yes (same) |
 | Sticky toolbar, animated jumps between sections | yes | n/a | yes | yes (`css/xslt-polish.css`) |
-| PDF reader inside the site | no | yes (PDF.js, zoom, download, page previews) | yes (PDF.js from `assets/_vendor/pdfjs`, zoom, fit width, open; the browser's `<object>` and page pictures without the script) | yes (same) |
+| PDF reader inside the site | no | yes (PDF.js, zoom, download, page previews) | yes (PDF.js from `assets/_vendor/pdfjs`, zoom, fit width, download, page count, open; the browser's `<object>` and page pictures without the script) | yes (same) |
 | CV PDF and print buttons | yes | yes | yes | yes |
 | Print gives the LaTeX CV (two sheets, landscape verso) | yes (`js/print-layout.js`) | n/a | yes (own script) | yes (own script, tighter type) |
 | Typical-day chart | yes (SVG) | no | yes | yes |
@@ -43,8 +43,6 @@ Legend: **yes** = present, **css** = done with markup and CSS only (no script),
 
 ## What the XSLT displays still lack
 
-- The reader's download button and page count (the XSLT reader has zoom, fit
-  width and a link to the file).
 - Deep links that survive a change of language to rows with no page of their
   own in the app (projects, course units and volunteering on the minimal
   theme, which gives ids to jobs and degrees only).

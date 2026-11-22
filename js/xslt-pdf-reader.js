@@ -57,6 +57,10 @@
       pdfViewer.setDocument(doc);
       linkService.setDocument(doc);
 
+      const count = toolbar.querySelector('.pdf-pages');
+      const n = doc.numPages;
+      count.textContent = `${n} ${n === 1 ? count.dataset.one : count.dataset.many}`;
+
       const act = {
         in: () => pdfViewer.increaseScale({ steps: 1 }),
         out: () => pdfViewer.decreaseScale({ steps: 1 }),

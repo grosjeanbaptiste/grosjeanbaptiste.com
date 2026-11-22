@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=bf227063"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=32fa05ac"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -279,6 +279,10 @@
       <fitWidth>Ajustar al ancho</fitWidth>
       <openFile>Abrir el archivo</openFile>
       <failed>No se pudo mostrar el PDF.</failed>
+      <pageOne>página</pageOne>
+      <pageMany>páginas</pageMany>
+      <downloadCV>Descargar CV</downloadCV>
+      <downloadTimeline>Descargar la cronología</downloadTimeline>
     </pdfReader>
     <viewsTitle>Vistas</viewsTitle>
     <views>

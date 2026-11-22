@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=bf227063"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=32fa05ac"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -270,6 +270,10 @@
       <fitWidth>适合宽度</fitWidth>
       <openFile>打开文件</openFile>
       <failed>无法显示 PDF。</failed>
+      <pageOne>页</pageOne>
+      <pageMany>页</pageMany>
+      <downloadCV>下载简历</downloadCV>
+      <downloadTimeline>下载时间线</downloadTimeline>
     </pdfReader>
     <viewsTitle>视图</viewsTitle>
     <views>
