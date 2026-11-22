@@ -4,10 +4,23 @@ This repository is proprietary. It is public so that it can be read; being able
 to read it grants no licence of any kind.
 
 No part of it — source code, scripts, stylesheets, templates, generated files,
-the CV and its data, texts, design and images — may be used, copied, modified,
-merged, published, distributed, sublicensed, sold, or used to train or evaluate
-machine-learning models, in whole or in part, without the prior written
-permission of the copyright holder.
+design, layout, images and the way the CV is presented — may be used, copied,
+modified, merged, published, distributed, sublicensed, sold, or used to train
+or evaluate machine-learning models, in whole or in part, without the prior
+written permission of the copyright holder.
+
+The presentation may not be analysed either: no reverse engineering, profiling
+or study of the code, markup, styling, structure or layout of the website or of
+this repository, whether by hand or by a machine, a crawler or a model.
+
+The data of the CV (the content of resume.json, the XML mirrors, llms.txt and
+the pages' text) may be scraped, read, indexed and processed by machines.
+That permission covers the facts and texts only, not the form they are set in
+and not the relations between them: the links between entries, projects,
+skills, roles and periods, the identifiers, the schema and the structure of the
+data may not be extracted, reconstructed, mapped or analysed (no graph or
+database of them may be built), whether by hand or by a machine, a crawler or
+a model.
 
 The only exception is what GitHub's Terms of Service let other GitHub users do
 with a public repository on GitHub itself (view it and fork it there); that
