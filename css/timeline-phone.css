@@ -1,0 +1,38 @@
+/* The timeline on a phone (<= 48rem); loaded right after css/timeline.css. */
+
+/* On a phone the frame is some 250px of axis: a zoom would then pack its years
+   into bars too small to read or tap. The axis is stretched a half more, taller
+   rows give a thumb something to hit, and the frame scrolls sideways. */
+@media (max-width: 48rem) {
+  .tl-grid {
+    --lane-label: 5rem;
+    --row-height: 2.4rem;
+    --boost: 1.5;
+  }
+
+  .tl-bar {
+    font-size: 0.8em;
+  }
+}
+
+/* The parts of a family of projects (OpenActe) are folded into the family's
+   bar, and the rows close up to the generator's folded layout. !important: the
+   screen's rows are written inline. */
+@media screen and (max-width: 48rem) {
+  .tl-bar[data-part] {
+    display: none;
+  }
+
+  .tl-track {
+    --rows: var(--fold-rows) !important;
+  }
+
+  .tl-bar,
+  .tl-group {
+    --row: var(--fold-row) !important;
+  }
+
+  .tl-group {
+    --group-rows: var(--fold-group-rows) !important;
+  }
+}

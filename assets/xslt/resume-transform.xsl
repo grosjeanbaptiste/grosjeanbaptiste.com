@@ -703,6 +703,7 @@
         <!-- The classic page's timeline, as is: its styles and its script (zoom,
              arrow keys, preview). -->
         <link rel="stylesheet" href="/css/timeline.css"/>
+        <link rel="stylesheet" href="/css/timeline-phone.css"/>
         <link rel="stylesheet" href="/css/timeline-zoom.css"/>
         <xsl:call-template name="timeline-zoom-css"/>
         <link rel="stylesheet" href="/css/timeline-entries.css"/>

@@ -1218,6 +1218,19 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   text-decoration: none;
 }
 
+/* On paper the timeline is hidden where it sits on screen: left in the page's
+ * flow it would push the CV onto a third sheet. Each display then prints it
+ * from a place of its own — the classic page on its verso
+ * (css/print-verso.css). */
+@media print {
+  #timeline {
+    display: none;
+  }
+}
+
+/* timeline-phone.css */
+/* The timeline on a phone (<= 48rem); loaded right after css/timeline.css. */
+
 /* On a phone the frame is some 250px of axis: a zoom would then pack its years
    into bars too small to read or tap. The axis is stretched a half more, taller
    rows give a thumb something to hit, and the frame scrolls sideways. */
@@ -1252,16 +1265,6 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
 
   .tl-group {
     --group-rows: var(--fold-group-rows) !important;
-  }
-}
-
-/* On paper the timeline is hidden where it sits on screen: left in the page's
- * flow it would push the CV onto a third sheet. Each display then prints it
- * from a place of its own — the classic page on its verso
- * (css/print-verso.css). */
-@media print {
-  #timeline {
-    display: none;
   }
 }
 
