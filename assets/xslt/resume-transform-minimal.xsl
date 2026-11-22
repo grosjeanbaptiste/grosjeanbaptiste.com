@@ -492,7 +492,7 @@
         <script>
           (function() {
             try {
-              var stored = localStorage.getItem('xslt-theme');
+              var stored = localStorage.getItem('theme');
               var prefers = window.matchMedia &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches;
               var theme = stored || (prefers ? 'dark' : 'light');
               document.documentElement.setAttribute('data-theme', theme);
@@ -617,7 +617,7 @@
               var current = document.documentElement.getAttribute('data-theme') || 'light';
               var next = current === 'dark' ? 'light' : 'dark';
               document.documentElement.setAttribute('data-theme', next);
-              try { localStorage.setItem('xslt-theme', next); } catch (e) {}
+              try { localStorage.setItem('theme', next); } catch (e) {}
               syncLabel();
             });
           })();
