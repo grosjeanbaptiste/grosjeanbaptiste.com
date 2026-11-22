@@ -13,6 +13,9 @@ addEventListener('load', () => setTimeout(() => {
   const $ = (s) => document.querySelector(s);
   const all = (s) => [...document.querySelectorAll(s)];
   const seen = {};
+  // Closing a panel jumps back to the timeline, smoothly (css/xslt-polish.css):
+  // measured mid-jump the timeline would look moved. Jump at once here.
+  document.documentElement.style.scrollBehavior = 'auto';
   const item = $('#experience .item[id]');
   const pos = (el) => getComputedStyle(el).position;
   seen.closedByDefault = all('.entry-close').every((a) => !a.checkVisibility());
