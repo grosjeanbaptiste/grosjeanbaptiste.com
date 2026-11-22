@@ -4,9 +4,12 @@
   <!-- The PDFs, read in the page: one <details> each, all of one named group,
        so the browser keeps one open — the tabs of a reader, with no script and
        no sheet. The browser's own viewer in the <object> zooms and downloads;
-       one that cannot show a PDF hands the file over. -->
+       one that cannot show a PDF hands the file over. With the script
+       (js/xslt-pdf-reader.js, PDF.js from assets/_vendor/pdfjs) an opened
+       panel is drawn the interactive view's way: pages with their text layer,
+       zoom buttons, fit-to-width. Without it, the <object> stays. -->
   <xsl:template name="pdf-reader">
-    <section id="pdf">
+    <section id="pdf" data-pdfjs="/assets/_vendor/pdfjs/">
       <h2><xsl:value-of select="/resume/meta/views/view[id='pdf']/label"/></h2>
       <xsl:call-template name="pdf-panel">
         <xsl:with-param name="summary" select="/resume/meta/views/view[id='pdf']/label"/>
@@ -34,7 +37,16 @@
     <xsl:param name="summary"/>
     <xsl:param name="file"/>
     <details name="cv-reader">
+      <xsl:attribute name="data-file"><xsl:value-of select="$file"/></xsl:attribute>
       <summary><xsl:value-of select="$summary"/></summary>
+      <!-- The reader's toolbar: hidden until the script has drawn the PDF. -->
+      <div class="pdf-toolbar" hidden="hidden">
+        <button type="button" data-pdf="out"><xsl:attribute name="aria-label"><xsl:value-of select="/resume/meta/pdfReader/zoomOut"/></xsl:attribute>−</button>
+        <button type="button" data-pdf="in"><xsl:attribute name="aria-label"><xsl:value-of select="/resume/meta/pdfReader/zoomIn"/></xsl:attribute>+</button>
+        <button type="button" data-pdf="fit"><xsl:value-of select="/resume/meta/pdfReader/fitWidth"/></button>
+        <a class="pdf-open" target="_blank" rel="noopener noreferrer"><xsl:attribute name="href"><xsl:value-of select="$file"/></xsl:attribute><xsl:value-of select="/resume/meta/pdfReader/openFile"/></a>
+      </div>
+      <p class="pdf-failed" role="alert" hidden="hidden"><xsl:value-of select="/resume/meta/pdfReader/failed"/></p>
       <object type="application/pdf" width="100%" height="800">
         <xsl:attribute name="data"><xsl:value-of select="$file"/></xsl:attribute>
         <!-- Where the browser cannot show a PDF: the pages as pictures (what

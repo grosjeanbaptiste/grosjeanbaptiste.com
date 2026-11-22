@@ -1,0 +1,68 @@
+/* The PDF reader of the XSLT themes (assets/xslt/pdf-reader.xsl), drawn by
+   js/xslt-pdf-reader.js with PDF.js; without the script the panel is the
+   browser's own <object>. */
+.pdf-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+}
+
+.pdf-toolbar[hidden],
+.pdf-failed[hidden] {
+  display: none;
+}
+
+.pdf-toolbar button {
+  font: inherit;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid currentColor;
+  border-radius: 999rem;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.pdf-toolbar button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.pdf-open {
+  margin-inline-start: auto;
+}
+
+/* PDF.js wants a scrolling container that is absolutely positioned, holding
+   .pdfViewer: the frame sets the height. */
+.pdf-frame {
+  position: relative;
+  height: 70vh;
+  min-height: 24rem;
+}
+
+.pdf-container {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  background: rgba(127, 127, 127, 0.15);
+}
+
+.pdf-container .pdfViewer {
+  --scale-factor: 1;
+}
+
+.pdf-container .page {
+  margin: 0.5rem auto;
+}
+
+/* Once the script has the PDF on screen, the fallback gives way to it. */
+details[data-drawn] > object {
+  display: none;
+}
+
+@media print {
+  #pdf {
+    display: none;
+  }
+}

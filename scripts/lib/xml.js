@@ -6,6 +6,7 @@ const { telOf } = require('./sections/sidebar');
 const { timelineForXml } = require('./xml-timeline');
 const { headForXml } = require('./xml-head');
 const { picturesForXml } = require('./xml-pictures');
+const { pdfReaderForXml } = require('./xml-pdf-reader');
 const I18N = require('./i18n');
 const { highestObtainedDegree, highestInProgressDegree, formatDegreeLine } = require('./degrees');
 
@@ -94,6 +95,7 @@ function generateXml(
     lang,
     head: headForXml(resume, lang),
     pictures: picturesForXml(lang),
+    pdfReader: pdfReaderForXml(lang),
     viewsTitle: I18N[lang].views.title,
     views: viewsOf(lang),
     // The classic page's menu, and its phone link: XSLT 1.0 cannot strip

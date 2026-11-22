@@ -88,6 +88,10 @@ for (const [theme, route] of [
   );
   if (theme === 'minimal')
     check('the minimal theme loads only the search scripts, none for the filter', () =>
-      assert.deepEqual(seen.scripts, ['/js/search-rank.js', '/js/search.js']),
+      assert.deepEqual(seen.scripts, [
+        '/js/search-rank.js',
+        '/js/search.js',
+        '/js/xslt-pdf-reader.js',
+      ]),
     );
 }

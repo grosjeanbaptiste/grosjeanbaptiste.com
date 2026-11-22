@@ -719,12 +719,14 @@
         <!-- The classic page's search, as is (before the theme's filter
              styles, which keep the last word on the chips). -->
         <link rel="stylesheet" href="/css/browse.css"/>
+        <link rel="stylesheet" href="/css/pdf-reader.css"/>
         <link rel="stylesheet" href="/css/skill-links.css"/>
         <link rel="stylesheet" href="/css/entry-panel.css"/>
         <script src="/js/timeline.js" defer="defer"></script>
         <script src="/js/xslt-links.js" defer="defer"></script>
         <script src="/js/search-rank.js" defer="defer"></script>
         <script src="/js/search.js" defer="defer"></script>
+        <script src="/js/xslt-pdf-reader.js" defer="defer"></script>
       </head>
       <body>
         <xsl:call-template name="views-bar"><xsl:with-param name="current" select="'xsltRich'"/></xsl:call-template>

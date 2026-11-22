@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=c48c92bc"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=bf227063"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -277,6 +277,13 @@
         </pages>
       </picture>
     </pictures>
+    <pdfReader>
+      <zoomIn>Vergrößern</zoomIn>
+      <zoomOut>Verkleinern</zoomOut>
+      <fitWidth>An Breite anpassen</fitWidth>
+      <openFile>Datei öffnen</openFile>
+      <failed>Das PDF konnte nicht angezeigt werden.</failed>
+    </pdfReader>
     <viewsTitle>Ansichten</viewsTitle>
     <views>
       <view>

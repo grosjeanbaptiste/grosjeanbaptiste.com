@@ -531,9 +531,11 @@
         <link rel="stylesheet" href="/css/skill-links.css"/>
         <link rel="stylesheet" href="/css/entry-panel.css"/>
         <link rel="stylesheet" href="/css/browse.css"/>
+        <link rel="stylesheet" href="/css/pdf-reader.css"/>
         <script src="/js/xslt-links.js" defer="defer"></script>
         <script src="/js/search-rank.js" defer="defer"></script>
         <script src="/js/search.js" defer="defer"></script>
+        <script src="/js/xslt-pdf-reader.js" defer="defer"></script>
       </head>
       <body>
         <xsl:call-template name="views-bar"><xsl:with-param name="current" select="'xsltMinimal'"/></xsl:call-template>

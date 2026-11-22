@@ -91,7 +91,13 @@ test('the filter adds no script to the minimal theme', () => {
   // address, the search, the warming of the other displays). None filters.
   assert.deepEqual(
     [...html.matchAll(/<script src="([^"]+)"/g)].map((m) => m[1]),
-    ['/js/views-ahead.js', '/js/xslt-links.js', '/js/search-rank.js', '/js/search.js'],
+    [
+      '/js/views-ahead.js',
+      '/js/xslt-links.js',
+      '/js/search-rank.js',
+      '/js/search.js',
+      '/js/xslt-pdf-reader.js',
+    ],
   );
 });
 

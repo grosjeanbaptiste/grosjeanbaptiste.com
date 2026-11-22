@@ -74,5 +74,5 @@ check('the entry is set apart and its bar marked', () => {
   assert.equal(seen.barMarked, '#project-acteble');
 });
 check('the only scripts are the search, no filter script', () =>
-  assert.deepEqual(seen.scripts, ['/js/search-rank.js', '/js/search.js']),
+  assert.deepEqual(seen.scripts, ['/js/search-rank.js', '/js/search.js', '/js/xslt-pdf-reader.js']),
 );

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=bc20879e"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=154911ff"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -277,6 +277,13 @@
         </pages>
       </picture>
     </pictures>
+    <pdfReader>
+      <zoomIn>Inzoomen</zoomIn>
+      <zoomOut>Uitzoomen</zoomOut>
+      <fitWidth>Aanpassen aan breedte</fitWidth>
+      <openFile>Bestand openen</openFile>
+      <failed>De PDF kon niet worden weergegeven.</failed>
+    </pdfReader>
     <viewsTitle>Weergaven</viewsTitle>
     <views>
       <view>

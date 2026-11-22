@@ -1,8 +1,9 @@
 // The rich XSLT theme's PDF reader is plain markup, written by the stylesheet
 // from the XML: one <details name="cv-reader"> per PDF — the browser keeps one
 // of a named group open, which is all the tabs there are — each holding the PDF
-// in an <object>, so the browser's own viewer zooms and downloads it. No script
-// and no stylesheet of its own; the sheet leaves it out of print.
+// in an <object>, so the browser's own viewer zooms and downloads it. With
+// js/xslt-pdf-reader.js a panel is drawn by PDF.js instead (assets/_vendor/pdfjs),
+// with the interactive view's zoom; the sheet leaves it out of print.
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -26,7 +27,7 @@ const tag = (src, name) => (src.match(new RegExp(`<${name}>([^<]*)</${name}>`)) 
 const panels = (html) =>
   [
     ...html.matchAll(
-      /<details name="cv-reader"[^>]*>\s*<summary>([^<]*)<\/summary>\s*<object[^>]*\sdata="([^"]+)"/g,
+      /<details name="cv-reader"[^>]*>\s*<summary>([^<]*)<\/summary>[\s\S]*?<object[^>]*\sdata="([^"]+)"/g,
     ),
   ].map((m) => ({ summary: m[1].trim(), data: m[2] }));
 
@@ -75,8 +76,10 @@ for (const lang of LANGS) {
     assert.match(html, /@media print\s*\{[^}]*#pdf[^}]*display:\s*none/);
   });
 
-  test(`${lang}: it needs no script and no sheet of its own`, () => {
-    assert.doesNotMatch(html, /pdf-preview-reader|pdf-reader\.css|cv-reader-view/);
+  test(`${lang}: the panel is readable without the script, and the engine is the site's own`, () => {
+    assert.equal(found.length, 4);
+    assert.doesNotMatch(html, /pdf-preview-reader|cv-reader-view/);
+    assert.match(html, /data-pdfjs="\/assets\/_vendor\/pdfjs\/"/);
   });
 }
 
@@ -107,5 +110,25 @@ for (const lang of LANGS) {
     assert.deepEqual(panels(minimal), panels(render(lang)));
     assert.equal(minimal.match(/class="pdf-page"/g).length, 8);
     assert.match(minimal, /@media print \{ #pdf \{ display: none; \} \}/);
+  });
+}
+
+test('the reader draws with the PDF.js files it ships, from the path the markup names', () => {
+  const html = render('en');
+  const dir = html.match(/<section id="pdf" data-pdfjs="([^"]+)"/)[1];
+  for (const file of ['pdf.min.mjs', 'pdf.worker.min.mjs', 'pdf_viewer.mjs', 'pdf_viewer.css'])
+    assert.ok(fs.existsSync(path.join(ROOT, dir, file)), `${dir}${file} is missing`);
+  assert.match(html, /<script src="\/js\/xslt-pdf-reader\.js"/);
+  assert.match(html, /<link[^>]*href="\/css\/pdf-reader\.css"/);
+});
+
+for (const lang of LANGS) {
+  test(`${lang}: each panel has a toolbar worded as the interactive view words it`, () => {
+    const html = render(lang);
+    const words = (name) => tag(xml(lang), name);
+    assert.equal(html.match(/<div class="pdf-toolbar" hidden="hidden">/g).length, 4);
+    for (const name of ['zoomIn', 'zoomOut', 'fitWidth', 'openFile', 'failed'])
+      assert.ok(words(name), `meta/pdfReader/${name} is empty`);
+    assert.ok(html.includes(`aria-label="${words('zoomIn')}"`));
   });
 }
