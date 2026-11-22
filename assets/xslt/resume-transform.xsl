@@ -713,6 +713,7 @@
         <link rel="stylesheet" href="/css/skill-links.css"/>
         <link rel="stylesheet" href="/css/entry-panel.css"/>
         <script src="/js/timeline.js" defer="defer"></script>
+        <script src="/js/xslt-links.js" defer="defer"></script>
         <script src="/js/search-rank.js" defer="defer"></script>
         <script src="/js/search.js" defer="defer"></script>
       </head>
