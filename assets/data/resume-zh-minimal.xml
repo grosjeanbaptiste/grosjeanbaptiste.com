@@ -319,6 +319,10 @@
         <label>关于</label>
       </link>
       <link>
+        <id>pdf</id>
+        <label>PDF</label>
+      </link>
+      <link>
         <id>experience</id>
         <label>经验</label>
       </link>
@@ -329,10 +333,6 @@
       <link>
         <id>references</id>
         <label>推荐</label>
-      </link>
-      <link>
-        <id>pdf</id>
-        <label>PDF</label>
       </link>
     </nav>
     <tel>+32496289705</tel>

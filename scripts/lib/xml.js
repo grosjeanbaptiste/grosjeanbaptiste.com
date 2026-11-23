@@ -101,7 +101,10 @@ function generateXml(
     views: viewsOf(lang),
     // The classic page's menu, then the PDF reader the themes have in the page
     // (#pdf), and the phone link: XSLT 1.0 cannot strip what is not a digit.
-    nav: [...navItemsOf(I18N[lang]), { id: 'pdf', label: I18N[lang].views.pdf }],
+    // In the order the sections appear on the page: the reader comes right after About.
+    nav: navItemsOf(I18N[lang]).flatMap((item) =>
+      item.id === 'about' ? [item, { id: 'pdf', label: I18N[lang].views.pdf }] : [item],
+    ),
     tel: telOf(resume.basics?.phone),
     // Laid out here: XSLT 1.0 cannot compute it (see xml-timeline.js), from
     // the entries the classic page shows, so its bars lead where those do.

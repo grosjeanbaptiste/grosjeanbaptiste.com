@@ -332,6 +332,10 @@
         <label>Over</label>
       </link>
       <link>
+        <id>pdf</id>
+        <label>PDF</label>
+      </link>
+      <link>
         <id>experience</id>
         <label>Ervaring</label>
       </link>
@@ -342,10 +346,6 @@
       <link>
         <id>references</id>
         <label>Referenties</label>
-      </link>
-      <link>
-        <id>pdf</id>
-        <label>PDF</label>
       </link>
     </nav>
     <tel>+32496289705</tel>
