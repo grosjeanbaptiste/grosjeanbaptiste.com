@@ -7,7 +7,7 @@
        links hands the others over, and a browser that cannot show a PDF gets
        the file. With the script (js/xslt-pdf-reader.js, PDF.js from
        assets/_vendor/pdfjs) the reader is drawn the interactive view's way —
-       pages with their text layer, zoom buttons, fit-to-width — and a choice
+       pages with their text layer, zoom buttons, the width fitted by itself — and a choice
        (the buttons, hidden until then) switches the PDF it shows. -->
   <xsl:template name="pdf-reader">
     <xsl:variable name="cv" select="concat('/assets/cv/cv_grosjean_baptiste_', $lang, '.pdf')"/>
@@ -40,7 +40,6 @@
           </div>
           <button type="button" data-pdf="out"><xsl:attribute name="aria-label"><xsl:value-of select="/resume/meta/pdfReader/zoomOut"/></xsl:attribute>−</button>
           <button type="button" data-pdf="in"><xsl:attribute name="aria-label"><xsl:value-of select="/resume/meta/pdfReader/zoomIn"/></xsl:attribute>+</button>
-          <button type="button" data-pdf="fit"><xsl:value-of select="/resume/meta/pdfReader/fitWidth"/></button>
           <span class="pdf-pages" data-one="{/resume/meta/pdfReader/pageOne}" data-many="{/resume/meta/pdfReader/pageMany}"/>
           <a class="pdf-download" download="download"><xsl:attribute name="href"><xsl:value-of select="$cv"/></xsl:attribute><xsl:value-of select="/resume/meta/pdfReader/downloadCV"/></a>
           <a class="pdf-open" target="_blank" rel="noopener noreferrer"><xsl:attribute name="href"><xsl:value-of select="$cv"/></xsl:attribute><xsl:value-of select="/resume/meta/pdfReader/openFile"/></a>

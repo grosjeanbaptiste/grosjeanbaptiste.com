@@ -32,7 +32,7 @@ Legend: **yes** = present, **css** = done with markup and CSS only (no script),
 | Course units, one page each | no | yes | rows with ids | rows with ids |
 | Section menu with the active section marked | yes (`js/nav.js`) | n/a | yes (`js/xslt-links.js`) | yes (same) |
 | Sticky toolbar, animated jumps between sections | yes | n/a | yes | yes (`css/xslt-polish.css`) |
-| PDF reader inside the site | no | yes (PDF.js, zoom, download, page previews) | yes (one reader, told which PDF to show — the CV or the timeline at three zooms; PDF.js from `assets/_vendor/pdfjs`, zoom, fit width, download, page count, open; the browser's `<object>`, page pictures and a list of links without the script) | yes (same) |
+| PDF reader inside the site | no | yes (PDF.js, zoom, download, page previews) | yes (one reader, told which PDF to show — the CV or the timeline at three zooms; PDF.js from `assets/_vendor/pdfjs`, zoom, width fitted by itself, download, page count, open; the browser's `<object>`, page pictures and a list of links without the script) | yes (same) |
 | CV PDF and print buttons | yes | yes | yes | yes |
 | Print gives the LaTeX CV (two sheets, landscape verso) | yes (`js/print-layout.js`) | n/a | yes (own script) | yes (own script, tighter type) |
 | Typical-day chart | yes (SVG) | no | yes | yes |

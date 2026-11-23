@@ -1,5 +1,5 @@
 // The PDF reader of the XSLT themes, drawn the way the interactive view draws
-// it: PDF.js with its text and link layers, zoom buttons, fit-to-width. Loaded
+// it: PDF.js with its text and link layers, zoom buttons, the width fitted by itself. Loaded
 // by both themes; the one reader (.pdf-reader, told its file by data-file)
 // is drawn by itself as it nears the screen, so a visitor who never scrolls to
 // it pays nothing, and its choice (buttons) swaps the PDF it shows. Without this script
@@ -96,10 +96,13 @@
       const act = {
         in: () => pdfViewer.increaseScale({ steps: 1 }),
         out: () => pdfViewer.decreaseScale({ steps: 1 }),
-        fit: () => {
-          pdfViewer.currentScaleValue = 'page-width';
-        },
       };
+      // The width is fitted by itself, on each document and when the window
+      // changes, until the reader zooms by hand.
+      new ResizeObserver(() => {
+        if (pdfViewer.currentScaleValue === 'page-width')
+          pdfViewer.currentScaleValue = 'page-width';
+      }).observe(container);
       toolbar.addEventListener('click', (event) => {
         const button = event.target.closest('button[data-pdf]');
         if (button) act[button.dataset.pdf]();
