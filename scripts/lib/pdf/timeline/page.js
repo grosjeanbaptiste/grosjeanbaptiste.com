@@ -118,7 +118,7 @@ class TimelineOverflow extends Error {}
 // The years before university are squeezed to leave the page to the rest: a
 // school is named "Lycée…", "Centre Scolaire…" or "Institut…" in every language.
 const SCHOOL = /^(Lycée|Centre Scolaire|Institut)\b/i;
-const SCHOOL_WIDTH = 0.6;
+const SCHOOL_WIDTH = 0.4;
 function schoolYears(timeline) {
   const starts = timeline.lanes
     .filter((lane) => lane.kind === 'education')

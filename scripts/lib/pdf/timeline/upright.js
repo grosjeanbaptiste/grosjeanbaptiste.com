@@ -90,7 +90,7 @@ function layOut(timeline, { width = WIDTH, height = HEIGHT } = {}) {
     to: timeline.to,
     track: height,
     spans,
-    density: 0.6,
+    density: 0.8,
     squeeze: schoolYears(timeline),
   });
   // Time grows downwards from the top of the axis, so the newest is at 0.

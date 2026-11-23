@@ -14,7 +14,7 @@ const { buildPicture } = require('./picture');
 const { layOut: layOutUpright, buildUpright } = require('./upright');
 
 // The busy years of the career get the width the quiet ones can spare.
-const DENSITY = 0.6;
+const DENSITY = 0.8;
 
 // Photo, then the name, the contacts and the highest degree, with the title
 // and the date flush right. ~22 mm: HEIGHT in ./page.js is what is left under it.
