@@ -5,7 +5,7 @@ const { BABEL } = require('../config');
 const { buildPreamble } = require('../preamble');
 const { tex } = require('../tex');
 const { formatLongDate } = require('../today');
-const { timelineBars } = require('./bars');
+const { timelineBars, foldFamilies } = require('./bars');
 const { layOut, TimelineOverflow } = require('./page');
 const { contactItems } = require('../sections/header');
 const { highestObtainedDegree, formatDegreeLine } = require('../../degrees');
@@ -58,7 +58,7 @@ function fitted(timeline) {
 function buildTimelineDocument(resume, lang, today, years = null) {
   const t = I18N[lang];
   const bars = timelineBars(resume, today, years);
-  const sheet = fitted(bars);
+  const sheet = fitted(foldFamilies(bars));
   // The same timeline on a portrait page: time runs up it, the text stays level.
   const upright = layOutUpright(bars);
   const tex = [

@@ -380,14 +380,14 @@
           <skill>
             <name>Rust</name>
             <token>rust</token>
-            <uses>20</uses>
-            <said>20 Einträge nutzen Rust</said>
+            <uses>38</uses>
+            <said>38 Einträge nutzen Rust</said>
           </skill>
           <skill>
             <name>TDD</name>
             <token>tdd</token>
-            <uses>18</uses>
-            <said>18 Einträge nutzen TDD</said>
+            <uses>34</uses>
+            <said>34 Einträge nutzen TDD</said>
           </skill>
           <skill>
             <name>Python</name>
@@ -410,8 +410,8 @@
           <skill>
             <name>HexagonalArchitecture</name>
             <token>hexagonalarchitecture</token>
-            <uses>8</uses>
-            <said>8 Einträge nutzen HexagonalArchitecture</said>
+            <uses>9</uses>
+            <said>9 Einträge nutzen HexagonalArchitecture</said>
           </skill>
           <skill>
             <name>SQL Server</name>
@@ -422,14 +422,32 @@
           <skill>
             <name>Flutter</name>
             <token>flutter</token>
-            <uses>6</uses>
-            <said>6 Einträge nutzen Flutter</said>
+            <uses>7</uses>
+            <said>7 Einträge nutzen Flutter</said>
           </skill>
           <skill>
             <name>Dioxus</name>
             <token>dioxus</token>
+            <uses>6</uses>
+            <said>6 Einträge nutzen Dioxus</said>
+          </skill>
+          <skill>
+            <name>LaTeX</name>
+            <token>latex</token>
+            <uses>6</uses>
+            <said>6 Einträge nutzen LaTeX</said>
+          </skill>
+          <skill>
+            <name>RAG</name>
+            <token>rag</token>
+            <uses>6</uses>
+            <said>6 Einträge nutzen RAG</said>
+          </skill>
+          <skill>
+            <name>Automation</name>
+            <token>automation</token>
             <uses>5</uses>
-            <said>5 Einträge nutzen Dioxus</said>
+            <said>5 Einträge nutzen Automation</said>
           </skill>
           <skill>
             <name>Pandas</name>
@@ -442,6 +460,12 @@
             <token>react</token>
             <uses>5</uses>
             <said>5 Einträge nutzen React</said>
+          </skill>
+          <skill>
+            <name>Agents</name>
+            <token>agents</token>
+            <uses>4</uses>
+            <said>4 Einträge nutzen Agents</said>
           </skill>
           <skill>
             <name>Dart</name>
@@ -461,17 +485,20 @@
             <uses>4</uses>
             <said>4 Einträge nutzen EntityFramework</said>
           </skill>
+        </shortlist>
+        <more>Alle Kompetenzen (324)</more>
+        <rest>
+          <skill>
+            <name>InformationRetrieval</name>
+            <token>informationretrieval</token>
+            <uses>4</uses>
+            <said>4 Einträge nutzen InformationRetrieval</said>
+          </skill>
           <skill>
             <name>Java</name>
             <token>java</token>
             <uses>4</uses>
             <said>4 Einträge nutzen Java</said>
-          </skill>
-          <skill>
-            <name>LaTeX</name>
-            <token>latex</token>
-            <uses>4</uses>
-            <said>4 Einträge nutzen LaTeX</said>
           </skill>
           <skill>
             <name>NumPy</name>
@@ -485,20 +512,11 @@
             <uses>4</uses>
             <said>4 Einträge nutzen OpenAI</said>
           </skill>
-        </shortlist>
-        <more>Alle Kompetenzen (305)</more>
-        <rest>
           <skill>
             <name>PostgreSQL</name>
             <token>postgresql</token>
             <uses>4</uses>
             <said>4 Einträge nutzen PostgreSQL</said>
-          </skill>
-          <skill>
-            <name>RAG</name>
-            <token>rag</token>
-            <uses>4</uses>
-            <said>4 Einträge nutzen RAG</said>
           </skill>
           <skill>
             <name>TypeScript</name>
@@ -567,10 +585,28 @@
             <said>3 Einträge nutzen MutationTesting</said>
           </skill>
           <skill>
+            <name>NLP</name>
+            <token>nlp</token>
+            <uses>3</uses>
+            <said>3 Einträge nutzen NLP</said>
+          </skill>
+          <skill>
+            <name>Observability</name>
+            <token>observability</token>
+            <uses>3</uses>
+            <said>3 Einträge nutzen Observability</said>
+          </skill>
+          <skill>
             <name>ProfessionalCommunication</name>
             <token>professionalcommunication</token>
             <uses>3</uses>
             <said>3 Einträge nutzen ProfessionalCommunication</said>
+          </skill>
+          <skill>
+            <name>Scheduling</name>
+            <token>scheduling</token>
+            <uses>3</uses>
+            <said>3 Einträge nutzen Scheduling</said>
           </skill>
           <skill>
             <name>SQL</name>
@@ -645,6 +681,12 @@
             <said>2 Einträge nutzen Blazor</said>
           </skill>
           <skill>
+            <name>Build</name>
+            <token>build</token>
+            <uses>2</uses>
+            <said>2 Einträge nutzen Build</said>
+          </skill>
+          <skill>
             <name>Cryptography</name>
             <token>cryptography</token>
             <uses>2</uses>
@@ -699,6 +741,18 @@
             <said>2 Einträge nutzen FastAPI</said>
           </skill>
           <skill>
+            <name>Git</name>
+            <token>git</token>
+            <uses>2</uses>
+            <said>2 Einträge nutzen Git</said>
+          </skill>
+          <skill>
+            <name>GitHub</name>
+            <token>github</token>
+            <uses>2</uses>
+            <said>2 Einträge nutzen GitHub</said>
+          </skill>
+          <skill>
             <name>HTML</name>
             <token>html</token>
             <uses>2</uses>
@@ -711,10 +765,10 @@
             <said>2 Einträge nutzen Indexing</said>
           </skill>
           <skill>
-            <name>InformationRetrieval</name>
-            <token>informationretrieval</token>
+            <name>iOS</name>
+            <token>ios</token>
             <uses>2</uses>
-            <said>2 Einträge nutzen InformationRetrieval</said>
+            <said>2 Einträge nutzen iOS</said>
           </skill>
           <skill>
             <name>JSON</name>
@@ -735,22 +789,10 @@
             <said>2 Einträge nutzen NetworkSecurity</said>
           </skill>
           <skill>
-            <name>NLP</name>
-            <token>nlp</token>
-            <uses>2</uses>
-            <said>2 Einträge nutzen NLP</said>
-          </skill>
-          <skill>
             <name>Node.js</name>
             <token>node-js</token>
             <uses>2</uses>
             <said>2 Einträge nutzen Node.js</said>
-          </skill>
-          <skill>
-            <name>Observability</name>
-            <token>observability</token>
-            <uses>2</uses>
-            <said>2 Einträge nutzen Observability</said>
           </skill>
           <skill>
             <name>OCR</name>
@@ -885,16 +927,22 @@
             <said>1 Eintrag nutzt Advertising</said>
           </skill>
           <skill>
-            <name>Agents</name>
-            <token>agents</token>
+            <name>Age</name>
+            <token>age</token>
             <uses>1</uses>
-            <said>1 Eintrag nutzt Agents</said>
+            <said>1 Eintrag nutzt Age</said>
           </skill>
           <skill>
             <name>Agile</name>
             <token>agile</token>
             <uses>1</uses>
             <said>1 Eintrag nutzt Agile</said>
+          </skill>
+          <skill>
+            <name>Android</name>
+            <token>android</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Android</said>
           </skill>
           <skill>
             <name>Ansible</name>
@@ -999,10 +1047,22 @@
             <said>1 Eintrag nutzt Caddy</said>
           </skill>
           <skill>
+            <name>Cargo</name>
+            <token>cargo</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Cargo</said>
+          </skill>
+          <skill>
             <name>Charting</name>
             <token>charting</token>
             <uses>1</uses>
             <said>1 Eintrag nutzt Charting</said>
+          </skill>
+          <skill>
+            <name>CI/CD</name>
+            <token>ci-cd</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt CI/CD</said>
           </skill>
           <skill>
             <name>Citation</name>
@@ -1051,6 +1111,12 @@
             <token>computerarchitecture</token>
             <uses>1</uses>
             <said>1 Eintrag nutzt ComputerArchitecture</said>
+          </skill>
+          <skill>
+            <name>Configuration</name>
+            <token>configuration</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Configuration</said>
           </skill>
           <skill>
             <name>ConstraintProgramming</name>
@@ -1209,6 +1275,12 @@
             <said>1 Eintrag nutzt EloRating</said>
           </skill>
           <skill>
+            <name>Email</name>
+            <token>email</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Email</said>
+          </skill>
+          <skill>
             <name>Encapsulation</name>
             <token>encapsulation</token>
             <uses>1</uses>
@@ -1299,16 +1371,10 @@
             <said>1 Eintrag nutzt GDPR</said>
           </skill>
           <skill>
-            <name>Git</name>
-            <token>git</token>
+            <name>GitLab</name>
+            <token>gitlab</token>
             <uses>1</uses>
-            <said>1 Eintrag nutzt Git</said>
-          </skill>
-          <skill>
-            <name>GitHub</name>
-            <token>github</token>
-            <uses>1</uses>
-            <said>1 Eintrag nutzt GitHub</said>
+            <said>1 Eintrag nutzt GitLab</said>
           </skill>
           <skill>
             <name>Gmsh</name>
@@ -1365,6 +1431,12 @@
             <said>1 Eintrag nutzt i18next</said>
           </skill>
           <skill>
+            <name>IMAP</name>
+            <token>imap</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt IMAP</said>
+          </skill>
+          <skill>
             <name>ImperfectCompetition</name>
             <token>imperfectcompetition</token>
             <uses>1</uses>
@@ -1389,12 +1461,6 @@
             <said>1 Eintrag nutzt IntellectualProperty</said>
           </skill>
           <skill>
-            <name>iOS</name>
-            <token>ios</token>
-            <uses>1</uses>
-            <said>1 Eintrag nutzt iOS</said>
-          </skill>
-          <skill>
             <name>Joins</name>
             <token>joins</token>
             <uses>1</uses>
@@ -1407,6 +1473,12 @@
             <said>1 Eintrag nutzt JS</said>
           </skill>
           <skill>
+            <name>Keychain</name>
+            <token>keychain</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Keychain</said>
+          </skill>
+          <skill>
             <name>KnowledgeBase</name>
             <token>knowledgebase</token>
             <uses>1</uses>
@@ -1417,6 +1489,12 @@
             <token>knowledgegraph</token>
             <uses>1</uses>
             <said>1 Eintrag nutzt KnowledgeGraph</said>
+          </skill>
+          <skill>
+            <name>Law</name>
+            <token>law</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Law</said>
           </skill>
           <skill>
             <name>Lean4</name>
@@ -1527,6 +1605,12 @@
             <said>1 Eintrag nutzt Mathlib</said>
           </skill>
           <skill>
+            <name>Media</name>
+            <token>media</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Media</said>
+          </skill>
+          <skill>
             <name>MediaEconomics</name>
             <token>mediaeconomics</token>
             <uses>1</uses>
@@ -1603,6 +1687,12 @@
             <token>monetarymarket</token>
             <uses>1</uses>
             <said>1 Eintrag nutzt MonetaryMarket</said>
+          </skill>
+          <skill>
+            <name>Naming</name>
+            <token>naming</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Naming</said>
           </skill>
           <skill>
             <name>NationalIncome</name>
@@ -1701,10 +1791,22 @@
             <said>1 Eintrag nutzt OperationsResearch</said>
           </skill>
           <skill>
+            <name>Optimization</name>
+            <token>optimization</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Optimization</said>
+          </skill>
+          <skill>
             <name>Optuna</name>
             <token>optuna</token>
             <uses>1</uses>
             <said>1 Eintrag nutzt Optuna</said>
+          </skill>
+          <skill>
+            <name>Orchestration</name>
+            <token>orchestration</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Orchestration</said>
           </skill>
           <skill>
             <name>ORTools</name>
@@ -1869,12 +1971,6 @@
             <said>1 Eintrag nutzt Scaffolding</said>
           </skill>
           <skill>
-            <name>Scheduling</name>
-            <token>scheduling</token>
-            <uses>1</uses>
-            <said>1 Eintrag nutzt Scheduling</said>
-          </skill>
-          <skill>
             <name>ScientificComputing</name>
             <token>scientificcomputing</token>
             <uses>1</uses>
@@ -1897,6 +1993,12 @@
             <token>searchalgorithms</token>
             <uses>1</uses>
             <said>1 Eintrag nutzt SearchAlgorithms</said>
+          </skill>
+          <skill>
+            <name>Security</name>
+            <token>security</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Security</said>
           </skill>
           <skill>
             <name>Semaphores</name>
@@ -1983,6 +2085,12 @@
             <said>1 Eintrag nutzt SQLx</said>
           </skill>
           <skill>
+            <name>SSH</name>
+            <token>ssh</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt SSH</said>
+          </skill>
+          <skill>
             <name>State</name>
             <token>state</token>
             <uses>1</uses>
@@ -1999,6 +2107,12 @@
             <token>storedprocedures</token>
             <uses>1</uses>
             <said>1 Eintrag nutzt StoredProcedures</said>
+          </skill>
+          <skill>
+            <name>Stow</name>
+            <token>stow</token>
+            <uses>1</uses>
+            <said>1 Eintrag nutzt Stow</said>
           </skill>
           <skill>
             <name>SupervisedLearning</name>
@@ -2216,7 +2330,7 @@
         <label>Suchen</label>
         <placeholder>Erfahrung, Projekte, Kompetenzen suchen…</placeholder>
         <empty>Keine Treffer.</empty>
-        <index>{"entries":[{"id":"work-acteble-grunder","kind":"work","title":"Gründer","organisation":"Acteble","summary":"Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&amp;E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.","skills":["Rust","Flutter","Dart","Tokio","Docker","DDD","CleanArchitecture","PostgreSQL"]},{"id":"work-belgischer-senat-ki-forschungswissenschaftler","kind":"work","title":"KI-Forschungswissenschaftler","organisation":"Belgischer Senat","summary":"KI-Forschung und Engineering für das belgische Bundesparlament. Entwurf einer internen Plattform, die Mitarbeitern erlaubt, parlamentarische Archive zu durchsuchen, zu erkunden und zu befragen. Autor eines offenen Bewertungsprotokolls, das Retrieval-Strategien auf dem Senatskorpus mit Fokus auf zweisprachige FR/NL-Robustheit vergleicht.","skills":["Python","Java","RAG","OCR","SentenceTransformers","Pandas"]},{"id":"work-emvi-ai-ai-software-crafter-lead","kind":"work","title":"AI Software Crafter Lead","organisation":"Emvi.ai","summary":"Technische Leitung und Entwicklung vom Design bis zur Auslieferung: OCR-Pipeline, Code-Scans und angepasstes Valhalla-Routing-System für sehbehinderte Menschen.","skills":["Dart","Flutter","Firebase","OpenAI","Valhalla"]},{"id":"work-emvi-ai-ai-software-crafter","kind":"work","title":"AI Software Crafter","organisation":"Emvi.ai","summary":"Aufbau der Gesichtserkennungs-Pipeline (DeepFace / Serengil, Erkennung + Wiedererkennung) und des Sentiment-Analyse-Stacks für die durch LLM erzeugten Fotobeschreibungen.","skills":["Python","Whisper","FastAPI","DeepFace","OpenAI","PostgreSQL","SQLAlchemy"]},{"id":"work-xtrada-data-scientist","kind":"work","title":"Data Scientist","organisation":"Xtrada","summary":"Verwendung von Python-Bibliotheken (SpaCy, ...) zur Extraktion benannter Entitäten via NER-Modelltraining und Implementierung in .NET. Recall-Score des Modells: 87 %.","skills":["Python","SpaCy","Pandas","NumPy",".NET"]},{"id":"work-xtrada-software-crafter","kind":"work","title":"Software Crafter","organisation":"Xtrada","summary":"Software-Modernisierung im .NET-Stack nach DDD und Clean-Code-Prinzipien. Implementierung von Azure AI-Services in einer .NET-Lösung.","skills":[".NET","DDD","CleanCode","CleanArchitecture"]},{"id":"work-xtrada-net-react-software-crafter","kind":"work","title":".NET/React Software Crafter","organisation":"Xtrada","skills":[".NET","React","SQL Server","TypeScript","EntityFramework","Docker","Azure","OpenTelemetry"]},{"id":"work-xtrada-net-blazor-software-crafter","kind":"work","title":".NET/Blazor Software Crafter","organisation":"Xtrada","summary":"Entwicklung der Webanwendung in .NET / Blazor nach DDD und Clean-Code-Prinzipien.","skills":[".NET","Blazor","SQL Server","DDD","EntityFramework","xUnit"]},{"id":"work-technofutur-tic-full-stack-webentwickler-praktikant","kind":"work","title":"Full-Stack-Webentwickler Praktikant","organisation":"Technofutur TIC","summary":"Qualifizierende Ausbildung zur Stärkung der technischen Fähigkeiten aus meinem Bachelor an der EPHEC.\nDie Erweiterung beinhaltete eine Einführung in Business Intelligence und ETL-Prozesse (Data Warehousing) mit Microsoft-Tools (SSIS, ...).\nDie Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von Datenbankentwicklung bis Benutzeroberfläche und Backend.","skills":["SQL Server","Node.js","Express.js","React","Angular","TypeScript","Auth0","Sequelize"]},{"id":"work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-webentwickler-praktikant","kind":"work","title":"Full-Stack-Webentwickler Praktikant","organisation":"EDITx: IT Challenges, IT Jobs, Education in IT for X","skills":[]},{"id":"work-les-auberges-de-jeunesse-wallonie-bruxelles-studentenjob","kind":"work","title":"Studentenjob","organisation":"Les Auberges de Jeunesse - Wallonie &amp; Bruxelles","skills":[]},{"id":"work-restomax-full-stack-webentwickler-praktikant","kind":"work","title":"Full-Stack-Webentwickler Praktikant","organisation":"RESTOMAX","skills":[".NET","Flutter","SQL Server"]},{"id":"work-quick-restaurant-studentenjob","kind":"work","title":"Studentenjob","organisation":"Quick Restaurant","skills":[]},{"id":"education-umons-master-of-science","kind":"education","title":"Master of Science","organisation":"UMons","subtitle":"Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)","summary":"Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter &amp; Buddy TandeMons. Kernfächer: Software-Engineering und Projektmanagement, künstliche Intelligenz, Datenbanken, Datenstrukturen, Operations Research, Kryptografie und IT-Sicherheit, Ethik und Informatikrecht, mit zwei bezahlten Unternehmenspraktika.","skills":["Python","LaTeX","DDD","CleanArchitecture"]},{"id":"education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor","kind":"education","title":"Professioneller Bachelor","organisation":"Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)","subtitle":"Wirtschaftsinformatik","summary":"Studierendenvertreter und Tutor.\n\nTFE: WebMenu 2.0\n\nProgramm: Analyse und Design, Programmierung in .NET, Java und Web, relationale Datenbanken, E-Business und integrierte Unternehmenssoftware (ERP), Netzwerke und IT-Projektmanagement.","skills":["SQL","C#",".NET","Java","Python","JS","HTML","CSS"]},{"id":"education-institut-saint-louis-bruxelles-attestation","kind":"education","title":"Attestation","organisation":"Institut Saint-Louis Bruxelles","subtitle":"7e Spéciale Mathématiques","skills":[]},{"id":"education-universite-saint-louis-bruxelles-bachelor-in-politikwissenschaften","kind":"education","title":"Bachelor in Politikwissenschaften","organisation":"Université Saint-Louis - Bruxelles","subtitle":"Allgemeine Ausrichtung","skills":[]},{"id":"education-uclouvain-universite-catholique-de-louvain-vorbereitungskurse","kind":"education","title":"Vorbereitungskurse","organisation":"UCLouvain - Université catholique de Louvain","subtitle":"Medizin und Zahnmedizin","skills":[]},{"id":"education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s","kind":"education","title":"C.E.S.S.","organisation":"Centre Scolaire Saint-Adrien - Val Duchesse","subtitle":"Allgemeine Studien — Mathematik, Moderne Sprachen","skills":[]},{"id":"education-centre-scolaire-saint-adrien-val-duchesse","kind":"education","title":"Centre Scolaire Saint-Adrien - Val Duchesse","organisation":"Centre Scolaire Saint-Adrien - Val Duchesse","subtitle":"Technischer Übergang — Naturwissenschaften, Moderne Sprachen","skills":[]},{"id":"education-lycee-mater-dei","kind":"education","title":"Lycée Mater Dei","organisation":"Lycée Mater Dei","subtitle":"Allgemeine Studien — Latein und Griechisch","skills":[]},{"id":"project-baba","kind":"project","title":"Baba","subtitle":"Shell-artige CLI, in kontrolliertem Englisch abgefragt über reine symbolische KI — ohne LLM im Ablauf.","summary":"Fünf Schichten: eine Rust-CLI, die alle Ein- und Ausgaben übernimmt, ein link-grammar-Syntaxparser, eine SWI-Prolog-Symbol-Engine ohne Ein-/Ausgabe, Domänen-Vokabularpakete als Daten und rund fünfzig Rust-Aktionsprogramme — ein neues Verb ist ein Paketfakt und ein Programm. Mit Mutationstests, einem Korpus von Regressionssätzen und einem Kaltstart von etwa 120 ms.","skills":["Rust","Prolog","LinkGrammar","SymbolicAI","NLP","DDD","TDD","MutationTesting"]},{"id":"project-kag","kind":"project","title":"KAG","subtitle":"Rein algorithmisches Rust-Framework, das austauschbare Komponenten einer RAG-Pipeline auf BEIR vergleicht und die am besten gemessene Konfiguration als Frage-Antwort-CLI mit zitierten Quellen ausliefert.","summary":"Neun Pipeline-Stufen (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), jede ein Port, dessen Algorithmus per Label gewählt wird (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonal + DDD + TDD, nur die Standardbibliothek im Kern, kein LLM. Die Metriken stimmen exakt mit pytrec_eval überein. Auf sechs BEIR-Datensätzen gewinnt kein Retriever überall (ndcg@10 0,668 auf SciFact mit BM25F); ein LambdaMART-Reranker hebt ArguAna in 5-facher Kreuzvalidierung von 0,301 auf 0,527.","skills":["Rust","RAG","InformationRetrieval","LearningToRank","BEIR","DDD","HexagonalArchitecture","TDD"]},{"id":"project-ll","kind":"project","title":"LL","subtitle":"Vokabeltrainer mit verteilter Wiederholung für sechs Sprachen, jedes Wort mit einem abgeglichenen Beispielsatz in jeder Sprache.","summary":"Ein Rust-Workspace, dessen reiner Domänenkern (hexagonal, DDD, Test-first) eine Terminal-Oberfläche (ratatui) sowie Dioxus-Apps für Desktop und iOS antreibt: Leitner-Kästen mit SM-2-Planung auf SQLite, Inhalte aus prüfsummengesicherten Datenpaketen. Sein Datenlabor baut in Python die sechssprachige lexikalische Datenbank — rund 8.900 Wortbedeutungen (Oktober 2026), an WordNet ausgerichtet, mit Tatoeba-Sätzen belegt, mit spaCy analysiert, jede Wort-im-Satz-Verknüpfung geprüft.","skills":["Rust","Dioxus","Ratatui","SQLite","iOS","SpacedRepetition","Leitner","SM2","Python","spaCy","NLP","WordNet","Tatoeba","HexagonalArchitecture","DDD","TDD"]},{"id":"project-openacte","kind":"project","title":"OpenActe","subtitle":"Die Familie kleiner offener Projekte rund um Acteble: Bibliotheken, CLIs, Engines und Wissensbasen, jedes mit genau einer Aufgabe — wie die Microservices einer Plattform.","skills":["Rust","OpenSource"]},{"id":"project-actindexer","kind":"project","title":"Actindexer","subtitle":"Kuratierter Index externer Datenquellen, Bücher und Softwarepakete, bereitgestellt über eine öffentliche Lese-API.","summary":"Jede der 523 Quellen ist eine TOML-Datei, die Rust validiert und zu statischem JSON kompiliert, beim Build in einen Cloudflare Worker eingebettet: API-Logik in reinem Rust, ETag- und 304-Antworten, Ratenbegrenzung pro IP und API-Schlüssel, exakt gezählt von einem Durable Object, BM25F-Ranking gewichtet mit einem Zuverlässigkeitswert aus sechs Kriterien und eine Lückenanalyse, die Bedarfe passenden Quellen zuordnet.","skills":["Rust","CloudflareWorkers","WebAssembly","DurableObjects","TOML","BM25F","InformationRetrieval","TDD"]},{"id":"project-polytech","kind":"project","title":"Polytech","subtitle":"Bibliothek für das Ingenieurstudium, die jede Zahl und jeden Ausdruck ausgearbeiteter LaTeX-Lösungen berechnet, nichts von Hand getippt.","summary":"Eine Python-Bibliothek (DDD, hexagonal, test-first, mutationsgetestet, mypy strict) mit den Begriffen aus Mathematik, Physik, Elektronik, Signalverarbeitung und Optimierung, berechnet mit SymPy, NumPy und SciPy und per Makros in 920 LaTeX-Dokumente eingesetzt; eine Pipeline wandelt Kursmaterial in Markdown, LaTeX und XML um, und Lean-4-Beweise mit Mathlib führen Ergebnisse bis auf die Axiome zurück.","skills":["Python","SymPy","NumPy","SciPy","LaTeX","Lean4","Mathlib","DDD","HexagonalArchitecture","TDD","MutationTesting"]},{"id":"project-actconverge","kind":"project","title":"ActConverge","subtitle":"KI-gestützte Plattform für mechanisches 3D-Design, die Open-Source-Engines für Geometrie, Vernetzung und Simulation orchestriert.","summary":"Die KI schreibt die Operationen, die Engines rechnen: Ein LLM erzeugt ein streng validiertes Bauteilprogramm in JSON; zwei unabhängige Kerne, OpenCASCADE (exakt) und Manifold (Netz), müssen bei Volumen und Hüllquader übereinstimmen, und die Baugruppe wird vor jedem Export nach STEP, STL, 3MF oder glTF auf Überschneidungen geprüft. Ein Rust-Kern (hexagonale Ports und Adapter) steuert einen Python-Worker über JSON-Zeilen, und eine NSGA-II-Suche (Optuna) wählt die Komponenten auf einer Pareto-Front, gegengeprüft durch exakte Aufzählung.","skills":["Rust","Python","OpenCASCADE","Manifold","build123d","Gmsh","Optuna","NSGA2","MultiObjectiveOptimization","Pareto","ThreeJS","HexagonalArchitecture","TDD"]},{"id":"project-actrack","kind":"project","title":"Actrack","subtitle":"Multi-Sport-Datenbank und prädiktive Modellierungsplattform zur Bewertung von Spielergebnissen über Ligen und Turniere hinweg mittels Ensemble-Rating-Strategien.","summary":"Eine Python-Engine (DDD, hexagonal) gewichtet fünfzehn Strategien für Spielausgänge — Elo, Poisson-Angriff/-Abwehr, Form, direkte Duelle, Kaderwert, Ruhetage, Buchmacherquoten — an den Spielort angepasst, und ist in Rust/Dioxus-Apps für Web (WebAssembly), Desktop, Mobilgeräte und Terminal portiert, die mit ihr gleichauf gehalten werden. Ein Forschungslabor testet die Strategien walk-forward, jeweils ein Turnier zurückgehalten, an 635 Spielen aus zehn Turnieren (Weltmeisterschaften 2002–2022 und vier Kontinentalturniere 2023–2024) und stimmt die Ensemble-Gewichte ab; außerhalb der Stichprobe schneidet Elo allein am besten ab (55,6 % Trefferquote).","skills":["Python","Pandas","NumPy","SciPy","DuckDB","Rust","Dioxus","WebAssembly","EloRating","PoissonModel","EnsembleModel","WalkForwardBacktest","BrierScore","HexagonalArchitecture","DDD","TDD"]},{"id":"project-actif","kind":"project","title":"Actif","subtitle":"Desktop-Anwendung und Analyse-Engine für globale Finanzmärkte (Aktien, ETFs, Anleihen, Devisen, Krypto, Indizes) mit vektorisiertem Analysespeicher und hexagonaler Architektur in TDD.","skills":["Rust","Dioxus","DuckDB","SQLite","Parquet","DDD","TDD","HexagonalArchitecture"]},{"id":"project-actmorph","kind":"project","title":"Actmorph","subtitle":"Universelle Katalogisierungs-Engine und formatagnostisches System zur Extraktion von Dateimetadaten.","skills":["Rust","FileEngine","Metadata","TDD"]},{"id":"project-actserve","kind":"project","title":"Actserve","subtitle":"Universeller Orchestrator für die vollständige Server- und Cloud-Administration (DNS-Zonen, TLS Let's Encrypt-Zertifikate, WireGuard-VPNs, OpenTofu, Ansible) mit einer reaktiven REST-API für die Biorcrux-UI.","skills":["Rust","Axum","OpenTofu","Ansible","WireGuard","TLS","DNS","HexagonalArchitecture","TDD"]},{"id":"project-actos","kind":"project","title":"Actos","subtitle":"Modularer System-Supervisor und Diagnosesuite (Prozesse, Speicher, Speichervolumen, Netzwerktelemetrie, Energie) für CLI und Dioxus-Desktop-Schnittstellen.","skills":["Rust","Dioxus","SystemsProgramming","Telemetry","CLI","TDD"]},{"id":"project-biorcrux","kind":"project","title":"Biorcrux","subtitle":"Modulare Bibliothek mit deklarativen UI-Komponenten, Persistenz, Diagrammen und Internationalisierung für plattformübergreifende Desktop-Anwendungen.","skills":["Rust","Dioxus","UI","Desktop","i18n","Charting","TDD"]},{"id":"project-actrepo","kind":"project","title":"Actrepo","subtitle":"CLI-Toolsuite für semantische Benennung, Kollisionserkennung und deklaratives Scaffolding von Git-/GitHub-Repositories.","skills":["Rust","CLI","Git","GitHub","Scaffolding","TDD"]},{"id":"project-actsessions","kind":"project","title":"Actsessions","subtitle":"Lokale Erkennung, Sitzungsinventar und Telemetrie für KI-Coding-Agenten.","skills":["Rust","Agents","Observability","Telemetry","TDD"]},{"id":"project-actusext","kind":"project","title":"Actusext","subtitle":"Echtzeit-Quotenverfolgung und Nutzungsprognosen für KI-Coding-Assistenten.","skills":["Rust","CLI","Forecasting","Observability","TDD"]},{"id":"project-polymath","kind":"project","title":"Polymath","subtitle":"Universeller Graph von Berechnungspaketen, der wissenschaftliche Disziplinen ohne Redundanz über das Rust-Typsystem verbindet.","skills":["Rust","DAG","ScientificComputing","Mathematics","TypeSystem","TDD"]},{"id":"project-corpus","kind":"project","title":"Corpus","subtitle":"Aggregiertes Repository für universitäre Kursunterlagen, Vorlesungsskripte und Aufgaben aus Moodle-Plattformen und akademischen Portalen mit exakt ausgearbeiteten Lösungen.","skills":["Python","LaTeX","KnowledgeBase","Education","Solver","TDD"]},{"id":"project-actedu","kind":"project","title":"Actedu","subtitle":"Globale graphbasierte Abbildung und Visualisierung von akademischen Wegen im Hochschulbereich, Voraussetzungen, Kursverläufen und Studiengangspfaden.","skills":["Rust","KnowledgeGraph","GraphTheory","Education","Visualization","TDD"]},{"id":"project-synergy","kind":"project","title":"Synergy","subtitle":"Interne Plattform des belgischen Bundesparlaments zum Durchsuchen, Erkunden und Befragen der parlamentarischen Archive.","summary":"Interne Plattform, die parlamentarischen Mitarbeitern ermöglicht, die Archive des belgischen Bundesparlaments zu durchsuchen, zu erkunden und zu befragen — angetrieben von einer Retrieval-Augmented-Pipeline mit zweisprachiger FR/NL-Unterstützung.","skills":["Python","Java","Spring Boot","RAG","AI"]},{"id":"project-fedrag-be","kind":"project","title":"fedrag-be","subtitle":"Offenes Bewertungsprotokoll, das Retrieval-Strategien auf dem Korpus des belgischen Senats vergleicht, mit Fokus auf zweisprachige FR/NL-Robustheit.","summary":"Offenes, reproduzierbares Protokoll, das Retrieval-Strategien auf dem zweisprachigen Senatskorpus benchmarkt und die FR/NL-Robustheit über die gesamte Retrieval-Pipeline misst.","skills":["RAG","Python","Evaluation","Benchmark","OCR","SentenceTransformers","Pandas"]},{"id":"project-acteble","kind":"project","title":"Acteble","subtitle":"Geolokalisierte soziale Plattform, die Menschen um gemeinsame Aktivitäten zusammenbringt: ein Rust-Backend, eine Offline-first-Flutter-App und eine React-Website.","summary":"Backend: modularer Monolith in Rust, gegliedert in Bounded Contexts mit hexagonaler Architektur, CQRS und einem ereignisgesteuerten Kern (Event Store, Outbox/Inbox), bereitgestellt über REST/JSON und gRPC-Streaming; eine PostGIS-Pipeline macht aus OpenStreetMap-Daten Routing-Graphen, die über ein CDN veröffentlicht werden, und eigene Dylint-Lints setzen die Architektur in der CI durch. App: Offline-first-Flutter-Client für iOS, Android, Web und Desktop — ein Melos-Monorepo mit Riverpod über einem verschlüsselten lokalen Speicher (Drift, SQLCipher), Ende-zu-Ende-Verschlüsselung über einen Rust-Kern (vodozemac via flutter_rust_bridge), Peer-to-Peer-Synchronisation per Bluetooth, MapLibre-Karten und Echtzeitmedien mit LiveKit. Website: React-Single-Page-Anwendung, mit Vite gebaut und mit i18next internationalisiert.","skills":["Rust","Tokio","Axum","Tonic","gRPC","Protobuf","SQLx","PostgreSQL","PostGIS","Redis","MinIO","LiveKit","OpenBao","Prometheus","Testcontainers","OpenStreetMap","Docker","Caddy","Dylint","DDD","HexagonalArchitecture","CQRS","EventDriven","Flutter","Dart","Melos","Riverpod","Drift","SQLite","SQLCipher","Dio","FlutterRustBridge","MapLibre","FlutterMap","Firebase","OfflineFirst","E2EE","Mobile","React","Vite","JavaScript","i18next","ReactRouter","ESLint","Vercel"]},{"id":"project-memoire-de-master","kind":"project","title":"Mémoire de master","organisation":"UMONS","subtitle":"Masterarbeit an der UMONS — die F&amp;E der Planungs-Engine von Acteble.","summary":"Masterarbeit « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », Service d'Algorithmique der UMONS — die F&amp;E der Planungs-Engine von Acteble. Mehrzielige Gruppenbildung unter räumlich-zeitlichen Bedingungen: NP-schwer per Reduktion von k-CLIQUE; zulässige Gruppen als Bicliquen aufgezählt (Close-by-One); ein iterativer Pareto-Solver mit Garantien für Terminierung und lokale Konvergenz; eine DSL, nach Python, MiniZinc und Rust kompiliert, mit bitidentischen Fronten, deren Rust-Ausgabe in der Acteble-API läuft. Verglichen mit CP-SAT, NSGA-II, MOEA/D und SPEA2 (Hypervolumen, IGD, 30 Seeds, Wilcoxon–Holm): signifikant vor MOEA/D bei jeder Größe, vor NSGA-II und SPEA2 ab 500 Nutzern.","skills":["Python","Rust","LaTeX","MiniZinc","ORTools","ConstraintProgramming","CombinatorialOptimization","MultiObjectiveOptimization","Pareto","DSL","MutationTesting"]},{"id":"project-emvi-app","kind":"project","title":"Emvi App","subtitle":"KI-gestützter visueller Assistent für sehbehinderte Menschen.","summary":"KI-gestützter visueller Assistent für sehbehinderte Menschen mit Beschreibung der Umgebung, OCR, Code-Scans (QR &amp; Barcodes) und einem angepassten Valhalla-Routing-System.","skills":["Flutter","Firebase","OpenAI","Valhalla","AI","Dart"]},{"id":"project-remi","kind":"project","title":"Remi","subtitle":"Reminiszenz-App für Menschen mit kognitiven Problemen.","summary":"Reminiszenz-Anwendung, die Menschen mit kognitiven Problemen ermöglicht, ihre Erinnerungen durch Beschreibungen ihrer Fotos mit Gesichtserkennung und LLMs wiederzuerlangen. DeepFace (Serengil) Pipeline.","skills":["Python","FastAPI","OpenAI","Whisper","DeepFace","PostgreSQL","SQLAlchemy"]},{"id":"project-myway","kind":"project","title":"MyWay","organisation":"Freelance","subtitle":"Bildungsmanager für Studierende. Nicht mehr gepflegt; Datenbank und Auth sind nicht verfügbar.","skills":["Angular","JavaScript","TypeScript","Express.js","API","UI/UX","SQL Server","Auth0","PayPal","Sequelize","Node.js","React"]},{"id":"project-vhauctions-ner-inventory-model","kind":"project","title":"VhAuctions NER Inventory Model","summary":"NER-ML-Modell zur Extraktion von Inventarobjekten aus einer Audiotranskription.","skills":["Python","SpaCy","Pandas","NumPy",".NET","NER"]},{"id":"project-vhauctions","kind":"project","title":"VhAuctions","summary":"Fuhrparkmanager für Auktionen.","skills":[".NET","C#","EntityFramework","React","TypeScript","Docker","Azure","OpenTelemetry","SQL Server"]},{"id":"project-kwalitijd","kind":"project","title":"Kwalitijd","summary":"Umfragemanager für Sportvereine und -verbände.","skills":[".NET","C#","Blazor","EntityFramework","xUnit","SQL Server","DDD"]},{"id":"project-webmenu","kind":"project","title":"WebMenu","summary":"QR-Code-basierte Kasse für HoReCa-Betriebe (Hotel/Restaurant/Café).","skills":[".NET","Flutter","SQL Server","QRCode"]},{"id":"course-algorithmique","kind":"course","title":"Algorithmique","organisation":"UMONS","subtitle":"Algorithmik","skills":["Algorithms","DataStructures","Complexity","Trees"]},{"id":"course-anglais-i","kind":"course","title":"Anglais I","organisation":"UMONS","subtitle":"Englisch I","skills":["English"]},{"id":"course-bases-de-donnees-i","kind":"course","title":"Bases de données I","organisation":"UMONS","subtitle":"Datenbanken I","skills":["SQL","RelationalAlgebra","Normalization","Indexing","NoSQL","BigData"]},{"id":"course-lecture-et-redaction-scientifique","kind":"course","title":"Lecture et rédaction scientifique","organisation":"UMONS","subtitle":"Wissenschaftliches Lesen und Schreiben","skills":["ScientificWriting","LiteratureReview"]},{"id":"course-mathematique","kind":"course","title":"Mathématique","organisation":"UMONS","subtitle":"Mathematik","skills":["GraphTheory","Combinatorics","Complexity","PropositionalLogic","PredicateLogic"]},{"id":"course-modelisation-logicielle","kind":"course","title":"Modélisation logicielle","organisation":"UMONS","subtitle":"Softwaremodellierung","skills":["Java","UML","DesignPatterns","UnitTesting","MockTesting","BDD"]},{"id":"course-reseaux","kind":"course","title":"Réseaux","organisation":"UMONS","subtitle":"Netzwerke","skills":["TCP/IP","HTTP","DNS","OSPF","BGP","Ethernet"]},{"id":"course-strategie-et-politiques-en-ressources-humaines","kind":"course","title":"Stratégie et politiques en ressources humaines","organisation":"UMONS","subtitle":"HR-Strategie und -Politik","skills":["HRM"]},{"id":"course-systemes-d-exploitation","kind":"course","title":"Systèmes d'exploitation","organisation":"UMONS","subtitle":"Betriebssysteme","skills":["Processes","Semaphores","Synchronization","MemoryManagement","FileSystems","Scheduling"]},{"id":"course-anglais-ii","kind":"course","title":"Anglais II","organisation":"UMONS","subtitle":"Englisch II","skills":["English"]},{"id":"course-bases-de-donnees-ii","kind":"course","title":"Bases de données II","organisation":"UMONS","subtitle":"Datenbanken II","skills":["XML","XSLT","XQuery","XPath","BaseX","DataMining","Weka"]},{"id":"course-ingenierie-de-logiciels-et-gestion-de-projets","kind":"course","title":"Ingénierie de logiciels et gestion de projets","organisation":"UMONS","subtitle":"Software-Engineering und Projektmanagement","skills":["Agile","Scrum","SoftwareEngineering"]},{"id":"course-intelligence-artificielle","kind":"course","title":"Intelligence artificielle","organisation":"UMONS","subtitle":"Künstliche Intelligenz","skills":["SearchAlgorithms","Metaheuristics","FirstOrderLogic","SupervisedLearning"]},{"id":"course-recherche-operationnelle-et-applications","kind":"course","title":"Recherche opérationnelle et applications","organisation":"UMONS","subtitle":"Operations Research und Anwendungen","skills":["OperationsResearch","LinearProgramming","IntegerProgramming","Duality"]},{"id":"course-structures-de-donnees","kind":"course","title":"Structures de données","organisation":"UMONS","subtitle":"Datenstrukturen","skills":["AVLTrees","BTrees","HashTables","Sorting","Complexity"]},{"id":"course-seminaires-d-informatique-en-veille-technologique","kind":"course","title":"Séminaires d'informatique en veille technologique","organisation":"UMONS","subtitle":"Informatikseminare zur Technologiebeobachtung","skills":["TechWatch"]},{"id":"course-cryptographie-et-securite-des-systemes-informatiques","kind":"course","title":"Cryptographie et sécurité des systèmes informatiques","organisation":"UMONS","subtitle":"Kryptografie und Systemsicherheit","skills":["Cryptography","Unix","NetworkSecurity","ApplicationSecurity"]},{"id":"course-ethique-et-droit-de-l-informatique","kind":"course","title":"Éthique et droit de l'informatique","organisation":"UMONS","subtitle":"Ethik und Informatikrecht","skills":["IntellectualProperty","DataProtection","GDPR"]},{"id":"course-structure-des-ordinateurs","kind":"course","title":"Structure des ordinateurs","organisation":"EPHEC","subtitle":"Rechnerstruktur","skills":["ComputerArchitecture","Binary","Hexadecimal","Hardware"]},{"id":"course-informatique-systeme-d-exploitation","kind":"course","title":"Informatique - Système d'exploitation","organisation":"EPHEC","subtitle":"Betriebssysteme","skills":["OperatingSystems","ShellScripting","SystemAdministration"]},{"id":"course-mathematique-appliquee-a-l-informatique","kind":"course","title":"Mathématique appliquée à l'informatique","organisation":"EPHEC","subtitle":"Mathematik für die Informatik","skills":["LinearAlgebra","GraphTheory","SetTheory","RelationalAlgebra","MathematicalLogic","Cryptography"]},{"id":"course-principes-algorithmiques-et-programmation","kind":"course","title":"Principes algorithmiques et programmation","organisation":"EPHEC","subtitle":"Algorithmische Grundlagen und Programmierung","skills":["Algorithms","DataTypes","ControlFlow","Programming"]},{"id":"course-principes-d-analyse-informatique","kind":"course","title":"Principes d'analyse informatique","organisation":"EPHEC","subtitle":"Grundlagen der Systemanalyse","skills":["UML","EntityRelationship","SystemsAnalysis"]},{"id":"course-information-et-communication-professionnelles","kind":"course","title":"Information et communication professionnelles","organisation":"EPHEC","subtitle":"Berufliche Information und Kommunikation","skills":["ProfessionalCommunication"]},{"id":"course-web-principes-de-base","kind":"course","title":"Web : principes de base","organisation":"EPHEC","subtitle":"Web: Grundlagen","skills":["HTML","CSS","URL","DNS","WebHosting"]},{"id":"course-initiation-aux-bases-de-donnees","kind":"course","title":"Initiation aux bases de données","organisation":"EPHEC","subtitle":"Einführung in Datenbanken","skills":["SQL","RelationalModel","Joins","Indexing"]},{"id":"course-gestion-et-exploitation-de-bases-de-donnees","kind":"course","title":"Gestion et exploitation de bases de données","organisation":"EPHEC","subtitle":"Datenbankverwaltung und -betrieb","skills":["Triggers","StoredProcedures","DataWarehouse","QueryOptimization"]},{"id":"course-programmation-orientee-objet","kind":"course","title":"Programmation orientée objet","organisation":"EPHEC","subtitle":"Objektorientierte Programmierung","skills":["OOP","Inheritance","Polymorphism","Encapsulation","Overloading"]},{"id":"course-projet-d-analyse-et-de-conception","kind":"course","title":"Projet d'analyse et de conception","organisation":"EPHEC","subtitle":"Analyse- und Entwurfsprojekt","skills":["SystemsAnalysis","SoftwareDesign","Modelling"]},{"id":"course-techniques-de-gestion-de-projet","kind":"course","title":"Techniques de gestion de projet","organisation":"EPHEC","subtitle":"Projektmanagementtechniken","skills":["ProjectManagement"]},{"id":"course-elements-de-statistique","kind":"course","title":"Éléments de statistique","organisation":"EPHEC","subtitle":"Grundlagen der Statistik","skills":["Statistics"]},{"id":"course-projet-de-developpement-web","kind":"course","title":"Projet de développement web","organisation":"EPHEC","subtitle":"Webentwicklungsprojekt","skills":["JavaScript","AJAX","JSON","XML","ClientSideScripting"]},{"id":"course-notions-de-e-business","kind":"course","title":"Notions de e-business","organisation":"EPHEC","subtitle":"Grundlagen des E-Business","skills":["Ebusiness"]},{"id":"course-projet-de-developpement-sgbd","kind":"course","title":"Projet de développement SGBD","organisation":"EPHEC","subtitle":"DBMS-Entwicklungsprojekt","skills":["DataAccessLayer","Transactions","DatabaseProgramming","Debugging"]},{"id":"course-bases-des-reseaux","kind":"course","title":"Bases des réseaux","organisation":"EPHEC","subtitle":"Netzwerkgrundlagen","skills":["Ethernet","MAC","TCP/IP","Networking"]},{"id":"course-organisation-des-entreprises-et-elements-de-management","kind":"course","title":"Organisation des entreprises et éléments de management","organisation":"EPHEC","subtitle":"Unternehmensorganisation und Management","skills":["Management"]},{"id":"course-produits-logiciels-de-gestion-integres","kind":"course","title":"Produits logiciels de gestion intégrés","organisation":"EPHEC","subtitle":"Integrierte Unternehmenssoftware","skills":["ERP"]},{"id":"course-projet-d-integration-de-developpement","kind":"course","title":"Projet d'intégration de développement","organisation":"EPHEC","subtitle":"Entwicklungsintegrationsprojekt","skills":["AJAX","JSON","XML","SQLInjection","XSS","Caching","URLRewriting"]},{"id":"course-veille-technologique","kind":"course","title":"Veille technologique","organisation":"EPHEC","subtitle":"Technologiebeobachtung","skills":["TechWatch"]},{"id":"course-administration-gestion-et-securisation-des-reseaux","kind":"course","title":"Administration, gestion et sécurisation des réseaux","organisation":"EPHEC","subtitle":"Netzwerkadministration und -sicherheit","skills":["NetworkAdministration","NetworkSecurity","ApplicationServer"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue1","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE1","organisation":"EPHEC","subtitle":"Angewandte Sprache Hochschulbildung UE1","skills":["ProfessionalCommunication"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue2","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE2","organisation":"EPHEC","subtitle":"Angewandte Sprache Hochschulbildung UE2","skills":["ProfessionalCommunication"]},{"id":"course-economie-i","kind":"course","title":"Économie I","organisation":"USL-B","subtitle":"Volkswirtschaftslehre I","skills":["Microeconomics","CompetitiveMarkets","FirmBehaviour","MarketFailure"]},{"id":"course-economie-ii","kind":"course","title":"Économie II","organisation":"USL-B","subtitle":"Volkswirtschaftslehre II","skills":["ImperfectCompetition","Macroeconomics","NationalIncome","MonetaryMarket"]},{"id":"course-science-politique","kind":"course","title":"Science politique","organisation":"USL-B","subtitle":"Politikwissenschaft","skills":["PoliticalScience","Power","State","Democracy"]},{"id":"course-seminaire-penser-le-social","kind":"course","title":"Séminaire : penser le social","organisation":"USL-B","subtitle":"Seminar: das Soziale denken","skills":["Epistemology","Durkheim","Weber","Marx"]},{"id":"course-seminaire-principes-et-methodes-en-sciences-sociales","kind":"course","title":"Séminaire : principes et méthodes en sciences sociales","organisation":"USL-B","subtitle":"Seminar: Prinzipien und Methoden der Sozialwissenschaften","skills":["AcademicWriting","Citation","Epistemology"]},{"id":"course-socio-economie-des-medias","kind":"course","title":"Socio-économie des médias","organisation":"USL-B","subtitle":"Sozioökonomie der Medien","skills":["MediaEconomics","Advertising","MediaRegulation","WebEconomy"]},{"id":"course-anglais-i-saint-louis","kind":"course","title":"Anglais I (Saint-Louis)","organisation":"USL-B","subtitle":"Englisch I","skills":["English"]},{"id":"course-neerlandais-i","kind":"course","title":"Néerlandais I","organisation":"USL-B","subtitle":"Niederländisch I","skills":["Dutch"]},{"id":"volunteer-umons-studierendenvertreter","kind":"volunteer","title":"Studierendenvertreter","organisation":"UMons","skills":[]},{"id":"volunteer-umons-buddy-tandemons","kind":"volunteer","title":"Buddy TandeMons","organisation":"UMons","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-studierendenvertreter","kind":"volunteer","title":"Studierendenvertreter","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-tutor","kind":"volunteer","title":"Tutor","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]}],"skills":[{"skill":"Rust","uses":20,"href":"#skill-rust"},{"skill":"TDD","uses":18,"href":"#skill-tdd"},{"skill":"Python","uses":15,"href":"#skill-python"},{"skill":"DDD","uses":12,"href":"#skill-ddd"},{"skill":".NET","uses":10,"href":"#skill-net"},{"skill":"HexagonalArchitecture","uses":8,"href":"#skill-hexagonalarchitecture"},{"skill":"SQL Server","uses":8,"href":"#skill-sql-server"},{"skill":"Flutter","uses":6,"href":"#skill-flutter"},{"skill":"Dioxus","uses":5,"href":"#skill-dioxus"},{"skill":"Pandas","uses":5,"href":"#skill-pandas"},{"skill":"React","uses":5,"href":"#skill-react"},{"skill":"Dart","uses":4,"href":"#skill-dart"},{"skill":"Docker","uses":4,"href":"#skill-docker"},{"skill":"EntityFramework","uses":4,"href":"#skill-entityframework"},{"skill":"Java","uses":4,"href":"#skill-java"},{"skill":"LaTeX","uses":4,"href":"#skill-latex"},{"skill":"NumPy","uses":4,"href":"#skill-numpy"},{"skill":"OpenAI","uses":4,"href":"#skill-openai"},{"skill":"PostgreSQL","uses":4,"href":"#skill-postgresql"},{"skill":"RAG","uses":4,"href":"#skill-rag"},{"skill":"TypeScript","uses":4,"href":"#skill-typescript"},{"skill":"C#","uses":3,"href":"#skill-c"},{"skill":"CleanArchitecture","uses":3,"href":"#skill-cleanarchitecture"},{"skill":"CLI","uses":3,"href":"#skill-cli"},{"skill":"Complexity","uses":3,"href":"#skill-complexity"},{"skill":"DNS","uses":3,"href":"#skill-dns"},{"skill":"English","uses":3,"href":"#skill-english"},{"skill":"Firebase","uses":3,"href":"#skill-firebase"},{"skill":"GraphTheory","uses":3,"href":"#skill-graphtheory"},{"skill":"JavaScript","uses":3,"href":"#skill-javascript"},{"skill":"MutationTesting","uses":3,"href":"#skill-mutationtesting"},{"skill":"ProfessionalCommunication","uses":3,"href":"#skill-professionalcommunication"},{"skill":"SQL","uses":3,"href":"#skill-sql"},{"skill":"SQLite","uses":3,"href":"#skill-sqlite"},{"skill":"XML","uses":3,"href":"#skill-xml"},{"skill":"AI","uses":2,"href":"#skill-ai"},{"skill":"AJAX","uses":2,"href":"#skill-ajax"},{"skill":"Algorithms","uses":2,"href":"#skill-algorithms"},{"skill":"Angular","uses":2,"href":"#skill-angular"},{"skill":"API","uses":2,"href":"#skill-api"},{"skill":"Auth0","uses":2,"href":"#skill-auth0"},{"skill":"Axum","uses":2,"href":"#skill-axum"},{"skill":"Azure","uses":2,"href":"#skill-azure"},{"skill":"Blazor","uses":2,"href":"#skill-blazor"},{"skill":"Cryptography","uses":2,"href":"#skill-cryptography"},{"skill":"CSS","uses":2,"href":"#skill-css"},{"skill":"DeepFace","uses":2,"href":"#skill-deepface"},{"skill":"DuckDB","uses":2,"href":"#skill-duckdb"},{"skill":"Education","uses":2,"href":"#skill-education"},{"skill":"Epistemology","uses":2,"href":"#skill-epistemology"},{"skill":"Ethernet","uses":2,"href":"#skill-ethernet"},{"skill":"Express.js","uses":2,"href":"#skill-express-js"},{"skill":"FastAPI","uses":2,"href":"#skill-fastapi"},{"skill":"HTML","uses":2,"href":"#skill-html"},{"skill":"Indexing","uses":2,"href":"#skill-indexing"},{"skill":"InformationRetrieval","uses":2,"href":"#skill-informationretrieval"},{"skill":"JSON","uses":2,"href":"#skill-json"},{"skill":"MultiObjectiveOptimization","uses":2,"href":"#skill-multiobjectiveoptimization"},{"skill":"NetworkSecurity","uses":2,"href":"#skill-networksecurity"},{"skill":"NLP","uses":2,"href":"#skill-nlp"},{"skill":"Node.js","uses":2,"href":"#skill-node-js"},{"skill":"Observability","uses":2,"href":"#skill-observability"},{"skill":"OCR","uses":2,"href":"#skill-ocr"},{"skill":"OpenTelemetry","uses":2,"href":"#skill-opentelemetry"},{"skill":"Pareto","uses":2,"href":"#skill-pareto"},{"skill":"RelationalAlgebra","uses":2,"href":"#skill-relationalalgebra"},{"skill":"SciPy","uses":2,"href":"#skill-scipy"},{"skill":"SentenceTransformers","uses":2,"href":"#skill-sentencetransformers"},{"skill":"Sequelize","uses":2,"href":"#skill-sequelize"},{"skill":"SpaCy","uses":2,"href":"#skill-spacy"},{"skill":"SQLAlchemy","uses":2,"href":"#skill-sqlalchemy"},{"skill":"SystemsAnalysis","uses":2,"href":"#skill-systemsanalysis"},{"skill":"TCP/IP","uses":2,"href":"#skill-tcp-ip"},{"skill":"TechWatch","uses":2,"href":"#skill-techwatch"},{"skill":"Telemetry","uses":2,"href":"#skill-telemetry"},{"skill":"Tokio","uses":2,"href":"#skill-tokio"},{"skill":"UI/UX","uses":2,"href":"#skill-ui-ux"},{"skill":"UML","uses":2,"href":"#skill-uml"},{"skill":"Valhalla","uses":2,"href":"#skill-valhalla"},{"skill":"WebAssembly","uses":2,"href":"#skill-webassembly"},{"skill":"Whisper","uses":2,"href":"#skill-whisper"},{"skill":"xUnit","uses":2,"href":"#skill-xunit"},{"skill":"AcademicWriting","uses":1,"href":"#skill-academicwriting"},{"skill":"Advertising","uses":1,"href":"#skill-advertising"},{"skill":"Agents","uses":1,"href":"#skill-agents"},{"skill":"Agile","uses":1,"href":"#skill-agile"},{"skill":"Ansible","uses":1,"href":"#skill-ansible"},{"skill":"ApplicationSecurity","uses":1,"href":"#skill-applicationsecurity"},{"skill":"ApplicationServer","uses":1,"href":"#skill-applicationserver"},{"skill":"AVLTrees","uses":1,"href":"#skill-avltrees"},{"skill":"BaseX","uses":1,"href":"#skill-basex"},{"skill":"BDD","uses":1,"href":"#skill-bdd"},{"skill":"BEIR","uses":1,"href":"#skill-beir"},{"skill":"Benchmark","uses":1,"href":"#skill-benchmark"},{"skill":"BGP","uses":1,"href":"#skill-bgp"},{"skill":"BigData","uses":1,"href":"#skill-bigdata"},{"skill":"Binary","uses":1,"href":"#skill-binary"},{"skill":"BM25F","uses":1,"href":"#skill-bm25f"},{"skill":"BrierScore","uses":1,"href":"#skill-brierscore"},{"skill":"BTrees","uses":1,"href":"#skill-btrees"},{"skill":"build123d","uses":1,"href":"#skill-build123d"},{"skill":"Caching","uses":1,"href":"#skill-caching"},{"skill":"Caddy","uses":1,"href":"#skill-caddy"},{"skill":"Charting","uses":1,"href":"#skill-charting"},{"skill":"Citation","uses":1,"href":"#skill-citation"},{"skill":"CleanCode","uses":1,"href":"#skill-cleancode"},{"skill":"ClientSideScripting","uses":1,"href":"#skill-clientsidescripting"},{"skill":"CloudflareWorkers","uses":1,"href":"#skill-cloudflareworkers"},{"skill":"CombinatorialOptimization","uses":1,"href":"#skill-combinatorialoptimization"},{"skill":"Combinatorics","uses":1,"href":"#skill-combinatorics"},{"skill":"CompetitiveMarkets","uses":1,"href":"#skill-competitivemarkets"},{"skill":"ComputerArchitecture","uses":1,"href":"#skill-computerarchitecture"},{"skill":"ConstraintProgramming","uses":1,"href":"#skill-constraintprogramming"},{"skill":"ControlFlow","uses":1,"href":"#skill-controlflow"},{"skill":"CQRS","uses":1,"href":"#skill-cqrs"},{"skill":"DAG","uses":1,"href":"#skill-dag"},{"skill":"DataAccessLayer","uses":1,"href":"#skill-dataaccesslayer"},{"skill":"DatabaseProgramming","uses":1,"href":"#skill-databaseprogramming"},{"skill":"DataMining","uses":1,"href":"#skill-datamining"},{"skill":"DataProtection","uses":1,"href":"#skill-dataprotection"},{"skill":"DataStructures","uses":1,"href":"#skill-datastructures"},{"skill":"DataTypes","uses":1,"href":"#skill-datatypes"},{"skill":"DataWarehouse","uses":1,"href":"#skill-datawarehouse"},{"skill":"Debugging","uses":1,"href":"#skill-debugging"},{"skill":"Democracy","uses":1,"href":"#skill-democracy"},{"skill":"DesignPatterns","uses":1,"href":"#skill-designpatterns"},{"skill":"Desktop","uses":1,"href":"#skill-desktop"},{"skill":"Dio","uses":1,"href":"#skill-dio"},{"skill":"Drift","uses":1,"href":"#skill-drift"},{"skill":"DSL","uses":1,"href":"#skill-dsl"},{"skill":"Duality","uses":1,"href":"#skill-duality"},{"skill":"DurableObjects","uses":1,"href":"#skill-durableobjects"},{"skill":"Durkheim","uses":1,"href":"#skill-durkheim"},{"skill":"Dutch","uses":1,"href":"#skill-dutch"},{"skill":"Dylint","uses":1,"href":"#skill-dylint"},{"skill":"E2EE","uses":1,"href":"#skill-e2ee"},{"skill":"Ebusiness","uses":1,"href":"#skill-ebusiness"},{"skill":"EloRating","uses":1,"href":"#skill-elorating"},{"skill":"Encapsulation","uses":1,"href":"#skill-encapsulation"},{"skill":"EnsembleModel","uses":1,"href":"#skill-ensemblemodel"},{"skill":"EntityRelationship","uses":1,"href":"#skill-entityrelationship"},{"skill":"ERP","uses":1,"href":"#skill-erp"},{"skill":"ESLint","uses":1,"href":"#skill-eslint"},{"skill":"Evaluation","uses":1,"href":"#skill-evaluation"},{"skill":"EventDriven","uses":1,"href":"#skill-eventdriven"},{"skill":"FileEngine","uses":1,"href":"#skill-fileengine"},{"skill":"FileSystems","uses":1,"href":"#skill-filesystems"},{"skill":"FirmBehaviour","uses":1,"href":"#skill-firmbehaviour"},{"skill":"FirstOrderLogic","uses":1,"href":"#skill-firstorderlogic"},{"skill":"FlutterMap","uses":1,"href":"#skill-fluttermap"},{"skill":"FlutterRustBridge","uses":1,"href":"#skill-flutterrustbridge"},{"skill":"Forecasting","uses":1,"href":"#skill-forecasting"},{"skill":"GDPR","uses":1,"href":"#skill-gdpr"},{"skill":"Git","uses":1,"href":"#skill-git"},{"skill":"GitHub","uses":1,"href":"#skill-github"},{"skill":"Gmsh","uses":1,"href":"#skill-gmsh"},{"skill":"gRPC","uses":1,"href":"#skill-grpc"},{"skill":"Hardware","uses":1,"href":"#skill-hardware"},{"skill":"HashTables","uses":1,"href":"#skill-hashtables"},{"skill":"Hexadecimal","uses":1,"href":"#skill-hexadecimal"},{"skill":"HRM","uses":1,"href":"#skill-hrm"},{"skill":"HTTP","uses":1,"href":"#skill-http"},{"skill":"i18n","uses":1,"href":"#skill-i18n"},{"skill":"i18next","uses":1,"href":"#skill-i18next"},{"skill":"ImperfectCompetition","uses":1,"href":"#skill-imperfectcompetition"},{"skill":"Inheritance","uses":1,"href":"#skill-inheritance"},{"skill":"IntegerProgramming","uses":1,"href":"#skill-integerprogramming"},{"skill":"IntellectualProperty","uses":1,"href":"#skill-intellectualproperty"},{"skill":"iOS","uses":1,"href":"#skill-ios"},{"skill":"Joins","uses":1,"href":"#skill-joins"},{"skill":"JS","uses":1,"href":"#skill-js"},{"skill":"KnowledgeBase","uses":1,"href":"#skill-knowledgebase"},{"skill":"KnowledgeGraph","uses":1,"href":"#skill-knowledgegraph"},{"skill":"Lean4","uses":1,"href":"#skill-lean4"},{"skill":"LearningToRank","uses":1,"href":"#skill-learningtorank"},{"skill":"Leitner","uses":1,"href":"#skill-leitner"},{"skill":"LinearAlgebra","uses":1,"href":"#skill-linearalgebra"},{"skill":"LinearProgramming","uses":1,"href":"#skill-linearprogramming"},{"skill":"LinkGrammar","uses":1,"href":"#skill-linkgrammar"},{"skill":"LiteratureReview","uses":1,"href":"#skill-literaturereview"},{"skill":"LiveKit","uses":1,"href":"#skill-livekit"},{"skill":"MAC","uses":1,"href":"#skill-mac"},{"skill":"Macroeconomics","uses":1,"href":"#skill-macroeconomics"},{"skill":"Management","uses":1,"href":"#skill-management"},{"skill":"Manifold","uses":1,"href":"#skill-manifold"},{"skill":"MapLibre","uses":1,"href":"#skill-maplibre"},{"skill":"MarketFailure","uses":1,"href":"#skill-marketfailure"},{"skill":"Marx","uses":1,"href":"#skill-marx"},{"skill":"MathematicalLogic","uses":1,"href":"#skill-mathematicallogic"},{"skill":"Mathematics","uses":1,"href":"#skill-mathematics"},{"skill":"Mathlib","uses":1,"href":"#skill-mathlib"},{"skill":"MediaEconomics","uses":1,"href":"#skill-mediaeconomics"},{"skill":"MediaRegulation","uses":1,"href":"#skill-mediaregulation"},{"skill":"Melos","uses":1,"href":"#skill-melos"},{"skill":"MemoryManagement","uses":1,"href":"#skill-memorymanagement"},{"skill":"Metadata","uses":1,"href":"#skill-metadata"},{"skill":"Metaheuristics","uses":1,"href":"#skill-metaheuristics"},{"skill":"Microeconomics","uses":1,"href":"#skill-microeconomics"},{"skill":"MinIO","uses":1,"href":"#skill-minio"},{"skill":"MiniZinc","uses":1,"href":"#skill-minizinc"},{"skill":"Mobile","uses":1,"href":"#skill-mobile"},{"skill":"MockTesting","uses":1,"href":"#skill-mocktesting"},{"skill":"Modelling","uses":1,"href":"#skill-modelling"},{"skill":"MonetaryMarket","uses":1,"href":"#skill-monetarymarket"},{"skill":"NationalIncome","uses":1,"href":"#skill-nationalincome"},{"skill":"NER","uses":1,"href":"#skill-ner"},{"skill":"NetworkAdministration","uses":1,"href":"#skill-networkadministration"},{"skill":"Networking","uses":1,"href":"#skill-networking"},{"skill":"Normalization","uses":1,"href":"#skill-normalization"},{"skill":"NoSQL","uses":1,"href":"#skill-nosql"},{"skill":"NSGA2","uses":1,"href":"#skill-nsga2"},{"skill":"OfflineFirst","uses":1,"href":"#skill-offlinefirst"},{"skill":"OOP","uses":1,"href":"#skill-oop"},{"skill":"OpenBao","uses":1,"href":"#skill-openbao"},{"skill":"OpenCASCADE","uses":1,"href":"#skill-opencascade"},{"skill":"OpenSource","uses":1,"href":"#skill-opensource"},{"skill":"OpenStreetMap","uses":1,"href":"#skill-openstreetmap"},{"skill":"OpenTofu","uses":1,"href":"#skill-opentofu"},{"skill":"OperatingSystems","uses":1,"href":"#skill-operatingsystems"},{"skill":"OperationsResearch","uses":1,"href":"#skill-operationsresearch"},{"skill":"Optuna","uses":1,"href":"#skill-optuna"},{"skill":"ORTools","uses":1,"href":"#skill-ortools"},{"skill":"OSPF","uses":1,"href":"#skill-ospf"},{"skill":"Overloading","uses":1,"href":"#skill-overloading"},{"skill":"Parquet","uses":1,"href":"#skill-parquet"},{"skill":"PayPal","uses":1,"href":"#skill-paypal"},{"skill":"PHP","uses":1,"href":"#skill-php"},{"skill":"PoissonModel","uses":1,"href":"#skill-poissonmodel"},{"skill":"PoliticalScience","uses":1,"href":"#skill-politicalscience"},{"skill":"Polymorphism","uses":1,"href":"#skill-polymorphism"},{"skill":"PostGIS","uses":1,"href":"#skill-postgis"},{"skill":"Power","uses":1,"href":"#skill-power"},{"skill":"PredicateLogic","uses":1,"href":"#skill-predicatelogic"},{"skill":"Processes","uses":1,"href":"#skill-processes"},{"skill":"Programming","uses":1,"href":"#skill-programming"},{"skill":"ProjectManagement","uses":1,"href":"#skill-projectmanagement"},{"skill":"Prolog","uses":1,"href":"#skill-prolog"},{"skill":"Prometheus","uses":1,"href":"#skill-prometheus"},{"skill":"PropositionalLogic","uses":1,"href":"#skill-propositionallogic"},{"skill":"Protobuf","uses":1,"href":"#skill-protobuf"},{"skill":"QRCode","uses":1,"href":"#skill-qrcode"},{"skill":"QueryOptimization","uses":1,"href":"#skill-queryoptimization"},{"skill":"Ratatui","uses":1,"href":"#skill-ratatui"},{"skill":"ReactRouter","uses":1,"href":"#skill-reactrouter"},{"skill":"Redis","uses":1,"href":"#skill-redis"},{"skill":"RelationalModel","uses":1,"href":"#skill-relationalmodel"},{"skill":"Riverpod","uses":1,"href":"#skill-riverpod"},{"skill":"Scaffolding","uses":1,"href":"#skill-scaffolding"},{"skill":"Scheduling","uses":1,"href":"#skill-scheduling"},{"skill":"ScientificComputing","uses":1,"href":"#skill-scientificcomputing"},{"skill":"ScientificWriting","uses":1,"href":"#skill-scientificwriting"},{"skill":"Scrum","uses":1,"href":"#skill-scrum"},{"skill":"SearchAlgorithms","uses":1,"href":"#skill-searchalgorithms"},{"skill":"Semaphores","uses":1,"href":"#skill-semaphores"},{"skill":"SetTheory","uses":1,"href":"#skill-settheory"},{"skill":"ShellScripting","uses":1,"href":"#skill-shellscripting"},{"skill":"SM2","uses":1,"href":"#skill-sm2"},{"skill":"SoftwareDesign","uses":1,"href":"#skill-softwaredesign"},{"skill":"SoftwareEngineering","uses":1,"href":"#skill-softwareengineering"},{"skill":"Solver","uses":1,"href":"#skill-solver"},{"skill":"Sorting","uses":1,"href":"#skill-sorting"},{"skill":"SpacedRepetition","uses":1,"href":"#skill-spacedrepetition"},{"skill":"spaCy","uses":1,"href":"#skill-spacy-2"},{"skill":"Spring Boot","uses":1,"href":"#skill-spring-boot"},{"skill":"SQLCipher","uses":1,"href":"#skill-sqlcipher"},{"skill":"SQLInjection","uses":1,"href":"#skill-sqlinjection"},{"skill":"SQLx","uses":1,"href":"#skill-sqlx"},{"skill":"State","uses":1,"href":"#skill-state"},{"skill":"Statistics","uses":1,"href":"#skill-statistics"},{"skill":"StoredProcedures","uses":1,"href":"#skill-storedprocedures"},{"skill":"SupervisedLearning","uses":1,"href":"#skill-supervisedlearning"},{"skill":"SymbolicAI","uses":1,"href":"#skill-symbolicai"},{"skill":"SymPy","uses":1,"href":"#skill-sympy"},{"skill":"Synchronization","uses":1,"href":"#skill-synchronization"},{"skill":"SystemAdministration","uses":1,"href":"#skill-systemadministration"},{"skill":"SystemsProgramming","uses":1,"href":"#skill-systemsprogramming"},{"skill":"Tatoeba","uses":1,"href":"#skill-tatoeba"},{"skill":"Testcontainers","uses":1,"href":"#skill-testcontainers"},{"skill":"ThreeJS","uses":1,"href":"#skill-threejs"},{"skill":"TLS","uses":1,"href":"#skill-tls"},{"skill":"TOML","uses":1,"href":"#skill-toml"},{"skill":"Tonic","uses":1,"href":"#skill-tonic"},{"skill":"Transactions","uses":1,"href":"#skill-transactions"},{"skill":"Trees","uses":1,"href":"#skill-trees"},{"skill":"Triggers","uses":1,"href":"#skill-triggers"},{"skill":"TypeSystem","uses":1,"href":"#skill-typesystem"},{"skill":"UI","uses":1,"href":"#skill-ui"},{"skill":"UnitTesting","uses":1,"href":"#skill-unittesting"},{"skill":"Unix","uses":1,"href":"#skill-unix"},{"skill":"URL","uses":1,"href":"#skill-url"},{"skill":"URLRewriting","uses":1,"href":"#skill-urlrewriting"},{"skill":"Vercel","uses":1,"href":"#skill-vercel"},{"skill":"Visualization","uses":1,"href":"#skill-visualization"},{"skill":"Vite","uses":1,"href":"#skill-vite"},{"skill":"WalkForwardBacktest","uses":1,"href":"#skill-walkforwardbacktest"},{"skill":"WebEconomy","uses":1,"href":"#skill-webeconomy"},{"skill":"Weber","uses":1,"href":"#skill-weber"},{"skill":"WebHosting","uses":1,"href":"#skill-webhosting"},{"skill":"Weka","uses":1,"href":"#skill-weka"},{"skill":"WireGuard","uses":1,"href":"#skill-wireguard"},{"skill":"WordNet","uses":1,"href":"#skill-wordnet"},{"skill":"XPath","uses":1,"href":"#skill-xpath"},{"skill":"XQuery","uses":1,"href":"#skill-xquery"},{"skill":"XSLT","uses":1,"href":"#skill-xslt"},{"skill":"XSS","uses":1,"href":"#skill-xss"}],"kinds":{"work":"Berufserfahrung","education":"Ausbildung","project":"Projekte","course":"Lehreinheiten","volunteer":"Ehrenamt","competition":"Veranstaltungen"},"groups":{"skills":"Kompetenzen","entries":"Einträge"},"actions":[{"label":"English","hint":"Sprache","href":"/assets/data/resume-en.html"},{"label":"Français","hint":"Sprache","href":"/assets/data/resume-fr.html"},{"label":"Nederlands","hint":"Sprache","href":"/assets/data/resume-nl.html"},{"label":"Español","hint":"Sprache","href":"/assets/data/resume-es.html"},{"label":"中文","hint":"Sprache","href":"/assets/data/resume-zh.html"},{"label":"Thema wechseln","press":"#theme-toggle"},{"label":"Lebenslauf herunterladen","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_de.pdf"},{"label":"Zeitleiste herunterladen","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_timeline_de.pdf"}]}</index>
+        <index>{"entries":[{"id":"work-acteble-grunder","kind":"work","title":"Gründer","organisation":"Acteble","summary":"Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&amp;E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.","skills":["Rust","Flutter","Dart","Tokio","Docker","DDD","CleanArchitecture","PostgreSQL"]},{"id":"work-belgischer-senat-ki-forschungswissenschaftler","kind":"work","title":"KI-Forschungswissenschaftler","organisation":"Belgischer Senat","summary":"KI-Forschung und Engineering für das belgische Bundesparlament. Entwurf einer internen Plattform, die Mitarbeitern erlaubt, parlamentarische Archive zu durchsuchen, zu erkunden und zu befragen. Autor eines offenen Bewertungsprotokolls, das Retrieval-Strategien auf dem Senatskorpus mit Fokus auf zweisprachige FR/NL-Robustheit vergleicht.","skills":["Python","Java","RAG","OCR","SentenceTransformers","Pandas"]},{"id":"work-emvi-ai-ai-software-crafter-lead","kind":"work","title":"AI Software Crafter Lead","organisation":"Emvi.ai","summary":"Technische Leitung und Entwicklung vom Design bis zur Auslieferung: OCR-Pipeline, Code-Scans und angepasstes Valhalla-Routing-System für sehbehinderte Menschen.","skills":["Dart","Flutter","Firebase","OpenAI","Valhalla"]},{"id":"work-emvi-ai-ai-software-crafter","kind":"work","title":"AI Software Crafter","organisation":"Emvi.ai","summary":"Aufbau der Gesichtserkennungs-Pipeline (DeepFace / Serengil, Erkennung + Wiedererkennung) und des Sentiment-Analyse-Stacks für die durch LLM erzeugten Fotobeschreibungen.","skills":["Python","Whisper","FastAPI","DeepFace","OpenAI","PostgreSQL","SQLAlchemy"]},{"id":"work-xtrada-data-scientist","kind":"work","title":"Data Scientist","organisation":"Xtrada","summary":"Verwendung von Python-Bibliotheken (SpaCy, ...) zur Extraktion benannter Entitäten via NER-Modelltraining und Implementierung in .NET. Recall-Score des Modells: 87 %.","skills":["Python","SpaCy","Pandas","NumPy",".NET"]},{"id":"work-xtrada-software-crafter","kind":"work","title":"Software Crafter","organisation":"Xtrada","summary":"Software-Modernisierung im .NET-Stack nach DDD und Clean-Code-Prinzipien. Implementierung von Azure AI-Services in einer .NET-Lösung.","skills":[".NET","DDD","CleanCode","CleanArchitecture"]},{"id":"work-xtrada-net-react-software-crafter","kind":"work","title":".NET/React Software Crafter","organisation":"Xtrada","skills":[".NET","React","SQL Server","TypeScript","EntityFramework","Docker","Azure","OpenTelemetry"]},{"id":"work-xtrada-net-blazor-software-crafter","kind":"work","title":".NET/Blazor Software Crafter","organisation":"Xtrada","summary":"Entwicklung der Webanwendung in .NET / Blazor nach DDD und Clean-Code-Prinzipien.","skills":[".NET","Blazor","SQL Server","DDD","EntityFramework","xUnit"]},{"id":"work-technofutur-tic-full-stack-webentwickler-praktikant","kind":"work","title":"Full-Stack-Webentwickler Praktikant","organisation":"Technofutur TIC","summary":"Qualifizierende Ausbildung zur Stärkung der technischen Fähigkeiten aus meinem Bachelor an der EPHEC.\nDie Erweiterung beinhaltete eine Einführung in Business Intelligence und ETL-Prozesse (Data Warehousing) mit Microsoft-Tools (SSIS, ...).\nDie Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von Datenbankentwicklung bis Benutzeroberfläche und Backend.","skills":["SQL Server","Node.js","Express.js","React","Angular","TypeScript","Auth0","Sequelize"]},{"id":"work-editx-it-challenges-it-jobs-education-in-it-for-x-full-stack-webentwickler-praktikant","kind":"work","title":"Full-Stack-Webentwickler Praktikant","organisation":"EDITx: IT Challenges, IT Jobs, Education in IT for X","skills":[]},{"id":"work-les-auberges-de-jeunesse-wallonie-bruxelles-studentenjob","kind":"work","title":"Studentenjob","organisation":"Les Auberges de Jeunesse - Wallonie &amp; Bruxelles","skills":[]},{"id":"work-restomax-full-stack-webentwickler-praktikant","kind":"work","title":"Full-Stack-Webentwickler Praktikant","organisation":"RESTOMAX","skills":[".NET","Flutter","SQL Server"]},{"id":"work-quick-restaurant-studentenjob","kind":"work","title":"Studentenjob","organisation":"Quick Restaurant","skills":[]},{"id":"education-umons-master-of-science","kind":"education","title":"Master of Science","organisation":"UMons","subtitle":"Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)","summary":"Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter &amp; Buddy TandeMons. Kernfächer: Software-Engineering und Projektmanagement, künstliche Intelligenz, Datenbanken, Datenstrukturen, Operations Research, Kryptografie und IT-Sicherheit, Ethik und Informatikrecht, mit zwei bezahlten Unternehmenspraktika.","skills":["Python","LaTeX","DDD","CleanArchitecture"]},{"id":"education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor","kind":"education","title":"Professioneller Bachelor","organisation":"Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)","subtitle":"Wirtschaftsinformatik","summary":"Studierendenvertreter und Tutor.\n\nTFE: WebMenu 2.0\n\nProgramm: Analyse und Design, Programmierung in .NET, Java und Web, relationale Datenbanken, E-Business und integrierte Unternehmenssoftware (ERP), Netzwerke und IT-Projektmanagement.","skills":["SQL","C#",".NET","Java","Python","JS","HTML","CSS"]},{"id":"education-institut-saint-louis-bruxelles-attestation","kind":"education","title":"Attestation","organisation":"Institut Saint-Louis Bruxelles","subtitle":"7e Spéciale Mathématiques","skills":[]},{"id":"education-universite-saint-louis-bruxelles-bachelor-in-politikwissenschaften","kind":"education","title":"Bachelor in Politikwissenschaften","organisation":"Université Saint-Louis - Bruxelles","subtitle":"Allgemeine Ausrichtung","skills":[]},{"id":"education-uclouvain-universite-catholique-de-louvain-vorbereitungskurse","kind":"education","title":"Vorbereitungskurse","organisation":"UCLouvain - Université catholique de Louvain","subtitle":"Medizin und Zahnmedizin","skills":[]},{"id":"education-centre-scolaire-saint-adrien-val-duchesse-c-e-s-s","kind":"education","title":"C.E.S.S.","organisation":"Centre Scolaire Saint-Adrien - Val Duchesse","subtitle":"Allgemeine Studien — Mathematik, Moderne Sprachen","skills":[]},{"id":"education-centre-scolaire-saint-adrien-val-duchesse","kind":"education","title":"Centre Scolaire Saint-Adrien - Val Duchesse","organisation":"Centre Scolaire Saint-Adrien - Val Duchesse","subtitle":"Technischer Übergang — Naturwissenschaften, Moderne Sprachen","skills":[]},{"id":"education-lycee-mater-dei","kind":"education","title":"Lycée Mater Dei","organisation":"Lycée Mater Dei","subtitle":"Allgemeine Studien — Latein und Griechisch","skills":[]},{"id":"project-baba","kind":"project","title":"Baba","subtitle":"Shell-artige CLI, in kontrolliertem Englisch abgefragt über reine symbolische KI — ohne LLM im Ablauf.","summary":"Fünf Schichten: eine Rust-CLI, die alle Ein- und Ausgaben übernimmt, ein link-grammar-Syntaxparser, eine SWI-Prolog-Symbol-Engine ohne Ein-/Ausgabe, Domänen-Vokabularpakete als Daten und rund fünfzig Rust-Aktionsprogramme — ein neues Verb ist ein Paketfakt und ein Programm. Mit Mutationstests, einem Korpus von Regressionssätzen und einem Kaltstart von etwa 120 ms.","skills":["Rust","Prolog","LinkGrammar","SymbolicAI","NLP","DDD","TDD","MutationTesting"]},{"id":"project-kag","kind":"project","title":"KAG","subtitle":"Rein algorithmisches Rust-Framework, das austauschbare Komponenten einer RAG-Pipeline auf BEIR vergleicht und die am besten gemessene Konfiguration als Frage-Antwort-CLI mit zitierten Quellen ausliefert.","summary":"Neun Pipeline-Stufen (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), jede ein Port, dessen Algorithmus per Label gewählt wird (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonal + DDD + TDD, nur die Standardbibliothek im Kern, kein LLM. Die Metriken stimmen exakt mit pytrec_eval überein. Auf sechs BEIR-Datensätzen gewinnt kein Retriever überall (ndcg@10 0,668 auf SciFact mit BM25F); ein LambdaMART-Reranker hebt ArguAna in 5-facher Kreuzvalidierung von 0,301 auf 0,527.","skills":["Rust","RAG","InformationRetrieval","LearningToRank","BEIR","DDD","HexagonalArchitecture","TDD"]},{"id":"project-ll","kind":"project","title":"LL","subtitle":"Vokabeltrainer mit verteilter Wiederholung für sechs Sprachen, jedes Wort mit einem abgeglichenen Beispielsatz in jeder Sprache.","summary":"Ein Rust-Workspace, dessen reiner Domänenkern (hexagonal, DDD, Test-first) eine Terminal-Oberfläche (ratatui) sowie Dioxus-Apps für Desktop und iOS antreibt: Leitner-Kästen mit SM-2-Planung auf SQLite, Inhalte aus prüfsummengesicherten Datenpaketen. Sein Datenlabor baut in Python die sechssprachige lexikalische Datenbank — rund 8.900 Wortbedeutungen (Oktober 2026), an WordNet ausgerichtet, mit Tatoeba-Sätzen belegt, mit spaCy analysiert, jede Wort-im-Satz-Verknüpfung geprüft.","skills":["Rust","Dioxus","Ratatui","SQLite","iOS","SpacedRepetition","Leitner","SM2","Python","spaCy","NLP","WordNet","Tatoeba","HexagonalArchitecture","DDD","TDD"]},{"id":"project-openacte","kind":"project","title":"OpenActe","subtitle":"Die Familie kleiner offener Projekte rund um Acteble: Bibliotheken, CLIs, Engines und Wissensbasen, jedes mit genau einer Aufgabe — wie die Microservices einer Plattform.","skills":["Rust","OpenSource"]},{"id":"project-actindexer","kind":"project","title":"Actindexer","subtitle":"Kuratierter Index externer Datenquellen, Bücher und Softwarepakete, bereitgestellt über eine öffentliche Lese-API.","summary":"Jede der 523 Quellen ist eine TOML-Datei, die Rust validiert und zu statischem JSON kompiliert, beim Build in einen Cloudflare Worker eingebettet: API-Logik in reinem Rust, ETag- und 304-Antworten, Ratenbegrenzung pro IP und API-Schlüssel, exakt gezählt von einem Durable Object, BM25F-Ranking gewichtet mit einem Zuverlässigkeitswert aus sechs Kriterien und eine Lückenanalyse, die Bedarfe passenden Quellen zuordnet.","skills":["Rust","CloudflareWorkers","WebAssembly","DurableObjects","TOML","BM25F","InformationRetrieval","TDD"]},{"id":"project-polytech","kind":"project","title":"Polytech","subtitle":"Bibliothek für das Ingenieurstudium, die jede Zahl und jeden Ausdruck ausgearbeiteter LaTeX-Lösungen berechnet, nichts von Hand getippt.","summary":"Eine Python-Bibliothek (DDD, hexagonal, test-first, mutationsgetestet, mypy strict) mit den Begriffen aus Mathematik, Physik, Elektronik, Signalverarbeitung und Optimierung, berechnet mit SymPy, NumPy und SciPy und per Makros in 920 LaTeX-Dokumente eingesetzt; eine Pipeline wandelt Kursmaterial in Markdown, LaTeX und XML um, und Lean-4-Beweise mit Mathlib führen Ergebnisse bis auf die Axiome zurück.","skills":["Python","SymPy","NumPy","SciPy","LaTeX","Lean4","Mathlib","DDD","HexagonalArchitecture","TDD","MutationTesting"]},{"id":"project-actconverge","kind":"project","title":"ActConverge","subtitle":"KI-gestützte Plattform für mechanisches 3D-Design, die Open-Source-Engines für Geometrie, Vernetzung und Simulation orchestriert.","summary":"Die KI schreibt die Operationen, die Engines rechnen: Ein LLM erzeugt ein streng validiertes Bauteilprogramm in JSON; zwei unabhängige Kerne, OpenCASCADE (exakt) und Manifold (Netz), müssen bei Volumen und Hüllquader übereinstimmen, und die Baugruppe wird vor jedem Export nach STEP, STL, 3MF oder glTF auf Überschneidungen geprüft. Ein Rust-Kern (hexagonale Ports und Adapter) steuert einen Python-Worker über JSON-Zeilen, und eine NSGA-II-Suche (Optuna) wählt die Komponenten auf einer Pareto-Front, gegengeprüft durch exakte Aufzählung.","skills":["Rust","Python","OpenCASCADE","Manifold","build123d","Gmsh","Optuna","NSGA2","MultiObjectiveOptimization","Pareto","ThreeJS","HexagonalArchitecture","TDD"]},{"id":"project-actrack","kind":"project","title":"Actrack","subtitle":"Multi-Sport-Datenbank und prädiktive Modellierungsplattform zur Bewertung von Spielergebnissen über Ligen und Turniere hinweg mittels Ensemble-Rating-Strategien.","summary":"Eine Python-Engine (DDD, hexagonal) gewichtet fünfzehn Strategien für Spielausgänge — Elo, Poisson-Angriff/-Abwehr, Form, direkte Duelle, Kaderwert, Ruhetage, Buchmacherquoten — an den Spielort angepasst, und ist in Rust/Dioxus-Apps für Web (WebAssembly), Desktop, Mobilgeräte und Terminal portiert, die mit ihr gleichauf gehalten werden. Ein Forschungslabor testet die Strategien walk-forward, jeweils ein Turnier zurückgehalten, an 635 Spielen aus zehn Turnieren (Weltmeisterschaften 2002–2022 und vier Kontinentalturniere 2023–2024) und stimmt die Ensemble-Gewichte ab; außerhalb der Stichprobe schneidet Elo allein am besten ab (55,6 % Trefferquote).","skills":["Python","Pandas","NumPy","SciPy","DuckDB","Rust","Dioxus","WebAssembly","EloRating","PoissonModel","EnsembleModel","WalkForwardBacktest","BrierScore","HexagonalArchitecture","DDD","TDD"]},{"id":"project-actif","kind":"project","title":"Actif","subtitle":"Desktop-Anwendung und Analyse-Engine für globale Finanzmärkte (Aktien, ETFs, Anleihen, Devisen, Krypto, Indizes) mit vektorisiertem Analysespeicher und hexagonaler Architektur in TDD.","skills":["Rust","Dioxus","DuckDB","SQLite","Parquet","DDD","TDD","HexagonalArchitecture"]},{"id":"project-actmorph","kind":"project","title":"Actmorph","subtitle":"Universelle Katalogisierungs-Engine und formatagnostisches System zur Extraktion von Dateimetadaten.","skills":["Rust","FileEngine","Metadata","TDD"]},{"id":"project-actserve","kind":"project","title":"Actserve","subtitle":"Universeller Orchestrator für die vollständige Server- und Cloud-Administration (DNS-Zonen, TLS Let's Encrypt-Zertifikate, WireGuard-VPNs, OpenTofu, Ansible) mit einer reaktiven REST-API für die Biorcrux-UI.","skills":["Rust","Axum","OpenTofu","Ansible","WireGuard","TLS","DNS","HexagonalArchitecture","TDD"]},{"id":"project-actos","kind":"project","title":"Actos","subtitle":"Modularer System-Supervisor und Diagnosesuite (Prozesse, Speicher, Speichervolumen, Netzwerktelemetrie, Energie) für CLI und Dioxus-Desktop-Schnittstellen.","skills":["Rust","Dioxus","SystemsProgramming","Telemetry","CLI","TDD"]},{"id":"project-biorcrux","kind":"project","title":"Biorcrux","subtitle":"Modulare Bibliothek mit deklarativen UI-Komponenten, Persistenz, Diagrammen und Internationalisierung für plattformübergreifende Desktop-Anwendungen.","skills":["Rust","Dioxus","UI","Desktop","i18n","Charting","TDD"]},{"id":"project-actrepo","kind":"project","title":"Actrepo","subtitle":"CLI-Toolsuite für semantische Benennung, Kollisionserkennung und deklaratives Scaffolding von Git-/GitHub-Repositories.","skills":["Rust","CLI","Git","GitHub","Scaffolding","TDD"]},{"id":"project-actsessions","kind":"project","title":"Actsessions","subtitle":"Lokale Erkennung, Sitzungsinventar und Telemetrie für KI-Coding-Agenten.","skills":["Rust","Agents","Observability","Telemetry","TDD"]},{"id":"project-actusext","kind":"project","title":"Actusext","subtitle":"Echtzeit-Quotenverfolgung und Nutzungsprognosen für KI-Coding-Assistenten.","skills":["Rust","CLI","Forecasting","Observability","TDD"]},{"id":"project-actart","kind":"project","title":"Actart","subtitle":"Juristische Schlussfolgerungsmaschine, zunächst belgisches Recht: ausgehend von einem Bedarf oder einer Akte findet sie die anwendbaren Texte, begründet ihre Anwendung und antwortet mit Quellenangaben.","skills":["Rust","Law","RAG","InformationRetrieval","HexagonalArchitecture","TDD"]},{"id":"project-actautoma","kind":"project","title":"Actautoma","subtitle":"Rust-Bibliothek, die die Werkzeuge von Repository-Plattformen steuert (gh für GitHub, glab für GitLab), mit einem Befehl, um ein Repository überall dort umzubenennen, wo es referenziert wird.","skills":["Rust","GitHub","GitLab","Automation","TDD"]},{"id":"project-actcast","kind":"project","title":"Actcast","subtitle":"Orchestrator des Multimedia- und Download-Stacks des Acteble-Ökosystems: startet, stoppt und prüft die Anwendungen deklarativ und reagiert auf Änderungen ihrer Indexer.","skills":["Rust","Orchestration","Media","Automation"]},{"id":"project-actcdi","kind":"project","title":"Actcdi","subtitle":"Führt CI/CD für jedes Repository aus: startet die Prüfungen (Lint, Tests, Builds), teilt sie in Shards auf und wählt aus, was laufen muss.","skills":["Rust","CI/CD","Automation","TDD"]},{"id":"project-actconf","kind":"project","title":"Actconf","subtitle":"Verwaltet die Konfiguration einer Flotte aus Maschinen, Volumes und Servern, Schritt für Schritt aus dem dotfiles-Repository herausgelöst.","skills":["Rust","Configuration","Stow","TDD"]},{"id":"project-actdevice","kind":"project","title":"Actdevice","subtitle":"Startet oder installiert eine App (Flutter, Dioxus oder jedes Projekt mit einem device-install-Hook) auf einem iOS-Simulator, einem Android-Gerät oder dem Host.","skills":["Rust","Flutter","Dioxus","iOS","Android","TDD"]},{"id":"project-actempo","kind":"project","title":"Actempo","subtitle":"Planer für Acts in agentischen Sitzungen: aus Acts (Arbeitseinheiten eines Agenten mit Abhängigkeiten, Priorität, Frist und Token-Kosten) und Sitzungen erstellt er einen Plan und nennt, welche Acts sich nicht einplanen ließen und warum.","skills":["Rust","Scheduling","Agents","Optimization","TDD"]},{"id":"project-actessh","kind":"project","title":"Actessh","subtitle":"SSH-Client, dessen Schlüssel und Passwörter aus Actesskey stammen.","skills":["Rust","SSH"]},{"id":"project-actesskey","kind":"project","title":"Actesskey","subtitle":"Geheimnisse, Schlüssel und Passwörter der Maschine an einem Ort: jedes Geheimnis ist ein age-Blob, der age-Schlüssel liegt im macOS-Schlüsselbund, und nichts Geheimes läuft über eine Befehlszeile.","skills":["Rust","Security","Age","Keychain","TDD"]},{"id":"project-actinstall","kind":"project","title":"Actinstall","subtitle":"Hält die per cargo installierten Binärdateien lokaler Repositories auf der neuesten Version ihres Repositorys.","skills":["Rust","Cargo","Automation","TDD"]},{"id":"project-actit","kind":"project","title":"Actit","subtitle":"Beantwortet „Gibt es für diesen Bedarf schon ein Werkzeug?“ allein aus Actindexer und KAG: keine andere Suchmaschine und kein LLM.","skills":["Rust","InformationRetrieval","RAG","TDD"]},{"id":"project-actlimit","kind":"project","title":"Actlimit","subtitle":"Zeigt die Nutzungslimits der Coding-Agenten (Claude, Codex und die Agenten mit Token-Budget) in je einer Zeile, schnell genug für einen Shell-Prompt.","skills":["Rust","Agents","Observability","TDD"]},{"id":"project-actmail","kind":"project","title":"Actmail","subtitle":"Schreibgeschützte Suche in jedem Postfach eines Manifests, über IMAP oder aus archivierten Maildirs: nichts wird als gelesen markiert, verschoben oder gelöscht.","skills":["Rust","IMAP","Email","TDD"]},{"id":"project-actmake","kind":"project","title":"Actmake","subtitle":"Macht aus einem Projekt sein Artefakt mit einem einzigen Verb, build; der Aufrufer wählt die Engine (LaTeX, HTML oder Markdown, als PDF gedruckt).","skills":["Rust","LaTeX","Build","TDD"]},{"id":"project-actname","kind":"project","title":"Actname","subtitle":"Deterministische, offline-first semantische Namensgebungs-Engine für Projekte.","skills":["Rust","NLP","Naming","TDD"]},{"id":"project-actpath","kind":"project","title":"Actpath","subtitle":"Alles rund um Pfade: Verweise auf ein umbenanntes Repository umschreiben, Verschiebungen, Worktrees reparieren und cargo-Installationseinträge.","skills":["Rust","Git","Automation","TDD"]},{"id":"project-actqueue","kind":"project","title":"Actqueue","subtitle":"Verwaltet Job-Warteschlangen (die Queue für schwere Jobs und ihre Spuren), im Zusammenspiel mit Actempo.","skills":["Rust","Scheduling","Agents","TDD"]},{"id":"project-acttex","kind":"project","title":"Acttex","subtitle":"Baut ein LaTeX-Projekt: findet die Hauptdatei und führt pdflatex, biber und makeglossaries aus.","skills":["Rust","LaTeX","Build","TDD"]},{"id":"project-polymath","kind":"project","title":"Polymath","subtitle":"Universeller Graph von Berechnungspaketen, der wissenschaftliche Disziplinen ohne Redundanz über das Rust-Typsystem verbindet.","skills":["Rust","DAG","ScientificComputing","Mathematics","TypeSystem","TDD"]},{"id":"project-corpus","kind":"project","title":"Corpus","subtitle":"Aggregiertes Repository für universitäre Kursunterlagen, Vorlesungsskripte und Aufgaben aus Moodle-Plattformen und akademischen Portalen mit exakt ausgearbeiteten Lösungen.","skills":["Python","LaTeX","KnowledgeBase","Education","Solver","TDD"]},{"id":"project-actedu","kind":"project","title":"Actedu","subtitle":"Globale graphbasierte Abbildung und Visualisierung von akademischen Wegen im Hochschulbereich, Voraussetzungen, Kursverläufen und Studiengangspfaden.","skills":["Rust","KnowledgeGraph","GraphTheory","Education","Visualization","TDD"]},{"id":"project-synergy","kind":"project","title":"Synergy","subtitle":"Interne Plattform des belgischen Bundesparlaments zum Durchsuchen, Erkunden und Befragen der parlamentarischen Archive.","summary":"Interne Plattform, die parlamentarischen Mitarbeitern ermöglicht, die Archive des belgischen Bundesparlaments zu durchsuchen, zu erkunden und zu befragen — angetrieben von einer Retrieval-Augmented-Pipeline mit zweisprachiger FR/NL-Unterstützung.","skills":["Python","Java","Spring Boot","RAG","AI"]},{"id":"project-fedrag-be","kind":"project","title":"fedrag-be","subtitle":"Offenes Bewertungsprotokoll, das Retrieval-Strategien auf dem Korpus des belgischen Senats vergleicht, mit Fokus auf zweisprachige FR/NL-Robustheit.","summary":"Offenes, reproduzierbares Protokoll, das Retrieval-Strategien auf dem zweisprachigen Senatskorpus benchmarkt und die FR/NL-Robustheit über die gesamte Retrieval-Pipeline misst.","skills":["RAG","Python","Evaluation","Benchmark","OCR","SentenceTransformers","Pandas"]},{"id":"project-acteble","kind":"project","title":"Acteble","subtitle":"Geolokalisierte soziale Plattform, die Menschen um gemeinsame Aktivitäten zusammenbringt: ein Rust-Backend, eine Offline-first-Flutter-App und eine React-Website.","summary":"Backend: modularer Monolith in Rust, gegliedert in Bounded Contexts mit hexagonaler Architektur, CQRS und einem ereignisgesteuerten Kern (Event Store, Outbox/Inbox), bereitgestellt über REST/JSON und gRPC-Streaming; eine PostGIS-Pipeline macht aus OpenStreetMap-Daten Routing-Graphen, die über ein CDN veröffentlicht werden, und eigene Dylint-Lints setzen die Architektur in der CI durch. App: Offline-first-Flutter-Client für iOS, Android, Web und Desktop — ein Melos-Monorepo mit Riverpod über einem verschlüsselten lokalen Speicher (Drift, SQLCipher), Ende-zu-Ende-Verschlüsselung über einen Rust-Kern (vodozemac via flutter_rust_bridge), Peer-to-Peer-Synchronisation per Bluetooth, MapLibre-Karten und Echtzeitmedien mit LiveKit. Website: React-Single-Page-Anwendung, mit Vite gebaut und mit i18next internationalisiert.","skills":["Rust","Tokio","Axum","Tonic","gRPC","Protobuf","SQLx","PostgreSQL","PostGIS","Redis","MinIO","LiveKit","OpenBao","Prometheus","Testcontainers","OpenStreetMap","Docker","Caddy","Dylint","DDD","HexagonalArchitecture","CQRS","EventDriven","Flutter","Dart","Melos","Riverpod","Drift","SQLite","SQLCipher","Dio","FlutterRustBridge","MapLibre","FlutterMap","Firebase","OfflineFirst","E2EE","Mobile","React","Vite","JavaScript","i18next","ReactRouter","ESLint","Vercel"]},{"id":"project-memoire-de-master","kind":"project","title":"Mémoire de master","organisation":"UMONS","subtitle":"Masterarbeit an der UMONS — die F&amp;E der Planungs-Engine von Acteble.","summary":"Masterarbeit « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », Service d'Algorithmique der UMONS — die F&amp;E der Planungs-Engine von Acteble. Mehrzielige Gruppenbildung unter räumlich-zeitlichen Bedingungen: NP-schwer per Reduktion von k-CLIQUE; zulässige Gruppen als Bicliquen aufgezählt (Close-by-One); ein iterativer Pareto-Solver mit Garantien für Terminierung und lokale Konvergenz; eine DSL, nach Python, MiniZinc und Rust kompiliert, mit bitidentischen Fronten, deren Rust-Ausgabe in der Acteble-API läuft. Verglichen mit CP-SAT, NSGA-II, MOEA/D und SPEA2 (Hypervolumen, IGD, 30 Seeds, Wilcoxon–Holm): signifikant vor MOEA/D bei jeder Größe, vor NSGA-II und SPEA2 ab 500 Nutzern.","skills":["Python","Rust","LaTeX","MiniZinc","ORTools","ConstraintProgramming","CombinatorialOptimization","MultiObjectiveOptimization","Pareto","DSL","MutationTesting"]},{"id":"project-emvi-app","kind":"project","title":"Emvi App","subtitle":"KI-gestützter visueller Assistent für sehbehinderte Menschen.","summary":"KI-gestützter visueller Assistent für sehbehinderte Menschen mit Beschreibung der Umgebung, OCR, Code-Scans (QR &amp; Barcodes) und einem angepassten Valhalla-Routing-System.","skills":["Flutter","Firebase","OpenAI","Valhalla","AI","Dart"]},{"id":"project-remi","kind":"project","title":"Remi","subtitle":"Reminiszenz-App für Menschen mit kognitiven Problemen.","summary":"Reminiszenz-Anwendung, die Menschen mit kognitiven Problemen ermöglicht, ihre Erinnerungen durch Beschreibungen ihrer Fotos mit Gesichtserkennung und LLMs wiederzuerlangen. DeepFace (Serengil) Pipeline.","skills":["Python","FastAPI","OpenAI","Whisper","DeepFace","PostgreSQL","SQLAlchemy"]},{"id":"project-myway","kind":"project","title":"MyWay","organisation":"Freelance","subtitle":"Bildungsmanager für Studierende. Nicht mehr gepflegt; Datenbank und Auth sind nicht verfügbar.","skills":["Angular","JavaScript","TypeScript","Express.js","API","UI/UX","SQL Server","Auth0","PayPal","Sequelize","Node.js","React"]},{"id":"project-vhauctions-ner-inventory-model","kind":"project","title":"VhAuctions NER Inventory Model","summary":"NER-ML-Modell zur Extraktion von Inventarobjekten aus einer Audiotranskription.","skills":["Python","SpaCy","Pandas","NumPy",".NET","NER"]},{"id":"project-vhauctions","kind":"project","title":"VhAuctions","summary":"Fuhrparkmanager für Auktionen.","skills":[".NET","C#","EntityFramework","React","TypeScript","Docker","Azure","OpenTelemetry","SQL Server"]},{"id":"project-kwalitijd","kind":"project","title":"Kwalitijd","summary":"Umfragemanager für Sportvereine und -verbände.","skills":[".NET","C#","Blazor","EntityFramework","xUnit","SQL Server","DDD"]},{"id":"project-webmenu","kind":"project","title":"WebMenu","summary":"QR-Code-basierte Kasse für HoReCa-Betriebe (Hotel/Restaurant/Café).","skills":[".NET","Flutter","SQL Server","QRCode"]},{"id":"course-algorithmique","kind":"course","title":"Algorithmique","organisation":"UMONS","subtitle":"Algorithmik","skills":["Algorithms","DataStructures","Complexity","Trees"]},{"id":"course-anglais-i","kind":"course","title":"Anglais I","organisation":"UMONS","subtitle":"Englisch I","skills":["English"]},{"id":"course-bases-de-donnees-i","kind":"course","title":"Bases de données I","organisation":"UMONS","subtitle":"Datenbanken I","skills":["SQL","RelationalAlgebra","Normalization","Indexing","NoSQL","BigData"]},{"id":"course-lecture-et-redaction-scientifique","kind":"course","title":"Lecture et rédaction scientifique","organisation":"UMONS","subtitle":"Wissenschaftliches Lesen und Schreiben","skills":["ScientificWriting","LiteratureReview"]},{"id":"course-mathematique","kind":"course","title":"Mathématique","organisation":"UMONS","subtitle":"Mathematik","skills":["GraphTheory","Combinatorics","Complexity","PropositionalLogic","PredicateLogic"]},{"id":"course-modelisation-logicielle","kind":"course","title":"Modélisation logicielle","organisation":"UMONS","subtitle":"Softwaremodellierung","skills":["Java","UML","DesignPatterns","UnitTesting","MockTesting","BDD"]},{"id":"course-reseaux","kind":"course","title":"Réseaux","organisation":"UMONS","subtitle":"Netzwerke","skills":["TCP/IP","HTTP","DNS","OSPF","BGP","Ethernet"]},{"id":"course-strategie-et-politiques-en-ressources-humaines","kind":"course","title":"Stratégie et politiques en ressources humaines","organisation":"UMONS","subtitle":"HR-Strategie und -Politik","skills":["HRM"]},{"id":"course-systemes-d-exploitation","kind":"course","title":"Systèmes d'exploitation","organisation":"UMONS","subtitle":"Betriebssysteme","skills":["Processes","Semaphores","Synchronization","MemoryManagement","FileSystems","Scheduling"]},{"id":"course-anglais-ii","kind":"course","title":"Anglais II","organisation":"UMONS","subtitle":"Englisch II","skills":["English"]},{"id":"course-bases-de-donnees-ii","kind":"course","title":"Bases de données II","organisation":"UMONS","subtitle":"Datenbanken II","skills":["XML","XSLT","XQuery","XPath","BaseX","DataMining","Weka"]},{"id":"course-ingenierie-de-logiciels-et-gestion-de-projets","kind":"course","title":"Ingénierie de logiciels et gestion de projets","organisation":"UMONS","subtitle":"Software-Engineering und Projektmanagement","skills":["Agile","Scrum","SoftwareEngineering"]},{"id":"course-intelligence-artificielle","kind":"course","title":"Intelligence artificielle","organisation":"UMONS","subtitle":"Künstliche Intelligenz","skills":["SearchAlgorithms","Metaheuristics","FirstOrderLogic","SupervisedLearning"]},{"id":"course-recherche-operationnelle-et-applications","kind":"course","title":"Recherche opérationnelle et applications","organisation":"UMONS","subtitle":"Operations Research und Anwendungen","skills":["OperationsResearch","LinearProgramming","IntegerProgramming","Duality"]},{"id":"course-structures-de-donnees","kind":"course","title":"Structures de données","organisation":"UMONS","subtitle":"Datenstrukturen","skills":["AVLTrees","BTrees","HashTables","Sorting","Complexity"]},{"id":"course-seminaires-d-informatique-en-veille-technologique","kind":"course","title":"Séminaires d'informatique en veille technologique","organisation":"UMONS","subtitle":"Informatikseminare zur Technologiebeobachtung","skills":["TechWatch"]},{"id":"course-cryptographie-et-securite-des-systemes-informatiques","kind":"course","title":"Cryptographie et sécurité des systèmes informatiques","organisation":"UMONS","subtitle":"Kryptografie und Systemsicherheit","skills":["Cryptography","Unix","NetworkSecurity","ApplicationSecurity"]},{"id":"course-ethique-et-droit-de-l-informatique","kind":"course","title":"Éthique et droit de l'informatique","organisation":"UMONS","subtitle":"Ethik und Informatikrecht","skills":["IntellectualProperty","DataProtection","GDPR"]},{"id":"course-structure-des-ordinateurs","kind":"course","title":"Structure des ordinateurs","organisation":"EPHEC","subtitle":"Rechnerstruktur","skills":["ComputerArchitecture","Binary","Hexadecimal","Hardware"]},{"id":"course-informatique-systeme-d-exploitation","kind":"course","title":"Informatique - Système d'exploitation","organisation":"EPHEC","subtitle":"Betriebssysteme","skills":["OperatingSystems","ShellScripting","SystemAdministration"]},{"id":"course-mathematique-appliquee-a-l-informatique","kind":"course","title":"Mathématique appliquée à l'informatique","organisation":"EPHEC","subtitle":"Mathematik für die Informatik","skills":["LinearAlgebra","GraphTheory","SetTheory","RelationalAlgebra","MathematicalLogic","Cryptography"]},{"id":"course-principes-algorithmiques-et-programmation","kind":"course","title":"Principes algorithmiques et programmation","organisation":"EPHEC","subtitle":"Algorithmische Grundlagen und Programmierung","skills":["Algorithms","DataTypes","ControlFlow","Programming"]},{"id":"course-principes-d-analyse-informatique","kind":"course","title":"Principes d'analyse informatique","organisation":"EPHEC","subtitle":"Grundlagen der Systemanalyse","skills":["UML","EntityRelationship","SystemsAnalysis"]},{"id":"course-information-et-communication-professionnelles","kind":"course","title":"Information et communication professionnelles","organisation":"EPHEC","subtitle":"Berufliche Information und Kommunikation","skills":["ProfessionalCommunication"]},{"id":"course-web-principes-de-base","kind":"course","title":"Web : principes de base","organisation":"EPHEC","subtitle":"Web: Grundlagen","skills":["HTML","CSS","URL","DNS","WebHosting"]},{"id":"course-initiation-aux-bases-de-donnees","kind":"course","title":"Initiation aux bases de données","organisation":"EPHEC","subtitle":"Einführung in Datenbanken","skills":["SQL","RelationalModel","Joins","Indexing"]},{"id":"course-gestion-et-exploitation-de-bases-de-donnees","kind":"course","title":"Gestion et exploitation de bases de données","organisation":"EPHEC","subtitle":"Datenbankverwaltung und -betrieb","skills":["Triggers","StoredProcedures","DataWarehouse","QueryOptimization"]},{"id":"course-programmation-orientee-objet","kind":"course","title":"Programmation orientée objet","organisation":"EPHEC","subtitle":"Objektorientierte Programmierung","skills":["OOP","Inheritance","Polymorphism","Encapsulation","Overloading"]},{"id":"course-projet-d-analyse-et-de-conception","kind":"course","title":"Projet d'analyse et de conception","organisation":"EPHEC","subtitle":"Analyse- und Entwurfsprojekt","skills":["SystemsAnalysis","SoftwareDesign","Modelling"]},{"id":"course-techniques-de-gestion-de-projet","kind":"course","title":"Techniques de gestion de projet","organisation":"EPHEC","subtitle":"Projektmanagementtechniken","skills":["ProjectManagement"]},{"id":"course-elements-de-statistique","kind":"course","title":"Éléments de statistique","organisation":"EPHEC","subtitle":"Grundlagen der Statistik","skills":["Statistics"]},{"id":"course-projet-de-developpement-web","kind":"course","title":"Projet de développement web","organisation":"EPHEC","subtitle":"Webentwicklungsprojekt","skills":["JavaScript","AJAX","JSON","XML","ClientSideScripting"]},{"id":"course-notions-de-e-business","kind":"course","title":"Notions de e-business","organisation":"EPHEC","subtitle":"Grundlagen des E-Business","skills":["Ebusiness"]},{"id":"course-projet-de-developpement-sgbd","kind":"course","title":"Projet de développement SGBD","organisation":"EPHEC","subtitle":"DBMS-Entwicklungsprojekt","skills":["DataAccessLayer","Transactions","DatabaseProgramming","Debugging"]},{"id":"course-bases-des-reseaux","kind":"course","title":"Bases des réseaux","organisation":"EPHEC","subtitle":"Netzwerkgrundlagen","skills":["Ethernet","MAC","TCP/IP","Networking"]},{"id":"course-organisation-des-entreprises-et-elements-de-management","kind":"course","title":"Organisation des entreprises et éléments de management","organisation":"EPHEC","subtitle":"Unternehmensorganisation und Management","skills":["Management"]},{"id":"course-produits-logiciels-de-gestion-integres","kind":"course","title":"Produits logiciels de gestion intégrés","organisation":"EPHEC","subtitle":"Integrierte Unternehmenssoftware","skills":["ERP"]},{"id":"course-projet-d-integration-de-developpement","kind":"course","title":"Projet d'intégration de développement","organisation":"EPHEC","subtitle":"Entwicklungsintegrationsprojekt","skills":["AJAX","JSON","XML","SQLInjection","XSS","Caching","URLRewriting"]},{"id":"course-veille-technologique","kind":"course","title":"Veille technologique","organisation":"EPHEC","subtitle":"Technologiebeobachtung","skills":["TechWatch"]},{"id":"course-administration-gestion-et-securisation-des-reseaux","kind":"course","title":"Administration, gestion et sécurisation des réseaux","organisation":"EPHEC","subtitle":"Netzwerkadministration und -sicherheit","skills":["NetworkAdministration","NetworkSecurity","ApplicationServer"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue1","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE1","organisation":"EPHEC","subtitle":"Angewandte Sprache Hochschulbildung UE1","skills":["ProfessionalCommunication"]},{"id":"course-langue-en-situation-appliquee-a-l-enseignement-superieur-ue2","kind":"course","title":"Langue en situation appliquée à l'enseignement supérieur UE2","organisation":"EPHEC","subtitle":"Angewandte Sprache Hochschulbildung UE2","skills":["ProfessionalCommunication"]},{"id":"course-economie-i","kind":"course","title":"Économie I","organisation":"USL-B","subtitle":"Volkswirtschaftslehre I","skills":["Microeconomics","CompetitiveMarkets","FirmBehaviour","MarketFailure"]},{"id":"course-economie-ii","kind":"course","title":"Économie II","organisation":"USL-B","subtitle":"Volkswirtschaftslehre II","skills":["ImperfectCompetition","Macroeconomics","NationalIncome","MonetaryMarket"]},{"id":"course-science-politique","kind":"course","title":"Science politique","organisation":"USL-B","subtitle":"Politikwissenschaft","skills":["PoliticalScience","Power","State","Democracy"]},{"id":"course-seminaire-penser-le-social","kind":"course","title":"Séminaire : penser le social","organisation":"USL-B","subtitle":"Seminar: das Soziale denken","skills":["Epistemology","Durkheim","Weber","Marx"]},{"id":"course-seminaire-principes-et-methodes-en-sciences-sociales","kind":"course","title":"Séminaire : principes et méthodes en sciences sociales","organisation":"USL-B","subtitle":"Seminar: Prinzipien und Methoden der Sozialwissenschaften","skills":["AcademicWriting","Citation","Epistemology"]},{"id":"course-socio-economie-des-medias","kind":"course","title":"Socio-économie des médias","organisation":"USL-B","subtitle":"Sozioökonomie der Medien","skills":["MediaEconomics","Advertising","MediaRegulation","WebEconomy"]},{"id":"course-anglais-i-saint-louis","kind":"course","title":"Anglais I (Saint-Louis)","organisation":"USL-B","subtitle":"Englisch I","skills":["English"]},{"id":"course-neerlandais-i","kind":"course","title":"Néerlandais I","organisation":"USL-B","subtitle":"Niederländisch I","skills":["Dutch"]},{"id":"volunteer-umons-studierendenvertreter","kind":"volunteer","title":"Studierendenvertreter","organisation":"UMons","skills":[]},{"id":"volunteer-umons-buddy-tandemons","kind":"volunteer","title":"Buddy TandeMons","organisation":"UMons","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-studierendenvertreter","kind":"volunteer","title":"Studierendenvertreter","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]},{"id":"volunteer-ephec-ecole-superieure-de-promotion-sociale-tutor","kind":"volunteer","title":"Tutor","organisation":"EPHEC École Supérieure de Promotion Sociale","skills":[]}],"skills":[{"skill":"Rust","uses":38,"href":"#skill-rust"},{"skill":"TDD","uses":34,"href":"#skill-tdd"},{"skill":"Python","uses":15,"href":"#skill-python"},{"skill":"DDD","uses":12,"href":"#skill-ddd"},{"skill":".NET","uses":10,"href":"#skill-net"},{"skill":"HexagonalArchitecture","uses":9,"href":"#skill-hexagonalarchitecture"},{"skill":"SQL Server","uses":8,"href":"#skill-sql-server"},{"skill":"Flutter","uses":7,"href":"#skill-flutter"},{"skill":"Dioxus","uses":6,"href":"#skill-dioxus"},{"skill":"LaTeX","uses":6,"href":"#skill-latex"},{"skill":"RAG","uses":6,"href":"#skill-rag"},{"skill":"Automation","uses":5,"href":"#skill-automation"},{"skill":"Pandas","uses":5,"href":"#skill-pandas"},{"skill":"React","uses":5,"href":"#skill-react"},{"skill":"Agents","uses":4,"href":"#skill-agents"},{"skill":"Dart","uses":4,"href":"#skill-dart"},{"skill":"Docker","uses":4,"href":"#skill-docker"},{"skill":"EntityFramework","uses":4,"href":"#skill-entityframework"},{"skill":"InformationRetrieval","uses":4,"href":"#skill-informationretrieval"},{"skill":"Java","uses":4,"href":"#skill-java"},{"skill":"NumPy","uses":4,"href":"#skill-numpy"},{"skill":"OpenAI","uses":4,"href":"#skill-openai"},{"skill":"PostgreSQL","uses":4,"href":"#skill-postgresql"},{"skill":"TypeScript","uses":4,"href":"#skill-typescript"},{"skill":"C#","uses":3,"href":"#skill-c"},{"skill":"CleanArchitecture","uses":3,"href":"#skill-cleanarchitecture"},{"skill":"CLI","uses":3,"href":"#skill-cli"},{"skill":"Complexity","uses":3,"href":"#skill-complexity"},{"skill":"DNS","uses":3,"href":"#skill-dns"},{"skill":"English","uses":3,"href":"#skill-english"},{"skill":"Firebase","uses":3,"href":"#skill-firebase"},{"skill":"GraphTheory","uses":3,"href":"#skill-graphtheory"},{"skill":"JavaScript","uses":3,"href":"#skill-javascript"},{"skill":"MutationTesting","uses":3,"href":"#skill-mutationtesting"},{"skill":"NLP","uses":3,"href":"#skill-nlp"},{"skill":"Observability","uses":3,"href":"#skill-observability"},{"skill":"ProfessionalCommunication","uses":3,"href":"#skill-professionalcommunication"},{"skill":"Scheduling","uses":3,"href":"#skill-scheduling"},{"skill":"SQL","uses":3,"href":"#skill-sql"},{"skill":"SQLite","uses":3,"href":"#skill-sqlite"},{"skill":"XML","uses":3,"href":"#skill-xml"},{"skill":"AI","uses":2,"href":"#skill-ai"},{"skill":"AJAX","uses":2,"href":"#skill-ajax"},{"skill":"Algorithms","uses":2,"href":"#skill-algorithms"},{"skill":"Angular","uses":2,"href":"#skill-angular"},{"skill":"API","uses":2,"href":"#skill-api"},{"skill":"Auth0","uses":2,"href":"#skill-auth0"},{"skill":"Axum","uses":2,"href":"#skill-axum"},{"skill":"Azure","uses":2,"href":"#skill-azure"},{"skill":"Blazor","uses":2,"href":"#skill-blazor"},{"skill":"Build","uses":2,"href":"#skill-build"},{"skill":"Cryptography","uses":2,"href":"#skill-cryptography"},{"skill":"CSS","uses":2,"href":"#skill-css"},{"skill":"DeepFace","uses":2,"href":"#skill-deepface"},{"skill":"DuckDB","uses":2,"href":"#skill-duckdb"},{"skill":"Education","uses":2,"href":"#skill-education"},{"skill":"Epistemology","uses":2,"href":"#skill-epistemology"},{"skill":"Ethernet","uses":2,"href":"#skill-ethernet"},{"skill":"Express.js","uses":2,"href":"#skill-express-js"},{"skill":"FastAPI","uses":2,"href":"#skill-fastapi"},{"skill":"Git","uses":2,"href":"#skill-git"},{"skill":"GitHub","uses":2,"href":"#skill-github"},{"skill":"HTML","uses":2,"href":"#skill-html"},{"skill":"Indexing","uses":2,"href":"#skill-indexing"},{"skill":"iOS","uses":2,"href":"#skill-ios"},{"skill":"JSON","uses":2,"href":"#skill-json"},{"skill":"MultiObjectiveOptimization","uses":2,"href":"#skill-multiobjectiveoptimization"},{"skill":"NetworkSecurity","uses":2,"href":"#skill-networksecurity"},{"skill":"Node.js","uses":2,"href":"#skill-node-js"},{"skill":"OCR","uses":2,"href":"#skill-ocr"},{"skill":"OpenTelemetry","uses":2,"href":"#skill-opentelemetry"},{"skill":"Pareto","uses":2,"href":"#skill-pareto"},{"skill":"RelationalAlgebra","uses":2,"href":"#skill-relationalalgebra"},{"skill":"SciPy","uses":2,"href":"#skill-scipy"},{"skill":"SentenceTransformers","uses":2,"href":"#skill-sentencetransformers"},{"skill":"Sequelize","uses":2,"href":"#skill-sequelize"},{"skill":"SpaCy","uses":2,"href":"#skill-spacy"},{"skill":"SQLAlchemy","uses":2,"href":"#skill-sqlalchemy"},{"skill":"SystemsAnalysis","uses":2,"href":"#skill-systemsanalysis"},{"skill":"TCP/IP","uses":2,"href":"#skill-tcp-ip"},{"skill":"TechWatch","uses":2,"href":"#skill-techwatch"},{"skill":"Telemetry","uses":2,"href":"#skill-telemetry"},{"skill":"Tokio","uses":2,"href":"#skill-tokio"},{"skill":"UI/UX","uses":2,"href":"#skill-ui-ux"},{"skill":"UML","uses":2,"href":"#skill-uml"},{"skill":"Valhalla","uses":2,"href":"#skill-valhalla"},{"skill":"WebAssembly","uses":2,"href":"#skill-webassembly"},{"skill":"Whisper","uses":2,"href":"#skill-whisper"},{"skill":"xUnit","uses":2,"href":"#skill-xunit"},{"skill":"AcademicWriting","uses":1,"href":"#skill-academicwriting"},{"skill":"Advertising","uses":1,"href":"#skill-advertising"},{"skill":"Age","uses":1,"href":"#skill-age"},{"skill":"Agile","uses":1,"href":"#skill-agile"},{"skill":"Android","uses":1,"href":"#skill-android"},{"skill":"Ansible","uses":1,"href":"#skill-ansible"},{"skill":"ApplicationSecurity","uses":1,"href":"#skill-applicationsecurity"},{"skill":"ApplicationServer","uses":1,"href":"#skill-applicationserver"},{"skill":"AVLTrees","uses":1,"href":"#skill-avltrees"},{"skill":"BaseX","uses":1,"href":"#skill-basex"},{"skill":"BDD","uses":1,"href":"#skill-bdd"},{"skill":"BEIR","uses":1,"href":"#skill-beir"},{"skill":"Benchmark","uses":1,"href":"#skill-benchmark"},{"skill":"BGP","uses":1,"href":"#skill-bgp"},{"skill":"BigData","uses":1,"href":"#skill-bigdata"},{"skill":"Binary","uses":1,"href":"#skill-binary"},{"skill":"BM25F","uses":1,"href":"#skill-bm25f"},{"skill":"BrierScore","uses":1,"href":"#skill-brierscore"},{"skill":"BTrees","uses":1,"href":"#skill-btrees"},{"skill":"build123d","uses":1,"href":"#skill-build123d"},{"skill":"Caching","uses":1,"href":"#skill-caching"},{"skill":"Caddy","uses":1,"href":"#skill-caddy"},{"skill":"Cargo","uses":1,"href":"#skill-cargo"},{"skill":"Charting","uses":1,"href":"#skill-charting"},{"skill":"CI/CD","uses":1,"href":"#skill-ci-cd"},{"skill":"Citation","uses":1,"href":"#skill-citation"},{"skill":"CleanCode","uses":1,"href":"#skill-cleancode"},{"skill":"ClientSideScripting","uses":1,"href":"#skill-clientsidescripting"},{"skill":"CloudflareWorkers","uses":1,"href":"#skill-cloudflareworkers"},{"skill":"CombinatorialOptimization","uses":1,"href":"#skill-combinatorialoptimization"},{"skill":"Combinatorics","uses":1,"href":"#skill-combinatorics"},{"skill":"CompetitiveMarkets","uses":1,"href":"#skill-competitivemarkets"},{"skill":"ComputerArchitecture","uses":1,"href":"#skill-computerarchitecture"},{"skill":"Configuration","uses":1,"href":"#skill-configuration"},{"skill":"ConstraintProgramming","uses":1,"href":"#skill-constraintprogramming"},{"skill":"ControlFlow","uses":1,"href":"#skill-controlflow"},{"skill":"CQRS","uses":1,"href":"#skill-cqrs"},{"skill":"DAG","uses":1,"href":"#skill-dag"},{"skill":"DataAccessLayer","uses":1,"href":"#skill-dataaccesslayer"},{"skill":"DatabaseProgramming","uses":1,"href":"#skill-databaseprogramming"},{"skill":"DataMining","uses":1,"href":"#skill-datamining"},{"skill":"DataProtection","uses":1,"href":"#skill-dataprotection"},{"skill":"DataStructures","uses":1,"href":"#skill-datastructures"},{"skill":"DataTypes","uses":1,"href":"#skill-datatypes"},{"skill":"DataWarehouse","uses":1,"href":"#skill-datawarehouse"},{"skill":"Debugging","uses":1,"href":"#skill-debugging"},{"skill":"Democracy","uses":1,"href":"#skill-democracy"},{"skill":"DesignPatterns","uses":1,"href":"#skill-designpatterns"},{"skill":"Desktop","uses":1,"href":"#skill-desktop"},{"skill":"Dio","uses":1,"href":"#skill-dio"},{"skill":"Drift","uses":1,"href":"#skill-drift"},{"skill":"DSL","uses":1,"href":"#skill-dsl"},{"skill":"Duality","uses":1,"href":"#skill-duality"},{"skill":"DurableObjects","uses":1,"href":"#skill-durableobjects"},{"skill":"Durkheim","uses":1,"href":"#skill-durkheim"},{"skill":"Dutch","uses":1,"href":"#skill-dutch"},{"skill":"Dylint","uses":1,"href":"#skill-dylint"},{"skill":"E2EE","uses":1,"href":"#skill-e2ee"},{"skill":"Ebusiness","uses":1,"href":"#skill-ebusiness"},{"skill":"EloRating","uses":1,"href":"#skill-elorating"},{"skill":"Email","uses":1,"href":"#skill-email"},{"skill":"Encapsulation","uses":1,"href":"#skill-encapsulation"},{"skill":"EnsembleModel","uses":1,"href":"#skill-ensemblemodel"},{"skill":"EntityRelationship","uses":1,"href":"#skill-entityrelationship"},{"skill":"ERP","uses":1,"href":"#skill-erp"},{"skill":"ESLint","uses":1,"href":"#skill-eslint"},{"skill":"Evaluation","uses":1,"href":"#skill-evaluation"},{"skill":"EventDriven","uses":1,"href":"#skill-eventdriven"},{"skill":"FileEngine","uses":1,"href":"#skill-fileengine"},{"skill":"FileSystems","uses":1,"href":"#skill-filesystems"},{"skill":"FirmBehaviour","uses":1,"href":"#skill-firmbehaviour"},{"skill":"FirstOrderLogic","uses":1,"href":"#skill-firstorderlogic"},{"skill":"FlutterMap","uses":1,"href":"#skill-fluttermap"},{"skill":"FlutterRustBridge","uses":1,"href":"#skill-flutterrustbridge"},{"skill":"Forecasting","uses":1,"href":"#skill-forecasting"},{"skill":"GDPR","uses":1,"href":"#skill-gdpr"},{"skill":"GitLab","uses":1,"href":"#skill-gitlab"},{"skill":"Gmsh","uses":1,"href":"#skill-gmsh"},{"skill":"gRPC","uses":1,"href":"#skill-grpc"},{"skill":"Hardware","uses":1,"href":"#skill-hardware"},{"skill":"HashTables","uses":1,"href":"#skill-hashtables"},{"skill":"Hexadecimal","uses":1,"href":"#skill-hexadecimal"},{"skill":"HRM","uses":1,"href":"#skill-hrm"},{"skill":"HTTP","uses":1,"href":"#skill-http"},{"skill":"i18n","uses":1,"href":"#skill-i18n"},{"skill":"i18next","uses":1,"href":"#skill-i18next"},{"skill":"IMAP","uses":1,"href":"#skill-imap"},{"skill":"ImperfectCompetition","uses":1,"href":"#skill-imperfectcompetition"},{"skill":"Inheritance","uses":1,"href":"#skill-inheritance"},{"skill":"IntegerProgramming","uses":1,"href":"#skill-integerprogramming"},{"skill":"IntellectualProperty","uses":1,"href":"#skill-intellectualproperty"},{"skill":"Joins","uses":1,"href":"#skill-joins"},{"skill":"JS","uses":1,"href":"#skill-js"},{"skill":"Keychain","uses":1,"href":"#skill-keychain"},{"skill":"KnowledgeBase","uses":1,"href":"#skill-knowledgebase"},{"skill":"KnowledgeGraph","uses":1,"href":"#skill-knowledgegraph"},{"skill":"Law","uses":1,"href":"#skill-law"},{"skill":"Lean4","uses":1,"href":"#skill-lean4"},{"skill":"LearningToRank","uses":1,"href":"#skill-learningtorank"},{"skill":"Leitner","uses":1,"href":"#skill-leitner"},{"skill":"LinearAlgebra","uses":1,"href":"#skill-linearalgebra"},{"skill":"LinearProgramming","uses":1,"href":"#skill-linearprogramming"},{"skill":"LinkGrammar","uses":1,"href":"#skill-linkgrammar"},{"skill":"LiteratureReview","uses":1,"href":"#skill-literaturereview"},{"skill":"LiveKit","uses":1,"href":"#skill-livekit"},{"skill":"MAC","uses":1,"href":"#skill-mac"},{"skill":"Macroeconomics","uses":1,"href":"#skill-macroeconomics"},{"skill":"Management","uses":1,"href":"#skill-management"},{"skill":"Manifold","uses":1,"href":"#skill-manifold"},{"skill":"MapLibre","uses":1,"href":"#skill-maplibre"},{"skill":"MarketFailure","uses":1,"href":"#skill-marketfailure"},{"skill":"Marx","uses":1,"href":"#skill-marx"},{"skill":"MathematicalLogic","uses":1,"href":"#skill-mathematicallogic"},{"skill":"Mathematics","uses":1,"href":"#skill-mathematics"},{"skill":"Mathlib","uses":1,"href":"#skill-mathlib"},{"skill":"Media","uses":1,"href":"#skill-media"},{"skill":"MediaEconomics","uses":1,"href":"#skill-mediaeconomics"},{"skill":"MediaRegulation","uses":1,"href":"#skill-mediaregulation"},{"skill":"Melos","uses":1,"href":"#skill-melos"},{"skill":"MemoryManagement","uses":1,"href":"#skill-memorymanagement"},{"skill":"Metadata","uses":1,"href":"#skill-metadata"},{"skill":"Metaheuristics","uses":1,"href":"#skill-metaheuristics"},{"skill":"Microeconomics","uses":1,"href":"#skill-microeconomics"},{"skill":"MinIO","uses":1,"href":"#skill-minio"},{"skill":"MiniZinc","uses":1,"href":"#skill-minizinc"},{"skill":"Mobile","uses":1,"href":"#skill-mobile"},{"skill":"MockTesting","uses":1,"href":"#skill-mocktesting"},{"skill":"Modelling","uses":1,"href":"#skill-modelling"},{"skill":"MonetaryMarket","uses":1,"href":"#skill-monetarymarket"},{"skill":"Naming","uses":1,"href":"#skill-naming"},{"skill":"NationalIncome","uses":1,"href":"#skill-nationalincome"},{"skill":"NER","uses":1,"href":"#skill-ner"},{"skill":"NetworkAdministration","uses":1,"href":"#skill-networkadministration"},{"skill":"Networking","uses":1,"href":"#skill-networking"},{"skill":"Normalization","uses":1,"href":"#skill-normalization"},{"skill":"NoSQL","uses":1,"href":"#skill-nosql"},{"skill":"NSGA2","uses":1,"href":"#skill-nsga2"},{"skill":"OfflineFirst","uses":1,"href":"#skill-offlinefirst"},{"skill":"OOP","uses":1,"href":"#skill-oop"},{"skill":"OpenBao","uses":1,"href":"#skill-openbao"},{"skill":"OpenCASCADE","uses":1,"href":"#skill-opencascade"},{"skill":"OpenSource","uses":1,"href":"#skill-opensource"},{"skill":"OpenStreetMap","uses":1,"href":"#skill-openstreetmap"},{"skill":"OpenTofu","uses":1,"href":"#skill-opentofu"},{"skill":"OperatingSystems","uses":1,"href":"#skill-operatingsystems"},{"skill":"OperationsResearch","uses":1,"href":"#skill-operationsresearch"},{"skill":"Optimization","uses":1,"href":"#skill-optimization"},{"skill":"Optuna","uses":1,"href":"#skill-optuna"},{"skill":"Orchestration","uses":1,"href":"#skill-orchestration"},{"skill":"ORTools","uses":1,"href":"#skill-ortools"},{"skill":"OSPF","uses":1,"href":"#skill-ospf"},{"skill":"Overloading","uses":1,"href":"#skill-overloading"},{"skill":"Parquet","uses":1,"href":"#skill-parquet"},{"skill":"PayPal","uses":1,"href":"#skill-paypal"},{"skill":"PHP","uses":1,"href":"#skill-php"},{"skill":"PoissonModel","uses":1,"href":"#skill-poissonmodel"},{"skill":"PoliticalScience","uses":1,"href":"#skill-politicalscience"},{"skill":"Polymorphism","uses":1,"href":"#skill-polymorphism"},{"skill":"PostGIS","uses":1,"href":"#skill-postgis"},{"skill":"Power","uses":1,"href":"#skill-power"},{"skill":"PredicateLogic","uses":1,"href":"#skill-predicatelogic"},{"skill":"Processes","uses":1,"href":"#skill-processes"},{"skill":"Programming","uses":1,"href":"#skill-programming"},{"skill":"ProjectManagement","uses":1,"href":"#skill-projectmanagement"},{"skill":"Prolog","uses":1,"href":"#skill-prolog"},{"skill":"Prometheus","uses":1,"href":"#skill-prometheus"},{"skill":"PropositionalLogic","uses":1,"href":"#skill-propositionallogic"},{"skill":"Protobuf","uses":1,"href":"#skill-protobuf"},{"skill":"QRCode","uses":1,"href":"#skill-qrcode"},{"skill":"QueryOptimization","uses":1,"href":"#skill-queryoptimization"},{"skill":"Ratatui","uses":1,"href":"#skill-ratatui"},{"skill":"ReactRouter","uses":1,"href":"#skill-reactrouter"},{"skill":"Redis","uses":1,"href":"#skill-redis"},{"skill":"RelationalModel","uses":1,"href":"#skill-relationalmodel"},{"skill":"Riverpod","uses":1,"href":"#skill-riverpod"},{"skill":"Scaffolding","uses":1,"href":"#skill-scaffolding"},{"skill":"ScientificComputing","uses":1,"href":"#skill-scientificcomputing"},{"skill":"ScientificWriting","uses":1,"href":"#skill-scientificwriting"},{"skill":"Scrum","uses":1,"href":"#skill-scrum"},{"skill":"SearchAlgorithms","uses":1,"href":"#skill-searchalgorithms"},{"skill":"Security","uses":1,"href":"#skill-security"},{"skill":"Semaphores","uses":1,"href":"#skill-semaphores"},{"skill":"SetTheory","uses":1,"href":"#skill-settheory"},{"skill":"ShellScripting","uses":1,"href":"#skill-shellscripting"},{"skill":"SM2","uses":1,"href":"#skill-sm2"},{"skill":"SoftwareDesign","uses":1,"href":"#skill-softwaredesign"},{"skill":"SoftwareEngineering","uses":1,"href":"#skill-softwareengineering"},{"skill":"Solver","uses":1,"href":"#skill-solver"},{"skill":"Sorting","uses":1,"href":"#skill-sorting"},{"skill":"SpacedRepetition","uses":1,"href":"#skill-spacedrepetition"},{"skill":"spaCy","uses":1,"href":"#skill-spacy-2"},{"skill":"Spring Boot","uses":1,"href":"#skill-spring-boot"},{"skill":"SQLCipher","uses":1,"href":"#skill-sqlcipher"},{"skill":"SQLInjection","uses":1,"href":"#skill-sqlinjection"},{"skill":"SQLx","uses":1,"href":"#skill-sqlx"},{"skill":"SSH","uses":1,"href":"#skill-ssh"},{"skill":"State","uses":1,"href":"#skill-state"},{"skill":"Statistics","uses":1,"href":"#skill-statistics"},{"skill":"StoredProcedures","uses":1,"href":"#skill-storedprocedures"},{"skill":"Stow","uses":1,"href":"#skill-stow"},{"skill":"SupervisedLearning","uses":1,"href":"#skill-supervisedlearning"},{"skill":"SymbolicAI","uses":1,"href":"#skill-symbolicai"},{"skill":"SymPy","uses":1,"href":"#skill-sympy"},{"skill":"Synchronization","uses":1,"href":"#skill-synchronization"},{"skill":"SystemAdministration","uses":1,"href":"#skill-systemadministration"},{"skill":"SystemsProgramming","uses":1,"href":"#skill-systemsprogramming"},{"skill":"Tatoeba","uses":1,"href":"#skill-tatoeba"},{"skill":"Testcontainers","uses":1,"href":"#skill-testcontainers"},{"skill":"ThreeJS","uses":1,"href":"#skill-threejs"},{"skill":"TLS","uses":1,"href":"#skill-tls"},{"skill":"TOML","uses":1,"href":"#skill-toml"},{"skill":"Tonic","uses":1,"href":"#skill-tonic"},{"skill":"Transactions","uses":1,"href":"#skill-transactions"},{"skill":"Trees","uses":1,"href":"#skill-trees"},{"skill":"Triggers","uses":1,"href":"#skill-triggers"},{"skill":"TypeSystem","uses":1,"href":"#skill-typesystem"},{"skill":"UI","uses":1,"href":"#skill-ui"},{"skill":"UnitTesting","uses":1,"href":"#skill-unittesting"},{"skill":"Unix","uses":1,"href":"#skill-unix"},{"skill":"URL","uses":1,"href":"#skill-url"},{"skill":"URLRewriting","uses":1,"href":"#skill-urlrewriting"},{"skill":"Vercel","uses":1,"href":"#skill-vercel"},{"skill":"Visualization","uses":1,"href":"#skill-visualization"},{"skill":"Vite","uses":1,"href":"#skill-vite"},{"skill":"WalkForwardBacktest","uses":1,"href":"#skill-walkforwardbacktest"},{"skill":"WebEconomy","uses":1,"href":"#skill-webeconomy"},{"skill":"Weber","uses":1,"href":"#skill-weber"},{"skill":"WebHosting","uses":1,"href":"#skill-webhosting"},{"skill":"Weka","uses":1,"href":"#skill-weka"},{"skill":"WireGuard","uses":1,"href":"#skill-wireguard"},{"skill":"WordNet","uses":1,"href":"#skill-wordnet"},{"skill":"XPath","uses":1,"href":"#skill-xpath"},{"skill":"XQuery","uses":1,"href":"#skill-xquery"},{"skill":"XSLT","uses":1,"href":"#skill-xslt"},{"skill":"XSS","uses":1,"href":"#skill-xss"}],"kinds":{"work":"Berufserfahrung","education":"Ausbildung","project":"Projekte","course":"Lehreinheiten","volunteer":"Ehrenamt","competition":"Veranstaltungen"},"groups":{"skills":"Kompetenzen","entries":"Einträge"},"actions":[{"label":"English","hint":"Sprache","href":"/assets/data/resume-en.html"},{"label":"Français","hint":"Sprache","href":"/assets/data/resume-fr.html"},{"label":"Nederlands","hint":"Sprache","href":"/assets/data/resume-nl.html"},{"label":"Español","hint":"Sprache","href":"/assets/data/resume-es.html"},{"label":"中文","hint":"Sprache","href":"/assets/data/resume-zh.html"},{"label":"Thema wechseln","press":"#theme-toggle"},{"label":"Lebenslauf herunterladen","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_de.pdf"},{"label":"Zeitleiste herunterladen","hint":"PDF","href":"/assets/cv/cv_grosjean_baptiste_timeline_de.pdf"}]}</index>
       </search>
       <ticks>
         <tick>
@@ -2292,8 +2406,8 @@
         <lane>
           <kind>work</kind>
           <label>Berufserfahrung</label>
-          <rows>24</rows>
-          <printRows>24</printRows>
+          <rows>42</rows>
+          <printRows>42</printRows>
           <foldRows>15</foldRows>
           <groups>
             <group>
@@ -2370,18 +2484,18 @@
               <left>91.79%</left>
               <width>8.21%</width>
               <row>0</row>
-              <rows>21</rows>
+              <rows>39</rows>
               <printRow>0</printRow>
-              <printRows>21</printRows>
+              <printRows>39</printRows>
               <foldRow>0</foldRow>
               <foldRows>12</foldRows>
             </group>
             <group>
               <left>93.75%</left>
               <width>3.82%</width>
-              <row>21</row>
+              <row>39</row>
               <rows>3</rows>
-              <printRow>21</printRow>
+              <printRow>39</printRow>
               <printRows>3</printRows>
               <foldRow>12</foldRow>
               <foldRows>3</foldRows>
@@ -2984,6 +3098,63 @@
             </bar>
             <bar>
               <target>work-acteble-grunder</target>
+              <entry>project-actautoma</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actautoma</name>
+              <caption>Actautoma · Bibliothek</caption>
+              <uses>rust github gitlab automation tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>Bibliothek · Autor</detail>
+              <summary>Rust-Bibliothek, die die Werkzeuge von Repository-Plattformen steuert (gh für GitHub, glab für GitLab), mit einem Befehl, um ein Repository überall dort umzubenennen, wo es referenziert wird.</summary>
+              <skills>Rust · GitHub · GitLab · Automation · TDD</skills>
+              <label>Actautoma — Bibliothek · Autor — Nov. 2026 – Heute</label>
+              <left>99.65%</left>
+              <width>0.35%</width>
+              <row>14</row>
+              <printRow>14</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actit</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actit</name>
+              <caption>Actit · CLI</caption>
+              <uses>rust informationretrieval rag tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>CLI · Autor</detail>
+              <summary>Beantwortet „Gibt es für diesen Bedarf schon ein Werkzeug?“ allein aus Actindexer und KAG: keine andere Suchmaschine und kein LLM.</summary>
+              <skills>Rust · InformationRetrieval · RAG · TDD</skills>
+              <label>Actit — CLI · Autor — Nov. 2026 – Heute</label>
+              <left>99.65%</left>
+              <width>0.35%</width>
+              <row>15</row>
+              <printRow>15</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actname</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actname</name>
+              <caption>Actname · CLI</caption>
+              <uses>rust nlp naming tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>CLI · Autor</detail>
+              <summary>Deterministische, offline-first semantische Namensgebungs-Engine für Projekte.</summary>
+              <skills>Rust · NLP · Naming · TDD</skills>
+              <label>Actname — CLI · Autor — Nov. 2026 – Heute</label>
+              <left>99.65%</left>
+              <width>0.35%</width>
+              <row>16</row>
+              <printRow>16</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
               <entry>project-actsessions</entry>
               <kind>project</kind>
               <depth>1</depth>
@@ -2997,8 +3168,8 @@
               <label>Actsessions — CLI · Autor — Nov. 2026 – Heute</label>
               <left>99.66%</left>
               <width>0.34%</width>
-              <row>14</row>
-              <printRow>14</printRow>
+              <row>17</row>
+              <printRow>17</printRow>
               <part>true</part>
             </bar>
             <bar>
@@ -3016,8 +3187,8 @@
               <label>Actrepo — CLI · Autor — Nov. 2026 – Heute</label>
               <left>99.68%</left>
               <width>0.32%</width>
-              <row>15</row>
-              <printRow>15</printRow>
+              <row>18</row>
+              <printRow>18</printRow>
               <part>true</part>
             </bar>
             <bar>
@@ -3035,8 +3206,27 @@
               <label>Actusext — CLI · Autor — Nov. 2026 – Heute</label>
               <left>99.68%</left>
               <width>0.32%</width>
-              <row>16</row>
-              <printRow>16</printRow>
+              <row>19</row>
+              <printRow>19</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actcast</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actcast</name>
+              <caption>Actcast · Orchestrator</caption>
+              <uses>rust orchestration media automation</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>Orchestrator · Autor</detail>
+              <summary>Orchestrator des Multimedia- und Download-Stacks des Acteble-Ökosystems: startet, stoppt und prüft die Anwendungen deklarativ und reagiert auf Änderungen ihrer Indexer.</summary>
+              <skills>Rust · Orchestration · Media · Automation</skills>
+              <label>Actcast — Orchestrator · Autor — Nov. 2026 – Heute</label>
+              <left>99.68%</left>
+              <width>0.32%</width>
+              <row>20</row>
+              <printRow>20</printRow>
               <part>true</part>
             </bar>
             <bar>
@@ -3054,8 +3244,8 @@
               <label>Corpus — Wissensdatenbank · Autor — Nov. 2026 – Heute</label>
               <left>99.68%</left>
               <width>0.32%</width>
-              <row>17</row>
-              <printRow>17</printRow>
+              <row>21</row>
+              <printRow>21</printRow>
               <part>true</part>
             </bar>
             <bar>
@@ -3073,8 +3263,8 @@
               <label>Biorcrux — Bibliothek · Autor — Nov. 2026 – Heute</label>
               <left>99.69%</left>
               <width>0.31%</width>
-              <row>18</row>
-              <printRow>18</printRow>
+              <row>22</row>
+              <printRow>22</printRow>
               <part>true</part>
             </bar>
             <bar>
@@ -3092,8 +3282,8 @@
               <label>Polymath — Bibliothek · Autor — Nov. 2026 – Heute</label>
               <left>99.73%</left>
               <width>0.27%</width>
-              <row>19</row>
-              <printRow>19</printRow>
+              <row>23</row>
+              <printRow>23</printRow>
               <part>true</part>
             </bar>
             <bar>
@@ -3111,8 +3301,274 @@
               <label>Actedu — Wissensgraph · Autor — Nov. 2026 – Heute</label>
               <left>99.74%</left>
               <width>0.26%</width>
-              <row>20</row>
-              <printRow>20</printRow>
+              <row>24</row>
+              <printRow>24</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actempo</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actempo</name>
+              <caption>Actempo · Bibliothek</caption>
+              <uses>rust scheduling agents optimization tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>Bibliothek · Autor</detail>
+              <summary>Planer für Acts in agentischen Sitzungen: aus Acts (Arbeitseinheiten eines Agenten mit Abhängigkeiten, Priorität, Frist und Token-Kosten) und Sitzungen erstellt er einen Plan und nennt, welche Acts sich nicht einplanen ließen und warum.</summary>
+              <skills>Rust · Scheduling · Agents · Optimization · TDD</skills>
+              <label>Actempo — Bibliothek · Autor — Nov. 2026 – Heute</label>
+              <left>99.76%</left>
+              <width>0.24%</width>
+              <row>25</row>
+              <printRow>25</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actesskey</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actesskey</name>
+              <caption>Actesskey · CLI</caption>
+              <uses>rust security age keychain tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>CLI · Autor</detail>
+              <summary>Geheimnisse, Schlüssel und Passwörter der Maschine an einem Ort: jedes Geheimnis ist ein age-Blob, der age-Schlüssel liegt im macOS-Schlüsselbund, und nichts Geheimes läuft über eine Befehlszeile.</summary>
+              <skills>Rust · Security · Age · Keychain · TDD</skills>
+              <label>Actesskey — CLI · Autor — Nov. 2026 – Heute</label>
+              <left>99.76%</left>
+              <width>0.24%</width>
+              <row>26</row>
+              <printRow>26</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actmail</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actmail</name>
+              <caption>Actmail · CLI</caption>
+              <uses>rust imap email tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>CLI · Autor</detail>
+              <summary>Schreibgeschützte Suche in jedem Postfach eines Manifests, über IMAP oder aus archivierten Maildirs: nichts wird als gelesen markiert, verschoben oder gelöscht.</summary>
+              <skills>Rust · IMAP · Email · TDD</skills>
+              <label>Actmail — CLI · Autor — Nov. 2026 – Heute</label>
+              <left>99.76%</left>
+              <width>0.24%</width>
+              <row>27</row>
+              <printRow>27</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actart</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actart</name>
+              <caption>Actart · Dienst</caption>
+              <uses>rust law rag informationretrieval hexagonalarchitecture tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>Dienst · Autor</detail>
+              <summary>Juristische Schlussfolgerungsmaschine, zunächst belgisches Recht: ausgehend von einem Bedarf oder einer Akte findet sie die anwendbaren Texte, begründet ihre Anwendung und antwortet mit Quellenangaben.</summary>
+              <skills>Rust · Law · RAG · InformationRetrieval · HexagonalArchitecture</skills>
+              <label>Actart — Dienst · Autor — Nov. 2026 – Heute</label>
+              <left>99.77%</left>
+              <width>0.23%</width>
+              <row>28</row>
+              <printRow>28</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actinstall</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actinstall</name>
+              <caption>Actinstall · CLI</caption>
+              <uses>rust cargo automation tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>CLI · Autor</detail>
+              <summary>Hält die per cargo installierten Binärdateien lokaler Repositories auf der neuesten Version ihres Repositorys.</summary>
+              <skills>Rust · Cargo · Automation · TDD</skills>
+              <label>Actinstall — CLI · Autor — Nov. 2026 – Heute</label>
+              <left>99.77%</left>
+              <width>0.23%</width>
+              <row>29</row>
+              <printRow>29</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actcdi</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actcdi</name>
+              <caption>Actcdi · Bibliothek</caption>
+              <uses>rust ci-cd automation tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>Bibliothek · Autor</detail>
+              <summary>Führt CI/CD für jedes Repository aus: startet die Prüfungen (Lint, Tests, Builds), teilt sie in Shards auf und wählt aus, was laufen muss.</summary>
+              <skills>Rust · CI/CD · Automation · TDD</skills>
+              <label>Actcdi — Bibliothek · Autor — Nov. 2026 – Heute</label>
+              <left>99.81%</left>
+              <width>0.19%</width>
+              <row>30</row>
+              <printRow>30</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actdevice</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actdevice</name>
+              <caption>Actdevice · Bibliothek</caption>
+              <uses>rust flutter dioxus ios android tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>Bibliothek · Autor</detail>
+              <summary>Startet oder installiert eine App (Flutter, Dioxus oder jedes Projekt mit einem device-install-Hook) auf einem iOS-Simulator, einem Android-Gerät oder dem Host.</summary>
+              <skills>Rust · Flutter · Dioxus · iOS · Android</skills>
+              <label>Actdevice — Bibliothek · Autor — Nov. 2026 – Heute</label>
+              <left>99.81%</left>
+              <width>0.19%</width>
+              <row>31</row>
+              <printRow>31</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actlimit</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actlimit</name>
+              <caption>Actlimit · CLI</caption>
+              <uses>rust agents observability tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>CLI · Autor</detail>
+              <summary>Zeigt die Nutzungslimits der Coding-Agenten (Claude, Codex und die Agenten mit Token-Budget) in je einer Zeile, schnell genug für einen Shell-Prompt.</summary>
+              <skills>Rust · Agents · Observability · TDD</skills>
+              <label>Actlimit — CLI · Autor — Nov. 2026 – Heute</label>
+              <left>99.81%</left>
+              <width>0.19%</width>
+              <row>32</row>
+              <printRow>32</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actqueue</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actqueue</name>
+              <caption>Actqueue · CLI</caption>
+              <uses>rust scheduling agents tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>CLI · Autor</detail>
+              <summary>Verwaltet Job-Warteschlangen (die Queue für schwere Jobs und ihre Spuren), im Zusammenspiel mit Actempo.</summary>
+              <skills>Rust · Scheduling · Agents · TDD</skills>
+              <label>Actqueue — CLI · Autor — Nov. 2026 – Heute</label>
+              <left>99.81%</left>
+              <width>0.19%</width>
+              <row>33</row>
+              <printRow>33</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-acttex</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Acttex</name>
+              <caption>Acttex · CLI</caption>
+              <uses>rust latex build tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>CLI · Autor</detail>
+              <summary>Baut ein LaTeX-Projekt: findet die Hauptdatei und führt pdflatex, biber und makeglossaries aus.</summary>
+              <skills>Rust · LaTeX · Build · TDD</skills>
+              <label>Acttex — CLI · Autor — Nov. 2026 – Heute</label>
+              <left>99.81%</left>
+              <width>0.19%</width>
+              <row>34</row>
+              <printRow>34</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actmake</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actmake</name>
+              <caption>Actmake · Bibliothek</caption>
+              <uses>rust latex build tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>Bibliothek · Autor</detail>
+              <summary>Macht aus einem Projekt sein Artefakt mit einem einzigen Verb, build; der Aufrufer wählt die Engine (LaTeX, HTML oder Markdown, als PDF gedruckt).</summary>
+              <skills>Rust · LaTeX · Build · TDD</skills>
+              <label>Actmake — Bibliothek · Autor — Nov. 2026 – Heute</label>
+              <left>99.82%</left>
+              <width>0.18%</width>
+              <row>35</row>
+              <printRow>35</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actpath</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actpath</name>
+              <caption>Actpath · Bibliothek</caption>
+              <uses>rust git automation tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>Bibliothek · Autor</detail>
+              <summary>Alles rund um Pfade: Verweise auf ein umbenanntes Repository umschreiben, Verschiebungen, Worktrees reparieren und cargo-Installationseinträge.</summary>
+              <skills>Rust · Git · Automation · TDD</skills>
+              <label>Actpath — Bibliothek · Autor — Nov. 2026 – Heute</label>
+              <left>99.82%</left>
+              <width>0.18%</width>
+              <row>36</row>
+              <printRow>36</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actconf</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actconf</name>
+              <caption>Actconf · CLI</caption>
+              <uses>rust configuration stow tdd</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>CLI · Autor</detail>
+              <summary>Verwaltet die Konfiguration einer Flotte aus Maschinen, Volumes und Servern, Schritt für Schritt aus dem dotfiles-Repository herausgelöst.</summary>
+              <skills>Rust · Configuration · Stow · TDD</skills>
+              <label>Actconf — CLI · Autor — Nov. 2026 – Heute</label>
+              <left>99.86%</left>
+              <width>0.14%</width>
+              <row>37</row>
+              <printRow>37</printRow>
+              <part>true</part>
+            </bar>
+            <bar>
+              <target>work-acteble-grunder</target>
+              <entry>project-actessh</entry>
+              <kind>project</kind>
+              <depth>1</depth>
+              <name>Actessh</name>
+              <caption>Actessh · Bibliothek</caption>
+              <uses>rust ssh</uses>
+              <period>Nov. 2026 – Heute</period>
+              <detail>Bibliothek · Autor</detail>
+              <summary>SSH-Client, dessen Schlüssel und Passwörter aus Actesskey stammen.</summary>
+              <skills>Rust · SSH</skills>
+              <label>Actessh — Bibliothek · Autor — Nov. 2026 – Heute</label>
+              <left>99.86%</left>
+              <width>0.14%</width>
+              <row>38</row>
+              <printRow>38</printRow>
               <part>true</part>
             </bar>
             <bar>
@@ -3128,8 +3584,8 @@
               <label>Belgischer Senat — KI-Forschungswissenschaftler — Nov. 2025 – Juni 2026</label>
               <left>93.75%</left>
               <width>3.82%</width>
-              <row>21</row>
-              <printRow>21</printRow>
+              <row>39</row>
+              <printRow>39</printRow>
               <foldRow>12</foldRow>
             </bar>
             <bar>
@@ -3147,8 +3603,8 @@
               <label>Synergy — Plattform · Autor — Nov. 2025 – Juni 2026</label>
               <left>93.75%</left>
               <width>3.82%</width>
-              <row>22</row>
-              <printRow>22</printRow>
+              <row>40</row>
+              <printRow>40</printRow>
               <foldRow>13</foldRow>
             </bar>
             <bar>
@@ -3166,8 +3622,8 @@
               <label>fedrag-be — Forschung · Autor — Nov. 2025 – Juni 2026</label>
               <left>93.75%</left>
               <width>3.82%</width>
-              <row>23</row>
-              <printRow>23</printRow>
+              <row>41</row>
+              <printRow>41</printRow>
               <foldRow>14</foldRow>
             </bar>
           </bars>
@@ -4648,6 +5104,24 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
         <project>Biorcrux</project>
         <project>Actrepo</project>
         <project>OpenActe</project>
+        <project>Actart</project>
+        <project>Actautoma</project>
+        <project>Actcast</project>
+        <project>Actcdi</project>
+        <project>Actconf</project>
+        <project>Actdevice</project>
+        <project>Actempo</project>
+        <project>Actessh</project>
+        <project>Actesskey</project>
+        <project>Actinstall</project>
+        <project>Actit</project>
+        <project>Actlimit</project>
+        <project>Actmail</project>
+        <project>Actmake</project>
+        <project>Actname</project>
+        <project>Actpath</project>
+        <project>Actqueue</project>
+        <project>Acttex</project>
       </projects>
       <anchor>work-acteble-grunder</anchor>
       <app>/app/de/work/acteble-founder/</app>
@@ -5558,6 +6032,356 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
       <anchor>project-actusext</anchor>
       <anchoredIn>work-acteble-grunder</anchoredIn>
       <app>/app/de/project/actusext/</app>
+    </project>
+    <project>
+      <name>Actart</name>
+      <description>Juristische Schlussfolgerungsmaschine, zunächst belgisches Recht: ausgehend von einem Bedarf oder einer Akte findet sie die anwendbaren Texte, begründet ihre Anwendung und antwortet mit Quellenangaben.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Law</keyword>
+        <keyword>RAG</keyword>
+        <keyword>InformationRetrieval</keyword>
+        <keyword>HexagonalArchitecture</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-17</startDate>
+      <type>Dienst</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actart</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actart/</app>
+    </project>
+    <project>
+      <name>Actautoma</name>
+      <description>Rust-Bibliothek, die die Werkzeuge von Repository-Plattformen steuert (gh für GitHub, glab für GitLab), mit einem Befehl, um ein Repository überall dort umzubenennen, wo es referenziert wird.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>GitHub</keyword>
+        <keyword>GitLab</keyword>
+        <keyword>Automation</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-09</startDate>
+      <url>https://github.com/grosjeanbaptiste/actautoma</url>
+      <type>Bibliothek</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actautoma</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actautoma/</app>
+    </project>
+    <project>
+      <name>Actcast</name>
+      <description>Orchestrator des Multimedia- und Download-Stacks des Acteble-Ökosystems: startet, stoppt und prüft die Anwendungen deklarativ und reagiert auf Änderungen ihrer Indexer.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Orchestration</keyword>
+        <keyword>Media</keyword>
+        <keyword>Automation</keyword>
+      </keywords>
+      <startDate>2026-11-11</startDate>
+      <type>Orchestrator</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actcast</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actcast/</app>
+    </project>
+    <project>
+      <name>Actcdi</name>
+      <description>Führt CI/CD für jedes Repository aus: startet die Prüfungen (Lint, Tests, Builds), teilt sie in Shards auf und wählt aus, was laufen muss.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>CI/CD</keyword>
+        <keyword>Automation</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-19</startDate>
+      <type>Bibliothek</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actcdi</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actcdi/</app>
+    </project>
+    <project>
+      <name>Actconf</name>
+      <description>Verwaltet die Konfiguration einer Flotte aus Maschinen, Volumes und Servern, Schritt für Schritt aus dem dotfiles-Repository herausgelöst.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Configuration</keyword>
+        <keyword>Stow</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-22</startDate>
+      <type>CLI</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actconf</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actconf/</app>
+    </project>
+    <project>
+      <name>Actdevice</name>
+      <description>Startet oder installiert eine App (Flutter, Dioxus oder jedes Projekt mit einem device-install-Hook) auf einem iOS-Simulator, einem Android-Gerät oder dem Host.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Flutter</keyword>
+        <keyword>Dioxus</keyword>
+        <keyword>iOS</keyword>
+        <keyword>Android</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-19</startDate>
+      <type>Bibliothek</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actdevice</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actdevice/</app>
+    </project>
+    <project>
+      <name>Actempo</name>
+      <description>Planer für Acts in agentischen Sitzungen: aus Acts (Arbeitseinheiten eines Agenten mit Abhängigkeiten, Priorität, Frist und Token-Kosten) und Sitzungen erstellt er einen Plan und nennt, welche Acts sich nicht einplanen ließen und warum.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Scheduling</keyword>
+        <keyword>Agents</keyword>
+        <keyword>Optimization</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-16</startDate>
+      <type>Bibliothek</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actempo</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actempo/</app>
+    </project>
+    <project>
+      <name>Actessh</name>
+      <description>SSH-Client, dessen Schlüssel und Passwörter aus Actesskey stammen.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>SSH</keyword>
+      </keywords>
+      <startDate>2026-11-22</startDate>
+      <type>Bibliothek</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actessh</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actessh/</app>
+    </project>
+    <project>
+      <name>Actesskey</name>
+      <description>Geheimnisse, Schlüssel und Passwörter der Maschine an einem Ort: jedes Geheimnis ist ein age-Blob, der age-Schlüssel liegt im macOS-Schlüsselbund, und nichts Geheimes läuft über eine Befehlszeile.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Security</keyword>
+        <keyword>Age</keyword>
+        <keyword>Keychain</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-16</startDate>
+      <type>CLI</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actesskey</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actesskey/</app>
+    </project>
+    <project>
+      <name>Actinstall</name>
+      <description>Hält die per cargo installierten Binärdateien lokaler Repositories auf der neuesten Version ihres Repositorys.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Cargo</keyword>
+        <keyword>Automation</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-17</startDate>
+      <type>CLI</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actinstall</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actinstall/</app>
+    </project>
+    <project>
+      <name>Actit</name>
+      <description>Beantwortet „Gibt es für diesen Bedarf schon ein Werkzeug?“ allein aus Actindexer und KAG: keine andere Suchmaschine und kein LLM.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>InformationRetrieval</keyword>
+        <keyword>RAG</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-09</startDate>
+      <url>https://github.com/grosjeanbaptiste/Actit</url>
+      <type>CLI</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actit</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actit/</app>
+    </project>
+    <project>
+      <name>Actlimit</name>
+      <description>Zeigt die Nutzungslimits der Coding-Agenten (Claude, Codex und die Agenten mit Token-Budget) in je einer Zeile, schnell genug für einen Shell-Prompt.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Agents</keyword>
+        <keyword>Observability</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-19</startDate>
+      <type>CLI</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actlimit</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actlimit/</app>
+    </project>
+    <project>
+      <name>Actmail</name>
+      <description>Schreibgeschützte Suche in jedem Postfach eines Manifests, über IMAP oder aus archivierten Maildirs: nichts wird als gelesen markiert, verschoben oder gelöscht.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>IMAP</keyword>
+        <keyword>Email</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-16</startDate>
+      <type>CLI</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actmail</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actmail/</app>
+    </project>
+    <project>
+      <name>Actmake</name>
+      <description>Macht aus einem Projekt sein Artefakt mit einem einzigen Verb, build; der Aufrufer wählt die Engine (LaTeX, HTML oder Markdown, als PDF gedruckt).</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>LaTeX</keyword>
+        <keyword>Build</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-20</startDate>
+      <type>Bibliothek</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actmake</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actmake/</app>
+    </project>
+    <project>
+      <name>Actname</name>
+      <description>Deterministische, offline-first semantische Namensgebungs-Engine für Projekte.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>NLP</keyword>
+        <keyword>Naming</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-09</startDate>
+      <url>https://github.com/grosjeanbaptiste/Actname</url>
+      <type>CLI</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actname</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actname/</app>
+    </project>
+    <project>
+      <name>Actpath</name>
+      <description>Alles rund um Pfade: Verweise auf ein umbenanntes Repository umschreiben, Verschiebungen, Worktrees reparieren und cargo-Installationseinträge.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Git</keyword>
+        <keyword>Automation</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-20</startDate>
+      <type>Bibliothek</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actpath</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actpath/</app>
+    </project>
+    <project>
+      <name>Actqueue</name>
+      <description>Verwaltet Job-Warteschlangen (die Queue für schwere Jobs und ihre Spuren), im Zusammenspiel mit Actempo.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Scheduling</keyword>
+        <keyword>Agents</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-19</startDate>
+      <type>CLI</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-actqueue</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/actqueue/</app>
+    </project>
+    <project>
+      <name>Acttex</name>
+      <description>Baut ein LaTeX-Projekt: findet die Hauptdatei und führt pdflatex, biber und makeglossaries aus.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>LaTeX</keyword>
+        <keyword>Build</keyword>
+        <keyword>TDD</keyword>
+      </keywords>
+      <startDate>2026-11-19</startDate>
+      <type>CLI</type>
+      <roles>
+        <role>Autor</role>
+      </roles>
+      <partOf>OpenActe</partOf>
+      <anchor>project-acttex</anchor>
+      <anchoredIn>work-acteble-grunder</anchoredIn>
+      <app>/app/de/project/acttex/</app>
     </project>
     <project>
       <name>Polymath</name>

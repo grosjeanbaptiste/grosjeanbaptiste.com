@@ -92,4 +92,21 @@ function timelineBars(resume, today, years = null) {
   return { from: spanStart ?? Math.floor(Math.min(now, ...starts)), to: now, lanes };
 }
 
-module.exports = { timelineBars, monthOf };
+// The landscape sheet draws a family of small projects (OpenActe) as its one
+// bar: its parts are folded in, as on the CV's verso, since stacking one row
+// per part would leave no room for anything else. The portrait sheet nests
+// them under the family and keeps them.
+function foldFamilies(timeline) {
+  return {
+    ...timeline,
+    lanes: timeline.lanes.map((lane) => ({
+      ...lane,
+      groups: lane.groups.map((g) => ({
+        ...g,
+        children: g.children.filter((c) => !g.children.some((f) => f.strong === c.partOf)),
+      })),
+    })),
+  };
+}
+
+module.exports = { timelineBars, monthOf, foldFamilies };

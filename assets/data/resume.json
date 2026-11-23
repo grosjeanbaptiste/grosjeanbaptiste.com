@@ -608,6 +608,302 @@
       "partOf": "OpenActe"
     },
     {
+      "name": "Actart",
+      "description": "Legal reasoning engine, Belgian law first: from a need or a file, it finds the applicable texts, reasons about how they apply and answers with citations.",
+      "keywords": [
+        "Rust",
+        "Law",
+        "RAG",
+        "InformationRetrieval",
+        "HexagonalArchitecture",
+        "TDD"
+      ],
+      "startDate": "2026-11-17",
+      "type": "Service",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actautoma",
+      "description": "Rust library that drives the tools of repository-hosting platforms (gh for GitHub, glab for GitLab), with a command to rename a repository everywhere it is referenced.",
+      "keywords": [
+        "Rust",
+        "GitHub",
+        "GitLab",
+        "Automation",
+        "TDD"
+      ],
+      "startDate": "2026-11-09",
+      "url": "https://github.com/grosjeanbaptiste/actautoma",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actcast",
+      "description": "Orchestrator of the media and download stack of the Acteble ecosystem: starts, stops and checks the applications declaratively and reacts to changes in their indexers.",
+      "keywords": [
+        "Rust",
+        "Orchestration",
+        "Media",
+        "Automation"
+      ],
+      "startDate": "2026-11-11",
+      "type": "Orchestrator",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actcdi",
+      "description": "Executes CI/CD for every repository: runs the gates (lint, tests, builds), shards them and selects what to run.",
+      "keywords": [
+        "Rust",
+        "CI/CD",
+        "Automation",
+        "TDD"
+      ],
+      "startDate": "2026-11-19",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actconf",
+      "description": "Manages the configuration of a fleet of machines, volumes and servers, extracted slice by slice from the dotfiles repository.",
+      "keywords": [
+        "Rust",
+        "Configuration",
+        "Stow",
+        "TDD"
+      ],
+      "startDate": "2026-11-22",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actdevice",
+      "description": "Runs or installs an app (Flutter, Dioxus, or any project with a device-install hook) on an iOS simulator, an Android device or the host.",
+      "keywords": [
+        "Rust",
+        "Flutter",
+        "Dioxus",
+        "iOS",
+        "Android",
+        "TDD"
+      ],
+      "startDate": "2026-11-19",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actempo",
+      "description": "Scheduler of acts for agentic sessions: given acts (units of agent work with dependencies, priority, deadline and token cost) and sessions, it returns a plan and says which acts could not be placed and why.",
+      "keywords": [
+        "Rust",
+        "Scheduling",
+        "Agents",
+        "Optimization",
+        "TDD"
+      ],
+      "startDate": "2026-11-16",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actessh",
+      "description": "SSH client whose keys and passwords come from Actesskey.",
+      "keywords": [
+        "Rust",
+        "SSH"
+      ],
+      "startDate": "2026-11-22",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actesskey",
+      "description": "Secrets, keys and passwords of the machine in one place: every secret is an age blob, the age key lives in the macOS Keychain, and nothing secret travels on a command line.",
+      "keywords": [
+        "Rust",
+        "Security",
+        "Age",
+        "Keychain",
+        "TDD"
+      ],
+      "startDate": "2026-11-16",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actinstall",
+      "description": "Keeps the cargo-installed binaries of local repositories at their repository's latest version.",
+      "keywords": [
+        "Rust",
+        "Cargo",
+        "Automation",
+        "TDD"
+      ],
+      "startDate": "2026-11-17",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actit",
+      "description": "Answers “does a tool already exist for this need?” from Actindexer and KAG only: no other search engine and no LLM.",
+      "keywords": [
+        "Rust",
+        "InformationRetrieval",
+        "RAG",
+        "TDD"
+      ],
+      "startDate": "2026-11-09",
+      "url": "https://github.com/grosjeanbaptiste/Actit",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actlimit",
+      "description": "Shows the usage limits of the coding agents (Claude, Codex and the agents with a token budget) as one line each, fast enough for a shell prompt.",
+      "keywords": [
+        "Rust",
+        "Agents",
+        "Observability",
+        "TDD"
+      ],
+      "startDate": "2026-11-19",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actmail",
+      "description": "Read-only search over every mailbox of a manifest, over IMAP or from archived Maildirs: nothing is marked read, moved or deleted.",
+      "keywords": [
+        "Rust",
+        "IMAP",
+        "Email",
+        "TDD"
+      ],
+      "startDate": "2026-11-16",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actmake",
+      "description": "Turns a project into its artifact with one verb, build; the caller chooses the engine (LaTeX, HTML or Markdown printed to PDF).",
+      "keywords": [
+        "Rust",
+        "LaTeX",
+        "Build",
+        "TDD"
+      ],
+      "startDate": "2026-11-20",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actname",
+      "description": "Deterministic, offline-first semantic naming engine for projects.",
+      "keywords": [
+        "Rust",
+        "NLP",
+        "Naming",
+        "TDD"
+      ],
+      "startDate": "2026-11-09",
+      "url": "https://github.com/grosjeanbaptiste/Actname",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actpath",
+      "description": "Everything about paths: rewriting the references to a renamed repository, moves, worktree repair and cargo install records.",
+      "keywords": [
+        "Rust",
+        "Git",
+        "Automation",
+        "TDD"
+      ],
+      "startDate": "2026-11-20",
+      "type": "Library",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Actqueue",
+      "description": "Manages queues of jobs (the heavy queue and its lanes), working in pair with Actempo.",
+      "keywords": [
+        "Rust",
+        "Scheduling",
+        "Agents",
+        "TDD"
+      ],
+      "startDate": "2026-11-19",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
+      "name": "Acttex",
+      "description": "Builds a LaTeX project: finds its main file and runs pdflatex, biber and makeglossaries.",
+      "keywords": [
+        "Rust",
+        "LaTeX",
+        "Build",
+        "TDD"
+      ],
+      "startDate": "2026-11-19",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ],
+      "partOf": "OpenActe"
+    },
+    {
       "name": "Polymath",
       "description": "Universal graph of computation packages interconnecting scientific disciplines without redundancy via the Rust type system.",
       "keywords": [

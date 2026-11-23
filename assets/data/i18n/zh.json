@@ -251,6 +251,123 @@
       ]
     },
     {
+      "description": "法律推理引擎，以比利时法律为先：从需求或案卷出发，找到适用的法条，推理其适用方式，并附引用作答。",
+      "type": "服务",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "驱动代码托管平台工具（GitHub 的 gh、GitLab 的 glab）的 Rust 库，附带一个在所有引用处重命名仓库的命令。",
+      "type": "库",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "Acteble 生态系统多媒体与下载栈的编排器：以声明方式启动、停止和检查应用，并对其索引器的变化作出响应。",
+      "type": "编排器",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "为每个仓库执行 CI/CD：运行各项检查（lint、测试、构建），将其分片并选择需要运行的内容。",
+      "type": "库",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "管理由机器、卷和服务器组成的设备群的配置，从 dotfiles 仓库中逐步拆分而来。",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "在 iOS 模拟器、Android 设备或宿主机上运行或安装应用（Flutter、Dioxus，或任何带有 device-install 钩子的项目）。",
+      "type": "库",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "智能体会话的任务调度器：根据任务（带依赖、优先级、截止时间和令牌成本的智能体工作单元）和会话生成计划，并说明哪些任务无法安排及原因。",
+      "type": "库",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "SSH 客户端，其密钥和密码来自 Actesskey。",
+      "type": "库",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "机器的机密、密钥和密码集中管理：每个机密都是一个 age 数据块，age 密钥存放在 macOS 钥匙串中，任何机密都不会出现在命令行上。",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "让通过 cargo 从本地仓库安装的二进制文件始终保持在其仓库的最新版本。",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "仅依据 Actindexer 和 KAG 回答“这个需求是否已有现成工具？”：不使用其他搜索引擎，也不用 LLM。",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "以每个一行的形式显示编码智能体（Claude、Codex 以及有令牌预算的智能体）的使用限额，速度足以用于 shell 提示符。",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "对清单中每个邮箱进行只读搜索，通过 IMAP 或已归档的 Maildir：不会标记已读、移动或删除任何邮件。",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "用一个动词 build 把项目变成其产物；由调用方选择引擎（LaTeX、HTML 或打印为 PDF 的 Markdown）。",
+      "type": "库",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "确定性的、离线优先的项目语义命名引擎。",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "与路径有关的一切：重写对已重命名仓库的引用、移动、修复 worktree 以及 cargo 安装记录。",
+      "type": "库",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "管理作业队列（重型作业队列及其通道），与 Actempo 配对工作。",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
+      "description": "构建 LaTeX 项目：找到主文件并运行 pdflatex、biber 和 makeglossaries。",
+      "roles": [
+        "作者"
+      ]
+    },
+    {
       "description": "通用的计算包图，通过 Rust 类型系统在没有冗余的情况下连接各个科学学科。",
       "type": "库",
       "roles": [
