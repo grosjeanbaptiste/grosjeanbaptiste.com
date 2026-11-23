@@ -45,6 +45,18 @@
           <a class="pdf-open" target="_blank" rel="noopener noreferrer"><xsl:attribute name="href"><xsl:value-of select="$cv"/></xsl:attribute><xsl:value-of select="/resume/meta/pdfReader/openFile"/></a>
         </div>
         <p class="pdf-failed" role="alert" hidden="hidden"><xsl:value-of select="/resume/meta/pdfReader/failed"/></p>
+
+        <!-- The first page as a picture, shown in the frame until PDF.js has drawn
+             the real one (as the interactive view does): the script moves it there. -->
+        <xsl:for-each select="/resume/meta/pictures/picture[file = $cv]/pages/page[1]">
+          <div class="pdf-preview" aria-hidden="true">
+            <img loading="lazy" alt="">
+              <xsl:attribute name="src"><xsl:value-of select="src"/></xsl:attribute>
+              <xsl:attribute name="width"><xsl:value-of select="width"/></xsl:attribute>
+              <xsl:attribute name="height"><xsl:value-of select="height"/></xsl:attribute>
+            </img>
+          </div>
+        </xsl:for-each>
         <!-- In <noscript>: the browser fetches an <object>'s file as the page loads,
              a whole PDF a visitor with the script never looks at (PDF.js reads it
              itself, when the reader nears the screen). -->

@@ -83,6 +83,31 @@
   margin: 0.5rem auto;
 }
 
+/* The first page as a picture, in the frame until PDF.js has drawn it. */
+.pdf-preview {
+  display: none;
+}
+
+.pdf-frame > .pdf-preview {
+  display: block;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  text-align: center;
+  background: rgba(127, 127, 127, 0.15);
+}
+
+.pdf-preview img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem auto;
+}
+
+.pdf-reader[data-drawn] .pdf-preview {
+  display: none;
+}
+
 /* Once the script has the PDF on screen, the fallback gives way to it. */
 .pdf-reader[data-drawn] > object,
 .pdf-reader[data-drawn] > .pdf-files {

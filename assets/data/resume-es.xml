@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=097e1bb5"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=9d16e4a1"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -313,11 +313,13 @@
         <id>pdf</id>
         <href>/app/es/pdf/</href>
         <label>PDF</label>
+        <hidden>true</hidden>
       </view>
       <view>
         <id>timeline</id>
         <href>/app/es/pdf/timeline/</href>
         <label>Cronología (PDF)</label>
+        <hidden>true</hidden>
       </view>
     </views>
     <nav>

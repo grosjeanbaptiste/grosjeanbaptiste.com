@@ -63,7 +63,9 @@
       frame.className = 'pdf-frame';
       frame.innerHTML = '<div class="pdf-container"><div class="pdfViewer"></div></div>';
       const container = frame.firstChild;
-      panel.insertBefore(frame, panel.querySelector('object'));
+      const preview = panel.querySelector('.pdf-preview');
+      if (preview) frame.appendChild(preview);
+      panel.insertBefore(frame, panel.querySelector('.pdf-files'));
 
       const eventBus = new viewer.EventBus();
       const linkService = new viewer.PDFLinkService({ eventBus, externalLinkTarget: 2 });

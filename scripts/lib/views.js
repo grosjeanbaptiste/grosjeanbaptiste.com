@@ -24,10 +24,13 @@ const VIEWS = [
     href: (lang) => `/assets/data/resume-${lang}-minimal.html`,
     hidden: true,
   },
-  // The reader page (react/), which shows the LaTeX PDF inside the site.
-  { id: 'pdf', href: (lang) => `/app/${lang}/pdf/` },
+  // The reader page (react/), which shows the LaTeX PDF inside the site: hidden
+  // since the rich XSLT theme's reader (#pdf) does all it does — zoom, the width
+  // fitted by itself, download, open, the first page as a picture meanwhile —
+  // and chooses between the CV and the timeline at three zooms.
+  { id: 'pdf', href: (lang) => `/app/${lang}/pdf/`, hidden: true },
   // The same reader, on the landscape PDF that carries the timeline alone.
-  { id: 'timeline', href: (lang) => `/app/${lang}/pdf/timeline/` },
+  { id: 'timeline', href: (lang) => `/app/${lang}/pdf/timeline/`, hidden: true },
 ];
 
 // The displays as one language shows them: { id, href, label, hidden? }.
