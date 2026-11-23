@@ -2409,7 +2409,7 @@
           <kind>work</kind>
           <label>工作经验</label>
           <rows>42</rows>
-          <printRows>42</printRows>
+          <printRows>15</printRows>
           <foldRows>15</foldRows>
           <groups>
             <group>
@@ -2496,7 +2496,7 @@
               <row>0</row>
               <rows>39</rows>
               <printRow>0</printRow>
-              <printRows>39</printRows>
+              <printRows>12</printRows>
               <foldRow>0</foldRow>
               <foldRows>12</foldRows>
             </group>
@@ -2506,7 +2506,7 @@
               <employer>false</employer>
               <row>39</row>
               <rows>3</rows>
-              <printRow>39</printRow>
+              <printRow>12</printRow>
               <printRows>3</printRows>
               <foldRow>12</foldRow>
               <foldRows>3</foldRows>
@@ -3618,7 +3618,7 @@
               <left>93.75%</left>
               <width>3.82%</width>
               <row>39</row>
-              <printRow>39</printRow>
+              <printRow>12</printRow>
               <foldRow>12</foldRow>
             </bar>
             <bar>
@@ -3637,7 +3637,7 @@
               <left>93.75%</left>
               <width>3.82%</width>
               <row>40</row>
-              <printRow>40</printRow>
+              <printRow>13</printRow>
               <foldRow>13</foldRow>
             </bar>
             <bar>
@@ -3656,7 +3656,7 @@
               <left>93.75%</left>
               <width>3.82%</width>
               <row>41</row>
-              <printRow>41</printRow>
+              <printRow>14</printRow>
               <foldRow>14</foldRow>
             </bar>
           </bars>

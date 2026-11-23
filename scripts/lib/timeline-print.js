@@ -64,13 +64,42 @@ function onPhone(lane, fold) {
   };
 }
 
+// On paper the parts of a family of projects are folded too: the sheet has no
+// room for twenty-seven rows of OpenActe. The rows come from the folded layout
+// without units; a lane whose layouts list other bars keeps its unfolded rows.
+function foldedOnPaper(lane, paper) {
+  const kept = lane.bars.filter((bar) => bar.kind !== 'unit' && !isPart(lane, bar));
+  const key = (bar) => `${bar.kind}|${bar.name}|${bar.start}`;
+  const rowOf = new Map(paper.bars.map((bar) => [key(bar), bar.row]));
+  const same =
+    kept.length === paper.bars.length &&
+    lane.groups.length === paper.groups.length &&
+    kept.every((bar) => rowOf.has(key(bar)));
+  if (!same) return lane;
+  return {
+    ...lane,
+    printRows: paper.rows,
+    bars: lane.bars.map((bar) =>
+      kept.includes(bar) ? { ...bar, printRow: rowOf.get(key(bar)) } : bar,
+    ),
+    groups: lane.groups.map((group, i) => ({
+      ...group,
+      printRow: paper.groups[i].row,
+      printRows: paper.groups[i].rows,
+    })),
+  };
+}
+
 function withPrintRows(resume, today) {
   const screen = timelineOf(resume, today);
   const bare = timelineOf(resume, today, { units: false });
   const fold = timelineOf(resume, today, { fold: true });
+  const paper = timelineOf(resume, today, { units: false, fold: true });
   return {
     ...screen,
-    lanes: screen.lanes.map((lane, i) => onPhone(onPaper(lane, bare.lanes[i]), fold.lanes[i])),
+    lanes: screen.lanes.map((lane, i) =>
+      foldedOnPaper(onPhone(onPaper(lane, bare.lanes[i]), fold.lanes[i]), paper.lanes[i]),
+    ),
   };
 }
 

@@ -55,7 +55,7 @@
     const links = others();
     if (!links.length) {
       if (tries > 0) return setTimeout(() => start(tries - 1), 500);
-      return console.warn('views-ahead.js: no views bar on this page; nothing warmed ahead.');
+      return; // no views bar (fewer than two displays offered): nothing to warm
     }
     for (const link of links) {
       try {
