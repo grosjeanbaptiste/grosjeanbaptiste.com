@@ -10,9 +10,9 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-const { renderProjectsBlock } = require('./sidebar-blocks');
+const { renderProjectsBlock, renderSkillsBlocks } = require('./sidebar-blocks');
 
-const T = { projects: 'Projects' };
+const T = { projects: 'Projects', softSkills: 'Personality' };
 
 test('sidebar projects use the short description, not the summary', () => {
   const resume = {
@@ -61,4 +61,14 @@ test('course units are excluded from the sidebar projects list', () => {
 test('a CV of nothing but course units yields no block', () => {
   const resume = { projects: [], courses: [{ name: 'Algorithmique' }] };
   assert.equal(renderProjectsBlock(resume, T), null);
+});
+
+test('a personality tag leads to the first recommendation that names it', () => {
+  const resume = {
+    skills: [{ name: 'SoftSkills', keywords: ['Teamwork', 'Creativity'] }],
+    references: [{ traits: ['Leadership'] }, { traits: ['Teamwork'] }],
+  };
+  const html = renderSkillsBlocks(resume, T);
+  assert.match(html, /<a class="skill-tag" href="#ref-1">Teamwork<\/a>/);
+  assert.match(html, /<span class="skill-tag">Creativity<\/span>/);
 });

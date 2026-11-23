@@ -9,7 +9,7 @@ module.exports = {
   references: 'Referenties',
   technicalSkills: 'Technische vaardigheden',
   currentlyLearning: 'Op dit moment aan het leren',
-  softSkills: 'Persoonlijke vaardigheden',
+  softSkills: 'Persoonlijkheid',
   languages: 'Talen',
   typicalDay: 'Een typische dag',
   type: 'Type',

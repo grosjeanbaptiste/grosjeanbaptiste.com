@@ -812,6 +812,14 @@ nav.views-bar a.views-bar-link[aria-current="page"] {
   font-size: 0.9em;
 }
 
+a.skill-tag {
+  text-decoration: none;
+}
+
+a.skill-tag:hover {
+  filter: brightness(1.15);
+}
+
 .skill-bar {
   background-color: var(--border-color);
   border-radius: 5px;

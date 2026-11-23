@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=44362dff"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=81eb58bc"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -5904,6 +5904,15 @@ TFE: WebMenu 2.0
 最突出的是 Baptiste 将挑战转化为机会的能力。他冷静专注的方法和解决问题的思维方式帮助我们克服了技术难题，并构建了真正改善用户体验的功能。他的协作精神让团队合作变得顺畅且鼓舞人心。
 
 如果您正在寻找一个不仅能交付卓越成果还能激励周围所有人的人，我无法更强烈地推荐 Baptiste。他是一位出色的开发者、伟大的队友，也是我有幸向其学习的人。 — （译自英语）</reference>
+      <traits>
+        <trait>Leadership</trait>
+        <trait>Teamwork</trait>
+        <trait>Resilience</trait>
+        <trait>Mentoring</trait>
+        <trait>Communication</trait>
+        <trait>Analysis</trait>
+        <trait>Resourcefulness</trait>
+      </traits>
     </reference>
     <reference>
       <name>Tino Schuerewegen，Xtrada 软件开发者</name>
@@ -5914,22 +5923,54 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
 他也极具动手能力，从不畏惧卷起袖子深入工作。他的方法不仅是理论上的；他追求的是实用、切实的成果。
 
 总而言之，如果您正在寻找一个为每项任务带来热情、智慧和一丝幽默的人，Baptiste 就是您要找的人。与他合作不仅富有成效，而且真正令人愉快。 — （译自英语）</reference>
+      <traits>
+        <trait>Enthusiasm</trait>
+        <trait>Eagerness to learn</trait>
+        <trait>Initiative</trait>
+        <trait>Pragmatism</trait>
+        <trait>Humor</trait>
+        <trait>Curiosity</trait>
+      </traits>
     </reference>
     <reference>
       <name>Emiel Van Gysegem，Xtra Groep 营销与运营</name>
       <reference>尽管我们没有直接合作，但我与 Baptiste 始终保持着非常愉快的联系。在英语、荷兰语和法语的混合中，我们经常分享愉快的对话。他的热情和能量真的很有感染力，他知道如何在每次互动中营造愉快、轻松的氛围。Baptiste 是一个能带来积极动力的人。 — （译自荷兰语）</reference>
+      <traits>
+        <trait>Enthusiasm</trait>
+        <trait>Positivity</trait>
+        <trait>Approachability</trait>
+        <trait>Communication</trait>
+      </traits>
     </reference>
     <reference>
       <name>Steven Claus，Xtra Groep 首席财务官</name>
       <reference>Baptiste 是一位全栈软件开发者，受坚定不移的决心驱动。这种心态贯穿他职业生涯的每个方面。他曾在多个领域工作，使他能够迅速适应任何情况。这些角色磨砺了他的技术和人际交往能力，使他成为一个多才多艺的合作者，对他加入的每个项目都产生重大影响。在持续学习愿望的推动下，他通过攻读计算机科学硕士不断更新自己的知识。这种持续的学习之旅使他成为计算机科学领域全面的 IT 专业人士。 — （译自英语）</reference>
+      <traits>
+        <trait>Determination</trait>
+        <trait>Adaptability</trait>
+        <trait>Flexibility</trait>
+        <trait>Resilience</trait>
+        <trait>Eagerness to learn</trait>
+      </traits>
     </reference>
     <reference>
       <name>Tjörven Janssens，Xtrada 软件开发者</name>
       <reference>除了是软件开发者之外，Baptiste 还喜欢从事数据分析，并且是 ChatGPT 使用方面的专家。他喜欢学习新事物，并且学得很快。他在交往中非常热情，总是随时准备给予友好的话语或建议。 — （译自荷兰语）</reference>
+      <traits>
+        <trait>Analysis</trait>
+        <trait>Eagerness to learn</trait>
+        <trait>Enthusiasm</trait>
+        <trait>Approachability</trait>
+      </traits>
     </reference>
     <reference>
       <name>Michael Culot，Xtrada 销售经理</name>
       <reference>Baptiste 是一位出色且尽职的开发者，渴望继续学习新技术并提升自己的技能。您不仅会惊叹于他的知识，还会惊叹于他温暖、开放的热情。Baptiste，你将在生活中做出伟大的事情，只需保持你充满活力的精神 ✊ — （译自英语）</reference>
+      <traits>
+        <trait>Eagerness to learn</trait>
+        <trait>Enthusiasm</trait>
+        <trait>Positivity</trait>
+      </traits>
     </reference>
   </references>
   <skills>
@@ -6151,6 +6192,15 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
         <keyword>Pragmatism</keyword>
         <keyword>Resourcefulness</keyword>
         <keyword>Thoroughness</keyword>
+        <keyword>Enthusiasm</keyword>
+        <keyword>Eagerness to learn</keyword>
+        <keyword>Communication</keyword>
+        <keyword>Mentoring</keyword>
+        <keyword>Determination</keyword>
+        <keyword>Positivity</keyword>
+        <keyword>Approachability</keyword>
+        <keyword>Humor</keyword>
+        <keyword>Curiosity</keyword>
       </keywords>
     </skill>
     <skill>

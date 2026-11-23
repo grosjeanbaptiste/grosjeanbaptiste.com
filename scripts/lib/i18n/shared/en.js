@@ -13,7 +13,7 @@ module.exports = {
   references: 'References',
   technicalSkills: 'Technical Skills',
   currentlyLearning: 'Currently Learning',
-  softSkills: 'Soft Skills',
+  softSkills: 'Personality',
   languages: 'Languages',
   typicalDay: 'Typical Day',
   type: 'Type',

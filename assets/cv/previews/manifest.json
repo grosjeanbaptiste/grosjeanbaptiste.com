@@ -1,7 +1,7 @@
 {
   "files": {
     "cv_grosjean_baptiste_de.pdf": {
-      "sha256": "baca0b1ae8570a096cd9cb1e8c46721d1f1c511ee2b6a70218760d6a9cd15b4e",
+      "sha256": "62656706597938930e1a6e075060b533423a8b6c9281d6c1520cb726a3ea2089",
       "pages": [
         {
           "src": "assets/cv/previews/cv_grosjean_baptiste_de-1.webp",
@@ -16,7 +16,7 @@
       ]
     },
     "cv_grosjean_baptiste_en.pdf": {
-      "sha256": "4cfe129580a81e9bbdfcdacea394932be2313135e49c0a1235602a648666e384",
+      "sha256": "d428d68dcddcd2197e006a4d3c86450415fe29359e59baac4f051edeb714e53e",
       "pages": [
         {
           "src": "assets/cv/previews/cv_grosjean_baptiste_en-1.webp",
@@ -31,7 +31,7 @@
       ]
     },
     "cv_grosjean_baptiste_es.pdf": {
-      "sha256": "06d9c1b87e9646d65bacdedcd90ad073f10a090aa61eda5896646bc28f94aba9",
+      "sha256": "a83ade081e66c2838830b256dfa15cf0486ed3ea620dc8c05ec26f14953cf5a0",
       "pages": [
         {
           "src": "assets/cv/previews/cv_grosjean_baptiste_es-1.webp",
@@ -46,7 +46,7 @@
       ]
     },
     "cv_grosjean_baptiste_fr.pdf": {
-      "sha256": "34932e38e0d61b02c131e2e63f1fc2ed9b8b7d5bc810f251b920440061ba76b5",
+      "sha256": "080192b5fd8e99163888293beace751e416a2002ed086d6583d81f62452f3f94",
       "pages": [
         {
           "src": "assets/cv/previews/cv_grosjean_baptiste_fr-1.webp",
@@ -61,7 +61,7 @@
       ]
     },
     "cv_grosjean_baptiste_nl.pdf": {
-      "sha256": "946a438a60eb16013ca154e63e04ded8590447cd6bbe41708c594b75b2efafe0",
+      "sha256": "08525e47f59fde7d604be2d9dd3bd7e6eb9c109ba4ef506b924934c7b84ca498",
       "pages": [
         {
           "src": "assets/cv/previews/cv_grosjean_baptiste_nl-1.webp",
@@ -346,7 +346,7 @@
       ]
     },
     "cv_grosjean_baptiste_zh.pdf": {
-      "sha256": "7c0133e848ad27d912838da539a3061326f0f332d14e59fd005d8094f5bfff0c",
+      "sha256": "55f0072f3d4a8246f429d967e1971146dc091631868704601cf78226d132e083",
       "pages": [
         {
           "src": "assets/cv/previews/cv_grosjean_baptiste_zh-1.webp",

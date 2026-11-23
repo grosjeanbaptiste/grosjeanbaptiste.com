@@ -9,7 +9,7 @@ module.exports = {
   references: '推荐人',
   technicalSkills: '技术技能',
   currentlyLearning: '正在学习',
-  softSkills: '软技能',
+  softSkills: '个性',
   languages: '语言',
   typicalDay: '我的一天',
   type: '类型',

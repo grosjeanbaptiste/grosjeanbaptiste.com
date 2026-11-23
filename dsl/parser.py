@@ -414,6 +414,9 @@ class _Builder(Transformer):
     def ref_quote(self, meta, children):
         return ("quote", children[0])
 
+    def ref_traits(self, meta, children):
+        return ("traits", tuple(children[0]))
+
     # -----------------------------------------------------------------
     # skills / languages
     # -----------------------------------------------------------------

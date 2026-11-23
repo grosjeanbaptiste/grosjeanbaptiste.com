@@ -43,6 +43,7 @@ function mergeExtras(resume, extras) {
   if (extras.work) patched.work = patchByIndex(patched.work, extras.work);
   if (extras.education) patched.education = patchByIndex(patched.education, extras.education);
   if (extras.projects) patched.projects = patchByIndex(patched.projects, extras.projects);
+  if (extras.references) patched.references = patchByIndex(patched.references, extras.references);
   if (extras.dailyLife) {
     patched.meta = { ...(patched.meta || {}), dailyLife: extras.dailyLife };
   }

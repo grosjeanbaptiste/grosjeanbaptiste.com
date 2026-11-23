@@ -82,12 +82,21 @@ for (const lang of LANGS) {
 
   test(`${lang}: a skill on an entry is a link into the filter`, () => {
     const targets = new Set(all(rich, /class="tl-skill-target" id="([^"]+)"/g));
-    const links = all(rich, /<a class="skill-tag" href="#([^"]+)"/g);
+    // The personality list's tags lead to a recommendation, not to the filter.
+    const links = all(rich, /<a class="skill-tag" href="#([^"]+)"/g).filter(
+      (id) => !/^id\d+$/.test(id),
+    );
     assert.ok(links.length > 0);
     for (const id of links) assert.ok(targets.has(id), `#${id} is no filter target`);
     // A project's row names its skills, as on the classic page.
     const count = (html) => all(html, /class="(skill-tags project-skills)"/g).length;
     assert.equal(count(rich), count(page));
+  });
+
+  test(`${lang}: a personality tag leads to a recommendation that names it`, () => {
+    const links = all(rich, /<a class="skill-tag" href="#(id\d+)"/g);
+    assert.ok(links.length > 0);
+    for (const id of links) assert.ok(ids(rich).has(id), `no recommendation #${id}`);
   });
 
   test(`${lang}: the timeline's PDF is offered for each zoom`, () => {

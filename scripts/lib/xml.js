@@ -20,6 +20,7 @@ const XML_ITEM_NAMES = {
   languages: 'language-item',
   interests: 'interest',
   references: 'reference',
+  traits: 'trait',
   profiles: 'profile',
   highlights: 'highlight',
   keywords: 'keyword',

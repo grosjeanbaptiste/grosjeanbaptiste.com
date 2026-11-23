@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=44362dff"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=81eb58bc"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -5913,6 +5913,15 @@ He aprendido mucho de él — desde las mejores prácticas en desarrollo Flutter
 Lo que más destaca es su capacidad de convertir desafíos en oportunidades. Su enfoque tranquilo y enfocado y su mentalidad de resolución de problemas nos ayudaron a superar obstáculos técnicos y construir funcionalidades que realmente mejoran la experiencia de usuario. Su naturaleza colaborativa hizo que trabajar en equipo fuera fluido y motivador.
 
 Si buscas a alguien que no solo entregue resultados excepcionales sino que también levante a quienes lo rodean, no puedo recomendar a Baptiste lo suficiente. Es un desarrollador fantástico, un gran compañero de equipo, y alguien de quien he tenido la suerte de aprender. — (traducido del inglés)</reference>
+      <traits>
+        <trait>Leadership</trait>
+        <trait>Teamwork</trait>
+        <trait>Resilience</trait>
+        <trait>Mentoring</trait>
+        <trait>Communication</trait>
+        <trait>Analysis</trait>
+        <trait>Resourcefulness</trait>
+      </traits>
     </reference>
     <reference>
       <name>Tino Schuerewegen, desarrollador de software en Xtrada</name>
@@ -5923,22 +5932,54 @@ Baptiste aporta una energía contagiosa a cualquier proyecto del que forma parte
 También es increíblemente práctico, nunca duda en remangarse y meterse de lleno en el trabajo. Su enfoque no es solo teórico; busca resultados prácticos y tangibles.
 
 En resumen, si buscas a alguien que aporte entusiasmo, inteligencia y un toque de humor a cada tarea, Baptiste es tu persona. Trabajar con él no fue solo productivo, sino genuinamente agradable. — (traducido del inglés)</reference>
+      <traits>
+        <trait>Enthusiasm</trait>
+        <trait>Eagerness to learn</trait>
+        <trait>Initiative</trait>
+        <trait>Pragmatism</trait>
+        <trait>Humor</trait>
+        <trait>Curiosity</trait>
+      </traits>
     </reference>
     <reference>
       <name>Emiel Van Gysegem, marketing y operaciones en Xtra Groep</name>
       <reference>Aunque no trabajamos directamente juntos, siempre tuve una conexión muy agradable con Baptiste. En una mezcla de inglés, neerlandés y francés, compartíamos a menudo conversaciones agradables. Su entusiasmo y energía son verdaderamente contagiosos, y sabe crear un ambiente agradable e informal en cada interacción. Baptiste es alguien que aporta una dinámica positiva. — (traducido del neerlandés)</reference>
+      <traits>
+        <trait>Enthusiasm</trait>
+        <trait>Positivity</trait>
+        <trait>Approachability</trait>
+        <trait>Communication</trait>
+      </traits>
     </reference>
     <reference>
       <name>Steven Claus, CFO en Xtra Groep</name>
       <reference>Baptiste es un desarrollador full-stack impulsado por una determinación inquebrantable. Esta mentalidad impregna cada aspecto de su carrera. Ha trabajado en diversos campos, lo que le permite adaptarse rápidamente a cualquier situación. Estos roles han pulido tanto sus habilidades técnicas como interpersonales, convirtiéndolo en un colaborador versátil que impacta significativamente cada proyecto al que se une. Impulsado por un deseo constante de aprender, actualiza continuamente sus conocimientos a través de un máster en informática. Este viaje de aprendizaje continuo lo convierte en un profesional IT integral en el campo de las ciencias de la computación. — (traducido del inglés)</reference>
+      <traits>
+        <trait>Determination</trait>
+        <trait>Adaptability</trait>
+        <trait>Flexibility</trait>
+        <trait>Resilience</trait>
+        <trait>Eagerness to learn</trait>
+      </traits>
     </reference>
     <reference>
       <name>Tjörven Janssens, desarrollador de software en Xtrada</name>
       <reference>Además de ser desarrollador de software, a Baptiste le gusta dedicarse al análisis de datos y es un experto en el uso de ChatGPT. Le gusta aprender cosas nuevas y lo hace rápido. Es muy entusiasta en el trato y siempre está dispuesto a ofrecer una palabra amable o un consejo. — (traducido del neerlandés)</reference>
+      <traits>
+        <trait>Analysis</trait>
+        <trait>Eagerness to learn</trait>
+        <trait>Enthusiasm</trait>
+        <trait>Approachability</trait>
+      </traits>
     </reference>
     <reference>
       <name>Michael Culot, gerente de ventas en Xtrada</name>
       <reference>Baptiste es un desarrollador estupendo y entregado, ansioso por seguir aprendiendo nuevas tecnologías y elevar sus habilidades. Te sorprenderías no solo de su conocimiento sino también de su cálido y abierto entusiasmo. Baptiste, vas a hacer grandes cosas en tu vida, simplemente mantén tu espíritu vibrante ✊ — (traducido del inglés)</reference>
+      <traits>
+        <trait>Eagerness to learn</trait>
+        <trait>Enthusiasm</trait>
+        <trait>Positivity</trait>
+      </traits>
     </reference>
   </references>
   <skills>
@@ -6160,6 +6201,15 @@ En resumen, si buscas a alguien que aporte entusiasmo, inteligencia y un toque d
         <keyword>Pragmatism</keyword>
         <keyword>Resourcefulness</keyword>
         <keyword>Thoroughness</keyword>
+        <keyword>Enthusiasm</keyword>
+        <keyword>Eagerness to learn</keyword>
+        <keyword>Communication</keyword>
+        <keyword>Mentoring</keyword>
+        <keyword>Determination</keyword>
+        <keyword>Positivity</keyword>
+        <keyword>Approachability</keyword>
+        <keyword>Humor</keyword>
+        <keyword>Curiosity</keyword>
       </keywords>
     </skill>
     <skill>

@@ -21,6 +21,14 @@ function renderSkillsBlocks(resume, t) {
       const tags = cat.keywords
         .map((k, i) => {
           const hidden = name === 'HardSkills' && i >= PRINTED_SKILLS ? ' print-hidden' : '';
+          // A trait of the personality list leads to the first recommendation
+          // that names it (the article's id, as renderReferenceArticle writes it).
+          const said =
+            name === 'SoftSkills'
+              ? (resume.references || []).findIndex((r) => r.traits?.includes(k))
+              : -1;
+          if (said >= 0)
+            return `      <a class="skill-tag" href="#ref-${said}">${escapeHtml(k)}</a>`;
           return `      <span class="skill-tag${hidden}">${escapeHtml(k)}</span>`;
         })
         .join('\n');

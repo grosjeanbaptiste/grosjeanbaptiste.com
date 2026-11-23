@@ -213,6 +213,7 @@ class ReferenceEntry(Node):
     key: str
     name: Value | None = None
     quote: Value | None = None
+    traits: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True, kw_only=True)

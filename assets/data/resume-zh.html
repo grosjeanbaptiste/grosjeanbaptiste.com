@@ -221,9 +221,10 @@
           .sidebar a:hover { text-decoration: underline; }
           .icon { display: inline-block; width: 1.1em; color: var(--accent); margin-right: 4px; }
           .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
-          /* On screen the skills are the timeline's filter, every one of them; the
-             sidebar keeps them for the sheet, which has them as the LaTeX CV does. */
-          @media screen { .sidebar > .skills-title, .sidebar > .skill-tags { display: none; } }
+          /* On screen the technical skills are the timeline's filter, every one of
+             them; the sidebar keeps them for the sheet, which has them as the
+             LaTeX CV does. The soft skills are not in the filter: they stay. */
+          @media screen { .sidebar > .skills-title, .sidebar > .skill-tags.hard { display: none; } }
           .skill-tag {
             display: inline-block;
             background: var(--accent);
@@ -602,15 +603,15 @@
 <div class="lang-item">
 <strong>荷兰语</strong><br>B1</div>
 <h2 class="skills-title">技术技能</h2>
-<div class="skill-tags">
+<div class="skill-tags hard">
 <a class="skill-tag" href="#skill-sql">SQL</a><a class="skill-tag" href="#skill-c">C#</a><a class="skill-tag" href="#skill-java">Java</a><a class="skill-tag" href="#skill-python">Python</a><a class="skill-tag" href="#skill-js">JS</a><span class="skill-tag">TS</span><a class="skill-tag" href="#skill-xml">XML</a><a class="skill-tag" href="#skill-json">JSON</a><a class="skill-tag" href="#skill-html">HTML</a><a class="skill-tag" href="#skill-css">CSS</a><span class="skill-tag">Zsh</span><a class="skill-tag" href="#skill-dart">Dart</a><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-latex">LaTeX</a><a class="skill-tag" href="#skill-sql-server">SQL Server</a><span class="skill-tag">EF</span><a class="skill-tag" href="#skill-net">.NET</a><a class="skill-tag" href="#skill-pandas">Pandas</a><a class="skill-tag" href="#skill-numpy">NumPy</a><a class="skill-tag" href="#skill-whisper">Whisper</a><a class="skill-tag" href="#skill-spacy">SpaCy</a><span class="skill-tag">PyTorch</span><span class="skill-tag">Transformers</span><span class="skill-tag">HuggingFace</span><a class="skill-tag" href="#skill-sentencetransformers">SentenceTransformers</a><span class="skill-tag">LLMs</span><a class="skill-tag" href="#skill-rag">RAG</a><span class="skill-tag">LangChain</span><a class="skill-tag" href="#skill-openai">OpenAI</a><span class="skill-tag">Claude</span><span class="skill-tag">Embeddings</span><span class="skill-tag">ColBERT</span><span class="skill-tag">Reranking</span><span class="skill-tag">FAISS</span><span class="skill-tag">OpenSearch</span><span class="skill-tag">RAGAS</span><span class="skill-tag">PromptEngineering</span><a class="skill-tag" href="#skill-ocr">OCR</a><span class="skill-tag">Docling</span><span class="skill-tag">VLM</span><a class="skill-tag" href="#skill-node-js">Node.js</a><a class="skill-tag" href="#skill-express-js">Express.js</a><a class="skill-tag" href="#skill-blazor">Blazor</a><a class="skill-tag" href="#skill-angular">Angular</a><a class="skill-tag" href="#skill-react">React</a><a class="skill-tag" href="#skill-flutter">Flutter</a><a class="skill-tag" href="#skill-tokio">Tokio</a><a class="skill-tag" href="#skill-axum">Axum</a><span class="skill-tag">Tower</span><span class="skill-tag">Gradle</span><span class="skill-tag">NPM</span><span class="skill-tag">JWT</span><a class="skill-tag" href="#skill-auth0">Auth0</a><span class="skill-tag">SSH</span><span class="skill-tag">Venv</span><span class="skill-tag">Conda</span><a class="skill-tag" href="#skill-docker">Docker</a><a class="skill-tag" href="#skill-uml">UML</a><span class="skill-tag">Merise</span><span class="skill-tag">VisualParadigm</span><a class="skill-tag" href="#skill-minizinc">MiniZinc</a><a class="skill-tag" href="#skill-constraintprogramming">ConstraintProgramming</a><a class="skill-tag" href="#skill-combinatorialoptimization">CombinatorialOptimization</a><a class="skill-tag" href="#skill-pareto">Pareto</a><span class="skill-tag">Lark</span><a class="skill-tag" href="#skill-dsl">DSL</a><span class="skill-tag">Hypothesis</span><a class="skill-tag" href="#skill-cleancode">CleanCode</a><a class="skill-tag" href="#skill-cleanarchitecture">CleanArchitecture</a><a class="skill-tag" href="#skill-ddd">DDD</a><a class="skill-tag" href="#skill-cqrs">CQRS</a>
 </div>
-<div class="skill-tags print-hidden">
+<div class="skill-tags hard print-hidden">
 <a class="skill-tag" href="#skill-postgresql">PostgreSQL</a><a class="skill-tag" href="#skill-firebase">Firebase</a><a class="skill-tag" href="#skill-valhalla">Valhalla</a><a class="skill-tag" href="#skill-fastapi">FastAPI</a><a class="skill-tag" href="#skill-deepface">DeepFace</a><a class="skill-tag" href="#skill-sqlalchemy">SQLAlchemy</a><a class="skill-tag" href="#skill-typescript">TypeScript</a><a class="skill-tag" href="#skill-entityframework">EntityFramework</a><a class="skill-tag" href="#skill-azure">Azure</a><a class="skill-tag" href="#skill-opentelemetry">OpenTelemetry</a><a class="skill-tag" href="#skill-xunit">xUnit</a><a class="skill-tag" href="#skill-sequelize">Sequelize</a><a class="skill-tag" href="#skill-prolog">Prolog</a><a class="skill-tag" href="#skill-linkgrammar">LinkGrammar</a><a class="skill-tag" href="#skill-symbolicai">SymbolicAI</a><a class="skill-tag" href="#skill-nlp">NLP</a><a class="skill-tag" href="#skill-mutationtesting">MutationTesting</a><a class="skill-tag" href="#skill-informationretrieval">InformationRetrieval</a><a class="skill-tag" href="#skill-learningtorank">LearningToRank</a><a class="skill-tag" href="#skill-beir">BEIR</a><a class="skill-tag" href="#skill-hexagonalarchitecture">HexagonalArchitecture</a><a class="skill-tag" href="#skill-dioxus">Dioxus</a><a class="skill-tag" href="#skill-ratatui">Ratatui</a><a class="skill-tag" href="#skill-sqlite">SQLite</a><a class="skill-tag" href="#skill-ios">iOS</a><a class="skill-tag" href="#skill-spacedrepetition">SpacedRepetition</a><a class="skill-tag" href="#skill-leitner">Leitner</a><a class="skill-tag" href="#skill-sm2">SM2</a><a class="skill-tag" href="#skill-wordnet">WordNet</a><a class="skill-tag" href="#skill-tatoeba">Tatoeba</a><a class="skill-tag" href="#skill-cloudflareworkers">CloudflareWorkers</a><a class="skill-tag" href="#skill-webassembly">WebAssembly</a><a class="skill-tag" href="#skill-durableobjects">DurableObjects</a><a class="skill-tag" href="#skill-toml">TOML</a><a class="skill-tag" href="#skill-bm25f">BM25F</a><a class="skill-tag" href="#skill-sympy">SymPy</a><a class="skill-tag" href="#skill-scipy">SciPy</a><a class="skill-tag" href="#skill-lean4">Lean4</a><a class="skill-tag" href="#skill-mathlib">Mathlib</a><a class="skill-tag" href="#skill-opencascade">OpenCASCADE</a><a class="skill-tag" href="#skill-manifold">Manifold</a><a class="skill-tag" href="#skill-build123d">build123d</a><a class="skill-tag" href="#skill-gmsh">Gmsh</a><a class="skill-tag" href="#skill-optuna">Optuna</a><a class="skill-tag" href="#skill-nsga2">NSGA2</a><a class="skill-tag" href="#skill-multiobjectiveoptimization">MultiObjectiveOptimization</a><a class="skill-tag" href="#skill-threejs">ThreeJS</a><a class="skill-tag" href="#skill-duckdb">DuckDB</a><a class="skill-tag" href="#skill-elorating">EloRating</a><a class="skill-tag" href="#skill-poissonmodel">PoissonModel</a><a class="skill-tag" href="#skill-ensemblemodel">EnsembleModel</a><a class="skill-tag" href="#skill-walkforwardbacktest">WalkForwardBacktest</a><a class="skill-tag" href="#skill-brierscore">BrierScore</a><a class="skill-tag" href="#skill-parquet">Parquet</a><a class="skill-tag" href="#skill-fileengine">FileEngine</a><a class="skill-tag" href="#skill-metadata">Metadata</a><a class="skill-tag" href="#skill-opentofu">OpenTofu</a><a class="skill-tag" href="#skill-ansible">Ansible</a><a class="skill-tag" href="#skill-wireguard">WireGuard</a><a class="skill-tag" href="#skill-tls">TLS</a><a class="skill-tag" href="#skill-dns">DNS</a><a class="skill-tag" href="#skill-systemsprogramming">SystemsProgramming</a><a class="skill-tag" href="#skill-telemetry">Telemetry</a><a class="skill-tag" href="#skill-cli">CLI</a><a class="skill-tag" href="#skill-ui">UI</a><a class="skill-tag" href="#skill-desktop">Desktop</a><a class="skill-tag" href="#skill-i18n">i18n</a><a class="skill-tag" href="#skill-charting">Charting</a><a class="skill-tag" href="#skill-git">Git</a><a class="skill-tag" href="#skill-github">GitHub</a><a class="skill-tag" href="#skill-scaffolding">Scaffolding</a><a class="skill-tag" href="#skill-agents">Agents</a><a class="skill-tag" href="#skill-observability">Observability</a><a class="skill-tag" href="#skill-forecasting">Forecasting</a><a class="skill-tag" href="#skill-dag">DAG</a><a class="skill-tag" href="#skill-scientificcomputing">ScientificComputing</a><a class="skill-tag" href="#skill-mathematics">Mathematics</a><a class="skill-tag" href="#skill-typesystem">TypeSystem</a><a class="skill-tag" href="#skill-knowledgebase">KnowledgeBase</a><a class="skill-tag" href="#skill-education">Education</a><a class="skill-tag" href="#skill-solver">Solver</a><a class="skill-tag" href="#skill-knowledgegraph">KnowledgeGraph</a><a class="skill-tag" href="#skill-graphtheory">GraphTheory</a><a class="skill-tag" href="#skill-visualization">Visualization</a><a class="skill-tag" href="#skill-spring-boot">Spring Boot</a><a class="skill-tag" href="#skill-ai">AI</a><a class="skill-tag" href="#skill-evaluation">Evaluation</a><a class="skill-tag" href="#skill-benchmark">Benchmark</a><a class="skill-tag" href="#skill-tonic">Tonic</a><a class="skill-tag" href="#skill-grpc">gRPC</a><a class="skill-tag" href="#skill-protobuf">Protobuf</a><a class="skill-tag" href="#skill-sqlx">SQLx</a><a class="skill-tag" href="#skill-postgis">PostGIS</a><a class="skill-tag" href="#skill-redis">Redis</a><a class="skill-tag" href="#skill-minio">MinIO</a><a class="skill-tag" href="#skill-livekit">LiveKit</a><a class="skill-tag" href="#skill-openbao">OpenBao</a><a class="skill-tag" href="#skill-prometheus">Prometheus</a><a class="skill-tag" href="#skill-testcontainers">Testcontainers</a><a class="skill-tag" href="#skill-openstreetmap">OpenStreetMap</a><a class="skill-tag" href="#skill-caddy">Caddy</a><a class="skill-tag" href="#skill-dylint">Dylint</a><a class="skill-tag" href="#skill-eventdriven">EventDriven</a><a class="skill-tag" href="#skill-melos">Melos</a><a class="skill-tag" href="#skill-riverpod">Riverpod</a><a class="skill-tag" href="#skill-drift">Drift</a><a class="skill-tag" href="#skill-sqlcipher">SQLCipher</a><a class="skill-tag" href="#skill-dio">Dio</a><a class="skill-tag" href="#skill-flutterrustbridge">FlutterRustBridge</a><a class="skill-tag" href="#skill-maplibre">MapLibre</a><a class="skill-tag" href="#skill-fluttermap">FlutterMap</a><a class="skill-tag" href="#skill-offlinefirst">OfflineFirst</a><a class="skill-tag" href="#skill-e2ee">E2EE</a><a class="skill-tag" href="#skill-mobile">Mobile</a><a class="skill-tag" href="#skill-vite">Vite</a><a class="skill-tag" href="#skill-javascript">JavaScript</a><a class="skill-tag" href="#skill-i18next">i18next</a><a class="skill-tag" href="#skill-reactrouter">ReactRouter</a><a class="skill-tag" href="#skill-eslint">ESLint</a><a class="skill-tag" href="#skill-vercel">Vercel</a><a class="skill-tag" href="#skill-ortools">ORTools</a><a class="skill-tag" href="#skill-php">PHP</a><a class="skill-tag" href="#skill-api">API</a><a class="skill-tag" href="#skill-ui-ux">UI/UX</a><a class="skill-tag" href="#skill-paypal">PayPal</a><a class="skill-tag" href="#skill-ner">NER</a><a class="skill-tag" href="#skill-qrcode">QRCode</a>
 </div>
-<h2 class="skills-title">软技能</h2>
+<h2>个性</h2>
 <div class="skill-tags">
-<span class="skill-tag">Adaptability</span><span class="skill-tag">Resilience</span><span class="skill-tag">Leadership</span><span class="skill-tag">Creativity</span><span class="skill-tag">Initiative</span><span class="skill-tag">Analysis</span><span class="skill-tag">Flexibility</span><span class="skill-tag">Teamwork</span><span class="skill-tag">Organization</span><span class="skill-tag">Pragmatism</span><span class="skill-tag">Resourcefulness</span><span class="skill-tag">Thoroughness</span>
+<a class="skill-tag" href="#id1">Adaptability</a><a class="skill-tag" href="#id2">Resilience</a><a class="skill-tag" href="#id2">Leadership</a><span class="skill-tag">Creativity</span><a class="skill-tag" href="#id3">Initiative</a><a class="skill-tag" href="#id2">Analysis</a><a class="skill-tag" href="#id1">Flexibility</a><a class="skill-tag" href="#id2">Teamwork</a><span class="skill-tag">Organization</span><a class="skill-tag" href="#id3">Pragmatism</a><a class="skill-tag" href="#id2">Resourcefulness</a><span class="skill-tag">Thoroughness</span><a class="skill-tag" href="#id3">Enthusiasm</a><a class="skill-tag" href="#id3">Eagerness to learn</a><a class="skill-tag" href="#id2">Communication</a><a class="skill-tag" href="#id2">Mentoring</a><a class="skill-tag" href="#id1">Determination</a><a class="skill-tag" href="#id4">Positivity</a><a class="skill-tag" href="#id4">Approachability</a><a class="skill-tag" href="#id3">Humor</a><a class="skill-tag" href="#id3">Curiosity</a>
 </div>
 <h2>我的一天</h2>
 <ul class="day-list">
@@ -2659,7 +2660,7 @@
       </a>
 </li></ul>
 </div>
-<p class="ref-links">推荐人: <a href="#id1">Waseem Virk，Emvi.ai Flutter 开发者</a></p>
+<p class="ref-links">推荐人: <a href="#id2">Waseem Virk，Emvi.ai Flutter 开发者</a></p>
 </div>
 <div class="item" id="work-emvi-ai-ai-软件工艺师">
 <a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/work/emvi-ai-ai-software-crafter/">交互式 ↗
@@ -2679,7 +2680,7 @@
       </a>
 </li></ul>
 </div>
-<p class="ref-links">推荐人: <a href="#id1">Waseem Virk，Emvi.ai Flutter 开发者</a></p>
+<p class="ref-links">推荐人: <a href="#id2">Waseem Virk，Emvi.ai Flutter 开发者</a></p>
 </div>
 <div class="item" id="work-xtrada-数据科学家">
 <a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/work/xtrada-data-scientist/">交互式 ↗
@@ -2698,7 +2699,7 @@
       </a>
 </li></ul>
 </div>
-<p class="ref-links">推荐人: <a href="#id2">Tino Schuerewegen，Xtrada 软件开发者</a>, <a href="#id3">Emiel Van Gysegem，Xtra Groep 营销与运营</a>, <a href="#id4">Steven Claus，Xtra Groep 首席财务官</a>, <a href="#id5">Tjörven Janssens，Xtrada 软件开发者</a>, <a href="#id6">Michael Culot，Xtrada 销售经理</a></p>
+<p class="ref-links">推荐人: <a href="#id3">Tino Schuerewegen，Xtrada 软件开发者</a>, <a href="#id4">Emiel Van Gysegem，Xtra Groep 营销与运营</a>, <a href="#id1">Steven Claus，Xtra Groep 首席财务官</a>, <a href="#id5">Tjörven Janssens，Xtrada 软件开发者</a>, <a href="#id6">Michael Culot，Xtrada 销售经理</a></p>
 </div>
 <div class="item" id="work-xtrada-软件工艺师">
 <a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/work/xtrada-software-crafter/">交互式 ↗
@@ -2710,7 +2711,7 @@
 <div class="inline-skills skill-tags">
 <a class="skill-tag" href="#skill-net">.NET</a><a class="skill-tag" href="#skill-ddd">DDD</a><a class="skill-tag" href="#skill-cleancode">CleanCode</a><a class="skill-tag" href="#skill-cleanarchitecture">CleanArchitecture</a>
 </div>
-<p class="ref-links">推荐人: <a href="#id2">Tino Schuerewegen，Xtrada 软件开发者</a>, <a href="#id3">Emiel Van Gysegem，Xtra Groep 营销与运营</a>, <a href="#id4">Steven Claus，Xtra Groep 首席财务官</a>, <a href="#id5">Tjörven Janssens，Xtrada 软件开发者</a>, <a href="#id6">Michael Culot，Xtrada 销售经理</a></p>
+<p class="ref-links">推荐人: <a href="#id3">Tino Schuerewegen，Xtrada 软件开发者</a>, <a href="#id4">Emiel Van Gysegem，Xtra Groep 营销与运营</a>, <a href="#id1">Steven Claus，Xtra Groep 首席财务官</a>, <a href="#id5">Tjörven Janssens，Xtrada 软件开发者</a>, <a href="#id6">Michael Culot，Xtrada 销售经理</a></p>
 </div>
 <div class="item" id="work-xtrada-net-react-软件工艺师">
 <a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/work/xtrada-net-react-software-crafter/">交互式 ↗
@@ -2728,7 +2729,7 @@
       </a>
 </li></ul>
 </div>
-<p class="ref-links">推荐人: <a href="#id2">Tino Schuerewegen，Xtrada 软件开发者</a>, <a href="#id3">Emiel Van Gysegem，Xtra Groep 营销与运营</a>, <a href="#id4">Steven Claus，Xtra Groep 首席财务官</a>, <a href="#id5">Tjörven Janssens，Xtrada 软件开发者</a>, <a href="#id6">Michael Culot，Xtrada 销售经理</a></p>
+<p class="ref-links">推荐人: <a href="#id3">Tino Schuerewegen，Xtrada 软件开发者</a>, <a href="#id4">Emiel Van Gysegem，Xtra Groep 营销与运营</a>, <a href="#id1">Steven Claus，Xtra Groep 首席财务官</a>, <a href="#id5">Tjörven Janssens，Xtrada 软件开发者</a>, <a href="#id6">Michael Culot，Xtrada 销售经理</a></p>
 </div>
 <div class="item" id="work-xtrada-net-blazor-软件工艺师">
 <a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/work/xtrada-net-blazor-software-crafter/">交互式 ↗
@@ -2747,7 +2748,7 @@
       </a>
 </li></ul>
 </div>
-<p class="ref-links">推荐人: <a href="#id2">Tino Schuerewegen，Xtrada 软件开发者</a>, <a href="#id3">Emiel Van Gysegem，Xtra Groep 营销与运营</a>, <a href="#id4">Steven Claus，Xtra Groep 首席财务官</a>, <a href="#id5">Tjörven Janssens，Xtrada 软件开发者</a>, <a href="#id6">Michael Culot，Xtrada 销售经理</a></p>
+<p class="ref-links">推荐人: <a href="#id3">Tino Schuerewegen，Xtrada 软件开发者</a>, <a href="#id4">Emiel Van Gysegem，Xtra Groep 营销与运营</a>, <a href="#id1">Steven Claus，Xtra Groep 首席财务官</a>, <a href="#id5">Tjörven Janssens，Xtrada 软件开发者</a>, <a href="#id6">Michael Culot，Xtrada 销售经理</a></p>
 </div>
 <div class="item print-hidden" id="work-technofutur-tic-全栈-web-开发实习生">
 <a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/work/technofutur-tic-full-stack-developer-web-intern/">交互式 ↗
@@ -3167,7 +3168,7 @@ TFE: WebMenu 2.0
 </div>
 <div class="refs" id="references">
 <h2>推荐人</h2>
-<div class="item" id="id1">
+<div class="item" id="id2">
 <div class="ref-author">Waseem Virk，Emvi.ai Flutter 开发者</div>
 <blockquote>在 EMVI 项目中与 Baptiste Grosjean 一起工作是一次令人难以置信的有益经历——无论是在专业上还是个人上。Baptiste 不仅是一位技术非常出色的开发者，对设计和功能有着敏锐的眼光，而且在我们的合作中也一直是导师和灵感来源。
 
@@ -3177,7 +3178,7 @@ TFE: WebMenu 2.0
 
 如果您正在寻找一个不仅能交付卓越成果还能激励周围所有人的人，我无法更强烈地推荐 Baptiste。他是一位出色的开发者、伟大的队友，也是我有幸向其学习的人。 — （译自英语）</blockquote>
 </div>
-<div class="item" id="id2">
+<div class="item" id="id3">
 <div class="ref-author">Tino Schuerewegen，Xtrada 软件开发者</div>
 <blockquote>我有幸与 Baptiste 共事了一年，并额外地获得了在一个项目中指导他三个月的乐趣。如果说 Baptiste 有一件事最突出，那就是他无穷的精力。无论是早上 9 点还是晚上 9 点，他始终是房间里最热情的人——有时甚至比咖啡机还热情。
 
@@ -3187,11 +3188,11 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
 
 总而言之，如果您正在寻找一个为每项任务带来热情、智慧和一丝幽默的人，Baptiste 就是您要找的人。与他合作不仅富有成效，而且真正令人愉快。 — （译自英语）</blockquote>
 </div>
-<div class="item" id="id3">
+<div class="item" id="id4">
 <div class="ref-author">Emiel Van Gysegem，Xtra Groep 营销与运营</div>
 <blockquote>尽管我们没有直接合作，但我与 Baptiste 始终保持着非常愉快的联系。在英语、荷兰语和法语的混合中，我们经常分享愉快的对话。他的热情和能量真的很有感染力，他知道如何在每次互动中营造愉快、轻松的氛围。Baptiste 是一个能带来积极动力的人。 — （译自荷兰语）</blockquote>
 </div>
-<div class="item" id="id4">
+<div class="item" id="id1">
 <div class="ref-author">Steven Claus，Xtra Groep 首席财务官</div>
 <blockquote>Baptiste 是一位全栈软件开发者，受坚定不移的决心驱动。这种心态贯穿他职业生涯的每个方面。他曾在多个领域工作，使他能够迅速适应任何情况。这些角色磨砺了他的技术和人际交往能力，使他成为一个多才多艺的合作者，对他加入的每个项目都产生重大影响。在持续学习愿望的推动下，他通过攻读计算机科学硕士不断更新自己的知识。这种持续的学习之旅使他成为计算机科学领域全面的 IT 专业人士。 — （译自英语）</blockquote>
 </div>

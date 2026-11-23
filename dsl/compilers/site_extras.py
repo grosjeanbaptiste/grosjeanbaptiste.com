@@ -209,6 +209,8 @@ def emit(resume: Resume) -> dict[str, Any]:
         payload["education"] = extras
     if (extras := _summaries(resume.projects)):
         payload["projects"] = extras
+    if any(r.traits for r in resume.references):
+        payload["references"] = _trim_trailing_nulls([{"traits": list(r.traits)} if r.traits else None for r in resume.references])
     if resume.courses:
         payload["courses"] = _courses(resume)
     if (daily := _daily_life(resume)) is not None:

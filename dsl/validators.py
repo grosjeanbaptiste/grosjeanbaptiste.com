@@ -89,6 +89,19 @@ def validate(resume: Resume) -> list[ValidationError]:
     errors: list[ValidationError] = []
     project_keys = {p.key for p in resume.projects}
 
+    # a recommendation names only traits the personality list has
+    soft = set(resume.skills.soft) if resume.skills else set()
+    for r in resume.references:
+        for trait in r.traits:
+            if trait not in soft:
+                errors.append(
+                    ValidationError(
+                        section="references",
+                        entry=r.key,
+                        message=f"trait {trait!r} is not among the soft skills",
+                    )
+                )
+
     # basics translations
     if resume.basics is not None:
         errors.extend(_walk_values(resume.basics.label, "basics", None, "label"))

@@ -45,7 +45,7 @@
           <xsl:when test="$k='projects'">Projets</xsl:when>
           <xsl:when test="$k='courseUnits'">Unités d'enseignement</xsl:when>
           <xsl:when test="$k='technicalSkills'">Compétences techniques</xsl:when>
-          <xsl:when test="$k='softSkills'">Compétences personnelles</xsl:when>
+          <xsl:when test="$k='softSkills'">Personnalité</xsl:when>
           <xsl:when test="$k='languages'">Langues</xsl:when>
           <xsl:when test="$k='typicalDay'">Une journée type</xsl:when>
           <xsl:when test="$k='present'">aujourd'hui</xsl:when>
@@ -74,7 +74,7 @@
           <xsl:when test="$k='projects'">Projecten</xsl:when>
           <xsl:when test="$k='courseUnits'">Opleidingsonderdelen</xsl:when>
           <xsl:when test="$k='technicalSkills'">Technische vaardigheden</xsl:when>
-          <xsl:when test="$k='softSkills'">Persoonlijke vaardigheden</xsl:when>
+          <xsl:when test="$k='softSkills'">Persoonlijkheid</xsl:when>
           <xsl:when test="$k='languages'">Talen</xsl:when>
           <xsl:when test="$k='typicalDay'">Een typische dag</xsl:when>
           <xsl:when test="$k='present'">heden</xsl:when>
@@ -103,7 +103,7 @@
           <xsl:when test="$k='projects'">Proyectos</xsl:when>
           <xsl:when test="$k='courseUnits'">Unidades de enseñanza</xsl:when>
           <xsl:when test="$k='technicalSkills'">Habilidades técnicas</xsl:when>
-          <xsl:when test="$k='softSkills'">Habilidades personales</xsl:when>
+          <xsl:when test="$k='softSkills'">Personalidad</xsl:when>
           <xsl:when test="$k='languages'">Idiomas</xsl:when>
           <xsl:when test="$k='typicalDay'">Un día típico</xsl:when>
           <xsl:when test="$k='present'">actualidad</xsl:when>
@@ -132,7 +132,7 @@
           <xsl:when test="$k='projects'">Projekte</xsl:when>
           <xsl:when test="$k='courseUnits'">Lehreinheiten</xsl:when>
           <xsl:when test="$k='technicalSkills'">Technische Fähigkeiten</xsl:when>
-          <xsl:when test="$k='softSkills'">Soziale Kompetenzen</xsl:when>
+          <xsl:when test="$k='softSkills'">Persönlichkeit</xsl:when>
           <xsl:when test="$k='languages'">Sprachen</xsl:when>
           <xsl:when test="$k='typicalDay'">Ein typischer Tag</xsl:when>
           <xsl:when test="$k='present'">heute</xsl:when>
@@ -161,7 +161,7 @@
           <xsl:when test="$k='projects'">项目</xsl:when>
           <xsl:when test="$k='courseUnits'">教学单元</xsl:when>
           <xsl:when test="$k='technicalSkills'">技术技能</xsl:when>
-          <xsl:when test="$k='softSkills'">软技能</xsl:when>
+          <xsl:when test="$k='softSkills'">个性</xsl:when>
           <xsl:when test="$k='languages'">语言</xsl:when>
           <xsl:when test="$k='typicalDay'">我的一天</xsl:when>
           <xsl:when test="$k='present'">至今</xsl:when>
@@ -190,7 +190,7 @@
           <xsl:when test="$k='projects'">Projects</xsl:when>
           <xsl:when test="$k='courseUnits'">Course units</xsl:when>
           <xsl:when test="$k='technicalSkills'">Technical Skills</xsl:when>
-          <xsl:when test="$k='softSkills'">Soft Skills</xsl:when>
+          <xsl:when test="$k='softSkills'">Personality</xsl:when>
           <xsl:when test="$k='languages'">Languages</xsl:when>
           <xsl:when test="$k='typicalDay'">A Day of My Life</xsl:when>
           <xsl:when test="$k='present'">Present</xsl:when>
@@ -368,9 +368,10 @@
           .sidebar a:hover { text-decoration: underline; }
           .icon { display: inline-block; width: 1.1em; color: var(--accent); margin-right: 4px; }
           .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
-          /* On screen the skills are the timeline's filter, every one of them; the
-             sidebar keeps them for the sheet, which has them as the LaTeX CV does. */
-          @media screen { .sidebar > .skills-title, .sidebar > .skill-tags { display: none; } }
+          /* On screen the technical skills are the timeline's filter, every one of
+             them; the sidebar keeps them for the sheet, which has them as the
+             LaTeX CV does. The soft skills are not in the filter: they stay. */
+          @media screen { .sidebar > .skills-title, .sidebar > .skill-tags.hard { display: none; } }
           .skill-tag {
             display: inline-block;
             background: var(--accent);
@@ -927,13 +928,13 @@
     <xsl:variable name="hard" select="key('skill-by-name', 'HardSkills')"/>
     <xsl:if test="$hard/keywords/keyword">
       <h2 class="skills-title"><xsl:call-template name="t"><xsl:with-param name="k" select="'technicalSkills'"/></xsl:call-template></h2>
-      <div class="skill-tags">
+      <div class="skill-tags hard">
         <xsl:for-each select="$hard/keywords/keyword[position() &lt;= 71]">
           <xsl:call-template name="skill-tag"/>
         </xsl:for-each>
       </div>
       <!-- The sheet holds the first 71, as the LaTeX CV does; the screen all. -->
-      <div class="skill-tags print-hidden">
+      <div class="skill-tags hard print-hidden">
         <xsl:for-each select="$hard/keywords/keyword[position() &gt; 71]">
           <xsl:call-template name="skill-tag"/>
         </xsl:for-each>
@@ -941,10 +942,16 @@
     </xsl:if>
     <xsl:variable name="soft" select="key('skill-by-name', 'SoftSkills')"/>
     <xsl:if test="$soft/keywords/keyword">
-      <h2 class="skills-title"><xsl:call-template name="t"><xsl:with-param name="k" select="'softSkills'"/></xsl:call-template></h2>
+      <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'softSkills'"/></xsl:call-template></h2>
       <div class="skill-tags">
         <xsl:for-each select="$soft/keywords/keyword">
-          <xsl:call-template name="skill-tag"/>
+          <xsl:variable name="said" select="/resume/references/reference[traits/trait = current()][1]"/>
+          <xsl:choose>
+            <xsl:when test="$said">
+              <a class="skill-tag"><xsl:attribute name="href">#<xsl:value-of select="generate-id($said)"/></xsl:attribute><xsl:value-of select="."/></a>
+            </xsl:when>
+            <xsl:otherwise><span class="skill-tag"><xsl:value-of select="."/></span></xsl:otherwise>
+          </xsl:choose>
         </xsl:for-each>
       </div>
     </xsl:if>

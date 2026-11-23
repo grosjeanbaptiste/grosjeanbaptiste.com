@@ -410,6 +410,61 @@
       "summary": "QR code based cash register for HoReCa establishments."
     }
   ],
+  "references": [
+    {
+      "traits": [
+        "Leadership",
+        "Teamwork",
+        "Resilience",
+        "Mentoring",
+        "Communication",
+        "Analysis",
+        "Resourcefulness"
+      ]
+    },
+    {
+      "traits": [
+        "Enthusiasm",
+        "Eagerness to learn",
+        "Initiative",
+        "Pragmatism",
+        "Humor",
+        "Curiosity"
+      ]
+    },
+    {
+      "traits": [
+        "Enthusiasm",
+        "Positivity",
+        "Approachability",
+        "Communication"
+      ]
+    },
+    {
+      "traits": [
+        "Determination",
+        "Adaptability",
+        "Flexibility",
+        "Resilience",
+        "Eagerness to learn"
+      ]
+    },
+    {
+      "traits": [
+        "Analysis",
+        "Eagerness to learn",
+        "Enthusiasm",
+        "Approachability"
+      ]
+    },
+    {
+      "traits": [
+        "Eagerness to learn",
+        "Enthusiasm",
+        "Positivity"
+      ]
+    }
+  ],
   "courses": [
     {
       "name": "Algorithmique",
