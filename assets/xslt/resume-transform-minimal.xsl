@@ -209,6 +209,11 @@
           <xsl:variable name="ref" select="."/>
           <xsl:variable name="proj" select="key('project-by-name', $ref)[local-name($ref) = 'project'] | key('course-by-name', $ref)[local-name($ref) = 'course']"/>
           <li>
+            <!-- A family of projects (OpenActe) is one row on paper, with the number
+                 of its parts; the parts stay on the screen. -->
+            <xsl:variable name="parts" select="count($refs[key('project-by-name', .)/partOf = $ref])"/>
+            <xsl:if test="$proj/partOf and $refs[. = $proj/partOf]"><xsl:attribute name="class">project-part</xsl:attribute></xsl:if>
+            <xsl:if test="$parts &gt; 0"><xsl:attribute name="class">project-family</xsl:attribute><xsl:attribute name="data-parts"><xsl:value-of select="$parts"/></xsl:attribute></xsl:if>
             <xsl:choose>
               <xsl:when test="$proj/url">
                 <a target="_blank" rel="noopener"><xsl:attribute name="href"><xsl:value-of select="$proj/url"/></xsl:attribute><strong><xsl:value-of select="$ref"/></strong></a>
@@ -395,7 +400,11 @@
           a.skill-tag { text-decoration: none; }
           .inline-skills { margin: 6px 0; }
           .project-skills .skill-tag, .inline-skills .skill-tag { font-size: 0.7em; padding: 1px 7px; }
-          @media print { .project-skills { display: none; } }
+          @media print {
+            .project-skills { display: none; }
+            li.project-part { display: none; }
+            li.project-family::after { content: " (" attr(data-parts) ")"; }
+          }
           a.skill-tag:hover { background: var(--primary); }
           ul { padding-left: 20px; margin: 6px 0; }
           a { color: var(--accent); text-decoration: none; }

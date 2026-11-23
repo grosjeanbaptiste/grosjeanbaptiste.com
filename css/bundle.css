@@ -1429,7 +1429,11 @@ a.skill-tag:hover {
  * the generator worked out for the sheet. !important: the screen's rows are
  * written inline. */
 @media print {
-  .tl-bar[data-kind="unit"],
+  .tl-bar[data-kind="unit"] {
+    display: none;
+  }
+
+  /* A family's parts are folded into its bar on paper too. */
   .tl-bar[data-part] {
     display: none;
   }

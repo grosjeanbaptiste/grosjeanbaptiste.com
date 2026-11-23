@@ -213,7 +213,11 @@
           a.skill-tag { text-decoration: none; }
           .inline-skills { margin: 6px 0; }
           .project-skills .skill-tag, .inline-skills .skill-tag { font-size: 0.7em; padding: 1px 7px; }
-          @media print { .project-skills { display: none; } }
+          @media print {
+            .project-skills { display: none; }
+            li.project-part { display: none; }
+            li.project-family::after { content: " (" attr(data-parts) ")"; }
+          }
           a.skill-tag:hover { background: var(--primary); }
           ul { padding-left: 20px; margin: 6px 0; }
           a { color: var(--accent); text-decoration: none; }
@@ -2462,115 +2466,115 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/actserve"><strong>Actserve</strong></a> — Orchestrateur universel pour l'administration complète de serveurs et du cloud (zones DNS, certificats TLS Let's Encrypt, VPN WireGuard, OpenTofu, Ansible) avec une API REST réactive alimentant l'UI Biorcrux. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-axum">Axum</a><a class="skill-tag" href="#skill-opentofu">OpenTofu</a><a class="skill-tag" href="#skill-ansible">Ansible</a><a class="skill-tag" href="#skill-wireguard">WireGuard</a><a class="skill-tag" href="#skill-tls">TLS</a><a class="skill-tag" href="#skill-dns">DNS</a><a class="skill-tag" href="#skill-hexagonalarchitecture">HexagonalArchitecture</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actserve"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actserve/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/polymath"><strong>Polymath</strong></a> — Graphe universel de paquets de calcul interconnectant les disciplines scientifiques sans redondance via le système de types de Rust. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-dag">DAG</a><a class="skill-tag" href="#skill-scientificcomputing">ScientificComputing</a><a class="skill-tag" href="#skill-mathematics">Mathematics</a><a class="skill-tag" href="#skill-typesystem">TypeSystem</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-polymath"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/polymath/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/actos"><strong>Actos</strong></a> — Superviseur système modulaire et suite de diagnostic (processus, mémoire, volumes de stockage, télémétrie réseau, alimentation) pilotant des interfaces CLI et desktop Dioxus. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-dioxus">Dioxus</a><a class="skill-tag" href="#skill-systemsprogramming">SystemsProgramming</a><a class="skill-tag" href="#skill-telemetry">Telemetry</a><a class="skill-tag" href="#skill-cli">CLI</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actos"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actos/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/Actmorph"><strong>Actmorph</strong></a> — Moteur de catalogage universel et système d'extraction de métadonnées de fichiers agnostique aux formats. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-fileengine">FileEngine</a><a class="skill-tag" href="#skill-metadata">Metadata</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actmorph"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actmorph/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/actsessions"><strong>Actsessions</strong></a> — Découverte locale, inventaire de sessions et télémétrie pour agents de codage IA. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-agents">Agents</a><a class="skill-tag" href="#skill-observability">Observability</a><a class="skill-tag" href="#skill-telemetry">Telemetry</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actsessions"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actsessions/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/actusext"><strong>Actusext</strong></a> — Suivi des quotas en temps réel et prévision d'utilisation pour assistants de codage IA. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-cli">CLI</a><a class="skill-tag" href="#skill-forecasting">Forecasting</a><a class="skill-tag" href="#skill-observability">Observability</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actusext"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actusext/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/corpus"><strong>Corpus</strong></a> — Dépôt agrégé de supports de cours universitaires, notes de cours et travaux dirigés collectés sur les plateformes Moodle et portails académiques, avec solutions détaillées exactes. <span class="project-skills"><a class="skill-tag" href="#skill-python">Python</a><a class="skill-tag" href="#skill-latex">LaTeX</a><a class="skill-tag" href="#skill-knowledgebase">KnowledgeBase</a><a class="skill-tag" href="#skill-education">Education</a><a class="skill-tag" href="#skill-solver">Solver</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-corpus"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/corpus/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/actedu"><strong>Actedu</strong></a> — Cartographie et visualisation sous forme de graphe global des parcours académiques de l'enseignement supérieur, des dépendances de prérequis, des trajectoires de cours et des filières de diplômes. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-knowledgegraph">KnowledgeGraph</a><a class="skill-tag" href="#skill-graphtheory">GraphTheory</a><a class="skill-tag" href="#skill-education">Education</a><a class="skill-tag" href="#skill-visualization">Visualization</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actedu"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actedu/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/biorcrux"><strong>Biorcrux</strong></a> — Bibliothèque modulaire fournissant des composants UI déclaratifs, persistance, graphiques et internationalisation pour applications desktop multiplateformes. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-dioxus">Dioxus</a><a class="skill-tag" href="#skill-ui">UI</a><a class="skill-tag" href="#skill-desktop">Desktop</a><a class="skill-tag" href="#skill-i18n">i18n</a><a class="skill-tag" href="#skill-charting">Charting</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-biorcrux"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/biorcrux/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/actrepo"><strong>Actrepo</strong></a> — Suite d'outils CLI pour le nommage sémantique, la détection de collisions et l'échafaudage déclaratif de dépôts Git / GitHub. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-cli">CLI</a><a class="skill-tag" href="#skill-git">Git</a><a class="skill-tag" href="#skill-github">GitHub</a><a class="skill-tag" href="#skill-scaffolding">Scaffolding</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actrepo"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actrepo/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-family" data-parts="27">
 <strong>OpenActe</strong> — La famille des petits projets ouverts construits autour d'Acteble : bibliothèques, CLI, moteurs et bases de connaissances, chacun faisant une seule chose — comme les microservices d'une plateforme. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-opensource">OpenSource</a></span><span class="tl-anchor" id="project-openacte"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/openacte/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actart</strong> — Moteur de raisonnement juridique, droit belge d'abord : à partir d'un besoin ou d'un dossier, il trouve les textes applicables, raisonne sur leur application et répond avec citations. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-law">Law</a><a class="skill-tag" href="#skill-rag">RAG</a><a class="skill-tag" href="#skill-informationretrieval">InformationRetrieval</a><a class="skill-tag" href="#skill-hexagonalarchitecture">HexagonalArchitecture</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actart"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actart/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/actautoma"><strong>Actautoma</strong></a> — Bibliothèque Rust qui pilote les outils des plateformes d'hébergement de dépôts (gh pour GitHub, glab pour GitLab), avec une commande pour renommer un dépôt partout où il est référencé. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-github">GitHub</a><a class="skill-tag" href="#skill-gitlab">GitLab</a><a class="skill-tag" href="#skill-automation">Automation</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actautoma"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actautoma/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actcast</strong> — Orchestrateur de la pile multimédia et de téléchargement de l'écosystème Acteble : démarre, arrête et contrôle les applications de façon déclarative et réagit aux changements de leurs indexeurs. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-orchestration">Orchestration</a><a class="skill-tag" href="#skill-media">Media</a><a class="skill-tag" href="#skill-automation">Automation</a></span><span class="tl-anchor" id="project-actcast"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actcast/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actcdi</strong> — Exécute le CI/CD de chaque dépôt : lance les contrôles (lint, tests, builds), les répartit en lots et choisit ce qu'il faut exécuter. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-ci-cd">CI/CD</a><a class="skill-tag" href="#skill-automation">Automation</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actcdi"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actcdi/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actconf</strong> — Gère la configuration d'un parc de machines, de volumes et de serveurs, extraite pas à pas du dépôt dotfiles. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-configuration">Configuration</a><a class="skill-tag" href="#skill-stow">Stow</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actconf"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actconf/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actdevice</strong> — Lance ou installe une application (Flutter, Dioxus, ou tout projet doté d'un hook device-install) sur un simulateur iOS, un appareil Android ou l'hôte. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-flutter">Flutter</a><a class="skill-tag" href="#skill-dioxus">Dioxus</a><a class="skill-tag" href="#skill-ios">iOS</a><a class="skill-tag" href="#skill-android">Android</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actdevice"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actdevice/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actempo</strong> — Ordonnanceur d'actes pour sessions agentiques : à partir d'actes (unités de travail d'agent avec dépendances, priorité, échéance et coût en jetons) et de sessions, il produit un plan et dit quels actes n'ont pu être placés et pourquoi. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-scheduling">Scheduling</a><a class="skill-tag" href="#skill-agents">Agents</a><a class="skill-tag" href="#skill-optimization">Optimization</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actempo"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actempo/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actessh</strong> — Client SSH dont les clés et les mots de passe viennent d'Actesskey. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-ssh">SSH</a></span><span class="tl-anchor" id="project-actessh"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actessh/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actesskey</strong> — Secrets, clés et mots de passe de la machine au même endroit : chaque secret est un blob age, la clé age vit dans le Trousseau macOS, et rien de secret ne transite en ligne de commande. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-security">Security</a><a class="skill-tag" href="#skill-age">Age</a><a class="skill-tag" href="#skill-keychain">Keychain</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actesskey"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actesskey/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actinstall</strong> — Maintient les binaires installés par cargo depuis des dépôts locaux à la dernière version de leur dépôt. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-cargo">Cargo</a><a class="skill-tag" href="#skill-automation">Automation</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actinstall"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actinstall/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/Actit"><strong>Actit</strong></a> — Répond à « existe-t-il déjà un outil pour ce besoin ? » à partir d'Actindexer et de KAG seulement : aucun autre moteur de recherche, aucun LLM. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-informationretrieval">InformationRetrieval</a><a class="skill-tag" href="#skill-rag">RAG</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actit"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actit/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actlimit</strong> — Affiche les limites d'usage des agents de codage (Claude, Codex et les agents à budget de jetons) en une ligne chacun, assez vite pour un prompt de shell. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-agents">Agents</a><a class="skill-tag" href="#skill-observability">Observability</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actlimit"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actlimit/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actmail</strong> — Recherche en lecture seule dans chaque boîte aux lettres d'un manifeste, via IMAP ou depuis des Maildirs archivés : rien n'est marqué lu, déplacé ni supprimé. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-imap">IMAP</a><a class="skill-tag" href="#skill-email">Email</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actmail"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actmail/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actmake</strong> — Transforme un projet en son artefact avec un seul verbe, build ; l'appelant choisit le moteur (LaTeX, HTML ou Markdown imprimés en PDF). <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-latex">LaTeX</a><a class="skill-tag" href="#skill-build">Build</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actmake"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actmake/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a target="_blank" rel="noopener" href="https://github.com/grosjeanbaptiste/Actname"><strong>Actname</strong></a> — Moteur de nommage sémantique de projets, déterministe et fonctionnant hors ligne. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-nlp">NLP</a><a class="skill-tag" href="#skill-naming">Naming</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actname"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actname/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actpath</strong> — Tout ce qui touche aux chemins : réécriture des références à un dépôt renommé, déplacements, réparation des worktrees et enregistrements d'installation cargo. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-git">Git</a><a class="skill-tag" href="#skill-automation">Automation</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actpath"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actpath/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actqueue</strong> — Gère des files de tâches (la file des travaux lourds et ses voies), en tandem avec Actempo. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-scheduling">Scheduling</a><a class="skill-tag" href="#skill-agents">Agents</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actqueue"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/actqueue/">Interactif ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Acttex</strong> — Compile un projet LaTeX : trouve son fichier principal et lance pdflatex, biber et makeglossaries. <span class="project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-latex">LaTeX</a><a class="skill-tag" href="#skill-build">Build</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-acttex"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/fr/project/acttex/">Interactif ↗
       </a>
 </li>
