@@ -45,6 +45,10 @@
           <a class="pdf-open" target="_blank" rel="noopener noreferrer"><xsl:attribute name="href"><xsl:value-of select="$cv"/></xsl:attribute><xsl:value-of select="/resume/meta/pdfReader/openFile"/></a>
         </div>
         <p class="pdf-failed" role="alert" hidden="hidden"><xsl:value-of select="/resume/meta/pdfReader/failed"/></p>
+        <!-- In <noscript>: the browser fetches an <object>'s file as the page loads,
+             a whole PDF a visitor with the script never looks at (PDF.js reads it
+             itself, when the reader nears the screen). -->
+        <noscript>
         <object type="application/pdf" width="100%" height="800">
           <xsl:attribute name="data"><xsl:value-of select="$cv"/></xsl:attribute>
           <!-- Where the browser cannot show a PDF: the pages as pictures (what
@@ -63,6 +67,7 @@
           </xsl:for-each>
           <a><xsl:attribute name="href"><xsl:value-of select="$cv"/></xsl:attribute><xsl:value-of select="$cvLabel"/></a>
         </object>
+        </noscript>
         <!-- The other PDFs, for the reader that has no script. -->
         <ul class="pdf-files">
           <xsl:for-each select="exsl:node-set($choices)/choice[position() &gt; 1]">

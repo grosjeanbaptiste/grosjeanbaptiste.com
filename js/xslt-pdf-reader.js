@@ -10,6 +10,22 @@
   const base = section.dataset.pdfjs;
   let engine;
 
+  // One plain GET per file, kept for the page's life and started in parallel
+  // with the engine (or as a pointer reaches a choice), so the bytes are there
+  // when PDF.js is. The worker takes ownership of what it is given: a copy.
+  const bytes = new Map();
+  const fetchBytes = (file) => {
+    if (!bytes.has(file)) {
+      const got = fetch(file).then((response) => {
+        if (!response.ok) throw new Error(`${response.status} ${file}`);
+        return response.arrayBuffer();
+      });
+      got.catch(() => bytes.delete(file));
+      bytes.set(file, got);
+    }
+    return bytes.get(file);
+  };
+
   // The core first: the viewer reads globalThis.pdfjsLib, which only the core
   // defines. The worker is started once and handed to every document.
   function load() {
@@ -39,6 +55,7 @@
     const count = toolbar.querySelector('.pdf-pages');
     const choice = toolbar.querySelector('.pdf-choice');
     try {
+      fetchBytes(panel.dataset.file).catch(() => {});
       const { pdfjs, viewer, pdfWorker } = await load();
       // PDF.js wants its scrolling container absolutely positioned: a frame of
       // a set height holds it.
@@ -66,7 +83,8 @@
         for (const a of toolbar.querySelectorAll('.pdf-download, .pdf-open')) a.href = file;
         toolbar.querySelector('.pdf-download').textContent = download;
         try {
-          const task = pdfjs.getDocument({ url: file, worker: pdfWorker });
+          const data = new Uint8Array((await fetchBytes(file)).slice(0));
+          const task = pdfjs.getDocument({ data, worker: pdfWorker });
           const doc = await task.promise;
           pdfViewer.setDocument(doc);
           linkService.setDocument(doc);
@@ -84,6 +102,12 @@
         for (const b of choice.children) b.setAttribute('aria-pressed', String(b === button));
         return show(button.dataset.file, button.dataset.download);
       };
+      const ahead = (event) => {
+        const button = event.target.closest('button[data-file]');
+        if (button) fetchBytes(button.dataset.file).catch(() => {});
+      };
+      choice.addEventListener('pointerover', ahead);
+      choice.addEventListener('focusin', ahead);
       choice.addEventListener('click', (event) => {
         const button = event.target.closest('button[data-file]');
         if (button) pick(button);
@@ -111,6 +135,8 @@
     } catch (error) {
       console.error(`Displaying ${panel.dataset.file} failed:`, error);
       if (failed) failed.hidden = false;
+      // The links to the file are still there to use.
+      toolbar.hidden = false;
     }
   }
 
