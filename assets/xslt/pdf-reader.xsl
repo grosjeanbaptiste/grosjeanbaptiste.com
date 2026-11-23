@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exsl="http://exslt.org/common" extension-element-prefixes="exsl">
 
-  <!-- The PDFs, read in the page by one reader that is told which PDF to show:
+  <!-- The PDFs, read in the page by one reader, always open, that is told which PDF to show:
        the CV, or the timeline at one of three zooms. The browser's own viewer
        in the <object> zooms and downloads the CV (the default); a list of
        links hands the others over, and a browser that cannot show a PDF gets
@@ -26,9 +26,8 @@
     </xsl:variable>
     <section id="pdf" data-pdfjs="/assets/_vendor/pdfjs/">
       <h2><xsl:value-of select="$cvLabel"/></h2>
-      <details class="pdf-reader">
+      <div class="pdf-reader">
         <xsl:attribute name="data-file"><xsl:value-of select="$cv"/></xsl:attribute>
-        <summary><xsl:value-of select="$cvLabel"/></summary>
         <!-- The choice and the toolbar: hidden until the script has drawn the PDF. -->
         <div class="pdf-toolbar" hidden="hidden">
           <div class="pdf-choice" role="group"><xsl:attribute name="aria-label"><xsl:value-of select="$cvLabel"/></xsl:attribute>
@@ -71,7 +70,7 @@
             <li><a href="{@file}"><xsl:value-of select="."/></a></li>
           </xsl:for-each>
         </ul>
-      </details>
+      </div>
     </section>
   </xsl:template>
 

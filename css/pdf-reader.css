@@ -70,8 +70,8 @@
 }
 
 /* Once the script has the PDF on screen, the fallback gives way to it. */
-details[data-drawn] > object,
-details[data-drawn] > .pdf-files {
+.pdf-reader[data-drawn] > object,
+.pdf-reader[data-drawn] > .pdf-files {
   display: none;
 }
 

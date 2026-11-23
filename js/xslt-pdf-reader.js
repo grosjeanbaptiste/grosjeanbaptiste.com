@@ -1,7 +1,7 @@
 // The PDF reader of the XSLT themes, drawn the way the interactive view draws
 // it: PDF.js with its text and link layers, zoom buttons, fit-to-width. Loaded
-// by both themes; the one reader (details.pdf-reader, told its file by
-// data-file) is drawn the first time it is opened, so a visitor who never opens
+// by both themes; the one reader (.pdf-reader, told its file by data-file)
+// is drawn by itself as it nears the screen, so a visitor who never scrolls to
 // it pays nothing, and its choice (buttons) swaps the PDF it shows. Without this script
 // the reader keeps the browser's own <object> and a list of links.
 (() => {
@@ -111,13 +111,20 @@
     }
   }
 
-  const panel = section.querySelector('details.pdf-reader');
-  let started = false;
-  const start = () => {
-    if (started || !panel.open) return;
-    started = true;
+  // Drawn by itself, no button to open it: as the reader comes near the screen,
+  // so that a visitor who never scrolls down does not pay for PDF.js.
+  const panel = section.querySelector('.pdf-reader');
+  if ('IntersectionObserver' in window) {
+    const watch = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        watch.disconnect();
+        draw(panel);
+      },
+      { rootMargin: '600px' },
+    );
+    watch.observe(panel);
+  } else {
     draw(panel);
-  };
-  panel.addEventListener('toggle', start);
-  start();
+  }
 })();

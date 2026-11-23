@@ -409,8 +409,6 @@
           .ref-author { font-weight: 600; margin: 12px 0 4px; }
           /* The PDFs are read on screen; the sheet is the CV itself. */
           @media print { #pdf { display: none; } }
-          #pdf details { margin: 6px 0; }
-          #pdf summary { cursor: pointer; padding: 4px 0; }
           .stylesheet-note {
             margin-top: 40px;
             padding-top: 12px;

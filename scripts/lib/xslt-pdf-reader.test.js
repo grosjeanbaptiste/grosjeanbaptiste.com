@@ -1,5 +1,5 @@
 // The XSLT themes' PDF reader is plain markup, written by the stylesheet from
-// the XML: one <details class="pdf-reader"> that is told which PDF to show (the
+// the XML: one <div class="pdf-reader"> that is told which PDF to show (the
 // CV, or the timeline at three zooms, chosen with buttons), holding the CV in an
 // <object> so the browser's own viewer zooms and downloads it. With
 // js/xslt-pdf-reader.js it is drawn by PDF.js instead (assets/_vendor/pdfjs),
@@ -41,7 +41,7 @@ for (const lang of LANGS) {
   const timeline = src.match(/<pdf>[\s\S]*?<\/pdf>/)[0];
 
   test(`${lang}: one reader, with the CV and the timeline at three zooms to choose from`, () => {
-    assert.equal(html.match(/<details class="pdf-reader"/g).length, 1);
+    assert.equal(html.match(/<div class="pdf-reader"/g).length, 1);
     assert.equal(html.match(/<object /g).length, 1);
     assert.deepEqual(
       found.map((p) => p.file),
@@ -53,7 +53,7 @@ for (const lang of LANGS) {
       ],
     );
     assert.equal(shown(html), found[0].file);
-    assert.ok(html.includes(`<details class="pdf-reader" data-file="${found[0].file}"`));
+    assert.ok(html.includes(`<div class="pdf-reader" data-file="${found[0].file}"`));
   });
 
   test(`${lang}: each choice is a PDF that is shipped`, () => {

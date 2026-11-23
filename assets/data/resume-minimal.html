@@ -229,8 +229,6 @@
           .ref-author { font-weight: 600; margin: 12px 0 4px; }
           /* The PDFs are read on screen; the sheet is the CV itself. */
           @media print { #pdf { display: none; } }
-          #pdf details { margin: 6px 0; }
-          #pdf summary { cursor: pointer; padding: 4px 0; }
           .stylesheet-note {
             margin-top: 40px;
             padding-top: 12px;
@@ -2281,7 +2279,8 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
 <p class="tl-skill-said" data-skill="xslt">1 entry uses XSLT <a href="#timeline">Clear filter</a></p>
 <p class="tl-skill-said" data-skill="xss">1 entry uses XSS <a href="#timeline">Clear filter</a></p>
 </div></section><section id="pdf" data-pdfjs="/assets/_vendor/pdfjs/"><h2>PDF</h2>
-<details class="pdf-reader" data-file="/assets/cv/cv_grosjean_baptiste_en.pdf"><summary>PDF</summary><div class="pdf-toolbar" hidden="hidden">
+<div class="pdf-reader" data-file="/assets/cv/cv_grosjean_baptiste_en.pdf">
+<div class="pdf-toolbar" hidden="hidden">
 <div class="pdf-choice" role="group" aria-label="PDF">
 <button type="button" data-file="/assets/cv/cv_grosjean_baptiste_en.pdf" data-download="Download CV" aria-pressed="true">PDF</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_2y_en.pdf" data-download="Download the timeline" aria-pressed="false">Timeline (PDF) · 2 years</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_5y_en.pdf" data-download="Download the timeline" aria-pressed="false">Timeline (PDF) · 5 years</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_en.pdf" data-download="Download the timeline" aria-pressed="false">Timeline (PDF) · All</button>
 </div>
@@ -2292,7 +2291,8 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
 <li><a href="/assets/cv/cv_grosjean_baptiste_timeline_2y_en.pdf">Timeline (PDF) · 2 years</a></li>
 <li><a href="/assets/cv/cv_grosjean_baptiste_timeline_5y_en.pdf">Timeline (PDF) · 5 years</a></li>
 <li><a href="/assets/cv/cv_grosjean_baptiste_timeline_en.pdf">Timeline (PDF) · All</a></li>
-</ul></details></section><h2 id="experience">Work experience</h2>
+</ul>
+</div></section><h2 id="experience">Work experience</h2>
 <div class="row item" id="work-acteble-founder">
 <a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/en/work/acteble-founder/">Interactive ↗
       </a><h3>Founder — <span class="company">Acteble</span>
