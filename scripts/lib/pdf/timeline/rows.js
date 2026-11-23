@@ -85,6 +85,75 @@ function bandsOnPaper(bands, scale) {
   });
 }
 
+// Blocks taking the first rows free over their whole width, widest-first by
+// where they start: each is returned with its top row, and the rows used.
+function stack(blocks) {
+  const rowEnds = [];
+  const free = (row, block) => rowEnds[row] === undefined || rowEnds[row] + GAP <= block.from;
+  const fits = (at, block) =>
+    Array.from({ length: block.height }, (_, i) => at + i).every((row) => free(row, block));
+  const placed = [...blocks]
+    .sort((a, b) => a.from - b.from)
+    .map((block) => {
+      let at = 0;
+      while (!fits(at, block)) at += 1;
+      for (let i = 0; i < block.height; i += 1) rowEnds[at + i] = block.to;
+      return { block, at };
+    });
+  return { placed, rows: rowEnds.length };
+}
+
+// The experiences of one employer stand together in a block of their own, so
+// that one outline can hold them all (timeline-model.js does the same on screen).
+function employers(blocks) {
+  const work = (b) => b.top.kind === 'work';
+  const roles = (name) => blocks.filter((b) => work(b) && b.top.strong === name);
+  const done = new Set();
+  return blocks.flatMap((block) => {
+    if (!work(block) || roles(block.top.strong).length < 2) return [block];
+    if (done.has(block.top.strong)) return [];
+    done.add(block.top.strong);
+    const members = roles(block.top.strong);
+    const inner = stack(members);
+    return [
+      {
+        members: inner.placed,
+        from: Math.min(...members.map((m) => m.from)),
+        to: Math.max(...members.map((m) => m.to)),
+        height: inner.rows,
+      },
+    ];
+  });
+}
+
+// Puts a block's bars at row `at`, with its outline; returns the bars drawn.
+function emit(block, at, bars, outlines) {
+  if (block.members) {
+    const drawn = block.members.flatMap((m) => emit(m.block, at + m.at, bars, outlines));
+    outlines.push({
+      x0: Math.min(...drawn.map((b) => b.x0)),
+      x1: Math.max(...drawn.map((b) => b.x1)),
+      row: at,
+      rows: block.height,
+      employer: true,
+    });
+    return drawn;
+  }
+  bars.push({ ...block.top, row: at, depth: 0 });
+  for (const b of block.under) bars.push({ ...b, row: at + 1 + b.row, depth: 1 });
+  const drawn = [block.top, ...block.under];
+  // The outline covers the bars — how long the entry lasted — not the labels
+  // beside them, which the block still keeps clear of its neighbours.
+  if (block.under.length)
+    outlines.push({
+      x0: Math.min(...drawn.map((b) => b.x0)),
+      x1: Math.max(...drawn.map((b) => b.x1)),
+      row: at,
+      rows: block.height,
+    });
+  return drawn;
+}
+
 function packGroupsOnPaper(groups, scale) {
   const blocks = groups.map(({ head, children, bands = [] }) => {
     const [top] = packLane([head], scale);
@@ -108,31 +177,12 @@ function packGroupsOnPaper(groups, scale) {
       height: 1 + (under.length ? Math.max(...under.map((b) => b.row)) + 1 : 0),
     };
   });
-  const rowEnds = [];
-  const free = (row, block) => rowEnds[row] === undefined || rowEnds[row] + GAP <= block.from;
-  const fits = (at, block) =>
-    Array.from({ length: block.height }, (_, i) => at + i).every((row) => free(row, block));
+  const unit = employers(blocks);
+  const { placed, rows } = stack(unit);
   const bars = [];
   const outlines = [];
-  for (const block of [...blocks].sort((a, b) => a.from - b.from)) {
-    let at = 0;
-    while (!fits(at, block)) at += 1;
-    for (let i = 0; i < block.height; i += 1) rowEnds[at + i] = block.to;
-    bars.push({ ...block.top, row: at, depth: 0 });
-    for (const b of block.under) bars.push({ ...b, row: at + 1 + b.row, depth: 1 });
-    // The outline covers the bars — how long the entry lasted — not the labels
-    // beside them, which the block still keeps clear of its neighbours.
-    if (block.under.length) {
-      const drawn = [block.top, ...block.under];
-      outlines.push({
-        x0: Math.min(...drawn.map((b) => b.x0)),
-        x1: Math.max(...drawn.map((b) => b.x1)),
-        row: at,
-        rows: block.height,
-      });
-    }
-  }
-  return { bars, outlines, rows: rowEnds.length };
+  for (const { block, at } of placed) emit(block, at, bars, outlines);
+  return { bars, outlines, rows };
 }
 
 module.exports = { packLane, packGroupsOnPaper };

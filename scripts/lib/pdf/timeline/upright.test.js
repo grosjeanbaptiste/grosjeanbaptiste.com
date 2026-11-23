@@ -3,6 +3,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { layOut, buildUpright } = require('./upright');
+const { inGroups } = require('./upright-groups');
 
 const at = (year, month) => year * 12 + month - 1;
 const bar = (name, start, end, kind = 'work', rest = '') => ({
@@ -73,4 +74,22 @@ test('what an entry carried sits beside its head, not under it', () => {
   const head = lane.bars.find((b) => b.strong === LONG);
   const alpha = lane.bars.find((b) => b.strong === 'Alpha');
   assert.ok(alpha.dx > head.dx);
+});
+
+test('the experiences of one employer stand side by side in one dashed outline', () => {
+  const job = (strong, start, end) => ({
+    head: { kind: 'work', strong, start, end, label: strong },
+    children: [],
+    bands: [],
+  });
+  const { groups } = inGroups(
+    [job('Acme', 0, 5), job('Acme', 6, 9), job('Solo', 0, 9)],
+    (m) => -m,
+    1,
+  );
+  const employers = groups.filter((g) => g.employer === true);
+  assert.equal(employers.length, 1);
+  const [a, b] = groups.filter((g) => g.employer === 'Acme');
+  assert.ok(b.x0 >= a.x1 - 1e-6 || a.x0 >= b.x1 - 1e-6);
+  assert.ok(employers[0].x0 <= Math.min(a.x0, b.x0) && employers[0].x1 >= Math.max(a.x1, b.x1));
 });

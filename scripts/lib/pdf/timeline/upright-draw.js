@@ -29,6 +29,12 @@ function laneLines(lane, t) {
     `\\node[anchor=south west,text=heading,font=\\fontsize{8}{9}\\selectfont\\bfseries] at (${mm(lane.x)},4.8) {${tex(t[LANE_TITLE[lane.kind]])}};`,
   ];
   const colour = OUTLINE[lane.kind] ?? 'BodyColor';
+  const employers = lane.groups
+    .filter((g) => g.employer === true)
+    .map(
+      (g) =>
+        `\\draw[draw=${colour}!75,dash pattern=on 1.2pt off 0.8pt,line width=0.3pt,rounded corners=0.9mm] (${mm(lane.x + g.x0)},${mm(g.top + 0.8)}) rectangle (${mm(lane.x + g.x1)},${mm(g.bottom - 0.8)});`,
+    );
   const outlines = lane.groups
     .filter((g) => g.outlined)
     .map(
@@ -65,7 +71,7 @@ function laneLines(lane, t) {
     });
     return out;
   });
-  return [...heading, ...outlines, ...families, ...bars, ...labels];
+  return [...heading, ...employers, ...outlines, ...families, ...bars, ...labels];
 }
 
 function buildUpright(sheet, t) {
