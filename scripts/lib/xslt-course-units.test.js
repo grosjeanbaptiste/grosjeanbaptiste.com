@@ -45,10 +45,12 @@ test('the XSLT sidebar lists no course unit', () => {
   assert.doesNotMatch(aside, /<strong>Anglais I<\/strong>/);
 });
 
-test('the XSLT sidebar still lists the real projects', () => {
-  const aside = sidebar(render('en'));
-  assert.match(aside, /<strong>Acteble<\/strong>/);
-  assert.match(aside, /<strong>Kwalitijd<\/strong>/);
+test('the XSLT sidebar no longer lists the projects: the timeline and the rows hold them', () => {
+  const html = render('en');
+  const aside = sidebar(html);
+  assert.doesNotMatch(aside, /<strong>Acteble<\/strong>/);
+  assert.doesNotMatch(aside, /<strong>Kwalitijd<\/strong>/);
+  assert.match(html, /<strong>Kwalitijd<\/strong>/);
 });
 
 test('no XSLT Projects block holds a course unit', () => {

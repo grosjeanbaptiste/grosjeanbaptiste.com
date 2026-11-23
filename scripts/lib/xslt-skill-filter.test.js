@@ -88,11 +88,12 @@ test('the filter adds no script to the minimal theme', () => {
   const html = render(true);
   assert.doesNotMatch(html, /skill-filter\.js/);
   // The files it loads are the ones it shares with the rich theme (the
-  // address, the search, the warming of the other displays). None filters.
+  // timeline's keys, the address, the search, the warming of the other displays). None filters.
   assert.deepEqual(
     [...html.matchAll(/<script src="([^"]+)"/g)].map((m) => m[1]),
     [
       '/js/views-ahead.js',
+      '/js/timeline.js',
       '/js/xslt-links.js',
       '/js/search-rank.js',
       '/js/search.js',
