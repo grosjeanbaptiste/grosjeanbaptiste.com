@@ -1,9 +1,10 @@
-// The rich XSLT theme's PDF reader is plain markup, written by the stylesheet
-// from the XML: one <details name="cv-reader"> per PDF — the browser keeps one
-// of a named group open, which is all the tabs there are — each holding the PDF
-// in an <object>, so the browser's own viewer zooms and downloads it. With
-// js/xslt-pdf-reader.js a panel is drawn by PDF.js instead (assets/_vendor/pdfjs),
-// with the interactive view's zoom; the sheet leaves it out of print.
+// The XSLT themes' PDF reader is plain markup, written by the stylesheet from
+// the XML: one <details class="pdf-reader"> that is told which PDF to show (the
+// CV, or the timeline at three zooms, listed in a <select>), holding the CV in an
+// <object> so the browser's own viewer zooms and downloads it. With
+// js/xslt-pdf-reader.js it is drawn by PDF.js instead (assets/_vendor/pdfjs),
+// with the interactive view's zoom, and the choice swaps the PDF; the sheet
+// leaves it out of print.
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -23,23 +24,25 @@ const render = (lang) =>
 const xml = (lang) => fs.readFileSync(path.join(ROOT, `assets/data/resume-${lang}.xml`), 'utf8');
 const tag = (src, name) => (src.match(new RegExp(`<${name}>([^<]*)</${name}>`)) || [])[1];
 
-// The reader's panels: { summary, data } each, in page order.
-const panels = (html) =>
-  [
-    ...html.matchAll(
-      /<details name="cv-reader"[^>]*>\s*<summary>([^<]*)<\/summary>[\s\S]*?<object[^>]*\sdata="([^"]+)"/g,
-    ),
-  ].map((m) => ({ summary: m[1].trim(), data: m[2] }));
+// The reader's choices: { summary, file } each, in the order the <select> lists them.
+const choices = (html) =>
+  [...html.matchAll(/<option value="([^"]+)" data-download="[^"]*">([^<]*)<\/option>/g)].map(
+    (m) => ({ file: m[1], summary: m[2].trim() }),
+  );
+// What the reader shows before any choice: the <object>'s file.
+const shown = (html) => html.match(/<object[^>]*\sdata="([^"]+)"/)[1];
 
 for (const lang of LANGS) {
   const html = render(lang);
   const src = xml(lang);
-  const found = panels(html);
+  const found = choices(html);
   const timeline = src.match(/<pdf>[\s\S]*?<\/pdf>/)[0];
 
-  test(`${lang}: the reader has four panels, the CV and the timeline at three zooms`, () => {
+  test(`${lang}: one reader, with the CV and the timeline at three zooms to choose from`, () => {
+    assert.equal(html.match(/<details class="pdf-reader"/g).length, 1);
+    assert.equal(html.match(/<object /g).length, 1);
     assert.deepEqual(
-      found.map((p) => p.data),
+      found.map((p) => p.file),
       [
         `/assets/cv/cv_grosjean_baptiste_${lang}.pdf`,
         tag(timeline, 'two'),
@@ -47,14 +50,16 @@ for (const lang of LANGS) {
         tag(timeline, 'all'),
       ],
     );
+    assert.equal(shown(html), found[0].file);
+    assert.ok(html.includes(`<details class="pdf-reader" data-file="${found[0].file}"`));
   });
 
-  test(`${lang}: each panel shows a PDF that is shipped`, () => {
-    for (const { data } of found)
-      assert.ok(fs.existsSync(path.join(ROOT, data.replace(/^\//, ''))), `${data} is missing`);
+  test(`${lang}: each choice is a PDF that is shipped`, () => {
+    for (const { file } of found)
+      assert.ok(fs.existsSync(path.join(ROOT, file.replace(/^\//, ''))), `${file} is missing`);
   });
 
-  test(`${lang}: the tabs read as the page words them`, () => {
+  test(`${lang}: the choices read as the page words them`, () => {
     const zooms = [
       ...src.matchAll(/<zoom>\s*<years>[^<]+<\/years>\s*<label>([^<]*)<\/label>/g),
     ].map((m) => m[1]);
@@ -66,9 +71,9 @@ for (const lang of LANGS) {
     assert.ok(found[0].summary.length > 0);
   });
 
-  test(`${lang}: a reader that cannot show a PDF hands the file over`, () => {
-    for (const { data } of found)
-      assert.ok(html.includes(`<a href="${data}"`), `no link to ${data}`);
+  test(`${lang}: a reader with no script has the CV and a link to each other PDF`, () => {
+    assert.ok(html.includes(`<a href="${found[0].file}"`), 'no link to the CV');
+    for (const { file } of found.slice(1)) assert.ok(html.includes(`<li><a href="${file}"`), file);
   });
 
   test(`${lang}: it is a section the views bar can point at, and is left out of print`, () => {
@@ -76,9 +81,8 @@ for (const lang of LANGS) {
     assert.match(html, /@media print\s*\{[^}]*#pdf[^}]*display:\s*none/);
   });
 
-  test(`${lang}: the panel is readable without the script, and the engine is the site's own`, () => {
-    assert.equal(found.length, 4);
-    assert.doesNotMatch(html, /pdf-preview-reader|cv-reader-view/);
+  test(`${lang}: the engine is the site's own`, () => {
+    assert.doesNotMatch(html, /pdf-preview-reader|cv-reader-view|name="cv-reader"/);
     assert.match(html, /data-pdfjs="\/assets\/_vendor\/pdfjs\/"/);
   });
 }
@@ -89,8 +93,8 @@ for (const lang of LANGS) {
     const pictures = [
       ...html.matchAll(/<a class="pdf-page" href="[^"]+"><img[^>]* src="([^"]+)"/g),
     ];
-    // The CV (two sheets) and the timeline at three zooms (two each).
-    assert.equal(pictures.length, 8);
+    // The CV's two sheets: the reader shows the CV until it is told otherwise.
+    assert.equal(pictures.length, 2);
     for (const [, src] of pictures) assert.ok(fs.existsSync(path.join(ROOT, src)), `no ${src}`);
   });
 }
@@ -107,8 +111,8 @@ for (const lang of LANGS) {
       ],
       { encoding: 'utf8' },
     );
-    assert.deepEqual(panels(minimal), panels(render(lang)));
-    assert.equal(minimal.match(/class="pdf-page"/g).length, 8);
+    assert.deepEqual(choices(minimal), choices(render(lang)));
+    assert.equal(minimal.match(/class="pdf-page"/g).length, 2);
     assert.match(minimal, /@media print \{ #pdf \{ display: none; \} \}/);
   });
 }
@@ -123,10 +127,10 @@ test('the reader draws with the PDF.js files it ships, from the path the markup 
 });
 
 for (const lang of LANGS) {
-  test(`${lang}: each panel has a toolbar worded as the interactive view words it`, () => {
+  test(`${lang}: the reader has a toolbar worded as the interactive view words it`, () => {
     const html = render(lang);
     const words = (name) => tag(xml(lang), name);
-    assert.equal(html.match(/<div class="pdf-toolbar" hidden="hidden">/g).length, 4);
+    assert.equal(html.match(/<div class="pdf-toolbar" hidden="hidden">/g).length, 1);
     for (const name of [
       'zoomIn',
       'zoomOut',
@@ -140,9 +144,10 @@ for (const lang of LANGS) {
     ])
       assert.ok(words(name), `meta/pdfReader/${name} is empty`);
     assert.ok(html.includes(`aria-label="${words('zoomIn')}"`));
-    assert.equal(html.match(/<a class="pdf-download" download="download"/g).length, 4);
+    assert.equal(html.match(/<a class="pdf-download" download="download"/g).length, 1);
     assert.ok(html.includes(`>${words('downloadCV')}</a>`));
-    assert.equal(html.match(/class="pdf-pages"/g).length, 4);
+    assert.equal(html.match(/class="pdf-pages"/g).length, 1);
+    assert.ok(html.includes(`data-download="${words('downloadTimeline')}"`));
   });
 }
 

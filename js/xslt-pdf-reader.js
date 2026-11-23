@@ -1,8 +1,9 @@
 // The PDF reader of the XSLT themes, drawn the way the interactive view draws
 // it: PDF.js with its text and link layers, zoom buttons, fit-to-width. Loaded
-// by both themes; each panel (details[data-file]) is drawn the first time it is
-// opened, so a visitor who never opens one pays nothing. Without this script
-// the panel keeps the browser's own <object>.
+// by both themes; the one reader (details.pdf-reader, told its file by
+// data-file) is drawn the first time it is opened, so a visitor who never opens
+// it pays nothing, and its choice swaps the PDF it shows. Without this script
+// the reader keeps the browser's own <object> and a list of links.
 (() => {
   const section = document.getElementById('pdf');
   if (!section) return;
@@ -30,9 +31,13 @@
     return engine;
   }
 
+  // One reader, told which PDF to show: the first time it is opened it is drawn
+  // with the CV; its choice then swaps the document in the same viewer.
   async function draw(panel) {
     const toolbar = panel.querySelector('.pdf-toolbar');
     const failed = panel.querySelector('.pdf-failed');
+    const count = toolbar.querySelector('.pdf-pages');
+    const choice = toolbar.querySelector('.pdf-choice');
     try {
       const { pdfjs, viewer, pdfWorker } = await load();
       // PDF.js wants its scrolling container absolutely positioned: a frame of
@@ -53,13 +58,34 @@
       eventBus.on('pagerendered', (event) => {
         if (event.pageNumber === 1) panel.dataset.drawn = '';
       });
-      const doc = await pdfjs.getDocument({ url: panel.dataset.file, worker: pdfWorker }).promise;
-      pdfViewer.setDocument(doc);
-      linkService.setDocument(doc);
 
-      const count = toolbar.querySelector('.pdf-pages');
-      const n = doc.numPages;
-      count.textContent = `${n} ${n === 1 ? count.dataset.one : count.dataset.many}`;
+      let current;
+      const show = async (file, download) => {
+        failed.hidden = true;
+        panel.dataset.file = file;
+        for (const a of toolbar.querySelectorAll('.pdf-download, .pdf-open')) a.href = file;
+        toolbar.querySelector('.pdf-download').textContent = download;
+        try {
+          const task = pdfjs.getDocument({ url: file, worker: pdfWorker });
+          const doc = await task.promise;
+          pdfViewer.setDocument(doc);
+          linkService.setDocument(doc);
+          // The shared worker outlives the document it served.
+          if (current) current.destroy();
+          current = task;
+          const n = doc.numPages;
+          count.textContent = `${n} ${n === 1 ? count.dataset.one : count.dataset.many}`;
+        } catch (error) {
+          console.error(`Displaying ${file} failed:`, error);
+          failed.hidden = false;
+        }
+      };
+      choice.addEventListener('change', () => {
+        const option = choice.selectedOptions[0];
+        show(option.value, option.dataset.download);
+      });
+      const first = [...choice.options].find((o) => o.value === panel.dataset.file);
+      await show(panel.dataset.file, first ? first.dataset.download : '');
 
       const act = {
         in: () => pdfViewer.increaseScale({ steps: 1 }),
@@ -79,14 +105,13 @@
     }
   }
 
-  for (const panel of section.querySelectorAll('details[data-file]')) {
-    let started = false;
-    const start = () => {
-      if (started || !panel.open) return;
-      started = true;
-      draw(panel);
-    };
-    panel.addEventListener('toggle', start);
-    start();
-  }
+  const panel = section.querySelector('details.pdf-reader');
+  let started = false;
+  const start = () => {
+    if (started || !panel.open) return;
+    started = true;
+    draw(panel);
+  };
+  panel.addEventListener('toggle', start);
+  start();
 })();

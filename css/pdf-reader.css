@@ -57,8 +57,14 @@
 }
 
 /* Once the script has the PDF on screen, the fallback gives way to it. */
-details[data-drawn] > object {
+details[data-drawn] > object,
+details[data-drawn] > .pdf-files {
   display: none;
+}
+
+.pdf-choice {
+  font: inherit;
+  max-width: 100%;
 }
 
 @media print {
