@@ -311,6 +311,7 @@
         <id>xsltMinimal</id>
         <href>/assets/data/resume-nl-minimal.html</href>
         <label>XSLT (minimaal)</label>
+        <hidden>true</hidden>
       </view>
       <view>
         <id>pdf</id>

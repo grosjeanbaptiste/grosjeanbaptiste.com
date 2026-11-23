@@ -298,6 +298,7 @@
         <id>xsltMinimal</id>
         <href>/assets/data/resume-zh-minimal.html</href>
         <label>XSLT（简洁）</label>
+        <hidden>true</hidden>
       </view>
       <view>
         <id>pdf</id>

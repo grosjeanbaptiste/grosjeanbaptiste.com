@@ -307,6 +307,7 @@
         <id>xsltMinimal</id>
         <href>/assets/data/resume-es-minimal.html</href>
         <label>XSLT (mínima)</label>
+        <hidden>true</hidden>
       </view>
       <view>
         <id>pdf</id>

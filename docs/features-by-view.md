@@ -8,7 +8,7 @@ behaviour was not re-tested in a browser for this file.
 
 The XSLT themes are served as plain HTML pages (`assets/data/resume-{lang}[-minimal].html`, drawn by `xsltproc` at generation) so that they show in Chrome and Safari, which no longer apply client-side XSLT; the XML mirrors still carry their stylesheet.
 
-The classic page and the interactive view are `hidden` in `scripts/lib/views.js`: they stay online but the views bar no longer offers them.
+The classic page, the interactive view and the minimal XSLT theme are `hidden` in `scripts/lib/views.js`: they stay online but the views bar no longer offers them.
 
 Legend: **yes** = present, **css** = done with markup and CSS only (no script),
 **no** = absent, **n/a** = does not apply.

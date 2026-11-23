@@ -14,13 +14,15 @@ const I18N = require('./i18n');
 const VIEWS = [
   // The classic page and the interactive view stay online (the classic page is
   // the site's root and its canonical address) but are not offered in the bar:
-  // the XSLT themes are the displays shown. Drop `hidden` to offer one again.
+  // the XSLT themes are the displays shown. The minimal theme is hidden too:
+  // still online, not offered. Drop `hidden` to offer one again.
   { id: 'classic', href: (lang) => langPath(lang), hidden: true },
   { id: 'interactive', href: (lang) => `/app/${lang}/`, hidden: true },
   { id: 'xsltRich', href: (lang) => `/assets/data/resume-${lang}.html` },
   {
     id: 'xsltMinimal',
     href: (lang) => `/assets/data/resume-${lang}-minimal.html`,
+    hidden: true,
   },
   // The reader page (react/), which shows the LaTeX PDF inside the site.
   { id: 'pdf', href: (lang) => `/app/${lang}/pdf/` },
