@@ -46,6 +46,20 @@
   margin-inline-start: auto;
 }
 
+/* The download is a button, for the PDF the reader shows. */
+.pdf-toolbar .pdf-download {
+  padding: 0.2rem 0.9rem;
+  border-radius: 999rem;
+  background: var(--accent, currentColor);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pdf-toolbar .pdf-download:hover {
+  background: var(--primary, currentColor);
+}
+
 /* PDF.js wants a scrolling container that is absolutely positioned, holding
    .pdfViewer: the frame sets the height. */
 .pdf-frame {
