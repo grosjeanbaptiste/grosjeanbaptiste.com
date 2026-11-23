@@ -44,6 +44,8 @@ export function ViewsBar({ current, pdf }: Props) {
       console.warn(`Fetching ${file} ahead failed; the reader will fetch it when opened:`, error);
     });
   };
+  // A bar that offers nothing to switch to is not drawn.
+  if (catalogue.views.length < 2) return null;
   return (
     <nav className="views-bar" aria-label={catalogue.viewsTitle}>
       <span className="views-bar-title">{catalogue.viewsTitle}</span>

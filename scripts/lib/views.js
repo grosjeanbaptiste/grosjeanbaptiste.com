@@ -47,12 +47,13 @@ function viewsOf(lang) {
 // The bar as HTML, `current` being the display it is rendered into.
 function renderViewsBar(lang, current) {
   const title = escapeHtml(I18N[lang].views.title);
-  const items = viewsOf(lang)
-    .filter((view) => !view.hidden)
-    .map((view) => {
-      const aria = view.id === current ? ' aria-current="page"' : '';
-      return `      <li><a class="views-bar-link" href="${view.href}"${aria}>${escapeHtml(view.label)}</a></li>`;
-    });
+  const offered = viewsOf(lang).filter((view) => !view.hidden);
+  // A bar that offers nothing to switch to is not drawn.
+  if (offered.length < 2) return '';
+  const items = offered.map((view) => {
+    const aria = view.id === current ? ' aria-current="page"' : '';
+    return `      <li><a class="views-bar-link" href="${view.href}"${aria}>${escapeHtml(view.label)}</a></li>`;
+  });
   return [
     `  <nav class="views-bar" aria-label="${title}">`,
     `    <span class="views-bar-title">${title}</span>`,

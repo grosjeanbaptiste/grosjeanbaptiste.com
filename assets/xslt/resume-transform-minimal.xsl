@@ -264,6 +264,7 @@
        styled by the shared /css/views-bar.css. -->
   <xsl:template name="views-bar">
     <xsl:param name="current"/>
+    <xsl:if test="count(meta/views/view[not(hidden)]) &gt; 1">
     <nav class="views-bar">
       <xsl:attribute name="aria-label"><xsl:value-of select="meta/viewsTitle"/></xsl:attribute>
       <span class="views-bar-title"><xsl:value-of select="meta/viewsTitle"/></span>
@@ -280,6 +281,7 @@
         </xsl:for-each>
       </ul>
     </nav>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="/resume">

@@ -16,7 +16,7 @@ Legend: **yes** = present, **css** = done with markup and CSS only (no script),
 | Feature | Classic | Interactive | XSLT rich | XSLT minimal |
 |---|---|---|---|---|
 | Six languages, language switcher | yes | yes | yes (links to the other XSLT displays) | yes (same) |
-| Views bar (all displays, same order) | yes | yes | yes | yes |
+| Views bar (all displays, same order; not drawn while fewer than two are offered, as now) | no | no | no | no |
 | Dark / light theme, shared `theme` key | yes | yes | yes | yes |
 | Timeline (four lanes, bars in percent) | yes | yes | yes | yes |
 | Timeline zoom (2 years / 5 years / all) | yes (script) | yes | css (radios) | css (radios) |

@@ -20,7 +20,7 @@ const { VIEWS, viewsOf } = require('./views');
 // The bar's links, as [{ href, label, current }], from any rendered page.
 function barOf(html) {
   const bar = html.match(/<nav class="views-bar"[\s\S]*?<\/nav>/);
-  assert.ok(bar, 'no <nav class="views-bar"> on the page');
+  if (!bar) return []; // a bar that offers nothing to switch to is not drawn
   return [...bar[0].matchAll(/<a\b([^>]*)>([^<]*)<\/a>/g)].map(([, attrs, label]) => ({
     href: attrs.match(/href="([^"]*)"/)?.[1],
     label: label.trim(),
@@ -28,10 +28,12 @@ function barOf(html) {
   }));
 }
 
-const expected = (lang, current) =>
-  viewsOf(lang)
-    .filter((v) => !v.hidden)
-    .map((v) => ({ href: v.href, label: v.label, current: v.id === current }));
+const expected = (lang, current) => {
+  const offered = viewsOf(lang).filter((v) => !v.hidden);
+  return offered.length < 2
+    ? []
+    : offered.map((v) => ({ href: v.href, label: v.label, current: v.id === current }));
+};
 
 const xslt = (theme, lang) => {
   const xsl = path.join(

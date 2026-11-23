@@ -9,6 +9,11 @@
  * and those rules must not reach this bar. */
 
 :root {
+  --views-bar-h: 0rem;
+}
+
+/* Room is made only where the bar is drawn: with one display offered, it is not. */
+:root:has(nav.views-bar) {
   --views-bar-h: 2.25rem;
 }
 
