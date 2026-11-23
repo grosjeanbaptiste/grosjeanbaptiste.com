@@ -675,12 +675,12 @@
         <xsl:for-each select="meta/sectionOrder/section">
           <xsl:variable name="name" select="."/>
           <xsl:choose>
-            <xsl:when test="$name='about'"><xsl:call-template name="section-about"/><xsl:call-template name="timeline"/><xsl:call-template name="pdf-reader"/></xsl:when>
+            <xsl:when test="$name='about'"><xsl:call-template name="section-about"/><xsl:call-template name="section-dailyLife"/><xsl:call-template name="timeline"/><xsl:call-template name="pdf-reader"/></xsl:when>
             <xsl:when test="$name='work'"><xsl:call-template name="section-work"/></xsl:when>
             <xsl:when test="$name='education'"><xsl:call-template name="section-education"/></xsl:when>
             <xsl:when test="$name='skills'"><xsl:call-template name="section-skills"/></xsl:when>
             <xsl:when test="$name='languages'"><xsl:call-template name="section-languages"/></xsl:when>
-            <xsl:when test="$name='dailyLife'"><xsl:call-template name="section-dailyLife"/></xsl:when>
+            <xsl:when test="$name='dailyLife'"/><!-- said under About -->
             <xsl:when test="$name='awards'"><xsl:call-template name="section-awards"/></xsl:when>
             <xsl:when test="$name='interests'"><xsl:call-template name="section-interests"/></xsl:when>
             <xsl:when test="$name='references'"><xsl:call-template name="section-references"/></xsl:when>
