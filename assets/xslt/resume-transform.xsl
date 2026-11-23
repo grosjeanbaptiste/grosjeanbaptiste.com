@@ -368,6 +368,9 @@
           .sidebar a:hover { text-decoration: underline; }
           .icon { display: inline-block; width: 1.1em; color: var(--accent); margin-right: 4px; }
           .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+          /* On screen the skills are the timeline's filter, every one of them; the
+             sidebar keeps them for the sheet, which has them as the LaTeX CV does. */
+          @media screen { .sidebar > .skills-title, .sidebar > .skill-tags { display: none; } }
           .skill-tag {
             display: inline-block;
             background: var(--accent);
@@ -923,7 +926,7 @@
   <xsl:template name="sidebar-skills">
     <xsl:variable name="hard" select="key('skill-by-name', 'HardSkills')"/>
     <xsl:if test="$hard/keywords/keyword">
-      <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'technicalSkills'"/></xsl:call-template></h2>
+      <h2 class="skills-title"><xsl:call-template name="t"><xsl:with-param name="k" select="'technicalSkills'"/></xsl:call-template></h2>
       <div class="skill-tags">
         <xsl:for-each select="$hard/keywords/keyword[position() &lt;= 71]">
           <xsl:call-template name="skill-tag"/>
@@ -938,7 +941,7 @@
     </xsl:if>
     <xsl:variable name="soft" select="key('skill-by-name', 'SoftSkills')"/>
     <xsl:if test="$soft/keywords/keyword">
-      <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'softSkills'"/></xsl:call-template></h2>
+      <h2 class="skills-title"><xsl:call-template name="t"><xsl:with-param name="k" select="'softSkills'"/></xsl:call-template></h2>
       <div class="skill-tags">
         <xsl:for-each select="$soft/keywords/keyword">
           <xsl:call-template name="skill-tag"/>
