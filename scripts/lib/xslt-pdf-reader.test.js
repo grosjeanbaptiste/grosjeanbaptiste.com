@@ -1,6 +1,6 @@
 // The XSLT themes' PDF reader is plain markup, written by the stylesheet from
 // the XML: one <details class="pdf-reader"> that is told which PDF to show (the
-// CV, or the timeline at three zooms, listed in a <select>), holding the CV in an
+// CV, or the timeline at three zooms, chosen with buttons), holding the CV in an
 // <object> so the browser's own viewer zooms and downloads it. With
 // js/xslt-pdf-reader.js it is drawn by PDF.js instead (assets/_vendor/pdfjs),
 // with the interactive view's zoom, and the choice swaps the PDF; the sheet
@@ -24,11 +24,13 @@ const render = (lang) =>
 const xml = (lang) => fs.readFileSync(path.join(ROOT, `assets/data/resume-${lang}.xml`), 'utf8');
 const tag = (src, name) => (src.match(new RegExp(`<${name}>([^<]*)</${name}>`)) || [])[1];
 
-// The reader's choices: { summary, file } each, in the order the <select> lists them.
+// The reader's choices: { summary, file } each, in the order the buttons list them.
 const choices = (html) =>
-  [...html.matchAll(/<option value="([^"]+)" data-download="[^"]*">([^<]*)<\/option>/g)].map(
-    (m) => ({ file: m[1], summary: m[2].trim() }),
-  );
+  [
+    ...html.matchAll(
+      /<button type="button" data-file="([^"]+)" data-download="[^"]*" aria-pressed="[a-z]+">\s*([^<]*?)\s*<\/button>/g,
+    ),
+  ].map((m) => ({ file: m[1], summary: m[2].trim() }));
 // What the reader shows before any choice: the <object>'s file.
 const shown = (html) => html.match(/<object[^>]*\sdata="([^"]+)"/)[1];
 
@@ -69,6 +71,7 @@ for (const lang of LANGS) {
     assert.equal(found[2].summary, `${label} · ${zooms[1]}`);
     assert.equal(found[3].summary, `${label} · ${zooms[2]}`);
     assert.ok(found[0].summary.length > 0);
+    assert.equal(html.match(/aria-pressed="true"/g).length, 1, 'one choice is marked');
   });
 
   test(`${lang}: a reader with no script has the CV and a link to each other PDF`, () => {

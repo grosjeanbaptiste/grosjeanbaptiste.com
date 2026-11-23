@@ -2,7 +2,7 @@
 // it: PDF.js with its text and link layers, zoom buttons, fit-to-width. Loaded
 // by both themes; the one reader (details.pdf-reader, told its file by
 // data-file) is drawn the first time it is opened, so a visitor who never opens
-// it pays nothing, and its choice swaps the PDF it shows. Without this script
+// it pays nothing, and its choice (buttons) swaps the PDF it shows. Without this script
 // the reader keeps the browser's own <object> and a list of links.
 (() => {
   const section = document.getElementById('pdf');
@@ -80,12 +80,18 @@
           failed.hidden = false;
         }
       };
-      choice.addEventListener('change', () => {
-        const option = choice.selectedOptions[0];
-        show(option.value, option.dataset.download);
+      const pick = (button) => {
+        for (const b of choice.children) b.setAttribute('aria-pressed', String(b === button));
+        return show(button.dataset.file, button.dataset.download);
+      };
+      choice.addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-file]');
+        if (button) pick(button);
       });
-      const first = [...choice.options].find((o) => o.value === panel.dataset.file);
-      await show(panel.dataset.file, first ? first.dataset.download : '');
+      await pick(
+        choice.querySelector(`button[data-file="${panel.dataset.file}"]`) ||
+          choice.firstElementChild,
+      );
 
       const act = {
         in: () => pdfViewer.increaseScale({ steps: 1 }),

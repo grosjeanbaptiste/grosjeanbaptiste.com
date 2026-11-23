@@ -8,7 +8,7 @@
        the file. With the script (js/xslt-pdf-reader.js, PDF.js from
        assets/_vendor/pdfjs) the reader is drawn the interactive view's way —
        pages with their text layer, zoom buttons, fit-to-width — and a choice
-       (the <select>, hidden until then) switches the PDF it shows. -->
+       (the buttons, hidden until then) switches the PDF it shows. -->
   <xsl:template name="pdf-reader">
     <xsl:variable name="cv" select="concat('/assets/cv/cv_grosjean_baptiste_', $lang, '.pdf')"/>
     <xsl:variable name="cvLabel" select="/resume/meta/views/view[id='pdf']/label"/>
@@ -31,11 +31,14 @@
         <summary><xsl:value-of select="$cvLabel"/></summary>
         <!-- The choice and the toolbar: hidden until the script has drawn the PDF. -->
         <div class="pdf-toolbar" hidden="hidden">
-          <select class="pdf-choice"><xsl:attribute name="aria-label"><xsl:value-of select="$cvLabel"/></xsl:attribute>
+          <div class="pdf-choice" role="group"><xsl:attribute name="aria-label"><xsl:value-of select="$cvLabel"/></xsl:attribute>
             <xsl:for-each select="exsl:node-set($choices)/choice">
-              <option value="{@file}" data-download="{@download}"><xsl:value-of select="."/></option>
+              <button type="button" data-file="{@file}" data-download="{@download}">
+                <xsl:attribute name="aria-pressed"><xsl:choose><xsl:when test="position() = 1">true</xsl:when><xsl:otherwise>false</xsl:otherwise></xsl:choose></xsl:attribute>
+                <xsl:value-of select="."/>
+              </button>
             </xsl:for-each>
-          </select>
+          </div>
           <button type="button" data-pdf="out"><xsl:attribute name="aria-label"><xsl:value-of select="/resume/meta/pdfReader/zoomOut"/></xsl:attribute>−</button>
           <button type="button" data-pdf="in"><xsl:attribute name="aria-label"><xsl:value-of select="/resume/meta/pdfReader/zoomIn"/></xsl:attribute>+</button>
           <button type="button" data-pdf="fit"><xsl:value-of select="/resume/meta/pdfReader/fitWidth"/></button>

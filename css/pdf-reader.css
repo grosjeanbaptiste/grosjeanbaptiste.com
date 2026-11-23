@@ -29,6 +29,19 @@
   cursor: default;
 }
 
+/* Which PDF the reader shows: buttons side by side. */
+.pdf-choice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* The chosen PDF reads as chosen: bold, with a heavier ring. */
+.pdf-toolbar button[aria-pressed='true'] {
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
 .pdf-pages {
   margin-inline-start: auto;
 }
@@ -60,11 +73,6 @@
 details[data-drawn] > object,
 details[data-drawn] > .pdf-files {
   display: none;
-}
-
-.pdf-choice {
-  font: inherit;
-  max-width: 100%;
 }
 
 @media print {
