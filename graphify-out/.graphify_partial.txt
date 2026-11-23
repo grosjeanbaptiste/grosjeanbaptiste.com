@@ -1,0 +1,6 @@
+/Users/baptistegrosjean/Source/website/grosjeanbaptiste.com/de/index.html
+/Users/baptistegrosjean/Source/website/grosjeanbaptiste.com/es/index.html
+/Users/baptistegrosjean/Source/website/grosjeanbaptiste.com/fr/index.html
+/Users/baptistegrosjean/Source/website/grosjeanbaptiste.com/index.html
+/Users/baptistegrosjean/Source/website/grosjeanbaptiste.com/nl/index.html
+/Users/baptistegrosjean/Source/website/grosjeanbaptiste.com/zh/index.html
