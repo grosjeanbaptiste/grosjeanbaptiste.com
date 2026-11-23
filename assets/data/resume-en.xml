@@ -332,6 +332,10 @@
         <label>About</label>
       </link>
       <link>
+        <id>timeline</id>
+        <label>Timeline</label>
+      </link>
+      <link>
         <id>pdf</id>
         <label>PDF</label>
       </link>

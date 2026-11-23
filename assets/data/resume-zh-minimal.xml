@@ -319,6 +319,10 @@
         <label>关于</label>
       </link>
       <link>
+        <id>timeline</id>
+        <label>时间线</label>
+      </link>
+      <link>
         <id>pdf</id>
         <label>PDF</label>
       </link>

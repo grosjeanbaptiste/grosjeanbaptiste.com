@@ -52,9 +52,9 @@ for (const lang of LANGS) {
   const rich = render(lang);
   const page = classic(lang);
 
-  test(`${lang}: the menu leads to the four sections and the PDF reader, which carry those ids`, () => {
+  test(`${lang}: the menu leads to the four sections, the timeline and the PDF reader, which carry those ids`, () => {
     const links = all(rich, /<a class="nav-link" href="#([^"]+)"/g);
-    assert.deepEqual(links, ['about', 'pdf', 'experience', 'education', 'references']);
+    assert.deepEqual(links, ['about', 'timeline', 'pdf', 'experience', 'education', 'references']);
     for (const id of links) assert.ok(ids(rich).has(id), `no #${id}`);
   });
 

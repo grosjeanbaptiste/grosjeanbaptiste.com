@@ -332,6 +332,10 @@
         <label>Over</label>
       </link>
       <link>
+        <id>timeline</id>
+        <label>Tijdlijn</label>
+      </link>
+      <link>
         <id>pdf</id>
         <label>PDF</label>
       </link>
