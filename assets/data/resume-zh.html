@@ -425,6 +425,8 @@
             .embedded-projects.many ul { columns: 3; column-gap: 0.3cm; }
             .embedded-projects.many .full-text, .embedded-projects.many .clipped-text { display: none; }
             .embedded-projects.many .project-kind { display: inline; }
+            .embedded-projects .project-part { display: none; }
+            .embedded-projects .project-family::after { content: " (" attr(data-parts) ")"; }
             /* The references get the verso, as they do in the PDF — a sheet
                turned to landscape, since the timeline that opens it needs the
                width. The script below sets the block last in the page, out of
@@ -2684,115 +2686,115 @@
 <a href="https://github.com/grosjeanbaptiste/actserve" target="_blank" rel="noopener"><strong>Actserve</strong></a> — 用于全服务器和云管理的通用编排器（DNS 区域、TLS Let's Encrypt 证书、WireGuard VPN、OpenTofu、Ansible），带有驱动 Biorcrux UI 的响应式 REST API。<span class="project-kind"> · 编排器</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-axum">Axum</a><a class="skill-tag" href="#skill-opentofu">OpenTofu</a><a class="skill-tag" href="#skill-ansible">Ansible</a><a class="skill-tag" href="#skill-wireguard">WireGuard</a><a class="skill-tag" href="#skill-tls">TLS</a><a class="skill-tag" href="#skill-dns">DNS</a><a class="skill-tag" href="#skill-hexagonalarchitecture">HexagonalArchitecture</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actserve"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actserve/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/polymath" target="_blank" rel="noopener"><strong>Polymath</strong></a> — 通用的计算包图，通过 Rust 类型系统在没有冗余的情况下连接各个科学学科。<span class="project-kind"> · 库</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-dag">DAG</a><a class="skill-tag" href="#skill-scientificcomputing">ScientificComputing</a><a class="skill-tag" href="#skill-mathematics">Mathematics</a><a class="skill-tag" href="#skill-typesystem">TypeSystem</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-polymath"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/polymath/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/actos" target="_blank" rel="noopener"><strong>Actos</strong></a> — 模块化系统监控器与诊断套件（进程、内存、存储卷、网络遥测、电源），驱动命令行与 Dioxus 桌面界面。<span class="project-kind"> · 监控器</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-dioxus">Dioxus</a><a class="skill-tag" href="#skill-systemsprogramming">SystemsProgramming</a><a class="skill-tag" href="#skill-telemetry">Telemetry</a><a class="skill-tag" href="#skill-cli">CLI</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actos"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actos/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/Actmorph" target="_blank" rel="noopener"><strong>Actmorph</strong></a> — 通用编目引擎与格式无关的文件元数据提取系统。<span class="project-kind"> · 引擎</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-fileengine">FileEngine</a><a class="skill-tag" href="#skill-metadata">Metadata</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actmorph"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actmorph/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/actsessions" target="_blank" rel="noopener"><strong>Actsessions</strong></a> — AI 编程代理的本地发现、会话清点和遥测。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-agents">Agents</a><a class="skill-tag" href="#skill-observability">Observability</a><a class="skill-tag" href="#skill-telemetry">Telemetry</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actsessions"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actsessions/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/actusext" target="_blank" rel="noopener"><strong>Actusext</strong></a> — AI 编程助手的实时配额跟踪与使用预测。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-cli">CLI</a><a class="skill-tag" href="#skill-forecasting">Forecasting</a><a class="skill-tag" href="#skill-observability">Observability</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actusext"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actusext/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/corpus" target="_blank" rel="noopener"><strong>Corpus</strong></a> — 大学课程材料、讲义和作业的聚合资源库，来源于 Moodle 平台和学术门户，配有精确的解答。<span class="project-kind"> · 知识库</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-python">Python</a><a class="skill-tag" href="#skill-latex">LaTeX</a><a class="skill-tag" href="#skill-knowledgebase">KnowledgeBase</a><a class="skill-tag" href="#skill-education">Education</a><a class="skill-tag" href="#skill-solver">Solver</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-corpus"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/corpus/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/actedu" target="_blank" rel="noopener"><strong>Actedu</strong></a> — 高等教育学术路径、先修依赖关系、课程轨迹和学位路径的全局图映射与可视化。<span class="project-kind"> · 知识图谱</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-knowledgegraph">KnowledgeGraph</a><a class="skill-tag" href="#skill-graphtheory">GraphTheory</a><a class="skill-tag" href="#skill-education">Education</a><a class="skill-tag" href="#skill-visualization">Visualization</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actedu"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actedu/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/biorcrux" target="_blank" rel="noopener"><strong>Biorcrux</strong></a> — 模块化库，为多平台桌面应用程序提供声明式 UI 组件、持久化、图表绘制和国际化。<span class="project-kind"> · 库</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-dioxus">Dioxus</a><a class="skill-tag" href="#skill-ui">UI</a><a class="skill-tag" href="#skill-desktop">Desktop</a><a class="skill-tag" href="#skill-i18n">i18n</a><a class="skill-tag" href="#skill-charting">Charting</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-biorcrux"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/biorcrux/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/actrepo" target="_blank" rel="noopener"><strong>Actrepo</strong></a> — CLI 工具套件，用于语义命名、冲突检测以及 Git / GitHub 仓库的声明式脚手架生成。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-cli">CLI</a><a class="skill-tag" href="#skill-git">Git</a><a class="skill-tag" href="#skill-github">GitHub</a><a class="skill-tag" href="#skill-scaffolding">Scaffolding</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actrepo"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actrepo/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-family" data-parts="27">
 <strong>OpenActe</strong> — 围绕 Acteble 构建的小型开放项目家族：库、命令行工具、引擎和知识库，各自只做一件事——就像平台的微服务。<span class="project-kind"> · 项目家族</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-opensource">OpenSource</a></span><span class="tl-anchor" id="project-openacte"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/openacte/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actart</strong> — 法律推理引擎，以比利时法律为先：从需求或案卷出发，找到适用的法条，推理其适用方式，并附引用作答。<span class="project-kind"> · 服务</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-law">Law</a><a class="skill-tag" href="#skill-rag">RAG</a><a class="skill-tag" href="#skill-informationretrieval">InformationRetrieval</a><a class="skill-tag" href="#skill-hexagonalarchitecture">HexagonalArchitecture</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actart"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actart/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/actautoma" target="_blank" rel="noopener"><strong>Actautoma</strong></a> — 驱动代码托管平台工具（GitHub 的 gh、GitLab 的 glab）的 Rust 库，附带一个在所有引用处重命名仓库的命令。<span class="project-kind"> · 库</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-github">GitHub</a><a class="skill-tag" href="#skill-gitlab">GitLab</a><a class="skill-tag" href="#skill-automation">Automation</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actautoma"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actautoma/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actcast</strong> — Acteble 生态系统多媒体与下载栈的编排器：以声明方式启动、停止和检查应用，并对其索引器的变化作出响应。<span class="project-kind"> · 编排器</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-orchestration">Orchestration</a><a class="skill-tag" href="#skill-media">Media</a><a class="skill-tag" href="#skill-automation">Automation</a></span><span class="tl-anchor" id="project-actcast"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actcast/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actcdi</strong> — 为每个仓库执行 CI/CD：运行各项检查（lint、测试、构建），将其分片并选择需要运行的内容。<span class="project-kind"> · 库</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-ci-cd">CI/CD</a><a class="skill-tag" href="#skill-automation">Automation</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actcdi"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actcdi/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actconf</strong> — 管理由机器、卷和服务器组成的设备群的配置，从 dotfiles 仓库中逐步拆分而来。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-configuration">Configuration</a><a class="skill-tag" href="#skill-stow">Stow</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actconf"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actconf/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actdevice</strong> — 在 iOS 模拟器、Android 设备或宿主机上运行或安装应用（Flutter、Dioxus，或任何带有 device-install 钩子的项目）。<span class="project-kind"> · 库</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-flutter">Flutter</a><a class="skill-tag" href="#skill-dioxus">Dioxus</a><a class="skill-tag" href="#skill-ios">iOS</a><a class="skill-tag" href="#skill-android">Android</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actdevice"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actdevice/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actempo</strong> — 智能体会话的任务调度器：根据任务（带依赖、优先级、截止时间和令牌成本的智能体工作单元）和会话生成计划，并说明哪些任务无法安排及原因。<span class="project-kind"> · 库</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-scheduling">Scheduling</a><a class="skill-tag" href="#skill-agents">Agents</a><a class="skill-tag" href="#skill-optimization">Optimization</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actempo"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actempo/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actessh</strong> — SSH 客户端，其密钥和密码来自 Actesskey。<span class="project-kind"> · 库</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-ssh">SSH</a></span><span class="tl-anchor" id="project-actessh"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actessh/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actesskey</strong> — 机器的机密、密钥和密码集中管理：每个机密都是一个 age 数据块，age 密钥存放在 macOS 钥匙串中，任何机密都不会出现在命令行上。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-security">Security</a><a class="skill-tag" href="#skill-age">Age</a><a class="skill-tag" href="#skill-keychain">Keychain</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actesskey"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actesskey/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actinstall</strong> — 让通过 cargo 从本地仓库安装的二进制文件始终保持在其仓库的最新版本。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-cargo">Cargo</a><a class="skill-tag" href="#skill-automation">Automation</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actinstall"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actinstall/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/Actit" target="_blank" rel="noopener"><strong>Actit</strong></a> — 仅依据 Actindexer 和 KAG 回答“这个需求是否已有现成工具？”：不使用其他搜索引擎，也不用 LLM。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-informationretrieval">InformationRetrieval</a><a class="skill-tag" href="#skill-rag">RAG</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actit"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actit/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actlimit</strong> — 以每个一行的形式显示编码智能体（Claude、Codex 以及有令牌预算的智能体）的使用限额，速度足以用于 shell 提示符。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-agents">Agents</a><a class="skill-tag" href="#skill-observability">Observability</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actlimit"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actlimit/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actmail</strong> — 对清单中每个邮箱进行只读搜索，通过 IMAP 或已归档的 Maildir：不会标记已读、移动或删除任何邮件。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-imap">IMAP</a><a class="skill-tag" href="#skill-email">Email</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actmail"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actmail/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actmake</strong> — 用一个动词 build 把项目变成其产物；由调用方选择引擎（LaTeX、HTML 或打印为 PDF 的 Markdown）。<span class="project-kind"> · 库</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-latex">LaTeX</a><a class="skill-tag" href="#skill-build">Build</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actmake"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actmake/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <a href="https://github.com/grosjeanbaptiste/Actname" target="_blank" rel="noopener"><strong>Actname</strong></a> — 确定性的、离线优先的项目语义命名引擎。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-nlp">NLP</a><a class="skill-tag" href="#skill-naming">Naming</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actname"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actname/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actpath</strong> — 与路径有关的一切：重写对已重命名仓库的引用、移动、修复 worktree 以及 cargo 安装记录。<span class="project-kind"> · 库</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-git">Git</a><a class="skill-tag" href="#skill-automation">Automation</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actpath"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actpath/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Actqueue</strong> — 管理作业队列（重型作业队列及其通道），与 Actempo 配对工作。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-scheduling">Scheduling</a><a class="skill-tag" href="#skill-agents">Agents</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-actqueue"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/actqueue/">交互式 ↗
       </a>
 </li>
-<li>
+<li class="project-part">
 <strong>Acttex</strong> — 构建 LaTeX 项目：找到主文件并运行 pdflatex、biber 和 makeglossaries。<span class="project-kind"> · CLI</span> <span class="skill-tags project-skills"><a class="skill-tag" href="#skill-rust">Rust</a><a class="skill-tag" href="#skill-latex">LaTeX</a><a class="skill-tag" href="#skill-build">Build</a><a class="skill-tag" href="#skill-tdd">TDD</a></span><span class="tl-anchor" id="project-acttex"></span><a class="entry-close" href="#timeline" aria-label="×">×</a><a class="entry-open" href="/app/zh/project/acttex/">交互式 ↗
       </a>
 </li>

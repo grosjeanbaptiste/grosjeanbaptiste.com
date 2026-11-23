@@ -38,7 +38,7 @@ const renderProjectTags = (keywords) => {
 // the two the row is, for the id its timeline bar links to. `many`: the row
 // sits in a long project list, which the sheet sets in three columns with each
 // project's kind in place of its description (print-density.css).
-function rowHtml(p, kind, many) {
+function rowHtml(p, kind, many, all = []) {
   // A course unit's name is its official French designation and its summary
   // the localized title, so on the French page the two are the same string
   // and the row would read "Algorithmique — Algorithmique". Say it once.
@@ -56,11 +56,20 @@ function rowHtml(p, kind, many) {
   const descHtml = many && desc ? `<span class="project-desc">${descText}</span>` : descText;
   const kindHtml =
     many && p.type ? `<span class="project-kind"> · ${escapeHtml(p.type)}</span>` : '';
-  return `<li>${label}${descHtml}${kindHtml}${renderProjectTags(p.keywords)}${anchorHtml(kind, p)}</li>`;
+  // A family of projects (OpenActe) is one row on paper, with the number of its
+  // parts; the parts stay on the screen (print-density.css).
+  const parts = all.filter((q) => q.partOf === p.name).length;
+  const inFamily = p.partOf && all.some((q) => q.name === p.partOf);
+  const cls = parts
+    ? ` class="project-family" data-parts="${parts}"`
+    : inFamily
+      ? ' class="project-part"'
+      : '';
+  return `<li${cls}>${label}${descHtml}${kindHtml}${renderProjectTags(p.keywords)}${anchorHtml(kind, p)}</li>`;
 }
 const listHtml = (projs, kind, many = false) => [
   '  <ul>',
-  `        ${projs.map((p) => rowHtml(p, kind, many)).join('\n        ')}`,
+  `        ${projs.map((p) => rowHtml(p, kind, many, projs)).join('\n        ')}`,
   '  </ul>',
 ];
 

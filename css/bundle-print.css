@@ -354,6 +354,16 @@
     margin: 0;
   }
 
+  /* A family of projects (OpenActe) is one row, with the number of its parts,
+     as renderProjectList does in the PDF. */
+  .embedded-projects .project-part {
+    display: none;
+  }
+
+  .embedded-projects .project-family::after {
+    content: " (" attr(data-parts) ")";
+  }
+
   /* \footnotesize \cvtag: a thin outlined chip, not a padded pill. */
   .skill-tags {
     gap: 1pt;

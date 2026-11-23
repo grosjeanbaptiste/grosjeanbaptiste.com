@@ -574,6 +574,8 @@
             .embedded-projects.many ul { columns: 3; column-gap: 0.3cm; }
             .embedded-projects.many .full-text, .embedded-projects.many .clipped-text { display: none; }
             .embedded-projects.many .project-kind { display: inline; }
+            .embedded-projects .project-part { display: none; }
+            .embedded-projects .project-family::after { content: " (" attr(data-parts) ")"; }
             /* The references get the verso, as they do in the PDF — a sheet
                turned to landscape, since the timeline that opens it needs the
                width. The script below sets the block last in the page, out of
@@ -1006,6 +1008,11 @@
             <xsl:variable name="ref" select="."/>
             <xsl:variable name="proj" select="key('project-by-name', $ref)[local-name($ref) = 'project'] | key('course-by-name', $ref)[local-name($ref) = 'course']"/>
             <li>
+              <!-- A family of projects (OpenActe) is one row on paper, with the number
+                   of its parts; the parts stay on the screen. -->
+              <xsl:variable name="parts" select="count($refs[key('project-by-name', .)/partOf = $ref])"/>
+              <xsl:if test="$proj/partOf and $refs[. = $proj/partOf]"><xsl:attribute name="class">project-part</xsl:attribute></xsl:if>
+              <xsl:if test="$parts &gt; 0"><xsl:attribute name="class">project-family</xsl:attribute><xsl:attribute name="data-parts"><xsl:value-of select="$parts"/></xsl:attribute></xsl:if>
               <xsl:choose>
                 <xsl:when test="$proj/url">
                   <a>
