@@ -2,7 +2,7 @@ name: Regenerate index.html from resume.json
 
 on:
   push:
-    branches: [master]
+    branches: [main]
     paths:
       - 'assets/data/resume.json'
       - 'assets/data/i18n/**'

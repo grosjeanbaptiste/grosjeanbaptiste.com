@@ -9,7 +9,7 @@ name: DSL (compile + tests)
 
 on:
   push:
-    branches: [master]
+    branches: [main]
     paths:
       - 'dsl/**'
       # The gate compares assets/data against a fresh compile, so it has to

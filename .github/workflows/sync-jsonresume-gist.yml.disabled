@@ -9,7 +9,7 @@ name: Sync JSON Resume gist
 
 on:
   push:
-    branches: [master]
+    branches: [main]
     paths:
       - 'assets/data/resume.json'
       - '.github/workflows/sync-jsonresume-gist.yml'
