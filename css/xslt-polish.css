@@ -7,6 +7,14 @@ html {
   scroll-padding-top: calc(var(--views-bar-h, 0rem) + 3.5rem);
 }
 
+/* Beside the sidebar, About is the first thing on the page: its jump goes to the
+ * very top, so the photo above its heading is not cut by the toolbar. */
+@media screen and (min-width: 821px) {
+  #about {
+    scroll-margin-top: 3.5rem;
+  }
+}
+
 /* The toolbar stays at the top of the screen, under the views bar. */
 @media screen {
   .toolbar {
