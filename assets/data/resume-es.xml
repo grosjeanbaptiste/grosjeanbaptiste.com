@@ -337,6 +337,10 @@
         <id>references</id>
         <label>Referencias</label>
       </link>
+      <link>
+        <id>pdf</id>
+        <label>PDF</label>
+      </link>
     </nav>
     <tel>+32496289705</tel>
     <timeline>

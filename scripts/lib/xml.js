@@ -99,9 +99,9 @@ function generateXml(
     pdfReader: pdfReaderForXml(lang),
     viewsTitle: I18N[lang].views.title,
     views: viewsOf(lang),
-    // The classic page's menu, and its phone link: XSLT 1.0 cannot strip
-    // what is not a digit.
-    nav: navItemsOf(I18N[lang]),
+    // The classic page's menu, then the PDF reader the themes have in the page
+    // (#pdf), and the phone link: XSLT 1.0 cannot strip what is not a digit.
+    nav: [...navItemsOf(I18N[lang]), { id: 'pdf', label: I18N[lang].views.pdf }],
     tel: telOf(resume.basics?.phone),
     // Laid out here: XSLT 1.0 cannot compute it (see xml-timeline.js), from
     // the entries the classic page shows, so its bars lead where those do.

@@ -28,10 +28,10 @@ for (const lang of LANGS) {
   const rich = render(lang, false);
   const minimal = render(lang, true);
 
-  test(`${lang}: the menu leads to the four sections, which carry those ids`, () => {
+  test(`${lang}: the menu leads to the four sections and the PDF reader, which carry those ids`, () => {
     const links = all(minimal, /<a class="nav-link" href="#([^"]+)"/g);
     assert.deepEqual(links, all(rich, /<a class="nav-link" href="#([^"]+)"/g));
-    assert.equal(links.length, 4);
+    assert.equal(links.length, 5);
     for (const id of links) assert.match(minimal, new RegExp(`\\sid="${id}"`), `no #${id}`);
   });
 
