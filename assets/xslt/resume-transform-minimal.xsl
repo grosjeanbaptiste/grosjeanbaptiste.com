@@ -606,6 +606,7 @@
               </a>
             </xsl:for-each>
           </nav>
+          <div class="toolbar-rest">
           <div class="group">
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'en'"/></xsl:call-template>
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'fr'"/></xsl:call-template>
@@ -635,6 +636,7 @@
               </a>
             </xsl:for-each>
           </xsl:for-each>
+          </div>
         </div>
 
         <h1><xsl:value-of select="basics/name"/></h1>

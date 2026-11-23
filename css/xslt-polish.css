@@ -24,17 +24,55 @@ html {
   }
 }
 
-/* On a phone it stays one row, scrolled sideways, rather than eating the screen. */
+/* Beside the menu, the rest of the toolbar (languages, theme, downloads) is
+ * laid out as the toolbar itself was. */
+.toolbar-rest {
+  display: contents;
+}
+
+/* On a phone nothing scrolls sideways: the menu, wrapped onto its rows, is
+ * what stays at the top of the screen; the languages and the buttons follow
+ * the page, in rows of their own. */
 @media screen and (max-width: 820px) {
-  .toolbar {
-    flex-wrap: nowrap;
-    justify-content: safe center;
-    overflow-x: auto;
-    scrollbar-width: none;
+  html {
+    scroll-padding-top: calc(var(--views-bar-h, 0rem) + 5.2rem);
   }
 
-  .toolbar .group {
-    flex: none;
+  .toolbar {
+    display: contents;
+  }
+
+  .toolbar > nav.group {
+    position: sticky;
+    top: var(--views-bar-h, 0rem);
+    z-index: 1000;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 6px 8px;
+    background: var(--bg-sidebar);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .toolbar > nav.group a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .toolbar-rest {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+    background: var(--bg-sidebar);
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.85em;
+  }
+
+  .toolbar-rest .group {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

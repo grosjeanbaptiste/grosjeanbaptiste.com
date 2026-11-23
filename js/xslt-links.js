@@ -27,7 +27,7 @@
   const sections = links.map((a) => document.getElementById(a.getAttribute('href').slice(1)));
   const mark = () => {
     // The toolbar scrolls away with the page: its foot counts only while on screen.
-    const bar = document.querySelector('.toolbar')?.getBoundingClientRect().bottom ?? 0;
+    const bar = document.querySelector('.toolbar nav')?.getBoundingClientRect().bottom ?? 0;
     const line = Math.max(bar, 0) + 30;
     const here = sections.find((s) => {
       const box = s?.getBoundingClientRect();

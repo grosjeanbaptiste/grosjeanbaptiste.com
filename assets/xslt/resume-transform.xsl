@@ -756,6 +756,7 @@
               </a>
             </xsl:for-each>
           </nav>
+          <div class="toolbar-rest">
 
           <!-- Language switcher -->
           <div class="group">
@@ -801,6 +802,7 @@
             🖨 <xsl:call-template name="t"><xsl:with-param name="k" select="'printPdf'"/></xsl:call-template>
           </button>
 
+          </div>
         </div>
 
         <div class="container">
