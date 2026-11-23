@@ -208,13 +208,23 @@
           <xsl:variable name="ref" select="."/>
           <xsl:variable name="proj" select="key('project-by-name', $ref)[local-name($ref) = 'project'] | key('course-by-name', $ref)[local-name($ref) = 'course']"/>
           <li>
-            <strong><xsl:value-of select="$ref"/></strong>
+            <xsl:choose>
+              <xsl:when test="$proj/url">
+                <a target="_blank" rel="noopener"><xsl:attribute name="href"><xsl:value-of select="$proj/url"/></xsl:attribute><strong><xsl:value-of select="$ref"/></strong></a>
+              </xsl:when>
+              <xsl:otherwise><strong><xsl:value-of select="$ref"/></strong></xsl:otherwise>
+            </xsl:choose>
             <xsl:choose>
               <!-- A unit's summary is its localized title: said once when it is its name. -->
               <xsl:when test="$proj/summary = $ref"/>
               <xsl:when test="$proj/summary"> — <xsl:value-of select="$proj/summary"/></xsl:when>
               <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
             </xsl:choose>
+            <!-- What it was built with, each skill a way into the filter. -->
+            <xsl:if test="$proj/keywords/keyword">
+              <xsl:text> </xsl:text>
+              <span class="project-skills"><xsl:for-each select="$proj/keywords/keyword"><xsl:call-template name="skill-tag"/></xsl:for-each></span>
+            </xsl:if>
             <xsl:for-each select="$proj">
               <xsl:call-template name="row-anchor"><xsl:with-param name="host" select="$ref/../../anchor"/></xsl:call-template>
             </xsl:for-each>
@@ -355,6 +365,9 @@
             margin: 2px;
           }
           a.skill-tag { text-decoration: none; }
+          .inline-skills { margin: 6px 0; }
+          .project-skills .skill-tag, .inline-skills .skill-tag { font-size: 0.7em; padding: 1px 7px; }
+          @media print { .project-skills { display: none; } }
           a.skill-tag:hover { background: var(--primary); }
           ul { padding-left: 20px; margin: 6px 0; }
           a { color: var(--accent); text-decoration: none; }
@@ -807,6 +820,9 @@
                   <xsl:for-each select="highlights/highlight"><li><xsl:value-of select="."/></li></xsl:for-each>
                 </ul>
               </xsl:if>
+              <xsl:if test="skills/skill">
+                <div class="inline-skills"><xsl:for-each select="skills/skill"><xsl:call-template name="skill-tag"/></xsl:for-each></div>
+              </xsl:if>
               <xsl:call-template name="referenced-list">
                 <xsl:with-param name="refs" select="projects/project"/>
                 <xsl:with-param name="k" select="'projects'"/>
@@ -874,6 +890,9 @@
               </div>
               <xsl:if test="gpa"><div class="muted"><xsl:value-of select="gpa"/></div></xsl:if>
               <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
+              <xsl:if test="skills/skill">
+                <div class="inline-skills"><xsl:for-each select="skills/skill"><xsl:call-template name="skill-tag"/></xsl:for-each></div>
+              </xsl:if>
               <xsl:call-template name="referenced-list">
                 <xsl:with-param name="refs" select="projects/project"/>
                 <xsl:with-param name="k" select="'projects'"/>
