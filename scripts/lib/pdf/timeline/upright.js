@@ -64,7 +64,10 @@ const costOf = (lanes, rooms, names, height) =>
 function shareWidth(lanes, free, names, height) {
   // Start from each lane's share of the labels: the busiest has the most to say.
   const labels = lanes.reduce((sum, l) => sum + l.labelled.length, 0);
-  const rooms = lanes.map((l) => Math.max(MIN_ROOM, (free * l.labelled.length) / labels));
+  // Every lane has its least room; what is left is shared by the labels, so that
+  // the rooms add up to the free width, no more.
+  const spare = free - MIN_ROOM * lanes.length;
+  const rooms = lanes.map((l) => MIN_ROOM + (spare * l.labelled.length) / labels);
   let cost = costOf(lanes, rooms, names, height);
   for (let improved = true; improved; ) {
     improved = false;
@@ -128,6 +131,9 @@ function layOut(timeline, { width = WIDTH, height = HEIGHT } = {}) {
       AXIS -
       LANE_GAP * (lanes.length - 1) -
       lanes.reduce((s, l) => s + l.barsWidth + GUTTER + MARK + 1, 0);
+    // The lanes' bars alone must leave each lane its least room for labels, or
+    // the last lane runs off the page.
+    if (free < MIN_ROOM * lanes.length) return null;
     // Full labels first; the names alone when no sharing of the width holds them.
     const plans = [0, 1, 2].map((names) => ({
       names,

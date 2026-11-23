@@ -93,3 +93,9 @@ test('the experiences of one employer stand side by side in one dashed outline',
   assert.ok(b.x0 >= a.x1 - 1e-6 || a.x0 >= b.x1 - 1e-6);
   assert.ok(employers[0].x0 <= Math.min(a.x0, b.x0) && employers[0].x1 >= Math.max(a.x1, b.x1));
 });
+
+test('no lane runs past the page', () => {
+  const sheet = layOut(timeline);
+  const last = sheet.lanes.at(-1);
+  assert.ok(last.labelX + 1.6 + 1 + last.room <= 190 + 1e-6);
+});
