@@ -1477,18 +1477,21 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             // Shared brand (HTML + favicon + manifest + accent across all views)
             primary "#800020"
             accent "#F3890B"
+            // The orange as text or as a button's fill on the light theme: 4.5:1 on white
+            // and on the grey sidebar (the brand orange is 2.5:1 and 1.9:1).
+            accentLight "#9A5200"
             darkBg "#1F0E0E"
 
             // HTML site palette (variables.css)
             // Dark theme mirrors the warm XSLT dark palette (amber/cream on
             // dark bordeaux-brown) instead of the old pink-on-neutral scheme.
-            siteSecondary "#F3890B"
-            siteBody "#666666"
+            siteSecondary "#9A5200"
+            siteBody "#595959"
             siteEmphasis "#2e2e2e"
             siteBg "#e2e2e2"
             siteCard "#ffffff"
             siteBorder "#dddddd"
-            siteMuted "#666666"
+            siteMuted "#595959"
             sitePrimaryDark "#FFB142"
             siteSecondaryDark "#F3890B"
             siteAccentDark "#ffb347"
@@ -1502,7 +1505,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             // Light primary is bordeaux (brand) rather than the old navy blue.
             xsltPrimary "#800020"
             xsltBody "#2E2E2E"
-            xsltMuted "#666"
+            xsltMuted "#595959"
             xsltBg "#ffffff"
             xsltRuleLight "#E2E2E2"
             xsltRuleRich "#ddd"

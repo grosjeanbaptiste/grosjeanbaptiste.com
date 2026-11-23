@@ -3,10 +3,10 @@
 :root {
   /* Colors */
   --primary-color: #800020; /* Bordeaux */
-  --secondary-color: #f3890b; /* Rouge */
-  --third-color: #f3890b; /* Orange foncé */
-  --body-color: #666666; /* Gris foncé */
-  --muted-color: #666666; /* Muted grey (dates, locations, footer) */
+  --secondary-color: #9a5200; /* Rouge */
+  --third-color: #9a5200; /* Orange foncé: 4.5:1 on the light surfaces */
+  --body-color: #595959; /* Gris foncé */
+  --muted-color: #595959; /* Muted grey (dates, locations, footer) */
   --emphasis-color: #2e2e2e; /* Gris très foncé */
   --background-color: #e2e2e2; /* Gris clair */
   --card-background: #ffffff; /* White for cards */

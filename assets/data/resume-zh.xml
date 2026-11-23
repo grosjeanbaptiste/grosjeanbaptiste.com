@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=dff7baa3"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=5ef4854e"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -42,14 +42,15 @@
     <brand>
       <primary>#800020</primary>
       <accent>#F3890B</accent>
+      <accentLight>#9A5200</accentLight>
       <darkBg>#1F0E0E</darkBg>
-      <siteSecondary>#F3890B</siteSecondary>
-      <siteBody>#666666</siteBody>
+      <siteSecondary>#9A5200</siteSecondary>
+      <siteBody>#595959</siteBody>
       <siteEmphasis>#2e2e2e</siteEmphasis>
       <siteBg>#e2e2e2</siteBg>
       <siteCard>#ffffff</siteCard>
       <siteBorder>#dddddd</siteBorder>
-      <siteMuted>#666666</siteMuted>
+      <siteMuted>#595959</siteMuted>
       <sitePrimaryDark>#FFB142</sitePrimaryDark>
       <siteSecondaryDark>#F3890B</siteSecondaryDark>
       <siteAccentDark>#ffb347</siteAccentDark>
@@ -60,7 +61,7 @@
       <siteMutedDark>#B89A82</siteMutedDark>
       <xsltPrimary>#800020</xsltPrimary>
       <xsltBody>#2E2E2E</xsltBody>
-      <xsltMuted>#666</xsltMuted>
+      <xsltMuted>#595959</xsltMuted>
       <xsltBg>#ffffff</xsltBg>
       <xsltRuleLight>#E2E2E2</xsltRuleLight>
       <xsltRuleRich>#ddd</xsltRuleRich>

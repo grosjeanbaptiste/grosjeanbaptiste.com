@@ -135,7 +135,7 @@ if (brand?.primary) {
     '  /* Colors */',
     `  --primary-color: ${b.primary}; /* Bordeaux */`,
     `  --secondary-color: ${b.siteSecondary}; /* Rouge */`,
-    `  --third-color: ${b.accent.toLowerCase()}; /* Orange foncé */`,
+    `  --third-color: ${b.accentLight.toLowerCase()}; /* Orange foncé: 4.5:1 on the light surfaces */`,
     `  --body-color: ${b.siteBody}; /* Gris foncé */`,
     `  --muted-color: ${b.siteMuted}; /* Muted grey (dates, locations, footer) */`,
     `  --emphasis-color: ${b.siteEmphasis}; /* Gris très foncé */`,

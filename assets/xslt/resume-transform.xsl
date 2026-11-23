@@ -249,7 +249,7 @@
         <style>
           :root {
             --primary:    <xsl:value-of select="meta/brand/xsltPrimary"/>;
-            --accent:     <xsl:value-of select="meta/brand/accent"/>;
+            --accent:     <xsl:value-of select="meta/brand/accentLight"/>;
             --body:       <xsl:value-of select="meta/brand/xsltBody"/>;
             --muted:      <xsl:value-of select="meta/brand/xsltMuted"/>;
             --bg-page:    <xsl:value-of select="meta/brand/xsltBg"/>;
@@ -505,7 +505,7 @@
                clean, ink-light sheet. Mirrors the :root light values. */
             html[data-theme="dark"] {
               --primary:    <xsl:value-of select="meta/brand/xsltPrimary"/>;
-              --accent:     <xsl:value-of select="meta/brand/accent"/>;
+              --accent:     <xsl:value-of select="meta/brand/accentLight"/>;
               --body:       <xsl:value-of select="meta/brand/xsltBody"/>;
               --muted:      <xsl:value-of select="meta/brand/xsltMuted"/>;
               --bg-page:    <xsl:value-of select="meta/brand/xsltBg"/>;
