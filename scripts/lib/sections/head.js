@@ -140,6 +140,10 @@ function generateHead(resume, lang) {
 
   return [
     `<title>${escapeHtml(pageTitle)}</title>`,
+    // The rich XSLT page is the display a visitor is shown (views.js): the
+    // classic page stays online at its address, for crawlers and for local
+    // work, and ?classic keeps a visitor on it.
+    `<script>if (/(^|\\.)grosjeanbaptiste\\.com$/.test(location.hostname) && !/[?&]classic\\b/.test(location.search)) location.replace('/assets/data/resume-${lang}.html' + location.hash);</script>`,
     '',
     ...metaLines,
     '',
