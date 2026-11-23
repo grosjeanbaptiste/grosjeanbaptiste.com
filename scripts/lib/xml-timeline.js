@@ -73,6 +73,8 @@ function timelineForXml(resume, lang, today, onPage = onPageOf(resume, lang)) {
       groups: lane.groups.map((g) => ({
         left: pct(g.start - timeline.from, timeline.months),
         width: pct(g.end + 1 - g.start, timeline.months),
+        // An employer's outline holds all its roles; an entry's holds what it carried.
+        employer: g.employer ? 'true' : 'false',
         row: g.row,
         rows: g.rows,
         printRow: g.printRow,

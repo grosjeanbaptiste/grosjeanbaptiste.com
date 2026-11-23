@@ -3,6 +3,7 @@ const { LANGS, langPath } = require('../config');
 const { escapeHtml } = require('../format');
 const { icon } = require('../icons');
 const { renderViewsBar } = require('../views');
+const { langName } = require('../lang-names');
 
 // The menu: the sections it leads to. Also the rich XSLT theme's (xml.js).
 const navItemsOf = (t) => [
@@ -20,7 +21,7 @@ function generateNav(lang) {
   const langLinks = LANGS.map((l) => {
     const cls = l === lang ? ' class="active"' : '';
     const aria = l === lang ? ' aria-current="page"' : '';
-    return `    <a href="${langPath(l)}" hreflang="${l}"${cls}${aria}>${l.toUpperCase()}</a>`;
+    return `    <a href="${langPath(l)}" hreflang="${l}"${cls}${aria}>${escapeHtml(langName(lang, l))}</a>`;
   }).join('\n');
   return [
     '<nav>',

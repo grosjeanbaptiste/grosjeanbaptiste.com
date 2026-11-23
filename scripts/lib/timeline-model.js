@@ -59,29 +59,69 @@ const under = (g, group) => [
   })),
 ];
 
+// The roles of one employer stand together, in one block of rows that nothing
+// else crosses, so that an outline can hold them all: a lane's units are its
+// entries, except that the experiences of one employer make a single unit,
+// their groups packed inside it. `members` is set on such a unit.
+const EMPLOYER_KIND = 'work';
+function employerUnits(measuredGroups) {
+  const work = (g) => g.head.kind === EMPLOYER_KIND;
+  const roles = (name) => measuredGroups.filter((g) => work(g) && g.head.name === name);
+  const done = new Set();
+  return measuredGroups.flatMap((g) => {
+    if (!work(g) || roles(g.head.name).length < 2) return [g];
+    if (done.has(g.head.name)) return [];
+    done.add(g.head.name);
+    const members = roles(g.head.name);
+    const inner = packGroups(members);
+    return [
+      {
+        members: inner.groups,
+        head: g.head,
+        start: Math.min(...members.map((m) => m.start)),
+        end: Math.max(...members.map((m) => m.end)),
+        height: inner.rows,
+      },
+    ];
+  });
+}
+
 // A lane: its groups packed into rows, then flattened into bars (depth 0 for
-// the entry, 1 for what sits under it) and the outlines of the real groups.
+// the entry, 1 for what sits under it) and the outlines of the real groups,
+// then those of the employers that held several roles.
 const laneOf = (options) =>
   function lane({ kind, groups }) {
-    const packed = packGroups(groups.map(measured(options)));
+    const outer = packGroups(employerUnits(groups.map(measured(options))));
+    // The unit's members at the rows they hold on the lane.
+    const placed = outer.groups.flatMap((u) =>
+      u.members ? u.members.map((m) => ({ ...m, row: u.row + m.row })) : [u],
+    );
+    const employers = outer.groups.filter((u) => u.members);
     // An employer met twice gives two entries of one name: their title is then
     // what tells their bars apart.
-    const met = (name) => packed.groups.filter((g) => g.head.name === name).length;
+    const met = (name) => placed.filter((g) => g.head.name === name).length;
     // A degree always reads with its title: the school alone does not say what
     // was studied.
     const captionOf = (head) =>
       head.title && (head.kind === 'education' || met(head.name) > 1)
         ? `${head.name} · ${head.title}`
         : readingOf(head);
-    const bars = packed.groups.flatMap((g, group) => [
+    const bars = placed.flatMap((g, group) => [
       { ...g.head, caption: captionOf(g.head), depth: 0, row: g.row, group },
       ...under(g, group),
     ]);
-    const outlines = packed.groups
+    const outlines = placed
       .map((g, group) => ({ start: g.start, end: g.end, row: g.row, rows: g.height, group, g }))
       .filter(({ g }) => g.height > 1)
       .map(({ g, ...outline }) => outline);
-    return { kind, rows: packed.rows, bars, groups: outlines };
+    const around = employers.map((u) => ({
+      start: u.start,
+      end: u.end,
+      row: u.row,
+      rows: u.height,
+      employer: true,
+    }));
+    return { kind, rows: outer.rows, bars, groups: [...outlines, ...around] };
   };
 
 // `fold: true` leaves out the parts of a family of projects (OpenActe) whose

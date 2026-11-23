@@ -2,6 +2,7 @@ const { viewsOf } = require('./views');
 const { anchoredResume } = require('./xml-anchors');
 const { onPageOf } = require('./sections/main');
 const { navItemsOf } = require('./sections/nav');
+const { LANG_NAMES } = require('./lang-names');
 const { telOf } = require('./sections/sidebar');
 const { timelineForXml } = require('./xml-timeline');
 const { headForXml } = require('./xml-head');
@@ -98,6 +99,8 @@ function generateXml(
     pictures: picturesForXml(lang),
     pdfReader: pdfReaderForXml(lang),
     viewsTitle: I18N[lang].views.title,
+    // The language switcher's buttons, each language named in this page's language.
+    langNames: LANG_NAMES[lang],
     views: viewsOf(lang),
     // The classic page's menu, then the PDF reader the themes have in the page
     // (#pdf), and the phone link: XSLT 1.0 cannot strip what is not a digit.

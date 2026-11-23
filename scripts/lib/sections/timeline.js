@@ -66,7 +66,7 @@ function generateTimeline(resume, lang, today, onPage, { head = [], under = [] }
       // Behind the bars: the outline of each entry that carried something.
       ...lane.groups.map(
         (g) =>
-          `    <span class="tl-group" aria-hidden="true" style="left:${pct(g.start - timeline.from, timeline.months)};width:${pct(g.end + 1 - g.start, timeline.months)};--row:${g.row};--group-rows:${g.rows};--print-row:${g.printRow};--print-group-rows:${g.printRows}${g.foldRow === undefined ? '' : `;--fold-row:${g.foldRow};--fold-group-rows:${g.foldRows}`}"></span>`,
+          `    <span class="tl-group${g.employer ? ' tl-employer' : ''}" aria-hidden="true" style="left:${pct(g.start - timeline.from, timeline.months)};width:${pct(g.end + 1 - g.start, timeline.months)};--row:${g.row};--group-rows:${g.rows};--print-row:${g.printRow};--print-group-rows:${g.printRows}${g.foldRow === undefined ? '' : `;--fold-row:${g.foldRow};--fold-group-rows:${g.foldRows}`}"></span>`,
       ),
       ...lane.bars.map((bar) => `    ${renderBar(bar, timeline, lang, onPage, t)}`),
       '  </div>',

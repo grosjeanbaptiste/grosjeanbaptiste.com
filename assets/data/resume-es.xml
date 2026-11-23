@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=ea021613"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=feb9c6b0"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -286,6 +286,14 @@
       <downloadTimeline>Descargar la cronología</downloadTimeline>
     </pdfReader>
     <viewsTitle>Vistas</viewsTitle>
+    <langNames>
+      <en>Inglés</en>
+      <fr>Francés</fr>
+      <nl>Neerlandés</nl>
+      <es>Español</es>
+      <de>Alemán</de>
+      <zh>Chino</zh>
+    </langNames>
     <views>
       <view>
         <id>classic</id>
@@ -2416,6 +2424,7 @@
             <group>
               <left>70.53%</left>
               <width>2.4%</width>
+              <employer>false</employer>
               <row>0</row>
               <rows>2</rows>
               <printRow>0</printRow>
@@ -2426,6 +2435,7 @@
             <group>
               <left>76.81%</left>
               <width>3.37%</width>
+              <employer>false</employer>
               <row>0</row>
               <rows>2</rows>
               <printRow>0</printRow>
@@ -2436,6 +2446,7 @@
             <group>
               <left>81.16%</left>
               <width>1.92%</width>
+              <employer>false</employer>
               <row>1</row>
               <rows>2</rows>
               <printRow>1</printRow>
@@ -2446,6 +2457,7 @@
             <group>
               <left>83.09%</left>
               <width>3.48%</width>
+              <employer>false</employer>
               <row>1</row>
               <rows>2</rows>
               <printRow>1</printRow>
@@ -2456,6 +2468,7 @@
             <group>
               <left>84.06%</left>
               <width>3.24%</width>
+              <employer>false</employer>
               <row>3</row>
               <rows>2</rows>
               <printRow>3</printRow>
@@ -2466,6 +2479,7 @@
             <group>
               <left>87.44%</left>
               <width>4.33%</width>
+              <employer>false</employer>
               <row>0</row>
               <rows>2</rows>
               <printRow>0</printRow>
@@ -2476,6 +2490,7 @@
             <group>
               <left>88.41%</left>
               <width>3.37%</width>
+              <employer>false</employer>
               <row>2</row>
               <rows>2</rows>
               <printRow>2</printRow>
@@ -2486,6 +2501,7 @@
             <group>
               <left>91.79%</left>
               <width>8.21%</width>
+              <employer>false</employer>
               <row>0</row>
               <rows>39</rows>
               <printRow>0</printRow>
@@ -2496,12 +2512,35 @@
             <group>
               <left>93.75%</left>
               <width>3.82%</width>
+              <employer>false</employer>
               <row>39</row>
               <rows>3</rows>
               <printRow>39</printRow>
               <printRows>3</printRows>
               <foldRow>12</foldRow>
               <foldRows>3</foldRows>
+            </group>
+            <group>
+              <left>80.99%</left>
+              <width>6.31%</width>
+              <employer>true</employer>
+              <row>0</row>
+              <rows>5</rows>
+              <printRow>0</printRow>
+              <printRows>5</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>5</foldRows>
+            </group>
+            <group>
+              <left>87.44%</left>
+              <width>4.33%</width>
+              <employer>true</employer>
+              <row>0</row>
+              <rows>4</rows>
+              <printRow>0</printRow>
+              <printRows>4</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>4</foldRows>
             </group>
           </groups>
           <bars>
@@ -3641,6 +3680,7 @@
             <group>
               <left>41.05%</left>
               <width>4.35%</width>
+              <employer>false</employer>
               <row>0</row>
               <rows>10</rows>
               <printRow>0</printRow>
@@ -3651,6 +3691,7 @@
             <group>
               <left>52.64%</left>
               <width>23.42%</width>
+              <employer>false</employer>
               <row>0</row>
               <rows>13</rows>
               <printRow>0</printRow>
@@ -3661,6 +3702,7 @@
             <group>
               <left>76.06%</left>
               <width>22.54%</width>
+              <employer>false</employer>
               <row>0</row>
               <rows>13</rows>
               <printRow>0</printRow>
@@ -4864,6 +4906,7 @@
             <group>
               <left>84.06%</left>
               <width>0.48%</width>
+              <employer>false</employer>
               <row>0</row>
               <rows>2</rows>
               <printRow>0</printRow>
