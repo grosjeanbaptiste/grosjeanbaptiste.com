@@ -565,6 +565,7 @@
         <!-- The timeline's styles. No timeline script here: this theme stays static, the
              whole career in the frame, bars as plain links. -->
         <link rel="stylesheet" href="/css/timeline.css"/>
+        <link rel="stylesheet" href="/css/timeline-employer.css"/>
         <link rel="stylesheet" href="/css/timeline-phone.css"/>
         <link rel="stylesheet" href="/css/timeline-zoom.css"/>
         <xsl:call-template name="timeline-zoom-css"/>
