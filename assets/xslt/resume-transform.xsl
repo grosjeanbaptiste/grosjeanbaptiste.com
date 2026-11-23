@@ -805,6 +805,18 @@
           </div>
         </div>
 
+        <!-- The photo, the name and the latest degree, in a bar under the menu once
+             the identity block has scrolled away (js/xslt-links.js shows it). -->
+        <div class="mini-id" aria-hidden="true">
+          <div class="mini-id-bar">
+            <img src="/assets/images/profil-160.webp" alt="" width="32" height="32"/>
+            <span class="mini-id-name"><xsl:value-of select="basics/name"/></span>
+            <xsl:if test="meta/degrees/obtained">
+              <span class="mini-id-degree"><xsl:value-of select="meta/degrees/obtained"/></span>
+            </xsl:if>
+          </div>
+        </div>
+
         <div class="container">
 
           <!-- ============== SIDEBAR ============== -->

@@ -147,3 +147,71 @@ summary:focus-visible {
     box-shadow: none;
   }
 }
+
+/* The photo, the name and the latest degree under the menu, once the identity
+ * block has scrolled away. The wrapper takes no room, so nothing moves when the
+ * bar comes and goes; js/xslt-links.js sets --toolbar-h (the menu's height) and
+ * the attribute that shows it. Without the script it stays out of sight. */
+.mini-id {
+  display: none;
+}
+
+@media screen {
+  .mini-id {
+    display: block;
+    position: sticky;
+    top: calc(var(--views-bar-h, 0rem) + var(--toolbar-h, 0px));
+    z-index: 900;
+    height: 0;
+  }
+
+  .mini-id-bar {
+    position: absolute;
+    inset: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 18px;
+    background: var(--bg-sidebar);
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.8em;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+
+  html[data-identity-away] .mini-id-bar {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .mini-id-bar img {
+    width: 32px;
+    height: 32px;
+    flex: none;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .mini-id-name {
+    flex: none;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .mini-id-degree {
+    min-width: 0;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media print {
+  .mini-id {
+    display: none;
+  }
+}

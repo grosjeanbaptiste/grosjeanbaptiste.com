@@ -38,4 +38,24 @@
   addEventListener('scroll', mark, { passive: true });
   addEventListener('resize', mark);
   mark();
+
+  // The photo and the latest degree, in a bar under the menu, once the identity
+  // block has scrolled out of the top of the screen.
+  const identity = document.querySelector('.sidebar h1');
+  if (identity && document.querySelector('.mini-id')) {
+    const root = document.documentElement;
+    const menu = document.querySelector('.toolbar');
+    const size = () => {
+      const bar = menu.getBoundingClientRect().height || menu.querySelector('nav')?.offsetHeight || 0;
+      root.style.setProperty('--toolbar-h', `${bar}px`);
+    };
+    size();
+    addEventListener('resize', size);
+    new IntersectionObserver(([entry]) => {
+      root.toggleAttribute(
+        'data-identity-away',
+        !entry.isIntersecting && entry.boundingClientRect.bottom < 0,
+      );
+    }).observe(identity);
+  }
 })();
