@@ -46,7 +46,8 @@
     const root = document.documentElement;
     const menu = document.querySelector('.toolbar');
     const size = () => {
-      const bar = menu.getBoundingClientRect().height || menu.querySelector('nav')?.offsetHeight || 0;
+      const bar =
+        menu.getBoundingClientRect().height || menu.querySelector('nav')?.offsetHeight || 0;
       root.style.setProperty('--toolbar-h', `${bar}px`);
     };
     size();
