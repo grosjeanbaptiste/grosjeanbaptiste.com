@@ -212,6 +212,8 @@
           @media print {
             .project-skills { display: none; }
             li.project-part { display: none; }
+            /* Skills as an outline, not a block of ink: a page of them is a dark sheet. */
+            .tag, a.skill-tag, span.skill-tag { background: none; color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
             li.project-family::after { content: " (" attr(data-parts) ")"; }
           }
           a.skill-tag:hover { background: var(--primary); }
