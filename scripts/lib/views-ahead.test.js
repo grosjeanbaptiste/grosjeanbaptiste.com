@@ -74,20 +74,13 @@ const check = (name, fn) =>
   });
 const some = (pattern) => fetched.some((p) => pattern.test(p));
 
-// The interactive view is not offered in the bar (views.js, `hidden`), so
-// nothing leads to it to be warmed; the PDF readers, which are in the bar, are.
-check('the classic page does not read the hidden interactive display ahead', () =>
-  assert.ok(!some(/^\/app\/fr\/$/)),
-);
-check('it warms the app’s script', () => assert.ok(some(/^\/app\/assets\/index-[\w-]+\.js$/)));
-check('it warms the language’s data', () => assert.ok(some(/^\/app\/data\/fr\.json$/)));
-check('it warms the picture of the PDF’s first page', () =>
-  assert.ok(some(/^\/assets\/cv\/previews\/cv_grosjean_baptiste_fr-1\.webp$/)),
-);
-check('it warms the PDF engine', () => assert.ok(some(/^\/app\/assets\/pdf-[\w-]+\.js$/)));
-check('it warms the PDF itself', () =>
-  assert.ok(some(/^\/assets\/cv\/cv_grosjean_baptiste_fr\.pdf$/)),
-);
+// With fewer than two displays offered the bar is not drawn (views.js), so
+// nothing leads anywhere and nothing is warmed: not the interactive view, not
+// the PDF readers, not the XSLT displays.
+check('the classic page warms no other display, the bar offering none', () => {
+  assert.ok(!some(/^\/app\//), 'fetched part of the app');
+  assert.ok(!some(/^\/assets\/cv\/.*\.(pdf|webp)$/), 'fetched a PDF or its picture');
+});
 // A page drawn at build time carries <link rel="preload" imagesrcset> with no
 // href (React writes it for the photo): that is not a file to fetch.
 check('it asks for nothing that is not a file', () =>

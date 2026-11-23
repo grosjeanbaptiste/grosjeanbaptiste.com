@@ -32,7 +32,8 @@ for (const lang of LANGS) {
             page.includes(`href="/assets/data/resume-${other}.html"`),
           `no link to the ${other} page`,
         );
-      const bar = page.match(/<nav class="views-bar"[\s\S]*?<\/nav>/)[0];
+      // With fewer than two displays offered the bar is not drawn (views.js).
+      const bar = page.match(/<nav class="views-bar"[\s\S]*?<\/nav>/)?.[0] ?? '';
       assert.ok(!/href="[^"]*\.xml"/.test(bar), 'the views bar links to XML');
     });
   }
