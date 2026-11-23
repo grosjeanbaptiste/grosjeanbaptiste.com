@@ -2,8 +2,8 @@
 // the name and no way to pack overlapping bars into rows, so the generator
 // writes the timeline already laid out into each XML mirror (meta/timeline)
 // and the themes only draw it — with the classic page's markup, so the rich
-// theme reuses css/timeline.css and js/timeline.js as they are. The minimal
-// theme stays static: no script. Rendered here with xsltproc.
+// themes reuse css/timeline.css and js/timeline.js as they are. Rendered here
+// with xsltproc.
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -156,10 +156,10 @@ test('the zoom does not wait for a script: radios, not hidden buttons', () => {
   assert.doesNotMatch(group, /<button|hidden/);
 });
 
-test('the minimal theme stays static: styles, no script', () => {
+test('the minimal theme loads the timeline styles and script', () => {
   const html = render('fr', true);
   assert.match(html, /<link[^>]*href="\/css\/timeline\.css"/);
-  assert.doesNotMatch(html, /timeline\.js/);
+  assert.match(html, /<script[^>]*src="\/js\/timeline\.js"/);
 });
 
 test('the timeline is left out of print in the XSLT themes too', () => {

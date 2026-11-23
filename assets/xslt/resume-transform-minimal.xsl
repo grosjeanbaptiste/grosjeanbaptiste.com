@@ -201,8 +201,9 @@
   <xsl:template name="referenced-list">
     <xsl:param name="refs"/>
     <xsl:param name="k"/>
+    <xsl:param name="label" select="true()"/>
     <xsl:if test="$refs">
-      <div class="muted"><xsl:call-template name="t"><xsl:with-param name="k" select="$k"/></xsl:call-template>:</div>
+      <xsl:if test="$label"><div class="muted"><xsl:call-template name="t"><xsl:with-param name="k" select="$k"/></xsl:call-template>:</div></xsl:if>
       <ul>
         <xsl:for-each select="$refs">
           <xsl:variable name="ref" select="."/>
@@ -232,6 +233,30 @@
         </xsl:for-each>
       </ul>
     </xsl:if>
+  </xsl:template>
+
+  <!-- A degree's course units, year by year: each block (an academic year, with
+       the programme's name for it) heads the units taken then; a unit on no
+       block follows them. -->
+  <xsl:template name="units-by-block">
+    <xsl:variable name="units" select="courses/course"/>
+    <xsl:variable name="filed" select="blocks/block/units/unit"/>
+    <div class="muted"><xsl:call-template name="t"><xsl:with-param name="k" select="'courseUnits'"/></xsl:call-template>:</div>
+    <xsl:for-each select="blocks/block">
+      <xsl:variable name="taken" select="units/unit"/>
+      <div class="muted embedded-block">
+        <xsl:value-of select="year"/>
+        <xsl:if test="label"> · <xsl:value-of select="label"/></xsl:if>
+      </div>
+      <xsl:call-template name="referenced-list">
+        <xsl:with-param name="refs" select="$units[. = $taken]"/>
+        <xsl:with-param name="label" select="false()"/>
+      </xsl:call-template>
+    </xsl:for-each>
+    <xsl:call-template name="referenced-list">
+      <xsl:with-param name="refs" select="$units[not(. = $filed)]"/>
+      <xsl:with-param name="label" select="false()"/>
+    </xsl:call-template>
   </xsl:template>
 
   <!-- The views bar: the same buttons every display of the CV shows, from the
@@ -355,6 +380,7 @@
           .meta-bar span { margin-right: 14px; white-space: nowrap; }
           .muted { color: var(--muted); font-size: 0.9em; }
           .row { margin-bottom: 14px; }
+          .embedded-block { margin: 0.5rem 0 0; font-weight: 600; }
           .tag, a.skill-tag, span.skill-tag {
             display: inline-block;
             background: var(--accent);
@@ -548,6 +574,7 @@
         <link rel="stylesheet" href="/css/entry-panel.css"/>
         <link rel="stylesheet" href="/css/browse.css"/>
         <link rel="stylesheet" href="/css/pdf-reader.css"/>
+        <script src="/js/timeline.js" defer="defer"></script>
         <script src="/js/xslt-links.js" defer="defer"></script>
         <script src="/js/search-rank.js" defer="defer"></script>
         <script src="/js/search.js" defer="defer"></script>
@@ -897,10 +924,15 @@
                 <xsl:with-param name="refs" select="projects/project"/>
                 <xsl:with-param name="k" select="'projects'"/>
               </xsl:call-template>
-              <xsl:call-template name="referenced-list">
-                <xsl:with-param name="refs" select="courses/course"/>
-                <xsl:with-param name="k" select="'courseUnits'"/>
-              </xsl:call-template>
+              <xsl:choose>
+                <xsl:when test="blocks/block"><xsl:call-template name="units-by-block"/></xsl:when>
+                <xsl:otherwise>
+                  <xsl:call-template name="referenced-list">
+                    <xsl:with-param name="refs" select="courses/course"/>
+                    <xsl:with-param name="k" select="'courseUnits'"/>
+                  </xsl:call-template>
+                </xsl:otherwise>
+              </xsl:choose>
               <xsl:variable name="eduInst" select="institution"/>
               <xsl:variable name="eduHost" select="anchor"/>
               <xsl:variable name="eduVols" select="/resume/volunteer/volunteer-item[$eduInst and contains($eduInst, substring-before(concat(organization, ' '), ' '))]"/>
