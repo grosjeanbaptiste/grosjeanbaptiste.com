@@ -24,6 +24,87 @@ function inTracks(bars) {
     });
 }
 
+const EMPLOYER_PAD = 0.7;
+
+// The experiences of one employer stand together, side by side, in one unit
+// that one dashed outline holds.
+function inUnits(placed) {
+  const units = [];
+  for (const group of placed) {
+    const name = group.kind === 'work' ? group.employer : undefined;
+    const unit = name && units.find((u) => u.employer === name);
+    if (unit) unit.members.push(group);
+    else units.push({ employer: name, members: [group] });
+  }
+  return units.map((u) => {
+    const many = u.members.length > 1;
+    const pad = many ? EMPLOYER_PAD : 0;
+    return {
+      ...u,
+      many,
+      pad,
+      top: Math.max(...u.members.map((m) => m.top)),
+      bottom: Math.min(...u.members.map((m) => m.bottom)),
+      width: u.members.reduce((sum, m) => sum + m.width, 0) + 2 * pad,
+    };
+  });
+}
+
+// Units that share no time share a column; returns each column's left edge.
+function columnOffsets(units) {
+  const columns = [];
+  for (const unit of units.toSorted((a, b) => b.top - a.top)) {
+    let at = columns.findIndex((c) => unit.top <= c.bottom - GAP);
+    if (at < 0) at = columns.push({ width: 0 }) - 1;
+    Object.assign(columns[at], {
+      bottom: unit.bottom,
+      width: Math.max(columns[at].width, unit.width),
+    });
+    unit.column = at;
+  }
+  let x = 0;
+  const offsets = columns.map((c) => {
+    const at = x;
+    x += c.width;
+    return at;
+  });
+  return { offsets, width: x };
+}
+
+function placeGroup(group, left, pitch, k) {
+  for (const bar of group.bars) bar.dx = left + PAD + bar.track * pitch;
+  group.x0 = left;
+  group.x1 = left + group.width;
+  if (!group.family) return;
+  group.family.x0 = left + PAD + group.family.first * pitch - 0.3;
+  group.family.x1 = left + PAD + (group.family.last + 1) * pitch - GAP * k + 0.3;
+}
+
+// Places the groups in columns, an employer's experiences together in one unit.
+function inColumns(placed, pitch, k) {
+  const units = inUnits(placed);
+  const { offsets, width } = columnOffsets(units);
+  const outlines = [];
+  for (const unit of units) {
+    const edge = offsets[unit.column];
+    let left = edge + unit.pad;
+    if (unit.many)
+      outlines.push({
+        bars: [],
+        employer: true,
+        x0: edge,
+        x1: edge + unit.width,
+        top: unit.top,
+        bottom: unit.bottom,
+      });
+    for (const group of unit.members) {
+      placeGroup(group, left, pitch, k);
+      left += group.width;
+    }
+  }
+  return { width, outlines };
+}
+
 // A group keeps its head in its first track and what it carried in the tracks
 // beside it; it is outlined when it carried something. Groups that do not meet
 // in time share a column of the lane.
@@ -67,67 +148,7 @@ function inGroups(groups, yOf, k) {
       width: (1 + Math.max(0, ...inside.map((b) => b.track))) * pitch + 2 * PAD,
     };
   });
-  // The experiences of one employer stand together, side by side, in one unit
-  // that one dashed outline holds.
-  const EMPLOYER_PAD = 0.7;
-  const units = [];
-  for (const group of placed) {
-    const name = group.kind === 'work' ? group.employer : undefined;
-    const unit = name && units.find((u) => u.employer === name);
-    if (unit) unit.members.push(group);
-    else units.push({ employer: name, members: [group] });
-  }
-  const sized = units.map((u) => {
-    const many = u.members.length > 1;
-    const pad = many ? EMPLOYER_PAD : 0;
-    return {
-      ...u,
-      many,
-      pad,
-      top: Math.max(...u.members.map((m) => m.top)),
-      bottom: Math.min(...u.members.map((m) => m.bottom)),
-      width: u.members.reduce((sum, m) => sum + m.width, 0) + 2 * pad,
-    };
-  });
-  const columns = [];
-  for (const unit of sized.toSorted((a, b) => b.top - a.top)) {
-    let at = columns.findIndex((c) => unit.top <= c.bottom - GAP);
-    if (at < 0) at = columns.push({ width: 0 }) - 1;
-    Object.assign(columns[at], {
-      bottom: unit.bottom,
-      width: Math.max(columns[at].width, unit.width),
-    });
-    unit.column = at;
-  }
-  let x = 0;
-  const offsets = columns.map((c) => {
-    const at = x;
-    x += c.width;
-    return at;
-  });
-  const outlines = [];
-  for (const unit of sized) {
-    let left = offsets[unit.column] + unit.pad;
-    if (unit.many)
-      outlines.push({
-        bars: [],
-        employer: true,
-        x0: offsets[unit.column],
-        x1: offsets[unit.column] + unit.width,
-        top: unit.top,
-        bottom: unit.bottom,
-      });
-    for (const group of unit.members) {
-      for (const bar of group.bars) bar.dx = left + PAD + bar.track * pitch;
-      group.x0 = left;
-      group.x1 = left + group.width;
-      if (group.family) {
-        group.family.x0 = left + PAD + group.family.first * pitch - 0.3;
-        group.family.x1 = left + PAD + (group.family.last + 1) * pitch - GAP * k + 0.3;
-      }
-      left += group.width;
-    }
-  }
+  const { width: x, outlines } = inColumns(placed, pitch, k);
   placed.push(...outlines);
   return { groups: placed, width: x };
 }
