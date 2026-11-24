@@ -20,13 +20,14 @@ li:has(> .tl-anchor:target) {
   left: 50%;
   bottom: 0.5rem;
   transform: translateX(-50%);
-  width: min(560px, calc(100vw - 1rem));
-  max-height: 30vh;
+  width: min(48rem, 96%);
+  max-height: 55vh;
   overflow-y: auto;
   z-index: 30;
   box-sizing: border-box;
   padding: 0.5rem 0.9rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  line-height: 1.5;
   background: var(--card-background);
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -107,4 +108,79 @@ li:has(> .tl-anchor:target) > .entry-close:focus-visible {
   .toolbar a[href="#education"] {
     display: none;
   }
+}
+
+/* A project, course unit or volunteering row, read as a card: its name as the
+   heading, its kind beneath, then what it was, then what it was built with.
+   The row's own dash is a bare text node, so the row is set in 0 and each part
+   gives its size back. */
+li:has(> .tl-anchor:target) {
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+}
+
+li:has(> .tl-anchor:target) > * {
+  order: 3;
+}
+
+li:has(> .tl-anchor:target) > strong,
+li:has(> .tl-anchor:target) > a:not(.entry-close):not(.entry-open) {
+  order: 0;
+}
+
+li:has(> .tl-anchor:target) > .project-kind {
+  order: 1;
+}
+
+li:has(> .tl-anchor:target) > .full-text {
+  order: 2;
+}
+
+li:has(> .tl-anchor:target) > .entry-open,
+li:has(> .tl-anchor:target) > .entry-close {
+  order: 9;
+}
+
+li:has(> .tl-anchor:target) > strong,
+li:has(> .tl-anchor:target) > a:not(.entry-close):not(.entry-open) {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+li:has(> .tl-anchor:target) > .project-kind {
+  display: block;
+  margin: 0.15rem 0 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted-color, var(--muted));
+}
+
+li:has(> .tl-anchor:target) > .project-kind::before {
+  content: none;
+}
+
+li:has(> .tl-anchor:target) > .full-text,
+li:has(> .tl-anchor:target) > .clipped-text + .full-text {
+  display: block;
+  font-size: 1rem;
+}
+
+li:has(> .tl-anchor:target) > .clipped-text {
+  display: none;
+}
+
+li:has(> .tl-anchor:target) > .project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+}
+
+li:has(> .tl-anchor:target) > .entry-open,
+li:has(> .tl-anchor:target) > .entry-close {
+  font-size: 0.85rem;
 }

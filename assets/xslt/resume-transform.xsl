@@ -436,6 +436,7 @@
           /* Print-only: the kind a long project list gives in place of the
              description. */
           .project-kind { display: none; }
+          .project-kind::before { content: " · "; }
           .embedded-block { margin: 0.5rem 0 0.15rem; font-size: 0.85em; font-weight: 600; color: var(--muted); }
           .ref-links { margin: 6px 0 0; font-size: 0.92em; color: var(--muted); }
           .ref-links a { color: var(--accent); text-decoration: none; }
@@ -1071,7 +1072,7 @@
                 <xsl:when test="$proj/summary"> — <xsl:value-of select="$proj/summary"/></xsl:when>
                 <xsl:when test="$proj/description"> — <xsl:value-of select="$proj/description"/></xsl:when>
               </xsl:choose>
-              <xsl:if test="$kinds and $proj/type"><span class="project-kind"> · <xsl:value-of select="$proj/type"/></span></xsl:if>
+              <xsl:if test="$kinds and $proj/type"><span class="project-kind"><xsl:value-of select="$proj/type"/></span></xsl:if>
               <!-- What it was built with, each skill a way into the filter. -->
               <xsl:if test="$proj/keywords/keyword">
                 <xsl:text> </xsl:text>
