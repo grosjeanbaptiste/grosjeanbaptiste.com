@@ -203,6 +203,24 @@
             padding: 24px 20px;
             border-radius: 8px;
           }
+          /* The PDF reader loads PDF.js's pdf_viewer.css as it nears the screen, and
+             that sheet styles a `.sidebar` of its own (width 239px, border, shadow,
+             padding): without this, ours shrinks the moment the reader loads. */
+          @media screen and (min-width: 821px) {
+            .container > .sidebar {
+              width: 22%;
+              min-width: 0;
+              max-width: none;
+              box-sizing: content-box;
+              position: static;
+              border: 0;
+              box-shadow: none;
+              padding: 24px 20px;
+              border-radius: 8px;
+              background-color: var(--bg-sidebar);
+              backdrop-filter: none;
+            }
+          }
           .main { flex: 1 1 0; min-width: 0; padding: 20px; }
           .profile { display: contents; }
           #profile-picture {
