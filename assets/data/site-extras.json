@@ -183,11 +183,7 @@
         "CleanArchitecture"
       ],
       "projects": [
-        "Mémoire de master",
-        "Synergy",
-        "fedrag-be",
-        "Emvi App",
-        "Remi"
+        "Mémoire de master"
       ],
       "schedule": "evening",
       "blocks": [

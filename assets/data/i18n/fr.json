@@ -198,7 +198,6 @@
       ]
     },
     {
-      "description": "Moteur de catalogage universel et système d'extraction de métadonnées de fichiers agnostique aux formats.",
       "type": "Moteur",
       "roles": [
         "Auteur"
@@ -212,170 +211,144 @@
       ]
     },
     {
-      "description": "Superviseur système modulaire et suite de diagnostic (processus, mémoire, volumes de stockage, télémétrie réseau, alimentation) pilotant des interfaces CLI et desktop Dioxus.",
       "type": "Superviseur",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Bibliothèque modulaire fournissant des composants UI déclaratifs, persistance, graphiques et internationalisation pour applications desktop multiplateformes.",
       "type": "Bibliothèque",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Suite d'outils CLI pour le nommage sémantique, la détection de collisions et l'échafaudage déclaratif de dépôts Git / GitHub.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Découverte locale, inventaire de sessions et télémétrie pour agents de codage IA.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Suivi des quotas en temps réel et prévision d'utilisation pour assistants de codage IA.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Moteur de raisonnement juridique, droit belge d'abord : à partir d'un besoin ou d'un dossier, il trouve les textes applicables, raisonne sur leur application et répond avec citations.",
       "type": "Service",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Bibliothèque Rust qui pilote les outils des plateformes d'hébergement de dépôts (gh pour GitHub, glab pour GitLab), avec une commande pour renommer un dépôt partout où il est référencé.",
       "type": "Bibliothèque",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Orchestrateur de la pile multimédia et de téléchargement de l'écosystème Acteble : démarre, arrête et contrôle les applications de façon déclarative et réagit aux changements de leurs indexeurs.",
       "type": "Orchestrateur",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Exécute le CI/CD de chaque dépôt : lance les contrôles (lint, tests, builds), les répartit en lots et choisit ce qu'il faut exécuter.",
       "type": "Bibliothèque",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Gère la configuration d'un parc de machines, de volumes et de serveurs, extraite pas à pas du dépôt dotfiles.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Lance ou installe une application (Flutter, Dioxus, ou tout projet doté d'un hook device-install) sur un simulateur iOS, un appareil Android ou l'hôte.",
       "type": "Bibliothèque",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Ordonnanceur d'actes pour sessions agentiques : à partir d'actes (unités de travail d'agent avec dépendances, priorité, échéance et coût en jetons) et de sessions, il produit un plan et dit quels actes n'ont pu être placés et pourquoi.",
       "type": "Bibliothèque",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Client SSH dont les clés et les mots de passe viennent d'Actesskey.",
       "type": "Bibliothèque",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Secrets, clés et mots de passe de la machine au même endroit : chaque secret est un blob age, la clé age vit dans le Trousseau macOS, et rien de secret ne transite en ligne de commande.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Maintient les binaires installés par cargo depuis des dépôts locaux à la dernière version de leur dépôt.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Répond à « existe-t-il déjà un outil pour ce besoin ? » à partir d'Actindexer et de KAG seulement : aucun autre moteur de recherche, aucun LLM.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Affiche les limites d'usage des agents de codage (Claude, Codex et les agents à budget de jetons) en une ligne chacun, assez vite pour un prompt de shell.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Recherche en lecture seule dans chaque boîte aux lettres d'un manifeste, via IMAP ou depuis des Maildirs archivés : rien n'est marqué lu, déplacé ni supprimé.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Transforme un projet en son artefact avec un seul verbe, build ; l'appelant choisit le moteur (LaTeX, HTML ou Markdown imprimés en PDF).",
       "type": "Bibliothèque",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Moteur de nommage sémantique de projets, déterministe et fonctionnant hors ligne.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Tout ce qui touche aux chemins : réécriture des références à un dépôt renommé, déplacements, réparation des worktrees et enregistrements d'installation cargo.",
       "type": "Bibliothèque",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Gère des files de tâches (la file des travaux lourds et ses voies), en tandem avec Actempo.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Compile un projet LaTeX : trouve son fichier principal et lance pdflatex, biber et makeglossaries.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Graphe universel de paquets de calcul interconnectant les disciplines scientifiques sans redondance via le système de types de Rust.",
       "type": "Bibliothèque",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Dépôt agrégé de supports de cours universitaires, notes de cours et travaux dirigés collectés sur les plateformes Moodle et portails académiques, avec solutions détaillées exactes.",
       "type": "Base de connaissances",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Cartographie et visualisation sous forme de graphe global des parcours académiques de l'enseignement supérieur, des dépendances de prérequis, des trajectoires de cours et des filières de diplômes.",
       "type": "Graphe de connaissances",
       "roles": [
         "Auteur"

@@ -210,7 +210,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             //   fr: encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS
             note t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons. Core coursework: software engineering & project management, artificial intelligence, databases, data structures, operational research, cryptography & IT security, and ethics & computer law, with two paid company internships.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons. Cours principaux : génie logiciel et gestion de projet, intelligence artificielle, bases de données, structures de données, recherche opérationnelle, cryptographie et sécurité informatique, éthique et droit de l'informatique, avec deux stages en entreprise rémunérés.", nl: "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.", es: "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons. Cursos principales: ingeniería del software y gestión de proyectos, inteligencia artificial, bases de datos, estructuras de datos, investigación operativa, criptografía y seguridad informática, ética y derecho informático, con dos prácticas remuneradas en empresa.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons. Kernfächer: Software-Engineering und Projektmanagement, künstliche Intelligenz, Datenbanken, Datenstrukturen, Operations Research, Kryptografie und IT-Sicherheit, Ethik und Informatikrecht, mit zwei bezahlten Unternehmenspraktika.", zh: "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。" }
             uses [Python, LaTeX, DDD, CleanArchitecture]
-            projects [ref MemoireMaster, ref Synergy, ref FedRAGBE, ref EmviApp, ref Remi]
+            projects [ref MemoireMaster]
             courses [ref UeAlgorithmique, ref UeAnglais1, ref UeBasesDeDonneesI, ref UeLectureRedactionScientifique, ref UeMathematique, ref UeModelisationLogicielle, ref UeReseaux, ref UeStrategieRH, ref UeSystemesExploitation, ref UeAnglais2, ref UeBasesDeDonneesII, ref UeIngenierieLogicielle, ref UeIntelligenceArtificielle, ref UeRechercheOperationnelle, ref UeStructuresDeDonnees, ref UeSeminairesVeille, ref UeCryptographieSecurite, ref UeEthiqueDroit]
             // The academic years of the master, from the author's own transcripts
             // (2022-2023 to 2025-2026): which units were taken when, and the
@@ -471,7 +471,6 @@ TFE: WebMenu 2.0
         }
         Actmorph {
             name "Actmorph"
-            description t{ en: "Universal cataloging engine and format-agnostic file metadata extraction system.", fr: "Moteur de catalogage universel et système d'extraction de métadonnées de fichiers agnostique aux formats.", nl: "Universele catalogiseringsengine en formaat-agnostisch extractiesysteem voor bestandsmetadata.", es: "Motor de catalogación universal y sistema de extracción de metadatos de archivos agnóstico a formatos.", de: "Universelle Katalogisierungs-Engine und formatagnostisches System zur Extraktion von Dateimetadaten.", zh: "通用编目引擎与格式无关的文件元数据提取系统。" }
             keywords [Rust, FileEngine, Metadata, TDD]
             startDate 2026-11-05
             url "https://github.com/grosjeanbaptiste/Actmorph"
@@ -490,7 +489,6 @@ TFE: WebMenu 2.0
         }
         Actos {
             name "Actos"
-            description t{ en: "Modular system supervisor and diagnostic suite (processes, memory, storage volumes, network telemetry, power) driving CLI and Dioxus desktop interfaces.", fr: "Superviseur système modulaire et suite de diagnostic (processus, mémoire, volumes de stockage, télémétrie réseau, alimentation) pilotant des interfaces CLI et desktop Dioxus.", nl: "Modulaire systeemsupervisor en diagnostische suite (processen, geheugen, opslagvolumes, netwerktelemetrie, stroom) die CLI en Dioxus-desktopinterfaces aanstuurt.", es: "Supervisor de sistema modular y suite de diagnóstico (procesos, memoria, volúmenes de almacenamiento, telemetría de red, energía) que impulsa interfaces CLI y de escritorio Dioxus.", de: "Modularer System-Supervisor und Diagnosesuite (Prozesse, Speicher, Speichervolumen, Netzwerktelemetrie, Energie) für CLI und Dioxus-Desktop-Schnittstellen.", zh: "模块化系统监控器与诊断套件（进程、内存、存储卷、网络遥测、电源），驱动命令行与 Dioxus 桌面界面。" }
             keywords [Rust, Dioxus, SystemsProgramming, Telemetry, CLI, TDD]
             startDate 2026-11-02
             url "https://github.com/grosjeanbaptiste/actos"
@@ -500,7 +498,6 @@ TFE: WebMenu 2.0
         }
         Biorcrux {
             name "Biorcrux"
-            description t{ en: "Modular library providing declarative UI components, persistence, charting, and internationalization for multiplatform desktop applications.", fr: "Bibliothèque modulaire fournissant des composants UI déclaratifs, persistance, graphiques et internationalisation pour applications desktop multiplateformes.", nl: "Modulaire bibliotheek met declaratieve UI-componenten, persistentie, grafieken en internationalisering voor multiplatform desktopapplicaties.", es: "Biblioteca modular que proporciona componentes de interfaz de usuario declarativos, persistencia, gráficos e internacionalización para aplicaciones de escritorio multiplataforma.", de: "Modulare Bibliothek mit deklarativen UI-Komponenten, Persistenz, Diagrammen und Internationalisierung für plattformübergreifende Desktop-Anwendungen.", zh: "模块化库，为多平台桌面应用程序提供声明式 UI 组件、持久化、图表绘制和国际化。" }
             keywords [Rust, Dioxus, UI, Desktop, i18n, Charting, TDD]
             startDate 2026-11-12
             url "https://github.com/grosjeanbaptiste/biorcrux"
@@ -510,7 +507,6 @@ TFE: WebMenu 2.0
         }
         Actrepo {
             name "Actrepo"
-            description t{ en: "CLI tooling suite for semantic naming, collision detection, and declarative scaffolding of Git / GitHub repositories.", fr: "Suite d'outils CLI pour le nommage sémantique, la détection de collisions et l'échafaudage déclaratif de dépôts Git / GitHub.", nl: "CLI-toolsuite voor semantische naamgeving, collisiedetectie en declaratieve scaffolding van Git/GitHub-repositories.", es: "Suite de herramientas CLI para nombrado semántico, detección de colisiones y andamiaje declarativo de repositorios Git / GitHub.", de: "CLI-Toolsuite für semantische Benennung, Kollisionserkennung und deklaratives Scaffolding von Git-/GitHub-Repositories.", zh: "CLI 工具套件，用于语义命名、冲突检测以及 Git / GitHub 仓库的声明式脚手架生成。" }
             keywords [Rust, CLI, Git, GitHub, Scaffolding, TDD]
             startDate 2026-11-11
             url "https://github.com/grosjeanbaptiste/actrepo"
@@ -520,7 +516,6 @@ TFE: WebMenu 2.0
         }
         Actsessions {
             name "Actsessions"
-            description t{ en: "Local discovery, session inventory, and telemetry for AI coding agents.", fr: "Découverte locale, inventaire de sessions et télémétrie pour agents de codage IA.", nl: "Lokale detectie, sessie-inventarisatie en telemetrie voor AI-codeeragenten.", es: "Descubrimiento local, inventario de sesiones y telemetría para agentes de programación con IA.", de: "Lokale Erkennung, Sitzungsinventar und Telemetrie für KI-Coding-Agenten.", zh: "AI 编程代理的本地发现、会话清点和遥测。" }
             keywords [Rust, Agents, Observability, Telemetry, TDD]
             startDate 2026-11-10
             url "https://github.com/grosjeanbaptiste/actsessions"
@@ -530,7 +525,6 @@ TFE: WebMenu 2.0
         }
         Actusext {
             name "Actusext"
-            description t{ en: "Real-time quota tracking and usage forecasting for AI coding assistants.", fr: "Suivi des quotas en temps réel et prévision d'utilisation pour assistants de codage IA.", nl: "Realtime quotalogging en gebruiksvoorspelling voor AI-codeerassistenten.", es: "Seguimiento de cuotas en tiempo real y previsión de uso para asistentes de programación con IA.", de: "Echtzeit-Quotenverfolgung und Nutzungsprognosen für KI-Coding-Assistenten.", zh: "AI 编程助手的实时配额跟踪与使用预测。" }
             keywords [Rust, CLI, Forecasting, Observability, TDD]
             startDate 2026-11-11
             url "https://github.com/grosjeanbaptiste/actusext"
@@ -540,7 +534,6 @@ TFE: WebMenu 2.0
         }
         Actart {
             name "Actart"
-            description t{ en: "Legal reasoning engine, Belgian law first: from a need or a file, it finds the applicable texts, reasons about how they apply and answers with citations.", fr: "Moteur de raisonnement juridique, droit belge d'abord : à partir d'un besoin ou d'un dossier, il trouve les textes applicables, raisonne sur leur application et répond avec citations.", nl: "Juridische redeneermotor, eerst het Belgische recht: vanuit een behoefte of een dossier vindt hij de toepasselijke teksten, redeneert over de toepassing en antwoordt met citaten.", es: "Motor de razonamiento jurídico, primero el derecho belga: a partir de una necesidad o un expediente, encuentra los textos aplicables, razona sobre su aplicación y responde con citas.", de: "Juristische Schlussfolgerungsmaschine, zunächst belgisches Recht: ausgehend von einem Bedarf oder einer Akte findet sie die anwendbaren Texte, begründet ihre Anwendung und antwortet mit Quellenangaben.", zh: "法律推理引擎，以比利时法律为先：从需求或案卷出发，找到适用的法条，推理其适用方式，并附引用作答。" }
             keywords [Rust, Law, RAG, InformationRetrieval, HexagonalArchitecture, TDD]
             startDate 2026-11-17
             type t{ en: "Service", fr: "Service", nl: "Service", es: "Servicio", de: "Dienst", zh: "服务" }
@@ -549,7 +542,6 @@ TFE: WebMenu 2.0
         }
         Actautoma {
             name "Actautoma"
-            description t{ en: "Rust library that drives the tools of repository-hosting platforms (gh for GitHub, glab for GitLab), with a command to rename a repository everywhere it is referenced.", fr: "Bibliothèque Rust qui pilote les outils des plateformes d'hébergement de dépôts (gh pour GitHub, glab pour GitLab), avec une commande pour renommer un dépôt partout où il est référencé.", nl: "Rust-bibliotheek die de tools van repository-platformen aanstuurt (gh voor GitHub, glab voor GitLab), met een commando om een repository te hernoemen overal waar ernaar verwezen wordt.", es: "Biblioteca Rust que maneja las herramientas de las plataformas de alojamiento de repositorios (gh para GitHub, glab para GitLab), con un comando para renombrar un repositorio en todos los lugares donde se referencia.", de: "Rust-Bibliothek, die die Werkzeuge von Repository-Plattformen steuert (gh für GitHub, glab für GitLab), mit einem Befehl, um ein Repository überall dort umzubenennen, wo es referenziert wird.", zh: "驱动代码托管平台工具（GitHub 的 gh、GitLab 的 glab）的 Rust 库，附带一个在所有引用处重命名仓库的命令。" }
             keywords [Rust, GitHub, GitLab, Automation, TDD]
             startDate 2026-11-09
             url "https://github.com/grosjeanbaptiste/actautoma"
@@ -559,7 +551,6 @@ TFE: WebMenu 2.0
         }
         Actcast {
             name "Actcast"
-            description t{ en: "Orchestrator of the media and download stack of the Acteble ecosystem: starts, stops and checks the applications declaratively and reacts to changes in their indexers.", fr: "Orchestrateur de la pile multimédia et de téléchargement de l'écosystème Acteble : démarre, arrête et contrôle les applications de façon déclarative et réagit aux changements de leurs indexeurs.", nl: "Orchestrator van de multimedia- en downloadstack van het Acteble-ecosysteem: start, stopt en controleert de applicaties declaratief en reageert op wijzigingen in hun indexers.", es: "Orquestador de la pila multimedia y de descargas del ecosistema Acteble: inicia, detiene y controla las aplicaciones de forma declarativa y reacciona a los cambios de sus indexadores.", de: "Orchestrator des Multimedia- und Download-Stacks des Acteble-Ökosystems: startet, stoppt und prüft die Anwendungen deklarativ und reagiert auf Änderungen ihrer Indexer.", zh: "Acteble 生态系统多媒体与下载栈的编排器：以声明方式启动、停止和检查应用，并对其索引器的变化作出响应。" }
             keywords [Rust, Orchestration, Media, Automation]
             startDate 2026-11-11
             type t{ en: "Orchestrator", fr: "Orchestrateur", nl: "Orchestrator", es: "Orquestador", de: "Orchestrator", zh: "编排器" }
@@ -568,7 +559,6 @@ TFE: WebMenu 2.0
         }
         Actcdi {
             name "Actcdi"
-            description t{ en: "Executes CI/CD for every repository: runs the gates (lint, tests, builds), shards them and selects what to run.", fr: "Exécute le CI/CD de chaque dépôt : lance les contrôles (lint, tests, builds), les répartit en lots et choisit ce qu'il faut exécuter.", nl: "Voert de CI/CD van elke repository uit: draait de poorten (lint, tests, builds), verdeelt ze in shards en kiest wat moet draaien.", es: "Ejecuta el CI/CD de cada repositorio: lanza las comprobaciones (lint, pruebas, compilaciones), las reparte en lotes y elige qué ejecutar.", de: "Führt CI/CD für jedes Repository aus: startet die Prüfungen (Lint, Tests, Builds), teilt sie in Shards auf und wählt aus, was laufen muss.", zh: "为每个仓库执行 CI/CD：运行各项检查（lint、测试、构建），将其分片并选择需要运行的内容。" }
             keywords [Rust, "CI/CD", Automation, TDD]
             startDate 2026-11-19
             type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
@@ -577,7 +567,6 @@ TFE: WebMenu 2.0
         }
         Actconf {
             name "Actconf"
-            description t{ en: "Manages the configuration of a fleet of machines, volumes and servers, extracted slice by slice from the dotfiles repository.", fr: "Gère la configuration d'un parc de machines, de volumes et de serveurs, extraite pas à pas du dépôt dotfiles.", nl: "Beheert de configuratie van een vloot van machines, volumes en servers, stap voor stap losgemaakt uit de dotfiles-repository.", es: "Gestiona la configuración de una flota de máquinas, volúmenes y servidores, extraída poco a poco del repositorio dotfiles.", de: "Verwaltet die Konfiguration einer Flotte aus Maschinen, Volumes und Servern, Schritt für Schritt aus dem dotfiles-Repository herausgelöst.", zh: "管理由机器、卷和服务器组成的设备群的配置，从 dotfiles 仓库中逐步拆分而来。" }
             keywords [Rust, Configuration, Stow, TDD]
             startDate 2026-11-22
             type "CLI"
@@ -586,7 +575,6 @@ TFE: WebMenu 2.0
         }
         Actdevice {
             name "Actdevice"
-            description t{ en: "Runs or installs an app (Flutter, Dioxus, or any project with a device-install hook) on an iOS simulator, an Android device or the host.", fr: "Lance ou installe une application (Flutter, Dioxus, ou tout projet doté d'un hook device-install) sur un simulateur iOS, un appareil Android ou l'hôte.", nl: "Start of installeert een app (Flutter, Dioxus of elk project met een device-install-hook) op een iOS-simulator, een Android-toestel of de host.", es: "Ejecuta o instala una aplicación (Flutter, Dioxus o cualquier proyecto con un hook device-install) en un simulador iOS, un dispositivo Android o el anfitrión.", de: "Startet oder installiert eine App (Flutter, Dioxus oder jedes Projekt mit einem device-install-Hook) auf einem iOS-Simulator, einem Android-Gerät oder dem Host.", zh: "在 iOS 模拟器、Android 设备或宿主机上运行或安装应用（Flutter、Dioxus，或任何带有 device-install 钩子的项目）。" }
             keywords [Rust, Flutter, Dioxus, iOS, Android, TDD]
             startDate 2026-11-19
             type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
@@ -595,7 +583,6 @@ TFE: WebMenu 2.0
         }
         Actempo {
             name "Actempo"
-            description t{ en: "Scheduler of acts for agentic sessions: given acts (units of agent work with dependencies, priority, deadline and token cost) and sessions, it returns a plan and says which acts could not be placed and why.", fr: "Ordonnanceur d'actes pour sessions agentiques : à partir d'actes (unités de travail d'agent avec dépendances, priorité, échéance et coût en jetons) et de sessions, il produit un plan et dit quels actes n'ont pu être placés et pourquoi.", nl: "Planner van acts voor agentische sessies: op basis van acts (werkeenheden van een agent met afhankelijkheden, prioriteit, deadline en tokenkosten) en sessies levert hij een plan op en meldt welke acts niet geplaatst konden worden en waarom.", es: "Planificador de actos para sesiones agénticas: a partir de actos (unidades de trabajo de un agente con dependencias, prioridad, plazo y coste en tokens) y de sesiones, devuelve un plan e indica qué actos no pudieron colocarse y por qué.", de: "Planer für Acts in agentischen Sitzungen: aus Acts (Arbeitseinheiten eines Agenten mit Abhängigkeiten, Priorität, Frist und Token-Kosten) und Sitzungen erstellt er einen Plan und nennt, welche Acts sich nicht einplanen ließen und warum.", zh: "智能体会话的任务调度器：根据任务（带依赖、优先级、截止时间和令牌成本的智能体工作单元）和会话生成计划，并说明哪些任务无法安排及原因。" }
             keywords [Rust, Scheduling, Agents, Optimization, TDD]
             startDate 2026-11-16
             type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
@@ -604,7 +591,6 @@ TFE: WebMenu 2.0
         }
         Actessh {
             name "Actessh"
-            description t{ en: "SSH client whose keys and passwords come from Actesskey.", fr: "Client SSH dont les clés et les mots de passe viennent d'Actesskey.", nl: "SSH-client waarvan de sleutels en wachtwoorden uit Actesskey komen.", es: "Cliente SSH cuyas claves y contraseñas provienen de Actesskey.", de: "SSH-Client, dessen Schlüssel und Passwörter aus Actesskey stammen.", zh: "SSH 客户端，其密钥和密码来自 Actesskey。" }
             keywords [Rust, SSH]
             startDate 2026-11-22
             type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
@@ -613,7 +599,6 @@ TFE: WebMenu 2.0
         }
         Actesskey {
             name "Actesskey"
-            description t{ en: "Secrets, keys and passwords of the machine in one place: every secret is an age blob, the age key lives in the macOS Keychain, and nothing secret travels on a command line.", fr: "Secrets, clés et mots de passe de la machine au même endroit : chaque secret est un blob age, la clé age vit dans le Trousseau macOS, et rien de secret ne transite en ligne de commande.", nl: "Geheimen, sleutels en wachtwoorden van de machine op één plek: elk geheim is een age-blob, de age-sleutel zit in de macOS-sleutelhanger en niets geheims reist over een opdrachtregel.", es: "Secretos, claves y contraseñas de la máquina en un solo lugar: cada secreto es un blob age, la clave age vive en el llavero de macOS y nada secreto viaja por una línea de comandos.", de: "Geheimnisse, Schlüssel und Passwörter der Maschine an einem Ort: jedes Geheimnis ist ein age-Blob, der age-Schlüssel liegt im macOS-Schlüsselbund, und nichts Geheimes läuft über eine Befehlszeile.", zh: "机器的机密、密钥和密码集中管理：每个机密都是一个 age 数据块，age 密钥存放在 macOS 钥匙串中，任何机密都不会出现在命令行上。" }
             keywords [Rust, Security, Age, Keychain, TDD]
             startDate 2026-11-16
             type "CLI"
@@ -622,7 +607,6 @@ TFE: WebMenu 2.0
         }
         Actinstall {
             name "Actinstall"
-            description t{ en: "Keeps the cargo-installed binaries of local repositories at their repository's latest version.", fr: "Maintient les binaires installés par cargo depuis des dépôts locaux à la dernière version de leur dépôt.", nl: "Houdt de met cargo geïnstalleerde binaries van lokale repositories op de laatste versie van hun repository.", es: "Mantiene los binarios instalados con cargo desde repositorios locales en la última versión de su repositorio.", de: "Hält die per cargo installierten Binärdateien lokaler Repositories auf der neuesten Version ihres Repositorys.", zh: "让通过 cargo 从本地仓库安装的二进制文件始终保持在其仓库的最新版本。" }
             keywords [Rust, Cargo, Automation, TDD]
             startDate 2026-11-17
             type "CLI"
@@ -631,7 +615,6 @@ TFE: WebMenu 2.0
         }
         Actit {
             name "Actit"
-            description t{ en: "Answers “does a tool already exist for this need?” from Actindexer and KAG only: no other search engine and no LLM.", fr: "Répond à « existe-t-il déjà un outil pour ce besoin ? » à partir d'Actindexer et de KAG seulement : aucun autre moteur de recherche, aucun LLM.", nl: "Beantwoordt “bestaat er al een tool voor deze behoefte?” alleen vanuit Actindexer en KAG: geen andere zoekmachine en geen LLM.", es: "Responde a «¿ya existe una herramienta para esta necesidad?» solo a partir de Actindexer y KAG: ningún otro buscador y ningún LLM.", de: "Beantwortet „Gibt es für diesen Bedarf schon ein Werkzeug?“ allein aus Actindexer und KAG: keine andere Suchmaschine und kein LLM.", zh: "仅依据 Actindexer 和 KAG 回答“这个需求是否已有现成工具？”：不使用其他搜索引擎，也不用 LLM。" }
             keywords [Rust, InformationRetrieval, RAG, TDD]
             startDate 2026-11-09
             url "https://github.com/grosjeanbaptiste/Actit"
@@ -641,7 +624,6 @@ TFE: WebMenu 2.0
         }
         Actlimit {
             name "Actlimit"
-            description t{ en: "Shows the usage limits of the coding agents (Claude, Codex and the agents with a token budget) as one line each, fast enough for a shell prompt.", fr: "Affiche les limites d'usage des agents de codage (Claude, Codex et les agents à budget de jetons) en une ligne chacun, assez vite pour un prompt de shell.", nl: "Toont de gebruikslimieten van de codeeragents (Claude, Codex en de agents met een tokenbudget) op één regel per agent, snel genoeg voor een shell-prompt.", es: "Muestra los límites de uso de los agentes de código (Claude, Codex y los agentes con presupuesto de tokens) en una línea cada uno, lo bastante rápido para un prompt de shell.", de: "Zeigt die Nutzungslimits der Coding-Agenten (Claude, Codex und die Agenten mit Token-Budget) in je einer Zeile, schnell genug für einen Shell-Prompt.", zh: "以每个一行的形式显示编码智能体（Claude、Codex 以及有令牌预算的智能体）的使用限额，速度足以用于 shell 提示符。" }
             keywords [Rust, Agents, Observability, TDD]
             startDate 2026-11-19
             type "CLI"
@@ -650,7 +632,6 @@ TFE: WebMenu 2.0
         }
         Actmail {
             name "Actmail"
-            description t{ en: "Read-only search over every mailbox of a manifest, over IMAP or from archived Maildirs: nothing is marked read, moved or deleted.", fr: "Recherche en lecture seule dans chaque boîte aux lettres d'un manifeste, via IMAP ou depuis des Maildirs archivés : rien n'est marqué lu, déplacé ni supprimé.", nl: "Zoeken in alleen-lezen modus in elke mailbox van een manifest, via IMAP of in gearchiveerde Maildirs: niets wordt als gelezen gemarkeerd, verplaatst of verwijderd.", es: "Búsqueda de solo lectura en cada buzón de un manifiesto, por IMAP o desde Maildirs archivados: nada se marca como leído, se mueve ni se elimina.", de: "Schreibgeschützte Suche in jedem Postfach eines Manifests, über IMAP oder aus archivierten Maildirs: nichts wird als gelesen markiert, verschoben oder gelöscht.", zh: "对清单中每个邮箱进行只读搜索，通过 IMAP 或已归档的 Maildir：不会标记已读、移动或删除任何邮件。" }
             keywords [Rust, IMAP, Email, TDD]
             startDate 2026-11-16
             type "CLI"
@@ -659,7 +640,6 @@ TFE: WebMenu 2.0
         }
         Actmake {
             name "Actmake"
-            description t{ en: "Turns a project into its artifact with one verb, build; the caller chooses the engine (LaTeX, HTML or Markdown printed to PDF).", fr: "Transforme un projet en son artefact avec un seul verbe, build ; l'appelant choisit le moteur (LaTeX, HTML ou Markdown imprimés en PDF).", nl: "Maakt van een project zijn artefact met één werkwoord, build; de aanroeper kiest de engine (LaTeX, HTML of Markdown, naar PDF afgedrukt).", es: "Convierte un proyecto en su artefacto con un solo verbo, build; quien llama elige el motor (LaTeX, HTML o Markdown impresos a PDF).", de: "Macht aus einem Projekt sein Artefakt mit einem einzigen Verb, build; der Aufrufer wählt die Engine (LaTeX, HTML oder Markdown, als PDF gedruckt).", zh: "用一个动词 build 把项目变成其产物；由调用方选择引擎（LaTeX、HTML 或打印为 PDF 的 Markdown）。" }
             keywords [Rust, LaTeX, Build, TDD]
             startDate 2026-11-20
             type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
@@ -668,7 +648,6 @@ TFE: WebMenu 2.0
         }
         Actname {
             name "Actname"
-            description t{ en: "Deterministic, offline-first semantic naming engine for projects.", fr: "Moteur de nommage sémantique de projets, déterministe et fonctionnant hors ligne.", nl: "Deterministische, offline-first semantische naamgevingsengine voor projecten.", es: "Motor de nombres semánticos para proyectos, determinista y que funciona sin conexión.", de: "Deterministische, offline-first semantische Namensgebungs-Engine für Projekte.", zh: "确定性的、离线优先的项目语义命名引擎。" }
             keywords [Rust, NLP, Naming, TDD]
             startDate 2026-11-09
             url "https://github.com/grosjeanbaptiste/Actname"
@@ -678,7 +657,6 @@ TFE: WebMenu 2.0
         }
         Actpath {
             name "Actpath"
-            description t{ en: "Everything about paths: rewriting the references to a renamed repository, moves, worktree repair and cargo install records.", fr: "Tout ce qui touche aux chemins : réécriture des références à un dépôt renommé, déplacements, réparation des worktrees et enregistrements d'installation cargo.", nl: "Alles rond paden: verwijzingen naar een hernoemde repository herschrijven, verplaatsingen, worktrees herstellen en cargo-installatiegegevens.", es: "Todo lo relativo a las rutas: reescritura de las referencias a un repositorio renombrado, movimientos, reparación de worktrees y registros de instalación de cargo.", de: "Alles rund um Pfade: Verweise auf ein umbenanntes Repository umschreiben, Verschiebungen, Worktrees reparieren und cargo-Installationseinträge.", zh: "与路径有关的一切：重写对已重命名仓库的引用、移动、修复 worktree 以及 cargo 安装记录。" }
             keywords [Rust, Git, Automation, TDD]
             startDate 2026-11-20
             type t{ en: "Library", fr: "Bibliothèque", nl: "Bibliotheek", es: "Biblioteca", de: "Bibliothek", zh: "库" }
@@ -687,7 +665,6 @@ TFE: WebMenu 2.0
         }
         Actqueue {
             name "Actqueue"
-            description t{ en: "Manages queues of jobs (the heavy queue and its lanes), working in pair with Actempo.", fr: "Gère des files de tâches (la file des travaux lourds et ses voies), en tandem avec Actempo.", nl: "Beheert wachtrijen van taken (de wachtrij voor zware taken en haar rijstroken), samen met Actempo.", es: "Gestiona colas de trabajos (la cola de trabajos pesados y sus carriles), en pareja con Actempo.", de: "Verwaltet Job-Warteschlangen (die Queue für schwere Jobs und ihre Spuren), im Zusammenspiel mit Actempo.", zh: "管理作业队列（重型作业队列及其通道），与 Actempo 配对工作。" }
             keywords [Rust, Scheduling, Agents, TDD]
             startDate 2026-11-19
             type "CLI"
@@ -696,7 +673,6 @@ TFE: WebMenu 2.0
         }
         Acttex {
             name "Acttex"
-            description t{ en: "Builds a LaTeX project: finds its main file and runs pdflatex, biber and makeglossaries.", fr: "Compile un projet LaTeX : trouve son fichier principal et lance pdflatex, biber et makeglossaries.", nl: "Bouwt een LaTeX-project: vindt het hoofdbestand en draait pdflatex, biber en makeglossaries.", es: "Compila un proyecto LaTeX: encuentra su archivo principal y ejecuta pdflatex, biber y makeglossaries.", de: "Baut ein LaTeX-Projekt: findet die Hauptdatei und führt pdflatex, biber und makeglossaries aus.", zh: "构建 LaTeX 项目：找到主文件并运行 pdflatex、biber 和 makeglossaries。" }
             keywords [Rust, LaTeX, Build, TDD]
             startDate 2026-11-19
             type "CLI"
@@ -705,7 +681,6 @@ TFE: WebMenu 2.0
         }
         Polymath {
             name "Polymath"
-            description t{ en: "Universal graph of computation packages interconnecting scientific disciplines without redundancy via the Rust type system.", fr: "Graphe universel de paquets de calcul interconnectant les disciplines scientifiques sans redondance via le système de types de Rust.", nl: "Universele graaf van rekenpakketten die wetenschappelijke disciplines zonder redundantie verbindt via het Rust-typesysteem.", es: "Grafo universal de paquetes de cálculo que interconecta disciplinas científicas sin redundancia mediante el sistema de tipos de Rust.", de: "Universeller Graph von Berechnungspaketen, der wissenschaftliche Disziplinen ohne Redundanz über das Rust-Typsystem verbindet.", zh: "通用的计算包图，通过 Rust 类型系统在没有冗余的情况下连接各个科学学科。" }
             keywords [Rust, DAG, ScientificComputing, Mathematics, TypeSystem, TDD]
             startDate 2026-11-14
             url "https://github.com/grosjeanbaptiste/polymath"
@@ -715,7 +690,6 @@ TFE: WebMenu 2.0
         }
         Corpus {
             name "Corpus"
-            description t{ en: "Aggregated repository of university course materials, lecture notes, and assignments sourced across Moodle platforms and academic portals, with exact worked solutions.", fr: "Dépôt agrégé de supports de cours universitaires, notes de cours et travaux dirigés collectés sur les plateformes Moodle et portails académiques, avec solutions détaillées exactes.", nl: "Geaggregeerde repository van universitair cursusmateriaal, collegedictaten en opdrachten verzameld via Moodle-platformen en academische portalen, met exacte uitgewerkte oplossingen.", es: "Repositorio agregado de materiales de cursos universitarios, notas de clase y tareas recopiladas en plataformas Moodle y portales académicos, con soluciones desarrolladas exactas.", de: "Aggregiertes Repository für universitäre Kursunterlagen, Vorlesungsskripte und Aufgaben aus Moodle-Plattformen und akademischen Portalen mit exakt ausgearbeiteten Lösungen.", zh: "大学课程材料、讲义和作业的聚合资源库，来源于 Moodle 平台和学术门户，配有精确的解答。" }
             keywords [Python, LaTeX, KnowledgeBase, Education, Solver, TDD]
             startDate 2026-11-11
             url "https://github.com/grosjeanbaptiste/corpus"
@@ -725,7 +699,6 @@ TFE: WebMenu 2.0
         }
         Actedu {
             name "Actedu"
-            description t{ en: "Global graph-based mapping and visualization of higher-education academic paths, prerequisite dependencies, course trajectories, and degree pathways.", fr: "Cartographie et visualisation sous forme de graphe global des parcours académiques de l'enseignement supérieur, des dépendances de prérequis, des trajectoires de cours et des filières de diplômes.", nl: "Wereldwijde graafgebaseerde mapping en visualisatie van academische trajecten in het hoger onderwijs, vereistevoorwaarden, cursustrajecten en diplomapaden.", es: "Mapeo y visualización global basados en grafos de itinerarios académicos de educación superior, dependencias de prerrequisitos, trayectorias de cursos y planes de estudio.", de: "Globale graphbasierte Abbildung und Visualisierung von akademischen Wegen im Hochschulbereich, Voraussetzungen, Kursverläufen und Studiengangspfaden.", zh: "高等教育学术路径、先修依赖关系、课程轨迹和学位路径的全局图映射与可视化。" }
             keywords [Rust, KnowledgeGraph, GraphTheory, Education, Visualization, TDD]
             startDate 2026-11-15
             url "https://github.com/grosjeanbaptiste/actedu"

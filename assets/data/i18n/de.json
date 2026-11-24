@@ -198,7 +198,6 @@
       ]
     },
     {
-      "description": "Universelle Katalogisierungs-Engine und formatagnostisches System zur Extraktion von Dateimetadaten.",
       "type": "Engine",
       "roles": [
         "Autor"
@@ -212,170 +211,144 @@
       ]
     },
     {
-      "description": "Modularer System-Supervisor und Diagnosesuite (Prozesse, Speicher, Speichervolumen, Netzwerktelemetrie, Energie) für CLI und Dioxus-Desktop-Schnittstellen.",
       "type": "Supervisor",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Modulare Bibliothek mit deklarativen UI-Komponenten, Persistenz, Diagrammen und Internationalisierung für plattformübergreifende Desktop-Anwendungen.",
       "type": "Bibliothek",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "CLI-Toolsuite für semantische Benennung, Kollisionserkennung und deklaratives Scaffolding von Git-/GitHub-Repositories.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Lokale Erkennung, Sitzungsinventar und Telemetrie für KI-Coding-Agenten.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Echtzeit-Quotenverfolgung und Nutzungsprognosen für KI-Coding-Assistenten.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Juristische Schlussfolgerungsmaschine, zunächst belgisches Recht: ausgehend von einem Bedarf oder einer Akte findet sie die anwendbaren Texte, begründet ihre Anwendung und antwortet mit Quellenangaben.",
       "type": "Dienst",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Rust-Bibliothek, die die Werkzeuge von Repository-Plattformen steuert (gh für GitHub, glab für GitLab), mit einem Befehl, um ein Repository überall dort umzubenennen, wo es referenziert wird.",
       "type": "Bibliothek",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Orchestrator des Multimedia- und Download-Stacks des Acteble-Ökosystems: startet, stoppt und prüft die Anwendungen deklarativ und reagiert auf Änderungen ihrer Indexer.",
       "type": "Orchestrator",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Führt CI/CD für jedes Repository aus: startet die Prüfungen (Lint, Tests, Builds), teilt sie in Shards auf und wählt aus, was laufen muss.",
       "type": "Bibliothek",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Verwaltet die Konfiguration einer Flotte aus Maschinen, Volumes und Servern, Schritt für Schritt aus dem dotfiles-Repository herausgelöst.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Startet oder installiert eine App (Flutter, Dioxus oder jedes Projekt mit einem device-install-Hook) auf einem iOS-Simulator, einem Android-Gerät oder dem Host.",
       "type": "Bibliothek",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Planer für Acts in agentischen Sitzungen: aus Acts (Arbeitseinheiten eines Agenten mit Abhängigkeiten, Priorität, Frist und Token-Kosten) und Sitzungen erstellt er einen Plan und nennt, welche Acts sich nicht einplanen ließen und warum.",
       "type": "Bibliothek",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "SSH-Client, dessen Schlüssel und Passwörter aus Actesskey stammen.",
       "type": "Bibliothek",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Geheimnisse, Schlüssel und Passwörter der Maschine an einem Ort: jedes Geheimnis ist ein age-Blob, der age-Schlüssel liegt im macOS-Schlüsselbund, und nichts Geheimes läuft über eine Befehlszeile.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Hält die per cargo installierten Binärdateien lokaler Repositories auf der neuesten Version ihres Repositorys.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Beantwortet „Gibt es für diesen Bedarf schon ein Werkzeug?“ allein aus Actindexer und KAG: keine andere Suchmaschine und kein LLM.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Zeigt die Nutzungslimits der Coding-Agenten (Claude, Codex und die Agenten mit Token-Budget) in je einer Zeile, schnell genug für einen Shell-Prompt.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Schreibgeschützte Suche in jedem Postfach eines Manifests, über IMAP oder aus archivierten Maildirs: nichts wird als gelesen markiert, verschoben oder gelöscht.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Macht aus einem Projekt sein Artefakt mit einem einzigen Verb, build; der Aufrufer wählt die Engine (LaTeX, HTML oder Markdown, als PDF gedruckt).",
       "type": "Bibliothek",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Deterministische, offline-first semantische Namensgebungs-Engine für Projekte.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Alles rund um Pfade: Verweise auf ein umbenanntes Repository umschreiben, Verschiebungen, Worktrees reparieren und cargo-Installationseinträge.",
       "type": "Bibliothek",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Verwaltet Job-Warteschlangen (die Queue für schwere Jobs und ihre Spuren), im Zusammenspiel mit Actempo.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Baut ein LaTeX-Projekt: findet die Hauptdatei und führt pdflatex, biber und makeglossaries aus.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Universeller Graph von Berechnungspaketen, der wissenschaftliche Disziplinen ohne Redundanz über das Rust-Typsystem verbindet.",
       "type": "Bibliothek",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Aggregiertes Repository für universitäre Kursunterlagen, Vorlesungsskripte und Aufgaben aus Moodle-Plattformen und akademischen Portalen mit exakt ausgearbeiteten Lösungen.",
       "type": "Wissensdatenbank",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Globale graphbasierte Abbildung und Visualisierung von akademischen Wegen im Hochschulbereich, Voraussetzungen, Kursverläufen und Studiengangspfaden.",
       "type": "Wissensgraph",
       "roles": [
         "Autor"

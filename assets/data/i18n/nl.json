@@ -198,7 +198,6 @@
       ]
     },
     {
-      "description": "Universele catalogiseringsengine en formaat-agnostisch extractiesysteem voor bestandsmetadata.",
       "type": "Engine",
       "roles": [
         "Auteur"
@@ -212,170 +211,144 @@
       ]
     },
     {
-      "description": "Modulaire systeemsupervisor en diagnostische suite (processen, geheugen, opslagvolumes, netwerktelemetrie, stroom) die CLI en Dioxus-desktopinterfaces aanstuurt.",
       "type": "Supervisor",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Modulaire bibliotheek met declaratieve UI-componenten, persistentie, grafieken en internationalisering voor multiplatform desktopapplicaties.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "CLI-toolsuite voor semantische naamgeving, collisiedetectie en declaratieve scaffolding van Git/GitHub-repositories.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Lokale detectie, sessie-inventarisatie en telemetrie voor AI-codeeragenten.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Realtime quotalogging en gebruiksvoorspelling voor AI-codeerassistenten.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Juridische redeneermotor, eerst het Belgische recht: vanuit een behoefte of een dossier vindt hij de toepasselijke teksten, redeneert over de toepassing en antwoordt met citaten.",
       "type": "Service",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Rust-bibliotheek die de tools van repository-platformen aanstuurt (gh voor GitHub, glab voor GitLab), met een commando om een repository te hernoemen overal waar ernaar verwezen wordt.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Orchestrator van de multimedia- en downloadstack van het Acteble-ecosysteem: start, stopt en controleert de applicaties declaratief en reageert op wijzigingen in hun indexers.",
       "type": "Orchestrator",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Voert de CI/CD van elke repository uit: draait de poorten (lint, tests, builds), verdeelt ze in shards en kiest wat moet draaien.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Beheert de configuratie van een vloot van machines, volumes en servers, stap voor stap losgemaakt uit de dotfiles-repository.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Start of installeert een app (Flutter, Dioxus of elk project met een device-install-hook) op een iOS-simulator, een Android-toestel of de host.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Planner van acts voor agentische sessies: op basis van acts (werkeenheden van een agent met afhankelijkheden, prioriteit, deadline en tokenkosten) en sessies levert hij een plan op en meldt welke acts niet geplaatst konden worden en waarom.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "SSH-client waarvan de sleutels en wachtwoorden uit Actesskey komen.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Geheimen, sleutels en wachtwoorden van de machine op één plek: elk geheim is een age-blob, de age-sleutel zit in de macOS-sleutelhanger en niets geheims reist over een opdrachtregel.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Houdt de met cargo geïnstalleerde binaries van lokale repositories op de laatste versie van hun repository.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Beantwoordt “bestaat er al een tool voor deze behoefte?” alleen vanuit Actindexer en KAG: geen andere zoekmachine en geen LLM.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Toont de gebruikslimieten van de codeeragents (Claude, Codex en de agents met een tokenbudget) op één regel per agent, snel genoeg voor een shell-prompt.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Zoeken in alleen-lezen modus in elke mailbox van een manifest, via IMAP of in gearchiveerde Maildirs: niets wordt als gelezen gemarkeerd, verplaatst of verwijderd.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Maakt van een project zijn artefact met één werkwoord, build; de aanroeper kiest de engine (LaTeX, HTML of Markdown, naar PDF afgedrukt).",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Deterministische, offline-first semantische naamgevingsengine voor projecten.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Alles rond paden: verwijzingen naar een hernoemde repository herschrijven, verplaatsingen, worktrees herstellen en cargo-installatiegegevens.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Beheert wachtrijen van taken (de wachtrij voor zware taken en haar rijstroken), samen met Actempo.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Bouwt een LaTeX-project: vindt het hoofdbestand en draait pdflatex, biber en makeglossaries.",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Universele graaf van rekenpakketten die wetenschappelijke disciplines zonder redundantie verbindt via het Rust-typesysteem.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Geaggregeerde repository van universitair cursusmateriaal, collegedictaten en opdrachten verzameld via Moodle-platformen en academische portalen, met exacte uitgewerkte oplossingen.",
       "type": "Kennisbank",
       "roles": [
         "Auteur"
       ]
     },
     {
-      "description": "Wereldwijde graafgebaseerde mapping en visualisatie van academische trajecten in het hoger onderwijs, vereistevoorwaarden, cursustrajecten en diplomapaden.",
       "type": "Kennisgraaf",
       "roles": [
         "Auteur"

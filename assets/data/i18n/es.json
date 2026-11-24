@@ -198,7 +198,6 @@
       ]
     },
     {
-      "description": "Motor de catalogación universal y sistema de extracción de metadatos de archivos agnóstico a formatos.",
       "type": "Motor",
       "roles": [
         "Autor"
@@ -212,170 +211,144 @@
       ]
     },
     {
-      "description": "Supervisor de sistema modular y suite de diagnóstico (procesos, memoria, volúmenes de almacenamiento, telemetría de red, energía) que impulsa interfaces CLI y de escritorio Dioxus.",
       "type": "Supervisor",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Biblioteca modular que proporciona componentes de interfaz de usuario declarativos, persistencia, gráficos e internacionalización para aplicaciones de escritorio multiplataforma.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Suite de herramientas CLI para nombrado semántico, detección de colisiones y andamiaje declarativo de repositorios Git / GitHub.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Descubrimiento local, inventario de sesiones y telemetría para agentes de programación con IA.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Seguimiento de cuotas en tiempo real y previsión de uso para asistentes de programación con IA.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Motor de razonamiento jurídico, primero el derecho belga: a partir de una necesidad o un expediente, encuentra los textos aplicables, razona sobre su aplicación y responde con citas.",
       "type": "Servicio",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Biblioteca Rust que maneja las herramientas de las plataformas de alojamiento de repositorios (gh para GitHub, glab para GitLab), con un comando para renombrar un repositorio en todos los lugares donde se referencia.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Orquestador de la pila multimedia y de descargas del ecosistema Acteble: inicia, detiene y controla las aplicaciones de forma declarativa y reacciona a los cambios de sus indexadores.",
       "type": "Orquestador",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Ejecuta el CI/CD de cada repositorio: lanza las comprobaciones (lint, pruebas, compilaciones), las reparte en lotes y elige qué ejecutar.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Gestiona la configuración de una flota de máquinas, volúmenes y servidores, extraída poco a poco del repositorio dotfiles.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Ejecuta o instala una aplicación (Flutter, Dioxus o cualquier proyecto con un hook device-install) en un simulador iOS, un dispositivo Android o el anfitrión.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Planificador de actos para sesiones agénticas: a partir de actos (unidades de trabajo de un agente con dependencias, prioridad, plazo y coste en tokens) y de sesiones, devuelve un plan e indica qué actos no pudieron colocarse y por qué.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Cliente SSH cuyas claves y contraseñas provienen de Actesskey.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Secretos, claves y contraseñas de la máquina en un solo lugar: cada secreto es un blob age, la clave age vive en el llavero de macOS y nada secreto viaja por una línea de comandos.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Mantiene los binarios instalados con cargo desde repositorios locales en la última versión de su repositorio.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Responde a «¿ya existe una herramienta para esta necesidad?» solo a partir de Actindexer y KAG: ningún otro buscador y ningún LLM.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Muestra los límites de uso de los agentes de código (Claude, Codex y los agentes con presupuesto de tokens) en una línea cada uno, lo bastante rápido para un prompt de shell.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Búsqueda de solo lectura en cada buzón de un manifiesto, por IMAP o desde Maildirs archivados: nada se marca como leído, se mueve ni se elimina.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Convierte un proyecto en su artefacto con un solo verbo, build; quien llama elige el motor (LaTeX, HTML o Markdown impresos a PDF).",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Motor de nombres semánticos para proyectos, determinista y que funciona sin conexión.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Todo lo relativo a las rutas: reescritura de las referencias a un repositorio renombrado, movimientos, reparación de worktrees y registros de instalación de cargo.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Gestiona colas de trabajos (la cola de trabajos pesados y sus carriles), en pareja con Actempo.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Compila un proyecto LaTeX: encuentra su archivo principal y ejecuta pdflatex, biber y makeglossaries.",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Grafo universal de paquetes de cálculo que interconecta disciplinas científicas sin redundancia mediante el sistema de tipos de Rust.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Repositorio agregado de materiales de cursos universitarios, notas de clase y tareas recopiladas en plataformas Moodle y portales académicos, con soluciones desarrolladas exactas.",
       "type": "Base de conocimientos",
       "roles": [
         "Autor"
       ]
     },
     {
-      "description": "Mapeo y visualización global basados en grafos de itinerarios académicos de educación superior, dependencias de prerrequisitos, trayectorias de cursos y planes de estudio.",
       "type": "Grafo de conocimiento",
       "roles": [
         "Autor"
