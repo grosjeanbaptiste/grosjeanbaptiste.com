@@ -343,6 +343,15 @@
             padding: 24px 20px;
             border-radius: 8px;
           }
+          @media screen and (min-width: 821px) {
+            .sidebar {
+              position: sticky;
+              top: calc(var(--views-bar-h, 0rem) + var(--toolbar-h, 0px) + 0.75rem);
+              max-height: calc(100vh - var(--views-bar-h, 0rem) - var(--toolbar-h, 0px) - 1.5rem);
+              overflow-y: auto;
+              scrollbar-gutter: stable;
+            }
+          }
           .main { flex: 1 1 0; min-width: 0; padding: 20px; }
           .profile { display: contents; }
           #profile-picture {
