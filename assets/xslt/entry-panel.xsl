@@ -2,16 +2,10 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- The entry the URL points at is lifted into a panel by css/entry-panel.css
-       (:target, no script); this is the way out of it, back to the timeline. -->
+       (:target, no script); this is the way out of it, back to the timeline. No
+       link leads to another display: the rich theme is the only one offered. -->
   <xsl:template name="entry-close">
     <a class="entry-close" href="#timeline" aria-label="×">×</a>
-    <!-- And the way on, to the same entry in the interactive view. -->
-    <xsl:if test="app">
-      <a class="entry-open">
-        <xsl:attribute name="href"><xsl:value-of select="app"/></xsl:attribute>
-        <xsl:value-of select="/resume/meta/views/view[id='interactive']/label"/> ↗
-      </a>
-    </xsl:if>
   </xsl:template>
 
   <!-- The id of a project, course unit or volunteering row, which its timeline

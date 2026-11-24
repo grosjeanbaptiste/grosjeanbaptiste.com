@@ -2,16 +2,8 @@
    (a bar of the timeline, a search result, a shared link) is lifted out of the
    flow, so the timeline stays where it is. A project, course unit or
    volunteering row is pointed at by the empty span at its end. */
-.entry-close,
-.entry-open {
+.entry-close {
   display: none;
-}
-
-.item:target .entry-open,
-li:has(> .tl-anchor:target) > .entry-open {
-  display: inline-block;
-  margin-top: 0.25rem;
-  font-size: 0.85em;
 }
 
 .item:target,
@@ -125,7 +117,7 @@ li:has(> .tl-anchor:target) > * {
 }
 
 li:has(> .tl-anchor:target) > strong,
-li:has(> .tl-anchor:target) > a:not(.entry-close):not(.entry-open) {
+li:has(> .tl-anchor:target) > a:not(.entry-close) {
   order: 0;
 }
 
@@ -137,13 +129,12 @@ li:has(> .tl-anchor:target) > .full-text {
   order: 2;
 }
 
-li:has(> .tl-anchor:target) > .entry-open,
 li:has(> .tl-anchor:target) > .entry-close {
   order: 9;
 }
 
 li:has(> .tl-anchor:target) > strong,
-li:has(> .tl-anchor:target) > a:not(.entry-close):not(.entry-open) {
+li:has(> .tl-anchor:target) > a:not(.entry-close) {
   display: block;
   font-size: 1.25rem;
   line-height: 1.25;
@@ -180,7 +171,6 @@ li:has(> .tl-anchor:target) > .project-skills {
   font-size: 0.85rem;
 }
 
-li:has(> .tl-anchor:target) > .entry-open,
 li:has(> .tl-anchor:target) > .entry-close {
   font-size: 0.85rem;
 }

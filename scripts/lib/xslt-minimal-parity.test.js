@@ -47,12 +47,10 @@ for (const lang of LANGS) {
     assert.deepEqual(pdfZooms(minimal), pdfZooms(rich));
   });
 
-  test(`${lang}: each entry and each row has a panel with a way on to the interactive view`, () => {
-    const opens = all(minimal, /<a class="entry-open" href="([^"]+)"/g);
-    assert.ok(opens.length > 10, `${opens.length} links`);
-    for (const href of opens)
-      assert.match(href, new RegExp(`^/app/${lang}/(work|education|project|course|volunteer)/`));
-    assert.equal(all(minimal, /class="(entry-close)"/g).length, opens.length);
+  test(`${lang}: each entry and each row has a panel with a way out, and none on to another view`, () => {
+    const closes = all(minimal, /class="(entry-close)"/g);
+    assert.ok(closes.length > 10, `${closes.length} panels`);
+    assert.equal(all(minimal, /class="entry-open"/g).length, 0);
     assert.match(minimal, /<link[^>]*href="\/css\/entry-panel\.css"/);
   });
 
