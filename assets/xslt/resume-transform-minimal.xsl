@@ -767,7 +767,7 @@
                   <xsl:for-each select="groups/group">
                     <span class="tl-group" aria-hidden="true">
                       <xsl:if test="employer = 'true'"><xsl:attribute name="class">tl-group tl-employer</xsl:attribute></xsl:if>
-                      <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--w:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/>;--group-rows:<xsl:value-of select="rows"/>;--print-row:<xsl:value-of select="printRow"/>;--print-group-rows:<xsl:value-of select="printRows"/><xsl:if test="foldRow">;--fold-row:<xsl:value-of select="foldRow"/>;--fold-group-rows:<xsl:value-of select="foldRows"/></xsl:if></xsl:attribute>
+                      <xsl:attribute name="style">left:<xsl:value-of select="left"/>;width:<xsl:value-of select="width"/>;--row:<xsl:value-of select="row"/>;--group-rows:<xsl:value-of select="rows"/>;--print-row:<xsl:value-of select="printRow"/>;--print-group-rows:<xsl:value-of select="printRows"/><xsl:if test="foldRow">;--fold-row:<xsl:value-of select="foldRow"/>;--fold-group-rows:<xsl:value-of select="foldRows"/></xsl:if></xsl:attribute>
                     </span>
                   </xsl:for-each>
                   <xsl:for-each select="bars/bar">

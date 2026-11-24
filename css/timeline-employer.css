@@ -12,17 +12,3 @@
   border-radius: 0.8rem;
   background: none;
 }
-
-/* Blocks that follow each other in time stay apart: each ends a little before
-   the date it stops at, so that two never touch (the group's width is also
-   written as --w, which this rule shortens). Bars keep their right edge by
-   the border below; their start is always the exact date. */
-.tl-group[style*="--w"] {
-  width: calc(var(--w) - 0.6rem) !important;
-}
-
-.tl-bar {
-  min-width: 1rem;
-  border-right: 0.45rem solid transparent;
-  background-clip: padding-box;
-}
