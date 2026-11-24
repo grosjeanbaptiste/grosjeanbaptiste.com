@@ -65,10 +65,13 @@ test('the newest is above the oldest', () => {
 
 test('an entry that carried projects is outlined, one alone is not', () => {
   const [lane] = layOut(timeline).lanes;
-  assert.deepEqual(lane.groups
+  assert.deepEqual(
+    lane.groups
       .filter((g) => g.employer !== true)
       .map((g) => g.outlined)
-      .toSorted(), [false, true]);
+      .toSorted(),
+    [false, true],
+  );
   assert.match(buildUpright(layOut(timeline), T), /dash pattern/);
 });
 
