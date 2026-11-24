@@ -62,17 +62,10 @@ const handover = () =>
 const degrees = (options) =>
   timelineOf(handover(), TODAY, options).lanes.find((l) => l.kind === 'education').bars;
 
-test('on paper an entry that begins the day another ends follows it on the same row', () => {
-  assert.deepEqual(
-    degrees({ gap: 0 }).map((b) => b.row),
-    [0, 0],
-  );
-});
-
-test('on screen two entries that touch in time stand on two rows, so that none touch', () => {
+test('an entry that begins the day another ends follows it on the same row', () => {
   assert.deepEqual(
     degrees().map((b) => b.row),
-    [0, 1],
+    [0, 0],
   );
 });
 

@@ -92,9 +92,9 @@ function foldedOnPaper(lane, paper) {
 
 function withPrintRows(resume, today) {
   const screen = timelineOf(resume, today);
-  const bare = timelineOf(resume, today, { units: false, gap: 0 });
+  const bare = timelineOf(resume, today, { units: false });
   const fold = timelineOf(resume, today, { fold: true });
-  const paper = timelineOf(resume, today, { units: false, fold: true, gap: 0 });
+  const paper = timelineOf(resume, today, { units: false, fold: true });
   return {
     ...screen,
     lanes: screen.lanes.map((lane, i) =>

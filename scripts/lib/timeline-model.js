@@ -91,8 +91,7 @@ function employerUnits(measuredGroups) {
 // then those of the employers that held several roles.
 const laneOf = (options) =>
   function lane({ kind, groups }) {
-    // `gap` (months, one by default) keeps two entries on one row apart.
-    const outer = packGroups(employerUnits(groups.map(measured(options))), options.gap ?? 1);
+    const outer = packGroups(employerUnits(groups.map(measured(options))));
     // The unit's members at the rows they hold on the lane.
     const placed = outer.groups.flatMap((u) =>
       u.members ? u.members.map((m) => ({ ...m, row: u.row + m.row })) : [u],

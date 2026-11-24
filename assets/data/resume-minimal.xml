@@ -2421,9 +2421,9 @@
         <lane>
           <kind>work</kind>
           <label>Work Experience</label>
-          <rows>48</rows>
+          <rows>42</rows>
           <printRows>15</printRows>
-          <foldRows>21</foldRows>
+          <foldRows>15</foldRows>
           <groups>
             <group>
               <left>70.53%</left>
@@ -2484,44 +2484,44 @@
               <left>87.44%</left>
               <width>4.33%</width>
               <employer>false</employer>
-              <row>5</row>
+              <row>0</row>
               <rows>2</rows>
               <printRow>0</printRow>
               <printRows>2</printRows>
-              <foldRow>5</foldRow>
+              <foldRow>0</foldRow>
               <foldRows>2</foldRows>
             </group>
             <group>
               <left>88.41%</left>
               <width>3.37%</width>
               <employer>false</employer>
-              <row>7</row>
+              <row>2</row>
               <rows>2</rows>
               <printRow>2</printRow>
               <printRows>2</printRows>
-              <foldRow>7</foldRow>
+              <foldRow>2</foldRow>
               <foldRows>2</foldRows>
             </group>
             <group>
               <left>91.79%</left>
               <width>8.21%</width>
               <employer>false</employer>
-              <row>9</row>
+              <row>0</row>
               <rows>39</rows>
               <printRow>0</printRow>
               <printRows>12</printRows>
-              <foldRow>9</foldRow>
+              <foldRow>0</foldRow>
               <foldRows>12</foldRows>
             </group>
             <group>
               <left>93.75%</left>
               <width>3.82%</width>
               <employer>false</employer>
-              <row>0</row>
+              <row>39</row>
               <rows>3</rows>
               <printRow>12</printRow>
               <printRows>3</printRows>
-              <foldRow>0</foldRow>
+              <foldRow>12</foldRow>
               <foldRows>3</foldRows>
             </group>
             <group>
@@ -2539,11 +2539,11 @@
               <left>87.44%</left>
               <width>4.33%</width>
               <employer>true</employer>
-              <row>5</row>
+              <row>0</row>
               <rows>4</rows>
               <printRow>0</printRow>
               <printRows>4</printRows>
-              <foldRow>5</foldRow>
+              <foldRow>0</foldRow>
               <foldRows>4</foldRows>
             </group>
           </groups>
@@ -2626,9 +2626,9 @@
               <label>EDITx: IT Challenges, IT Jobs, Education in IT for X — Full Stack Developer Web Intern — Apr 2022 – Apr 2022</label>
               <left>72.95%</left>
               <width>0.47%</width>
-              <row>3</row>
+              <row>0</row>
               <printRow>0</printRow>
-              <foldRow>3</foldRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>work-technofutur-tic-full-stack-developer-web-intern</target>
@@ -2799,9 +2799,9 @@
               <label>Emvi.ai — AI Software Crafter — Oct 2024 – Jun 2025</label>
               <left>87.44%</left>
               <width>4.33%</width>
-              <row>5</row>
+              <row>0</row>
               <printRow>0</printRow>
-              <foldRow>5</foldRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter</target>
@@ -2818,9 +2818,9 @@
               <label>Remi — AI Application — Oct 2024 – Jun 2025</label>
               <left>87.44%</left>
               <width>4.33%</width>
-              <row>6</row>
+              <row>1</row>
               <printRow>1</printRow>
-              <foldRow>6</foldRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter-lead</target>
@@ -2835,9 +2835,9 @@
               <label>Emvi.ai — AI Software Crafter Lead — Dec 2024 – Jun 2025</label>
               <left>88.41%</left>
               <width>3.37%</width>
-              <row>7</row>
+              <row>2</row>
               <printRow>2</printRow>
-              <foldRow>7</foldRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>work-emvi-ai-ai-software-crafter-lead</target>
@@ -2854,9 +2854,9 @@
               <label>Emvi App — Mobile Application — Dec 2024 – Jun 2025</label>
               <left>88.41%</left>
               <width>3.37%</width>
-              <row>8</row>
+              <row>3</row>
               <printRow>3</printRow>
-              <foldRow>8</foldRow>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -2871,9 +2871,9 @@
               <label>Acteble — Founder — Jul 2025 – Present</label>
               <left>91.79%</left>
               <width>8.21%</width>
-              <row>9</row>
+              <row>0</row>
               <printRow>0</printRow>
-              <foldRow>9</foldRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -2890,9 +2890,9 @@
               <label>Acteble — Platform · Founder — Apr 2025 – Present</label>
               <left>91.79%</left>
               <width>8.21%</width>
-              <row>10</row>
+              <row>1</row>
               <printRow>1</printRow>
-              <foldRow>10</foldRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -2910,9 +2910,9 @@
               <label>Mémoire de master — Dissertation · Author — UMONS — Nov 2025 – Sep 2026</label>
               <left>93.91%</left>
               <width>4.69%</width>
-              <row>11</row>
+              <row>2</row>
               <printRow>2</printRow>
-              <foldRow>11</foldRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -2929,9 +2929,9 @@
               <label>Actrack — Forecasting engine · Author — Jun 2026 – Present</label>
               <left>97.54%</left>
               <width>2.46%</width>
-              <row>12</row>
+              <row>3</row>
               <printRow>3</printRow>
-              <foldRow>12</foldRow>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -2948,9 +2948,9 @@
               <label>Baba — CLI · Author — Jul 2026 – Present</label>
               <left>97.6%</left>
               <width>2.4%</width>
-              <row>13</row>
+              <row>4</row>
               <printRow>4</printRow>
-              <foldRow>13</foldRow>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -2967,9 +2967,9 @@
               <label>LL — Application · Author — Jul 2026 – Present</label>
               <left>97.62%</left>
               <width>2.38%</width>
-              <row>14</row>
+              <row>5</row>
               <printRow>5</printRow>
-              <foldRow>14</foldRow>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -2986,9 +2986,9 @@
               <label>KAG — Framework · Author — Jul 2026 – Present</label>
               <left>97.65%</left>
               <width>2.35%</width>
-              <row>15</row>
+              <row>6</row>
               <printRow>6</printRow>
-              <foldRow>15</foldRow>
+              <foldRow>6</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -3005,9 +3005,9 @@
               <label>Actindexer — API · Author — Oct 2026 – Present</label>
               <left>99.11%</left>
               <width>0.89%</width>
-              <row>11</row>
+              <row>2</row>
               <printRow>2</printRow>
-              <foldRow>11</foldRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -3024,9 +3024,9 @@
               <label>ActConverge — Platform · Author — Oct 2026 – Present</label>
               <left>99.33%</left>
               <width>0.67%</width>
-              <row>16</row>
+              <row>7</row>
               <printRow>7</printRow>
-              <foldRow>16</foldRow>
+              <foldRow>7</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -3043,9 +3043,9 @@
               <label>Actif — Desktop application · Author — Oct 2026 – Present</label>
               <left>99.49%</left>
               <width>0.51%</width>
-              <row>17</row>
+              <row>8</row>
               <printRow>8</printRow>
-              <foldRow>17</foldRow>
+              <foldRow>8</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -3062,9 +3062,9 @@
               <label>Actserve — Orchestrator · Author — Nov 2026 – Present</label>
               <left>99.52%</left>
               <width>0.48%</width>
-              <row>18</row>
+              <row>9</row>
               <printRow>9</printRow>
-              <foldRow>18</foldRow>
+              <foldRow>9</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -3081,9 +3081,9 @@
               <label>OpenActe — Project family · Author — Nov 2026 – Present</label>
               <left>99.53%</left>
               <width>0.47%</width>
-              <row>19</row>
+              <row>10</row>
               <printRow>10</printRow>
-              <foldRow>19</foldRow>
+              <foldRow>10</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -3100,9 +3100,9 @@
               <label>Polytech — Library · Author — Nov 2026 – Present</label>
               <left>99.53%</left>
               <width>0.47%</width>
-              <row>20</row>
+              <row>11</row>
               <printRow>11</printRow>
-              <foldRow>20</foldRow>
+              <foldRow>11</foldRow>
             </bar>
             <bar>
               <target>work-acteble-founder</target>
@@ -3119,7 +3119,7 @@
               <label>Actos — Supervisor · Author — Nov 2026 – Present</label>
               <left>99.53%</left>
               <width>0.47%</width>
-              <row>21</row>
+              <row>12</row>
               <printRow>12</printRow>
               <part>true</part>
             </bar>
@@ -3138,7 +3138,7 @@
               <label>Actmorph — Engine · Author — Nov 2026 – Present</label>
               <left>99.58%</left>
               <width>0.42%</width>
-              <row>22</row>
+              <row>13</row>
               <printRow>13</printRow>
               <part>true</part>
             </bar>
@@ -3157,7 +3157,7 @@
               <label>Actautoma — Library · Author — Nov 2026 – Present</label>
               <left>99.65%</left>
               <width>0.35%</width>
-              <row>23</row>
+              <row>14</row>
               <printRow>14</printRow>
               <part>true</part>
             </bar>
@@ -3176,7 +3176,7 @@
               <label>Actit — CLI · Author — Nov 2026 – Present</label>
               <left>99.65%</left>
               <width>0.35%</width>
-              <row>24</row>
+              <row>15</row>
               <printRow>15</printRow>
               <part>true</part>
             </bar>
@@ -3195,7 +3195,7 @@
               <label>Actname — CLI · Author — Nov 2026 – Present</label>
               <left>99.65%</left>
               <width>0.35%</width>
-              <row>25</row>
+              <row>16</row>
               <printRow>16</printRow>
               <part>true</part>
             </bar>
@@ -3214,7 +3214,7 @@
               <label>Actsessions — CLI · Author — Nov 2026 – Present</label>
               <left>99.66%</left>
               <width>0.34%</width>
-              <row>26</row>
+              <row>17</row>
               <printRow>17</printRow>
               <part>true</part>
             </bar>
@@ -3233,7 +3233,7 @@
               <label>Actrepo — CLI · Author — Nov 2026 – Present</label>
               <left>99.68%</left>
               <width>0.32%</width>
-              <row>27</row>
+              <row>18</row>
               <printRow>18</printRow>
               <part>true</part>
             </bar>
@@ -3252,7 +3252,7 @@
               <label>Actusext — CLI · Author — Nov 2026 – Present</label>
               <left>99.68%</left>
               <width>0.32%</width>
-              <row>28</row>
+              <row>19</row>
               <printRow>19</printRow>
               <part>true</part>
             </bar>
@@ -3271,7 +3271,7 @@
               <label>Actcast — Orchestrator · Author — Nov 2026 – Present</label>
               <left>99.68%</left>
               <width>0.32%</width>
-              <row>29</row>
+              <row>20</row>
               <printRow>20</printRow>
               <part>true</part>
             </bar>
@@ -3290,7 +3290,7 @@
               <label>Corpus — Knowledge base · Author — Nov 2026 – Present</label>
               <left>99.68%</left>
               <width>0.32%</width>
-              <row>30</row>
+              <row>21</row>
               <printRow>21</printRow>
               <part>true</part>
             </bar>
@@ -3309,7 +3309,7 @@
               <label>Biorcrux — Library · Author — Nov 2026 – Present</label>
               <left>99.69%</left>
               <width>0.31%</width>
-              <row>31</row>
+              <row>22</row>
               <printRow>22</printRow>
               <part>true</part>
             </bar>
@@ -3328,7 +3328,7 @@
               <label>Polymath — Library · Author — Nov 2026 – Present</label>
               <left>99.73%</left>
               <width>0.27%</width>
-              <row>32</row>
+              <row>23</row>
               <printRow>23</printRow>
               <part>true</part>
             </bar>
@@ -3347,7 +3347,7 @@
               <label>Actedu — Knowledge graph · Author — Nov 2026 – Present</label>
               <left>99.74%</left>
               <width>0.26%</width>
-              <row>33</row>
+              <row>24</row>
               <printRow>24</printRow>
               <part>true</part>
             </bar>
@@ -3366,7 +3366,7 @@
               <label>Actempo — Library · Author — Nov 2026 – Present</label>
               <left>99.76%</left>
               <width>0.24%</width>
-              <row>34</row>
+              <row>25</row>
               <printRow>25</printRow>
               <part>true</part>
             </bar>
@@ -3385,7 +3385,7 @@
               <label>Actesskey — CLI · Author — Nov 2026 – Present</label>
               <left>99.76%</left>
               <width>0.24%</width>
-              <row>35</row>
+              <row>26</row>
               <printRow>26</printRow>
               <part>true</part>
             </bar>
@@ -3404,7 +3404,7 @@
               <label>Actmail — CLI · Author — Nov 2026 – Present</label>
               <left>99.76%</left>
               <width>0.24%</width>
-              <row>36</row>
+              <row>27</row>
               <printRow>27</printRow>
               <part>true</part>
             </bar>
@@ -3423,7 +3423,7 @@
               <label>Actart — Service · Author — Nov 2026 – Present</label>
               <left>99.77%</left>
               <width>0.23%</width>
-              <row>37</row>
+              <row>28</row>
               <printRow>28</printRow>
               <part>true</part>
             </bar>
@@ -3442,7 +3442,7 @@
               <label>Actinstall — CLI · Author — Nov 2026 – Present</label>
               <left>99.77%</left>
               <width>0.23%</width>
-              <row>38</row>
+              <row>29</row>
               <printRow>29</printRow>
               <part>true</part>
             </bar>
@@ -3461,7 +3461,7 @@
               <label>Actcdi — Library · Author — Nov 2026 – Present</label>
               <left>99.81%</left>
               <width>0.19%</width>
-              <row>39</row>
+              <row>30</row>
               <printRow>30</printRow>
               <part>true</part>
             </bar>
@@ -3480,7 +3480,7 @@
               <label>Actdevice — Library · Author — Nov 2026 – Present</label>
               <left>99.81%</left>
               <width>0.19%</width>
-              <row>40</row>
+              <row>31</row>
               <printRow>31</printRow>
               <part>true</part>
             </bar>
@@ -3499,7 +3499,7 @@
               <label>Actlimit — CLI · Author — Nov 2026 – Present</label>
               <left>99.81%</left>
               <width>0.19%</width>
-              <row>41</row>
+              <row>32</row>
               <printRow>32</printRow>
               <part>true</part>
             </bar>
@@ -3518,7 +3518,7 @@
               <label>Actqueue — CLI · Author — Nov 2026 – Present</label>
               <left>99.81%</left>
               <width>0.19%</width>
-              <row>42</row>
+              <row>33</row>
               <printRow>33</printRow>
               <part>true</part>
             </bar>
@@ -3537,7 +3537,7 @@
               <label>Acttex — CLI · Author — Nov 2026 – Present</label>
               <left>99.81%</left>
               <width>0.19%</width>
-              <row>43</row>
+              <row>34</row>
               <printRow>34</printRow>
               <part>true</part>
             </bar>
@@ -3556,7 +3556,7 @@
               <label>Actmake — Library · Author — Nov 2026 – Present</label>
               <left>99.82%</left>
               <width>0.18%</width>
-              <row>44</row>
+              <row>35</row>
               <printRow>35</printRow>
               <part>true</part>
             </bar>
@@ -3575,7 +3575,7 @@
               <label>Actpath — Library · Author — Nov 2026 – Present</label>
               <left>99.82%</left>
               <width>0.18%</width>
-              <row>45</row>
+              <row>36</row>
               <printRow>36</printRow>
               <part>true</part>
             </bar>
@@ -3594,7 +3594,7 @@
               <label>Actconf — CLI · Author — Nov 2026 – Present</label>
               <left>99.86%</left>
               <width>0.14%</width>
-              <row>46</row>
+              <row>37</row>
               <printRow>37</printRow>
               <part>true</part>
             </bar>
@@ -3613,7 +3613,7 @@
               <label>Actessh — Library · Author — Nov 2026 – Present</label>
               <left>99.86%</left>
               <width>0.14%</width>
-              <row>47</row>
+              <row>38</row>
               <printRow>38</printRow>
               <part>true</part>
             </bar>
@@ -3630,9 +3630,9 @@
               <label>Belgian Senate — AI Research Scientist — Nov 2025 – Jun 2026</label>
               <left>93.75%</left>
               <width>3.82%</width>
-              <row>0</row>
+              <row>39</row>
               <printRow>12</printRow>
-              <foldRow>0</foldRow>
+              <foldRow>12</foldRow>
             </bar>
             <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
@@ -3649,9 +3649,9 @@
               <label>Synergy — Platform · Author — Nov 2025 – Jun 2026</label>
               <left>93.75%</left>
               <width>3.82%</width>
-              <row>1</row>
+              <row>40</row>
               <printRow>13</printRow>
-              <foldRow>1</foldRow>
+              <foldRow>13</foldRow>
             </bar>
             <bar>
               <target>work-belgian-senate-ai-research-scientist</target>
@@ -3668,18 +3668,18 @@
               <label>fedrag-be — Research · Author — Nov 2025 – Jun 2026</label>
               <left>93.75%</left>
               <width>3.82%</width>
-              <row>2</row>
+              <row>41</row>
               <printRow>14</printRow>
-              <foldRow>2</foldRow>
+              <foldRow>14</foldRow>
             </bar>
           </bars>
         </lane>
         <lane>
           <kind>education</kind>
           <label>Education</label>
-          <rows>26</rows>
+          <rows>14</rows>
           <printRows>7</printRows>
-          <foldRows>26</foldRows>
+          <foldRows>14</foldRows>
           <groups>
             <group>
               <left>41.05%</left>
@@ -3707,11 +3707,11 @@
               <left>76.06%</left>
               <width>22.54%</width>
               <employer>false</employer>
-              <row>13</row>
+              <row>0</row>
               <rows>13</rows>
               <printRow>0</printRow>
               <printRows>7</printRows>
-              <foldRow>13</foldRow>
+              <foldRow>0</foldRow>
               <foldRows>13</foldRows>
             </group>
           </groups>
@@ -4428,9 +4428,9 @@
               <schedule>evening</schedule>
               <left>76.06%</left>
               <width>22.54%</width>
-              <row>13</row>
+              <row>0</row>
               <printRow>0</printRow>
-              <foldRow>13</foldRow>
+              <foldRow>0</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4445,9 +4445,9 @@
               <schedule>evening</schedule>
               <left>76.06%</left>
               <width>5.29%</width>
-              <row>14</row>
+              <row>1</row>
               <printRow>1</printRow>
-              <foldRow>14</foldRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4462,9 +4462,9 @@
               <schedule>evening</schedule>
               <left>81.37%</left>
               <width>5.78%</width>
-              <row>14</row>
+              <row>1</row>
               <printRow>1</printRow>
-              <foldRow>14</foldRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4479,9 +4479,9 @@
               <schedule>evening</schedule>
               <left>87.17%</left>
               <width>5.78%</width>
-              <row>14</row>
+              <row>1</row>
               <printRow>1</printRow>
-              <foldRow>14</foldRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4496,9 +4496,9 @@
               <schedule>evening</schedule>
               <left>92.96%</left>
               <width>5.64%</width>
-              <row>14</row>
+              <row>1</row>
               <printRow>1</printRow>
-              <foldRow>14</foldRow>
+              <foldRow>1</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4512,8 +4512,8 @@
               <label>Bases de données I — Oct 2022 – Sep 2023</label>
               <left>76.06%</left>
               <width>5.29%</width>
-              <row>15</row>
-              <foldRow>15</foldRow>
+              <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4527,8 +4527,8 @@
               <label>Algorithmique — Oct 2022 – Sep 2023</label>
               <left>76.06%</left>
               <width>5.29%</width>
-              <row>16</row>
-              <foldRow>16</foldRow>
+              <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4542,8 +4542,8 @@
               <label>Modélisation logicielle — Oct 2022 – Sep 2023</label>
               <left>76.06%</left>
               <width>5.29%</width>
-              <row>17</row>
-              <foldRow>17</foldRow>
+              <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4557,8 +4557,8 @@
               <label>Mathématique — Oct 2022 – Sep 2023</label>
               <left>76.06%</left>
               <width>5.29%</width>
-              <row>18</row>
-              <foldRow>18</foldRow>
+              <row>5</row>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4572,8 +4572,8 @@
               <label>Anglais I — Sep 2023 – Sep 2024</label>
               <left>81.37%</left>
               <width>5.78%</width>
-              <row>15</row>
-              <foldRow>15</foldRow>
+              <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4587,8 +4587,8 @@
               <label>Lecture et rédaction scientifique — Sep 2023 – Sep 2024</label>
               <left>81.37%</left>
               <width>5.78%</width>
-              <row>16</row>
-              <foldRow>16</foldRow>
+              <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4602,8 +4602,8 @@
               <label>Stratégie et politiques en ressources humaines — Sep 2023 – Sep 2024</label>
               <left>81.37%</left>
               <width>5.78%</width>
-              <row>17</row>
-              <foldRow>17</foldRow>
+              <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4617,8 +4617,8 @@
               <label>Réseaux — Sep 2023 – Sep 2024</label>
               <left>81.37%</left>
               <width>5.78%</width>
-              <row>18</row>
-              <foldRow>18</foldRow>
+              <row>5</row>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4632,8 +4632,8 @@
               <label>Systèmes d'exploitation — Sep 2023 – Sep 2024</label>
               <left>81.37%</left>
               <width>5.78%</width>
-              <row>19</row>
-              <foldRow>19</foldRow>
+              <row>6</row>
+              <foldRow>6</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4647,8 +4647,8 @@
               <label>Anglais II — Sep 2024 – Sep 2025</label>
               <left>87.17%</left>
               <width>5.78%</width>
-              <row>15</row>
-              <foldRow>15</foldRow>
+              <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4662,8 +4662,8 @@
               <label>Bases de données II — Sep 2024 – Sep 2025</label>
               <left>87.17%</left>
               <width>5.78%</width>
-              <row>16</row>
-              <foldRow>16</foldRow>
+              <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4677,8 +4677,8 @@
               <label>Ingénierie de logiciels et gestion de projets — Sep 2024 – Sep 2025</label>
               <left>87.17%</left>
               <width>5.78%</width>
-              <row>17</row>
-              <foldRow>17</foldRow>
+              <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4692,8 +4692,8 @@
               <label>Intelligence artificielle — Sep 2024 – Sep 2025</label>
               <left>87.17%</left>
               <width>5.78%</width>
-              <row>18</row>
-              <foldRow>18</foldRow>
+              <row>5</row>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4707,8 +4707,8 @@
               <label>Recherche opérationnelle et applications — Sep 2024 – Sep 2025</label>
               <left>87.17%</left>
               <width>5.78%</width>
-              <row>19</row>
-              <foldRow>19</foldRow>
+              <row>6</row>
+              <foldRow>6</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4722,8 +4722,8 @@
               <label>Structures de données — Sep 2024 – Sep 2025</label>
               <left>87.17%</left>
               <width>5.78%</width>
-              <row>20</row>
-              <foldRow>20</foldRow>
+              <row>7</row>
+              <foldRow>7</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4737,8 +4737,8 @@
               <label>Séminaires d'informatique en veille technologique — Sep 2025 – Sep 2026</label>
               <left>92.96%</left>
               <width>5.64%</width>
-              <row>15</row>
-              <foldRow>15</foldRow>
+              <row>2</row>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4752,8 +4752,8 @@
               <label>Cryptographie et sécurité des systèmes informatiques — Sep 2025 – Sep 2026</label>
               <left>92.96%</left>
               <width>5.64%</width>
-              <row>16</row>
-              <foldRow>16</foldRow>
+              <row>3</row>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4767,8 +4767,8 @@
               <label>Éthique et droit de l'informatique — Sep 2025 – Sep 2026</label>
               <left>92.96%</left>
               <width>5.64%</width>
-              <row>17</row>
-              <foldRow>17</foldRow>
+              <row>4</row>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4782,9 +4782,9 @@
               <label>Student Representative — UMons — Nov 2023 – Sep 2026</label>
               <left>82.59%</left>
               <width>16.01%</width>
-              <row>21</row>
+              <row>8</row>
               <printRow>2</printRow>
-              <foldRow>21</foldRow>
+              <foldRow>8</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4798,9 +4798,9 @@
               <label>Buddy TandeMons — UMons — Nov 2023 – Sep 2026</label>
               <left>82.59%</left>
               <width>16.01%</width>
-              <row>22</row>
+              <row>9</row>
               <printRow>3</printRow>
-              <foldRow>22</foldRow>
+              <foldRow>9</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4817,9 +4817,9 @@
               <label>Remi — AI Application — Oct 2024 – Jun 2025</label>
               <left>87.44%</left>
               <width>4.33%</width>
-              <row>23</row>
+              <row>10</row>
               <printRow>4</printRow>
-              <foldRow>23</foldRow>
+              <foldRow>10</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4836,9 +4836,9 @@
               <label>Emvi App — Mobile Application — Dec 2024 – Jun 2025</label>
               <left>88.41%</left>
               <width>3.37%</width>
-              <row>24</row>
+              <row>11</row>
               <printRow>5</printRow>
-              <foldRow>24</foldRow>
+              <foldRow>11</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4855,9 +4855,9 @@
               <label>Synergy — Platform · Author — Nov 2025 – Jun 2026</label>
               <left>93.75%</left>
               <width>3.82%</width>
-              <row>23</row>
+              <row>10</row>
               <printRow>4</printRow>
-              <foldRow>23</foldRow>
+              <foldRow>10</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4874,9 +4874,9 @@
               <label>fedrag-be — Research · Author — Nov 2025 – Jun 2026</label>
               <left>93.75%</left>
               <width>3.82%</width>
-              <row>24</row>
+              <row>11</row>
               <printRow>5</printRow>
-              <foldRow>24</foldRow>
+              <foldRow>11</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science-msc</target>
@@ -4894,9 +4894,9 @@
               <label>Mémoire de master — Dissertation · Author — UMONS — Nov 2025 – Sep 2026</label>
               <left>93.91%</left>
               <width>4.69%</width>
-              <row>25</row>
+              <row>12</row>
               <printRow>6</printRow>
-              <foldRow>25</foldRow>
+              <foldRow>12</foldRow>
             </bar>
           </bars>
         </lane>
