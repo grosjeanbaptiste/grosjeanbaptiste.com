@@ -181,6 +181,9 @@ A third view of the same CV, next to the static HTML site and the XSLT themes: a
 - Tests: `cd react && npm test` (Vitest; specs are `*.spec.*` so the root `node --test` never picks them up). `src/infrastructure/exported-data.spec.ts` builds the catalogue of every exported language, so a dangling project reference or an id that differs between languages fails there. `scripts/lib/react-app.test.js` guards the CI wiring: the `react` job in `test.yml`, and the regeneration workflow rebuilding **and committing** `app/`.
 - Dev: `cd react && npm run dev` → <http://localhost:5173/app/>.
 
+### Commit hook
+`.githooks/pre-commit` runs what Lint and the stale-bundle test run in CI (biome `ci`, the 200-line check, `css-bundle.test.js`) and refuses the commit when one fails. Enable it once per clone: `git config core.hooksPath .githooks`.
+
 ### Local Development
 Simply open `index.html` in a web browser or serve the directory with any static web server:
 ```bash

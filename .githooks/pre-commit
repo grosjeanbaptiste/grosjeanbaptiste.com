@@ -1,0 +1,11 @@
+#!/bin/sh
+# The fast checks CI runs (lint.yml and the stale-bundle test), so that a commit
+# that would turn them red is refused here. Enable once: git config core.hooksPath .githooks
+set -e
+cd "$(git rev-parse --show-toplevel)"
+echo "pre-commit: biome"
+npx --yes @biomejs/biome@1.9.4 ci . >/dev/null || { npx --yes @biomejs/biome@1.9.4 ci . | tail -40; echo "fix: npx @biomejs/biome@1.9.4 format --write ."; exit 1; }
+echo "pre-commit: line count"
+node scripts/check-line-count.js >/dev/null || { node scripts/check-line-count.js; exit 1; }
+echo "pre-commit: generated css bundle"
+node --test scripts/lib/css-bundle.test.js >/dev/null 2>&1 || { echo "css/bundle*.css stale: node scripts/generate-from-resume.js"; exit 1; }
