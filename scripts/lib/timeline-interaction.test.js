@@ -53,7 +53,7 @@ addEventListener('load', () => setTimeout(() => {
   $('button[data-years="all"]', zoom).click();
   seen.allStretch = grid.style.getPropertyValue('--stretch');
   seen.allFits = Math.abs(grid.getBoundingClientRect().width - scroller.clientWidth) < 2;
-  const lane = [...document.querySelectorAll('.tl-lane[data-kind="work"] .tl-bar')].sort((a, b) => a.offsetLeft - b.offsetLeft);
+  const lane = [...document.querySelectorAll('.tl-lane[data-kind="work"] .tl-bar')].filter((bar) => bar.offsetParent).sort((a, b) => a.offsetLeft - b.offsetLeft);
   lane[0].focus();
   seen.preview = $('#tl-preview')?.textContent.includes(lane[0].dataset.name);
   lane[0].dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));

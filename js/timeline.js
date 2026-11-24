@@ -87,8 +87,10 @@
 
   // Arrow keys: along a lane in time order, across lanes to the closest in time.
   const centre = (bar) => bar.offsetLeft + bar.offsetWidth / 2;
+  // A folded bar (a family's part) is not drawn: a key must not land on it.
+  const drawn = (bars) => [...bars].filter((bar) => bar.offsetParent !== null);
   const laneOf = (bar) =>
-    [...bar.closest('.tl-track').querySelectorAll('.tl-bar')].sort(
+    drawn(bar.closest('.tl-track').querySelectorAll('.tl-bar')).sort(
       (a, b) => a.offsetLeft - b.offsetLeft,
     );
   const lanes = [...section.querySelectorAll('.tl-track')];
@@ -99,7 +101,7 @@
     const other = lanes[lanes.indexOf(bar.closest('.tl-track')) + (key === 'ArrowDown' ? 1 : -1)];
     if (!other) return undefined;
     const at = centre(bar);
-    return [...other.querySelectorAll('.tl-bar')].sort(
+    return drawn(other.querySelectorAll('.tl-bar')).sort(
       (a, b) => Math.abs(centre(a) - at) - Math.abs(centre(b) - at),
     )[0];
   };

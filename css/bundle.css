@@ -1277,9 +1277,10 @@ a.skill-tag:hover {
 }
 
 /* The parts of a family of projects (OpenActe) are folded into the family's
-   bar, and the rows close up to the generator's folded layout. !important: the
-   screen's rows are written inline. */
-@media screen and (max-width: 48rem) {
+   bar on every screen, and the rows close up to the generator's folded layout:
+   27 one-row parts left a column of empty space. !important: the screen's rows
+   are written inline. */
+@media screen {
   .tl-bar[data-part] {
     display: none;
   }
