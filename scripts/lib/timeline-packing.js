@@ -1,7 +1,9 @@
 // Row packing for the timeline: bars that overlap in time go on separate rows,
 // and a group — a host with what it carried underneath — takes a block of rows
 // that nothing else may cross. A bar runs from `start` to `end + 1` (in months,
-// to the day), so two bars share a row when one starts where the other stops.
+// to the day). Groups take a `gap` of months between two of them on one row, so
+// that none touch: the space between them is the real time between their dates,
+// never a drawn margin.
 
 // Greedy: each bar takes the first row free when it starts. Rows from 0.
 function packRows(bars) {
@@ -18,9 +20,9 @@ function packRows(bars) {
 
 // Each group ({ start, end, height }) takes the first block of `height` rows
 // free over its whole span. Returns them with their top row, and the rows used.
-function packGroups(groups) {
+function packGroups(groups, gap = 0) {
   const rowEnds = [];
-  const free = (row, group) => rowEnds[row] === undefined || rowEnds[row] + 1 <= group.start;
+  const free = (row, group) => rowEnds[row] === undefined || rowEnds[row] + 1 + gap <= group.start;
   const fits = (top, group) =>
     Array.from({ length: group.height }, (_, i) => top + i).every((row) => free(row, group));
   const placed = [...groups]

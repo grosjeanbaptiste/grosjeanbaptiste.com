@@ -59,12 +59,20 @@ const handover = () =>
       { institution: 'UMons', studyType: 'Master', startDate: '2022-10-15', endDate: '2026-09-04' },
     ],
   });
-const degrees = () => timelineOf(handover(), TODAY).lanes.find((l) => l.kind === 'education').bars;
+const degrees = (options) =>
+  timelineOf(handover(), TODAY, options).lanes.find((l) => l.kind === 'education').bars;
 
-test('an entry that begins the day another ends follows it on the same row', () => {
+test('on paper an entry that begins the day another ends follows it on the same row', () => {
+  assert.deepEqual(
+    degrees({ gap: 0 }).map((b) => b.row),
+    [0, 0],
+  );
+});
+
+test('on screen two entries that touch in time stand on two rows, so that none touch', () => {
   assert.deepEqual(
     degrees().map((b) => b.row),
-    [0, 0],
+    [0, 1],
   );
 });
 
