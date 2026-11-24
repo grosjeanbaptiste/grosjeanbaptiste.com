@@ -344,15 +344,8 @@ TFE: WebMenu 2.0
                 }
             }
         }
-        SolvayBrusselsSchoolOfEconomicsAndManagement hide on: html {
-            institution "Solvay Brussels School of Economics and Management"
-            studyType t{ en: "Bachelor of Science - BSc", fr: "Bachelier en Sciences (BSc)", nl: "Bachelor of Science (BSc)", es: "Bachelor de Ciencias (BSc)", de: "Bachelor of Science (BSc)", zh: "理学学士 (BSc)" }
-            area t{ en: "Business Engineering", fr: "Ingénieur de gestion", nl: "Handelsingenieur", es: "Ingeniero comercial", de: "Wirtschaftsingenieur", zh: "工商工程" }
-            period 2015-09-30..2016-06-30
-            score t{ en: "Contact me for more information.", fr: "Me contacter pour plus d'informations.", nl: "Contacteer mij voor meer info.", es: "Contáctame para más información.", de: "Kontaktiert mich für mehr Infos.", zh: "请联系我了解更多信息。" }
-        }
         UniversiteLibreDeBruxelles hide on: html {
-            institution "Université libre de Bruxelles"
+            institution "Université libre de Bruxelles — Solvay Brussels School of Economics and Management"
             studyType t{ en: "Bachelor of Science - BSc", fr: "Bachelier en Sciences (BSc)", nl: "Bachelor of Science (BSc)", es: "Bachelor de Ciencias (BSc)", de: "Bachelor of Science (BSc)", zh: "理学学士 (BSc)" }
             area t{ en: "Business Engineering", fr: "Ingénieur de gestion", nl: "Handelsingenieur", es: "Ingeniero comercial", de: "Wirtschaftsingenieur", zh: "工商工程" }
             period 2015-09-30..2016-06-30
