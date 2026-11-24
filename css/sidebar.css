@@ -1,9 +1,9 @@
 /* Sidebar card: profile picture, contact info, degrees, languages. */
 
-/* Fixed width: never follows the viewport or its content (phone: full width). */
+/* A fixed share of its parent, whatever the viewport or its content (phone: full width). */
 .sidebar {
   flex: none;
-  width: 18rem;
+  width: 22%;
   box-sizing: border-box;
   background-color: var(--card-background);
   padding: clamp(0.75rem, 2.5vw, 1.25rem);
