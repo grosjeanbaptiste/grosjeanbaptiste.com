@@ -93,9 +93,9 @@ test('no course unit appears in the sidebar projects list', () => {
   }
 });
 
-test('a real project still appears in the sidebar projects list', () => {
+test('the sidebar lists no projects: they stand under their jobs', () => {
   for (const lang of LANGS) {
     const block = sidebarProjects(fs.readFileSync(langOutFile(lang), 'utf8'));
-    assert.match(block, /<strong>Acteble<\/strong>/, `${lang}: Acteble left the sidebar`);
+    assert.equal(block, '', `${lang}: the sidebar lists projects again`);
   }
 });

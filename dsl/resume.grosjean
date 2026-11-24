@@ -1490,7 +1490,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             fontSite "'Roboto', sans-serif"
         }
         sectionOrder [about work education skills languages dailyLife references]
-        sidebarOrder [languages projects skills dailyLife]
+        sidebarOrder [languages skills dailyLife]
         dailyLife {
             sleep 7 color "#F3890B"
             transport 2 color "#FF0000"
