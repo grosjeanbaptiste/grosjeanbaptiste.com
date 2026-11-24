@@ -65,8 +65,11 @@ test('the newest is above the oldest', () => {
 
 test('an entry that carried projects is outlined, one alone is not', () => {
   const [lane] = layOut(timeline).lanes;
-  assert.deepEqual(lane.groups.map((g) => g.outlined).toSorted(), [false, true]);
-  assert.match(buildUpright(layOut(timeline), T), /filldraw/);
+  assert.deepEqual(lane.groups
+      .filter((g) => g.employer !== true)
+      .map((g) => g.outlined)
+      .toSorted(), [false, true]);
+  assert.match(buildUpright(layOut(timeline), T), /dash pattern/);
 });
 
 test('what an entry carried sits beside its head, not under it', () => {
@@ -76,7 +79,7 @@ test('what an entry carried sits beside its head, not under it', () => {
   assert.ok(alpha.dx > head.dx);
 });
 
-test('the experiences of one employer stand side by side in one dashed outline', () => {
+test('the experiences of one employer stand side by side in one solid outline', () => {
   const job = (strong, start, end) => ({
     head: { kind: 'work', strong, start, end, label: strong },
     children: [],
@@ -88,7 +91,7 @@ test('the experiences of one employer stand side by side in one dashed outline',
     1,
   );
   const employers = groups.filter((g) => g.employer === true);
-  assert.equal(employers.length, 1);
+  assert.equal(employers.length, 2, 'every employer is outlined, one role or several');
   const [a, b] = groups.filter((g) => g.employer === 'Acme');
   assert.ok(b.x0 >= a.x1 - 1e-6 || a.x0 >= b.x1 - 1e-6);
   assert.ok(employers[0].x0 <= Math.min(a.x0, b.x0) && employers[0].x1 >= Math.max(a.x1, b.x1));

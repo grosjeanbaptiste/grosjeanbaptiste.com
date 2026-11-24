@@ -2512,6 +2512,61 @@
               <foldRows>3</foldRows>
             </group>
             <group>
+              <left>46.38%</left>
+              <width>0.47%</width>
+              <employer>true</employer>
+              <row>0</row>
+              <rows>1</rows>
+              <printRow>0</printRow>
+              <printRows>1</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>1</foldRows>
+            </group>
+            <group>
+              <left>70.53%</left>
+              <width>2.4%</width>
+              <employer>true</employer>
+              <row>0</row>
+              <rows>2</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>2</foldRows>
+            </group>
+            <group>
+              <left>72.92%</left>
+              <width>0.02%</width>
+              <employer>true</employer>
+              <row>2</row>
+              <rows>1</rows>
+              <printRow>2</printRow>
+              <printRows>1</printRows>
+              <foldRow>2</foldRow>
+              <foldRows>1</foldRows>
+            </group>
+            <group>
+              <left>72.95%</left>
+              <width>0.47%</width>
+              <employer>true</employer>
+              <row>0</row>
+              <rows>1</rows>
+              <printRow>0</printRow>
+              <printRows>1</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>1</foldRows>
+            </group>
+            <group>
+              <left>76.81%</left>
+              <width>3.37%</width>
+              <employer>true</employer>
+              <row>0</row>
+              <rows>2</rows>
+              <printRow>0</printRow>
+              <printRows>2</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>2</foldRows>
+            </group>
+            <group>
               <left>80.99%</left>
               <width>6.31%</width>
               <employer>true</employer>
@@ -2532,6 +2587,28 @@
               <printRows>4</printRows>
               <foldRow>0</foldRow>
               <foldRows>4</foldRows>
+            </group>
+            <group>
+              <left>91.79%</left>
+              <width>8.21%</width>
+              <employer>true</employer>
+              <row>0</row>
+              <rows>39</rows>
+              <printRow>0</printRow>
+              <printRows>12</printRows>
+              <foldRow>0</foldRow>
+              <foldRows>12</foldRows>
+            </group>
+            <group>
+              <left>93.75%</left>
+              <width>3.82%</width>
+              <employer>true</employer>
+              <row>39</row>
+              <rows>3</rows>
+              <printRow>12</printRow>
+              <printRows>3</printRows>
+              <foldRow>12</foldRow>
+              <foldRows>3</foldRows>
             </group>
           </groups>
           <bars>

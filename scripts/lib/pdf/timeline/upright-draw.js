@@ -33,13 +33,13 @@ function laneLines(lane, t) {
     .filter((g) => g.employer === true)
     .map(
       (g) =>
-        `\\draw[draw=${colour}!75,dash pattern=on 1.2pt off 0.8pt,line width=0.3pt,rounded corners=0.9mm] (${mm(lane.x + g.x0)},${mm(g.top + 0.8)}) rectangle (${mm(lane.x + g.x1)},${mm(g.bottom - 0.8)});`,
+        `\\filldraw[draw=${colour}!55,fill=${colour}!10,line width=0.3pt,rounded corners=0.9mm] (${mm(lane.x + g.x0)},${mm(g.top + 0.8)}) rectangle (${mm(lane.x + g.x1)},${mm(g.bottom - 0.8)});`,
     );
   const outlines = lane.groups
     .filter((g) => g.outlined)
     .map(
       (g) =>
-        `\\filldraw[draw=${colour}!55,fill=${colour}!10,line width=0.3pt,rounded corners=0.6mm] (${mm(lane.x + g.x0)},${mm(g.top + 0.4)}) rectangle (${mm(lane.x + g.x1 - 0.2)},${mm(g.bottom - 0.4)});`,
+        `\\draw[draw=${colour}!75,dash pattern=on 1.2pt off 0.8pt,line width=0.3pt,rounded corners=0.6mm] (${mm(lane.x + g.x0)},${mm(g.top + 0.4)}) rectangle (${mm(lane.x + g.x1 - 0.2)},${mm(g.bottom - 0.4)});`,
     );
   // A family of projects is outlined inside its entry's outline, a tint darker.
   const families = lane.groups

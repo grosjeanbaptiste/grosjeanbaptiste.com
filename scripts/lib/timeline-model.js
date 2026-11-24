@@ -69,7 +69,7 @@ function employerUnits(measuredGroups) {
   const roles = (name) => measuredGroups.filter((g) => work(g) && g.head.name === name);
   const done = new Set();
   return measuredGroups.flatMap((g) => {
-    if (!work(g) || roles(g.head.name).length < 2) return [g];
+    if (!work(g)) return [g];
     if (done.has(g.head.name)) return [];
     done.add(g.head.name);
     const members = roles(g.head.name);

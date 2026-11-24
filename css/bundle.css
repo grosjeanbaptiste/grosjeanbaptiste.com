@@ -1201,9 +1201,8 @@ a.skill-tag:hover {
   top: calc(var(--row) * var(--row-height) - 0.2rem);
   height: calc(var(--group-rows) * var(--row-height) + 0.05rem);
   box-sizing: border-box;
-  border: 0.0625rem solid color-mix(in srgb, var(--lane-hue, var(--primary-color)) 45%, transparent);
+  border: 0.0625rem dashed color-mix(in srgb, var(--lane-hue, var(--primary-color)) 70%, transparent);
   border-radius: 0.55rem;
-  background: color-mix(in srgb, var(--lane-hue, var(--primary-color)) 12%, transparent);
   pointer-events: none;
 }
 
@@ -1293,16 +1292,16 @@ a.skill-tag:hover {
 /* The outline around all the roles of one employer on the timeline
  * (scripts/lib/timeline-model.js): loaded by every display that draws it. */
 
-/* All the roles of one employer: a wider, drier frame around the outlines of
-   its entries, with no fill of its own so the roles inside stay what they are. */
+/* All the roles of one employer: a wider, solid, tinted frame around the
+   dashed outlines of its entries. */
 .tl-group.tl-employer {
   top: calc(var(--row) * var(--row-height) - 0.35rem);
   height: calc(var(--group-rows) * var(--row-height) + 0.3rem);
   margin-inline: -0.25rem;
-  border-style: dashed;
-  border-color: color-mix(in srgb, var(--lane-hue, var(--primary-color)) 70%, transparent);
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--lane-hue, var(--primary-color)) 45%, transparent);
   border-radius: 0.8rem;
-  background: none;
+  background: color-mix(in srgb, var(--lane-hue, var(--primary-color)) 12%, transparent);
 }
 
 /* timeline-entries.css */

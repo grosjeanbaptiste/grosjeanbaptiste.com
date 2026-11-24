@@ -82,7 +82,7 @@ test('a group is outlined over the rows and the months it covers', () => {
 });
 
 test('an entry with nothing under it is not outlined as a group', () => {
-  const groups = lane(timelineOf(resume(), TODAY), 'work').groups;
+  const groups = lane(timelineOf(resume(), TODAY), 'work').groups.filter((g) => !g.employer);
   assert.equal(groups.length, 1);
 });
 

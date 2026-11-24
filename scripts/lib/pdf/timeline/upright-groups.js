@@ -26,8 +26,8 @@ function inTracks(bars) {
 
 const EMPLOYER_PAD = 0.7;
 
-// The experiences of one employer stand together, side by side, in one unit
-// that one dashed outline holds.
+// Every employer is one unit that one solid outline holds, its experiences
+// side by side.
 function inUnits(placed) {
   const units = [];
   for (const group of placed) {
@@ -37,7 +37,7 @@ function inUnits(placed) {
     else units.push({ employer: name, members: [group] });
   }
   return units.map((u) => {
-    const many = u.members.length > 1;
+    const many = u.members.length > 1 || u.employer !== undefined;
     const pad = many ? EMPLOYER_PAD : 0;
     return {
       ...u,

@@ -103,14 +103,14 @@ function stack(blocks) {
   return { placed, rows: rowEnds.length };
 }
 
-// The experiences of one employer stand together in a block of their own, so
-// that one outline can hold them all (timeline-model.js does the same on screen).
+// Every employer is a block of its own, so that one outline can hold all its
+// experiences (timeline-model.js does the same on screen).
 function employers(blocks) {
   const work = (b) => b.top.kind === 'work';
   const roles = (name) => blocks.filter((b) => work(b) && b.top.strong === name);
   const done = new Set();
   return blocks.flatMap((block) => {
-    if (!work(block) || roles(block.top.strong).length < 2) return [block];
+    if (!work(block)) return [block];
     if (done.has(block.top.strong)) return [];
     done.add(block.top.strong);
     const members = roles(block.top.strong);

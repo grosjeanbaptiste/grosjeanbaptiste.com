@@ -56,7 +56,7 @@ const outlined = (outlines) =>
     I18N.en,
   )
     .split('\n')
-    .filter((line) => line.startsWith('\\filldraw'))
+    .filter((line) => line.includes('dash pattern'))
     .map((line) =>
       [...line.matchAll(/\(([-\d.]+),([-\d.]+)\)/g)].map((m) => [Number(m[1]), Number(m[2])]),
     );
