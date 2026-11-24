@@ -79,3 +79,32 @@ li:has(> .tl-anchor:target) > .entry-close:focus-visible {
     display: none;
   }
 }
+
+/* The timeline is the way to browse the entries: on screen the lists of jobs and
+   degrees after it would say everything twice, so they are folded away. Only the
+   entry the URL points at is drawn, in its panel (position: fixed is not clipped
+   by the folded section; visibility is given back to that entry alone). Print
+   keeps the lists, and so do search engines and screen readers. */
+@media screen {
+  #experience,
+  #education {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  #experience .item:target,
+  #education .item:target,
+  #experience li:has(> .tl-anchor:target),
+  #education li:has(> .tl-anchor:target) {
+    visibility: visible;
+  }
+
+  /* Their menu links would lead to nothing. */
+  .toolbar a[href="#experience"],
+  .toolbar a[href="#education"] {
+    display: none;
+  }
+}

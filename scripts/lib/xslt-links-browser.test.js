@@ -16,12 +16,12 @@ addEventListener('load', () => setTimeout(() => {
   seen.queryKept = new URLSearchParams(location.search).get('skill');
   seen.marked = [...document.querySelectorAll('.toolbar a.nav-link.active')].map((a) => a.getAttribute('href'));
   // The theme scrolls smoothly; the probe does not wait for it.
-  scrollTo({ top: $('#experience').getBoundingClientRect().top + scrollY + 40, behavior: 'instant' });
+  scrollTo({ top: $('#references').getBoundingClientRect().top + scrollY + 40, behavior: 'instant' });
   // A headless page paints no frames, so no scroll event comes by itself.
   dispatchEvent(new Event('scroll'));
   setTimeout(() => {
     seen.toolbar = [getComputedStyle($('.toolbar')).position, Math.round($('.toolbar').getBoundingClientRect().top)];
-    seen.atExperience = [...document.querySelectorAll('.toolbar a.nav-link.active')].map((a) => a.getAttribute('href'));
+    seen.atReferences = [...document.querySelectorAll('.toolbar a.nav-link.active')].map((a) => a.getAttribute('href'));
     document.documentElement.setAttribute('data-xslt-links', JSON.stringify(seen));
   }, 800);
 }, 900));
@@ -51,7 +51,7 @@ check('?skill= sets the filter target and stays in the address', () => {
 });
 
 check('the menu marks the section on screen', () => {
-  assert.deepEqual(seen.atExperience, ['#experience']);
+  assert.deepEqual(seen.atReferences, ['#references']);
 });
 
 check('the toolbar stays at the top of the screen, under the views bar', () => {
