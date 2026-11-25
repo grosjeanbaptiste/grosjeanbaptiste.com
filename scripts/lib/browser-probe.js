@@ -21,8 +21,9 @@ const CHROME_CANDIDATES = [
 const chrome = process.env.CHROME_PATH || CHROME_CANDIDATES.find((c) => fs.existsSync(c));
 
 // `page`: the path to open, query included; `attribute`: where the probe
-// writes; `prefix`: the harness's route — a page of the site by default.
-async function probed(probe, page, attribute, prefix = '/__probe') {
+// writes; `prefix`: the harness's route — a page of the site by default;
+// `size`: the window, "width,height" in device pixels (a desktop by default).
+async function probed(probe, page, attribute, prefix = '/__probe', size = '1280,900') {
   if (!chrome) {
     if (process.env.CI) throw new Error(`no Chrome on this runner, so ${page} went unchecked`);
     return undefined;
@@ -36,7 +37,7 @@ async function probed(probe, page, attribute, prefix = '/__probe') {
         '--headless',
         '--disable-gpu',
         '--no-sandbox',
-        '--window-size=1280,900',
+        `--window-size=${size}`,
         `--user-data-dir=${out}`,
         '--virtual-time-budget=8000',
         '--dump-dom',

@@ -381,6 +381,8 @@
 <style>#timeline:has(#tl-z-2:checked) .tl-grid { --stretch: 8.625; }
 #timeline:has(#tl-z-5:checked) .tl-grid { --stretch: 3.45; }
 #timeline:has(#tl-z-all:checked) .tl-grid { --stretch: 1; }
+@media (max-width: 48em) { #timeline:not(:has(.tl-zoom-input:checked)) .tl-grid { --stretch: 8.625; } }
+@media (min-width: 48.01em) { #timeline:not(:has(.tl-zoom-input:checked)) .tl-grid { --stretch: 3.45; } }
 </style>
 <link rel="stylesheet" href="/css/timeline-entries.css">
 <link rel="stylesheet" href="/css/timeline-scroll.css">
@@ -1737,7 +1739,7 @@ En la encrucijada de la ingeniería del software en la era de la IA — flujos C
 <div class="tl-head">
 <h2 id="timeline-title">Cronología</h2>
 <div class="tl-zoom" role="group" aria-label="Cronología">
-<input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-2"><label for="tl-z-2">2 años</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-5" checked><label for="tl-z-5">5 años</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-all"><label for="tl-z-all">Todo</label>
+<input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-2"><label for="tl-z-2">2 años</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-5"><label for="tl-z-5">5 años</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-all"><label for="tl-z-all">Todo</label>
 </div>
 <button type="button" class="tl-search-open" aria-haspopup="dialog" aria-controls="cv-search" hidden="hidden">Buscar</button>
 </div>

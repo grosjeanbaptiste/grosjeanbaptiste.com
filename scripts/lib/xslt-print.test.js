@@ -87,9 +87,11 @@ test('a long project list carries each project kind, for the sheet', () => {
   const html = render('en');
   assert.match(
     html,
-    /<div class="embedded-projects many">(?:(?!<\/div>).)*Actindexer<\/strong>(?:(?!<\/li>).)*<span class="project-kind"> · API<\/span>/s,
+    /<div class="embedded-projects many">(?:(?!<\/div>).)*Actindexer<\/strong>(?:(?!<\/li>).)*<span class="project-kind">API<\/span>/s,
     'the Acteble projects are not marked as a long list with their kinds',
   );
+  // The " · " before a kind is the stylesheet's (::before), not the markup's.
+  assert.match(html, /\.project-kind::before \{ content: " · "; \}/);
 });
 
 test('the sheet sets a long project list in three columns, kinds only', () => {

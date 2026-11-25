@@ -592,6 +592,7 @@
 <link rel="stylesheet" href="/css/views-bar.css">
 <link rel="stylesheet" href="/css/xslt-polish.css">
 <link rel="stylesheet" href="/css/xslt-toolbar.css">
+<link rel="stylesheet" href="/css/xslt-rich-phone.css">
 <link rel="stylesheet" href="/css/timeline.css">
 <link rel="stylesheet" href="/css/timeline-phone.css">
 <link rel="stylesheet" href="/css/timeline-employer.css">
@@ -599,6 +600,8 @@
 <style>#timeline:has(#tl-z-2:checked) .tl-grid { --stretch: 8.625; }
 #timeline:has(#tl-z-5:checked) .tl-grid { --stretch: 3.45; }
 #timeline:has(#tl-z-all:checked) .tl-grid { --stretch: 1; }
+@media (max-width: 48em) { #timeline:not(:has(.tl-zoom-input:checked)) .tl-grid { --stretch: 8.625; } }
+@media (min-width: 48.01em) { #timeline:not(:has(.tl-zoom-input:checked)) .tl-grid { --stretch: 3.45; } }
 </style>
 <link rel="stylesheet" href="/css/timeline-entries.css">
 <link rel="stylesheet" href="/css/timeline-scroll.css">
@@ -612,21 +615,21 @@
 <div class="toolbar">
 <nav class="group"><a class="nav-link" href="#about">À propos</a><a class="nav-link" href="#timeline">Chronologie</a><a class="nav-link" href="#pdf">PDF</a><a class="nav-link" href="#experience">Expérience</a><a class="nav-link" href="#education">Éducation</a><a class="nav-link" href="#references">Références</a></nav><div class="toolbar-rest">
 <div class="group">
-<a href="/assets/data/resume-en.html" hreflang="en">Anglais</a><a href="/assets/data/resume-fr.html" hreflang="fr" class="active">Français</a><a href="/assets/data/resume-nl.html" hreflang="nl">Néerlandais</a><a href="/assets/data/resume-es.html" hreflang="es">Espagnol</a><a href="/assets/data/resume-de.html" hreflang="de">Allemand</a><a href="/assets/data/resume-zh.html" hreflang="zh">Chinois</a>
+<a href="/assets/data/resume-en.html" hreflang="en"><span class="lang-full">Anglais</span><span class="lang-code" aria-hidden="true">EN</span></a><a href="/assets/data/resume-fr.html" hreflang="fr" class="active"><span class="lang-full">Français</span><span class="lang-code" aria-hidden="true">FR</span></a><a href="/assets/data/resume-nl.html" hreflang="nl"><span class="lang-full">Néerlandais</span><span class="lang-code" aria-hidden="true">NL</span></a><a href="/assets/data/resume-es.html" hreflang="es"><span class="lang-full">Espagnol</span><span class="lang-code" aria-hidden="true">ES</span></a><a href="/assets/data/resume-de.html" hreflang="de"><span class="lang-full">Allemand</span><span class="lang-code" aria-hidden="true">DE</span></a><a href="/assets/data/resume-zh.html" hreflang="zh"><span class="lang-full">Chinois</span><span class="lang-code" aria-hidden="true">ZH</span></a>
 </div>
 <button type="button" id="theme-toggle" aria-pressed="false"><span id="theme-toggle-label">Mode sombre</span></button><a class="download" href="/assets/cv/cv_grosjean_baptiste_fr.pdf" download="cv_grosjean_baptiste_fr.pdf">
-            ⬇ Télécharger le CV</a><a class="download" data-timeline-pdf="" download="" data-zoom="all" href="/assets/cv/cv_grosjean_baptiste_timeline_fr.pdf">
-                ⬇ Chronologie (PDF)</a><a class="download" data-timeline-pdf="" download="" data-zoom="5" href="/assets/cv/cv_grosjean_baptiste_timeline_5y_fr.pdf">
-                ⬇ Chronologie (PDF)</a><a class="download" data-timeline-pdf="" download="" data-zoom="2" href="/assets/cv/cv_grosjean_baptiste_timeline_2y_fr.pdf">
-                ⬇ Chronologie (PDF)</a><button type="button" class="print" onclick="window.print()">
-            🖨 Imprimer / PDF</button>
+            ⬇ <span class="btn-label">Télécharger le CV</span></a><a class="download" data-timeline-pdf="" download="" data-zoom="all" href="/assets/cv/cv_grosjean_baptiste_timeline_fr.pdf">
+                ⬇ <span class="btn-label">Chronologie (PDF)</span></a><a class="download" data-timeline-pdf="" download="" data-zoom="5" href="/assets/cv/cv_grosjean_baptiste_timeline_5y_fr.pdf">
+                ⬇ <span class="btn-label">Chronologie (PDF)</span></a><a class="download" data-timeline-pdf="" download="" data-zoom="2" href="/assets/cv/cv_grosjean_baptiste_timeline_2y_fr.pdf">
+                ⬇ <span class="btn-label">Chronologie (PDF)</span></a><button type="button" class="print" onclick="window.print()">
+            🖨 <span class="btn-label">Imprimer / PDF</span></button>
 </div>
 </div>
 <div class="mini-id" aria-hidden="true"><div class="mini-id-bar">
 <img src="/assets/images/profil-160.webp" alt="" width="32" height="32"><span class="mini-id-name">Baptiste Grosjean</span><span class="mini-id-degree">Master en Sciences — Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)</span>
 </div></div>
 <div class="container">
-<aside class="sidebar"><div class="profile"><img src="/assets/images/profil.jpeg" srcset="/assets/images/profil-160.webp 160w, /assets/images/profil-320.webp 320w, /assets/images/profil-500.webp 500w" sizes="220px" id="profile-picture" alt="Baptiste Grosjean"></div>
+<aside class="sidebar"><div class="profile"><img src="/assets/images/profil.jpeg" srcset="/assets/images/profil-160.webp 160w, /assets/images/profil-320.webp 320w, /assets/images/profil-500.webp 500w" sizes="(max-width: 51.25em) 7rem, 14rem" id="profile-picture" alt="Baptiste Grosjean"></div>
 <h1>Baptiste Grosjean</h1>
 <div class="label">Informaticien</div>
 <p class="degree degree-obtained"><span class="icon">🎓</span>Master en Sciences — Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)</p>
@@ -1977,7 +1980,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
 <div class="tl-head">
 <h2 id="timeline-title">Chronologie</h2>
 <div class="tl-zoom" role="group" aria-label="Chronologie">
-<input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-2"><label for="tl-z-2">2 ans</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-5" checked><label for="tl-z-5">5 ans</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-all"><label for="tl-z-all">Tout</label>
+<input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-2"><label for="tl-z-2">2 ans</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-5"><label for="tl-z-5">5 ans</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-all"><label for="tl-z-all">Tout</label>
 </div>
 <button type="button" class="tl-search-open" aria-haspopup="dialog" aria-controls="cv-search" hidden="hidden">Rechercher</button>
 </div>
