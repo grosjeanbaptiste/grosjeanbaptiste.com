@@ -61,4 +61,14 @@
   #theme-toggle::before {
     content: "◐";
   }
+
+  /* Both downloads are a ⬇: a mark tells the CV (a page) from the timeline's
+   * PDF (a clock). */
+  .toolbar-rest a.download::after {
+    content: " ▤";
+  }
+
+  .toolbar-rest a.download[data-timeline-pdf]::after {
+    content: " ◷";
+  }
 }

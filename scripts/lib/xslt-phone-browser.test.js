@@ -25,6 +25,9 @@ addEventListener('load', () => setTimeout(() => {
   seen.cut = [...document.querySelectorAll('a.tl-bar')]
     .filter((a) => a.scrollWidth > a.clientWidth + 1 || a.querySelector('span')?.scrollWidth > a.clientWidth)
     .map((a) => ({ href: a.getAttribute('href'), target: !!document.getElementById((a.getAttribute('href') || '').slice(1)), name: a.getAttribute('aria-label') || a.textContent.trim() }));
+  seen.downloads = [...document.querySelectorAll('.toolbar-rest a.download')]
+    .filter((a) => a.checkVisibility())
+    .map((a) => ({ title: a.title, mark: getComputedStyle(a, '::after').content }));
   const grid = $('#timeline .tl-grid');
   seen.months = Number(grid.dataset.months);
   seen.stretch = Number(getComputedStyle(grid).getPropertyValue('--stretch'));
@@ -67,6 +70,15 @@ check('the languages and the buttons make one row', () => {
     `${seen.restRows} rows in ${seen.width}: ${JSON.stringify(seen.restItems)}`,
   );
   assert.equal(seen.restOverflow, false, 'the page scrolls sideways');
+});
+
+check('the two download buttons are told apart without their words', () => {
+  assert.equal(seen.downloads.length, 2, JSON.stringify(seen.downloads));
+  const [cv, timeline] = seen.downloads;
+  assert.notEqual(cv.mark, 'none', 'the CV button has no mark of its own');
+  assert.notEqual(timeline.mark, 'none', 'the timeline button has no mark of its own');
+  assert.notEqual(cv.mark, timeline.mark, 'both buttons carry the same mark');
+  assert.ok(cv.title && timeline.title && cv.title !== timeline.title, 'a button has no title');
 });
 
 check('the timeline starts on two years: its scale, its label and its PDF', () => {
