@@ -16,7 +16,7 @@ module.exports = {
   inProgress: '进行中',
   xmlResume: '简历 (XML + XSLT)',
   firefoxNote: '建议使用 Firefox 查看',
-  jsonRegistry: '简历 (JSON Resume registry)',
+  jsonRegistry: '简历 (JSON Resume 注册表)',
   jsonRegistryNote: '规范 JSON 的主题化视图',
   downloadCV: '下载简历',
   downloadTimeline: '下载时间线',

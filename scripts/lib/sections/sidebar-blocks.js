@@ -17,21 +17,32 @@ function renderSkillsBlocks(resume, t) {
       const cat = (resume.skills || []).find((s) => s.name === name);
       if (!cat || !cat.keywords?.length) return null;
       // The sheet holds the first PRINTED_SKILLS of the technical ones, as the
-      // LaTeX CV does (pdf/sections/sidebar.js); the page lists them all.
-      const tags = cat.keywords
-        .map((k, i) => {
-          const hidden = name === 'HardSkills' && i >= PRINTED_SKILLS ? ' print-hidden' : '';
-          // A trait of the personality list leads to the first recommendation
-          // that names it (the article's id, as renderReferenceArticle writes it).
-          const said =
-            name === 'SoftSkills'
-              ? (resume.references || []).findIndex((r) => r.traits?.includes(k))
-              : -1;
-          if (said >= 0)
-            return `      <a class="skill-tag" href="#ref-${said}">${escapeHtml(k)}</a>`;
-          return `      <span class="skill-tag${hidden}">${escapeHtml(k)}</span>`;
-        })
-        .join('\n');
+      // LaTeX CV does (pdf/sections/sidebar.js).
+      const tag = (k) => {
+        // A trait of the personality list leads to the first recommendation
+        // that names it (the article's id, as renderReferenceArticle writes it).
+        const said =
+          name === 'SoftSkills'
+            ? (resume.references || []).findIndex((r) => r.traits?.includes(k))
+            : -1;
+        if (said >= 0) return `      <a class="skill-tag" href="#ref-${said}">${escapeHtml(k)}</a>`;
+        return `      <span class="skill-tag">${escapeHtml(k)}</span>`;
+      };
+      const shown = name === 'HardSkills' ? PRINTED_SKILLS : cat.keywords.length;
+      const tags = cat.keywords.slice(0, shown).map(tag).join('\n');
+      // What the sheet leaves out is folded in a <details> on screen (a closed
+      // one is not printed either): 170 tags in a row read as a wall.
+      const rest = cat.keywords.slice(shown);
+      const more = rest.length
+        ? [
+            '    <details class="skill-more">',
+            `      <summary>+${rest.length}</summary>`,
+            '      <div class="skill-tags">',
+            rest.map(tag).join('\n'),
+            '      </div>',
+            '    </details>',
+          ].join('\n')
+        : '';
       return [
         '<div class="skills">',
         `  <h2>${escapeHtml(title)}</h2>`,
@@ -39,9 +50,12 @@ function renderSkillsBlocks(resume, t) {
         '    <div class="skill-tags">',
         tags,
         '    </div>',
+        more,
         '  </div>',
         '</div>',
-      ].join('\n');
+      ]
+        .filter(Boolean)
+        .join('\n');
     })
     .filter(Boolean)
     .join('\n\n');

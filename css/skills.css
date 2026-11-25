@@ -38,6 +38,19 @@
   font-size: 0.9em;
 }
 
+/* The tags the sheet leaves out are folded; a closed <details> still prints its summary. */
+.skill-more > summary {
+  cursor: pointer;
+  margin: 0.5rem 0.3rem 0;
+  color: var(--primary-color);
+}
+
+@media print {
+  .skill-more {
+    display: none;
+  }
+}
+
 a.skill-tag {
   text-decoration: none;
 }

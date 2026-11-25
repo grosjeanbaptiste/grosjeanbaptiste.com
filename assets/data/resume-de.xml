@@ -5148,7 +5148,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
       </lanes>
     </timeline>
     <degrees>
-      <obtained>Master of Science — Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)</obtained>
+      <obtained>Master of Science — Informatik (duales Studium) — spezialisierte berufliche Fachrichtung</obtained>
     </degrees>
   </meta>
   <basics>
@@ -5180,7 +5180,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
         <username>grosjeanbaptiste</username>
       </profile>
       <profile>
-        <network>Npm</network>
+        <network>npm</network>
         <url>https://npm.com/grosjeanbaptiste</url>
         <username>grosjeanbaptiste</username>
       </profile>

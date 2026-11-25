@@ -16,7 +16,7 @@ module.exports = {
   inProgress: 'läuft',
   xmlResume: 'Lebenslauf (XML + XSLT)',
   firefoxNote: 'am besten in Firefox ansehen',
-  jsonRegistry: 'Lebenslauf (JSON Resume registry)',
+  jsonRegistry: 'Lebenslauf (JSON-Resume-Register)',
   jsonRegistryNote: 'thematisierte Ansichten des kanonischen JSON',
   downloadCV: 'Lebenslauf herunterladen',
   downloadTimeline: 'Zeitleiste herunterladen',

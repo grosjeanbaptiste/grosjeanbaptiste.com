@@ -5148,7 +5148,7 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
       </lanes>
     </timeline>
     <degrees>
-      <obtained>Master of Science - MSc in Computer Science (work-study program) — specialised professional focus (120 ECTS)</obtained>
+      <obtained>Master of Science - MSc in Computer Science (work-study program) — specialised professional focus</obtained>
     </degrees>
   </meta>
   <basics>
@@ -5180,7 +5180,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
         <username>grosjeanbaptiste</username>
       </profile>
       <profile>
-        <network>Npm</network>
+        <network>npm</network>
         <url>https://npm.com/grosjeanbaptiste</url>
         <username>grosjeanbaptiste</username>
       </profile>

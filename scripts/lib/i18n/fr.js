@@ -16,7 +16,7 @@ module.exports = {
   inProgress: 'en cours',
   xmlResume: 'CV (XML + XSLT)',
   firefoxNote: 'à ouvrir avec Firefox',
-  jsonRegistry: 'CV (JSON Resume registry)',
+  jsonRegistry: 'CV (registre JSON Resume)',
   jsonRegistryNote: 'rendus thématiques du JSON canonique',
   downloadCV: 'Télécharger le CV',
   downloadTimeline: 'Télécharger la chronologie',
