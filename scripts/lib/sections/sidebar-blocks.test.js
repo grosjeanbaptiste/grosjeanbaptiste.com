@@ -72,3 +72,23 @@ test('a personality tag leads to the first recommendation that names it', () => 
   assert.match(html, /<a class="skill-tag" href="#ref-1">Teamwork<\/a>/);
   assert.match(html, /<span class="skill-tag">Creativity<\/span>/);
 });
+
+test('the technical skills the sheet leaves out are folded in a <details> with their count', () => {
+  const keywords = Array.from({ length: 80 }, (_, i) => `S${i}`);
+  const html = renderSkillsBlocks(
+    { skills: [{ name: 'HardSkills', keywords }] },
+    { technicalSkills: 'T' },
+  );
+  const [before, folded] = html.split('<details class="skill-more">');
+  assert.equal((before.match(/skill-tag/g) || []).length, 71);
+  assert.match(folded, /<summary>\+9<\/summary>/);
+  assert.equal((folded.match(/class="skill-tag"/g) || []).length, 9);
+});
+
+test('a short list of skills is not folded', () => {
+  const html = renderSkillsBlocks(
+    { skills: [{ name: 'HardSkills', keywords: ['A', 'B'] }] },
+    { technicalSkills: 'T' },
+  );
+  assert.doesNotMatch(html, /skill-more/);
+});

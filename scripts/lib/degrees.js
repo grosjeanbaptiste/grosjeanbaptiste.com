@@ -42,7 +42,10 @@ function highestInProgressDegree(education) {
 
 function formatDegreeLine(degree, lang) {
   if (!degree) return null;
-  const parts = [degree.studyType, degree.area].filter(Boolean);
+  // The credit count is told by the education section; the one-line summary of the
+  // header leaves it out ("(120 ECTS)", "(120 ECTS 学分)").
+  const area = degree.area?.replace(/\s*\(\d+ ECTS[^)]*\)/, '');
+  const parts = [degree.studyType, area].filter(Boolean);
   if (!parts.length) return null;
   const sep = (I18N[lang] || I18N.en).degreeConnector;
   return parts.join(sep);
