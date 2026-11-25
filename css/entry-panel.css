@@ -26,7 +26,7 @@ li:has(> .tl-anchor:target) {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.item:target .entry-close,
+.item:target > .entry-close,
 li:has(> .tl-anchor:target) > .entry-close {
   position: sticky;
   top: 0;
@@ -50,8 +50,8 @@ li:has(> .tl-anchor:target) > .entry-close {
   float: none;
 }
 
-.item:target .entry-close:hover,
-.item:target .entry-close:focus-visible,
+.item:target > .entry-close:hover,
+.item:target > .entry-close:focus-visible,
 li:has(> .tl-anchor:target) > .entry-close:hover,
 li:has(> .tl-anchor:target) > .entry-close:focus-visible {
   color: var(--text-color);
@@ -67,7 +67,7 @@ li:has(> .tl-anchor:target) > .entry-close:focus-visible {
     max-height: none;
     box-shadow: none;
   }
-  .item:target .entry-close,
+  .item:target > .entry-close,
   li:has(> .tl-anchor:target) > .entry-close {
     display: none;
   }
