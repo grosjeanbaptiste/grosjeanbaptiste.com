@@ -71,8 +71,14 @@
       const linkService = new viewer.PDFLinkService({ eventBus, externalLinkTarget: 2 });
       const pdfViewer = new viewer.PDFViewer({ container, eventBus, linkService });
       linkService.setViewer(pdfViewer);
+      // A phone reads the pages at a size a thumb can read and scrolls sideways
+      // (the frame's overflow); a wider screen fits the page's width to the frame.
+      const phone = matchMedia('(max-width: 48em)');
+      const fitted = () => (phone.matches ? '1.25' : 'page-width');
+      let zoomedByHand = false;
       eventBus.on('pagesinit', () => {
-        pdfViewer.currentScaleValue = 'page-width';
+        zoomedByHand = false;
+        pdfViewer.currentScaleValue = fitted();
       });
       eventBus.on('pagerendered', (event) => {
         if (event.pageNumber === 1) panel.dataset.drawn = '';
@@ -123,15 +129,16 @@
         in: () => pdfViewer.increaseScale({ steps: 1 }),
         out: () => pdfViewer.decreaseScale({ steps: 1 }),
       };
-      // The width is fitted by itself, on each document and when the window
+      // The size is set by itself, on each document and when the window
       // changes, until the reader zooms by hand.
       new ResizeObserver(() => {
-        if (pdfViewer.currentScaleValue === 'page-width')
-          pdfViewer.currentScaleValue = 'page-width';
+        if (!zoomedByHand) pdfViewer.currentScaleValue = fitted();
       }).observe(container);
       toolbar.addEventListener('click', (event) => {
         const button = event.target.closest('button[data-pdf]');
-        if (button) act[button.dataset.pdf]();
+        if (!button) return;
+        zoomedByHand = true;
+        act[button.dataset.pdf]();
       });
       toolbar.hidden = false;
     } catch (error) {
