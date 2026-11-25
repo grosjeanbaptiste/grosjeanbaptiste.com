@@ -3,7 +3,13 @@ import { useReading } from '../context';
 import { homePath } from '../paths';
 import { LangMenu } from './LangMenu';
 
-const isMac = () => /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+// The pages are drawn at build time in Node, where `navigator.platform` is the
+// build machine's: a Mac and the CI gave two different drawings of every page.
+// The drawing is therefore the same everywhere ("Ctrl K"); only a browser, which
+// replaces it, says ⌘K.
+const isMac = () =>
+  typeof document !== 'undefined' &&
+  /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
 
 export function Header({ onSearch }: { onSearch: () => void }) {
   const { lang, catalogue, strings, theme, toggleTheme } = useReading();
