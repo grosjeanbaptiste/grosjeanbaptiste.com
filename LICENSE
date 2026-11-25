@@ -1,35 +1,48 @@
-Copyright (c) 2026 Baptiste Grosjean. All rights reserved.
+PROPRIETARY LICENSE: ALL RIGHTS RESERVED. NO RIGHT OF USE, COPY OR ANALYSIS.
 
-This repository is proprietary. It is public so that it can be read; being able
-to read it grants no licence of any kind.
+Copyright (c) 2024-2026 Baptiste Grosjean. All rights reserved.
 
-The code, the design, the layout, the presentation of the CV and the structure
-of its data are original works of the copyright holder, protected as such.
+This source code, and every file, document, configuration, script, data set,
+model, design and derivative work that accompanies it (the "Software"), is the
+proprietary and confidential property of Baptiste Grosjean (the "Owner").
 
-No part of it — source code, scripts, stylesheets, templates, generated files,
-design, layout, images and the way the CV is presented — may be used, copied,
-modified, merged, published, distributed, sublicensed, sold, or used to train
-or evaluate machine-learning models, in whole or in part, without the prior
-written permission of the copyright holder.
+1. NO LICENCE IS GRANTED. No right, express or implied, by estoppel or
+   otherwise, is granted to any person. Being able to read, receive, clone or
+   download the Software, on a private or public repository or elsewhere,
+   grants no right at all.
 
-The presentation may not be analysed either: no reverse engineering, profiling
-or study of the code, markup, styling, structure or layout of the website or of
-this repository, whether by hand or by a machine, a crawler or a model.
+2. COPYING IS FORBIDDEN. You may not copy, reproduce, duplicate, mirror,
+   fork, clone for any purpose other than the Owner's own, transcribe,
+   translate, adapt, port, excerpt, summarise or otherwise reuse the Software
+   or any part of it, in any form or on any medium, including by hand, by
+   screenshot or by automated means.
 
-The data of the CV (the content of resume.json, the XML mirrors, llms.txt and
-the pages' text) may be scraped, read, indexed and processed by machines.
-That permission covers the facts and texts only, not the form they are set in
-and not the relations between them: the links between entries, projects,
-skills, roles and periods, the identifiers, the schema and the structure of the
-data may not be extracted, reconstructed, mapped or analysed (no graph or
-database of them may be built), whether by hand or by a machine, a crawler or
-a model.
+3. ANALYSIS IS FORBIDDEN. You may not analyse, inspect, study, audit, profile,
+   benchmark, test, scan, index, crawl, scrape, mine, measure, decompile,
+   disassemble, reverse engineer or otherwise examine the Software, its
+   behaviour, its structure, its interfaces or its output, whether manually
+   or with any tool, program, service or artificial-intelligence system, in
+   order to derive its source code, algorithms, design, data or know-how.
 
-The only exception is what GitHub's Terms of Service let other GitHub users do
-with a public repository on GitHub itself (view it and fork it there); that
-grants no right to use any of it elsewhere.
+4. NO USE FOR MACHINE LEARNING. You may not use the Software, or any
+   information derived from it, to train, fine-tune, evaluate, prompt,
+   ground, retrieve from or improve any machine-learning or artificial-
+   intelligence model, dataset, embedding, index or knowledge base.
 
-Third-party material keeps its own licence and is not covered by this notice:
-fonts and dependencies remain under the licences of their authors.
+5. NO OTHER USE. You may not run, install, compile, modify, merge, publish,
+   distribute, disclose, sublicense, lend, rent, sell, host, offer as a
+   service or create derivative works of the Software.
 
-Contact: grosjeanbaptiste@outlook.com
+6. ANY EXCEPTION REQUIRES A PRIOR WRITTEN AGREEMENT signed by the Owner. No
+   exception may be inferred from conduct, silence, access or payment.
+
+7. The Owner and the persons the Owner expressly names in writing are the only
+   ones who may do what this licence forbids to others.
+
+8. Any breach ends every permission you may have received and entitles the
+   Owner to seek injunctive relief, damages and every other remedy available
+   at law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IN NO EVENT SHALL THE OWNER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY ARISING FROM THE SOFTWARE OR ITS USE.
