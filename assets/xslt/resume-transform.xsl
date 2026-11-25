@@ -800,6 +800,7 @@
           <a class="download">
             <xsl:attribute name="href">/assets/cv/cv_grosjean_baptiste_<xsl:value-of select="$lang"/>.pdf</xsl:attribute>
             <xsl:attribute name="download">cv_grosjean_baptiste_<xsl:value-of select="$lang"/>.pdf</xsl:attribute>
+            <xsl:attribute name="title"><xsl:call-template name="t"><xsl:with-param name="k" select="'downloadCV'"/></xsl:call-template></xsl:attribute>
             ⬇ <span class="btn-label"><xsl:call-template name="t"><xsl:with-param name="k" select="'downloadCV'"/></xsl:call-template></span>
           </a>
 
@@ -811,6 +812,7 @@
               <a class="download" data-timeline-pdf="" download="">
                 <xsl:attribute name="data-zoom"><xsl:choose><xsl:when test="name() = 'two'">2</xsl:when><xsl:when test="name() = 'five'">5</xsl:when><xsl:otherwise>all</xsl:otherwise></xsl:choose></xsl:attribute>
                 <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+                <xsl:attribute name="title"><xsl:value-of select="$label"/></xsl:attribute>
                 ⬇ <span class="btn-label"><xsl:value-of select="$label"/></span>
               </a>
             </xsl:for-each>
