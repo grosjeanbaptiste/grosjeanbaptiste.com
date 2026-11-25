@@ -71,10 +71,13 @@
       const linkService = new viewer.PDFLinkService({ eventBus, externalLinkTarget: 2 });
       const pdfViewer = new viewer.PDFViewer({ container, eventBus, linkService });
       linkService.setViewer(pdfViewer);
-      // A phone reads the pages at a size a thumb can read and scrolls sideways
-      // (the frame's overflow); a wider screen fits the page's width to the frame.
+      // The recto and the verso side by side, the frame scrolling sideways. A
+      // phone reads them at a size a thumb can read; a wider screen fits the
+      // page's height to the frame, so that the landscape verso, wider than the
+      // recto at one scale, no longer sticks out of a fit to the width.
+      pdfViewer.scrollMode = viewer.ScrollMode.HORIZONTAL;
       const phone = matchMedia('(max-width: 48em)');
-      const fitted = () => (phone.matches ? '1.25' : 'page-width');
+      const fitted = () => (phone.matches ? '1.25' : 'page-height');
       let zoomedByHand = false;
       eventBus.on('pagesinit', () => {
         zoomedByHand = false;

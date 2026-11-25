@@ -83,6 +83,11 @@
   margin: 0.5rem auto;
 }
 
+/* Side by side: the pages sit on one row, each with its own margin. */
+.pdf-container .scrollHorizontal .page {
+  margin: 0.5rem;
+}
+
 /* The first page as a picture, in the frame until PDF.js has drawn it. */
 .pdf-preview {
   display: none;
