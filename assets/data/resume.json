@@ -470,6 +470,7 @@
     },
     {
       "name": "Actmorph",
+      "description": "Universal cataloging engine and format-agnostic file metadata extraction system.",
       "keywords": [
         "Rust",
         "FileEngine",
@@ -507,6 +508,7 @@
     },
     {
       "name": "Actos",
+      "description": "Modular system supervisor and diagnostic suite (processes, memory, storage volumes, network telemetry, power) driving CLI and Dioxus desktop interfaces.",
       "keywords": [
         "Rust",
         "Dioxus",
@@ -525,6 +527,7 @@
     },
     {
       "name": "Biorcrux",
+      "description": "Modular library providing declarative UI components, persistence, charting, and internationalization for multiplatform desktop applications.",
       "keywords": [
         "Rust",
         "Dioxus",
@@ -544,6 +547,7 @@
     },
     {
       "name": "Actrepo",
+      "description": "CLI tooling suite for semantic naming, collision detection, and declarative scaffolding of Git / GitHub repositories.",
       "keywords": [
         "Rust",
         "CLI",
@@ -562,6 +566,7 @@
     },
     {
       "name": "Actsessions",
+      "description": "Local discovery, session inventory, and telemetry for AI coding agents.",
       "keywords": [
         "Rust",
         "Agents",
@@ -579,6 +584,7 @@
     },
     {
       "name": "Actusext",
+      "description": "Real-time quota tracking and usage forecasting for AI coding assistants.",
       "keywords": [
         "Rust",
         "CLI",
@@ -596,6 +602,7 @@
     },
     {
       "name": "Actart",
+      "description": "Legal reasoning engine, Belgian law first: from a need or a file, it finds the applicable texts, reasons about how they apply and answers with citations.",
       "keywords": [
         "Rust",
         "Law",
@@ -613,6 +620,7 @@
     },
     {
       "name": "Actautoma",
+      "description": "Rust library that drives the tools of repository-hosting platforms (gh for GitHub, glab for GitLab), with a command to rename a repository everywhere it is referenced.",
       "keywords": [
         "Rust",
         "GitHub",
@@ -630,6 +638,7 @@
     },
     {
       "name": "Actcast",
+      "description": "Orchestrator of the media and download stack of the Acteble ecosystem: starts, stops and checks the applications declaratively and reacts to changes in their indexers.",
       "keywords": [
         "Rust",
         "Orchestration",
@@ -645,6 +654,7 @@
     },
     {
       "name": "Actcdi",
+      "description": "Executes CI/CD for every repository: runs the gates (lint, tests, builds), shards them and selects what to run.",
       "keywords": [
         "Rust",
         "CI/CD",
@@ -660,6 +670,7 @@
     },
     {
       "name": "Actconf",
+      "description": "Manages the configuration of a fleet of machines, volumes and servers, extracted slice by slice from the dotfiles repository.",
       "keywords": [
         "Rust",
         "Configuration",
@@ -675,6 +686,7 @@
     },
     {
       "name": "Actdevice",
+      "description": "Runs or installs an app (Flutter, Dioxus, or any project with a device-install hook) on an iOS simulator, an Android device or the host.",
       "keywords": [
         "Rust",
         "Flutter",
@@ -692,6 +704,7 @@
     },
     {
       "name": "Actempo",
+      "description": "Scheduler of acts for agentic sessions: given acts (units of agent work with dependencies, priority, deadline and token cost) and sessions, it returns a plan and says which acts could not be placed and why.",
       "keywords": [
         "Rust",
         "Scheduling",
@@ -708,6 +721,7 @@
     },
     {
       "name": "Actessh",
+      "description": "SSH client whose keys and passwords come from Actesskey.",
       "keywords": [
         "Rust",
         "SSH"
@@ -721,6 +735,7 @@
     },
     {
       "name": "Actesskey",
+      "description": "Secrets, keys and passwords of the machine in one place: every secret is an age blob, the age key lives in the macOS Keychain, and nothing secret travels on a command line.",
       "keywords": [
         "Rust",
         "Security",
@@ -737,6 +752,7 @@
     },
     {
       "name": "Actinstall",
+      "description": "Keeps the cargo-installed binaries of local repositories at their repository's latest version.",
       "keywords": [
         "Rust",
         "Cargo",
@@ -752,6 +768,7 @@
     },
     {
       "name": "Actit",
+      "description": "Answers “does a tool already exist for this need?” from Actindexer and KAG only: no other search engine and no LLM.",
       "keywords": [
         "Rust",
         "InformationRetrieval",
@@ -768,6 +785,7 @@
     },
     {
       "name": "Actlimit",
+      "description": "Shows the usage limits of the coding agents (Claude, Codex and the agents with a token budget) as one line each, fast enough for a shell prompt.",
       "keywords": [
         "Rust",
         "Agents",
@@ -783,6 +801,7 @@
     },
     {
       "name": "Actmail",
+      "description": "Read-only search over every mailbox of a manifest, over IMAP or from archived Maildirs: nothing is marked read, moved or deleted.",
       "keywords": [
         "Rust",
         "IMAP",
@@ -798,6 +817,7 @@
     },
     {
       "name": "Actmake",
+      "description": "Turns a project into its artifact with one verb, build; the caller chooses the engine (LaTeX, HTML or Markdown printed to PDF).",
       "keywords": [
         "Rust",
         "LaTeX",
@@ -813,6 +833,7 @@
     },
     {
       "name": "Actname",
+      "description": "Deterministic, offline-first semantic naming engine for projects.",
       "keywords": [
         "Rust",
         "NLP",
@@ -829,6 +850,7 @@
     },
     {
       "name": "Actpath",
+      "description": "Everything about paths: rewriting the references to a renamed repository, moves, worktree repair and cargo install records.",
       "keywords": [
         "Rust",
         "Git",
@@ -844,6 +866,7 @@
     },
     {
       "name": "Actqueue",
+      "description": "Manages queues of jobs (the heavy queue and its lanes), working in pair with Actempo.",
       "keywords": [
         "Rust",
         "Scheduling",
@@ -859,6 +882,7 @@
     },
     {
       "name": "Acttex",
+      "description": "Builds a LaTeX project: finds its main file and runs pdflatex, biber and makeglossaries.",
       "keywords": [
         "Rust",
         "LaTeX",
@@ -874,6 +898,7 @@
     },
     {
       "name": "Polymath",
+      "description": "Universal graph of computation packages interconnecting scientific disciplines without redundancy via the Rust type system.",
       "keywords": [
         "Rust",
         "DAG",
@@ -892,6 +917,7 @@
     },
     {
       "name": "Corpus",
+      "description": "Aggregated repository of university course materials, lecture notes, and assignments sourced across Moodle platforms and academic portals, with exact worked solutions.",
       "keywords": [
         "Python",
         "LaTeX",
@@ -910,6 +936,7 @@
     },
     {
       "name": "Actedu",
+      "description": "Global graph-based mapping and visualization of higher-education academic paths, prerequisite dependencies, course trajectories, and degree pathways.",
       "keywords": [
         "Rust",
         "KnowledgeGraph",
@@ -1114,6 +1141,7 @@
     },
     {
       "name": "VhAuctions NER Inventory Model",
+      "description": "Named Entity Recognition machine learning model to extract inventory items from an audio transcription.",
       "keywords": [
         "Python",
         "SpaCy",
@@ -1127,6 +1155,7 @@
     },
     {
       "name": "VhAuctions",
+      "description": "Fleet manager for auctions.",
       "keywords": [
         ".NET",
         "C#",
@@ -1143,6 +1172,7 @@
     },
     {
       "name": "Kwalitijd",
+      "description": "Survey manager for sports clubs and federations.",
       "keywords": [
         ".NET",
         "C#",
@@ -1157,6 +1187,7 @@
     },
     {
       "name": "WebMenu",
+      "description": "QR code based cash register for HoReCa establishments.",
       "keywords": [
         ".NET",
         "Flutter",

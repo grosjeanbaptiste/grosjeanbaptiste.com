@@ -131,21 +131,18 @@
   "projects": [
     {
       "description": "CLI tipo shell consultada en inglés controlado mediante IA simbólica pura — sin LLM en el bucle.",
-      "summary": "Cinco capas: una CLI en Rust que hace toda la E/S, un parser sintáctico link-grammar, un motor simbólico SWI-Prolog sin E/S, paquetes de vocabulario de dominio guardados como datos y una cincuentena de binarios de acción en Rust — un verbo nuevo es un hecho de paquete y un binario. Probado por mutación, con un corpus de frases de regresión y un arranque en frío de unos 120 ms.",
       "roles": [
         "Autor"
       ]
     },
     {
       "description": "Framework Rust puramente algorítmico que evalúa en BEIR componentes intercambiables de un pipeline RAG y entrega la mejor configuración medida como una CLI de preguntas y respuestas con fuentes citadas.",
-      "summary": "Nueve etapas de pipeline (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), cada una un puerto cuyo algoritmo se elige por etiqueta (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonal + DDD + TDD, solo la biblioteca estándar en el núcleo, sin LLM. Las métricas coinciden exactamente con pytrec_eval. En seis conjuntos BEIR ningún retriever gana en todos (ndcg@10 de 0,668 en SciFact con BM25F); un reranker LambdaMART lleva ArguAna de 0,301 a 0,527 en validación cruzada de 5 pliegues.",
       "roles": [
         "Autor"
       ]
     },
     {
       "description": "Entrenador de vocabulario con repetición espaciada para seis idiomas, cada palabra enseñada con una frase de ejemplo alineada en cada idioma.",
-      "summary": "Un workspace Rust cuyo núcleo de dominio puro (hexagonal, DDD, pruebas primero) impulsa una interfaz de terminal (ratatui) y apps Dioxus de escritorio e iOS: cajas de Leitner con planificación SM-2 sobre SQLite, contenido de paquetes de datos con suma de verificación. Su laboratorio de datos construye en Python la base léxica en seis idiomas — unas 8.900 acepciones (octubre de 2026) alineadas con WordNet, ilustradas con frases de Tatoeba, analizadas con spaCy, cada vínculo palabra-frase verificado.",
       "type": "Aplicación",
       "roles": [
         "Autor"
@@ -160,7 +157,6 @@
     },
     {
       "description": "Índice curado de fuentes de datos externas, libros y paquetes de software, servido mediante una API pública de lectura.",
-      "summary": "Cada una de las 523 fuentes es un archivo TOML que Rust valida y compila en JSON estático, incrustado al compilar en un Cloudflare Worker: lógica de API en Rust puro, respuestas ETag y 304, límites de tasa por IP y por clave de API contados con exactitud por un Durable Object, clasificación BM25F ponderada por una puntuación de fiabilidad de seis criterios y un análisis de carencias que asocia cada necesidad con fuentes candidatas.",
       "type": "API",
       "roles": [
         "Autor"
@@ -168,7 +164,6 @@
     },
     {
       "description": "Biblioteca de estudios de ingeniería que calcula cada número y cada expresión de soluciones redactadas en LaTeX, nada escrito a mano.",
-      "summary": "Una biblioteca Python (DDD, hexagonal, test-first, con pruebas de mutación, mypy strict) con las nociones de matemáticas, física, electrónica, señales y optimización, calculadas con SymPy, NumPy y SciPy e inyectadas mediante macros en 920 documentos LaTeX; un pipeline convierte el material de los cursos a Markdown, LaTeX y XML, y pruebas en Lean 4 con Mathlib remontan los resultados hasta los axiomas.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
@@ -176,7 +171,6 @@
     },
     {
       "description": "Plataforma de diseño mecánico 3D asistido por IA que orquesta motores de código abierto de geometría, mallado y simulación.",
-      "summary": "La IA escribe las operaciones, los motores calculan: un LLM genera un programa de pieza en JSON estrictamente validado; dos núcleos independientes, OpenCASCADE (exacto) y Manifold (malla), deben coincidir en volumen y caja envolvente, y el ensamblaje se comprueba frente a solapamientos antes de cualquier exportación STEP, STL, 3MF o glTF. Un núcleo en Rust (puertos y adaptadores hexagonales) dirige un worker Python mediante líneas JSON, y una búsqueda NSGA-II (Optuna) elige los componentes en un frente de Pareto, contrastado por enumeración exacta.",
       "type": "Plataforma",
       "roles": [
         "Autor"
@@ -184,7 +178,6 @@
     },
     {
       "description": "Base de datos multideporte y plataforma de modelado predictivo que evalúa los resultados de partidos en ligas y torneos mediante estrategias de puntuación por conjuntos.",
-      "summary": "Un motor Python (DDD, hexagonal) pondera quince estrategias de resultado — Elo, Poisson ataque/defensa, forma, enfrentamientos directos, valor de la plantilla, días de descanso, cuotas de casas de apuestas — ajustadas a la sede, y está portado a apps Rust/Dioxus para web (WebAssembly), escritorio, móvil y terminal, mantenidas a la par. Un laboratorio de investigación evalúa las estrategias en walk-forward, dejando fuera un torneo cada vez, sobre 635 partidos de diez torneos (Mundiales 2002–2022 y cuatro copas continentales de 2023–2024), y ajusta los pesos del conjunto; fuera de muestra, Elo solo es el mejor (55,6 % de aciertos).",
       "type": "Motor de predicción",
       "roles": [
         "Autor"
@@ -198,6 +191,7 @@
       ]
     },
     {
+      "description": "Motor de catalogación universal y sistema de extracción de metadatos de archivos agnóstico a formatos.",
       "type": "Motor",
       "roles": [
         "Autor"
@@ -211,144 +205,170 @@
       ]
     },
     {
+      "description": "Supervisor de sistema modular y suite de diagnóstico (procesos, memoria, volúmenes de almacenamiento, telemetría de red, energía) que impulsa interfaces CLI y de escritorio Dioxus.",
       "type": "Supervisor",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Biblioteca modular que proporciona componentes de interfaz de usuario declarativos, persistencia, gráficos e internacionalización para aplicaciones de escritorio multiplataforma.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Suite de herramientas CLI para nombrado semántico, detección de colisiones y andamiaje declarativo de repositorios Git / GitHub.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Descubrimiento local, inventario de sesiones y telemetría para agentes de programación con IA.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Seguimiento de cuotas en tiempo real y previsión de uso para asistentes de programación con IA.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Motor de razonamiento jurídico, primero el derecho belga: a partir de una necesidad o un expediente, encuentra los textos aplicables, razona sobre su aplicación y responde con citas.",
       "type": "Servicio",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Biblioteca Rust que maneja las herramientas de las plataformas de alojamiento de repositorios (gh para GitHub, glab para GitLab), con un comando para renombrar un repositorio en todos los lugares donde se referencia.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Orquestador de la pila multimedia y de descargas del ecosistema Acteble: inicia, detiene y controla las aplicaciones de forma declarativa y reacciona a los cambios de sus indexadores.",
       "type": "Orquestador",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Ejecuta el CI/CD de cada repositorio: lanza las comprobaciones (lint, pruebas, compilaciones), las reparte en lotes y elige qué ejecutar.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Gestiona la configuración de una flota de máquinas, volúmenes y servidores, extraída poco a poco del repositorio dotfiles.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Ejecuta o instala una aplicación (Flutter, Dioxus o cualquier proyecto con un hook device-install) en un simulador iOS, un dispositivo Android o el anfitrión.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Planificador de actos para sesiones agénticas: a partir de actos (unidades de trabajo de un agente con dependencias, prioridad, plazo y coste en tokens) y de sesiones, devuelve un plan e indica qué actos no pudieron colocarse y por qué.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Cliente SSH cuyas claves y contraseñas provienen de Actesskey.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Secretos, claves y contraseñas de la máquina en un solo lugar: cada secreto es un blob age, la clave age vive en el llavero de macOS y nada secreto viaja por una línea de comandos.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Mantiene los binarios instalados con cargo desde repositorios locales en la última versión de su repositorio.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Responde a «¿ya existe una herramienta para esta necesidad?» solo a partir de Actindexer y KAG: ningún otro buscador y ningún LLM.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Muestra los límites de uso de los agentes de código (Claude, Codex y los agentes con presupuesto de tokens) en una línea cada uno, lo bastante rápido para un prompt de shell.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Búsqueda de solo lectura en cada buzón de un manifiesto, por IMAP o desde Maildirs archivados: nada se marca como leído, se mueve ni se elimina.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Convierte un proyecto en su artefacto con un solo verbo, build; quien llama elige el motor (LaTeX, HTML o Markdown impresos a PDF).",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Motor de nombres semánticos para proyectos, determinista y que funciona sin conexión.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Todo lo relativo a las rutas: reescritura de las referencias a un repositorio renombrado, movimientos, reparación de worktrees y registros de instalación de cargo.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Gestiona colas de trabajos (la cola de trabajos pesados y sus carriles), en pareja con Actempo.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Compila un proyecto LaTeX: encuentra su archivo principal y ejecuta pdflatex, biber y makeglossaries.",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Grafo universal de paquetes de cálculo que interconecta disciplinas científicas sin redundancia mediante el sistema de tipos de Rust.",
       "type": "Biblioteca",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Repositorio agregado de materiales de cursos universitarios, notas de clase y tareas recopiladas en plataformas Moodle y portales académicos, con soluciones desarrolladas exactas.",
       "type": "Base de conocimientos",
       "roles": [
         "Autor"
       ]
     },
     {
+      "description": "Mapeo y visualización global basados en grafos de itinerarios académicos de educación superior, dependencias de prerrequisitos, trayectorias de cursos y planes de estudio.",
       "type": "Grafo de conocimiento",
       "roles": [
         "Autor"
@@ -356,7 +376,6 @@
     },
     {
       "description": "Plataforma interna del Parlamento federal belga para buscar, explorar y conversar con los archivos parlamentarios.",
-      "summary": "Plataforma interna que permite al personal parlamentario buscar, explorar y conversar con los archivos del Parlamento federal belga, impulsada por un pipeline de retrieval-augmented generation con soporte bilingüe FR/NL.",
       "type": "Plataforma",
       "roles": [
         "Autor"
@@ -364,7 +383,6 @@
     },
     {
       "description": "Protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado belga, con énfasis en la robustez bilingüe FR/NL.",
-      "summary": "Protocolo abierto y reproducible que evalúa estrategias de recuperación sobre el corpus bilingüe del Senado, midiendo la robustez FR/NL a lo largo del pipeline de recuperación.",
       "type": "Investigación",
       "roles": [
         "Autor"
@@ -372,7 +390,6 @@
     },
     {
       "description": "Plataforma social geolocalizada que reúne a personas en torno a actividades compartidas: un backend en Rust, una app Flutter offline-first y un sitio React.",
-      "summary": "Backend: monolito modular en Rust, dividido en contextos delimitados con arquitectura hexagonal, CQRS y un núcleo dirigido por eventos (event store, outbox/inbox), expuesto mediante REST/JSON y gRPC streaming; un pipeline PostGIS convierte los datos de OpenStreetMap en grafos de enrutamiento publicados en un CDN, y lints Dylint propios hacen cumplir la arquitectura en CI. App: cliente Flutter offline-first para iOS, Android, web y escritorio — monorepo Melos con Riverpod sobre un almacenamiento local cifrado (Drift, SQLCipher), cifrado de extremo a extremo con un núcleo Rust (vodozemac vía flutter_rust_bridge), sincronización entre pares por Bluetooth, mapas MapLibre y medios en tiempo real con LiveKit. Sitio: aplicación React de una sola página, construida con Vite e internacionalizada con i18next.",
       "type": "Plataforma",
       "roles": [
         "Fundador"
@@ -380,7 +397,6 @@
     },
     {
       "description": "Trabajo de fin de máster en la UMONS — la I+D del motor de planificación de Acteble.",
-      "summary": "Trabajo de fin de máster « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », Service d'Algorithmique de la UMONS — la I+D del motor de planificación de Acteble. Formación de grupos multiobjetivo bajo restricciones espaciotemporales: NP-difícil por reducción desde k-CLIQUE; grupos admisibles enumerados como bicliques (Close-by-One); un solver de Pareto iterativo con garantías de terminación y de convergencia local; un único DSL compilado a Python, MiniZinc y Rust con frentes idénticos bit a bit, cuya salida Rust funciona en la API de Acteble. Comparado con CP-SAT, NSGA-II, MOEA/D y SPEA2 (hipervolumen, IGD, 30 semillas, Wilcoxon–Holm): significativamente por delante de MOEA/D en todos los tamaños, y de NSGA-II y SPEA2 a partir de 500 usuarios.",
       "type": "Trabajo de fin de máster",
       "roles": [
         "Autor"
@@ -388,12 +404,10 @@
     },
     {
       "description": "Asistente visual con IA para personas con discapacidad visual.",
-      "summary": "Asistente visual con IA para personas con discapacidad visual, ofrece descripción del entorno, OCR, escaneo de códigos (QR y de barras) y sistema de rutas Valhalla adaptado.",
       "type": "Aplicación móvil"
     },
     {
       "description": "Aplicación de reminiscencia para personas con problemas cognitivos.",
-      "summary": "Aplicación de reminiscencia que permite a personas con problemas cognitivos recuperar sus recuerdos mediante descripciones de fotos generadas por reconocimiento facial y LLMs. Pipeline DeepFace (Serengil).",
       "type": "Aplicación de IA"
     },
     {
@@ -407,16 +421,16 @@
       ]
     },
     {
-      "summary": "Modelo de Named Entity Recognition para extraer artículos de inventario de una transcripción de audio."
+      "description": "Modelo de Named Entity Recognition para extraer artículos de inventario de una transcripción de audio."
     },
     {
-      "summary": "Gestor de flota para subastas."
+      "description": "Gestor de flota para subastas."
     },
     {
-      "summary": "Gestor de encuestas para clubes deportivos y federaciones."
+      "description": "Gestor de encuestas para clubes deportivos y federaciones."
     },
     {
-      "summary": "Caja registradora basada en QR para establecimientos HoReCa (Hotel/Restaurante/Café)."
+      "description": "Caja registradora basada en QR para establecimientos HoReCa (Hotel/Restaurante/Café)."
     }
   ],
   "courses": [

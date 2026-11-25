@@ -131,8 +131,10 @@ def _project_entry(p) -> dict[str, Any]:
     entry: dict[str, Any] = {}
     if p.name:
         entry["name"] = p.name
-    if p.description:
-        entry["description"] = _text(p.description)
+    # JSON Resume has no `summary` on a project, only `description`: a project
+    # written with `summary` in the DSL was dropped, leaving an empty row.
+    if blurb := p.description or p.summary:
+        entry["description"] = _text(blurb)
     if p.highlights:
         entry["highlights"] = [_text(h) for h in p.highlights]
     if p.keywords:

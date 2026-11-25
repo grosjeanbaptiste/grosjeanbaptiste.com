@@ -131,21 +131,18 @@
   "projects": [
     {
       "description": "Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.",
-      "summary": "Vijf lagen: een Rust-CLI die alle I/O doet, een link-grammar syntactische parser, een SWI-Prolog symbolische engine zonder I/O, domeinvocabulairepacks als data, en een vijftigtal Rust-actiebinaries — een nieuw werkwoord is één packfeit en één binary. Mutatiegetest, met een corpus van regressiezinnen en een koude start van ongeveer 120 ms.",
       "roles": [
         "Auteur"
       ]
     },
     {
       "description": "Puur algoritmisch Rust-framework dat uitwisselbare onderdelen van een RAG-pipeline op BEIR benchmarkt en de best gemeten configuratie levert als vraag-antwoord-CLI met geciteerde bronnen.",
-      "summary": "Negen pipelinestappen (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate), elk een port waarvan het algoritme per label wordt gekozen (BM25F, RM3, MMR, LambdaMART, TextRank…); hexagonaal + DDD + TDD, alleen de standaardbibliotheek in de core, geen LLM. De metrieken komen exact overeen met pytrec_eval. Op zes BEIR-datasets wint geen enkele retriever overal (ndcg@10 0,668 op SciFact met BM25F); een LambdaMART-reranker tilt ArguAna van 0,301 naar 0,527 in 5-voudige kruisvalidatie.",
       "roles": [
         "Auteur"
       ]
     },
     {
       "description": "Vocabulairetrainer met gespreide herhaling voor zes talen, waarbij elk woord wordt aangeleerd met een uitgelijnde voorbeeldzin in elke taal.",
-      "summary": "Een Rust-workspace waarvan de pure domeinkern (hexagonaal, DDD, test-first) een terminal-UI (ratatui) en Dioxus-apps voor desktop en iOS aanstuurt: Leitner-dozen met SM-2-planning op SQLite, inhoud uit datapakketten met gecontroleerde checksum. Het datalab bouwt in Python de lexicale databank in zes talen — ongeveer 8.900 woordbetekenissen (oktober 2026) uitgelijnd op WordNet, geïllustreerd met Tatoeba-zinnen, geanalyseerd met spaCy, elke woord-in-zin-koppeling gecontroleerd.",
       "type": "Applicatie",
       "roles": [
         "Auteur"
@@ -160,7 +157,6 @@
     },
     {
       "description": "Gecureerde index van externe databronnen, boeken en softwarepakketten, aangeboden via een openbare lees-API.",
-      "summary": "Elk van de 523 bronnen is een TOML-bestand dat Rust valideert en compileert tot statische JSON, bij het bouwen ingebed in een Cloudflare Worker: API-logica in puur Rust, ETag- en 304-antwoorden, snelheidslimieten per IP en per API-sleutel, exact geteld door een Durable Object, BM25F-rangschikking gewogen met een betrouwbaarheidsscore op zes criteria, en een hiaatanalyse die behoeften aan kandidaat-bronnen koppelt.",
       "type": "API",
       "roles": [
         "Auteur"
@@ -168,7 +164,6 @@
     },
     {
       "description": "Bibliotheek voor ingenieursstudies die elk getal en elke uitdrukking van uitgewerkte LaTeX-oplossingen berekent, niets met de hand ingetypt.",
-      "summary": "Een Python-bibliotheek (DDD, hexagonaal, test-first, met mutatietests, mypy strict) met de begrippen uit wiskunde, natuurkunde, elektronica, signalen en optimalisatie, berekend met SymPy, NumPy en SciPy en via macro's in 920 LaTeX-documenten ingevoegd; een pipeline zet cursusmateriaal om naar Markdown, LaTeX en XML, en Lean 4-bewijzen met Mathlib herleiden resultaten tot de axioma's.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
@@ -176,7 +171,6 @@
     },
     {
       "description": "AI-ondersteund platform voor mechanisch 3D-ontwerp dat opensource-engines voor geometrie, meshing en simulatie aanstuurt.",
-      "summary": "De AI schrijft bewerkingen, de engines rekenen: een LLM levert een strikt gevalideerd onderdeelprogramma in JSON; twee onafhankelijke kernels, OpenCASCADE (exact) en Manifold (mesh), moeten het eens zijn over volume en omhullende doos, en de assemblage wordt op overlappingen gecontroleerd vóór elke export naar STEP, STL, 3MF of glTF. Een Rust-kern (hexagonale poorten en adapters) stuurt een Python-worker aan via JSON-regels, en een NSGA-II-zoektocht (Optuna) kiest de componenten op een Paretofront, gecontroleerd door exacte enumeratie.",
       "type": "Platform",
       "roles": [
         "Auteur"
@@ -184,7 +178,6 @@
     },
     {
       "description": "Multi-sportdatabase en voorspellend modelleringsplatform dat wedstrijdresultaten in competities en toernooien evalueert via ensemble-ratingstrategieën.",
-      "summary": "Een Python-engine (DDD, hexagonaal) weegt vijftien strategieën voor wedstrijduitslagen — Elo, Poisson aanval/verdediging, vorm, onderlinge duels, waarde van de selectie, rustdagen, bookmakerquoteringen — aangepast aan de speellocatie, en is overgezet naar Rust/Dioxus-apps voor web (WebAssembly), desktop, mobiel en terminal, die er gelijk mee blijven. Een onderzoekslab backtest de strategieën walk-forward, telkens met één toernooi apart gehouden, op 635 wedstrijden uit tien toernooien (WK's 2002–2022 en vier continentale toernooien van 2023–2024) en stemt de ensemblegewichten af; buiten de steekproef scoort Elo alleen het best (55,6% juist).",
       "type": "Voorspellingsengine",
       "roles": [
         "Auteur"
@@ -198,6 +191,7 @@
       ]
     },
     {
+      "description": "Universele catalogiseringsengine en formaat-agnostisch extractiesysteem voor bestandsmetadata.",
       "type": "Engine",
       "roles": [
         "Auteur"
@@ -211,144 +205,170 @@
       ]
     },
     {
+      "description": "Modulaire systeemsupervisor en diagnostische suite (processen, geheugen, opslagvolumes, netwerktelemetrie, stroom) die CLI en Dioxus-desktopinterfaces aanstuurt.",
       "type": "Supervisor",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Modulaire bibliotheek met declaratieve UI-componenten, persistentie, grafieken en internationalisering voor multiplatform desktopapplicaties.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "CLI-toolsuite voor semantische naamgeving, collisiedetectie en declaratieve scaffolding van Git/GitHub-repositories.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Lokale detectie, sessie-inventarisatie en telemetrie voor AI-codeeragenten.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Realtime quotalogging en gebruiksvoorspelling voor AI-codeerassistenten.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Juridische redeneermotor, eerst het Belgische recht: vanuit een behoefte of een dossier vindt hij de toepasselijke teksten, redeneert over de toepassing en antwoordt met citaten.",
       "type": "Service",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Rust-bibliotheek die de tools van repository-platformen aanstuurt (gh voor GitHub, glab voor GitLab), met een commando om een repository te hernoemen overal waar ernaar verwezen wordt.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Orchestrator van de multimedia- en downloadstack van het Acteble-ecosysteem: start, stopt en controleert de applicaties declaratief en reageert op wijzigingen in hun indexers.",
       "type": "Orchestrator",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Voert de CI/CD van elke repository uit: draait de poorten (lint, tests, builds), verdeelt ze in shards en kiest wat moet draaien.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Beheert de configuratie van een vloot van machines, volumes en servers, stap voor stap losgemaakt uit de dotfiles-repository.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Start of installeert een app (Flutter, Dioxus of elk project met een device-install-hook) op een iOS-simulator, een Android-toestel of de host.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Planner van acts voor agentische sessies: op basis van acts (werkeenheden van een agent met afhankelijkheden, prioriteit, deadline en tokenkosten) en sessies levert hij een plan op en meldt welke acts niet geplaatst konden worden en waarom.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "SSH-client waarvan de sleutels en wachtwoorden uit Actesskey komen.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Geheimen, sleutels en wachtwoorden van de machine op één plek: elk geheim is een age-blob, de age-sleutel zit in de macOS-sleutelhanger en niets geheims reist over een opdrachtregel.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Houdt de met cargo geïnstalleerde binaries van lokale repositories op de laatste versie van hun repository.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Beantwoordt “bestaat er al een tool voor deze behoefte?” alleen vanuit Actindexer en KAG: geen andere zoekmachine en geen LLM.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Toont de gebruikslimieten van de codeeragents (Claude, Codex en de agents met een tokenbudget) op één regel per agent, snel genoeg voor een shell-prompt.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Zoeken in alleen-lezen modus in elke mailbox van een manifest, via IMAP of in gearchiveerde Maildirs: niets wordt als gelezen gemarkeerd, verplaatst of verwijderd.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Maakt van een project zijn artefact met één werkwoord, build; de aanroeper kiest de engine (LaTeX, HTML of Markdown, naar PDF afgedrukt).",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Deterministische, offline-first semantische naamgevingsengine voor projecten.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Alles rond paden: verwijzingen naar een hernoemde repository herschrijven, verplaatsingen, worktrees herstellen en cargo-installatiegegevens.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Beheert wachtrijen van taken (de wachtrij voor zware taken en haar rijstroken), samen met Actempo.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Bouwt een LaTeX-project: vindt het hoofdbestand en draait pdflatex, biber en makeglossaries.",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Universele graaf van rekenpakketten die wetenschappelijke disciplines zonder redundantie verbindt via het Rust-typesysteem.",
       "type": "Bibliotheek",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Geaggregeerde repository van universitair cursusmateriaal, collegedictaten en opdrachten verzameld via Moodle-platformen en academische portalen, met exacte uitgewerkte oplossingen.",
       "type": "Kennisbank",
       "roles": [
         "Auteur"
       ]
     },
     {
+      "description": "Wereldwijde graafgebaseerde mapping en visualisatie van academische trajecten in het hoger onderwijs, vereistevoorwaarden, cursustrajecten en diplomapaden.",
       "type": "Kennisgraaf",
       "roles": [
         "Auteur"
@@ -356,14 +376,12 @@
     },
     {
       "description": "Intern platform van het Belgisch federaal Parlement om de parlementaire archieven te doorzoeken, verkennen en bevragen.",
-      "summary": "Intern platform waarmee parlementaire medewerkers de archieven van het Belgisch federaal Parlement kunnen doorzoeken, verkennen en bevragen, aangedreven door een retrieval-augmented pijplijn met tweetalige FR/NL-ondersteuning.",
       "roles": [
         "Auteur"
       ]
     },
     {
       "description": "Open evaluatieprotocol dat retrieval-strategieën vergelijkt op het corpus van de Belgische Senaat, met focus op tweetalige FR/NL-robuustheid.",
-      "summary": "Open, reproduceerbaar protocol dat retrieval-strategieën benchmarkt op het tweetalige Senaat-corpus en de FR/NL-robuustheid doorheen de retrieval-pijplijn meet.",
       "type": "Onderzoek",
       "roles": [
         "Auteur"
@@ -371,7 +389,6 @@
     },
     {
       "description": "Geolokaliseerd sociaal platform dat mensen samenbrengt rond gedeelde activiteiten: een Rust-backend, een offline-first Flutter-app en een React-website.",
-      "summary": "Backend: modulaire monoliet in Rust, opgedeeld in bounded contexts met een hexagonale architectuur, CQRS en een event-gedreven kern (event store, outbox/inbox), aangeboden via REST/JSON en gRPC-streaming; een PostGIS-pipeline zet OpenStreetMap-data om in routeringsgrafen die via een CDN worden gepubliceerd, en eigen Dylint-lints bewaken de architectuur in CI. App: offline-first Flutter-client voor iOS, Android, web en desktop — een Melos-monorepo met Riverpod boven een versleutelde lokale opslag (Drift, SQLCipher), end-to-end-versleuteling via een Rust-kern (vodozemac via flutter_rust_bridge), peer-to-peer-synchronisatie via Bluetooth, MapLibre-kaarten en realtime media met LiveKit. Website: React single-page-applicatie, gebouwd met Vite en geïnternationaliseerd met i18next.",
       "type": "Platform",
       "roles": [
         "Oprichter"
@@ -379,7 +396,6 @@
     },
     {
       "description": "Masterproef aan de UMONS — de R&D van de planningsengine van Acteble.",
-      "summary": "Masterproef « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes », Service d'Algorithmique van de UMONS — de R&D van de planningsengine van Acteble. Multi-objectieve groepsvorming onder ruimtelijk-temporele beperkingen: NP-moeilijk via reductie van k-CLIQUE; toelaatbare groepen opgesomd als bicliques (Close-by-One); een iteratieve Pareto-solver met garanties voor terminatie en lokale convergentie; één DSL gecompileerd naar Python, MiniZinc en Rust met bit-identieke fronten, waarvan de Rust-uitvoer in de Acteble-API draait. Vergeleken met CP-SAT, NSGA-II, MOEA/D en SPEA2 (hypervolume, IGD, 30 seeds, Wilcoxon–Holm): significant beter dan MOEA/D bij elke grootte, dan NSGA-II en SPEA2 vanaf 500 gebruikers.",
       "type": "Masterproef",
       "roles": [
         "Auteur"
@@ -387,12 +403,10 @@
     },
     {
       "description": "AI-aangedreven visuele assistent voor slechtzienden.",
-      "summary": "AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem.",
       "type": "Mobiele applicatie"
     },
     {
       "description": "Reminiscentie-applicatie voor mensen met cognitieve problemen.",
-      "summary": "Reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) pipeline.",
       "type": "AI-applicatie"
     },
     {
@@ -406,16 +420,16 @@
       ]
     },
     {
-      "summary": "Named Entity Recognition-model dat inventarisitems extraheert uit een audiotranscriptie."
+      "description": "Named Entity Recognition-model dat inventarisitems extraheert uit een audiotranscriptie."
     },
     {
-      "summary": "Wagenparkbeheerder voor veilingen."
+      "description": "Wagenparkbeheerder voor veilingen."
     },
     {
-      "summary": "Enquêtebeheerder voor sportclubs en federaties."
+      "description": "Enquêtebeheerder voor sportclubs en federaties."
     },
     {
-      "summary": "QR-code-gebaseerde kassa voor HoReCa-etablissementen (Hotel/Restaurant/Café)."
+      "description": "QR-code-gebaseerde kassa voor HoReCa-etablissementen (Hotel/Restaurant/Café)."
     }
   ],
   "courses": [

@@ -82,10 +82,9 @@ def _education_overlay(e, lang: str) -> dict[str, Any] | None:
 
 def _project_overlay(p, lang: str) -> dict[str, Any] | None:
     entry: dict[str, Any] = {}
-    if (val := _tr(p.description, lang)) is not None:
+    # A project's `summary` stands for its description (see jsonresume.py).
+    if (val := _tr(p.description or p.summary, lang)) is not None:
         entry["description"] = val
-    if (val := _tr(p.summary, lang)) is not None:
-        entry["summary"] = val
     if (val := _tr(p.type, lang)) is not None:
         entry["type"] = val
     # Index-aligned with the project's roles: a role left as is stays null.
