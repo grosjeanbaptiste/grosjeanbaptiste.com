@@ -5148,7 +5148,7 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
       </lanes>
     </timeline>
     <degrees>
-      <obtained>Master en Sciences — Sciences informatiques (en alternance) à finalité spécialisée professionnelle</obtained>
+      <obtained>Master en Sciences — Sciences informatiques (en alternance)</obtained>
     </degrees>
   </meta>
   <basics>
@@ -5508,6 +5508,7 @@ Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du dévelo
         <course>Cryptographie et sécurité des systèmes informatiques</course>
         <course>Éthique et droit de l'informatique</course>
       </courses>
+      <shortArea>Sciences informatiques (en alternance)</shortArea>
       <gpa>13,04/20 — obtenu avec satisfaction</gpa>
       <summary>Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant &amp; buddy TandeMons. Cours principaux : génie logiciel et gestion de projet, intelligence artificielle, bases de données, structures de données, recherche opérationnelle, cryptographie et sécurité informatique, éthique et droit de l'informatique, avec deux stages en entreprise rémunérés.</summary>
       <skills>
