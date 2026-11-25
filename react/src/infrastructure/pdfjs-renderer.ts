@@ -64,9 +64,30 @@ export class PdfJsRenderer implements PdfRenderer {
     const linkService = new viewer.PDFLinkService({ eventBus, externalLinkTarget: 2 });
     const pdfViewer = new viewer.PDFViewer({ container, eventBus, linkService });
     linkService.setViewer(pdfViewer);
+    // The recto and the verso side by side; the reader scrolls sideways and never
+    // up or down. The pages' height is fitted to the frame, and a zoom grows the
+    // frame (and the reader that holds it) with the pages, so that it is the page
+    // of the site that scrolls, not the reader.
+    pdfViewer.scrollMode = viewer.ScrollMode.HORIZONTAL;
+    const frame = container.parentElement;
+    const reader = frame?.parentElement;
+    const rem = () =>
+      Number.parseFloat(getComputedStyle(globalThis.document.documentElement).fontSize);
+    const grow = (on: boolean) => {
+      if (!frame || !reader) return;
+      const height = container.querySelector('.pdfViewer')?.getBoundingClientRect().height ?? 0;
+      frame.style.flex = on ? 'none' : '';
+      frame.style.height = on ? `${height / rem()}rem` : '';
+      reader.style.height = on ? 'auto' : '';
+    };
+    let zoomed = false;
+    const follow = () => requestAnimationFrame(() => grow(zoomed));
     eventBus.on('pagesinit', () => {
-      pdfViewer.currentScaleValue = 'page-width';
+      zoomed = false;
+      grow(false);
+      pdfViewer.currentScaleValue = 'page-height';
     });
+    eventBus.on('scalechanging', follow);
     // The reader shows a picture of each page until the first one is drawn.
     const drawn = new Promise<void>((resolve) => {
       eventBus.on('pagerendered', (event: { pageNumber: number; error?: unknown }) => {
@@ -84,10 +105,19 @@ export class PdfJsRenderer implements PdfRenderer {
     return {
       pages: document.numPages,
       drawn,
-      zoomIn: () => pdfViewer.increaseScale({ steps: STEPS }),
-      zoomOut: () => pdfViewer.decreaseScale({ steps: STEPS }),
+      zoomIn: () => {
+        zoomed = true;
+        pdfViewer.increaseScale({ steps: STEPS });
+      },
+      zoomOut: () => {
+        zoomed = true;
+        pdfViewer.decreaseScale({ steps: STEPS });
+      },
+      // Back to the pages fitted to the frame's height.
       fitWidth: () => {
-        pdfViewer.currentScaleValue = 'page-width';
+        zoomed = false;
+        grow(false);
+        pdfViewer.currentScaleValue = 'page-height';
       },
       // Destroying the loading task destroys the document; the shared worker stays.
       destroy: () => {

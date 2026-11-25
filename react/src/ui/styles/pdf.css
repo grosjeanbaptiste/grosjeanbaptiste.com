@@ -73,35 +73,35 @@
 .pdf-container {
   position: absolute;
   inset: 0;
-  overflow: auto;
+  /* Sideways only: a taller page grows the frame instead of scrolling in it. */
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .pdf-container .pdfViewer .page {
-  margin: 1rem auto;
+  margin: 1rem;
   border: 0;
   box-shadow: var(--shadow);
 }
 
-/* The page pictures shown while PDF.js draws: over the document, the same
- * column of pages at the same width as PDF.js's 'page-width' scale. */
+/* The page pictures shown while PDF.js draws: over the document, the pages on
+ * one row at the height PDF.js's 'page-height' scale gives them. */
 .pdf-pictures {
   position: absolute;
   inset: 0;
   z-index: 1;
-  overflow: auto;
+  display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+  overflow-y: hidden;
   background: inherit;
 }
 
 .pdf-pictures img {
   display: block;
-  width: calc(100% - 2.5rem);
-  height: auto;
-  margin: 1rem auto;
+  flex: none;
+  width: auto;
+  height: calc(100% - 2rem);
+  margin: 1rem;
   box-shadow: var(--shadow);
-}
-
-/* PDF.js sets its first page flush with the top: so does the picture of it,
- * or the page would jump up by a margin when the drawing takes over. */
-.pdf-pictures img:first-child {
-  margin-top: 0;
 }

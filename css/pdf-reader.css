@@ -68,10 +68,19 @@
   min-height: 24rem;
 }
 
+/* A phone gives the pages more of its height, to read them. */
+@media (max-width: 48em) {
+  .pdf-frame {
+    height: 85dvh;
+  }
+}
+
 .pdf-container {
   position: absolute;
   inset: 0;
-  overflow: auto;
+  /* Sideways only: a taller page grows the frame instead of scrolling in it. */
+  overflow-x: auto;
+  overflow-y: hidden;
   background: rgba(127, 127, 127, 0.15);
 }
 

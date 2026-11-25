@@ -276,7 +276,7 @@
     <pdfReader>
       <zoomIn>Ampliar</zoomIn>
       <zoomOut>Reducir</zoomOut>
-      <fitWidth>Ajustar al ancho</fitWidth>
+      <fitWidth>Ajustar a la altura</fitWidth>
       <openFile>Abrir el archivo</openFile>
       <failed>No se pudo mostrar el PDF.</failed>
       <pageOne>página</pageOne>

@@ -71,18 +71,25 @@
       const linkService = new viewer.PDFLinkService({ eventBus, externalLinkTarget: 2 });
       const pdfViewer = new viewer.PDFViewer({ container, eventBus, linkService });
       linkService.setViewer(pdfViewer);
-      // The recto and the verso side by side, the frame scrolling sideways. A
-      // phone reads them at a size a thumb can read; a wider screen fits the
-      // page's height to the frame, so that the landscape verso, wider than the
-      // recto at one scale, no longer sticks out of a fit to the width.
+      // The recto and the verso side by side, the frame scrolling sideways and
+      // never up or down: the page's height is fitted to the frame, and a zoom
+      // by hand grows the frame with the pages, so that it is the page of the
+      // site that scrolls, not the reader.
       pdfViewer.scrollMode = viewer.ScrollMode.HORIZONTAL;
-      const phone = matchMedia('(max-width: 48em)');
-      const fitted = () => (phone.matches ? '1.25' : 'page-height');
+      const fitted = () => 'page-height';
       let zoomedByHand = false;
+      const rem = () => Number.parseFloat(getComputedStyle(document.documentElement).fontSize);
+      const follow = () => {
+        frame.style.height = zoomedByHand
+          ? `${container.querySelector('.pdfViewer').offsetHeight / rem()}rem`
+          : '';
+      };
       eventBus.on('pagesinit', () => {
         zoomedByHand = false;
+        follow();
         pdfViewer.currentScaleValue = fitted();
       });
+      eventBus.on('scalechanging', () => requestAnimationFrame(follow));
       eventBus.on('pagerendered', (event) => {
         if (event.pageNumber === 1) panel.dataset.drawn = '';
       });

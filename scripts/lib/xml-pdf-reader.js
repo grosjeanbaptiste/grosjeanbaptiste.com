@@ -16,30 +16,36 @@ const PAGES = {
 };
 
 const WORDS = {
-  en: ['Zoom in', 'Zoom out', 'Fit width', 'Open the file', 'The PDF could not be displayed.'],
+  en: ['Zoom in', 'Zoom out', 'Fit height', 'Open the file', 'The PDF could not be displayed.'],
   fr: [
     'Agrandir',
     'Réduire',
-    'Ajuster à la largeur',
+    'Ajuster à la hauteur',
     'Ouvrir le fichier',
     'Le PDF n’a pas pu être affiché.',
   ],
   nl: [
     'Inzoomen',
     'Uitzoomen',
-    'Aanpassen aan breedte',
+    'Aanpassen aan hoogte',
     'Bestand openen',
     'De PDF kon niet worden weergegeven.',
   ],
-  es: ['Ampliar', 'Reducir', 'Ajustar al ancho', 'Abrir el archivo', 'No se pudo mostrar el PDF.'],
+  es: [
+    'Ampliar',
+    'Reducir',
+    'Ajustar a la altura',
+    'Abrir el archivo',
+    'No se pudo mostrar el PDF.',
+  ],
   de: [
     'Vergrößern',
     'Verkleinern',
-    'An Breite anpassen',
+    'An Höhe anpassen',
     'Datei öffnen',
     'Das PDF konnte nicht angezeigt werden.',
   ],
-  zh: ['放大', '缩小', '适合宽度', '打开文件', '无法显示 PDF。'],
+  zh: ['放大', '缩小', '适合高度', '打开文件', '无法显示 PDF。'],
 };
 
 function pdfReaderForXml(lang) {

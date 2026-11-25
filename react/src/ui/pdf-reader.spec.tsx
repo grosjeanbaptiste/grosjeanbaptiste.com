@@ -29,7 +29,7 @@ describe('the PDF reader', () => {
     const { user } = renderApp('/en/pdf', undefined, pdf);
     await user.click(await screen.findByRole('button', { name: 'Zoom in' }));
     await user.click(screen.getByRole('button', { name: 'Zoom out' }));
-    await user.click(screen.getByRole('button', { name: 'Fit width' }));
+    await user.click(screen.getByRole('button', { name: 'Fit height' }));
     expect(pdf.calls).toEqual(['zoomIn', 'zoomOut', 'fitWidth']);
   });
 

@@ -267,7 +267,7 @@
     <pdfReader>
       <zoomIn>放大</zoomIn>
       <zoomOut>缩小</zoomOut>
-      <fitWidth>适合宽度</fitWidth>
+      <fitWidth>适合高度</fitWidth>
       <openFile>打开文件</openFile>
       <failed>无法显示 PDF。</failed>
       <pageOne>页</pageOne>
