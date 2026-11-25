@@ -134,7 +134,7 @@
   "sameAs": [
     "https://www.linkedin.com/in/grosjeanbaptiste",
     "https://github.com/grosjeanbaptiste",
-    "https://npm.com/grosjeanbaptiste"
+    "https://www.npmjs.com/~grosjeanbaptiste"
   ],
   "alumniOf": [],
   "worksFor": {
@@ -5168,7 +5168,7 @@ TFE: WebMenu 2.0
       </profile>
       <profile>
         <network>npm</network>
-        <url>https://npm.com/grosjeanbaptiste</url>
+        <url>https://www.npmjs.com/~grosjeanbaptiste</url>
         <username>grosjeanbaptiste</username>
       </profile>
     </profiles>
