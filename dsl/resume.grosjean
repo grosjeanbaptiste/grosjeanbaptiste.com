@@ -17,7 +17,7 @@ resume "grosjeanbaptiste" {
         }
         profile LinkedIn "https://www.linkedin.com/in/grosjeanbaptiste" username "grosjeanbaptiste"
         profile GitHub "https://github.com/grosjeanbaptiste" username "grosjeanbaptiste"
-        profile Npm "https://npm.com/grosjeanbaptiste" username "grosjeanbaptiste"
+        profile npm "https://npm.com/grosjeanbaptiste" username "grosjeanbaptiste"
         summary t{ en: """
 Computer scientist — MSc from UMons — building Acteble.
 
