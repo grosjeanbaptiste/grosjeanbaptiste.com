@@ -280,7 +280,7 @@
     <pdfReader>
       <zoomIn>Zoom in</zoomIn>
       <zoomOut>Zoom out</zoomOut>
-      <fitWidth>Fit width</fitWidth>
+      <fitWidth>Fit height</fitWidth>
       <openFile>Open the file</openFile>
       <failed>The PDF could not be displayed.</failed>
       <pageOne>page</pageOne>
