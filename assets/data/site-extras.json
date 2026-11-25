@@ -448,7 +448,8 @@
         "Communication",
         "Analysis",
         "Resourcefulness"
-      ]
+      ],
+      "at": "Emvi.ai"
     },
     {
       "traits": [
@@ -458,7 +459,8 @@
         "Pragmatism",
         "Humor",
         "Curiosity"
-      ]
+      ],
+      "at": "Xtrada"
     },
     {
       "traits": [
@@ -466,7 +468,8 @@
         "Positivity",
         "Approachability",
         "Communication"
-      ]
+      ],
+      "at": "Xtrada"
     },
     {
       "traits": [
@@ -475,7 +478,8 @@
         "Flexibility",
         "Resilience",
         "Eagerness to learn"
-      ]
+      ],
+      "at": "Xtrada"
     },
     {
       "traits": [
@@ -483,14 +487,16 @@
         "Eagerness to learn",
         "Enthusiasm",
         "Approachability"
-      ]
+      ],
+      "at": "Xtrada"
     },
     {
       "traits": [
         "Eagerness to learn",
         "Enthusiasm",
         "Positivity"
-      ]
+      ],
+      "at": "Xtrada"
     }
   ],
   "courses": [

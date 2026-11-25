@@ -156,6 +156,7 @@ reference_entry: NAME "{" reference_field+ "}"
 reference_field: "name" value      -> ref_name
                | "quote" value     -> ref_quote
                | "traits" array    -> ref_traits
+               | "at" value        -> ref_at
 
 // ---------------------------------------------------------------------------
 // skills / languages

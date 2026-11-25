@@ -23,6 +23,10 @@ const SHAPES = {
     title: (e) => [e.studyType, e.area].filter(Boolean).join(' — '),
   },
   competition: { name: (c) => c.title, title: (c) => c.organizer },
+  // The recommendations an employer gave stand as one bar, the employer's name and
+  // their number (the way a family of projects is one row): each on its own would
+  // pile as many hairlines on the month the experience ended.
+  reference: { name: (r) => `${r.at} (${r.who.length})`, title: (r) => r.who.join(', ') },
   project: { name: (p) => p.name, title: (p) => p.entity },
   // Under its organisation's entry the role is what tells two bars apart.
   volunteer: { name: (v) => v.position, title: (v) => v.organization },
@@ -34,7 +38,8 @@ function barOf(kind, record, now) {
   return {
     kind,
     ongoing: ongoing(record.endDate),
-    anchor: anchorOf(kind, record),
+    // A recommendation keeps the id its article has on the page (ref-<index>).
+    anchor: record.anchor || anchorOf(kind, record),
     record,
     start,
     end,
@@ -66,6 +71,34 @@ const hosts = (resume) => [
     .filter((c) => c.date)
     .map((c) => ({ kind: 'competition', record: held(c), name: c.title })),
 ];
+// A recommendation stands where the experience it speaks of ended: a month,
+// like an event (the end of the employer's last role, or this month while it runs).
+const monthText = (month) =>
+  `${Math.floor(month / 12)}-${String((month % 12) + 1).padStart(2, '0')}`;
+const spoken = (resume, now) => {
+  const said = (resume.references || [])
+    .map((r, idx) => ({ ...r, idx }))
+    .filter((r) => r.at && (resume.work || []).some((w) => w.company === r.at && w.startDate));
+  return [...new Set(said.map((r) => r.at))].map((at) => {
+    const roles = (resume.work || []).filter((w) => w.company === at && w.startDate);
+    const end = roles.some((w) => ongoing(w.endDate))
+      ? monthText(now)
+      : roles
+          .map((w) => String(w.endDate).slice(0, 7))
+          .sort()
+          .at(-1);
+    const mine = said.filter((r) => r.at === at);
+    return {
+      at,
+      who: mine.map((r) => r.name.split(',')[0].trim()),
+      // The first of them: the section lists the others after it.
+      anchor: `ref-${mine[0].idx}`,
+      reference: mine.map((r) => r.name).join(' · '),
+      startDate: end,
+      endDate: end,
+    };
+  });
+};
 const hostsProject = (host, project) => namesProject(host.record, project);
 const hostsRole = (host, role) => namesRole(host.name, role);
 
@@ -115,6 +148,7 @@ function entryGroups(resume, now) {
     { kind: 'education', groups: groups('education') },
     { kind: 'competitions', groups: groups('competition') },
     { kind: 'projects', groups: alone('project', unhostedProjects) },
+    { kind: 'references', groups: alone('reference', spoken(resume, now)) },
     { kind: 'volunteer', groups: alone('volunteer', unhostedRoles) },
   ].filter((lane) => lane.groups.length > 0);
 }

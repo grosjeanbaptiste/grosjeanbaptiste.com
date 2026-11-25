@@ -214,6 +214,9 @@ class ReferenceEntry(Node):
     name: Value | None = None
     quote: Value | None = None
     traits: tuple[str, ...] = ()
+    # The employer whose experience the recommendation speaks of: it stands on
+    # the timeline at the end of that employer's last role.
+    at: str | None = None
 
 
 @dataclass(frozen=True, kw_only=True)

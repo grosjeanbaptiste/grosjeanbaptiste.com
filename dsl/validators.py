@@ -102,6 +102,25 @@ def validate(resume: Resume) -> list[ValidationError]:
                     )
                 )
 
+    # a recommendation speaks of an employer the CV has
+    employers = {
+        (w.at.get("en") if isinstance(w.at, Translated) else str(w.at))
+        for w in resume.work
+        if w.at is not None
+    }
+    for r in resume.references:
+        if r.at is None:
+            continue
+        employer = r.at.get("en") if isinstance(r.at, Translated) else str(r.at)
+        if employer not in employers:
+            errors.append(
+                ValidationError(
+                    section="references",
+                    entry=r.key,
+                    message=f"at {employer!r} is not the employer of any work entry",
+                )
+            )
+
     # basics translations
     if resume.basics is not None:
         errors.extend(_walk_values(resume.basics.label, "basics", None, "label"))

@@ -417,6 +417,9 @@ class _Builder(Transformer):
     def ref_traits(self, meta, children):
         return ("traits", tuple(children[0]))
 
+    def ref_at(self, meta, children):
+        return ("at", children[0])
+
     # -----------------------------------------------------------------
     # skills / languages
     # -----------------------------------------------------------------
