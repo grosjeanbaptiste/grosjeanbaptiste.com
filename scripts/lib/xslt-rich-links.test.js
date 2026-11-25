@@ -84,7 +84,7 @@ for (const lang of LANGS) {
     const targets = new Set(all(rich, /class="tl-skill-target" id="([^"]+)"/g));
     // The personality list's tags lead to a recommendation, not to the filter.
     const links = all(rich, /<a class="skill-tag" href="#([^"]+)"/g).filter(
-      (id) => !/^id\d+$/.test(id),
+      (id) => !/^ref-\d+$/.test(id),
     );
     assert.ok(links.length > 0);
     for (const id of links) assert.ok(targets.has(id), `#${id} is no filter target`);
@@ -94,7 +94,7 @@ for (const lang of LANGS) {
   });
 
   test(`${lang}: a personality tag leads to a recommendation that names it`, () => {
-    const links = all(rich, /<a class="skill-tag" href="#(id\d+)"/g);
+    const links = all(rich, /<a class="skill-tag" href="#(ref-\d+)"/g);
     assert.ok(links.length > 0);
     for (const id of links) assert.ok(ids(rich).has(id), `no recommendation #${id}`);
   });

@@ -997,7 +997,7 @@
           <xsl:variable name="said" select="/resume/references/reference[traits/trait = current()][1]"/>
           <xsl:choose>
             <xsl:when test="$said">
-              <a class="skill-tag"><xsl:attribute name="href">#<xsl:value-of select="generate-id($said)"/></xsl:attribute><xsl:value-of select="."/></a>
+              <a class="skill-tag"><xsl:attribute name="href">#<xsl:value-of select="concat('ref-', count($said/preceding-sibling::reference))"/></xsl:attribute><xsl:value-of select="."/></a>
             </xsl:when>
             <xsl:otherwise><span class="skill-tag"><xsl:value-of select="."/></span></xsl:otherwise>
           </xsl:choose>
@@ -1343,7 +1343,7 @@
                       <xsl:for-each select="$workRefs">
                         <xsl:if test="position() &gt; 1">, </xsl:if>
                         <a>
-                          <xsl:attribute name="href">#<xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                          <xsl:attribute name="href">#<xsl:value-of select="concat('ref-', count(preceding-sibling::reference))"/></xsl:attribute>
                           <xsl:value-of select="name"/>
                         </a>
                       </xsl:for-each>
@@ -1434,7 +1434,7 @@
                       <xsl:for-each select="$eduRefs">
                         <xsl:if test="position() &gt; 1">, </xsl:if>
                         <a>
-                          <xsl:attribute name="href">#<xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                          <xsl:attribute name="href">#<xsl:value-of select="concat('ref-', count(preceding-sibling::reference))"/></xsl:attribute>
                           <xsl:value-of select="name"/>
                         </a>
                       </xsl:for-each>
@@ -1490,7 +1490,7 @@
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
               <xsl:for-each select="/resume/references/reference">
                 <div class="item">
-                  <xsl:attribute name="id"><xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                  <xsl:attribute name="id"><xsl:value-of select="concat('ref-', count(preceding-sibling::reference))"/></xsl:attribute>
                   <div class="ref-author"><xsl:value-of select="name"/></div>
                   <blockquote><xsl:value-of select="reference"/></blockquote>
                 </div>

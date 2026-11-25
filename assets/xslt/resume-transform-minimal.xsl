@@ -902,7 +902,7 @@
                   <xsl:for-each select="$workRefs">
                     <xsl:if test="position() &gt; 1">, </xsl:if>
                     <a>
-                      <xsl:attribute name="href">#<xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                      <xsl:attribute name="href">#<xsl:value-of select="concat('ref-', count(preceding-sibling::reference))"/></xsl:attribute>
                       <xsl:value-of select="name"/>
                     </a>
                   </xsl:for-each>
@@ -981,7 +981,7 @@
                   <xsl:for-each select="$eduRefs">
                     <xsl:if test="position() &gt; 1">, </xsl:if>
                     <a>
-                      <xsl:attribute name="href">#<xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                      <xsl:attribute name="href">#<xsl:value-of select="concat('ref-', count(preceding-sibling::reference))"/></xsl:attribute>
                       <xsl:value-of select="name"/>
                     </a>
                   </xsl:for-each>
@@ -1077,7 +1077,7 @@
           <h2 id="references"><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
           <xsl:for-each select="/resume/references/reference">
             <div class="row">
-              <xsl:attribute name="id"><xsl:value-of select="generate-id(.)"/></xsl:attribute>
+              <xsl:attribute name="id"><xsl:value-of select="concat('ref-', count(preceding-sibling::reference))"/></xsl:attribute>
               <div class="ref-author"><xsl:value-of select="name"/></div>
               <blockquote><xsl:value-of select="reference"/></blockquote>
             </div>

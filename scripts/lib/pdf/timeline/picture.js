@@ -9,6 +9,7 @@ const LANE_TITLE = {
   competitions: 'competitions',
   projects: 'projects',
   volunteer: 'volunteer',
+  references: 'references',
 };
 
 // An entry's colour by its kind, in the PDF's palette. What an entry carried is
@@ -19,6 +20,7 @@ const FILL = {
   competition: 'PrimaryColor!55!ThirdColor',
   project: 'SecondaryColor!75!ThirdColor',
   volunteer: 'BodyColor',
+  reference: 'SecondaryColor',
   // A degree's academic years and its course units, in the colour of the degrees.
   block: 'PrimaryColor',
   unit: 'PrimaryColor',

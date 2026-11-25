@@ -148,6 +148,20 @@ def _courses(resume: Resume) -> list[dict[str, Any]]:
     return out
 
 
+def _references(resume: Resume) -> list[dict[str, Any] | None]:
+    """Index-aligned with resume.references: the traits and the employer
+    (English name) each recommendation speaks of."""
+    out: list[dict[str, Any] | None] = []
+    for r in resume.references:
+        extras: dict[str, Any] = {}
+        if r.traits:
+            extras["traits"] = list(r.traits)
+        if r.at is not None:
+            extras["at"] = r.at.get("en") if isinstance(r.at, Translated) else str(r.at)
+        out.append(extras or None)
+    return _trim_trailing_nulls(out)
+
+
 def _trim_trailing_nulls(items: list) -> list:
     while items and items[-1] is None:
         items.pop()
@@ -209,8 +223,8 @@ def emit(resume: Resume) -> dict[str, Any]:
         payload["education"] = extras
     if (extras := _summaries(resume.projects)):
         payload["projects"] = extras
-    if any(r.traits for r in resume.references):
-        payload["references"] = _trim_trailing_nulls([{"traits": list(r.traits)} if r.traits else None for r in resume.references])
+    if (extras := _references(resume)):
+        payload["references"] = extras
     if resume.courses:
         payload["courses"] = _courses(resume)
     if (daily := _daily_life(resume)) is not None:

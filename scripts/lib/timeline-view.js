@@ -23,6 +23,7 @@ const LANE_LABEL = {
   competitions: 'competitions',
   projects: 'projects',
   volunteer: 'volunteer',
+  references: 'references',
 };
 // Years per screen; null is the whole career.
 const zoomsOf = (t) =>

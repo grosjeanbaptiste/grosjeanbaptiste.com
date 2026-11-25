@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=333b139c"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=dd22f6fb"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -5104,6 +5104,47 @@ Programme : analyse et conception, programmation en .NET, Java et web, bases de 
             </bar>
           </bars>
         </lane>
+        <lane>
+          <kind>references</kind>
+          <label>Références</label>
+          <rows>1</rows>
+          <printRows>1</printRows>
+          <foldRows>1</foldRows>
+          <bars>
+            <bar>
+              <entry>ref-1</entry>
+              <kind>reference</kind>
+              <depth>0</depth>
+              <name>Xtrada (5)</name>
+              <title>Tino Schuerewegen, Emiel Van Gysegem, Steven Claus, Tjörven Janssens, Michael Culot</title>
+              <caption>Xtrada (5)</caption>
+              <period>sept. 2024 – sept. 2024</period>
+              <summary>Tino Schuerewegen, développeur logiciel chez Xtrada · Emiel Van Gysegem, marketing et opérations chez Xtra Groep · Steven Claus, DAF chez Xtra Groep · Tjörven Janssens, développeur logiciel chez Xtrada · Michael Culot, directeur commercial chez Xtrada</summary>
+              <label>Xtrada (5) — Tino Schuerewegen, Emiel Van Gysegem, Steven Claus, Tjörven Janssens, Michael Culot — sept. 2024 – sept. 2024</label>
+              <left>86.96%</left>
+              <width>0.48%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+              <foldRow>0</foldRow>
+            </bar>
+            <bar>
+              <entry>ref-0</entry>
+              <kind>reference</kind>
+              <depth>0</depth>
+              <name>Emvi.ai (1)</name>
+              <title>Waseem Virk</title>
+              <caption>Emvi.ai (1)</caption>
+              <period>juin 2025 – juin 2025</period>
+              <summary>Waseem Virk, dév Flutter chez Emvi.ai</summary>
+              <label>Emvi.ai (1) — Waseem Virk — juin 2025 – juin 2025</label>
+              <left>91.3%</left>
+              <width>0.48%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+              <foldRow>0</foldRow>
+            </bar>
+          </bars>
+        </lane>
       </lanes>
     </timeline>
     <degrees>
@@ -6835,6 +6876,7 @@ Si vous cherchez quelqu'un qui non seulement fournit des résultats exceptionnel
         <trait>Analysis</trait>
         <trait>Resourcefulness</trait>
       </traits>
+      <at>Emvi.ai</at>
     </reference>
     <reference>
       <name>Tino Schuerewegen, développeur logiciel chez Xtrada</name>
@@ -6853,6 +6895,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
         <trait>Humor</trait>
         <trait>Curiosity</trait>
       </traits>
+      <at>Xtrada</at>
     </reference>
     <reference>
       <name>Emiel Van Gysegem, marketing et opérations chez Xtra Groep</name>
@@ -6863,6 +6906,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
         <trait>Approachability</trait>
         <trait>Communication</trait>
       </traits>
+      <at>Xtrada</at>
     </reference>
     <reference>
       <name>Steven Claus, DAF chez Xtra Groep</name>
@@ -6874,6 +6918,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
         <trait>Resilience</trait>
         <trait>Eagerness to learn</trait>
       </traits>
+      <at>Xtrada</at>
     </reference>
     <reference>
       <name>Tjörven Janssens, développeur logiciel chez Xtrada</name>
@@ -6884,6 +6929,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
         <trait>Enthusiasm</trait>
         <trait>Approachability</trait>
       </traits>
+      <at>Xtrada</at>
     </reference>
     <reference>
       <name>Michael Culot, directeur commercial chez Xtrada</name>
@@ -6893,6 +6939,7 @@ En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence e
         <trait>Enthusiasm</trait>
         <trait>Positivity</trait>
       </traits>
+      <at>Xtrada</at>
     </reference>
   </references>
   <skills>

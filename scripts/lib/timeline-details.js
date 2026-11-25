@@ -21,6 +21,7 @@ const TELLS = {
   }),
   volunteer: (v) => summarised(v.summary),
   competition: (c) => summarised(c.summary || c.description),
+  reference: (r) => summarised(r.reference),
   project: (p) => ({
     type: p.type || '',
     detail: [p.type, ...(p.roles || [])].filter(Boolean).join(SEPARATOR),

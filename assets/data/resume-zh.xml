@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=333b139c"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=dd22f6fb"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -5091,6 +5091,47 @@ TFE: WebMenu 2.0
             </bar>
           </bars>
         </lane>
+        <lane>
+          <kind>references</kind>
+          <label>推荐人</label>
+          <rows>1</rows>
+          <printRows>1</printRows>
+          <foldRows>1</foldRows>
+          <bars>
+            <bar>
+              <entry>ref-1</entry>
+              <kind>reference</kind>
+              <depth>0</depth>
+              <name>Xtrada (5)</name>
+              <title>Tino Schuerewegen，Xtrada 软件开发者, Emiel Van Gysegem，Xtra Groep 营销与运营, Steven Claus，Xtra Groep 首席财务官, Tjörven Janssens，Xtrada 软件开发者, Michael Culot，Xtrada 销售经理</title>
+              <caption>Xtrada (5)</caption>
+              <period>9月 2024 – 9月 2024</period>
+              <summary>Tino Schuerewegen，Xtrada 软件开发者 · Emiel Van Gysegem，Xtra Groep 营销与运营 · Steven Claus，Xtra Groep 首席财务官 · Tjörven Janssens，Xtrada 软件开发者 · Michael Culot，Xtrada 销售经理</summary>
+              <label>Xtrada (5) — Tino Schuerewegen，Xtrada 软件开发者, Emiel Van Gysegem，Xtra Groep 营销与运营, Steven Claus，Xtra Groep 首席财务官, Tjörven Janssens，Xtrada 软件开发者, Michael Culot，Xtrada 销售经理 — 9月 2024 – 9月 2024</label>
+              <left>86.96%</left>
+              <width>0.48%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+              <foldRow>0</foldRow>
+            </bar>
+            <bar>
+              <entry>ref-0</entry>
+              <kind>reference</kind>
+              <depth>0</depth>
+              <name>Emvi.ai (1)</name>
+              <title>Waseem Virk，Emvi.ai Flutter 开发者</title>
+              <caption>Emvi.ai (1)</caption>
+              <period>6月 2025 – 6月 2025</period>
+              <summary>Waseem Virk，Emvi.ai Flutter 开发者</summary>
+              <label>Emvi.ai (1) — Waseem Virk，Emvi.ai Flutter 开发者 — 6月 2025 – 6月 2025</label>
+              <left>91.3%</left>
+              <width>0.48%</width>
+              <row>0</row>
+              <printRow>0</printRow>
+              <foldRow>0</foldRow>
+            </bar>
+          </bars>
+        </lane>
       </lanes>
     </timeline>
     <degrees>
@@ -6822,6 +6863,7 @@ TFE: WebMenu 2.0
         <trait>Analysis</trait>
         <trait>Resourcefulness</trait>
       </traits>
+      <at>Emvi.ai</at>
     </reference>
     <reference>
       <name>Tino Schuerewegen，Xtrada 软件开发者</name>
@@ -6840,6 +6882,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
         <trait>Humor</trait>
         <trait>Curiosity</trait>
       </traits>
+      <at>Xtrada</at>
     </reference>
     <reference>
       <name>Emiel Van Gysegem，Xtra Groep 营销与运营</name>
@@ -6850,6 +6893,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
         <trait>Approachability</trait>
         <trait>Communication</trait>
       </traits>
+      <at>Xtrada</at>
     </reference>
     <reference>
       <name>Steven Claus，Xtra Groep 首席财务官</name>
@@ -6861,6 +6905,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
         <trait>Resilience</trait>
         <trait>Eagerness to learn</trait>
       </traits>
+      <at>Xtrada</at>
     </reference>
     <reference>
       <name>Tjörven Janssens，Xtrada 软件开发者</name>
@@ -6871,6 +6916,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
         <trait>Enthusiasm</trait>
         <trait>Approachability</trait>
       </traits>
+      <at>Xtrada</at>
     </reference>
     <reference>
       <name>Michael Culot，Xtrada 销售经理</name>
@@ -6880,6 +6926,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
         <trait>Enthusiasm</trait>
         <trait>Positivity</trait>
       </traits>
+      <at>Xtrada</at>
     </reference>
   </references>
   <skills>
