@@ -83,7 +83,8 @@
     );
     if (bar) reveal(bar);
   });
-  if (scripted) setZoom('5');
+  // Two years on a phone (the 48em of css/timeline-phone.css), five anywhere wider.
+  if (scripted) setZoom(matchMedia('(max-width: 48em)').matches ? '2' : '5');
 
   // Arrow keys: along a lane in time order, across lanes to the closest in time.
   const centre = (bar) => bar.offsetLeft + bar.offsetWidth / 2;
