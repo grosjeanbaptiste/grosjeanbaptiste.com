@@ -431,6 +431,9 @@
           .embedded-projects .label { font-weight: 600; color: var(--primary); margin: 0; }
           .embedded-projects ul { margin: 4px 0 0 4px; padding-left: 16px; }
           .embedded-projects li { margin: 2px 0; }
+          /* A family of projects (OpenActe) is one row with its number of parts, on every screen. */
+          .embedded-projects .project-part { display: none; }
+          .embedded-projects .project-family::after { content: " (" attr(data-parts) ")"; }
           /* Print-only copies of text the LaTeX fit plan clips. */
           .clipped-text { display: none; }
           /* Print-only: the kind a long project list gives in place of the

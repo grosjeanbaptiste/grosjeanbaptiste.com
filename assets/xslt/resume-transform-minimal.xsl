@@ -398,6 +398,9 @@
             margin: 2px;
           }
           a.skill-tag { text-decoration: none; }
+          /* A family of projects (OpenActe) is one row with its number of parts, on every screen. */
+          li.project-part { display: none; }
+          li.project-family::after { content: " (" attr(data-parts) ")"; }
           .inline-skills { margin: 6px 0; }
           .project-skills .skill-tag, .inline-skills .skill-tag { font-size: 0.7em; padding: 1px 7px; }
           @media print {

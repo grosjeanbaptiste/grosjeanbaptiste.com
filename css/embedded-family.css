@@ -1,0 +1,9 @@
+/* A family of projects (OpenActe) is one row, with the number of its parts: the
+ * parts are folded into it on every display (the timeline folds them too). */
+.embedded-projects .project-part {
+  display: none;
+}
+
+.embedded-projects .project-family::after {
+  content: " (" attr(data-parts) ")";
+}
