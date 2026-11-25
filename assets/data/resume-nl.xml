@@ -2717,6 +2717,9 @@
               <caption>Technofutur TIC</caption>
               <uses>sql-server node-js express-js react angular typescript auth0 sequelize</uses>
               <period>dec 2022 – jun 2023</period>
+              <summary>Kwalificerende opleiding om de technische vaardigheden te versterken die ik tijdens mijn bachelor aan EPHEC heb verworven.
+De verlenging omvatte een introductie tot Business Intelligence en ETL-processen (Data Warehousing) met Microsoft-tools (SSIS, …).
+De opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van databaseontwikkeling tot gebruikersinterface en backend.</summary>
               <label>Technofutur TIC — Full Stack Webontwikkelaar Stagiair — dec 2022 – jun 2023</label>
               <left>76.81%</left>
               <width>3.37%</width>
@@ -2754,6 +2757,7 @@
               <caption>Xtrada · Software Crafter</caption>
               <uses>net ddd cleancode cleanarchitecture</uses>
               <period>aug 2023 – sep 2024</period>
+              <summary>Softwaremodernisering binnen de .NET-stack volgens DDD en clean code principes. Implementatie van Azure AI-services in een .NET-oplossing.</summary>
               <label>Xtrada — Software Crafter — aug 2023 – sep 2024</label>
               <left>80.99%</left>
               <width>6.31%</width>
@@ -2771,6 +2775,7 @@
               <caption>Xtrada · .NET / Blazor Software Crafter</caption>
               <uses>net blazor sql-server ddd entityframework xunit</uses>
               <period>sep 2023 – dec 2023</period>
+              <summary>Ontwikkeling van de webapp in .NET / Blazor volgens DDD en clean code principes.</summary>
               <label>Xtrada — .NET / Blazor Software Crafter — sep 2023 – dec 2023</label>
               <left>81.16%</left>
               <width>1.92%</width>
@@ -2841,6 +2846,7 @@
               <caption>Xtrada · Data Scientist</caption>
               <uses>python spacy pandas numpy net</uses>
               <period>mrt 2024 – sep 2024</period>
+              <summary>Python-bibliotheken (SpaCy…) om benoemde entiteiten uit tekst te extraheren via NER-modeltraining en implementatie in .NET. Recall-score van het model: 87%.</summary>
               <label>Xtrada — Data Scientist — mrt 2024 – sep 2024</label>
               <left>84.06%</left>
               <width>3.24%</width>
@@ -2876,6 +2882,7 @@
               <caption>Emvi.ai · AI Software Crafter</caption>
               <uses>python whisper fastapi deepface openai postgresql sqlalchemy</uses>
               <period>okt 2024 – jun 2025</period>
+              <summary>Bouwde de gezichtsherkenningspijplijn (DeepFace / Serengil, detectie + herkenning) en de sentimentanalyse-stack voor de door LLM gegenereerde fotobeschrijvingen.</summary>
               <label>Emvi.ai — AI Software Crafter — okt 2024 – jun 2025</label>
               <left>87.44%</left>
               <width>4.33%</width>
@@ -2912,6 +2919,7 @@
               <caption>Emvi.ai · AI Software Crafter Lead</caption>
               <uses>dart flutter firebase openai valhalla</uses>
               <period>dec 2024 – jun 2025</period>
+              <summary>Technische leiding en ontwikkeling van ontwerp tot oplevering: OCR-pijplijn, code-scans en aangepast Valhalla-routesysteem voor slechtzienden.</summary>
               <label>Emvi.ai — AI Software Crafter Lead — dec 2024 – jun 2025</label>
               <left>88.41%</left>
               <width>3.37%</width>
@@ -2948,6 +2956,7 @@
               <caption>Acteble</caption>
               <uses>rust flutter dart tokio docker ddd cleanarchitecture postgresql</uses>
               <period>jul 2025 – Heden</period>
+              <summary>Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&amp;D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.</summary>
               <label>Acteble — Oprichter — jul 2025 – Heden</label>
               <left>91.79%</left>
               <width>8.21%</width>
@@ -3707,6 +3716,7 @@
               <caption>Belgische Senaat</caption>
               <uses>python java rag ocr sentencetransformers pandas</uses>
               <period>nov 2025 – jun 2026</period>
+              <summary>AI-onderzoek en engineering voor het Belgisch federaal Parlement. Ontwerp van een intern platform waarmee medewerkers de parlementaire archieven kunnen doorzoeken, verkennen en bevragen. Auteur van een open evaluatieprotocol dat retrieval-strategieën vergelijkt op het Senaat-corpus, met focus op tweetalige FR/NL-robuustheid.</summary>
               <label>Belgische Senaat — AI-onderzoeker — nov 2025 – jun 2026</label>
               <left>93.75%</left>
               <width>3.82%</width>
@@ -4026,6 +4036,11 @@
               <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · Professionele bachelor — Bedrijfsinformatica</caption>
               <uses>sql c net java python js html css</uses>
               <period>sep 2018 – okt 2022</period>
+              <summary>Studentenvertegenwoordiger en tutor.
+
+TFE: WebMenu 2.0
+
+Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele databanken, e-business en geïntegreerde beheersoftware (ERP), netwerken en IT-projectbeheer.</summary>
               <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — Professionele bachelor — Bedrijfsinformatica — sep 2018 – okt 2022 — avondonderwijs</label>
               <schedule>evening</schedule>
               <left>52.64%</left>
@@ -4505,6 +4520,7 @@
               <caption>UMons · Master of Science — Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)</caption>
               <uses>python latex ddd cleanarchitecture</uses>
               <period>okt 2022 – sep 2026</period>
+              <summary>Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger &amp; buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.</summary>
               <label>UMons — Master of Science — Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS) — okt 2022 – sep 2026 — avondonderwijs</label>
               <schedule>evening</schedule>
               <left>76.06%</left>
@@ -4931,6 +4947,7 @@
               <name>20 km door Brussel 2022</name>
               <caption>20 km door Brussel 2022</caption>
               <period>mei 2022 – mei 2022</period>
+              <summary>Wegwedstrijd van 20 km door de straten van Brussel.</summary>
               <label>20 km door Brussel 2022 — mei 2022 – mei 2022</label>
               <left>73.43%</left>
               <width>0.48%</width>
@@ -4945,6 +4962,7 @@
               <title>Citizens of Wallonia</title>
               <caption>Hackathon Citizens of Wallonia 2023</caption>
               <period>mrt 2023 – mrt 2023</period>
+              <summary>OnlyTogether — oplossing die ervoor zorgt dat kwetsbare gebruikers altijd begeleid worden.</summary>
               <label>Hackathon Citizens of Wallonia 2023 — Citizens of Wallonia — mrt 2023 – mrt 2023</label>
               <left>78.26%</left>
               <width>0.48%</width>
@@ -4959,6 +4977,7 @@
               <title>SoCraTes BE</title>
               <caption>SoCraTes BE 2023</caption>
               <period>nov 2023 – nov 2023</period>
+              <summary>Unconference voor software crafters, november 2023: code kata's, lightning talks en open-spacesessies, met een agenda die de deelnemers zelf bepalen.</summary>
               <label>SoCraTes BE 2023 — SoCraTes BE — nov 2023 – nov 2023</label>
               <left>82.13%</left>
               <width>0.48%</width>
@@ -4973,6 +4992,7 @@
               <title>VISUG — Visual Studio User Group Belgium</title>
               <caption>VisugXL 2023</caption>
               <period>nov 2023 – nov 2023</period>
+              <summary>Eendaagse conferentie van de Belgische .NET- en Visual Studio-community, op de AP Hogeschool in Antwerpen.</summary>
               <label>VisugXL 2023 — VISUG — Visual Studio User Group Belgium — nov 2023 – nov 2023</label>
               <left>82.13%</left>
               <width>0.48%</width>
@@ -4987,6 +5007,7 @@
               <title>VISUG — Visual Studio User Group Belgium</title>
               <caption>VISUG-meetup — Mediator-patroon en .NET 8</caption>
               <period>nov 2023 – nov 2023</period>
+              <summary>Avond in Mechelen: centrale fout- en validatieafhandeling met het Mediator-patroon, en wat er nieuw is in .NET 8, ASP.NET 8 en EF 8.</summary>
               <label>VISUG-meetup — Mediator-patroon en .NET 8 — VISUG — Visual Studio User Group Belgium — nov 2023 – nov 2023</label>
               <left>82.13%</left>
               <width>0.48%</width>
@@ -5001,6 +5022,7 @@
               <title>Citizens of Wallonia</title>
               <caption>Hackathon Citizens of Wallonia 2024</caption>
               <period>mrt 2024 – mrt 2024</period>
+              <summary>EduCraft — oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven.</summary>
               <label>Hackathon Citizens of Wallonia 2024 — Citizens of Wallonia — mrt 2024 – mrt 2024</label>
               <left>84.06%</left>
               <width>0.48%</width>
@@ -5030,6 +5052,7 @@
               <name>20 km door Brussel 2024</name>
               <caption>20 km door Brussel 2024</caption>
               <period>mei 2024 – mei 2024</period>
+              <summary>Wegwedstrijd van 20 km door de straten van Brussel.</summary>
               <label>20 km door Brussel 2024 — mei 2024 – mei 2024</label>
               <left>85.02%</left>
               <width>0.48%</width>
@@ -5043,6 +5066,7 @@
               <name>20 km Maredsous–Dinant 2025</name>
               <caption>20 km Maredsous–Dinant 2025</caption>
               <period>mrt 2025 – mrt 2025</period>
+              <summary>Loopwedstrijd van 20 km tussen de abdij van Maredsous en Dinant.</summary>
               <label>20 km Maredsous–Dinant 2025 — mrt 2025 – mrt 2025</label>
               <left>89.86%</left>
               <width>0.48%</width>
@@ -5056,6 +5080,7 @@
               <name>20 km door Brussel 2025</name>
               <caption>20 km door Brussel 2025</caption>
               <period>mei 2025 – mei 2025</period>
+              <summary>Wegwedstrijd van 20 km door de straten van Brussel.</summary>
               <label>20 km door Brussel 2025 — mei 2025 – mei 2025</label>
               <left>90.82%</left>
               <width>0.48%</width>
@@ -5069,6 +5094,7 @@
               <name>20 km Maredsous–Dinant 2026</name>
               <caption>20 km Maredsous–Dinant 2026</caption>
               <period>mrt 2026 – mrt 2026</period>
+              <summary>Loopwedstrijd van 20 km tussen de abdij van Maredsous en Dinant.</summary>
               <label>20 km Maredsous–Dinant 2026 — mrt 2026 – mrt 2026</label>
               <left>95.65%</left>
               <width>0.48%</width>

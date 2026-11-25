@@ -2704,6 +2704,9 @@
               <caption>Technofutur TIC</caption>
               <uses>sql-server node-js express-js react angular typescript auth0 sequelize</uses>
               <period>12月 2022 – 6月 2023</period>
+              <summary>旨在加强我在 EPHEC 学士学位项目中获得的技术技能的资格培训。
+扩展期间，我们接受了 Microsoft 工具 (SSIS 等) 的商业智能和 ETL 流程 (数据仓库) 的介绍。
+培训涵盖了 SQL Server、Node.js、Express.js、React 和 Angular，从数据库开发到用户界面和后端。</summary>
               <label>Technofutur TIC — 全栈 Web 开发实习生 — 12月 2022 – 6月 2023</label>
               <left>76.81%</left>
               <width>3.37%</width>
@@ -2741,6 +2744,7 @@
               <caption>Xtrada · 软件工艺师</caption>
               <uses>net ddd cleancode cleanarchitecture</uses>
               <period>8月 2023 – 9月 2024</period>
+              <summary>在 .NET 技术栈中遵循领域驱动设计和整洁代码原则进行软件现代化。在 .NET 解决方案中实施 Azure AI 服务。</summary>
               <label>Xtrada — 软件工艺师 — 8月 2023 – 9月 2024</label>
               <left>80.99%</left>
               <width>6.31%</width>
@@ -2758,6 +2762,7 @@
               <caption>Xtrada · .NET/Blazor 软件工艺师</caption>
               <uses>net blazor sql-server ddd entityframework xunit</uses>
               <period>9月 2023 – 12月 2023</period>
+              <summary>使用 .NET / Blazor 按照领域驱动设计和整洁代码原则开发 Web 应用。</summary>
               <label>Xtrada — .NET/Blazor 软件工艺师 — 9月 2023 – 12月 2023</label>
               <left>81.16%</left>
               <width>1.92%</width>
@@ -2828,6 +2833,7 @@
               <caption>Xtrada · 数据科学家</caption>
               <uses>python spacy pandas numpy net</uses>
               <period>3月 2024 – 9月 2024</period>
+              <summary>使用 Python 库 (SpaCy 等) 通过 NER 模型训练从文本中提取命名实体，并在 .NET 中实现。模型召回率：87%。</summary>
               <label>Xtrada — 数据科学家 — 3月 2024 – 9月 2024</label>
               <left>84.06%</left>
               <width>3.24%</width>
@@ -2863,6 +2869,7 @@
               <caption>Emvi.ai · AI 软件工艺师</caption>
               <uses>python whisper fastapi deepface openai postgresql sqlalchemy</uses>
               <period>10月 2024 – 6月 2025</period>
+              <summary>构建面部识别管道 (DeepFace / Serengil，检测与识别) 以及为 LLM 生成的照片描述提供情感分析栈。</summary>
               <label>Emvi.ai — AI 软件工艺师 — 10月 2024 – 6月 2025</label>
               <left>87.44%</left>
               <width>4.33%</width>
@@ -2899,6 +2906,7 @@
               <caption>Emvi.ai · AI 软件工艺负责人</caption>
               <uses>dart flutter firebase openai valhalla</uses>
               <period>12月 2024 – 6月 2025</period>
+              <summary>从技术设计到交付主导开发：OCR 管道、代码扫描以及为视障人士适配的 Valhalla 路线规划系统。</summary>
               <label>Emvi.ai — AI 软件工艺负责人 — 12月 2024 – 6月 2025</label>
               <left>88.41%</left>
               <width>3.37%</width>
@@ -2935,6 +2943,7 @@
               <caption>Acteble</caption>
               <uses>rust flutter dart tokio docker ddd cleanarchitecture postgresql</uses>
               <period>7月 2025 – 至今</period>
+              <summary>唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。</summary>
               <label>Acteble — 创始人 — 7月 2025 – 至今</label>
               <left>91.79%</left>
               <width>8.21%</width>
@@ -3694,6 +3703,7 @@
               <caption>比利时参议院</caption>
               <uses>python java rag ocr sentencetransformers pandas</uses>
               <period>11月 2025 – 6月 2026</period>
+              <summary>为比利时联邦议会进行 AI 研究和工程。设计了一个内部平台，让工作人员可以搜索、探索和与议会档案对话。撰写了一个开源评估协议，比较参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。</summary>
               <label>比利时参议院 — AI 研究员 — 11月 2025 – 6月 2026</label>
               <left>93.75%</left>
               <width>3.82%</width>
@@ -4013,6 +4023,11 @@
               <caption>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) · 职业学士 — 管理信息学</caption>
               <uses>sql c net java python js html css</uses>
               <period>9月 2018 – 10月 2022</period>
+              <summary>学生代表和辅导员。
+
+TFE: WebMenu 2.0
+
+课程内容：分析与设计，使用 .NET、Java 和 Web 进行编程，关系型数据库，电子商务与集成管理软件 (ERP)，网络与 IT 项目管理。</summary>
               <label>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS) — 职业学士 — 管理信息学 — 9月 2018 – 10月 2022 — 夜间课程</label>
               <schedule>evening</schedule>
               <left>52.64%</left>
@@ -4492,6 +4507,7 @@
               <caption>UMons · 理学硕士 — 计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS 学分)</caption>
               <uses>python latex ddd cleanarchitecture</uses>
               <period>10月 2022 – 9月 2026</period>
+              <summary>硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 &amp; Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。</summary>
               <label>UMons — 理学硕士 — 计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS 学分) — 10月 2022 – 9月 2026 — 夜间课程</label>
               <schedule>evening</schedule>
               <left>76.06%</left>
@@ -4918,6 +4934,7 @@
               <name>布鲁塞尔 20 公里赛 2022</name>
               <caption>布鲁塞尔 20 公里赛 2022</caption>
               <period>5月 2022 – 5月 2022</period>
+              <summary>穿越布鲁塞尔街道的 20 公里路跑。</summary>
               <label>布鲁塞尔 20 公里赛 2022 — 5月 2022 – 5月 2022</label>
               <left>73.43%</left>
               <width>0.48%</width>
@@ -4932,6 +4949,7 @@
               <title>Citizens of Wallonia</title>
               <caption>Hackathon Citizens of Wallonia 2023</caption>
               <period>3月 2023 – 3月 2023</period>
+              <summary>OnlyTogether — 确保弱势用户始终有人陪伴的解决方案。</summary>
               <label>Hackathon Citizens of Wallonia 2023 — Citizens of Wallonia — 3月 2023 – 3月 2023</label>
               <left>78.26%</left>
               <width>0.48%</width>
@@ -4946,6 +4964,7 @@
               <title>SoCraTes BE</title>
               <caption>SoCraTes BE 2023</caption>
               <period>11月 2023 – 11月 2023</period>
+              <summary>面向软件工匠的非会议活动，2023 年 11 月：代码套路练习、闪电演讲和开放空间讨论，议程由参与者共同决定。</summary>
               <label>SoCraTes BE 2023 — SoCraTes BE — 11月 2023 – 11月 2023</label>
               <left>82.13%</left>
               <width>0.48%</width>
@@ -4960,6 +4979,7 @@
               <title>VISUG — Visual Studio User Group Belgium</title>
               <caption>VisugXL 2023</caption>
               <period>11月 2023 – 11月 2023</period>
+              <summary>比利时 .NET 与 Visual Studio 社区的全天会议，在安特卫普 AP Hogeschool 举行。</summary>
               <label>VisugXL 2023 — VISUG — Visual Studio User Group Belgium — 11月 2023 – 11月 2023</label>
               <left>82.13%</left>
               <width>0.48%</width>
@@ -4974,6 +4994,7 @@
               <title>VISUG — Visual Studio User Group Belgium</title>
               <caption>VISUG 聚会——中介者模式与 .NET 8</caption>
               <period>11月 2023 – 11月 2023</period>
+              <summary>梅赫伦晚间活动：用中介者模式集中处理错误与校验，以及 .NET 8、ASP.NET 8 和 EF 8 的新特性。</summary>
               <label>VISUG 聚会——中介者模式与 .NET 8 — VISUG — Visual Studio User Group Belgium — 11月 2023 – 11月 2023</label>
               <left>82.13%</left>
               <width>0.48%</width>
@@ -4988,6 +5009,7 @@
               <title>Citizens of Wallonia</title>
               <caption>Hackathon Citizens of Wallonia 2024</caption>
               <period>3月 2024 – 3月 2024</period>
+              <summary>EduCraft — 让任何人都能定制个性化路径以获得新技能的解决方案。</summary>
               <label>Hackathon Citizens of Wallonia 2024 — Citizens of Wallonia — 3月 2024 – 3月 2024</label>
               <left>84.06%</left>
               <width>0.48%</width>
@@ -5017,6 +5039,7 @@
               <name>布鲁塞尔 20 公里赛 2024</name>
               <caption>布鲁塞尔 20 公里赛 2024</caption>
               <period>5月 2024 – 5月 2024</period>
+              <summary>穿越布鲁塞尔街道的 20 公里路跑。</summary>
               <label>布鲁塞尔 20 公里赛 2024 — 5月 2024 – 5月 2024</label>
               <left>85.02%</left>
               <width>0.48%</width>
@@ -5030,6 +5053,7 @@
               <name>20 km Maredsous–Dinant 2025</name>
               <caption>20 km Maredsous–Dinant 2025</caption>
               <period>3月 2025 – 3月 2025</period>
+              <summary>马雷德苏修道院与迪南之间的 20 公里赛跑。</summary>
               <label>20 km Maredsous–Dinant 2025 — 3月 2025 – 3月 2025</label>
               <left>89.86%</left>
               <width>0.48%</width>
@@ -5043,6 +5067,7 @@
               <name>布鲁塞尔 20 公里赛 2025</name>
               <caption>布鲁塞尔 20 公里赛 2025</caption>
               <period>5月 2025 – 5月 2025</period>
+              <summary>穿越布鲁塞尔街道的 20 公里路跑。</summary>
               <label>布鲁塞尔 20 公里赛 2025 — 5月 2025 – 5月 2025</label>
               <left>90.82%</left>
               <width>0.48%</width>
@@ -5056,6 +5081,7 @@
               <name>20 km Maredsous–Dinant 2026</name>
               <caption>20 km Maredsous–Dinant 2026</caption>
               <period>3月 2026 – 3月 2026</period>
+              <summary>马雷德苏修道院与迪南之间的 20 公里赛跑。</summary>
               <label>20 km Maredsous–Dinant 2026 — 3月 2026 – 3月 2026</label>
               <left>95.65%</left>
               <width>0.48%</width>

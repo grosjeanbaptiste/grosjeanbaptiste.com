@@ -133,10 +133,11 @@ test('the rich theme hands the preview what a project tells', () => {
   assert.match(one, /data-skills="Rust · Tokio · [^"]+"/);
 });
 
-test('in the rich theme a bar with nothing more to tell carries no empty attribute', () => {
+test('in the rich theme a bar tells its summary, and carries no empty attribute', () => {
   const work = bars(render('fr')).filter((b) => b.includes('data-kind="work"'));
   assert.ok(work.length > 0);
-  for (const bar of work) assert.doesNotMatch(bar, /data-(detail|summary|skills)/);
+  assert.ok(work.some((bar) => /data-summary="[^"]+"/.test(bar)));
+  for (const bar of work) assert.doesNotMatch(bar, /data-(detail|summary|skills)=""/);
 });
 
 test('both themes show a project with its kind', () => {
