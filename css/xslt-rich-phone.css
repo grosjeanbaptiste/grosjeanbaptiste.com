@@ -1,0 +1,64 @@
+/* The rich XSLT theme on a phone: a small photo, the About before the contact
+ * list, and the second bar of the toolbar (languages, theme, downloads) on one
+ * row. Loaded after xslt-toolbar.css, by the rich theme only. Sizes are rem and
+ * em: no px. */
+
+/* The language code stands in for the language's name on a phone only. */
+.lang-code {
+  display: none;
+}
+
+@media screen and (max-width: 51.25em) {
+  /* The photo no longer fills the first screen; name and degree sit under it. */
+  #profile-picture {
+    max-width: 7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* The identity (photo, name, degree), then the About, then the contacts and
+   * the rest: what the card holds besides the identity follows the About. */
+  .sidebar > :not(.profile, h1, .label, .degree) {
+    order: 2;
+  }
+
+  .toolbar-rest {
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.8em;
+  }
+
+  .toolbar-rest .group {
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+  }
+
+  .toolbar-rest a,
+  .toolbar-rest button {
+    padding: 0.2rem 0.35rem;
+    white-space: nowrap;
+  }
+
+  .lang-full {
+    display: none;
+  }
+
+  .lang-code {
+    display: inline;
+  }
+
+  /* The buttons keep their glyph; the words stay for a screen reader. */
+  .btn-label,
+  #theme-toggle-label {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  #theme-toggle::before {
+    content: "◐";
+  }
+}

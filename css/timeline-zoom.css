@@ -33,6 +33,31 @@
   outline-offset: 0.125rem;
 }
 
+/* No radio is chosen on load (the stylesheet cannot know the screen): the zoom
+   that reads as chosen, and the PDF on offer, are the screen's default — two
+   years on a phone, five anywhere wider. timeline-zoom.xsl sets the scale. */
+@media (max-width: 48em) {
+  .tl-zoom:not(:has(.tl-zoom-input:checked)) #tl-z-2 + label {
+    background: var(--primary-color);
+    color: var(--on-accent-color);
+  }
+
+  body:not(:has(.tl-zoom-input:checked)) a[data-timeline-pdf]:not([data-zoom="2"]) {
+    display: none;
+  }
+}
+
+@media (min-width: 48.01em) {
+  .tl-zoom:not(:has(.tl-zoom-input:checked)) #tl-z-5 + label {
+    background: var(--primary-color);
+    color: var(--on-accent-color);
+  }
+
+  body:not(:has(.tl-zoom-input:checked)) a[data-timeline-pdf]:not([data-zoom="5"]) {
+    display: none;
+  }
+}
+
 /* One PDF of the timeline is on offer: the one of the zoom chosen. */
 body:has(#tl-z-2:checked) a[data-timeline-pdf]:not([data-zoom="2"]),
 body:has(#tl-z-5:checked) a[data-timeline-pdf]:not([data-zoom="5"]),

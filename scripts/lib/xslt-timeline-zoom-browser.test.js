@@ -42,7 +42,7 @@ const years = (n) => Math.max(1, seen.months / (n * 12));
 
 check('the zoom has no button and starts on five years', () => {
   assert.equal(seen.buttons, 0);
-  assert.deepEqual(seen.radios, [false, true, false]);
+  assert.deepEqual(seen.radios, [false, false, false]); // the screen sets the default
   assert.ok(Math.abs(seen.start[0] - years(5)) < 0.001);
 });
 check('the labels show, and the radios stay out of sight', () => {

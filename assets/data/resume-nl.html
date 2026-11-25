@@ -592,6 +592,7 @@
 <link rel="stylesheet" href="/css/views-bar.css">
 <link rel="stylesheet" href="/css/xslt-polish.css">
 <link rel="stylesheet" href="/css/xslt-toolbar.css">
+<link rel="stylesheet" href="/css/xslt-rich-phone.css">
 <link rel="stylesheet" href="/css/timeline.css">
 <link rel="stylesheet" href="/css/timeline-phone.css">
 <link rel="stylesheet" href="/css/timeline-employer.css">
@@ -599,6 +600,8 @@
 <style>#timeline:has(#tl-z-2:checked) .tl-grid { --stretch: 8.625; }
 #timeline:has(#tl-z-5:checked) .tl-grid { --stretch: 3.45; }
 #timeline:has(#tl-z-all:checked) .tl-grid { --stretch: 1; }
+@media (max-width: 48em) { #timeline:not(:has(.tl-zoom-input:checked)) .tl-grid { --stretch: 8.625; } }
+@media (min-width: 48.01em) { #timeline:not(:has(.tl-zoom-input:checked)) .tl-grid { --stretch: 3.45; } }
 </style>
 <link rel="stylesheet" href="/css/timeline-entries.css">
 <link rel="stylesheet" href="/css/timeline-scroll.css">
@@ -612,21 +615,21 @@
 <div class="toolbar">
 <nav class="group"><a class="nav-link" href="#about">Over</a><a class="nav-link" href="#timeline">Tijdlijn</a><a class="nav-link" href="#pdf">PDF</a><a class="nav-link" href="#experience">Ervaring</a><a class="nav-link" href="#education">Opleiding</a><a class="nav-link" href="#references">Referenties</a></nav><div class="toolbar-rest">
 <div class="group">
-<a href="/assets/data/resume-en.html" hreflang="en">Engels</a><a href="/assets/data/resume-fr.html" hreflang="fr">Frans</a><a href="/assets/data/resume-nl.html" hreflang="nl" class="active">Nederlands</a><a href="/assets/data/resume-es.html" hreflang="es">Spaans</a><a href="/assets/data/resume-de.html" hreflang="de">Duits</a><a href="/assets/data/resume-zh.html" hreflang="zh">Chinees</a>
+<a href="/assets/data/resume-en.html" hreflang="en"><span class="lang-full">Engels</span><span class="lang-code" aria-hidden="true">EN</span></a><a href="/assets/data/resume-fr.html" hreflang="fr"><span class="lang-full">Frans</span><span class="lang-code" aria-hidden="true">FR</span></a><a href="/assets/data/resume-nl.html" hreflang="nl" class="active"><span class="lang-full">Nederlands</span><span class="lang-code" aria-hidden="true">NL</span></a><a href="/assets/data/resume-es.html" hreflang="es"><span class="lang-full">Spaans</span><span class="lang-code" aria-hidden="true">ES</span></a><a href="/assets/data/resume-de.html" hreflang="de"><span class="lang-full">Duits</span><span class="lang-code" aria-hidden="true">DE</span></a><a href="/assets/data/resume-zh.html" hreflang="zh"><span class="lang-full">Chinees</span><span class="lang-code" aria-hidden="true">ZH</span></a>
 </div>
 <button type="button" id="theme-toggle" aria-pressed="false"><span id="theme-toggle-label">Donkere modus</span></button><a class="download" href="/assets/cv/cv_grosjean_baptiste_nl.pdf" download="cv_grosjean_baptiste_nl.pdf">
-            ⬇ CV downloaden</a><a class="download" data-timeline-pdf="" download="" data-zoom="all" href="/assets/cv/cv_grosjean_baptiste_timeline_nl.pdf">
-                ⬇ Tijdlijn (PDF)</a><a class="download" data-timeline-pdf="" download="" data-zoom="5" href="/assets/cv/cv_grosjean_baptiste_timeline_5y_nl.pdf">
-                ⬇ Tijdlijn (PDF)</a><a class="download" data-timeline-pdf="" download="" data-zoom="2" href="/assets/cv/cv_grosjean_baptiste_timeline_2y_nl.pdf">
-                ⬇ Tijdlijn (PDF)</a><button type="button" class="print" onclick="window.print()">
-            🖨 Afdrukken / PDF</button>
+            ⬇ <span class="btn-label">CV downloaden</span></a><a class="download" data-timeline-pdf="" download="" data-zoom="all" href="/assets/cv/cv_grosjean_baptiste_timeline_nl.pdf">
+                ⬇ <span class="btn-label">Tijdlijn (PDF)</span></a><a class="download" data-timeline-pdf="" download="" data-zoom="5" href="/assets/cv/cv_grosjean_baptiste_timeline_5y_nl.pdf">
+                ⬇ <span class="btn-label">Tijdlijn (PDF)</span></a><a class="download" data-timeline-pdf="" download="" data-zoom="2" href="/assets/cv/cv_grosjean_baptiste_timeline_2y_nl.pdf">
+                ⬇ <span class="btn-label">Tijdlijn (PDF)</span></a><button type="button" class="print" onclick="window.print()">
+            🖨 <span class="btn-label">Afdrukken / PDF</span></button>
 </div>
 </div>
 <div class="mini-id" aria-hidden="true"><div class="mini-id-bar">
 <img src="/assets/images/profil-160.webp" alt="" width="32" height="32"><span class="mini-id-name">Baptiste Grosjean</span><span class="mini-id-degree">Master of Science — Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)</span>
 </div></div>
 <div class="container">
-<aside class="sidebar"><div class="profile"><img src="/assets/images/profil.jpeg" srcset="/assets/images/profil-160.webp 160w, /assets/images/profil-320.webp 320w, /assets/images/profil-500.webp 500w" sizes="220px" id="profile-picture" alt="Baptiste Grosjean"></div>
+<aside class="sidebar"><div class="profile"><img src="/assets/images/profil.jpeg" srcset="/assets/images/profil-160.webp 160w, /assets/images/profil-320.webp 320w, /assets/images/profil-500.webp 500w" sizes="(max-width: 51.25em) 7rem, 14rem" id="profile-picture" alt="Baptiste Grosjean"></div>
 <h1>Baptiste Grosjean</h1>
 <div class="label">Informaticus</div>
 <p class="degree degree-obtained"><span class="icon">🎓</span>Master of Science — Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)</p>
@@ -1977,7 +1980,7 @@ Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-wor
 <div class="tl-head">
 <h2 id="timeline-title">Tijdlijn</h2>
 <div class="tl-zoom" role="group" aria-label="Tijdlijn">
-<input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-2"><label for="tl-z-2">2 jaar</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-5" checked><label for="tl-z-5">5 jaar</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-all"><label for="tl-z-all">Alles</label>
+<input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-2"><label for="tl-z-2">2 jaar</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-5"><label for="tl-z-5">5 jaar</label><input type="radio" name="tl-zoom" class="tl-zoom-input" id="tl-z-all"><label for="tl-z-all">Alles</label>
 </div>
 <button type="button" class="tl-search-open" aria-haspopup="dialog" aria-controls="cv-search" hidden="hidden">Zoeken</button>
 </div>

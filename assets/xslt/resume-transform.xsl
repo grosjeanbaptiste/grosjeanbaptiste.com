@@ -740,6 +740,7 @@
         <link rel="stylesheet" href="/css/views-bar.css"/>
         <link rel="stylesheet" href="/css/xslt-polish.css"/>
         <link rel="stylesheet" href="/css/xslt-toolbar.css"/>
+        <link rel="stylesheet" href="/css/xslt-rich-phone.css"/>
         <!-- The classic page's timeline, as is: its styles and its script (zoom,
              arrow keys, preview). -->
         <link rel="stylesheet" href="/css/timeline.css"/>
@@ -799,7 +800,7 @@
           <a class="download">
             <xsl:attribute name="href">/assets/cv/cv_grosjean_baptiste_<xsl:value-of select="$lang"/>.pdf</xsl:attribute>
             <xsl:attribute name="download">cv_grosjean_baptiste_<xsl:value-of select="$lang"/>.pdf</xsl:attribute>
-            ⬇ <xsl:call-template name="t"><xsl:with-param name="k" select="'downloadCV'"/></xsl:call-template>
+            ⬇ <span class="btn-label"><xsl:call-template name="t"><xsl:with-param name="k" select="'downloadCV'"/></xsl:call-template></span>
           </a>
 
           <!-- The timeline's PDF: one link per zoom; css/timeline-zoom.css shows
@@ -810,7 +811,7 @@
               <a class="download" data-timeline-pdf="" download="">
                 <xsl:attribute name="data-zoom"><xsl:choose><xsl:when test="name() = 'two'">2</xsl:when><xsl:when test="name() = 'five'">5</xsl:when><xsl:otherwise>all</xsl:otherwise></xsl:choose></xsl:attribute>
                 <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-                ⬇ <xsl:value-of select="$label"/>
+                ⬇ <span class="btn-label"><xsl:value-of select="$label"/></span>
               </a>
             </xsl:for-each>
           </xsl:for-each>
@@ -819,7 +820,7 @@
                browser (Cmd/Ctrl+P → Save as PDF). Always in sync with the XML,
                no build step. Complements — does not replace — the LaTeX PDF. -->
           <button type="button" class="print" onclick="window.print()">
-            🖨 <xsl:call-template name="t"><xsl:with-param name="k" select="'printPdf'"/></xsl:call-template>
+            🖨 <span class="btn-label"><xsl:call-template name="t"><xsl:with-param name="k" select="'printPdf'"/></xsl:call-template></span>
           </button>
 
           </div>
@@ -844,7 +845,7 @@
 
             <!-- The photo's box: on a phone it carries the card's background behind the round photo. -->
             <div class="profile">
-              <img src="/assets/images/profil.jpeg" srcset="/assets/images/profil-160.webp 160w, /assets/images/profil-320.webp 320w, /assets/images/profil-500.webp 500w" sizes="220px" id="profile-picture">
+              <img src="/assets/images/profil.jpeg" srcset="/assets/images/profil-160.webp 160w, /assets/images/profil-320.webp 320w, /assets/images/profil-500.webp 500w" sizes="(max-width: 51.25em) 7rem, 14rem" id="profile-picture">
                 <xsl:attribute name="alt"><xsl:value-of select="basics/name"/></xsl:attribute>
               </img>
             </div>
@@ -1502,7 +1503,8 @@
       <xsl:if test="$code = $lang">
         <xsl:attribute name="class">active</xsl:attribute>
       </xsl:if>
-      <xsl:value-of select="/resume/meta/langNames/*[name() = $code]"/>
+      <span class="lang-full"><xsl:value-of select="/resume/meta/langNames/*[name() = $code]"/></span>
+      <span class="lang-code" aria-hidden="true"><xsl:value-of select="translate($code, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/></span>
     </a>
   </xsl:template>
 

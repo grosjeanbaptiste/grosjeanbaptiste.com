@@ -31,7 +31,7 @@ for (const lang of LANGS) {
   const months = Number(tag(src, 'months'));
   const group = (html.match(/<div class="tl-zoom"[^>]*>[\s\S]*?<\/div>/) || [''])[0];
 
-  test(`${lang}: the zoom is a radio per zoom, the five-year one chosen`, () => {
+  test(`${lang}: the zoom is a radio per zoom, none chosen: the screen sets the default`, () => {
     assert.equal(zooms.length, 3);
     const radios = [...group.matchAll(/<input type="radio"([^>]*)>/g)].map((m) => m[1]);
     assert.equal(radios.length, 3);
@@ -41,8 +41,38 @@ for (const lang of LANGS) {
     }
     assert.deepEqual(
       radios.map((r) => /\schecked/.test(r)),
-      zooms.map(({ years }) => years === '5'),
+      zooms.map(() => false),
     );
+  });
+
+  // A phone starts on two years, anything wider on five: with no radio chosen,
+  // the rules that set the scale, and the label that reads as chosen, say which.
+  for (const [screen, years, query] of [
+    ['phone', '2', '@media \\(max-width: 48em\\)'],
+    ['wide screen', '5', '@media \\(min-width: 48\\.01em\\)'],
+  ])
+    test(`${lang}: on a ${screen} the default zoom is ${years} years`, () => {
+      const wanted = Math.max(1, months / (Number(years) * 12));
+      const rule = html.match(
+        new RegExp(
+          `${query}\\s*\\{\\s*#timeline:not\\(:has\\(\\.tl-zoom-input:checked\\)\\) \\.tl-grid\\s*\\{\\s*--stretch:\\s*([\\d.]+)`,
+        ),
+      );
+      assert.ok(rule, `no default rule on a ${screen}`);
+      assert.ok(Math.abs(Number(rule[1]) - wanted) < 0.001, `${rule[1]} != ${wanted}`);
+    });
+
+  test(`${lang}: the default zoom's label and PDF are set by css/timeline-zoom.css`, () => {
+    const css = fs.readFileSync(path.join(ROOT, 'css/timeline-zoom.css'), 'utf8');
+    for (const [query, years] of [
+      ['max-width: 48em', '2'],
+      ['min-width: 48.01em', '5'],
+    ]) {
+      const block = css.match(new RegExp(`@media \\(${query}\\)\\s*\\{[\\s\\S]*?\\n\\}`));
+      assert.ok(block, `no ${query} block`);
+      assert.match(block[0], new RegExp(`#tl-z-${years} \\+ label`));
+      assert.match(block[0], new RegExp(`\\[data-zoom="${years}"\\]`));
+    }
   });
 
   test(`${lang}: each radio has its label, as the page words it`, () => {
