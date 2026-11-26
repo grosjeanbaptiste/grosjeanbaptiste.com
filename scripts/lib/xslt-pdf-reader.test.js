@@ -173,3 +173,15 @@ test('the reader maps the vertical wheel to its sideways scroll, in both readers
     assert.match(src, /scrollLeft/, `${file} never moves the pages sideways`);
   }
 });
+
+test('the readers set the verso on the left of the recto (right-to-left container)', () => {
+  for (const file of ['css/pdf-reader.css', 'react/src/ui/styles/pdf.css']) {
+    const css = fs.readFileSync(path.join(__dirname, '..', '..', file), 'utf8');
+    assert.match(css, /\.pdf-container \{[^}]*direction: rtl;/s, `${file}: container is not rtl`);
+    assert.match(
+      css,
+      /\.pdf-container[^{]*\.page \{[^}]*direction: ltr;/s,
+      `${file}: pages are not ltr`,
+    );
+  }
+});
