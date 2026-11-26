@@ -102,3 +102,11 @@ test('a phone folds the parts of a family into its bar and closes the rows up', 
   assert.ok(folded.foldRows < folded.rows, 'the rows did not close up');
   assert.ok(folded.bars.filter((b) => !b.part).every((b) => b.foldRow !== undefined));
 });
+
+test('on a phone the course units are folded and the rows close up', () => {
+  const l = lane();
+  const units = l.bars.filter((b) => b.kind === 'unit');
+  assert.ok(units.length > 0 && units.every((b) => b.part));
+  assert.equal(l.foldRows, bare().rows);
+  assert.ok(l.bars.filter((b) => b.kind !== 'unit').every((b) => b.foldRow !== undefined));
+});

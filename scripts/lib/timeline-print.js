@@ -31,9 +31,11 @@ function onPaper(lane, bare) {
 // them all, they are hidden and the rows close up. A part is a bar naming a
 // family of its own group; each other bar keeps the row of the folded layout.
 // A lane whose two layouts do not list the same bars keeps all of its own.
+// A course unit is folded too: it is a row of its degree's block, read in the entry.
 const isPart = (lane, bar) =>
-  Boolean(bar.partOf) &&
-  lane.bars.some((o) => o !== bar && o.name === bar.partOf && o.group === bar.group);
+  bar.kind === 'unit' ||
+  (Boolean(bar.partOf) &&
+    lane.bars.some((o) => o !== bar && o.name === bar.partOf && o.group === bar.group));
 
 function onPhone(lane, fold) {
   const kept = lane.bars.filter((bar) => !isPart(lane, bar));
@@ -93,12 +95,11 @@ function foldedOnPaper(lane, paper) {
 function withPrintRows(resume, today) {
   const screen = timelineOf(resume, today);
   const bare = timelineOf(resume, today, { units: false });
-  const fold = timelineOf(resume, today, { fold: true });
   const paper = timelineOf(resume, today, { units: false, fold: true });
   return {
     ...screen,
     lanes: screen.lanes.map((lane, i) =>
-      foldedOnPaper(onPhone(onPaper(lane, bare.lanes[i]), fold.lanes[i]), paper.lanes[i]),
+      foldedOnPaper(onPhone(onPaper(lane, bare.lanes[i]), paper.lanes[i]), paper.lanes[i]),
     ),
   };
 }
