@@ -71,6 +71,20 @@
       const linkService = new viewer.PDFLinkService({ eventBus, externalLinkTarget: 2 });
       const pdfViewer = new viewer.PDFViewer({ container, eventBus, linkService });
       linkService.setViewer(pdfViewer);
+      // The wheel moves the pages sideways, the only way they scroll; at either
+      // end, or when nothing overflows, it goes on to the page of the site.
+      container.addEventListener(
+        'wheel',
+        (event) => {
+          if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+          const max = container.scrollWidth - container.clientWidth;
+          const next = Math.min(max, Math.max(0, container.scrollLeft + event.deltaY));
+          if (max <= 0 || next === container.scrollLeft) return;
+          container.scrollLeft = next;
+          event.preventDefault();
+        },
+        { passive: false },
+      );
       // The recto and the verso side by side, the frame scrolling sideways and
       // never up or down: the page's height is fitted to the frame, and a zoom
       // by hand grows the frame with the pages, so that it is the page of the
