@@ -165,3 +165,11 @@ test('the toolbar stays on screen while a zoomed page grows the frame', () => {
   const css = fs.readFileSync('css/pdf-reader.css', 'utf8');
   assert.match(css, /\.pdf-toolbar \{[^}]*position: sticky/);
 });
+
+test('the reader maps the vertical wheel to its sideways scroll, in both readers', () => {
+  for (const file of ['js/xslt-pdf-reader.js', 'react/src/infrastructure/pdfjs-renderer.ts']) {
+    const src = fs.readFileSync(path.join(__dirname, '..', '..', file), 'utf8');
+    assert.match(src, /addEventListener\(\s*'wheel'/, `${file} has no wheel handler`);
+    assert.match(src, /scrollLeft/, `${file} never moves the pages sideways`);
+  }
+});

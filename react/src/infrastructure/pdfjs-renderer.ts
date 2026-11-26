@@ -64,6 +64,20 @@ export class PdfJsRenderer implements PdfRenderer {
     const linkService = new viewer.PDFLinkService({ eventBus, externalLinkTarget: 2 });
     const pdfViewer = new viewer.PDFViewer({ container, eventBus, linkService });
     linkService.setViewer(pdfViewer);
+    // The wheel moves the pages sideways, the only way they scroll; at either
+    // end, or when nothing overflows, it goes on to the page of the site.
+    container.addEventListener(
+      'wheel',
+      (event: WheelEvent) => {
+        if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+        const max = container.scrollWidth - container.clientWidth;
+        const next = Math.min(max, Math.max(0, container.scrollLeft + event.deltaY));
+        if (max <= 0 || next === container.scrollLeft) return;
+        container.scrollLeft = next;
+        event.preventDefault();
+      },
+      { passive: false },
+    );
     // The recto and the verso side by side; the reader scrolls sideways and never
     // up or down. The pages' height is fitted to the frame, and a zoom grows the
     // frame (and the reader that holds it) with the pages, so that it is the page
