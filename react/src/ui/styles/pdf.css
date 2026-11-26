@@ -76,13 +76,9 @@
   /* Sideways only: a taller page grows the frame instead of scrolling in it. */
   overflow-x: auto;
   overflow-y: hidden;
-  /* Right to left: the recto (page 1) on the right, the verso on its left.
-     PDF.js reads the container's direction; the pages keep their own. */
-  direction: rtl;
 }
 
 .pdf-container .pdfViewer .page {
-  direction: ltr;
   margin: 1rem;
   border: 0;
   box-shadow: var(--shadow);
@@ -98,8 +94,6 @@
   align-items: flex-start;
   overflow-x: auto;
   overflow-y: hidden;
-  /* The verso on the left of the recto, as in the reader. */
-  direction: rtl;
   background: inherit;
 }
 
