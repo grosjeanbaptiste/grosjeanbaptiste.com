@@ -3769,7 +3769,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
           <label>Ausbildung</label>
           <rows>14</rows>
           <printRows>6</printRows>
-          <foldRows>14</foldRows>
+          <foldRows>6</foldRows>
           <groups>
             <group>
               <left>41.05%</left>
@@ -3780,7 +3780,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <printRow>0</printRow>
               <printRows>2</printRows>
               <foldRow>0</foldRow>
-              <foldRows>10</foldRows>
+              <foldRows>2</foldRows>
             </group>
             <group>
               <left>52.64%</left>
@@ -3791,7 +3791,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <printRow>0</printRow>
               <printRows>5</printRows>
               <foldRow>0</foldRow>
-              <foldRows>13</foldRows>
+              <foldRows>5</foldRows>
             </group>
             <group>
               <left>76.06%</left>
@@ -3802,7 +3802,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <printRow>0</printRow>
               <printRows>5</printRows>
               <foldRow>0</foldRow>
-              <foldRows>11</foldRows>
+              <foldRows>5</foldRows>
             </group>
           </groups>
           <bars>
@@ -3919,7 +3919,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <left>41.05%</left>
               <width>4.35%</width>
               <row>2</row>
-              <foldRow>2</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-politikwissenschaften</target>
@@ -3934,7 +3934,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <left>41.05%</left>
               <width>4.35%</width>
               <row>3</row>
-              <foldRow>3</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-politikwissenschaften</target>
@@ -3949,7 +3949,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <left>41.05%</left>
               <width>4.35%</width>
               <row>4</row>
-              <foldRow>4</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-politikwissenschaften</target>
@@ -3964,7 +3964,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <left>41.05%</left>
               <width>4.35%</width>
               <row>5</row>
-              <foldRow>5</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-politikwissenschaften</target>
@@ -3979,7 +3979,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <left>41.05%</left>
               <width>4.35%</width>
               <row>6</row>
-              <foldRow>6</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-politikwissenschaften</target>
@@ -3994,7 +3994,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <left>41.05%</left>
               <width>4.35%</width>
               <row>7</row>
-              <foldRow>7</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-politikwissenschaften</target>
@@ -4009,7 +4009,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <left>41.05%</left>
               <width>4.35%</width>
               <row>8</row>
-              <foldRow>8</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-universite-saint-louis-bruxelles-bachelor-in-politikwissenschaften</target>
@@ -4024,7 +4024,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
               <left>41.05%</left>
               <width>4.35%</width>
               <row>9</row>
-              <foldRow>9</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4126,7 +4126,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>52.64%</left>
               <width>5.52%</width>
               <row>2</row>
-              <foldRow>2</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4141,7 +4141,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>52.64%</left>
               <width>5.52%</width>
               <row>3</row>
-              <foldRow>3</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4156,7 +4156,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>52.64%</left>
               <width>5.52%</width>
               <row>4</row>
-              <foldRow>4</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4171,7 +4171,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>52.64%</left>
               <width>5.52%</width>
               <row>5</row>
-              <foldRow>5</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4186,7 +4186,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>52.64%</left>
               <width>5.52%</width>
               <row>6</row>
-              <foldRow>6</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4201,7 +4201,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>58.18%</left>
               <width>5.78%</width>
               <row>2</row>
-              <foldRow>2</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4216,7 +4216,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>58.18%</left>
               <width>5.78%</width>
               <row>3</row>
-              <foldRow>3</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4231,7 +4231,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>58.18%</left>
               <width>5.78%</width>
               <row>4</row>
-              <foldRow>4</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4246,7 +4246,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>58.18%</left>
               <width>5.78%</width>
               <row>5</row>
-              <foldRow>5</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4261,7 +4261,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>58.18%</left>
               <width>5.78%</width>
               <row>6</row>
-              <foldRow>6</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4276,7 +4276,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>58.18%</left>
               <width>5.78%</width>
               <row>7</row>
-              <foldRow>7</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4291,7 +4291,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>58.18%</left>
               <width>5.78%</width>
               <row>8</row>
-              <foldRow>8</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4306,7 +4306,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>58.18%</left>
               <width>5.78%</width>
               <row>9</row>
-              <foldRow>9</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4321,7 +4321,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>63.98%</left>
               <width>5.78%</width>
               <row>2</row>
-              <foldRow>2</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4336,7 +4336,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>63.98%</left>
               <width>5.78%</width>
               <row>3</row>
-              <foldRow>3</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4351,7 +4351,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>63.98%</left>
               <width>5.78%</width>
               <row>4</row>
-              <foldRow>4</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4366,7 +4366,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>63.98%</left>
               <width>5.78%</width>
               <row>5</row>
-              <foldRow>5</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4381,7 +4381,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>63.98%</left>
               <width>5.78%</width>
               <row>6</row>
-              <foldRow>6</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4396,7 +4396,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>63.98%</left>
               <width>5.78%</width>
               <row>7</row>
-              <foldRow>7</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4411,7 +4411,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>69.77%</left>
               <width>6.29%</width>
               <row>2</row>
-              <foldRow>2</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4426,7 +4426,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>69.77%</left>
               <width>6.29%</width>
               <row>3</row>
-              <foldRow>3</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4441,7 +4441,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>69.77%</left>
               <width>6.29%</width>
               <row>4</row>
-              <foldRow>4</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4457,7 +4457,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <width>17.63%</width>
               <row>10</row>
               <printRow>2</printRow>
-              <foldRow>10</foldRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4473,7 +4473,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <width>17.63%</width>
               <row>11</row>
               <printRow>3</printRow>
-              <foldRow>11</foldRow>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-ecole-pratique-hautes-etudes-commerciales-ephec-eps-professioneller-bachelor</target>
@@ -4491,7 +4491,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <width>2.4%</width>
               <row>12</row>
               <printRow>4</printRow>
-              <foldRow>12</foldRow>
+              <foldRow>4</foldRow>
             </bar>
             <bar>
               <target>education-institut-saint-louis-bruxelles-attestation</target>
@@ -4508,7 +4508,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <width>4.35%</width>
               <row>13</row>
               <printRow>5</printRow>
-              <foldRow>13</foldRow>
+              <foldRow>5</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4610,7 +4610,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>76.06%</left>
               <width>5.29%</width>
               <row>2</row>
-              <foldRow>2</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4625,7 +4625,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>76.06%</left>
               <width>5.29%</width>
               <row>3</row>
-              <foldRow>3</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4640,7 +4640,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>76.06%</left>
               <width>5.29%</width>
               <row>4</row>
-              <foldRow>4</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4655,7 +4655,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>76.06%</left>
               <width>5.29%</width>
               <row>5</row>
-              <foldRow>5</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4670,7 +4670,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>81.37%</left>
               <width>5.78%</width>
               <row>2</row>
-              <foldRow>2</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4685,7 +4685,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>81.37%</left>
               <width>5.78%</width>
               <row>3</row>
-              <foldRow>3</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4700,7 +4700,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>81.37%</left>
               <width>5.78%</width>
               <row>4</row>
-              <foldRow>4</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4715,7 +4715,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>81.37%</left>
               <width>5.78%</width>
               <row>5</row>
-              <foldRow>5</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4730,7 +4730,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>81.37%</left>
               <width>5.78%</width>
               <row>6</row>
-              <foldRow>6</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4745,7 +4745,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>87.17%</left>
               <width>5.78%</width>
               <row>2</row>
-              <foldRow>2</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4760,7 +4760,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>87.17%</left>
               <width>5.78%</width>
               <row>3</row>
-              <foldRow>3</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4775,7 +4775,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>87.17%</left>
               <width>5.78%</width>
               <row>4</row>
-              <foldRow>4</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4790,7 +4790,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>87.17%</left>
               <width>5.78%</width>
               <row>5</row>
-              <foldRow>5</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4805,7 +4805,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>87.17%</left>
               <width>5.78%</width>
               <row>6</row>
-              <foldRow>6</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4820,7 +4820,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>87.17%</left>
               <width>5.78%</width>
               <row>7</row>
-              <foldRow>7</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4835,7 +4835,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>92.96%</left>
               <width>5.64%</width>
               <row>2</row>
-              <foldRow>2</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4850,7 +4850,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>92.96%</left>
               <width>5.64%</width>
               <row>3</row>
-              <foldRow>3</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4865,7 +4865,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <left>92.96%</left>
               <width>5.64%</width>
               <row>4</row>
-              <foldRow>4</foldRow>
+              <part>true</part>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4881,7 +4881,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <width>16.01%</width>
               <row>8</row>
               <printRow>2</printRow>
-              <foldRow>8</foldRow>
+              <foldRow>2</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4897,7 +4897,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <width>16.01%</width>
               <row>9</row>
               <printRow>3</printRow>
-              <foldRow>9</foldRow>
+              <foldRow>3</foldRow>
             </bar>
             <bar>
               <target>education-umons-master-of-science</target>
@@ -4917,7 +4917,7 @@ Programm: Analyse und Design, Programmierung in .NET, Java und Web, relationale 
               <width>4.69%</width>
               <row>10</row>
               <printRow>4</printRow>
-              <foldRow>10</foldRow>
+              <foldRow>4</foldRow>
             </bar>
           </bars>
         </lane>
