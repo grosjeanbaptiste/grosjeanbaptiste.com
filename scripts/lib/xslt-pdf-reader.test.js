@@ -160,3 +160,8 @@ for (const lang of LANGS) {
 test('the vendored PDF.js is published: .nojekyll is there', () => {
   assert.ok(fs.existsSync(path.join(ROOT, '.nojekyll')));
 });
+
+test('the toolbar stays on screen while a zoomed page grows the frame', () => {
+  const css = fs.readFileSync('css/pdf-reader.css', 'utf8');
+  assert.match(css, /\.pdf-toolbar \{[^}]*position: sticky/);
+});
