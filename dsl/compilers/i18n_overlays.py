@@ -69,6 +69,8 @@ def _education_overlay(e, lang: str) -> dict[str, Any] | None:
         entry["studyType"] = val
     if (val := _tr(e.area, lang)) is not None:
         entry["area"] = val
+    if (val := _tr(e.short_area, lang)) is not None:
+        entry["shortArea"] = val
     if (val := _tr(e.score, lang)) is not None:
         entry["gpa"] = val
     if (val := _tr(e.note, lang)) is not None:

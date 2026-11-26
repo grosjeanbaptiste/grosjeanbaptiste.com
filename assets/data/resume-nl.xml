@@ -5148,7 +5148,7 @@ Programma: analyse en ontwerp, programmeren in .NET, Java en web, relationele da
       </lanes>
     </timeline>
     <degrees>
-      <obtained>Master of Science — Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting</obtained>
+      <obtained>Master of Science — Computerwetenschappen (duaal leren)</obtained>
     </degrees>
   </meta>
   <basics>
@@ -5508,6 +5508,7 @@ De opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van d
         <course>Cryptographie et sécurité des systèmes informatiques</course>
         <course>Éthique et droit de l'informatique</course>
       </courses>
+      <shortArea>Computerwetenschappen (duaal leren)</shortArea>
       <gpa>13,04/20 — behaald met voldoening</gpa>
       <summary>Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger &amp; buddy TandeMons. Kernvakken: software engineering en projectbeheer, artificiële intelligentie, databanken, datastructuren, operationeel onderzoek, cryptografie en IT-beveiliging, ethiek en informaticarecht, met twee betaalde bedrijfsstages.</summary>
       <skills>

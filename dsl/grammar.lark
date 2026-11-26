@@ -87,6 +87,7 @@ education_field: "institution" value         -> edu_institution
                | "url" value                 -> edu_url
                | "studyType" value           -> edu_studytype
                | "area" value                -> edu_area
+               | "shortArea" value           -> edu_shortarea
                | "period" date_range         -> edu_period
                | "score" value               -> edu_score
                | "note" value                -> edu_note

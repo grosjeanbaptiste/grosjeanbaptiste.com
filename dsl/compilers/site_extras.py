@@ -94,6 +94,8 @@ def _education_extras(resume: Resume) -> list[dict[str, Any] | None]:
     out: list[dict[str, Any] | None] = []
     for e in resume.education:
         extras: dict[str, Any] = {}
+        if e.short_area is not None:
+            extras["shortArea"] = _en(e.short_area)
         if e.score is not None:
             extras["gpa"] = _en(e.score)
         if e.note is not None:

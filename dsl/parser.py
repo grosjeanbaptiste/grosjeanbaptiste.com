@@ -272,6 +272,9 @@ class _Builder(Transformer):
     def edu_area(self, meta, children):
         return ("area", children[0])
 
+    def edu_shortarea(self, meta, children):
+        return ("short_area", children[0])
+
     def edu_period(self, meta, children):
         return ("period", children[0])
 
