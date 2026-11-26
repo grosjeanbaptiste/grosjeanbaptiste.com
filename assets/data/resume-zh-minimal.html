@@ -384,7 +384,7 @@
 <link rel="stylesheet" href="/css/entry-panel.css">
 <link rel="stylesheet" href="/css/browse.css">
 <link rel="stylesheet" href="/css/pdf-reader.css">
-<script src="/js/timeline.js" defer></script><script src="/js/xslt-links.js" defer></script><script src="/js/search-rank.js" defer></script><script src="/js/search.js" defer></script><script src="/js/xslt-pdf-reader.js" defer></script>
+<script src="/js/timeline.js" defer></script><script src="/js/xslt-links.js" defer></script><script src="/js/search-rank.js" defer></script><script src="/js/search.js" defer></script><script type="module" src="/js/xslt-pdf-reader.js"></script>
 </head>
 <body>
 <div class="toolbar">
@@ -2416,11 +2416,14 @@
 <p class="tl-skill-said" data-skill="xquery">1 项使用 XQuery <a href="#timeline">清除筛选</a></p>
 <p class="tl-skill-said" data-skill="xslt">1 项使用 XSLT <a href="#timeline">清除筛选</a></p>
 <p class="tl-skill-said" data-skill="xss">1 项使用 XSS <a href="#timeline">清除筛选</a></p>
-</div></section><section id="pdf" data-pdfjs="/assets/_vendor/pdfjs/"><h2>PDF</h2>
+</div></section><section id="pdf" data-pdfjs="/assets/_vendor/pdfjs/" data-pdflib="/assets/_vendor/pdf-lib/pdf-lib.esm.min.js"><h2>PDF</h2>
 <div class="pdf-reader" data-file="/assets/cv/cv_grosjean_baptiste_zh.pdf">
 <div class="pdf-toolbar" hidden="hidden">
-<div class="pdf-choice" role="group" aria-label="PDF">
-<button type="button" data-file="/assets/cv/cv_grosjean_baptiste_zh.pdf" data-download="下载简历" aria-pressed="true">PDF</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_2y_zh.pdf" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 近 2 年</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_5y_zh.pdf" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 近 5 年</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_zh.pdf" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 全部</button>
+<div class="pdf-choice" role="group" data-side="recto" aria-label="正面">
+<span class="pdf-side">正面</span><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_zh.pdf" data-page="1" data-download="下载简历" aria-pressed="true">PDF · 1</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_zh.pdf" data-page="2" data-download="下载简历" aria-pressed="false">PDF · 2</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_2y_zh.pdf" data-page="1" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 近 2 年 · 1</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_2y_zh.pdf" data-page="2" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 近 2 年 · 2</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_5y_zh.pdf" data-page="1" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 近 5 年 · 1</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_5y_zh.pdf" data-page="2" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 近 5 年 · 2</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_zh.pdf" data-page="1" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 全部 · 1</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_zh.pdf" data-page="2" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 全部 · 2</button>
+</div>
+<div class="pdf-choice" role="group" data-side="verso" aria-label="背面">
+<span class="pdf-side">背面</span><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_zh.pdf" data-page="1" data-download="下载简历" aria-pressed="false">PDF · 1</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_zh.pdf" data-page="2" data-download="下载简历" aria-pressed="true">PDF · 2</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_2y_zh.pdf" data-page="1" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 近 2 年 · 1</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_2y_zh.pdf" data-page="2" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 近 2 年 · 2</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_5y_zh.pdf" data-page="1" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 近 5 年 · 1</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_5y_zh.pdf" data-page="2" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 近 5 年 · 2</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_zh.pdf" data-page="1" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 全部 · 1</button><button type="button" data-file="/assets/cv/cv_grosjean_baptiste_timeline_zh.pdf" data-page="2" data-download="下载时间线" aria-pressed="false">时间线 (PDF) · 全部 · 2</button>
 </div>
 <button type="button" data-pdf="out" aria-label="缩小">−</button><button type="button" data-pdf="in" aria-label="放大">+</button><span class="pdf-pages" data-one="页" data-many="页"></span><a class="pdf-download" download="download" href="/assets/cv/cv_grosjean_baptiste_zh.pdf">下载简历</a><a class="pdf-open" target="_blank" rel="noopener noreferrer" href="/assets/cv/cv_grosjean_baptiste_zh.pdf">打开文件</a>
 </div>

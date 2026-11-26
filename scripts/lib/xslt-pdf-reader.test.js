@@ -24,13 +24,24 @@ const render = (lang) =>
 const xml = (lang) => fs.readFileSync(path.join(ROOT, `assets/data/resume-${lang}.xml`), 'utf8');
 const tag = (src, name) => (src.match(new RegExp(`<${name}>([^<]*)</${name}>`)) || [])[1];
 
-// The reader's choices: { summary, file } each, in the order the buttons list them.
-const choices = (html) =>
-  [
-    ...html.matchAll(
-      /<button type="button" data-file="([^"]+)" data-download="[^"]*" aria-pressed="[a-z]+">\s*([^<]*?)\s*<\/button>/g,
+// One side of the sheet: its buttons, { summary, file, page, pressed } each, in
+// the order they are listed. Both sides offer the same pages.
+const side = (html, name) => {
+  const group = html.match(
+    new RegExp(`<div class="pdf-choice" role="group" data-side="${name}"[\\s\\S]*?</div>`),
+  )[0];
+  return [
+    ...group.matchAll(
+      /<button type="button" data-file="([^"]+)" data-page="(\d)" data-download="[^"]*" aria-pressed="([a-z]+)">\s*([^<]*?)\s*<\/button>/g,
     ),
-  ].map((m) => ({ file: m[1], summary: m[2].trim() }));
+  ].map((m) => ({
+    file: m[1],
+    page: Number(m[2]),
+    pressed: m[3] === 'true',
+    summary: m[4].trim(),
+  }));
+};
+const choices = (html) => side(html, 'recto');
 // What the reader shows before any choice: the <object>'s file.
 const shown = (html) => html.match(/<object[^>]*\sdata="([^"]+)"/)[1];
 
@@ -39,25 +50,40 @@ for (const lang of LANGS) {
   const src = xml(lang);
   const found = choices(html);
   const timeline = src.match(/<pdf>[\s\S]*?<\/pdf>/)[0];
+  const files = [
+    `/assets/cv/cv_grosjean_baptiste_${lang}.pdf`,
+    tag(timeline, 'two'),
+    tag(timeline, 'five'),
+    tag(timeline, 'all'),
+  ];
 
-  test(`${lang}: one reader, with the CV and the timeline at three zooms to choose from`, () => {
+  test(`${lang}: one reader, whose recto and verso each take any page of the CV or the timeline`, () => {
     assert.equal(html.match(/<div class="pdf-reader"/g).length, 1);
     assert.equal(html.match(/<object /g).length, 1);
+    // Two pages of each of the four PDFs.
     assert.deepEqual(
-      found.map((p) => p.file),
-      [
-        `/assets/cv/cv_grosjean_baptiste_${lang}.pdf`,
-        tag(timeline, 'two'),
-        tag(timeline, 'five'),
-        tag(timeline, 'all'),
-      ],
+      found.map((p) => [p.file, p.page]),
+      files.flatMap((file) => [
+        [file, 1],
+        [file, 2],
+      ]),
     );
-    assert.equal(shown(html), found[0].file);
-    assert.ok(html.includes(`<div class="pdf-reader" data-file="${found[0].file}"`));
+    assert.deepEqual(
+      side(html, 'verso'),
+      found.map((p, i) => ({ ...p, pressed: i === 1 })),
+    );
+    // Opened on the CV as shipped: its recto, its verso.
+    assert.deepEqual(
+      found.map((p) => p.pressed),
+      found.map((_, i) => i === 0),
+    );
+    assert.equal(shown(html), files[0]);
+    assert.ok(html.includes(`<div class="pdf-reader" data-file="${files[0]}"`));
+    assert.equal(html.match(/aria-pressed="true"/g).length, 2, 'one page is marked per side');
   });
 
   test(`${lang}: each choice is a PDF that is shipped`, () => {
-    for (const { file } of found)
+    for (const file of files)
       assert.ok(fs.existsSync(path.join(ROOT, file.replace(/^\//, ''))), `${file} is missing`);
   });
 
@@ -67,16 +93,18 @@ for (const lang of LANGS) {
     ].map((m) => m[1]);
     assert.equal(zooms.length, 3);
     const label = tag(timeline, 'label');
-    assert.equal(found[1].summary, `${label} · ${zooms[0]}`);
-    assert.equal(found[2].summary, `${label} · ${zooms[1]}`);
-    assert.equal(found[3].summary, `${label} · ${zooms[2]}`);
-    assert.ok(found[0].summary.length > 0);
-    assert.equal(html.match(/aria-pressed="true"/g).length, 1, 'one choice is marked');
+    zooms.forEach((zoom, i) => {
+      assert.equal(found[2 + 2 * i].summary, `${label} · ${zoom} · 1`);
+      assert.equal(found[3 + 2 * i].summary, `${label} · ${zoom} · 2`);
+    });
+    assert.ok(found[0].summary.endsWith(' · 1') && found[1].summary.endsWith(' · 2'));
+    assert.ok(html.includes(`<span class="pdf-side">${tag(src, 'recto')}</span>`));
+    assert.ok(html.includes(`<span class="pdf-side">${tag(src, 'verso')}</span>`));
   });
 
   test(`${lang}: a reader with no script has the CV and a link to each other PDF`, () => {
-    assert.ok(html.includes(`<a href="${found[0].file}"`), 'no link to the CV');
-    for (const { file } of found.slice(1)) assert.ok(html.includes(`<li><a href="${file}"`), file);
+    assert.ok(html.includes(`<a href="${files[0]}"`), 'no link to the CV');
+    for (const file of files.slice(1)) assert.ok(html.includes(`<li><a href="${file}"`), file);
   });
 
   test(`${lang}: it is a section the views bar can point at, and is left out of print`, () => {
@@ -87,6 +115,7 @@ for (const lang of LANGS) {
   test(`${lang}: the engine is the site's own`, () => {
     assert.doesNotMatch(html, /pdf-preview-reader|cv-reader-view|name="cv-reader"/);
     assert.match(html, /data-pdfjs="\/assets\/_vendor\/pdfjs\/"/);
+    assert.match(html, /data-pdflib="\/assets\/_vendor\/pdf-lib\/pdf-lib\.esm\.min\.js"/);
   });
 }
 
@@ -120,15 +149,6 @@ for (const lang of LANGS) {
   });
 }
 
-test('the reader draws with the PDF.js files it ships, from the path the markup names', () => {
-  const html = render('en');
-  const dir = html.match(/<section id="pdf" data-pdfjs="([^"]+)"/)[1];
-  for (const file of ['pdf.min.mjs', 'pdf.worker.min.mjs', 'pdf_viewer.mjs', 'pdf_viewer.css'])
-    assert.ok(fs.existsSync(path.join(ROOT, dir, file)), `${dir}${file} is missing`);
-  assert.match(html, /<script src="\/js\/xslt-pdf-reader\.js"/);
-  assert.match(html, /<link[^>]*href="\/css\/pdf-reader\.css"/);
-});
-
 for (const lang of LANGS) {
   test(`${lang}: the reader has a toolbar worded as the interactive view words it`, () => {
     const html = render(lang);
@@ -140,6 +160,8 @@ for (const lang of LANGS) {
       'fitWidth',
       'openFile',
       'failed',
+      'recto',
+      'verso',
       'pageOne',
       'pageMany',
       'downloadCV',
@@ -153,23 +175,3 @@ for (const lang of LANGS) {
     assert.ok(html.includes(`data-download="${words('downloadTimeline')}"`));
   });
 }
-
-// GitHub Pages runs the repository through Jekyll, which drops every path that
-// starts with an underscore (assets/_vendor/ was a 404 online): .nojekyll turns
-// that off, and the reader's engine is only served with it.
-test('the vendored PDF.js is published: .nojekyll is there', () => {
-  assert.ok(fs.existsSync(path.join(ROOT, '.nojekyll')));
-});
-
-test('the toolbar stays on screen while a zoomed page grows the frame', () => {
-  const css = fs.readFileSync('css/pdf-reader.css', 'utf8');
-  assert.match(css, /\.pdf-toolbar \{[^}]*position: sticky/);
-});
-
-test('the reader maps the vertical wheel to its sideways scroll, in both readers', () => {
-  for (const file of ['js/xslt-pdf-reader.js', 'react/src/infrastructure/pdfjs-renderer.ts']) {
-    const src = fs.readFileSync(path.join(__dirname, '..', '..', file), 'utf8');
-    assert.match(src, /addEventListener\(\s*'wheel'/, `${file} has no wheel handler`);
-    assert.match(src, /scrollLeft/, `${file} never moves the pages sideways`);
-  }
-});

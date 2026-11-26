@@ -90,7 +90,7 @@ test('the filter adds no script to the minimal theme', () => {
   // The files it loads are the ones it shares with the rich theme (the
   // timeline's keys, the address, the search, the warming of the other displays). None filters.
   assert.deepEqual(
-    [...html.matchAll(/<script src="([^"]+)"/g)].map((m) => m[1]),
+    [...html.matchAll(/<script (?:type="module" )?src="([^"]+)"/g)].map((m) => m[1]),
     [
       '/js/views-ahead.js',
       '/js/timeline.js',

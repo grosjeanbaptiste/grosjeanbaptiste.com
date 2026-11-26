@@ -4,27 +4,13 @@
 // is drawn by itself as it nears the screen, so a visitor who never scrolls to
 // it pays nothing, and its choice (buttons) swaps the PDF it shows. Without this script
 // the reader keeps the browser's own <object> and a list of links.
+import { fetchBytes, links, pages, sheet, sideways } from '/js/xslt-pdf-parts.js';
+
 (() => {
   const section = document.getElementById('pdf');
   if (!section) return;
   const base = section.dataset.pdfjs;
   let engine;
-
-  // One plain GET per file, kept for the page's life and started in parallel
-  // with the engine (or as a pointer reaches a choice), so the bytes are there
-  // when PDF.js is. The worker takes ownership of what it is given: a copy.
-  const bytes = new Map();
-  const fetchBytes = (file) => {
-    if (!bytes.has(file)) {
-      const got = fetch(file).then((response) => {
-        if (!response.ok) throw new Error(`${response.status} ${file}`);
-        return response.arrayBuffer();
-      });
-      got.catch(() => bytes.delete(file));
-      bytes.set(file, got);
-    }
-    return bytes.get(file);
-  };
 
   // The core first: the viewer reads globalThis.pdfjsLib, which only the core
   // defines. The worker is started once and handed to every document.
@@ -53,7 +39,6 @@
     const toolbar = panel.querySelector('.pdf-toolbar');
     const failed = panel.querySelector('.pdf-failed');
     const count = toolbar.querySelector('.pdf-pages');
-    const choice = toolbar.querySelector('.pdf-choice');
     try {
       fetchBytes(panel.dataset.file).catch(() => {});
       const { pdfjs, viewer, pdfWorker } = await load();
@@ -71,20 +56,7 @@
       const linkService = new viewer.PDFLinkService({ eventBus, externalLinkTarget: 2 });
       const pdfViewer = new viewer.PDFViewer({ container, eventBus, linkService });
       linkService.setViewer(pdfViewer);
-      // The wheel moves the pages sideways, the only way they scroll; at either
-      // end, or when nothing overflows, it goes on to the page of the site.
-      container.addEventListener(
-        'wheel',
-        (event) => {
-          if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-          const max = container.scrollWidth - container.clientWidth;
-          const next = Math.min(max, Math.max(0, container.scrollLeft + event.deltaY));
-          if (max <= 0 || next === container.scrollLeft) return;
-          container.scrollLeft = next;
-          event.preventDefault();
-        },
-        { passive: false },
-      );
+      sideways(container);
       // The recto and the verso side by side, the frame scrolling sideways and
       // never up or down: the page's height is fitted to the frame, and a zoom
       // by hand grows the frame with the pages, so that it is the page of the
@@ -108,46 +80,73 @@
         if (event.pageNumber === 1) panel.dataset.drawn = '';
       });
 
+      // Each side of the sheet shows one page of one PDF, chosen with its own
+      // buttons. The two pages are put together into one two-page PDF in the
+      // page (pdf-lib), shown in the viewer and handed over by the download and
+      // open buttons; the CV as shipped (its recto, its verso) is shown as is.
+      const sides = ['recto', 'verso'].map((side) =>
+        toolbar.querySelector(`.pdf-choice[data-side="${side}"]`),
+      );
+      const chosen = (group) => group.querySelector('button[aria-pressed="true"]');
+      const assemble = async (picks) => {
+        const [a, b] = picks.map((button) => ({
+          file: button.dataset.file,
+          page: Number(button.dataset.page),
+        }));
+        // The CV as shipped needs no putting together.
+        if (a.file === b.file && a.page === 1 && b.page === 2) return undefined;
+        return sheet([a, b], section.dataset.pdflib);
+      };
+      // What the choice comes to: the bytes to show, and whether they were put together.
+      const prepare = async (picks) => {
+        const built = await assemble(picks);
+        const file = picks[0].dataset.file;
+        const data = built || new Uint8Array((await fetchBytes(file)).slice(0));
+        return { built, file, data };
+      };
       let current;
-      const show = async (file, download) => {
+      let blob;
+      let ticket = 0;
+      const show = async () => {
+        const mine = ++ticket;
         failed.hidden = true;
-        panel.dataset.file = file;
-        for (const a of toolbar.querySelectorAll('.pdf-download, .pdf-open')) a.href = file;
-        toolbar.querySelector('.pdf-download').textContent = download;
+        const picks = sides.map(chosen);
+        toolbar.querySelector('.pdf-download').textContent = picks[0].dataset.download;
         try {
-          const data = new Uint8Array((await fetchBytes(file)).slice(0));
-          const task = pdfjs.getDocument({ data, worker: pdfWorker });
+          const { built, file, data } = await prepare(picks);
+          // A later choice overtook this one: leave the links to it.
+          if (mine !== ticket) return;
+          blob = links(toolbar, built, file, blob);
+          const task = pdfjs.getDocument({ data: data.slice(0), worker: pdfWorker });
           const doc = await task.promise;
+          if (mine !== ticket) return void task.destroy();
           pdfViewer.setDocument(doc);
           linkService.setDocument(doc);
           // The shared worker outlives the document it served.
           if (current) current.destroy();
           current = task;
-          const n = doc.numPages;
-          count.textContent = `${n} ${n === 1 ? count.dataset.one : count.dataset.many}`;
+          pages(count, doc.numPages);
         } catch (error) {
-          console.error(`Displaying ${file} failed:`, error);
-          failed.hidden = false;
+          console.error('Displaying the chosen pages failed:', error);
+          failed.hidden = mine !== ticket;
         }
-      };
-      const pick = (button) => {
-        for (const b of choice.children) b.setAttribute('aria-pressed', String(b === button));
-        return show(button.dataset.file, button.dataset.download);
       };
       const ahead = (event) => {
         const button = event.target.closest('button[data-file]');
         if (button) fetchBytes(button.dataset.file).catch(() => {});
       };
-      choice.addEventListener('pointerover', ahead);
-      choice.addEventListener('focusin', ahead);
-      choice.addEventListener('click', (event) => {
-        const button = event.target.closest('button[data-file]');
-        if (button) pick(button);
-      });
-      await pick(
-        choice.querySelector(`button[data-file="${panel.dataset.file}"]`) ||
-          choice.firstElementChild,
-      );
+      for (const group of sides) {
+        group.addEventListener('pointerover', ahead);
+        group.addEventListener('focusin', ahead);
+        group.addEventListener('click', (event) => {
+          const button = event.target.closest('button[data-file]');
+          if (!button) return;
+          for (const b of group.querySelectorAll('button[data-file]'))
+            b.setAttribute('aria-pressed', String(b === button));
+          show();
+        });
+      }
+      await show();
 
       const act = {
         in: () => pdfViewer.increaseScale({ steps: 1 }),
