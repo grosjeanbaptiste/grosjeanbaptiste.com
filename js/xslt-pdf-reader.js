@@ -77,8 +77,9 @@
         'wheel',
         (event) => {
           if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+          // The container reads right to left: scrollLeft runs from 0 down to -max.
           const max = container.scrollWidth - container.clientWidth;
-          const next = Math.min(max, Math.max(0, container.scrollLeft + event.deltaY));
+          const next = Math.min(0, Math.max(-max, container.scrollLeft - event.deltaY));
           if (max <= 0 || next === container.scrollLeft) return;
           container.scrollLeft = next;
           event.preventDefault();
