@@ -157,6 +157,8 @@ class EducationEntry(Node):
     url: str | None = None
     study_type: Value | None = None
     area: Value | None = None
+    # Short form of `area` for one-line summaries (the header); absent = `area`.
+    short_area: Value | None = None
     period: DateRange | None = None
     score: Value | None = None  # aliased to `gpa` in the extras sidecar
     note: Value | None = None

@@ -5135,7 +5135,7 @@ TFE: WebMenu 2.0
       </lanes>
     </timeline>
     <degrees>
-      <obtained>理学硕士 — 计算机科学 (校企合作项目) — 专业化专精方向</obtained>
+      <obtained>理学硕士 — 计算机科学 (校企合作项目)</obtained>
     </degrees>
   </meta>
   <basics>
@@ -5495,6 +5495,7 @@ TFE: WebMenu 2.0
         <course>Cryptographie et sécurité des systèmes informatiques</course>
         <course>Éthique et droit de l'informatique</course>
       </courses>
+      <shortArea>计算机科学 (校企合作项目)</shortArea>
       <gpa>13.04/20 — 以满意成绩获得</gpa>
       <summary>硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 &amp; Buddy TandeMons。核心课程：软件工程与项目管理、人工智能、数据库、数据结构、运筹学、密码学与信息安全、信息伦理与法律，包含两次带薪企业实习。</summary>
       <skills>
