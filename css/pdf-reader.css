@@ -138,3 +138,14 @@
     display: none;
   }
 }
+
+/* One row of choices for each side of the sheet. */
+.pdf-choice {
+  flex-basis: 100%;
+  align-items: center;
+}
+
+.pdf-side {
+  min-width: 4.5rem;
+  font-weight: 700;
+}

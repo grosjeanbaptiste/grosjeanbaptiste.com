@@ -15,6 +15,16 @@ const PAGES = {
   zh: ['页', '页'],
 };
 
+// The two sides of the sheet, as the reader names them.
+const SIDES = {
+  en: ['Front', 'Back'],
+  fr: ['Recto', 'Verso'],
+  nl: ['Voorzijde', 'Achterzijde'],
+  es: ['Anverso', 'Reverso'],
+  de: ['Vorderseite', 'Rückseite'],
+  zh: ['正面', '背面'],
+};
+
 const WORDS = {
   en: ['Zoom in', 'Zoom out', 'Fit height', 'Open the file', 'The PDF could not be displayed.'],
   fr: [
@@ -51,6 +61,7 @@ const WORDS = {
 function pdfReaderForXml(lang) {
   const [zoomIn, zoomOut, fitWidth, openFile, failed] = WORDS[lang];
   const [pageOne, pageMany] = PAGES[lang];
+  const [recto, verso] = SIDES[lang];
   const { downloadCV, downloadTimeline } = I18N[lang];
   return {
     zoomIn,
@@ -58,6 +69,8 @@ function pdfReaderForXml(lang) {
     fitWidth,
     openFile,
     failed,
+    recto,
+    verso,
     pageOne,
     pageMany,
     downloadCV,

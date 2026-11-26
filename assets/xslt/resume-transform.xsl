@@ -763,7 +763,7 @@
         <script src="/js/xslt-links.js" defer="defer"></script>
         <script src="/js/search-rank.js" defer="defer"></script>
         <script src="/js/search.js" defer="defer"></script>
-        <script src="/js/xslt-pdf-reader.js" defer="defer"></script>
+        <script type="module" src="/js/xslt-pdf-reader.js"></script>
       </head>
       <body>
         <xsl:call-template name="views-bar"><xsl:with-param name="current" select="'xsltRich'"/></xsl:call-template>
