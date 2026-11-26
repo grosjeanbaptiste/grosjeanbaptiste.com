@@ -7,6 +7,11 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.4rem 0;
+  /* The frame grows with the zoom: the controls follow the reader down the page. */
+  position: sticky;
+  top: var(--views-bar-h, 0);
+  z-index: 2;
+  background: var(--bg-page, canvas);
 }
 
 .pdf-toolbar[hidden],
