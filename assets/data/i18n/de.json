@@ -40,7 +40,8 @@
     },
     {
       "position": ".NET/React Software Crafter",
-      "location": "Antwerpen, Flandern, Belgien"
+      "location": "Antwerpen, Flandern, Belgien",
+      "summary": "Entwicklung von VhAuctions, einer Flottenverwaltung für Auktionen, mit .NET, React und Azure."
     },
     {
       "position": ".NET/Blazor Software Crafter",
@@ -54,19 +55,23 @@
     },
     {
       "position": "Full-Stack-Webentwickler Praktikant",
-      "location": "Region Brüssel-Hauptstadt, Belgien"
+      "location": "Region Brüssel-Hauptstadt, Belgien",
+      "summary": "Praktikum in der Full-Stack-Webentwicklung bei EDITx."
     },
     {
       "position": "Studentenjob",
-      "location": "Region Brüssel-Hauptstadt, Belgien"
+      "location": "Region Brüssel-Hauptstadt, Belgien",
+      "summary": "Studentenjob bei Les Auberges de Jeunesse."
     },
     {
       "position": "Full-Stack-Webentwickler Praktikant",
-      "location": "Region Brüssel-Hauptstadt, Belgien"
+      "location": "Region Brüssel-Hauptstadt, Belgien",
+      "summary": "Entwicklung von WebMenu, einer QR-Code-basierten Kasse für Gastronomiebetriebe, mit .NET und Flutter."
     },
     {
       "position": "Studentenjob",
-      "location": "Kraainem, Flämische Region, Belgien"
+      "location": "Kraainem, Flämische Region, Belgien",
+      "summary": "Studentenjob bei Quick, einem Fast-Food-Restaurant."
     }
   ],
   "education": [
@@ -673,16 +678,20 @@
   ],
   "volunteer": [
     {
-      "position": "Studierendenvertreter"
+      "position": "Studierendenvertreter",
+      "summary": "Gewählter Studierendenvertreter des Jahrgangs Informatik an der UMons."
     },
     {
-      "position": "Buddy TandeMons"
+      "position": "Buddy TandeMons",
+      "summary": "Buddy im Programm TandeMons zur Unterstützung neuer Studierender an der UMons."
     },
     {
-      "position": "Studierendenvertreter"
+      "position": "Studierendenvertreter",
+      "summary": "Gewählter Studierendenvertreter des Bachelor-Jahrgangs an der EPHEC."
     },
     {
-      "position": "Tutor"
+      "position": "Tutor",
+      "summary": "Tutor für Mitstudierende an der EPHEC."
     }
   ],
   "languages": [

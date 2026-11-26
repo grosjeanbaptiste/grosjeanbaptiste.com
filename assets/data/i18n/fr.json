@@ -40,7 +40,8 @@
     },
     {
       "position": "Software Crafter .NET / React",
-      "location": "Anvers, Flandres, Belgique"
+      "location": "Anvers, Flandres, Belgique",
+      "summary": "Développement de VhAuctions, un gestionnaire de flotte pour ventes aux enchères, avec .NET, React et Azure."
     },
     {
       "position": "Software Crafter .NET / Blazor",
@@ -54,19 +55,23 @@
     },
     {
       "position": "Stagiaire développeur Full Stack Web",
-      "location": "Région de Bruxelles-Capitale, Belgique"
+      "location": "Région de Bruxelles-Capitale, Belgique",
+      "summary": "Stage de développement web Full Stack chez EDITx."
     },
     {
       "position": "Job étudiant",
-      "location": "Région de Bruxelles-Capitale, Belgique"
+      "location": "Région de Bruxelles-Capitale, Belgique",
+      "summary": "Job étudiant aux Auberges de Jeunesse."
     },
     {
       "position": "Stagiaire développeur Full Stack Web",
-      "location": "Région de Bruxelles-Capitale, Belgique"
+      "location": "Région de Bruxelles-Capitale, Belgique",
+      "summary": "Développement de WebMenu, une caisse enregistreuse par QR code pour l'horeca, avec .NET et Flutter."
     },
     {
       "position": "Job étudiant",
-      "location": "Kraainem, Région flamande, Belgique"
+      "location": "Kraainem, Région flamande, Belgique",
+      "summary": "Job étudiant chez Quick, une chaîne de restauration rapide."
     }
   ],
   "education": [
@@ -673,16 +678,20 @@
   ],
   "volunteer": [
     {
-      "position": "Délégué étudiant"
+      "position": "Délégué étudiant",
+      "summary": "Délégué étudiant élu de la promotion en sciences informatiques à l'UMons."
     },
     {
-      "position": "Buddy TandeMons"
+      "position": "Buddy TandeMons",
+      "summary": "Buddy du programme TandeMons, au soutien des nouveaux étudiants de l'UMons."
     },
     {
-      "position": "Délégué étudiant"
+      "position": "Délégué étudiant",
+      "summary": "Délégué étudiant élu de la promotion du bachelier à l'EPHEC."
     },
     {
-      "position": "Tuteur"
+      "position": "Tuteur",
+      "summary": "Tuteur d'autres étudiants à l'EPHEC."
     }
   ],
   "languages": [

@@ -115,6 +115,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             url "https://www.vhauctions.be"
             location t{ en: "Anvers, Région flamande, Belgique", fr: "Anvers, Flandres, Belgique", nl: "Antwerpen, Vlaanderen, België", es: "Amberes, Flandes, Bélgica", de: "Antwerpen, Flandern, Belgien", zh: "安特卫普，弗拉芒大区，比利时" }
             period 2024-01-01..2024-08-07
+            summary t{ en: "Built VhAuctions, a fleet manager for auctions, with .NET, React and Azure.", fr: "Développement de VhAuctions, un gestionnaire de flotte pour ventes aux enchères, avec .NET, React et Azure.", nl: "Ontwikkeling van VhAuctions, een wagenparkbeheerder voor veilingen, met .NET, React en Azure.", es: "Desarrollo de VhAuctions, un gestor de flotas para subastas, con .NET, React y Azure.", de: "Entwicklung von VhAuctions, einer Flottenverwaltung für Auktionen, mit .NET, React und Azure.", zh: "使用 .NET、React 和 Azure 开发 VhAuctions，一款面向拍卖的车队管理工具。" }
             uses [".NET", React, "SQL Server", TypeScript, EntityFramework, Docker, Azure, OpenTelemetry]
             projects [ref VhAuctions]
         }
@@ -169,6 +170,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             url "https://www.linkedin.com/company/editx/"
             location t{ en: "Région de Bruxelles-Capitale, Belgique", fr: "Région de Bruxelles-Capitale, Belgique", nl: "Brussels Hoofdstedelijk Gewest, België", es: "Región de Bruselas-Capital, Bélgica", de: "Region Brüssel-Hauptstadt, Belgien", zh: "布鲁塞尔首都大区，比利时" }
             period 2022-04-01..2022-04-30
+            summary t{ en: "Full stack web development internship at EDITx.", fr: "Stage de développement web Full Stack chez EDITx.", nl: "Stage als full stack webontwikkelaar bij EDITx.", es: "Prácticas de desarrollo web Full Stack en EDITx.", de: "Praktikum in der Full-Stack-Webentwicklung bei EDITx.", zh: "在 EDITx 担任全栈 Web 开发实习生。" }
         }
         StudentJob {
             position t{ en: "Student Job", fr: "Job étudiant", nl: "Studentenjob", es: "Trabajo de estudiante", de: "Studentenjob", zh: "学生工" }
@@ -176,6 +178,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             url "https://www.laj.be"
             location t{ en: "Région de Bruxelles-Capitale, Belgique", fr: "Région de Bruxelles-Capitale, Belgique", nl: "Brussels Hoofdstedelijk Gewest, België", es: "Región de Bruselas-Capital, Bélgica", de: "Region Brüssel-Hauptstadt, Belgien", zh: "布鲁塞尔首都大区，比利时" }
             period 2022-03-30..2022-03-31
+            summary t{ en: "Student job at Les Auberges de Jeunesse.", fr: "Job étudiant aux Auberges de Jeunesse.", nl: "Studentenjob bij Les Auberges de Jeunesse.", es: "Trabajo de estudiante en Les Auberges de Jeunesse.", de: "Studentenjob bei Les Auberges de Jeunesse.", zh: "在 Les Auberges de Jeunesse 做学生工。" }
         }
         FullStackDeveloperWebIntern4 {
             position t{ en: "Full Stack Developer Web Intern", fr: "Stagiaire développeur Full Stack Web", nl: "Full Stack Webontwikkelaar Stagiair", es: "Desarrollador Web Full Stack en prácticas", de: "Full-Stack-Webentwickler Praktikant", zh: "全栈 Web 开发实习生" }
@@ -183,6 +186,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             url "https://www.restomax.be"
             location t{ en: "Région de Bruxelles-Capitale, Belgique", fr: "Région de Bruxelles-Capitale, Belgique", nl: "Brussels Hoofdstedelijk Gewest, België", es: "Región de Bruselas-Capital, Bélgica", de: "Region Brüssel-Hauptstadt, Belgien", zh: "布鲁塞尔首都大区，比利时" }
             period 2021-11-01..2022-03-31
+            summary t{ en: "Built WebMenu, a QR code based cash register for HoReCa establishments, with .NET and Flutter.", fr: "Développement de WebMenu, une caisse enregistreuse par QR code pour l'horeca, avec .NET et Flutter.", nl: "Ontwikkeling van WebMenu, een kassasysteem op basis van QR-codes voor horecazaken, met .NET en Flutter.", es: "Desarrollo de WebMenu, una caja registradora basada en códigos QR para establecimientos HoReCa, con .NET y Flutter.", de: "Entwicklung von WebMenu, einer QR-Code-basierten Kasse für Gastronomiebetriebe, mit .NET und Flutter.", zh: "使用 .NET 和 Flutter 开发 WebMenu，一款面向餐饮业的二维码收银系统。" }
             uses [".NET", Flutter, "SQL Server"]
             projects [ref WebMenu]
         }
@@ -192,6 +196,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
             url "https://www.quick.be"
             location t{ en: "Kraainem, Flemish Region, Belgium", fr: "Kraainem, Région flamande, Belgique", nl: "Kraainem, Vlaams Gewest, België", es: "Kraainem, Región flamenca, Bélgica", de: "Kraainem, Flämische Region, Belgien", zh: "克莱内姆，弗拉芒大区，比利时" }
             period 2017-09-01..2017-09-30
+            summary t{ en: "Student job at Quick, a fast-food restaurant.", fr: "Job étudiant chez Quick, une chaîne de restauration rapide.", nl: "Studentenjob bij Quick, een fastfoodrestaurant.", es: "Trabajo de estudiante en Quick, un restaurante de comida rápida.", de: "Studentenjob bei Quick, einem Fast-Food-Restaurant.", zh: "在快餐店 Quick 做学生工。" }
         }
     }
 
@@ -1449,24 +1454,28 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             organization "UMons"
             url "https://www.umons.be"
             period 2023-11-30..2026-09-04
+            summary t{ en: "Elected student representative of the Computer Science cohort at UMons.", fr: "Délégué étudiant élu de la promotion en sciences informatiques à l'UMons.", nl: "Gekozen studentenvertegenwoordiger van de richting Computerwetenschappen aan UMons.", es: "Delegado de estudiantes elegido de la promoción de Ciencias Informáticas en la UMons.", de: "Gewählter Studierendenvertreter des Jahrgangs Informatik an der UMons.", zh: "UMons 计算机科学年级的民选学生代表。" }
         }
         BuddyTandeMons {
             position t{ en: "Buddy TandeMons", fr: "Buddy TandeMons", nl: "Buddy TandeMons", es: "Buddy TandeMons", de: "Buddy TandeMons", zh: "Buddy TandeMons" }
             organization "UMons"
             url "https://www.umons.be"
             period 2023-11-30..2026-09-04
+            summary t{ en: "Buddy in the TandeMons programme, supporting new students at UMons.", fr: "Buddy du programme TandeMons, au soutien des nouveaux étudiants de l'UMons.", nl: "Buddy in het TandeMons-programma, ter ondersteuning van nieuwe studenten aan UMons.", es: "Buddy del programa TandeMons, apoyando a los nuevos estudiantes de la UMons.", de: "Buddy im Programm TandeMons zur Unterstützung neuer Studierender an der UMons.", zh: "TandeMons 项目的伙伴，帮助 UMons 的新生。" }
         }
         StudentRepresentative2 {
             position t{ en: "Student Representative", fr: "Délégué étudiant", nl: "Studentenvertegenwoordiger", es: "Delegado de estudiantes", de: "Studierendenvertreter", zh: "学生代表" }
             organization "EPHEC École Supérieure de Promotion Sociale"
             url "https://www.ephec.be"
             period 2019-09-30..2022-10-15
+            summary t{ en: "Elected student representative of the bachelor's cohort at EPHEC.", fr: "Délégué étudiant élu de la promotion du bachelier à l'EPHEC.", nl: "Gekozen studentenvertegenwoordiger van de bachelorgroep aan de EPHEC.", es: "Delegado de estudiantes elegido de la promoción de grado en la EPHEC.", de: "Gewählter Studierendenvertreter des Bachelor-Jahrgangs an der EPHEC.", zh: "EPHEC 学士班的民选学生代表。" }
         }
         Tutor {
             position t{ en: "Tutor", fr: "Tuteur", nl: "Tutor", es: "Tutor", de: "Tutor", zh: "辅导员" }
             organization "EPHEC École Supérieure de Promotion Sociale"
             url "https://www.ephec.be"
             period 2019-09-30..2022-10-15
+            summary t{ en: "Tutor for fellow students at EPHEC.", fr: "Tuteur d'autres étudiants à l'EPHEC.", nl: "Tutor van medestudenten aan de EPHEC.", es: "Tutor de otros estudiantes en la EPHEC.", de: "Tutor für Mitstudierende an der EPHEC.", zh: "EPHEC 同学辅导员。" }
         }
     }
 

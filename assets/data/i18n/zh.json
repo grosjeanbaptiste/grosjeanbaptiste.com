@@ -40,7 +40,8 @@
     },
     {
       "position": ".NET/React 软件工艺师",
-      "location": "安特卫普，弗拉芒大区，比利时"
+      "location": "安特卫普，弗拉芒大区，比利时",
+      "summary": "使用 .NET、React 和 Azure 开发 VhAuctions，一款面向拍卖的车队管理工具。"
     },
     {
       "position": ".NET/Blazor 软件工艺师",
@@ -54,19 +55,23 @@
     },
     {
       "position": "全栈 Web 开发实习生",
-      "location": "布鲁塞尔首都大区，比利时"
+      "location": "布鲁塞尔首都大区，比利时",
+      "summary": "在 EDITx 担任全栈 Web 开发实习生。"
     },
     {
       "position": "学生工",
-      "location": "布鲁塞尔首都大区，比利时"
+      "location": "布鲁塞尔首都大区，比利时",
+      "summary": "在 Les Auberges de Jeunesse 做学生工。"
     },
     {
       "position": "全栈 Web 开发实习生",
-      "location": "布鲁塞尔首都大区，比利时"
+      "location": "布鲁塞尔首都大区，比利时",
+      "summary": "使用 .NET 和 Flutter 开发 WebMenu，一款面向餐饮业的二维码收银系统。"
     },
     {
       "position": "学生工",
-      "location": "克莱内姆，弗拉芒大区，比利时"
+      "location": "克莱内姆，弗拉芒大区，比利时",
+      "summary": "在快餐店 Quick 做学生工。"
     }
   ],
   "education": [
@@ -675,16 +680,20 @@
   ],
   "volunteer": [
     {
-      "position": "学生代表"
+      "position": "学生代表",
+      "summary": "UMons 计算机科学年级的民选学生代表。"
     },
     {
-      "position": "Buddy TandeMons"
+      "position": "Buddy TandeMons",
+      "summary": "TandeMons 项目的伙伴，帮助 UMons 的新生。"
     },
     {
-      "position": "学生代表"
+      "position": "学生代表",
+      "summary": "EPHEC 学士班的民选学生代表。"
     },
     {
-      "position": "辅导员"
+      "position": "辅导员",
+      "summary": "EPHEC 同学辅导员。"
     }
   ],
   "languages": [
