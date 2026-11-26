@@ -104,7 +104,8 @@
       "url": "https://www.vhauctions.be",
       "location": "Anvers, Région flamande, Belgique",
       "startDate": "2024-01-01",
-      "endDate": "2024-08-07"
+      "endDate": "2024-08-07",
+      "summary": "Built VhAuctions, a fleet manager for auctions, with .NET, React and Azure."
     },
     {
       "company": "Xtrada",
@@ -130,7 +131,8 @@
       "url": "https://www.linkedin.com/company/editx/",
       "location": "Région de Bruxelles-Capitale, Belgique",
       "startDate": "2022-04-01",
-      "endDate": "2022-04-30"
+      "endDate": "2022-04-30",
+      "summary": "Full stack web development internship at EDITx."
     },
     {
       "company": "Les Auberges de Jeunesse - Wallonie & Bruxelles",
@@ -138,7 +140,8 @@
       "url": "https://www.laj.be",
       "location": "Région de Bruxelles-Capitale, Belgique",
       "startDate": "2022-03-30",
-      "endDate": "2022-03-31"
+      "endDate": "2022-03-31",
+      "summary": "Student job at Les Auberges de Jeunesse."
     },
     {
       "company": "RESTOMAX",
@@ -146,7 +149,8 @@
       "url": "https://www.restomax.be",
       "location": "Région de Bruxelles-Capitale, Belgique",
       "startDate": "2021-11-01",
-      "endDate": "2022-03-31"
+      "endDate": "2022-03-31",
+      "summary": "Built WebMenu, a QR code based cash register for HoReCa establishments, with .NET and Flutter."
     },
     {
       "company": "Quick Restaurant",
@@ -154,7 +158,8 @@
       "url": "https://www.quick.be",
       "location": "Kraainem, Flemish Region, Belgium",
       "startDate": "2017-09-01",
-      "endDate": "2017-09-30"
+      "endDate": "2017-09-30",
+      "summary": "Student job at Quick, a fast-food restaurant."
     }
   ],
   "education": [
@@ -1504,28 +1509,32 @@
       "position": "Student Representative",
       "url": "https://www.umons.be",
       "startDate": "2023-11-30",
-      "endDate": "2026-09-04"
+      "endDate": "2026-09-04",
+      "summary": "Elected student representative of the Computer Science cohort at UMons."
     },
     {
       "organization": "UMons",
       "position": "Buddy TandeMons",
       "url": "https://www.umons.be",
       "startDate": "2023-11-30",
-      "endDate": "2026-09-04"
+      "endDate": "2026-09-04",
+      "summary": "Buddy in the TandeMons programme, supporting new students at UMons."
     },
     {
       "organization": "EPHEC École Supérieure de Promotion Sociale",
       "position": "Student Representative",
       "url": "https://www.ephec.be",
       "startDate": "2019-09-30",
-      "endDate": "2022-10-15"
+      "endDate": "2022-10-15",
+      "summary": "Elected student representative of the bachelor's cohort at EPHEC."
     },
     {
       "organization": "EPHEC École Supérieure de Promotion Sociale",
       "position": "Tutor",
       "url": "https://www.ephec.be",
       "startDate": "2019-09-30",
-      "endDate": "2022-10-15"
+      "endDate": "2022-10-15",
+      "summary": "Tutor for fellow students at EPHEC."
     }
   ]
 }

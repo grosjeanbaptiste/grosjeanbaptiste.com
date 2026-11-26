@@ -40,7 +40,8 @@
     },
     {
       "position": ".NET / React Software Crafter",
-      "location": "Antwerpen, Vlaanderen, België"
+      "location": "Antwerpen, Vlaanderen, België",
+      "summary": "Ontwikkeling van VhAuctions, een wagenparkbeheerder voor veilingen, met .NET, React en Azure."
     },
     {
       "position": ".NET / Blazor Software Crafter",
@@ -54,19 +55,23 @@
     },
     {
       "position": "Full Stack Webontwikkelaar Stagiair",
-      "location": "Brussels Hoofdstedelijk Gewest, België"
+      "location": "Brussels Hoofdstedelijk Gewest, België",
+      "summary": "Stage als full stack webontwikkelaar bij EDITx."
     },
     {
       "position": "Studentenjob",
-      "location": "Brussels Hoofdstedelijk Gewest, België"
+      "location": "Brussels Hoofdstedelijk Gewest, België",
+      "summary": "Studentenjob bij Les Auberges de Jeunesse."
     },
     {
       "position": "Full Stack Webontwikkelaar Stagiair",
-      "location": "Brussels Hoofdstedelijk Gewest, België"
+      "location": "Brussels Hoofdstedelijk Gewest, België",
+      "summary": "Ontwikkeling van WebMenu, een kassasysteem op basis van QR-codes voor horecazaken, met .NET en Flutter."
     },
     {
       "position": "Studentenjob",
-      "location": "Kraainem, Vlaams Gewest, België"
+      "location": "Kraainem, Vlaams Gewest, België",
+      "summary": "Studentenjob bij Quick, een fastfoodrestaurant."
     }
   ],
   "education": [
@@ -670,16 +675,20 @@
   ],
   "volunteer": [
     {
-      "position": "Studentenvertegenwoordiger"
+      "position": "Studentenvertegenwoordiger",
+      "summary": "Gekozen studentenvertegenwoordiger van de richting Computerwetenschappen aan UMons."
     },
     {
-      "position": "Buddy TandeMons"
+      "position": "Buddy TandeMons",
+      "summary": "Buddy in het TandeMons-programma, ter ondersteuning van nieuwe studenten aan UMons."
     },
     {
-      "position": "Studentenvertegenwoordiger"
+      "position": "Studentenvertegenwoordiger",
+      "summary": "Gekozen studentenvertegenwoordiger van de bachelorgroep aan de EPHEC."
     },
     {
-      "position": "Tutor"
+      "position": "Tutor",
+      "summary": "Tutor van medestudenten aan de EPHEC."
     }
   ],
   "languages": [

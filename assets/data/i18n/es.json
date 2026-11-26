@@ -40,7 +40,8 @@
     },
     {
       "position": "Software Crafter .NET / React",
-      "location": "Amberes, Flandes, Bélgica"
+      "location": "Amberes, Flandes, Bélgica",
+      "summary": "Desarrollo de VhAuctions, un gestor de flotas para subastas, con .NET, React y Azure."
     },
     {
       "position": "Software Crafter .NET / Blazor",
@@ -54,19 +55,23 @@
     },
     {
       "position": "Desarrollador Web Full Stack en prácticas",
-      "location": "Región de Bruselas-Capital, Bélgica"
+      "location": "Región de Bruselas-Capital, Bélgica",
+      "summary": "Prácticas de desarrollo web Full Stack en EDITx."
     },
     {
       "position": "Trabajo de estudiante",
-      "location": "Región de Bruselas-Capital, Bélgica"
+      "location": "Región de Bruselas-Capital, Bélgica",
+      "summary": "Trabajo de estudiante en Les Auberges de Jeunesse."
     },
     {
       "position": "Desarrollador Web Full Stack en prácticas",
-      "location": "Región de Bruselas-Capital, Bélgica"
+      "location": "Región de Bruselas-Capital, Bélgica",
+      "summary": "Desarrollo de WebMenu, una caja registradora basada en códigos QR para establecimientos HoReCa, con .NET y Flutter."
     },
     {
       "position": "Trabajo de estudiante",
-      "location": "Kraainem, Región flamenca, Bélgica"
+      "location": "Kraainem, Región flamenca, Bélgica",
+      "summary": "Trabajo de estudiante en Quick, un restaurante de comida rápida."
     }
   ],
   "education": [
@@ -673,16 +678,20 @@
   ],
   "volunteer": [
     {
-      "position": "Delegado de estudiantes"
+      "position": "Delegado de estudiantes",
+      "summary": "Delegado de estudiantes elegido de la promoción de Ciencias Informáticas en la UMons."
     },
     {
-      "position": "Buddy TandeMons"
+      "position": "Buddy TandeMons",
+      "summary": "Buddy del programa TandeMons, apoyando a los nuevos estudiantes de la UMons."
     },
     {
-      "position": "Delegado de estudiantes"
+      "position": "Delegado de estudiantes",
+      "summary": "Delegado de estudiantes elegido de la promoción de grado en la EPHEC."
     },
     {
-      "position": "Tutor"
+      "position": "Tutor",
+      "summary": "Tutor de otros estudiantes en la EPHEC."
     }
   ],
   "languages": [
