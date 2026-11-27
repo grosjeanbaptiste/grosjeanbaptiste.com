@@ -27,10 +27,32 @@ const shared = (a, b) => ({
   full: { strong: named(a.full.strong, b.full.strong), rest: '' },
 });
 
-// The timeline with one bar fewer, or null when no two projects can share.
+// Last resort: two recommendations of the same month share one bar, each name
+// kept in full (the site and the other sheets keep one bar each).
+function gatherReferences(timeline) {
+  const lane = timeline.lanes.find((l) => l.kind === 'references');
+  const groups = lane?.groups ?? [];
+  const b = groups.find((g, i) => groups.findIndex((o) => o.head.start === g.head.start) !== i);
+  if (!b) return null;
+  const a = groups.find((g) => g.head.start === b.head.start);
+  const head = shared(a.head, b.head);
+  return {
+    ...timeline,
+    lanes: timeline.lanes.map((l) =>
+      l !== lane
+        ? l
+        : {
+            ...l,
+            groups: l.groups.filter((g) => g !== b).map((g) => (g === a ? { ...a, head } : g)),
+          },
+    ),
+  };
+}
+
+// The timeline with one bar fewer, or null when nothing can share.
 function gatherNewest(timeline) {
   const host = busiest(timeline.lanes);
-  if (!host) return null;
+  if (!host) return gatherReferences(timeline);
   const [a, b] = running(host.children)
     .sort((x, y) => y.start - x.start)
     .slice(0, 2)

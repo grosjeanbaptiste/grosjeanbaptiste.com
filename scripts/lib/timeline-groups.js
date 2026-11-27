@@ -23,10 +23,9 @@ const SHAPES = {
     title: (e) => [e.studyType, e.area].filter(Boolean).join(' — '),
   },
   competition: { name: (c) => c.title, title: (c) => c.organizer },
-  // The recommendations an employer gave stand as one bar, the employer's name and
-  // their number (the way a family of projects is one row): each on its own would
-  // pile as many hairlines on the month the experience ended.
-  reference: { name: (r) => `${r.at} (${r.who.length})`, title: (r) => r.who.join(', ') },
+  // Each recommendation is its own bar, named in full, at the month the
+  // experience it came from ended (see `spoken`).
+  reference: { name: (r) => r.name, title: (r) => r.at },
   project: { name: (p) => p.name, title: (p) => p.entity },
   // Under its organisation's entry the role is what tells two bars apart.
   volunteer: { name: (v) => v.position, title: (v) => v.organization },
@@ -79,21 +78,21 @@ const spoken = (resume, now) => {
   const said = (resume.references || [])
     .map((r, idx) => ({ ...r, idx }))
     .filter((r) => r.at && (resume.work || []).some((w) => w.company === r.at && w.startDate));
-  return [...new Set(said.map((r) => r.at))].map((at) => {
-    const roles = (resume.work || []).filter((w) => w.company === at && w.startDate);
+  // One bar per recommendation, each named in full; those of one employer
+  // share its month and stack.
+  return said.map((r) => {
+    const roles = (resume.work || []).filter((w) => w.company === r.at && w.startDate);
     const end = roles.some((w) => ongoing(w.endDate))
       ? monthText(now)
       : roles
           .map((w) => String(w.endDate).slice(0, 7))
           .sort()
           .at(-1);
-    const mine = said.filter((r) => r.at === at);
     return {
-      at,
-      who: mine.map((r) => r.name.split(',')[0].trim()),
-      // The first of them: the section lists the others after it.
-      anchor: `ref-${mine[0].idx}`,
-      reference: mine.map((r) => r.name).join(' · '),
+      at: r.at,
+      name: r.name,
+      anchor: `ref-${r.idx}`,
+      reference: r.reference,
       startDate: end,
       endDate: end,
     };

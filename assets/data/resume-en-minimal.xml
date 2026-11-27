@@ -95,7 +95,7 @@
     <head>
       <description>Computer scientist — MSc from UMons — building Acteble. Working at the crossroads of AI-era software engineering — Claude Code workflows, autonomous agents, RAG pipelines, mobile development — anch…</description>
       <author>Baptiste Grosjean</author>
-      <keywords>SQL, C#, Java, Python, JS, TS, XML, JSON, HTML, CSS, Zsh, Dart, Rust, LaTeX, SQL Server, EF, .NET, Pandas</keywords>
+      <keywords>SQL, C#, Java, Python, JavaScript, XML, JSON, HTML, CSS, Dart, Rust, LaTeX, SQL Server, .NET, Pandas, NumPy, Whisper, SpaCy</keywords>
       <ogTitle>Baptiste Grosjean — Computer Scientist</ogTitle>
       <canonical>https://www.grosjeanbaptiste.com/</canonical>
       <image>https://www.grosjeanbaptiste.com/assets/images/profil.jpeg</image>
@@ -165,22 +165,22 @@
     "C#",
     "Java",
     "Python",
-    "JS",
-    "TS",
+    "JavaScript",
     "XML",
     "JSON",
     "HTML",
     "CSS",
-    "Zsh",
     "Dart",
     "Rust",
     "LaTeX",
     "SQL Server",
-    "EF",
     ".NET",
     "Pandas",
     "NumPy",
-    "Whisper"
+    "Whisper",
+    "SpaCy",
+    "SentenceTransformers",
+    "RAG"
   ],
   "inLanguage": "en"
 }</jsonld>
@@ -5118,20 +5118,26 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
         <lane>
           <kind>references</kind>
           <label>References</label>
-          <rows>1</rows>
-          <printRows>1</printRows>
-          <foldRows>1</foldRows>
+          <rows>5</rows>
+          <printRows>5</printRows>
+          <foldRows>5</foldRows>
           <bars>
             <bar>
               <entry>ref-1</entry>
               <kind>reference</kind>
               <depth>0</depth>
-              <name>Xtrada (5)</name>
-              <title>Tino Schuerewegen, Emiel Van Gysegem, Steven Claus, Tjörven Janssens, Michael Culot</title>
-              <caption>Xtrada (5)</caption>
+              <name>Tino Schuerewegen, Software developer at Xtrada</name>
+              <title>Xtrada</title>
+              <caption>Tino Schuerewegen, Software developer at Xtrada</caption>
               <period>Sep 2024 – Sep 2024</period>
-              <summary>Tino Schuerewegen, Software developer at Xtrada · Emiel Van Gysegem, Marketing and operations at Xtra Groep · Steven Claus, CFO at Xtra Groep · Tjörven Janssens, software developer at Xtrada · Michael Culot, Sales manager at Xtrada</summary>
-              <label>Xtrada (5) — Tino Schuerewegen, Emiel Van Gysegem, Steven Claus, Tjörven Janssens, Michael Culot — Sep 2024 – Sep 2024</label>
+              <summary>I had the pleasure of working with Baptiste for a year, with the added joy of mentoring him on a project for three months. If there's one thing that stands out about Baptiste, it's his boundless energy. Whether it's 9 AM or 9 PM, he's always the most enthusiastic person in the room—sometimes even more enthusiastic than the coffee machine.
+
+Baptiste brings a contagious energy to any project he's part of. He’s outgoing, smart, and has an eagerness to learn that is truly admirable. Whether he's diving into a complex task or asking insightful questions, he's always in search of knowledge. His enthusiasm for learning, especially when it comes to leveraging tools like ChatGPT, is both impressive and a little intimidating. Seriously, if ChatGPT had a best friend, it would be Baptiste!
+
+He’s also incredibly hands-on, never shying away from rolling up his sleeves and getting deep into the work. His approach isn't just theoretical; he's all about practical, tangible results.
+
+In summary, if you're looking for someone who brings enthusiasm, intelligence, and a touch of humor to every task, Baptiste is your person. Working with him was not just productive, but genuinely enjoyable.</summary>
+              <label>Tino Schuerewegen, Software developer at Xtrada — Xtrada — Sep 2024 – Sep 2024</label>
               <left>86.96%</left>
               <width>0.48%</width>
               <row>0</row>
@@ -5139,15 +5145,85 @@ Programme: analysis &amp; design, programming in .NET, Java and web, relational 
               <foldRow>0</foldRow>
             </bar>
             <bar>
+              <entry>ref-2</entry>
+              <kind>reference</kind>
+              <depth>0</depth>
+              <name>Emiel Van Gysegem, Marketing and operations at Xtra Groep</name>
+              <title>Xtrada</title>
+              <caption>Emiel Van Gysegem, Marketing and operations at Xtra Groep</caption>
+              <period>Sep 2024 – Sep 2024</period>
+              <summary>Hoewel we niet direct samenwerkten, had ik altijd een heel fijne connectie met Baptiste. In een mengelmoes van Engels, Nederlands en Frans deelden we vaak leuke gesprekken. Zijn enthousiasme en energie zijn echt aanstekelijk, en hij weet een prettige, informele sfeer te creëren in elke interactie. Baptiste is iemand die een positieve dynamiek met zich meebrengt.</summary>
+              <label>Emiel Van Gysegem, Marketing and operations at Xtra Groep — Xtrada — Sep 2024 – Sep 2024</label>
+              <left>86.96%</left>
+              <width>0.48%</width>
+              <row>1</row>
+              <printRow>1</printRow>
+              <foldRow>1</foldRow>
+            </bar>
+            <bar>
+              <entry>ref-3</entry>
+              <kind>reference</kind>
+              <depth>0</depth>
+              <name>Steven Claus, CFO at Xtra Groep</name>
+              <title>Xtrada</title>
+              <caption>Steven Claus, CFO at Xtra Groep</caption>
+              <period>Sep 2024 – Sep 2024</period>
+              <summary>Baptiste is a full-stack software developer and is driven by an unwavering determination. This mindset permeates every aspect of his career. He has worked in various fields, allowing him to quickly adapt to any situation. These roles have honed both his technical and interpersonal skills, making him a versatile collaborator who significantly impacts every project he joins. Fueled by a constant desire to learn, he continually updates his knowledge through a master’s degree in computer science. This ongoing learning journey makes him a well-rounded IT professional in the field of computer science.</summary>
+              <label>Steven Claus, CFO at Xtra Groep — Xtrada — Sep 2024 – Sep 2024</label>
+              <left>86.96%</left>
+              <width>0.48%</width>
+              <row>2</row>
+              <printRow>2</printRow>
+              <foldRow>2</foldRow>
+            </bar>
+            <bar>
+              <entry>ref-4</entry>
+              <kind>reference</kind>
+              <depth>0</depth>
+              <name>Tjörven Janssens, software developer at Xtrada</name>
+              <title>Xtrada</title>
+              <caption>Tjörven Janssens, software developer at Xtrada</caption>
+              <period>Sep 2024 – Sep 2024</period>
+              <summary>Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een expert in het gebruik van ChatGPT. Hij leert graag nieuwe dingen en doet dit ook snel. Hij is erg enthousiast in omgang en staat steeds klaar voor een vriendelijk woord of wat advies.</summary>
+              <label>Tjörven Janssens, software developer at Xtrada — Xtrada — Sep 2024 – Sep 2024</label>
+              <left>86.96%</left>
+              <width>0.48%</width>
+              <row>3</row>
+              <printRow>3</printRow>
+              <foldRow>3</foldRow>
+            </bar>
+            <bar>
+              <entry>ref-5</entry>
+              <kind>reference</kind>
+              <depth>0</depth>
+              <name>Michael Culot, Sales manager at Xtrada</name>
+              <title>Xtrada</title>
+              <caption>Michael Culot, Sales manager at Xtrada</caption>
+              <period>Sep 2024 – Sep 2024</period>
+              <summary>Baptiste is a great and devoted developer who’s eager to keep learning new technologies and elevate his skill set. You would be amazed about not only his knowledge but also his warm open enthusiasm. Baptiste, you’re going to be doing great things in your life, just keep your vibrant spirit ✊</summary>
+              <label>Michael Culot, Sales manager at Xtrada — Xtrada — Sep 2024 – Sep 2024</label>
+              <left>86.96%</left>
+              <width>0.48%</width>
+              <row>4</row>
+              <printRow>4</printRow>
+              <foldRow>4</foldRow>
+            </bar>
+            <bar>
               <entry>ref-0</entry>
               <kind>reference</kind>
               <depth>0</depth>
-              <name>Emvi.ai (1)</name>
-              <title>Waseem Virk</title>
-              <caption>Emvi.ai (1)</caption>
+              <name>Waseem Virk, Flutter Dev Emvi.ai</name>
+              <title>Emvi.ai</title>
+              <caption>Waseem Virk, Flutter Dev Emvi.ai</caption>
               <period>Jun 2025 – Jun 2025</period>
-              <summary>Waseem Virk, Flutter Dev Emvi.ai</summary>
-              <label>Emvi.ai (1) — Waseem Virk — Jun 2025 – Jun 2025</label>
+              <summary>Working alongside Baptiste Grosjean on the EMVI project has been an incredibly rewarding experience—both professionally and personally. Not only is Baptiste a highly skilled developer with a sharp eye for design and functionality, but he’s also been a mentor and an inspiration throughout our collaboration.
+
+I’ve learned so much from him—from best practices in Flutter development to the importance of thoughtful UI/UX and clean architecture. He’s always willing to share his knowledge, explain complex ideas with clarity, and support the team in any way he can.
+
+What stands out the most is Baptiste’s ability to turn challenges into opportunities. His calm, focused approach and problem-solving mindset helped us overcome technical hurdles and build features that truly improve user experience. On top of that, his collaborative nature made working as a team feel seamless and motivating.
+
+If you're looking for someone who not only delivers exceptional results but also uplifts everyone around him, I can't recommend Baptiste enough. He’s a fantastic developer, a great teammate, and someone I’ve been lucky to learn from.</summary>
+              <label>Waseem Virk, Flutter Dev Emvi.ai — Emvi.ai — Jun 2025 – Jun 2025</label>
               <left>91.3%</left>
               <width>0.48%</width>
               <row>0</row>
@@ -6967,42 +7043,24 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
         <keyword>C#</keyword>
         <keyword>Java</keyword>
         <keyword>Python</keyword>
-        <keyword>JS</keyword>
-        <keyword>TS</keyword>
+        <keyword>JavaScript</keyword>
         <keyword>XML</keyword>
         <keyword>JSON</keyword>
         <keyword>HTML</keyword>
         <keyword>CSS</keyword>
-        <keyword>Zsh</keyword>
         <keyword>Dart</keyword>
         <keyword>Rust</keyword>
         <keyword>LaTeX</keyword>
         <keyword>SQL Server</keyword>
-        <keyword>EF</keyword>
         <keyword>.NET</keyword>
         <keyword>Pandas</keyword>
         <keyword>NumPy</keyword>
         <keyword>Whisper</keyword>
         <keyword>SpaCy</keyword>
-        <keyword>PyTorch</keyword>
-        <keyword>Transformers</keyword>
-        <keyword>HuggingFace</keyword>
         <keyword>SentenceTransformers</keyword>
-        <keyword>LLMs</keyword>
         <keyword>RAG</keyword>
-        <keyword>LangChain</keyword>
         <keyword>OpenAI</keyword>
-        <keyword>Claude</keyword>
-        <keyword>Embeddings</keyword>
-        <keyword>ColBERT</keyword>
-        <keyword>Reranking</keyword>
-        <keyword>FAISS</keyword>
-        <keyword>OpenSearch</keyword>
-        <keyword>RAGAS</keyword>
-        <keyword>PromptEngineering</keyword>
         <keyword>OCR</keyword>
-        <keyword>Docling</keyword>
-        <keyword>VLM</keyword>
         <keyword>Node.js</keyword>
         <keyword>Express.js</keyword>
         <keyword>Blazor</keyword>
@@ -7011,27 +7069,15 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
         <keyword>Flutter</keyword>
         <keyword>Tokio</keyword>
         <keyword>Axum</keyword>
-        <keyword>Tower</keyword>
-        <keyword>Gradle</keyword>
-        <keyword>NPM</keyword>
-        <keyword>JWT</keyword>
         <keyword>Auth0</keyword>
         <keyword>SSH</keyword>
-        <keyword>Venv</keyword>
-        <keyword>Conda</keyword>
         <keyword>Docker</keyword>
         <keyword>UML</keyword>
-        <keyword>Merise</keyword>
-        <keyword>VisualParadigm</keyword>
         <keyword>MiniZinc</keyword>
         <keyword>ConstraintProgramming</keyword>
         <keyword>CombinatorialOptimization</keyword>
         <keyword>Pareto</keyword>
-        <keyword>Lark</keyword>
         <keyword>DSL</keyword>
-        <keyword>Hypothesis</keyword>
-        <keyword>CleanCode</keyword>
-        <keyword>CleanArchitecture</keyword>
         <keyword>DDD</keyword>
         <keyword>CQRS</keyword>
         <keyword>PostgreSQL</keyword>

@@ -11,7 +11,7 @@
 
   <meta name="description" content="计算机科学家 —— 蒙斯大学 (UMons) 计算机科学硕士 —— 正在构建 Acteble。 工作聚焦于 AI 时代的软件工程交汇点 —— Claude Code 工作流、自主智能体、RAG 管道、移动开发 —— 以软件工艺为根基：整洁代码、整洁架构、六边形架构、领域驱动设计（DDD）、测试驱动开发（TDD）。">
   <meta name="author" content="Baptiste Grosjean">
-  <meta name="keywords" content="SQL, C#, Java, Python, JS, TS, XML, JSON, HTML, CSS, Zsh, Dart, Rust, LaTeX, SQL Server, EF, .NET, Pandas">
+  <meta name="keywords" content="SQL, C#, Java, Python, JavaScript, XML, JSON, HTML, CSS, Dart, Rust, LaTeX, SQL Server, .NET, Pandas, NumPy, Whisper, SpaCy">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
   <!-- Browser chrome + PWA -->
@@ -110,22 +110,22 @@
       "C#",
       "Java",
       "Python",
-      "JS",
-      "TS",
+      "JavaScript",
       "XML",
       "JSON",
       "HTML",
       "CSS",
-      "Zsh",
       "Dart",
       "Rust",
       "LaTeX",
       "SQL Server",
-      "EF",
       ".NET",
       "Pandas",
       "NumPy",
-      "Whisper"
+      "Whisper",
+      "SpaCy",
+      "SentenceTransformers",
+      "RAG"
     ],
     "inLanguage": "zh"
   }
@@ -223,42 +223,24 @@
             <span class="skill-tag">C#</span>
             <span class="skill-tag">Java</span>
             <span class="skill-tag">Python</span>
-            <span class="skill-tag">JS</span>
-            <span class="skill-tag">TS</span>
+            <span class="skill-tag">JavaScript</span>
             <span class="skill-tag">XML</span>
             <span class="skill-tag">JSON</span>
             <span class="skill-tag">HTML</span>
             <span class="skill-tag">CSS</span>
-            <span class="skill-tag">Zsh</span>
             <span class="skill-tag">Dart</span>
             <span class="skill-tag">Rust</span>
             <span class="skill-tag">LaTeX</span>
             <span class="skill-tag">SQL Server</span>
-            <span class="skill-tag">EF</span>
             <span class="skill-tag">.NET</span>
             <span class="skill-tag">Pandas</span>
             <span class="skill-tag">NumPy</span>
             <span class="skill-tag">Whisper</span>
             <span class="skill-tag">SpaCy</span>
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">Transformers</span>
-            <span class="skill-tag">HuggingFace</span>
             <span class="skill-tag">SentenceTransformers</span>
-            <span class="skill-tag">LLMs</span>
             <span class="skill-tag">RAG</span>
-            <span class="skill-tag">LangChain</span>
             <span class="skill-tag">OpenAI</span>
-            <span class="skill-tag">Claude</span>
-            <span class="skill-tag">Embeddings</span>
-            <span class="skill-tag">ColBERT</span>
-            <span class="skill-tag">Reranking</span>
-            <span class="skill-tag">FAISS</span>
-            <span class="skill-tag">OpenSearch</span>
-            <span class="skill-tag">RAGAS</span>
-            <span class="skill-tag">PromptEngineering</span>
             <span class="skill-tag">OCR</span>
-            <span class="skill-tag">Docling</span>
-            <span class="skill-tag">VLM</span>
             <span class="skill-tag">Node.js</span>
             <span class="skill-tag">Express.js</span>
             <span class="skill-tag">Blazor</span>
@@ -267,33 +249,17 @@
             <span class="skill-tag">Flutter</span>
             <span class="skill-tag">Tokio</span>
             <span class="skill-tag">Axum</span>
-            <span class="skill-tag">Tower</span>
-            <span class="skill-tag">Gradle</span>
-            <span class="skill-tag">NPM</span>
-            <span class="skill-tag">JWT</span>
             <span class="skill-tag">Auth0</span>
             <span class="skill-tag">SSH</span>
-            <span class="skill-tag">Venv</span>
-            <span class="skill-tag">Conda</span>
             <span class="skill-tag">Docker</span>
             <span class="skill-tag">UML</span>
-            <span class="skill-tag">Merise</span>
-            <span class="skill-tag">VisualParadigm</span>
             <span class="skill-tag">MiniZinc</span>
             <span class="skill-tag">ConstraintProgramming</span>
             <span class="skill-tag">CombinatorialOptimization</span>
             <span class="skill-tag">Pareto</span>
-            <span class="skill-tag">Lark</span>
             <span class="skill-tag">DSL</span>
-            <span class="skill-tag">Hypothesis</span>
-            <span class="skill-tag">CleanCode</span>
-            <span class="skill-tag">CleanArchitecture</span>
             <span class="skill-tag">DDD</span>
             <span class="skill-tag">CQRS</span>
-          </div>
-          <details class="skill-more">
-            <summary>+127</summary>
-            <div class="skill-tags">
             <span class="skill-tag">PostgreSQL</span>
             <span class="skill-tag">Firebase</span>
             <span class="skill-tag">Valhalla</span>
@@ -324,6 +290,10 @@
             <span class="skill-tag">SM2</span>
             <span class="skill-tag">WordNet</span>
             <span class="skill-tag">Tatoeba</span>
+          </div>
+          <details class="skill-more">
+            <summary>+97</summary>
+            <div class="skill-tags">
             <span class="skill-tag">CloudflareWorkers</span>
             <span class="skill-tag">WebAssembly</span>
             <span class="skill-tag">DurableObjects</span>
@@ -683,9 +653,25 @@
             </div>
             <div class="tl-lane" data-kind="references">
               <span class="tl-lane-label">推荐人</span>
-              <div class="tl-track" style="--rows:1;--print-rows:1;--fold-rows:1">
-                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:0;--print-row:0;--fold-row:0" aria-label="Xtrada (5) — Tino Schuerewegen，Xtrada 软件开发者, Emiel Van Gysegem，Xtra Groep 营销与运营, Steven Claus，Xtra Groep 首席财务官, Tjörven Janssens，Xtrada 软件开发者, Michael Culot，Xtrada 销售经理 — 9月 2024 – 9月 2024" data-kind="reference" data-depth="0" data-entry="ref-1" data-name="Xtrada (5)" data-title="Tino Schuerewegen，Xtrada 软件开发者, Emiel Van Gysegem，Xtra Groep 营销与运营, Steven Claus，Xtra Groep 首席财务官, Tjörven Janssens，Xtrada 软件开发者, Michael Culot，Xtrada 销售经理" data-period="9月 2024 – 9月 2024" data-summary="Tino Schuerewegen，Xtrada 软件开发者 · Emiel Van Gysegem，Xtra Groep 营销与运营 · Steven Claus，Xtra Groep 首席财务官 · Tjörven Janssens，Xtrada 软件开发者 · Michael Culot，Xtrada 销售经理" href="#ref-1"><span>Xtrada (5)</span></a>
-                <a class="tl-bar" style="left:91.3%;width:0.48%;--row:0;--print-row:0;--fold-row:0" aria-label="Emvi.ai (1) — Waseem Virk，Emvi.ai Flutter 开发者 — 6月 2025 – 6月 2025" data-kind="reference" data-depth="0" data-entry="ref-0" data-name="Emvi.ai (1)" data-title="Waseem Virk，Emvi.ai Flutter 开发者" data-period="6月 2025 – 6月 2025" data-summary="Waseem Virk，Emvi.ai Flutter 开发者" href="#ref-0"><span>Emvi.ai (1)</span></a>
+              <div class="tl-track" style="--rows:5;--print-rows:5;--fold-rows:5">
+                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:0;--print-row:0;--fold-row:0" aria-label="Tino Schuerewegen，Xtrada 软件开发者 — Xtrada — 9月 2024 – 9月 2024" data-kind="reference" data-depth="0" data-entry="ref-1" data-name="Tino Schuerewegen，Xtrada 软件开发者" data-title="Xtrada" data-period="9月 2024 – 9月 2024" data-summary="我有幸与 Baptiste 共事了一年，并额外地获得了在一个项目中指导他三个月的乐趣。如果说 Baptiste 有一件事最突出，那就是他无穷的精力。无论是早上 9 点还是晚上 9 点，他始终是房间里最热情的人——有时甚至比咖啡机还热情。
+            
+            Baptiste 给他参与的每个项目都带来感染力的能量。他外向、聪明，并拥有真正令人钦佩的求知欲。无论是钻研复杂任务还是提出深刻的问题，他始终在追求知识。他对学习的热情，特别是在利用 ChatGPT 等工具方面，既令人印象深刻又略显令人生畏。说真的，如果 ChatGPT 有一个最好的朋友，那一定是 Baptiste！
+            
+            他也极具动手能力，从不畏惧卷起袖子深入工作。他的方法不仅是理论上的；他追求的是实用、切实的成果。
+            
+            总而言之，如果您正在寻找一个为每项任务带来热情、智慧和一丝幽默的人，Baptiste 就是您要找的人。与他合作不仅富有成效，而且真正令人愉快。 — （译自英语）" href="#ref-1"><span>Tino Schuerewegen，Xtrada 软件开发者</span></a>
+                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:1;--print-row:1;--fold-row:1" aria-label="Emiel Van Gysegem，Xtra Groep 营销与运营 — Xtrada — 9月 2024 – 9月 2024" data-kind="reference" data-depth="0" data-entry="ref-2" data-name="Emiel Van Gysegem，Xtra Groep 营销与运营" data-title="Xtrada" data-period="9月 2024 – 9月 2024" data-summary="尽管我们没有直接合作，但我与 Baptiste 始终保持着非常愉快的联系。在英语、荷兰语和法语的混合中，我们经常分享愉快的对话。他的热情和能量真的很有感染力，他知道如何在每次互动中营造愉快、轻松的氛围。Baptiste 是一个能带来积极动力的人。 — （译自荷兰语）" href="#ref-2"><span>Emiel Van Gysegem，Xtra Groep 营销与运营</span></a>
+                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:2;--print-row:2;--fold-row:2" aria-label="Steven Claus，Xtra Groep 首席财务官 — Xtrada — 9月 2024 – 9月 2024" data-kind="reference" data-depth="0" data-entry="ref-3" data-name="Steven Claus，Xtra Groep 首席财务官" data-title="Xtrada" data-period="9月 2024 – 9月 2024" data-summary="Baptiste 是一位全栈软件开发者，受坚定不移的决心驱动。这种心态贯穿他职业生涯的每个方面。他曾在多个领域工作，使他能够迅速适应任何情况。这些角色磨砺了他的技术和人际交往能力，使他成为一个多才多艺的合作者，对他加入的每个项目都产生重大影响。在持续学习愿望的推动下，他通过攻读计算机科学硕士不断更新自己的知识。这种持续的学习之旅使他成为计算机科学领域全面的 IT 专业人士。 — （译自英语）" href="#ref-3"><span>Steven Claus，Xtra Groep 首席财务官</span></a>
+                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:3;--print-row:3;--fold-row:3" aria-label="Tjörven Janssens，Xtrada 软件开发者 — Xtrada — 9月 2024 – 9月 2024" data-kind="reference" data-depth="0" data-entry="ref-4" data-name="Tjörven Janssens，Xtrada 软件开发者" data-title="Xtrada" data-period="9月 2024 – 9月 2024" data-summary="除了是软件开发者之外，Baptiste 还喜欢从事数据分析，并且是 ChatGPT 使用方面的专家。他喜欢学习新事物，并且学得很快。他在交往中非常热情，总是随时准备给予友好的话语或建议。 — （译自荷兰语）" href="#ref-4"><span>Tjörven Janssens，Xtrada 软件开发者</span></a>
+                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:4;--print-row:4;--fold-row:4" aria-label="Michael Culot，Xtrada 销售经理 — Xtrada — 9月 2024 – 9月 2024" data-kind="reference" data-depth="0" data-entry="ref-5" data-name="Michael Culot，Xtrada 销售经理" data-title="Xtrada" data-period="9月 2024 – 9月 2024" data-summary="Baptiste 是一位出色且尽职的开发者，渴望继续学习新技术并提升自己的技能。您不仅会惊叹于他的知识，还会惊叹于他温暖、开放的热情。Baptiste，你将在生活中做出伟大的事情，只需保持你充满活力的精神 ✊ — （译自英语）" href="#ref-5"><span>Michael Culot，Xtrada 销售经理</span></a>
+                <a class="tl-bar" style="left:91.3%;width:0.48%;--row:0;--print-row:0;--fold-row:0" aria-label="Waseem Virk，Emvi.ai Flutter 开发者 — Emvi.ai — 6月 2025 – 6月 2025" data-kind="reference" data-depth="0" data-entry="ref-0" data-name="Waseem Virk，Emvi.ai Flutter 开发者" data-title="Emvi.ai" data-period="6月 2025 – 6月 2025" data-summary="在 EMVI 项目中与 Baptiste Grosjean 一起工作是一次令人难以置信的有益经历——无论是在专业上还是个人上。Baptiste 不仅是一位技术非常出色的开发者，对设计和功能有着敏锐的眼光，而且在我们的合作中也一直是导师和灵感来源。
+            
+            我从他身上学到了很多——从 Flutter 开发的最佳实践到深思熟虑的 UI/UX 和整洁架构的重要性。他总是乐于分享知识，清晰地解释复杂的想法，并以一切可能的方式支持团队。
+            
+            最突出的是 Baptiste 将挑战转化为机会的能力。他冷静专注的方法和解决问题的思维方式帮助我们克服了技术难题，并构建了真正改善用户体验的功能。他的协作精神让团队合作变得顺畅且鼓舞人心。
+            
+            如果您正在寻找一个不仅能交付卓越成果还能激励周围所有人的人，我无法更强烈地推荐 Baptiste。他是一位出色的开发者、伟大的队友，也是我有幸向其学习的人。 — （译自英语）" href="#ref-0"><span>Waseem Virk，Emvi.ai Flutter 开发者</span></a>
               </div>
             </div>
           </div>
