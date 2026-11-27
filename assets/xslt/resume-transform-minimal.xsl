@@ -296,6 +296,8 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <xsl:call-template name="head-meta"/>
+        <!-- Only the rich theme is shown to visitors (views.js); ?classic keeps one here. -->
+        <script><![CDATA[if (/(^|\.)grosjeanbaptiste\.com$/.test(location.hostname) && !/[?&]classic\b/.test(location.search)) location.replace(']]><xsl:value-of select="concat('/assets/data/resume-', $lang, '.html')"/><![CDATA[' + location.hash);]]></script>
         <title><xsl:value-of select="basics/name"/> — Resume</title>
         <style>
           :root {
