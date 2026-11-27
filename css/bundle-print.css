@@ -848,6 +848,11 @@
 
   /* The lanes in the PDF's colours (pdf/timeline/picture.js): experiences in
      ThirdColor, degrees in PrimaryColor, competitions between the two. */
+  /* The references are written under the timeline: not drawn in it too. */
+  #print-verso .tl-lane[data-kind="references"] {
+    display: none;
+  }
+
   #print-verso .tl-lane[data-kind="work"] {
     --lane-hue: var(--accent-color);
   }

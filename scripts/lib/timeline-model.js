@@ -135,9 +135,10 @@ const folded = (groups) =>
 // `units: false` leaves the course units out, for a page with no room for them.
 function timelineOf(resume, today, options = {}) {
   const now = monthNow(today);
-  const lanes = entryGroups(resume, now).map((l) =>
-    laneOf(options)(options.fold ? { ...l, groups: folded(l.groups) } : l),
-  );
+  // `references: false` when the references are written under the timeline.
+  const lanes = entryGroups(resume, now)
+    .filter((l) => options.references !== false || l.kind !== 'references')
+    .map((l) => laneOf(options)(options.fold ? { ...l, groups: folded(l.groups) } : l));
   // The axis starts with the month of the earliest bar, which may start mid-month.
   const from = Math.floor(Math.min(now, ...lanes.flatMap((l) => l.bars.map((b) => b.start))));
   const years = [];
