@@ -71,6 +71,8 @@ import { apart, fetchBytes, links, pages, sheet, sideways } from '/js/xslt-pdf-p
           : '';
       };
       eventBus.on('pagesinit', () => {
+        // A new document resets the viewer to vertical scrolling: set it again.
+        pdfViewer.scrollMode = viewer.ScrollMode.HORIZONTAL;
         zoomedByHand = false;
         follow();
         pdfViewer.currentScaleValue = fitted();
