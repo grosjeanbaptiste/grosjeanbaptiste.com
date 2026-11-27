@@ -69,3 +69,14 @@ export function links(toolbar, built, file, old) {
 export function pages(span, n) {
   span.textContent = `${n} ${n === 1 ? span.dataset.one : span.dataset.many}`;
 }
+
+// The recto and the verso are never the same page: on each side, the button of
+// the page the other side shows is disabled.
+export function apart(sides) {
+  const key = (b) => `${b.dataset.file}#${b.dataset.page}`;
+  const taken = sides.map((group) => key(group.querySelector('button[aria-pressed="true"]')));
+  sides.forEach((group, i) => {
+    for (const b of group.querySelectorAll('button[data-file]'))
+      b.disabled = key(b) === taken[1 - i];
+  });
+}

@@ -4,7 +4,7 @@
 // is drawn by itself as it nears the screen, so a visitor who never scrolls to
 // it pays nothing, and its choice (buttons) swaps the PDF it shows. Without this script
 // the reader keeps the browser's own <object> and a list of links.
-import { fetchBytes, links, pages, sheet, sideways } from '/js/xslt-pdf-parts.js';
+import { apart, fetchBytes, links, pages, sheet, sideways } from '/js/xslt-pdf-parts.js';
 
 (() => {
   const section = document.getElementById('pdf');
@@ -71,6 +71,8 @@ import { fetchBytes, links, pages, sheet, sideways } from '/js/xslt-pdf-parts.js
           : '';
       };
       eventBus.on('pagesinit', () => {
+        // A new document resets the viewer to vertical scrolling: set it again.
+        pdfViewer.scrollMode = viewer.ScrollMode.HORIZONTAL;
         zoomedByHand = false;
         follow();
         pdfViewer.currentScaleValue = fitted();
@@ -143,9 +145,11 @@ import { fetchBytes, links, pages, sheet, sideways } from '/js/xslt-pdf-parts.js
           if (!button) return;
           for (const b of group.querySelectorAll('button[data-file]'))
             b.setAttribute('aria-pressed', String(b === button));
+          apart(sides);
           show();
         });
       }
+      apart(sides);
       await show();
 
       const act = {
