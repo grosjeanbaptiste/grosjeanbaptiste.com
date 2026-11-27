@@ -30,8 +30,9 @@
 }
 
 .pdf-toolbar button:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: default;
+  text-decoration: line-through;
 }
 
 /* Which PDF the reader shows: buttons side by side. */
@@ -45,6 +46,8 @@
 .pdf-toolbar button[aria-pressed="true"] {
   font-weight: 700;
   box-shadow: inset 0 0 0 1px currentColor;
+  background: var(--accent, currentColor);
+  color: #fff;
 }
 
 .pdf-pages {
