@@ -11,7 +11,7 @@
 
   <meta name="description" content="Informático — máster en ciencias informáticas por UMons — construyendo Acteble. En la encrucijada de la ingeniería del software en la era de la IA — flujos Claude Code, agentes autónomos, pipelines…">
   <meta name="author" content="Baptiste Grosjean">
-  <meta name="keywords" content="SQL, C#, Java, Python, JS, TS, XML, JSON, HTML, CSS, Zsh, Dart, Rust, LaTeX, SQL Server, EF, .NET, Pandas">
+  <meta name="keywords" content="SQL, C#, Java, Python, JavaScript, XML, JSON, HTML, CSS, Dart, Rust, LaTeX, SQL Server, .NET, Pandas, NumPy, Whisper, SpaCy">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
   <!-- Browser chrome + PWA -->
@@ -119,22 +119,22 @@
       "C#",
       "Java",
       "Python",
-      "JS",
-      "TS",
+      "JavaScript",
       "XML",
       "JSON",
       "HTML",
       "CSS",
-      "Zsh",
       "Dart",
       "Rust",
       "LaTeX",
       "SQL Server",
-      "EF",
       ".NET",
       "Pandas",
       "NumPy",
-      "Whisper"
+      "Whisper",
+      "SpaCy",
+      "SentenceTransformers",
+      "RAG"
     ],
     "inLanguage": "es"
   }
@@ -232,42 +232,24 @@
             <span class="skill-tag">C#</span>
             <span class="skill-tag">Java</span>
             <span class="skill-tag">Python</span>
-            <span class="skill-tag">JS</span>
-            <span class="skill-tag">TS</span>
+            <span class="skill-tag">JavaScript</span>
             <span class="skill-tag">XML</span>
             <span class="skill-tag">JSON</span>
             <span class="skill-tag">HTML</span>
             <span class="skill-tag">CSS</span>
-            <span class="skill-tag">Zsh</span>
             <span class="skill-tag">Dart</span>
             <span class="skill-tag">Rust</span>
             <span class="skill-tag">LaTeX</span>
             <span class="skill-tag">SQL Server</span>
-            <span class="skill-tag">EF</span>
             <span class="skill-tag">.NET</span>
             <span class="skill-tag">Pandas</span>
             <span class="skill-tag">NumPy</span>
             <span class="skill-tag">Whisper</span>
             <span class="skill-tag">SpaCy</span>
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">Transformers</span>
-            <span class="skill-tag">HuggingFace</span>
             <span class="skill-tag">SentenceTransformers</span>
-            <span class="skill-tag">LLMs</span>
             <span class="skill-tag">RAG</span>
-            <span class="skill-tag">LangChain</span>
             <span class="skill-tag">OpenAI</span>
-            <span class="skill-tag">Claude</span>
-            <span class="skill-tag">Embeddings</span>
-            <span class="skill-tag">ColBERT</span>
-            <span class="skill-tag">Reranking</span>
-            <span class="skill-tag">FAISS</span>
-            <span class="skill-tag">OpenSearch</span>
-            <span class="skill-tag">RAGAS</span>
-            <span class="skill-tag">PromptEngineering</span>
             <span class="skill-tag">OCR</span>
-            <span class="skill-tag">Docling</span>
-            <span class="skill-tag">VLM</span>
             <span class="skill-tag">Node.js</span>
             <span class="skill-tag">Express.js</span>
             <span class="skill-tag">Blazor</span>
@@ -276,33 +258,17 @@
             <span class="skill-tag">Flutter</span>
             <span class="skill-tag">Tokio</span>
             <span class="skill-tag">Axum</span>
-            <span class="skill-tag">Tower</span>
-            <span class="skill-tag">Gradle</span>
-            <span class="skill-tag">NPM</span>
-            <span class="skill-tag">JWT</span>
             <span class="skill-tag">Auth0</span>
             <span class="skill-tag">SSH</span>
-            <span class="skill-tag">Venv</span>
-            <span class="skill-tag">Conda</span>
             <span class="skill-tag">Docker</span>
             <span class="skill-tag">UML</span>
-            <span class="skill-tag">Merise</span>
-            <span class="skill-tag">VisualParadigm</span>
             <span class="skill-tag">MiniZinc</span>
             <span class="skill-tag">ConstraintProgramming</span>
             <span class="skill-tag">CombinatorialOptimization</span>
             <span class="skill-tag">Pareto</span>
-            <span class="skill-tag">Lark</span>
             <span class="skill-tag">DSL</span>
-            <span class="skill-tag">Hypothesis</span>
-            <span class="skill-tag">CleanCode</span>
-            <span class="skill-tag">CleanArchitecture</span>
             <span class="skill-tag">DDD</span>
             <span class="skill-tag">CQRS</span>
-          </div>
-          <details class="skill-more">
-            <summary>+127</summary>
-            <div class="skill-tags">
             <span class="skill-tag">PostgreSQL</span>
             <span class="skill-tag">Firebase</span>
             <span class="skill-tag">Valhalla</span>
@@ -333,6 +299,10 @@
             <span class="skill-tag">SM2</span>
             <span class="skill-tag">WordNet</span>
             <span class="skill-tag">Tatoeba</span>
+          </div>
+          <details class="skill-more">
+            <summary>+97</summary>
+            <div class="skill-tags">
             <span class="skill-tag">CloudflareWorkers</span>
             <span class="skill-tag">WebAssembly</span>
             <span class="skill-tag">DurableObjects</span>
@@ -692,9 +662,25 @@
             </div>
             <div class="tl-lane" data-kind="references">
               <span class="tl-lane-label">Referencias</span>
-              <div class="tl-track" style="--rows:1;--print-rows:1;--fold-rows:1">
-                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:0;--print-row:0;--fold-row:0" aria-label="Xtrada (5) — Tino Schuerewegen, Emiel Van Gysegem, Steven Claus, Tjörven Janssens, Michael Culot — sep 2024 – sep 2024" data-kind="reference" data-depth="0" data-entry="ref-1" data-name="Xtrada (5)" data-title="Tino Schuerewegen, Emiel Van Gysegem, Steven Claus, Tjörven Janssens, Michael Culot" data-period="sep 2024 – sep 2024" data-summary="Tino Schuerewegen, desarrollador de software en Xtrada · Emiel Van Gysegem, marketing y operaciones en Xtra Groep · Steven Claus, CFO en Xtra Groep · Tjörven Janssens, desarrollador de software en Xtrada · Michael Culot, gerente de ventas en Xtrada" href="#ref-1"><span>Xtrada (5)</span></a>
-                <a class="tl-bar" style="left:91.3%;width:0.48%;--row:0;--print-row:0;--fold-row:0" aria-label="Emvi.ai (1) — Waseem Virk — jun 2025 – jun 2025" data-kind="reference" data-depth="0" data-entry="ref-0" data-name="Emvi.ai (1)" data-title="Waseem Virk" data-period="jun 2025 – jun 2025" data-summary="Waseem Virk, dev Flutter en Emvi.ai" href="#ref-0"><span>Emvi.ai (1)</span></a>
+              <div class="tl-track" style="--rows:5;--print-rows:5;--fold-rows:5">
+                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:0;--print-row:0;--fold-row:0" aria-label="Tino Schuerewegen, desarrollador de software en Xtrada — Xtrada — sep 2024 – sep 2024" data-kind="reference" data-depth="0" data-entry="ref-1" data-name="Tino Schuerewegen, desarrollador de software en Xtrada" data-title="Xtrada" data-period="sep 2024 – sep 2024" data-summary="Tuve el placer de trabajar con Baptiste durante un año, con la alegría adicional de mentorearlo en un proyecto durante tres meses. Si hay algo que destaca en Baptiste, es su energía ilimitada. Sean las 9 de la mañana o las 9 de la noche, siempre es la persona más entusiasta de la sala — a veces incluso más entusiasta que la máquina de café.
+            
+            Baptiste aporta una energía contagiosa a cualquier proyecto del que forma parte. Es extrovertido, inteligente, y tiene una sed de aprender verdaderamente admirable. Ya sea sumergiéndose en una tarea compleja o haciendo preguntas perspicaces, siempre está en busca de conocimiento. Su entusiasmo por aprender, especialmente cuando se trata de aprovechar herramientas como ChatGPT, es a la vez impresionante y un poco intimidante. ¡En serio, si ChatGPT tuviera un mejor amigo, sería Baptiste!
+            
+            También es increíblemente práctico, nunca duda en remangarse y meterse de lleno en el trabajo. Su enfoque no es solo teórico; busca resultados prácticos y tangibles.
+            
+            En resumen, si buscas a alguien que aporte entusiasmo, inteligencia y un toque de humor a cada tarea, Baptiste es tu persona. Trabajar con él no fue solo productivo, sino genuinamente agradable. — (traducido del inglés)" href="#ref-1"><span>Tino Schuerewegen, desarrollador de software en Xtrada</span></a>
+                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:1;--print-row:1;--fold-row:1" aria-label="Emiel Van Gysegem, marketing y operaciones en Xtra Groep — Xtrada — sep 2024 – sep 2024" data-kind="reference" data-depth="0" data-entry="ref-2" data-name="Emiel Van Gysegem, marketing y operaciones en Xtra Groep" data-title="Xtrada" data-period="sep 2024 – sep 2024" data-summary="Aunque no trabajamos directamente juntos, siempre tuve una conexión muy agradable con Baptiste. En una mezcla de inglés, neerlandés y francés, compartíamos a menudo conversaciones agradables. Su entusiasmo y energía son verdaderamente contagiosos, y sabe crear un ambiente agradable e informal en cada interacción. Baptiste es alguien que aporta una dinámica positiva. — (traducido del neerlandés)" href="#ref-2"><span>Emiel Van Gysegem, marketing y operaciones en Xtra Groep</span></a>
+                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:2;--print-row:2;--fold-row:2" aria-label="Steven Claus, CFO en Xtra Groep — Xtrada — sep 2024 – sep 2024" data-kind="reference" data-depth="0" data-entry="ref-3" data-name="Steven Claus, CFO en Xtra Groep" data-title="Xtrada" data-period="sep 2024 – sep 2024" data-summary="Baptiste es un desarrollador full-stack impulsado por una determinación inquebrantable. Esta mentalidad impregna cada aspecto de su carrera. Ha trabajado en diversos campos, lo que le permite adaptarse rápidamente a cualquier situación. Estos roles han pulido tanto sus habilidades técnicas como interpersonales, convirtiéndolo en un colaborador versátil que impacta significativamente cada proyecto al que se une. Impulsado por un deseo constante de aprender, actualiza continuamente sus conocimientos a través de un máster en informática. Este viaje de aprendizaje continuo lo convierte en un profesional IT integral en el campo de las ciencias de la computación. — (traducido del inglés)" href="#ref-3"><span>Steven Claus, CFO en Xtra Groep</span></a>
+                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:3;--print-row:3;--fold-row:3" aria-label="Tjörven Janssens, desarrollador de software en Xtrada — Xtrada — sep 2024 – sep 2024" data-kind="reference" data-depth="0" data-entry="ref-4" data-name="Tjörven Janssens, desarrollador de software en Xtrada" data-title="Xtrada" data-period="sep 2024 – sep 2024" data-summary="Además de ser desarrollador de software, a Baptiste le gusta dedicarse al análisis de datos y es un experto en el uso de ChatGPT. Le gusta aprender cosas nuevas y lo hace rápido. Es muy entusiasta en el trato y siempre está dispuesto a ofrecer una palabra amable o un consejo. — (traducido del neerlandés)" href="#ref-4"><span>Tjörven Janssens, desarrollador de software en Xtrada</span></a>
+                <a class="tl-bar" style="left:86.96%;width:0.48%;--row:4;--print-row:4;--fold-row:4" aria-label="Michael Culot, gerente de ventas en Xtrada — Xtrada — sep 2024 – sep 2024" data-kind="reference" data-depth="0" data-entry="ref-5" data-name="Michael Culot, gerente de ventas en Xtrada" data-title="Xtrada" data-period="sep 2024 – sep 2024" data-summary="Baptiste es un desarrollador estupendo y entregado, ansioso por seguir aprendiendo nuevas tecnologías y elevar sus habilidades. Te sorprenderías no solo de su conocimiento sino también de su cálido y abierto entusiasmo. Baptiste, vas a hacer grandes cosas en tu vida, simplemente mantén tu espíritu vibrante ✊ — (traducido del inglés)" href="#ref-5"><span>Michael Culot, gerente de ventas en Xtrada</span></a>
+                <a class="tl-bar" style="left:91.3%;width:0.48%;--row:0;--print-row:0;--fold-row:0" aria-label="Waseem Virk, dev Flutter en Emvi.ai — Emvi.ai — jun 2025 – jun 2025" data-kind="reference" data-depth="0" data-entry="ref-0" data-name="Waseem Virk, dev Flutter en Emvi.ai" data-title="Emvi.ai" data-period="jun 2025 – jun 2025" data-summary="Trabajar junto a Baptiste Grosjean en el proyecto EMVI ha sido una experiencia increíblemente gratificante, tanto profesional como personalmente. Baptiste no solo es un desarrollador altamente capacitado con un ojo agudo para el diseño y la funcionalidad, sino que también ha sido un mentor e inspiración a lo largo de nuestra colaboración.
+            
+            He aprendido mucho de él — desde las mejores prácticas en desarrollo Flutter hasta la importancia de una UI/UX cuidada y una arquitectura limpia. Siempre está dispuesto a compartir su conocimiento, a explicar ideas complejas con claridad, y a apoyar al equipo en todo lo posible.
+            
+            Lo que más destaca es su capacidad de convertir desafíos en oportunidades. Su enfoque tranquilo y enfocado y su mentalidad de resolución de problemas nos ayudaron a superar obstáculos técnicos y construir funcionalidades que realmente mejoran la experiencia de usuario. Su naturaleza colaborativa hizo que trabajar en equipo fuera fluido y motivador.
+            
+            Si buscas a alguien que no solo entregue resultados excepcionales sino que también levante a quienes lo rodean, no puedo recomendar a Baptiste lo suficiente. Es un desarrollador fantástico, un gran compañero de equipo, y alguien de quien he tenido la suerte de aprender. — (traducido del inglés)" href="#ref-0"><span>Waseem Virk, dev Flutter en Emvi.ai</span></a>
               </div>
             </div>
           </div>

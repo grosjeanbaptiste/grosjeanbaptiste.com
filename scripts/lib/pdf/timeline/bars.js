@@ -55,6 +55,11 @@ function within(lanes, from) {
       // A degree's blocks go with it: cut to the span, gone when it is.
       if (reaches(head, from))
         return [{ head: cut(head, from), children: inSpan, bands: kept(bands) }];
+      // A recommendation is kept whatever the span, at its start, pointing left.
+      if (lane.kind === 'references')
+        return [
+          { head: { ...head, start: from, end: from, clipped: true }, children: [], bands: [] },
+        ];
       orphans.push(...inSpan);
       return [];
     }),
