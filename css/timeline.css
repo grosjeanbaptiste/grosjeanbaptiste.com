@@ -142,15 +142,15 @@
 }
 
 /* An entry and what it carried — its projects, its volunteering — read as one:
-   an outline around the entry's row and the rows under it. */
+   a tinted frame around the entry's row and the rows under it. */
 .tl-group {
   position: absolute;
   top: calc(var(--row) * var(--row-height) - 0.2rem);
   height: calc(var(--group-rows) * var(--row-height) + 0.05rem);
   box-sizing: border-box;
-  border: 0.0625rem dashed
-    color-mix(in srgb, var(--lane-hue, var(--primary-color)) 70%, transparent);
+  border: 0.0625rem solid color-mix(in srgb, var(--lane-hue, var(--primary-color)) 45%, transparent);
   border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--lane-hue, var(--primary-color)) 12%, transparent);
   pointer-events: none;
 }
 

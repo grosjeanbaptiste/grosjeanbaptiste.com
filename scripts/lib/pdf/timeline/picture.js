@@ -105,7 +105,7 @@ function outlineLines(lane, sheet) {
     // All the roles of one employer: a solid tinted frame a little wider than theirs.
     if (o.employer)
       return `\\filldraw[draw=${colour}!55,fill=${colour}!10,line width=0.3pt,rounded corners=0.9mm] (${mm(o.x0 - 0.5)},${mm(top + 0.25)}) rectangle (${mm(o.x1 + 0.5)},${mm(bottom - 0.25)});`;
-    return `\\draw[draw=${colour}!75,dash pattern=on 1.2pt off 0.8pt,line width=0.3pt,rounded corners=0.6mm] (${mm(o.x0)},${mm(top)}) rectangle (${mm(o.x1)},${mm(bottom)});`;
+    return `\\filldraw[draw=${colour}!55,fill=${colour}!10,line width=0.3pt,rounded corners=0.6mm] (${mm(o.x0)},${mm(top)}) rectangle (${mm(o.x1)},${mm(bottom)});`;
   });
 }
 

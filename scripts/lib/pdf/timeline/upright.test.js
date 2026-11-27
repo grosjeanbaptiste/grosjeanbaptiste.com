@@ -72,7 +72,7 @@ test('an entry that carried projects is outlined, one alone is not', () => {
       .toSorted(),
     [false, true],
   );
-  assert.match(buildUpright(layOut(timeline), T), /dash pattern/);
+  assert.match(buildUpright(layOut(timeline), T), /filldraw.*rounded corners=0.6mm/);
 });
 
 test('what an entry carried sits beside its head, not under it', () => {
