@@ -30,8 +30,11 @@ test('the verso opens with the timeline', () => {
 });
 
 test('the timeline shows what each entry carried inside it', () => {
-  // The outline of an entry with its projects, drawn behind the bars.
-  assert.match(verso(), /dash pattern=on 1.2pt/);
+  // The frame of an entry with its projects, drawn behind the bars.
+  assert.match(
+    verso(),
+    /filldraw\[draw=\w+!55,fill=\w+!10,line width=0.3pt,rounded corners=0.6mm\]/,
+  );
 });
 
 test('the references come right under the timeline, in columns', () => {
