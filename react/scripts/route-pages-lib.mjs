@@ -40,6 +40,8 @@ function render(template, lang, title, description, drawn, ahead = []) {
   const head = [
     '<!-- ROUTE-HEAD -->',
     `<title>${escapeHtml(title)}</title>`,
+    // Only the rich XSLT page is shown to visitors (views.js); ?classic keeps one here.
+    `<script>if (/(^|\\.)grosjeanbaptiste\\.com$/.test(location.hostname) && !/[?&]classic\\b/.test(location.search)) location.replace('/assets/data/resume-${lang}.html' + location.hash);</script>`,
     ...ahead,
     `<meta name="description" content="${escapeHtml(description)}" />`,
     `<meta property="og:title" content="${escapeHtml(title)}" />`,
